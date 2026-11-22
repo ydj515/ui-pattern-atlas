@@ -5927,6 +5927,998 @@
   }
 }
 
+/* Radio group: pick 빠른 배송 → the total adds the fee. */
+.thumb-rg-cursor {
+  animation-name: thumb-rg-cursor;
+}
+.thumb-rg-s1 {
+  animation-name: thumb-rg-s1;
+}
+.thumb-rg-s2 {
+  animation-name: thumb-rg-s2;
+}
+@keyframes thumb-rg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(88px, 49px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rg-s1 {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  95% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-rg-s2 {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Select: open 지역 → pick 울릉도 → the fee note appears. */
+.thumb-sel-cursor {
+  animation-name: thumb-sel-cursor;
+}
+.thumb-sel-menu {
+  animation-name: thumb-sel-menu;
+}
+.thumb-sel-hover {
+  animation-name: thumb-sel-hover;
+}
+.thumb-sel-empty {
+  animation-name: thumb-sel-empty;
+}
+.thumb-sel-picked {
+  animation-name: thumb-sel-picked;
+}
+@keyframes thumb-sel-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(88px, 23px);
+  }
+  44%,
+  54% {
+    transform: translate(60px, 78px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sel-menu {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sel-hover {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sel-empty {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sel-picked {
+  0%,
+  55% {
+    opacity: 0;
+  }
+  56%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Combobox: focus → type 대 → the list narrows → pick 대전. */
+.thumb-cb-cursor {
+  animation-name: thumb-cb-cursor;
+}
+.thumb-cb-focus {
+  animation-name: thumb-cb-focus;
+}
+.thumb-cb-empty {
+  animation-name: thumb-cb-empty;
+}
+.thumb-cb-typed {
+  animation-name: thumb-cb-typed;
+}
+.thumb-cb-picked {
+  animation-name: thumb-cb-picked;
+}
+.thumb-cb-all {
+  animation-name: thumb-cb-all;
+}
+.thumb-cb-some {
+  animation-name: thumb-cb-some;
+}
+.thumb-cb-a1 {
+  animation-name: thumb-cb-a1;
+}
+.thumb-cb-a2 {
+  animation-name: thumb-cb-a2;
+}
+@keyframes thumb-cb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(88px, 23px);
+  }
+  28% {
+    opacity: 1;
+    transform: translate(88px, 23px);
+  }
+  40%,
+  54% {
+    transform: translate(60px, 53px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cb-focus {
+  0%,
+  14% {
+    opacity: 0;
+  }
+  15%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-empty {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cb-typed {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-picked {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-all {
+  0%,
+  15% {
+    opacity: 0;
+  }
+  16%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-some {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-a1 {
+  0%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cb-a2 {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Filter chips: turn on 와이파이, then 콘센트 → the cafe list narrows. */
+.thumb-fc-cursor {
+  animation-name: thumb-fc-cursor;
+}
+.thumb-fc-wifi {
+  animation-name: thumb-fc-wifi;
+}
+.thumb-fc-outlet {
+  animation-name: thumb-fc-outlet;
+}
+.thumb-fc-l0 {
+  animation-name: thumb-fc-l0;
+}
+.thumb-fc-l1 {
+  animation-name: thumb-fc-l1;
+}
+.thumb-fc-l2 {
+  animation-name: thumb-fc-l2;
+}
+@keyframes thumb-fc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(39px, 14px);
+  }
+  42%,
+  52% {
+    transform: translate(75px, 14px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fc-wifi {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-fc-outlet {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-fc-l0 {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-fc-l1 {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-fc-l2 {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Multi-select: open 담당 팀 → check 개발 and 마케팅 → close → chips. */
+.thumb-ms-cursor {
+  animation-name: thumb-ms-cursor;
+}
+.thumb-ms-menu {
+  animation-name: thumb-ms-menu;
+}
+.thumb-ms-c1 {
+  animation-name: thumb-ms-c1;
+}
+.thumb-ms-c2 {
+  animation-name: thumb-ms-c2;
+}
+.thumb-ms-empty {
+  animation-name: thumb-ms-empty;
+}
+.thumb-ms-one {
+  animation-name: thumb-ms-one;
+}
+.thumb-ms-two {
+  animation-name: thumb-ms-two;
+}
+.thumb-ms-chips {
+  animation-name: thumb-ms-chips;
+}
+@keyframes thumb-ms-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(88px, 23px);
+  }
+  28%,
+  36% {
+    transform: translate(50px, 52px);
+  }
+  42%,
+  50% {
+    transform: translate(50px, 64px);
+  }
+  58%,
+  64% {
+    transform: translate(160px, 96px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ms-menu {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ms-c1 {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ms-c2 {
+  0%,
+  48% {
+    opacity: 0;
+  }
+  49%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ms-empty {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ms-one {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ms-two {
+  0%,
+  48% {
+    opacity: 0;
+  }
+  49%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ms-chips {
+  0%,
+  62% {
+    opacity: 0;
+  }
+  63%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Slider: drag 최대 가격 from 30,000원 to 70,000원 → more products match. */
+.thumb-sl-cursor {
+  animation-name: thumb-sl-cursor;
+}
+.thumb-sl-thumb {
+  animation-name: thumb-sl-thumb;
+}
+.thumb-sl-fill {
+  animation-name: thumb-sl-fill;
+}
+.thumb-sl-v1 {
+  animation-name: thumb-sl-v1;
+}
+.thumb-sl-v2 {
+  animation-name: thumb-sl-v2;
+}
+.thumb-sl-v3 {
+  animation-name: thumb-sl-v3;
+}
+@keyframes thumb-sl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  24% {
+    transform: translate(52px, 41px);
+  }
+  40% {
+    transform: translate(81px, 41px);
+  }
+  48%,
+  56% {
+    transform: translate(109px, 41px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sl-thumb {
+  0%,
+  24% {
+    transform: translateX(-57px);
+  }
+  40% {
+    transform: translateX(-28.5px);
+  }
+  48%,
+  95% {
+    transform: translateX(0);
+  }
+  97%,
+  100% {
+    transform: translateX(-57px);
+  }
+}
+@keyframes thumb-sl-fill {
+  0%,
+  24% {
+    transform: scaleX(0.222);
+  }
+  40% {
+    transform: scaleX(0.444);
+  }
+  48%,
+  95% {
+    transform: scaleX(0.667);
+  }
+  97%,
+  100% {
+    transform: scaleX(0.222);
+  }
+}
+@keyframes thumb-sl-v1 {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sl-v2 {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sl-v3 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Range slider: drag the low thumb up to 5만원, then the high one down to 9만원. */
+.thumb-rs-cursor {
+  animation-name: thumb-rs-cursor;
+}
+.thumb-rs-low {
+  animation-name: thumb-rs-low;
+}
+.thumb-rs-high {
+  animation-name: thumb-rs-high;
+}
+.thumb-rs-fill {
+  animation-name: thumb-rs-fill;
+}
+.thumb-rs-v1 {
+  animation-name: thumb-rs-v1;
+}
+.thumb-rs-v2 {
+  animation-name: thumb-rs-v2;
+}
+.thumb-rs-v3 {
+  animation-name: thumb-rs-v3;
+}
+@keyframes thumb-rs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(43px, 41px);
+  }
+  30%,
+  34% {
+    transform: translate(56px, 41px);
+  }
+  44%,
+  50% {
+    transform: translate(101px, 41px);
+  }
+  60%,
+  64% {
+    transform: translate(82px, 41px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rs-low {
+  0%,
+  18% {
+    transform: translateX(-12.8px);
+  }
+  30%,
+  95% {
+    transform: translateX(0);
+  }
+  97%,
+  100% {
+    transform: translateX(-12.8px);
+  }
+}
+@keyframes thumb-rs-high {
+  0%,
+  50% {
+    transform: translateX(19.2px);
+  }
+  60%,
+  95% {
+    transform: translateX(0);
+  }
+  97%,
+  100% {
+    transform: translateX(19.2px);
+  }
+}
+@keyframes thumb-rs-fill {
+  0%,
+  18% {
+    transform: translateX(19.2px) scaleX(0.45);
+  }
+  30%,
+  50% {
+    transform: translateX(32px) scaleX(0.35);
+  }
+  60%,
+  95% {
+    transform: translateX(32px) scaleX(0.2);
+  }
+  97%,
+  100% {
+    transform: translateX(19.2px) scaleX(0.45);
+  }
+}
+@keyframes thumb-rs-v1 {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  26%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-rs-v2 {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rs-v3 {
+  0%,
+  55% {
+    opacity: 0;
+  }
+  56%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Listbox: focus the list → ↓ ↓ moves the selection down. */
+.thumb-lb-cursor {
+  animation-name: thumb-lb-cursor;
+}
+.thumb-lb-focus {
+  animation-name: thumb-lb-focus;
+}
+.thumb-lb-key {
+  animation-name: thumb-lb-key;
+}
+.thumb-lb-s0 {
+  animation-name: thumb-lb-s0;
+}
+.thumb-lb-s1 {
+  animation-name: thumb-lb-s1;
+}
+.thumb-lb-s2 {
+  animation-name: thumb-lb-s2;
+}
+@keyframes thumb-lb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  14% {
+    transform: translate(88px, 26px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lb-focus {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lb-key {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  38% {
+    opacity: 1;
+  }
+  39%,
+  55% {
+    opacity: 0;
+  }
+  56%,
+  64% {
+    opacity: 1;
+  }
+  65%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lb-s0 {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  95% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-lb-s1 {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lb-s2 {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

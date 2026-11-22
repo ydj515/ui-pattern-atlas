@@ -63,6 +63,14 @@ import { inputMaskPattern } from "@/entities/pattern/catalog/input-mask/pattern"
 import { tagInputPattern } from "@/entities/pattern/catalog/tag-input/pattern";
 import { multiStepFormPattern } from "@/entities/pattern/catalog/multi-step-form/pattern";
 import { floatingLabelPattern } from "@/entities/pattern/catalog/floating-label/pattern";
+import { radioGroupPattern } from "@/entities/pattern/catalog/radio-group/pattern";
+import { selectPattern } from "@/entities/pattern/catalog/select/pattern";
+import { comboboxPattern } from "@/entities/pattern/catalog/combobox/pattern";
+import { filterChipPattern } from "@/entities/pattern/catalog/filter-chip/pattern";
+import { multiSelectPattern } from "@/entities/pattern/catalog/multi-select/pattern";
+import { sliderPattern } from "@/entities/pattern/catalog/slider/pattern";
+import { rangeSliderPattern } from "@/entities/pattern/catalog/range-slider/pattern";
+import { listboxPattern } from "@/entities/pattern/catalog/listbox/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -128,6 +136,14 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   tagInputPattern,
   multiStepFormPattern,
   floatingLabelPattern,
+  radioGroupPattern,
+  selectPattern,
+  comboboxPattern,
+  filterChipPattern,
+  multiSelectPattern,
+  sliderPattern,
+  rangeSliderPattern,
+  listboxPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
