@@ -221,6 +221,11 @@ describe("mobile header navigation", () => {
       "전체 주제 보기",
       "GitHub",
     ]);
+    expect(
+      within(navigation)
+        .getByRole("link", { name: "GitHub" })
+        .querySelectorAll('svg[aria-hidden="true"]'),
+    ).toHaveLength(2);
     await user.tab();
     expect(within(navigation).getByRole("link", { name: "전체" })).toHaveFocus();
     await user.keyboard("{Escape}");
