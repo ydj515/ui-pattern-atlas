@@ -179,6 +179,16 @@ import { springPattern } from "@/entities/pattern/catalog/spring/pattern";
 import { bouncePattern } from "@/entities/pattern/catalog/bounce/pattern";
 import { staggerPattern } from "@/entities/pattern/catalog/stagger/pattern";
 import { zoomTransitionPattern } from "@/entities/pattern/catalog/zoom-transition/pattern";
+import { countUpPattern } from "@/entities/pattern/catalog/count-up/pattern";
+import { typewriterPattern } from "@/entities/pattern/catalog/typewriter/pattern";
+import { rotatingWordsPattern } from "@/entities/pattern/catalog/rotating-words/pattern";
+import { marqueePattern } from "@/entities/pattern/catalog/marquee/pattern";
+import { textScramblePattern } from "@/entities/pattern/catalog/text-scramble/pattern";
+import { staggeredTextRevealPattern } from "@/entities/pattern/catalog/staggered-text-reveal/pattern";
+import { fadeUpPattern } from "@/entities/pattern/catalog/fade-up/pattern";
+import { animatedHighlightPattern } from "@/entities/pattern/catalog/animated-highlight/pattern";
+import { maskRevealPattern } from "@/entities/pattern/catalog/mask-reveal/pattern";
+import { blurInPattern } from "@/entities/pattern/catalog/blur-in/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -360,6 +370,16 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   bouncePattern,
   staggerPattern,
   zoomTransitionPattern,
+  countUpPattern,
+  typewriterPattern,
+  rotatingWordsPattern,
+  marqueePattern,
+  textScramblePattern,
+  staggeredTextRevealPattern,
+  fadeUpPattern,
+  animatedHighlightPattern,
+  maskRevealPattern,
+  blurInPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

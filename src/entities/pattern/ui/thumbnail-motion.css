@@ -16250,6 +16250,946 @@
   }
 }
 
+/* Count up: 다시 보기 → the numbers run up in quick steps and land. */
+.thumb-cu-cursor {
+  animation-name: thumb-cu-cursor;
+}
+.thumb-cu-f0 {
+  animation-name: thumb-cu-f0;
+}
+.thumb-cu-f1 {
+  animation-name: thumb-cu-f1;
+}
+.thumb-cu-f2 {
+  animation-name: thumb-cu-f2;
+}
+.thumb-cu-f3 {
+  animation-name: thumb-cu-f3;
+}
+@keyframes thumb-cu-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(28px, 74px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cu-f0 {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  15% {
+    opacity: 1;
+  }
+  16%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cu-f1 {
+  0%,
+  15% {
+    opacity: 0;
+  }
+  16%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cu-f2 {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cu-f3 {
+  0%,
+  11% {
+    opacity: 1;
+  }
+  12%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
+/* Typewriter: 다시 보기 → the line is typed again, then the caret blinks. */
+.thumb-tw-cursor {
+  animation-name: thumb-tw-cursor;
+}
+@keyframes thumb-tw-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  6%,
+  10% {
+    transform: translate(28px, 84px);
+  }
+  24% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  30%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+.thumb-tw-c0 {
+  animation-name: thumb-tw-c0;
+}
+@keyframes thumb-tw-c0 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c1 {
+  animation-name: thumb-tw-c1;
+}
+@keyframes thumb-tw-c1 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  15% {
+    opacity: 0;
+  }
+  16%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c2 {
+  animation-name: thumb-tw-c2;
+}
+@keyframes thumb-tw-c2 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c3 {
+  animation-name: thumb-tw-c3;
+}
+@keyframes thumb-tw-c3 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c4 {
+  animation-name: thumb-tw-c4;
+}
+@keyframes thumb-tw-c4 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c5 {
+  animation-name: thumb-tw-c5;
+}
+@keyframes thumb-tw-c5 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c6 {
+  animation-name: thumb-tw-c6;
+}
+@keyframes thumb-tw-c6 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c7 {
+  animation-name: thumb-tw-c7;
+}
+@keyframes thumb-tw-c7 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c8 {
+  animation-name: thumb-tw-c8;
+}
+@keyframes thumb-tw-c8 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c9 {
+  animation-name: thumb-tw-c9;
+}
+@keyframes thumb-tw-c9 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c10 {
+  animation-name: thumb-tw-c10;
+}
+@keyframes thumb-tw-c10 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c11 {
+  animation-name: thumb-tw-c11;
+}
+@keyframes thumb-tw-c11 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c12 {
+  animation-name: thumb-tw-c12;
+}
+@keyframes thumb-tw-c12 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c13 {
+  animation-name: thumb-tw-c13;
+}
+@keyframes thumb-tw-c13 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c14 {
+  animation-name: thumb-tw-c14;
+}
+@keyframes thumb-tw-c14 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  41% {
+    opacity: 0;
+  }
+  42%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c15 {
+  animation-name: thumb-tw-c15;
+}
+@keyframes thumb-tw-c15 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-c16 {
+  animation-name: thumb-tw-c16;
+}
+@keyframes thumb-tw-c16 {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  100% {
+    opacity: 1;
+  }
+}
+.thumb-tw-caret {
+  animation-name: thumb-tw-caret;
+}
+@keyframes thumb-tw-caret {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  69% {
+    opacity: 1;
+  }
+  70%,
+  75% {
+    opacity: 0;
+  }
+  76%,
+  83% {
+    opacity: 1;
+  }
+  84%,
+  89% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+/* Rotating words: 디자인 → 문서 → 발표, each rising into the slot. */
+.thumb-rw-col {
+  animation-name: thumb-rw-col;
+}
+@keyframes thumb-rw-col {
+  0%,
+  28% {
+    transform: translateY(0);
+  }
+  33%,
+  61% {
+    transform: translateY(-16px);
+  }
+  66%,
+  94% {
+    transform: translateY(-32px);
+  }
+  99%,
+  100% {
+    transform: translateY(-48px);
+  }
+}
+/* Marquee: the perks move left forever; the second copy hides the seam. */
+.thumb-mq-track {
+  animation-name: thumb-mq-track;
+  animation-timing-function: linear;
+}
+@keyframes thumb-mq-track {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Text scramble: 연결하기 → symbols settle into 보안 연결 완료 from the left. */
+.thumb-ts-cursor {
+  animation-name: thumb-ts-cursor;
+}
+.thumb-ts-f0 {
+  animation-name: thumb-ts-f0;
+}
+.thumb-ts-f1 {
+  animation-name: thumb-ts-f1;
+}
+.thumb-ts-f2 {
+  animation-name: thumb-ts-f2;
+}
+.thumb-ts-f3 {
+  animation-name: thumb-ts-f3;
+}
+.thumb-ts-f4 {
+  animation-name: thumb-ts-f4;
+}
+@keyframes thumb-ts-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  17% {
+    transform: translate(34px, 60px);
+  }
+  31% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  37%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ts-f0 {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ts-f1 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  22% {
+    opacity: 1;
+  }
+  23%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ts-f2 {
+  0%,
+  22% {
+    opacity: 0;
+  }
+  23%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ts-f3 {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  32% {
+    opacity: 1;
+  }
+  33%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ts-f4 {
+  0%,
+  32% {
+    opacity: 0;
+  }
+  33%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Staggered text reveal: 다시 보기 → the three lines rise in one after another. */
+.thumb-stt-cursor {
+  animation-name: thumb-stt-cursor;
+}
+.thumb-stt-l0 {
+  animation-name: thumb-stt-l0;
+}
+.thumb-stt-l1 {
+  animation-name: thumb-stt-l1;
+}
+.thumb-stt-l2 {
+  animation-name: thumb-stt-l2;
+}
+@keyframes thumb-stt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(108px, 86px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stt-l0 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  14% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  20%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thumb-stt-l1 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  20% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  26%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thumb-stt-l2 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  26% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  32%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Fade up: 다시 보기 → badge, heading and text rise in, a little apart. */
+.thumb-fu-cursor {
+  animation-name: thumb-fu-cursor;
+}
+.thumb-fu-0 {
+  animation-name: thumb-fu-0;
+}
+.thumb-fu-1 {
+  animation-name: thumb-fu-1;
+}
+.thumb-fu-2 {
+  animation-name: thumb-fu-2;
+}
+@keyframes thumb-fu-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(30px, 88px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fu-0 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  14% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  22%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thumb-fu-1 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  18% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  26%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thumb-fu-2 {
+  0%,
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  11%,
+  22% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  30%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Animated highlight: the marker sweeps behind 첫 달은 무료 from the left. */
+.thumb-ah-cursor {
+  animation-name: thumb-ah-cursor;
+}
+.thumb-ah-mark {
+  animation-name: thumb-ah-mark;
+}
+@keyframes thumb-ah-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(28px, 92px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ah-mark {
+  0%,
+  10% {
+    transform: scaleX(1);
+  }
+  11%,
+  16% {
+    transform: scaleX(0);
+  }
+  34%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+/* Mask reveal: each line slides up from behind its edge. */
+.thumb-mr-cursor {
+  animation-name: thumb-mr-cursor;
+}
+.thumb-mr-l0 {
+  animation-name: thumb-mr-l0;
+}
+.thumb-mr-l1 {
+  animation-name: thumb-mr-l1;
+}
+@keyframes thumb-mr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(28px, 86px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mr-l0 {
+  0%,
+  10% {
+    transform: none;
+  }
+  11%,
+  14% {
+    transform: translateY(110%);
+  }
+  28%,
+  100% {
+    transform: none;
+  }
+}
+@keyframes thumb-mr-l1 {
+  0%,
+  10% {
+    transform: none;
+  }
+  11%,
+  18% {
+    transform: translateY(110%);
+  }
+  32%,
+  100% {
+    transform: none;
+  }
+}
+/* Blur in: 다시 보기 → the blurred line sharpens into focus. */
+.thumb-bi-cursor {
+  animation-name: thumb-bi-cursor;
+}
+.thumb-bi-blur {
+  animation-name: thumb-bi-blur;
+}
+.thumb-bi-sharp {
+  animation-name: thumb-bi-sharp;
+}
+@keyframes thumb-bi-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(28px, 86px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bi-blur {
+  0%,
+  10% {
+    opacity: 0;
+  }
+  13%,
+  18% {
+    opacity: 1;
+  }
+  34%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-bi-sharp {
+  0%,
+  10% {
+    opacity: 1;
+  }
+  11%,
+  18% {
+    opacity: 0;
+  }
+  34%,
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

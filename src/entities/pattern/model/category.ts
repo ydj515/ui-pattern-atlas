@@ -96,6 +96,12 @@ export const PATTERN_CATEGORIES = [
     description: "무엇이 바뀌었는지 보여 주는 움직임",
   },
   {
+    id: "text-motion",
+    label: "Text motion",
+    labelKo: "글자 모션",
+    description: "숫자와 글자가 움직이는 표현",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",
