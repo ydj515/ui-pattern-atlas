@@ -14975,6 +14975,1281 @@
   }
 }
 
+/* Reduced motion: 알림 보내기 slides the card in; with 동작 줄이기 it only fades in. */
+.thumb-msafe-cursor {
+  animation-name: thumb-msafe-cursor;
+}
+.thumb-msafe-card1 {
+  animation-name: thumb-msafe-card1;
+}
+.thumb-msafe-card2 {
+  animation-name: thumb-msafe-card2;
+}
+.thumb-msafe-check {
+  animation-name: thumb-msafe-check;
+}
+.thumb-msafe-t1 {
+  animation-name: thumb-msafe-t1;
+}
+.thumb-msafe-t2 {
+  animation-name: thumb-msafe-t2;
+}
+@keyframes thumb-msafe-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  16% {
+    transform: translate(137px, 65px);
+  }
+  40%,
+  46% {
+    transform: translate(14px, 66px);
+  }
+  52%,
+  56% {
+    transform: translate(137px, 65px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-msafe-card1 {
+  0%,
+  16% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  17% {
+    opacity: 1;
+    transform: translateX(150px);
+  }
+  26% {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+  30%,
+  44% {
+    opacity: 1;
+    transform: none;
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes thumb-msafe-card2 {
+  0%,
+  56% {
+    opacity: 0;
+  }
+  62%,
+  94% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-msafe-check {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-msafe-t1 {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-msafe-t2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Page transition: 알림 pushes in from the right; ‹ 설정 brings the list back from the left. */
+.thumb-pt-cursor {
+  animation-name: thumb-pt-cursor;
+}
+.thumb-pt-list {
+  animation-name: thumb-pt-list;
+}
+.thumb-pt-detail {
+  animation-name: thumb-pt-detail;
+}
+@keyframes thumb-pt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 44px);
+  }
+  56%,
+  62% {
+    transform: translate(24px, 28px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-pt-list {
+  0%,
+  19% {
+    opacity: 1;
+    transform: none;
+  }
+  20%,
+  62% {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  63% {
+    opacity: 0.6;
+    transform: translateX(-48px);
+  }
+  74%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thumb-pt-detail {
+  0%,
+  20% {
+    opacity: 1;
+    transform: translateX(160px);
+  }
+  32%,
+  62% {
+    opacity: 1;
+    transform: none;
+  }
+  63%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+/* Expand/collapse motion: the order card grows to show its steps, then folds back. */
+.thumb-ec-cursor {
+  animation-name: thumb-ec-cursor;
+}
+.thumb-ec-bg {
+  animation-name: thumb-ec-bg;
+}
+.thumb-ec-details {
+  animation-name: thumb-ec-details;
+}
+.thumb-ec-chev {
+  animation-name: thumb-ec-chev;
+}
+@keyframes thumb-ec-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 22px);
+  }
+  64%,
+  70% {
+    transform: translate(88px, 22px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ec-bg {
+  0%,
+  20% {
+    transform: scaleY(0.357);
+  }
+  34%,
+  70% {
+    transform: scaleY(1);
+  }
+  80%,
+  100% {
+    transform: scaleY(0.357);
+  }
+}
+@keyframes thumb-ec-details {
+  0%,
+  22% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  34%,
+  68% {
+    opacity: 1;
+    transform: none;
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes thumb-ec-chev {
+  0%,
+  20% {
+    transform: rotate(0);
+  }
+  30%,
+  70% {
+    transform: rotate(180deg);
+  }
+  78%,
+  100% {
+    transform: rotate(0);
+  }
+}
+/* Micro-interaction: 저장 squeezes, pops and fills in → 저장됨. */
+.thumb-mt-cursor {
+  animation-name: thumb-mt-cursor;
+}
+.thumb-mt-icon {
+  animation-name: thumb-mt-icon;
+}
+.thumb-mt-off {
+  animation-name: thumb-mt-off;
+}
+.thumb-mt-on {
+  animation-name: thumb-mt-on;
+}
+@keyframes thumb-mt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20%,
+  26% {
+    transform: translate(123px, 82px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mt-icon {
+  0%,
+  26% {
+    transform: scale(1);
+  }
+  28% {
+    transform: scale(0.8);
+  }
+  31% {
+    transform: scale(1.25);
+  }
+  34%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thumb-mt-off {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  26%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mt-on {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Shake on error: a wrong 비밀번호 → 확인 → the field shakes and turns red. */
+.thumb-sk-cursor {
+  animation-name: thumb-sk-cursor;
+}
+.thumb-sk-field {
+  animation-name: thumb-sk-field;
+}
+.thumb-sk-red {
+  animation-name: thumb-sk-red;
+}
+.thumb-sk-dots {
+  animation-name: thumb-sk-dots;
+}
+.thumb-sk-msg {
+  animation-name: thumb-sk-msg;
+}
+@keyframes thumb-sk-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(60px, 34px);
+  }
+  28%,
+  34% {
+    transform: translate(136px, 34px);
+  }
+  48% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  54%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sk-field {
+  0%,
+  34% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-6px);
+  }
+  36.5% {
+    transform: translateX(5px);
+  }
+  38% {
+    transform: translateX(-4px);
+  }
+  39.5% {
+    transform: translateX(3px);
+  }
+  41%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-sk-red {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sk-msg {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sk-dots {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Shared element transition: the 부산 tile grows into the large photo and shrinks back. */
+.thumb-se-cursor {
+  animation-name: thumb-se-cursor;
+}
+.thumb-se-grid {
+  animation-name: thumb-se-grid;
+}
+.thumb-se-img {
+  animation-name: thumb-se-img;
+}
+.thumb-se-detail {
+  animation-name: thumb-se-detail;
+}
+@keyframes thumb-se-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(88px, 36px);
+  }
+  70%,
+  76% {
+    transform: translate(148px, 80px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-se-img {
+  0%,
+  22% {
+    transform: translate(54px, 12px) scale(0.308, 0.5625);
+  }
+  36%,
+  76% {
+    transform: none;
+  }
+  88%,
+  100% {
+    transform: translate(54px, 12px) scale(0.308, 0.5625);
+  }
+}
+@keyframes thumb-se-grid {
+  0%,
+  22% {
+    opacity: 1;
+  }
+  30%,
+  78% {
+    opacity: 0;
+  }
+  86%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-se-detail {
+  0%,
+  32% {
+    opacity: 0;
+  }
+  38%,
+  74% {
+    opacity: 1;
+  }
+  78%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Scroll reveal: scrolling 봄 신상품 fades each product up into view. */
+.thumb-rv-cursor {
+  animation-name: thumb-rv-cursor;
+}
+.thumb-rv-content {
+  animation-name: thumb-rv-content;
+}
+.thumb-rv-c1 {
+  animation-name: thumb-rv-c1;
+}
+.thumb-rv-c3 {
+  animation-name: thumb-rv-c3;
+}
+@keyframes thumb-rv-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(88px, 90px);
+  }
+  40% {
+    transform: translate(88px, 40px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rv-content {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  40%,
+  92% {
+    transform: translateY(-60px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-rv-c1 {
+  0%,
+  24% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  32%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes thumb-rv-c3 {
+  0%,
+  36% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  44%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.thumb-rv-c2 {
+  animation-name: thumb-rv-c2;
+}
+@keyframes thumb-rv-c2 {
+  0%,
+  30% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  38%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+/* Parallax: the text scrolls up while the hills move at half speed. */
+.thumb-px-cursor {
+  animation-name: thumb-px-cursor;
+}
+.thumb-px-bg {
+  animation-name: thumb-px-bg;
+}
+.thumb-px-content {
+  animation-name: thumb-px-content;
+}
+@keyframes thumb-px-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14% {
+    transform: translate(88px, 90px);
+  }
+  50% {
+    transform: translate(88px, 54px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-px-content {
+  0%,
+  14% {
+    transform: translateY(0);
+  }
+  50%,
+  90% {
+    transform: translateY(-36px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-px-bg {
+  0%,
+  14% {
+    transform: translateY(0);
+  }
+  50%,
+  90% {
+    transform: translateY(-18px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Ease in / ease out: 재생 moves four dots over the same time with different easing. */
+.thumb-eio-cursor {
+  animation-name: thumb-eio-cursor;
+}
+@keyframes thumb-eio-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(24px, 100px);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  36%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+.thumb-eio-linear {
+  animation-name: thumb-eio-dot;
+  animation-timing-function: linear;
+}
+.thumb-eio-in {
+  animation-name: thumb-eio-dot;
+  animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+.thumb-eio-out {
+  animation-name: thumb-eio-dot;
+  animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+.thumb-eio-inout {
+  animation-name: thumb-eio-dot;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+@keyframes thumb-eio-dot {
+  0%,
+  16% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  56%,
+  90% {
+    opacity: 1;
+    transform: translateX(149px);
+  }
+  95% {
+    opacity: 0;
+    transform: translateX(149px);
+  }
+  96% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Fade: 저장 → 저장했어요 fades in, waits, then fades out. */
+.thumb-fade-cursor {
+  animation-name: thumb-fade-cursor;
+}
+.thumb-fade-toast {
+  animation-name: thumb-fade-toast;
+}
+@keyframes thumb-fade-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(38px, 54px);
+  }
+  32% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  38%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fade-toast {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  28%,
+  64% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Slide: 보여 주기 slides the card up from the bottom edge; 숨기기 sends it back down. */
+.thumb-sl-cursor {
+  animation-name: thumb-sl-cursor;
+}
+.thumb-sl-card {
+  animation-name: thumb-sl-card;
+}
+.thumb-sl-show {
+  animation-name: thumb-sl-show;
+}
+.thumb-sl-hide {
+  animation-name: thumb-sl-hide;
+}
+@keyframes thumb-sl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(30px, 91px);
+  }
+  56%,
+  62% {
+    transform: translate(30px, 91px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sl-card {
+  0%,
+  18% {
+    transform: translateY(30px);
+  }
+  30%,
+  62% {
+    transform: translateY(0);
+  }
+  74%,
+  100% {
+    transform: translateY(30px);
+  }
+}
+@keyframes thumb-sl-show {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sl-hide {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Spring: the ball overshoots, swings back and settles, both ways. */
+.thumb-spr-cursor {
+  animation-name: thumb-spr-cursor;
+}
+.thumb-spr-right {
+  animation-name: thumb-spr-right;
+}
+.thumb-spr-left {
+  animation-name: thumb-spr-left;
+}
+.thumb-spr-ball {
+  animation-name: thumb-spr-ball;
+  animation-timing-function: ease-in-out;
+}
+@keyframes thumb-spr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(140px, 65px);
+  }
+  62%,
+  68% {
+    transform: translate(140px, 65px);
+  }
+  82% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-spr-ball {
+  0%,
+  18% {
+    transform: translateX(0);
+  }
+  28% {
+    transform: translateX(150px);
+  }
+  35% {
+    transform: translateX(124px);
+  }
+  41% {
+    transform: translateX(137px);
+  }
+  47% {
+    transform: translateX(130px);
+  }
+  52%,
+  68% {
+    transform: translateX(132px);
+  }
+  78% {
+    transform: translateX(-14px);
+  }
+  85% {
+    transform: translateX(9px);
+  }
+  91% {
+    transform: translateX(-3px);
+  }
+  96%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-spr-right {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  67% {
+    opacity: 0;
+  }
+  68%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-spr-left {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  67% {
+    opacity: 1;
+  }
+  68%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Bounce: 장바구니 담기 → the cart count hops and lands with smaller hops. */
+.thumb-bn-cursor {
+  animation-name: thumb-bn-cursor;
+}
+.thumb-bn-c1 {
+  animation-name: thumb-bn-c1;
+}
+.thumb-bn-c2 {
+  animation-name: thumb-bn-c2;
+}
+.thumb-bn-cart {
+  animation-name: thumb-bn-cart;
+  animation-timing-function: ease-in-out;
+}
+@keyframes thumb-bn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(88px, 95px);
+  }
+  32% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  38%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bn-cart {
+  0%,
+  18% {
+    transform: translateY(0);
+  }
+  23% {
+    transform: translateY(-7px);
+  }
+  28% {
+    transform: translateY(0);
+  }
+  32% {
+    transform: translateY(-3px);
+  }
+  35% {
+    transform: translateY(0);
+  }
+  37% {
+    transform: translateY(-1px);
+  }
+  39%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-bn-c1 {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-bn-c2 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Stagger: 알림 불러오기 → the alerts fade up one after another. */
+.thumb-stg-cursor {
+  animation-name: thumb-stg-cursor;
+}
+@keyframes thumb-stg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(134px, 10px);
+  }
+  32% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  38%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+.thumb-stg-0 {
+  animation-name: thumb-stg-0;
+}
+@keyframes thumb-stg-0 {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  26%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+.thumb-stg-1 {
+  animation-name: thumb-stg-1;
+}
+@keyframes thumb-stg-1 {
+  0%,
+  23% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  31%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+.thumb-stg-2 {
+  animation-name: thumb-stg-2;
+}
+@keyframes thumb-stg-2 {
+  0%,
+  28% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  36%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+.thumb-stg-3 {
+  animation-name: thumb-stg-3;
+}
+@keyframes thumb-stg-3 {
+  0%,
+  33% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  41%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+/* Zoom transition: 메모 grows out of its icon; 홈으로 shrinks it back. */
+.thumb-zt-cursor {
+  animation-name: thumb-zt-cursor;
+}
+.thumb-zt-screen {
+  animation-name: thumb-zt-screen;
+}
+@keyframes thumb-zt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(86px, 19px);
+  }
+  60%,
+  66% {
+    transform: translate(108px, 13px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-zt-screen {
+  0%,
+  18% {
+    opacity: 0;
+    transform: scale(0.15);
+  }
+  30%,
+  66% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: scale(0.15);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

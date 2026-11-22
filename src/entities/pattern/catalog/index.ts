@@ -164,6 +164,21 @@ import { edgeSwipePattern } from "@/entities/pattern/catalog/edge-swipe/pattern"
 import { momentumScrollingPattern } from "@/entities/pattern/catalog/momentum-scrolling/pattern";
 import { scrollBouncePattern } from "@/entities/pattern/catalog/scroll-bounce/pattern";
 import { slideToUnlockPattern } from "@/entities/pattern/catalog/slide-to-unlock/pattern";
+import { reducedMotionPattern } from "@/entities/pattern/catalog/reduced-motion/pattern";
+import { pageTransitionPattern } from "@/entities/pattern/catalog/page-transition/pattern";
+import { expandCollapseMotionPattern } from "@/entities/pattern/catalog/expand-collapse-motion/pattern";
+import { microInteractionPattern } from "@/entities/pattern/catalog/micro-interaction/pattern";
+import { shakeOnErrorPattern } from "@/entities/pattern/catalog/shake-on-error/pattern";
+import { sharedElementTransitionPattern } from "@/entities/pattern/catalog/shared-element-transition/pattern";
+import { scrollRevealPattern } from "@/entities/pattern/catalog/scroll-reveal/pattern";
+import { parallaxPattern } from "@/entities/pattern/catalog/parallax/pattern";
+import { easeInOutPattern } from "@/entities/pattern/catalog/ease-in-out/pattern";
+import { fadePattern } from "@/entities/pattern/catalog/fade/pattern";
+import { slidePattern } from "@/entities/pattern/catalog/slide/pattern";
+import { springPattern } from "@/entities/pattern/catalog/spring/pattern";
+import { bouncePattern } from "@/entities/pattern/catalog/bounce/pattern";
+import { staggerPattern } from "@/entities/pattern/catalog/stagger/pattern";
+import { zoomTransitionPattern } from "@/entities/pattern/catalog/zoom-transition/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -330,6 +345,21 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   momentumScrollingPattern,
   scrollBouncePattern,
   slideToUnlockPattern,
+  reducedMotionPattern,
+  pageTransitionPattern,
+  expandCollapseMotionPattern,
+  microInteractionPattern,
+  shakeOnErrorPattern,
+  sharedElementTransitionPattern,
+  scrollRevealPattern,
+  parallaxPattern,
+  easeInOutPattern,
+  fadePattern,
+  slidePattern,
+  springPattern,
+  bouncePattern,
+  staggerPattern,
+  zoomTransitionPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

@@ -90,6 +90,12 @@ export const PATTERN_CATEGORIES = [
     description: "손가락으로 누르거나 밀고 당기는 동작",
   },
   {
+    id: "motion",
+    label: "Motion",
+    labelKo: "화면 전환과 움직임",
+    description: "무엇이 바뀌었는지 보여 주는 움직임",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",
