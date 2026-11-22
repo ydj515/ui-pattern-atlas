@@ -9042,6 +9042,979 @@
   }
 }
 
+/* Navbar: 홈 is current → click 가격. */
+.thumb-nb-cursor {
+  animation-name: thumb-nb-cursor;
+}
+.thumb-nb-home {
+  animation-name: thumb-nb-home;
+}
+.thumb-nb-price {
+  animation-name: thumb-nb-price;
+}
+@keyframes thumb-nb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  32% {
+    transform: translate(84px, 20px);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-nb-home {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  32%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-nb-price {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sidebar navigation: open 프로젝트 → choose 보관함. */
+.thumb-sb-cursor {
+  animation-name: thumb-sb-cursor;
+}
+.thumb-sb-dash {
+  animation-name: thumb-sb-dash;
+}
+.thumb-sb-archive {
+  animation-name: thumb-sb-archive;
+}
+.thumb-sb-open {
+  animation-name: thumb-sb-open;
+}
+.thumb-sb-push {
+  animation-name: thumb-sb-push;
+}
+@keyframes thumb-sb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  28% {
+    transform: translate(40px, 29px);
+  }
+  38%,
+  50% {
+    transform: translate(44px, 55px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sb-dash {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sb-archive {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sb-open {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sb-push {
+  0%,
+  26% {
+    transform: translateY(0);
+  }
+  30%,
+  96% {
+    transform: translateY(26px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Bottom tab bar: tap 알림. */
+.thumb-bt-cursor {
+  animation-name: thumb-bt-cursor;
+}
+.thumb-bt-home {
+  animation-name: thumb-bt-home;
+}
+.thumb-bt-alerts {
+  animation-name: thumb-bt-alerts;
+}
+@keyframes thumb-bt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  26%,
+  40% {
+    transform: translate(97px, 99px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bt-home {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-bt-alerts {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Stepper: 배송 → 다음 → 결제. */
+.thumb-stp-cursor {
+  animation-name: thumb-stp-cursor;
+}
+.thumb-stp-s1 {
+  animation-name: thumb-stp-s1;
+}
+.thumb-stp-s2 {
+  animation-name: thumb-stp-s2;
+}
+@keyframes thumb-stp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  32% {
+    transform: translate(139px, 80px);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stp-s1 {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  32%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stp-s2 {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Mobile menu: open → 가격 → closed on 가격 페이지. */
+.thumb-mm-cursor {
+  animation-name: thumb-mm-cursor;
+}
+.thumb-mm-open {
+  animation-name: thumb-mm-open;
+}
+.thumb-mm-closed {
+  animation-name: thumb-mm-closed;
+}
+.thumb-mm-home {
+  animation-name: thumb-mm-home;
+}
+.thumb-mm-price {
+  animation-name: thumb-mm-price;
+}
+@keyframes thumb-mm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(108px, 11px);
+  }
+  34%,
+  46% {
+    transform: translate(85px, 51px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mm-open {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-mm-closed {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mm-home {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mm-price {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Infinite scroll: near the end → 더 불러오는 중 → more 소식. */
+.thumb-is-cursor {
+  animation-name: thumb-is-cursor;
+}
+.thumb-is-list {
+  animation-name: thumb-is-list;
+}
+.thumb-is-loading {
+  animation-name: thumb-is-loading;
+}
+.thumb-is-more {
+  animation-name: thumb-is-more;
+}
+@keyframes thumb-is-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(88px, 84px);
+  }
+  36% {
+    transform: translate(88px, 34px);
+  }
+  50% {
+    transform: translate(88px, 84px);
+  }
+  70% {
+    transform: translate(88px, 34px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-is-list {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  36%,
+  48% {
+    transform: translateY(-60px);
+  }
+  70%,
+  95% {
+    transform: translateY(-100px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-is-loading {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-is-more {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Load more: 더 보기 → six more → focus on the first new one. */
+.thumb-lm-cursor {
+  animation-name: thumb-lm-cursor;
+}
+.thumb-lm-scroll {
+  animation-name: thumb-lm-scroll;
+}
+.thumb-lm-btn1 {
+  animation-name: thumb-lm-btn1;
+}
+.thumb-lm-new {
+  animation-name: thumb-lm-new;
+}
+@keyframes thumb-lm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  28% {
+    transform: translate(88px, 86px);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  48%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lm-scroll {
+  0%,
+  30% {
+    transform: translateY(0);
+  }
+  36%,
+  95% {
+    transform: translateY(-60px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-lm-btn1 {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-lm-new {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Mega menu: open 제품 → 일정. */
+.thumb-mega-cursor {
+  animation-name: thumb-mega-cursor;
+}
+.thumb-mega-panel {
+  animation-name: thumb-mega-panel;
+}
+.thumb-mega-hover {
+  animation-name: thumb-mega-hover;
+}
+.thumb-mega-done {
+  animation-name: thumb-mega-done;
+}
+@keyframes thumb-mega-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(28px, 16px);
+  }
+  36%,
+  50% {
+    transform: translate(104px, 59px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mega-panel {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-mega-hover {
+  0%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-mega-done {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Table of contents: the marker follows the section being read. */
+.thumb-toc-cursor {
+  animation-name: thumb-toc-cursor;
+}
+.thumb-toc-bar {
+  animation-name: thumb-toc-bar;
+}
+.thumb-toc-text {
+  animation-name: thumb-toc-text;
+}
+@keyframes thumb-toc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(110px, 60px);
+  }
+  28% {
+    transform: translate(110px, 54px);
+  }
+  36% {
+    transform: translate(110px, 60px);
+  }
+  52% {
+    transform: translate(110px, 54px);
+  }
+  60% {
+    transform: translate(110px, 60px);
+  }
+  76% {
+    transform: translate(110px, 54px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-toc-bar {
+  0%,
+  24% {
+    transform: translateY(0);
+  }
+  26%,
+  48% {
+    transform: translateY(11px);
+  }
+  50%,
+  72% {
+    transform: translateY(22px);
+  }
+  74%,
+  95% {
+    transform: translateY(33px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-toc-text {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  28%,
+  44% {
+    transform: translateY(-40px);
+  }
+  52%,
+  68% {
+    transform: translateY(-80px);
+  }
+  76%,
+  95% {
+    transform: translateY(-120px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Back to top: scroll down → 맨 위로 → back at the heading with focus. */
+.thumb-btt-cursor {
+  animation-name: thumb-btt-cursor;
+}
+.thumb-btt-scroll {
+  animation-name: thumb-btt-scroll;
+}
+.thumb-btt-button {
+  animation-name: thumb-btt-button;
+}
+.thumb-btt-focus {
+  animation-name: thumb-btt-focus;
+}
+@keyframes thumb-btt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  12% {
+    transform: translate(88px, 84px);
+  }
+  38% {
+    transform: translate(88px, 30px);
+  }
+  54%,
+  66% {
+    transform: translate(108px, 93px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-btt-scroll {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  40%,
+  62% {
+    transform: translateY(-120px);
+  }
+  72%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-btt-button {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  69% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-btt-focus {
+  0%,
+  73% {
+    opacity: 0;
+  }
+  74%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Back navigation: open 공지 7 → ← 목록 → same place, focus on 공지 7. */
+.thumb-bn-cursor {
+  animation-name: thumb-bn-cursor;
+}
+.thumb-bn-list {
+  animation-name: thumb-bn-list;
+}
+.thumb-bn-detail {
+  animation-name: thumb-bn-detail;
+}
+.thumb-bn-focus {
+  animation-name: thumb-bn-focus;
+}
+@keyframes thumb-bn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  24% {
+    transform: translate(60px, 36px);
+  }
+  44%,
+  56% {
+    transform: translate(54px, 14px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bn-list {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  58% {
+    opacity: 0;
+  }
+  59%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-bn-detail {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  58% {
+    opacity: 1;
+  }
+  59%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-bn-focus {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Horizontal scroll: › twice → the end; › turns off. */
+.thumb-hs-cursor {
+  animation-name: thumb-hs-cursor;
+}
+.thumb-hs-row {
+  animation-name: thumb-hs-row;
+}
+.thumb-hs-prev {
+  animation-name: thumb-hs-prev;
+}
+.thumb-hs-end {
+  animation-name: thumb-hs-end;
+}
+@keyframes thumb-hs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  52% {
+    transform: translate(150px, 12px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-hs-row {
+  0%,
+  22% {
+    transform: translateX(0);
+  }
+  30%,
+  48% {
+    transform: translateX(-92px);
+  }
+  56%,
+  95% {
+    transform: translateX(-126px);
+  }
+  97%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-hs-prev {
+  0%,
+  23% {
+    opacity: 0.3;
+  }
+  26%,
+  95% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes thumb-hs-end {
+  0%,
+  56% {
+    opacity: 0;
+  }
+  57%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

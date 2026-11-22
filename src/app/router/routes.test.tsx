@@ -143,14 +143,11 @@ describe("catalog page", () => {
       "true",
     );
     const links = getCardLinks();
-    expect(links.map((link) => link.getAttribute("href"))).toEqual([
-      "/patterns/breadcrumb",
-      "/patterns/pagination",
-    ]);
-    expect(screen.getByRole("status")).toHaveTextContent("14개 항목 · 데모 2개");
-    expect(screen.getByRole("link", { name: /뒤로 가기 Back Navigation/ })).toHaveTextContent(
-      "준비 중",
+    const navigation = PATTERNS.filter((pattern) => pattern.category === "navigation");
+    expect(links.map((link) => link.getAttribute("href"))).toEqual(
+      navigation.map((pattern) => `/patterns/${pattern.slug}`),
     );
+    expect(screen.getByRole("status")).toHaveTextContent(`14개 항목 · 데모 ${navigation.length}개`);
   });
 
   it("shows five category controls and switches between their topic groups", async () => {

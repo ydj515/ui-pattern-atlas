@@ -57,7 +57,11 @@ describe("searchPatterns", () => {
   });
 
   it("filters by category before matching text", () => {
-    expect(slugsFor("", "navigation")).toEqual(["breadcrumb", "pagination"]);
+    expect(slugsFor("", "navigation")).toEqual(
+      PATTERNS.filter((pattern) => pattern.category === "navigation").map(
+        (pattern) => pattern.slug,
+      ),
+    );
     expect(slugsFor("모달", "feedback")).not.toContain("modal-dialog");
   });
 

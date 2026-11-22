@@ -94,6 +94,18 @@ import { fabPattern } from "@/entities/pattern/catalog/fab/pattern";
 import { copyButtonPattern } from "@/entities/pattern/catalog/copy-button/pattern";
 import { splitButtonPattern } from "@/entities/pattern/catalog/split-button/pattern";
 import { holdToConfirmPattern } from "@/entities/pattern/catalog/hold-to-confirm/pattern";
+import { navbarPattern } from "@/entities/pattern/catalog/navbar/pattern";
+import { sidebarNavigationPattern } from "@/entities/pattern/catalog/sidebar-navigation/pattern";
+import { bottomTabBarPattern } from "@/entities/pattern/catalog/bottom-tab-bar/pattern";
+import { stepperPattern } from "@/entities/pattern/catalog/stepper/pattern";
+import { mobileMenuPattern } from "@/entities/pattern/catalog/mobile-menu/pattern";
+import { infiniteScrollPattern } from "@/entities/pattern/catalog/infinite-scroll/pattern";
+import { loadMorePattern } from "@/entities/pattern/catalog/load-more/pattern";
+import { megaMenuPattern } from "@/entities/pattern/catalog/mega-menu/pattern";
+import { tableOfContentsPattern } from "@/entities/pattern/catalog/table-of-contents/pattern";
+import { backToTopPattern } from "@/entities/pattern/catalog/back-to-top/pattern";
+import { backNavigationPattern } from "@/entities/pattern/catalog/back-navigation/pattern";
+import { horizontalScrollPattern } from "@/entities/pattern/catalog/horizontal-scroll/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -190,6 +202,18 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   copyButtonPattern,
   splitButtonPattern,
   holdToConfirmPattern,
+  navbarPattern,
+  sidebarNavigationPattern,
+  bottomTabBarPattern,
+  stepperPattern,
+  mobileMenuPattern,
+  infiniteScrollPattern,
+  loadMorePattern,
+  megaMenuPattern,
+  tableOfContentsPattern,
+  backToTopPattern,
+  backNavigationPattern,
+  horizontalScrollPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
