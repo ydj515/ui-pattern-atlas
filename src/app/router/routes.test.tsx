@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
 
-import { routes } from "./routes";
+import { routes } from "@/app/router/routes";
 
 /** Catalog entries are the links into pattern detail pages. */
 function getCardLinks() {

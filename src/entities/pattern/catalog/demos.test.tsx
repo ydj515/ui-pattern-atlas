@@ -2,10 +2,13 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
-import { DrawerDemo } from "./drawer/DrawerDemo";
-import { EmptyStateDemo } from "./empty-state/EmptyStateDemo";
-import { InlineValidationDemo, validateEmail } from "./inline-validation/InlineValidationDemo";
-import { ModalDialogDemo } from "./modal-dialog/ModalDialogDemo";
+import { DrawerDemo } from "@/entities/pattern/catalog/drawer/DrawerDemo";
+import { EmptyStateDemo } from "@/entities/pattern/catalog/empty-state/EmptyStateDemo";
+import {
+  InlineValidationDemo,
+  validateEmail,
+} from "@/entities/pattern/catalog/inline-validation/InlineValidationDemo";
+import { ModalDialogDemo } from "@/entities/pattern/catalog/modal-dialog/ModalDialogDemo";
 
 describe("validateEmail", () => {
   it("explains what is wrong and how to fix it", () => {

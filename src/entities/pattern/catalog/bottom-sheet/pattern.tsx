@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { BottomSheetThumbnail } from "./BottomSheetThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { BottomSheetThumbnail } from "@/entities/pattern/catalog/bottom-sheet/BottomSheetThumbnail";
 
 export const bottomSheetPattern: Pattern = {
   slug: "bottom-sheet",
@@ -26,7 +26,10 @@ export const bottomSheetPattern: Pattern = {
     "스와이프 외에도 명확한 닫기 버튼을 제공합니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./BottomSheetDemo").then((m) => m.BottomSheetDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/bottom-sheet/BottomSheetDemo").then(
+      (m) => m.BottomSheetDemo,
+    ),
   Thumbnail: BottomSheetThumbnail,
   sources: [
     {
@@ -37,7 +40,7 @@ export const bottomSheetPattern: Pattern = {
     {
       fileName: "BottomSheetDemo.tsx",
       role: "Usage",
-      load: () => import("./BottomSheetDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/bottom-sheet/BottomSheetDemo.tsx?raw"),
     },
   ],
 };

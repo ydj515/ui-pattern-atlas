@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 // Segment centres are x = 50, 88, 126 (keyframes rely on this).
 const SEGMENTS = ["일간", "주간", "월간"] as const;

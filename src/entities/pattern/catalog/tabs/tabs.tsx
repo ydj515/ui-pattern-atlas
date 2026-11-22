@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { TabsThumbnail } from "./TabsThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { TabsThumbnail } from "@/entities/pattern/catalog/tabs/TabsThumbnail";
 
 export const tabsPattern: Pattern = {
   slug: "tabs",
@@ -35,7 +35,7 @@ export const tabsPattern: Pattern = {
     "패널에 tabIndex=0을 주어 키보드로 패널 내용에 바로 접근할 수 있습니다.",
   ],
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
-  loadPreview: () => import("./TabsDemo").then((m) => m.TabsDemo),
+  loadPreview: () => import("@/entities/pattern/catalog/tabs/TabsDemo").then((m) => m.TabsDemo),
   Thumbnail: TabsThumbnail,
   sources: [
     {
@@ -43,6 +43,10 @@ export const tabsPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/tabs/Tabs.tsx?raw"),
     },
-    { fileName: "TabsDemo.tsx", role: "Usage", load: () => import("./TabsDemo.tsx?raw") },
+    {
+      fileName: "TabsDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/tabs/TabsDemo.tsx?raw"),
+    },
   ],
 };

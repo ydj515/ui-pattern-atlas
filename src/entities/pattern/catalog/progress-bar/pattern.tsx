@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { ProgressBarThumbnail } from "./ProgressBarThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { ProgressBarThumbnail } from "@/entities/pattern/catalog/progress-bar/ProgressBarThumbnail";
 
 export const progressBarPattern: Pattern = {
   slug: "progress-bar",
@@ -16,7 +16,10 @@ export const progressBarPattern: Pattern = {
   alternatives: [{ name: "스피너", slug: "spinner", reason: "진행률을 계산할 수 없는 짧은 작업" }],
   accessibility: ["네이티브 progress에 이름을 부여하고, 완료 시 텍스트로도 알립니다."],
   tags: BASE_TAGS,
-  loadPreview: () => import("./ProgressBarDemo").then((m) => m.ProgressBarDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/progress-bar/ProgressBarDemo").then(
+      (m) => m.ProgressBarDemo,
+    ),
   Thumbnail: ProgressBarThumbnail,
   sources: [
     {
@@ -27,7 +30,7 @@ export const progressBarPattern: Pattern = {
     {
       fileName: "ProgressBarDemo.tsx",
       role: "Usage",
-      load: () => import("./ProgressBarDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/progress-bar/ProgressBarDemo.tsx?raw"),
     },
   ],
 };

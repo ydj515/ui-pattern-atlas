@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 const SUBSCRIPTIONS = [
   { id: "digital", name: "디지털", price: "8,900원", cadence: "매월", benefits: ["온라인 기사"] },

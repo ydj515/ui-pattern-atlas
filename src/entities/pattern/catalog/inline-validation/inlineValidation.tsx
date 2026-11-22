@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { InlineValidationThumbnail } from "./InlineValidationThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { InlineValidationThumbnail } from "@/entities/pattern/catalog/inline-validation/InlineValidationThumbnail";
 
 export const inlineValidationPattern: Pattern = {
   slug: "inline-validation",
@@ -38,7 +38,10 @@ export const inlineValidationPattern: Pattern = {
     "색상 외에 아이콘과 문장으로 오류를 표시하고, 고치는 방법을 함께 안내합니다.",
   ],
   tags: [...BASE_TAGS, "Forms", "aria-invalid"],
-  loadPreview: () => import("./InlineValidationDemo").then((m) => m.InlineValidationDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/inline-validation/InlineValidationDemo").then(
+      (m) => m.InlineValidationDemo,
+    ),
   Thumbnail: InlineValidationThumbnail,
   sources: [
     {
@@ -49,7 +52,8 @@ export const inlineValidationPattern: Pattern = {
     {
       fileName: "InlineValidationDemo.tsx",
       role: "Usage",
-      load: () => import("./InlineValidationDemo.tsx?raw"),
+      load: () =>
+        import("@/entities/pattern/catalog/inline-validation/InlineValidationDemo.tsx?raw"),
     },
   ],
 };

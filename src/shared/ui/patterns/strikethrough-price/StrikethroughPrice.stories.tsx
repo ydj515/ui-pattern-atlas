@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { StrikethroughPrice } from "./StrikethroughPrice";
+import { StrikethroughPrice } from "@/shared/ui/patterns/strikethrough-price/StrikethroughPrice";
 
 const meta = {
   title: "Patterns/Pricing/Strikethrough Price",

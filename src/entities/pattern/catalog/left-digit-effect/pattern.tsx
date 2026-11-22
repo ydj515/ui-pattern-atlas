@@ -1,5 +1,5 @@
-import { type Pattern } from "../../model/pattern";
-import { LeftDigitEffectThumbnail } from "./LeftDigitEffectThumbnail";
+import { type Pattern } from "@/entities/pattern/model/pattern";
+import { LeftDigitEffectThumbnail } from "@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectThumbnail";
 
 export const leftDigitEffectPattern: Pattern = {
   slug: "left-digit-effect",
@@ -22,7 +22,11 @@ export const leftDigitEffectPattern: Pattern = {
   ],
   accessibility: ["첫 자리 강조에 색상 외에도 굵기와 설명을 함께 쓰고 차액을 읽을 수 있게 합니다."],
   tags: ["가격의 심리", "가격 인식"],
-  loadPreview: () => import("./LeftDigitEffectDemo").then((m) => m.LeftDigitEffectDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectDemo").then(
+      (m) => m.LeftDigitEffectDemo,
+    ),
   Thumbnail: LeftDigitEffectThumbnail,
-  loadDemoSource: () => import("./LeftDigitEffectDemo.tsx?raw"),
+  loadDemoSource: () =>
+    import("@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectDemo.tsx?raw"),
 };

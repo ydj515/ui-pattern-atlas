@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 function Separator({ left }: { readonly left: number }) {
   return (

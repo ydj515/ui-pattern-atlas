@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 // Each item is 16px wide with a 2px gap, starting at x=8 (keyframes rely on this).
 const PAGE_ITEMS = ["‹", "1", "…", "4", "5", "6", "…", "20", "›"] as const;

@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same flow as ToastDemo: ♡ 찜하기 → toast "찜 목록에 저장했어요" with 되돌리기. */
 export function ToastThumbnail() {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { ToastProvider, useToast, type ToastTone } from "./Toast";
+import { ToastProvider, useToast, type ToastTone } from "@/shared/ui/patterns/toast/Toast";
 
 function Trigger({ tone, withAction }: { readonly tone: ToastTone; readonly withAction: boolean }) {
   const showToast = useToast();

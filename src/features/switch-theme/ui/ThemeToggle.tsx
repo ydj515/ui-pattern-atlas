@@ -1,6 +1,6 @@
 import { Button } from "@/shared/ui/primitives/Button";
 
-import type { ResolvedTheme } from "../model/theme";
+import type { ResolvedTheme } from "@/features/switch-theme/model/theme";
 
 export interface ThemeToggleProps {
   readonly theme: ResolvedTheme;

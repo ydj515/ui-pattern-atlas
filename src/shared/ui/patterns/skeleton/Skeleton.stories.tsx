@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Skeleton, SkeletonRegion } from "./Skeleton";
+import { Skeleton, SkeletonRegion } from "@/shared/ui/patterns/skeleton/Skeleton";
 
 function ProfileSkeleton() {
   return (

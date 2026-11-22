@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same flow as PopoverDemo: 요금 계산 방식 → panel opens → click outside → it closes. */
 export function PopoverThumbnail() {

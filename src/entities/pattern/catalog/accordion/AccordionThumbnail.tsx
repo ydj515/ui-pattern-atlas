@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 function Header({ children }: { readonly children: ReactNode }) {
   return (

@@ -4,8 +4,8 @@ import { Link } from "react-router";
 import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 
-import { PatternPreview } from "./PatternPreview";
-import { SourceViewer } from "./SourceViewer";
+import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
+import { SourceViewer } from "@/widgets/pattern-detail/ui/SourceViewer";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
 const SECTIONS = [

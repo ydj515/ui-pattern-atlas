@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { SwitchThumbnail } from "./SwitchThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { SwitchThumbnail } from "@/entities/pattern/catalog/switch/SwitchThumbnail";
 
 export const switchPattern: Pattern = {
   slug: "switch",
@@ -31,7 +31,8 @@ export const switchPattern: Pattern = {
     "켜짐 상태를 색상만이 아니라 손잡이 위치로도 구분합니다.",
   ],
   tags: [...BASE_TAGS, "role=switch"],
-  loadPreview: () => import("./SwitchDemo").then((m) => m.SwitchDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/switch/SwitchDemo").then((m) => m.SwitchDemo),
   Thumbnail: SwitchThumbnail,
   sources: [
     {
@@ -39,6 +40,10 @@ export const switchPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/switch/Switch.tsx?raw"),
     },
-    { fileName: "SwitchDemo.tsx", role: "Usage", load: () => import("./SwitchDemo.tsx?raw") },
+    {
+      fileName: "SwitchDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/switch/SwitchDemo.tsx?raw"),
+    },
   ],
 };

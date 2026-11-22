@@ -2,9 +2,13 @@ import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ThemeToggle } from "../ui/ThemeToggle";
-import { readThemePreference, resolveTheme, THEME_STORAGE_KEY } from "./theme";
-import { useTheme } from "./useTheme";
+import { ThemeToggle } from "@/features/switch-theme/ui/ThemeToggle";
+import {
+  readThemePreference,
+  resolveTheme,
+  THEME_STORAGE_KEY,
+} from "@/features/switch-theme/model/theme";
+import { useTheme } from "@/features/switch-theme/model/useTheme";
 
 /** A controllable `(prefers-color-scheme: dark)` media query. */
 function mockSystemScheme(initiallyDark: boolean) {

@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 const SORT_OPTIONS = ["추천순", "최신순", "가격 낮은순", "가격 높은순"] as const;
 const OPTION_TOP = 32;

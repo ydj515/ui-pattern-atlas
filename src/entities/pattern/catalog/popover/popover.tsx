@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { PopoverThumbnail } from "./PopoverThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { PopoverThumbnail } from "@/entities/pattern/catalog/popover/PopoverThumbnail";
 
 export const popoverPattern: Pattern = {
   slug: "popover",
@@ -32,7 +32,8 @@ export const popoverPattern: Pattern = {
     '패널에는 role="dialog"와 제목을 연결한 접근 가능한 이름을 부여합니다.',
   ],
   tags: [...BASE_TAGS, "Non-modal"],
-  loadPreview: () => import("./PopoverDemo").then((m) => m.PopoverDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/popover/PopoverDemo").then((m) => m.PopoverDemo),
   Thumbnail: PopoverThumbnail,
   sources: [
     {
@@ -40,6 +41,10 @@ export const popoverPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/popover/Popover.tsx?raw"),
     },
-    { fileName: "PopoverDemo.tsx", role: "Usage", load: () => import("./PopoverDemo.tsx?raw") },
+    {
+      fileName: "PopoverDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/popover/PopoverDemo.tsx?raw"),
+    },
   ],
 };

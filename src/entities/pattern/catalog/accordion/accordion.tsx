@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { AccordionThumbnail } from "./AccordionThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { AccordionThumbnail } from "@/entities/pattern/catalog/accordion/AccordionThumbnail";
 
 export const accordionPattern: Pattern = {
   slug: "accordion",
@@ -31,7 +31,8 @@ export const accordionPattern: Pattern = {
     "화살표 회전 애니메이션은 prefers-reduced-motion에서 꺼집니다.",
   ],
   tags: [...BASE_TAGS, "WAI-ARIA APG"],
-  loadPreview: () => import("./AccordionDemo").then((m) => m.AccordionDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/accordion/AccordionDemo").then((m) => m.AccordionDemo),
   Thumbnail: AccordionThumbnail,
   sources: [
     {
@@ -39,6 +40,10 @@ export const accordionPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/accordion/Accordion.tsx?raw"),
     },
-    { fileName: "AccordionDemo.tsx", role: "Usage", load: () => import("./AccordionDemo.tsx?raw") },
+    {
+      fileName: "AccordionDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/accordion/AccordionDemo.tsx?raw"),
+    },
   ],
 };

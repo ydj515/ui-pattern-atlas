@@ -28,6 +28,25 @@ export default defineConfig(
     },
     rules: {
       "@typescript-eslint/consistent-type-imports": "error",
+      "no-restricted-imports": "off",
+      "@typescript-eslint/no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              regex: "^\\.{1,2}/",
+              message: "Use a project alias for internal imports.",
+            },
+          ],
+        },
+      ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "ImportExpression[source.value=/^\\.{1,2}\\u002f/]",
+          message: "Use a project alias for internal imports.",
+        },
+      ],
     },
   },
 );

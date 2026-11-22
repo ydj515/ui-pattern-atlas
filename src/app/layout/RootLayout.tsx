@@ -5,7 +5,7 @@ import { PatternCommandPalette } from "@/features/search-patterns/ui/PatternComm
 import { ThemeToggle } from "@/features/switch-theme/ui/ThemeToggle";
 import { navLinkClassName, textLinkClassName } from "@/shared/ui/primitives/textLink";
 
-import { MobileNavigation } from "./MobileNavigation";
+import { MobileNavigation } from "@/app/layout/MobileNavigation";
 
 const REPOSITORY_URL = "https://github.com/ydj515/ui-pattern-atlas";
 

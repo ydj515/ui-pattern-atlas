@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { EmptyState } from "./EmptyState";
+import { EmptyState } from "@/shared/ui/patterns/empty-state/EmptyState";
 
 const meta = {
   title: "Patterns/Status/Empty State",

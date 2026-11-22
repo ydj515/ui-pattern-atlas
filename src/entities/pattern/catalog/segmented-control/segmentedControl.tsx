@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { SegmentedControlThumbnail } from "./SegmentedControlThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { SegmentedControlThumbnail } from "@/entities/pattern/catalog/segmented-control/SegmentedControlThumbnail";
 
 export const segmentedControlPattern: Pattern = {
   slug: "segmented-control",
@@ -32,7 +32,10 @@ export const segmentedControlPattern: Pattern = {
     "포커스 링은 숨긴 입력 대신 보이는 라벨에 peer-focus-visible로 그립니다.",
   ],
   tags: [...BASE_TAGS, "Native radio", "Generics"],
-  loadPreview: () => import("./SegmentedControlDemo").then((m) => m.SegmentedControlDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/segmented-control/SegmentedControlDemo").then(
+      (m) => m.SegmentedControlDemo,
+    ),
   Thumbnail: SegmentedControlThumbnail,
   sources: [
     {
@@ -43,7 +46,8 @@ export const segmentedControlPattern: Pattern = {
     {
       fileName: "SegmentedControlDemo.tsx",
       role: "Usage",
-      load: () => import("./SegmentedControlDemo.tsx?raw"),
+      load: () =>
+        import("@/entities/pattern/catalog/segmented-control/SegmentedControlDemo.tsx?raw"),
     },
   ],
 };

@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
 
-import preview from "../../.storybook/preview";
+import preview from "@storybook-config/preview";
 
 // Apply the same decorators and globals as Storybook (theme on <html>).
 setProjectAnnotations(preview);

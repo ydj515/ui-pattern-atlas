@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 
-import type { PatternCategoryId } from "./category";
+import type { PatternCategoryId } from "@/entities/pattern/model/category";
 
 export interface PatternAlternative {
   readonly name: string;

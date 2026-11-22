@@ -1,4 +1,4 @@
-import type { RoadmapTopic } from "./roadmap";
+import type { RoadmapTopic } from "@/entities/pattern/catalog/roadmap";
 
 export const ROADMAP_DATA: readonly RoadmapTopic[] = [
   {

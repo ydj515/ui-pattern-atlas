@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
 
-import { SegmentedControl } from "./SegmentedControl";
+import { SegmentedControl } from "@/shared/ui/patterns/segmented-control/SegmentedControl";
 
 const OPTIONS = [
   { value: "day", label: "일간" },

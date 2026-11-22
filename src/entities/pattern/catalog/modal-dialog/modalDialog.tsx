@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { ModalDialogThumbnail } from "./ModalDialogThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { ModalDialogThumbnail } from "@/entities/pattern/catalog/modal-dialog/ModalDialogThumbnail";
 
 export const modalDialogPattern: Pattern = {
   slug: "modal-dialog",
@@ -32,7 +32,10 @@ export const modalDialogPattern: Pattern = {
     "파괴적인 작업에서는 안전한 버튼(취소)에 초기 포커스를 둡니다.",
   ],
   tags: [...BASE_TAGS, "dialog element", "Focus management"],
-  loadPreview: () => import("./ModalDialogDemo").then((m) => m.ModalDialogDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/modal-dialog/ModalDialogDemo").then(
+      (m) => m.ModalDialogDemo,
+    ),
   Thumbnail: ModalDialogThumbnail,
   sources: [
     {
@@ -43,7 +46,7 @@ export const modalDialogPattern: Pattern = {
     {
       fileName: "ModalDialogDemo.tsx",
       role: "Usage",
-      load: () => import("./ModalDialogDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/modal-dialog/ModalDialogDemo.tsx?raw"),
     },
   ],
 };

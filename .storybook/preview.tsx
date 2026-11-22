@@ -1,7 +1,7 @@
 import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "@fontsource/noto-serif-kr/600.css";
 import "@fontsource/noto-serif-kr/700.css";
-import "../src/app/styles/global.css";
+import "@/app/styles/global.css";
 
 import type { Preview } from "@storybook/react-vite";
 

@@ -1,5 +1,9 @@
-import { PATTERNS } from "./index";
-import { comparisonSlug, type RoadmapEntry, type RoadmapTopic } from "./roadmap";
+import { PATTERNS } from "@/entities/pattern/catalog";
+import {
+  comparisonSlug,
+  type RoadmapEntry,
+  type RoadmapTopic,
+} from "@/entities/pattern/catalog/roadmap";
 
 const patternsByName = new Map(
   PATTERNS.flatMap((pattern) =>

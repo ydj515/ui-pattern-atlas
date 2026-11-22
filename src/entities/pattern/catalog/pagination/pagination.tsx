@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { PaginationThumbnail } from "./PaginationThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { PaginationThumbnail } from "@/entities/pattern/catalog/pagination/PaginationThumbnail";
 
 export const paginationPattern: Pattern = {
   slug: "pagination",
@@ -31,7 +31,8 @@ export const paginationPattern: Pattern = {
     "말줄임(…)은 aria-hidden으로 숨겨 불필요한 낭독을 막습니다.",
   ],
   tags: [...BASE_TAGS, "aria-current"],
-  loadPreview: () => import("./PaginationDemo").then((m) => m.PaginationDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/pagination/PaginationDemo").then((m) => m.PaginationDemo),
   Thumbnail: PaginationThumbnail,
   sources: [
     {
@@ -42,7 +43,7 @@ export const paginationPattern: Pattern = {
     {
       fileName: "PaginationDemo.tsx",
       role: "Usage",
-      load: () => import("./PaginationDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/pagination/PaginationDemo.tsx?raw"),
     },
   ],
 };

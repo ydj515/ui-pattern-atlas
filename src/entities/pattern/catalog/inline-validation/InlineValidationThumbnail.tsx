@@ -1,4 +1,4 @@
-import { ThumbStage } from "../../ui/ThumbStage";
+import { ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same form as InlineValidationDemo: an invalid email shows the error after leaving the field. */
 export function InlineValidationThumbnail() {

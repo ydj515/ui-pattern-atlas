@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { BreadcrumbThumbnail } from "./BreadcrumbThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { BreadcrumbThumbnail } from "@/entities/pattern/catalog/breadcrumb/BreadcrumbThumbnail";
 
 export const breadcrumbPattern: Pattern = {
   slug: "breadcrumb",
@@ -30,7 +30,8 @@ export const breadcrumbPattern: Pattern = {
     "구분 기호(›)는 장식이므로 aria-hidden으로 숨깁니다.",
   ],
   tags: [...BASE_TAGS, "aria-current"],
-  loadPreview: () => import("./BreadcrumbDemo").then((m) => m.BreadcrumbDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/breadcrumb/BreadcrumbDemo").then((m) => m.BreadcrumbDemo),
   Thumbnail: BreadcrumbThumbnail,
   sources: [
     {
@@ -41,7 +42,7 @@ export const breadcrumbPattern: Pattern = {
     {
       fileName: "BreadcrumbDemo.tsx",
       role: "Usage",
-      load: () => import("./BreadcrumbDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/breadcrumb/BreadcrumbDemo.tsx?raw"),
     },
   ],
 };

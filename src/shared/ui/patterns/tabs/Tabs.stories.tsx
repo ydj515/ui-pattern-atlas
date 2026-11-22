@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Tabs } from "./Tabs";
+import { Tabs } from "@/shared/ui/patterns/tabs/Tabs";
 
 const meta = {
   title: "Patterns/Disclosure/Tabs",

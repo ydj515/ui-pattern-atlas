@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
-import { getPageItems, Pagination } from "./Pagination";
+import { getPageItems, Pagination } from "@/shared/ui/patterns/pagination/Pagination";
 
 describe("getPageItems", () => {
   it("lists every page when they all fit", () => {

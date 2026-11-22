@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same content as TooltipDemo: hover the info icon next to 연 이자율 3.2%. */
 export function TooltipThumbnail() {

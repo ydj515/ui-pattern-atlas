@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { PullToRefreshThumbnail } from "./PullToRefreshThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { PullToRefreshThumbnail } from "@/entities/pattern/catalog/pull-to-refresh/PullToRefreshThumbnail";
 
 export const pullToRefreshPattern: Pattern = {
   slug: "pull-to-refresh",
@@ -23,7 +23,10 @@ export const pullToRefreshPattern: Pattern = {
     "진행과 실패를 라이브 영역에서 알려 줍니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./PullToRefreshDemo").then((m) => m.PullToRefreshDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/pull-to-refresh/PullToRefreshDemo").then(
+      (m) => m.PullToRefreshDemo,
+    ),
   Thumbnail: PullToRefreshThumbnail,
   sources: [
     {
@@ -34,7 +37,7 @@ export const pullToRefreshPattern: Pattern = {
     {
       fileName: "PullToRefreshDemo.tsx",
       role: "Usage",
-      load: () => import("./PullToRefreshDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/pull-to-refresh/PullToRefreshDemo.tsx?raw"),
     },
   ],
 };

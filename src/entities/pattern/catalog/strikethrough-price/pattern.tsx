@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { StrikethroughPriceThumbnail } from "./StrikethroughPriceThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { StrikethroughPriceThumbnail } from "@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceThumbnail";
 
 export const strikethroughPricePattern: Pattern = {
   slug: "strikethrough-price",
@@ -24,7 +24,10 @@ export const strikethroughPricePattern: Pattern = {
     "기준 가격과 판매가를 텍스트 라벨로 구분하고 취소선이나 색만으로 의미를 전달하지 않습니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./StrikethroughPriceDemo").then((m) => m.StrikethroughPriceDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceDemo").then(
+      (m) => m.StrikethroughPriceDemo,
+    ),
   Thumbnail: StrikethroughPriceThumbnail,
   sources: [
     {
@@ -35,7 +38,8 @@ export const strikethroughPricePattern: Pattern = {
     {
       fileName: "StrikethroughPriceDemo.tsx",
       role: "Usage",
-      load: () => import("./StrikethroughPriceDemo.tsx?raw"),
+      load: () =>
+        import("@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceDemo.tsx?raw"),
     },
   ],
 };

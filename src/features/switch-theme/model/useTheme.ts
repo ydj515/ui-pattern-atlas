@@ -7,7 +7,7 @@ import {
   storeThemePreference,
   type ResolvedTheme,
   type ThemePreference,
-} from "./theme";
+} from "@/features/switch-theme/model/theme";
 
 function subscribeToSystemScheme(onChange: () => void) {
   const query = window.matchMedia(DARK_SCHEME_QUERY);

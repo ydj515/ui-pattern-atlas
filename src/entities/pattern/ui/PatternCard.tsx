@@ -1,10 +1,10 @@
-import "./thumbnail-motion.css";
+import "@/entities/pattern/ui/thumbnail-motion.css";
 
 import { Link } from "react-router";
 
 import { Highlight } from "@/shared/ui/Highlight";
 
-import type { Pattern } from "../model/pattern";
+import type { Pattern } from "@/entities/pattern/model/pattern";
 
 export interface PatternCardProps {
   readonly pattern: Pattern;

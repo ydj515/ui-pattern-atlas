@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { splitByMatches } from "./splitByMatches";
+import { splitByMatches } from "@/shared/lib/splitByMatches";
 
 describe("splitByMatches", () => {
   it("returns the whole text when the query is empty", () => {

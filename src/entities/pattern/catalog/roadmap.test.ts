@@ -1,14 +1,14 @@
 import { describe, expect, it } from "vitest";
 
-import { PATTERNS } from "./index";
-import { COMPARISON_DEMOS } from "./comparisons/ComparisonDemos";
+import { PATTERNS } from "@/entities/pattern/catalog";
+import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 import {
   COMPARISON_TOPIC,
   ROADMAP_PATTERN_TOPICS,
   ROADMAP_TOPICS,
   comparisonSlug,
-} from "./roadmap";
-import { patternForRoadmapEntry } from "./roadmapLinks";
+} from "@/entities/pattern/catalog/roadmap";
+import { patternForRoadmapEntry } from "@/entities/pattern/catalog/roadmapLinks";
 
 describe("roadmap catalog", () => {
   it("links completed roadmap rows to the corresponding pattern and category", () => {

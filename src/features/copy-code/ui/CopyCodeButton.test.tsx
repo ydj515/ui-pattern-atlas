@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { CopyCodeButton } from "./CopyCodeButton";
+import { CopyCodeButton } from "@/features/copy-code/ui/CopyCodeButton";
 
 function mockClipboard(writeText: (text: string) => Promise<void>) {
   Object.defineProperty(navigator, "clipboard", { value: { writeText }, configurable: true });

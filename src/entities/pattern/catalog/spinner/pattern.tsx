@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { SpinnerThumbnail } from "./SpinnerThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { SpinnerThumbnail } from "@/entities/pattern/catalog/spinner/SpinnerThumbnail";
 
 export const spinnerPattern: Pattern = {
   slug: "spinner",
@@ -21,7 +21,8 @@ export const spinnerPattern: Pattern = {
     "동작 줄이기 설정에서는 아이콘이 회전하지 않습니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./SpinnerDemo").then((m) => m.SpinnerDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/spinner/SpinnerDemo").then((m) => m.SpinnerDemo),
   Thumbnail: SpinnerThumbnail,
   sources: [
     {
@@ -29,6 +30,10 @@ export const spinnerPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/spinner/Spinner.tsx?raw"),
     },
-    { fileName: "SpinnerDemo.tsx", role: "Usage", load: () => import("./SpinnerDemo.tsx?raw") },
+    {
+      fileName: "SpinnerDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/spinner/SpinnerDemo.tsx?raw"),
+    },
   ],
 };

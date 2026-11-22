@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Accordion } from "./Accordion";
+import { Accordion } from "@/shared/ui/patterns/accordion/Accordion";
 
 const meta = {
   title: "Patterns/Disclosure/Accordion",

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
 
-import { Pagination } from "./Pagination";
+import { Pagination } from "@/shared/ui/patterns/pagination/Pagination";
 
 function PaginationStory({ initialPage, totalPages }: { initialPage: number; totalPages: number }) {
   const [page, setPage] = useState(initialPage);

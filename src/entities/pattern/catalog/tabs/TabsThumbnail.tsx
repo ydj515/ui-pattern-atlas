@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 // Tabs are 48px wide starting at x=10; the indicator moves in 48px steps.
 const TABS = [

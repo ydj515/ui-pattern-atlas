@@ -16,7 +16,8 @@
     "noEmit": true,
     "types": ["vite/client", "node"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@storybook-config/*": ["./.storybook/*"]
     }
   },
   "include": ["src", ".storybook", "vite.config.ts", "eslint.config.js"]

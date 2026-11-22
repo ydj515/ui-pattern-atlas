@@ -2,18 +2,18 @@ import { act, fireEvent, render, screen, waitFor, within } from "@testing-librar
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { BottomSheetDemo } from "./bottom-sheet/BottomSheetDemo";
-import { CheckboxDemo } from "./checkbox/CheckboxDemo";
-import { CompromiseEffectDemo } from "./compromise-effect/CompromiseEffectDemo";
-import { DecoyEffectDemo } from "./decoy-effect/DecoyEffectDemo";
-import { ErrorStateDemo } from "./error-state/ErrorStateDemo";
-import { LeftDigitEffectDemo } from "./left-digit-effect/LeftDigitEffectDemo";
-import { PricingPlanComparisonDemo } from "./pricing-plan-comparison/PricingPlanComparisonDemo";
-import { ProgressBarDemo } from "./progress-bar/ProgressBarDemo";
-import { PullToRefreshDemo } from "./pull-to-refresh/PullToRefreshDemo";
-import { SpinnerDemo } from "./spinner/SpinnerDemo";
-import { StrikethroughPriceDemo } from "./strikethrough-price/StrikethroughPriceDemo";
-import { COMPARISON_DEMOS } from "./comparisons/ComparisonDemos";
+import { BottomSheetDemo } from "@/entities/pattern/catalog/bottom-sheet/BottomSheetDemo";
+import { CheckboxDemo } from "@/entities/pattern/catalog/checkbox/CheckboxDemo";
+import { CompromiseEffectDemo } from "@/entities/pattern/catalog/compromise-effect/CompromiseEffectDemo";
+import { DecoyEffectDemo } from "@/entities/pattern/catalog/decoy-effect/DecoyEffectDemo";
+import { ErrorStateDemo } from "@/entities/pattern/catalog/error-state/ErrorStateDemo";
+import { LeftDigitEffectDemo } from "@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectDemo";
+import { PricingPlanComparisonDemo } from "@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonDemo";
+import { ProgressBarDemo } from "@/entities/pattern/catalog/progress-bar/ProgressBarDemo";
+import { PullToRefreshDemo } from "@/entities/pattern/catalog/pull-to-refresh/PullToRefreshDemo";
+import { SpinnerDemo } from "@/entities/pattern/catalog/spinner/SpinnerDemo";
+import { StrikethroughPriceDemo } from "@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceDemo";
+import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 
 afterEach(() => vi.useRealTimers());
 

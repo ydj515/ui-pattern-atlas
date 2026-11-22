@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { AlertBannerThumbnail } from "./AlertBannerThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { AlertBannerThumbnail } from "@/entities/pattern/catalog/alert-banner/AlertBannerThumbnail";
 
 export const alertBannerPattern: Pattern = {
   slug: "alert-banner",
@@ -32,7 +32,10 @@ export const alertBannerPattern: Pattern = {
     "텍스트와 배경의 명도 대비를 4.5:1 이상으로 유지합니다.",
   ],
   tags: [...BASE_TAGS, "role=alert"],
-  loadPreview: () => import("./AlertBannerDemo").then((m) => m.AlertBannerDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/alert-banner/AlertBannerDemo").then(
+      (m) => m.AlertBannerDemo,
+    ),
   Thumbnail: AlertBannerThumbnail,
   sources: [
     {
@@ -43,7 +46,7 @@ export const alertBannerPattern: Pattern = {
     {
       fileName: "AlertBannerDemo.tsx",
       role: "Usage",
-      load: () => import("./AlertBannerDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/alert-banner/AlertBannerDemo.tsx?raw"),
     },
   ],
 };

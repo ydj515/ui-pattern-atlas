@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { ToastThumbnail } from "./ToastThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { ToastThumbnail } from "@/entities/pattern/catalog/toast/ToastThumbnail";
 
 export const toastPattern: Pattern = {
   slug: "toast",
@@ -32,7 +32,7 @@ export const toastPattern: Pattern = {
     "색상만으로 성공/실패를 구분하지 않고 메시지 문구로 결과를 전달합니다.",
   ],
   tags: [...BASE_TAGS, "aria-live", "Context API"],
-  loadPreview: () => import("./ToastDemo").then((m) => m.ToastDemo),
+  loadPreview: () => import("@/entities/pattern/catalog/toast/ToastDemo").then((m) => m.ToastDemo),
   Thumbnail: ToastThumbnail,
   sources: [
     {
@@ -40,6 +40,10 @@ export const toastPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/toast/Toast.tsx?raw"),
     },
-    { fileName: "ToastDemo.tsx", role: "Usage", load: () => import("./ToastDemo.tsx?raw") },
+    {
+      fileName: "ToastDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/toast/ToastDemo.tsx?raw"),
+    },
   ],
 };

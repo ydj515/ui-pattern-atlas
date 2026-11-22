@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Popover } from "./Popover";
+import { Popover } from "@/shared/ui/patterns/popover/Popover";
 
 const meta = {
   title: "Patterns/Overlay/Popover",

@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same card as SkeletonDemo: placeholders → 김하늘's profile → 다시 불러오기 restarts loading. */
 export function SkeletonThumbnail() {

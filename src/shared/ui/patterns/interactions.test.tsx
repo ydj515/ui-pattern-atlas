@@ -3,16 +3,16 @@ import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { Accordion } from "./accordion/Accordion";
-import { AlertBanner } from "./alert-banner/AlertBanner";
-import { Breadcrumb } from "./breadcrumb/Breadcrumb";
-import { TextField } from "./inline-validation/TextField";
-import { ModalDialog } from "./modal-dialog/ModalDialog";
-import { Popover } from "./popover/Popover";
-import { Switch } from "./switch/Switch";
-import { Tabs } from "./tabs/Tabs";
-import { ToastProvider, useToast } from "./toast/Toast";
-import { Tooltip } from "./tooltip/Tooltip";
+import { Accordion } from "@/shared/ui/patterns/accordion/Accordion";
+import { AlertBanner } from "@/shared/ui/patterns/alert-banner/AlertBanner";
+import { Breadcrumb } from "@/shared/ui/patterns/breadcrumb/Breadcrumb";
+import { TextField } from "@/shared/ui/patterns/inline-validation/TextField";
+import { ModalDialog } from "@/shared/ui/patterns/modal-dialog/ModalDialog";
+import { Popover } from "@/shared/ui/patterns/popover/Popover";
+import { Switch } from "@/shared/ui/patterns/switch/Switch";
+import { Tabs } from "@/shared/ui/patterns/tabs/Tabs";
+import { ToastProvider, useToast } from "@/shared/ui/patterns/toast/Toast";
+import { Tooltip } from "@/shared/ui/patterns/tooltip/Tooltip";
 
 afterEach(() => {
   vi.useRealTimers();

@@ -1,5 +1,5 @@
-import { type Pattern } from "../../model/pattern";
-import { CompromiseEffectThumbnail } from "./CompromiseEffectThumbnail";
+import { type Pattern } from "@/entities/pattern/model/pattern";
+import { CompromiseEffectThumbnail } from "@/entities/pattern/catalog/compromise-effect/CompromiseEffectThumbnail";
 
 export const compromiseEffectPattern: Pattern = {
   slug: "compromise-effect",
@@ -27,7 +27,11 @@ export const compromiseEffectPattern: Pattern = {
   ],
   accessibility: ["추천은 텍스트로 표시하고 요금제를 대신 선택하지 않습니다."],
   tags: ["가격의 심리", "선택 맥락"],
-  loadPreview: () => import("./CompromiseEffectDemo").then((m) => m.CompromiseEffectDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/compromise-effect/CompromiseEffectDemo").then(
+      (m) => m.CompromiseEffectDemo,
+    ),
   Thumbnail: CompromiseEffectThumbnail,
-  loadDemoSource: () => import("./CompromiseEffectDemo.tsx?raw"),
+  loadDemoSource: () =>
+    import("@/entities/pattern/catalog/compromise-effect/CompromiseEffectDemo.tsx?raw"),
 };

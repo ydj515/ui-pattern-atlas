@@ -54,6 +54,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@storybook-config": fileURLToPath(new URL("./.storybook", import.meta.url)),
     },
   },
   test: {

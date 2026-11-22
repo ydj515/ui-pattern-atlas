@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "./Button";
+import { Button } from "@/shared/ui/primitives/Button";
 
 /** Site chrome button (DESIGN.md → Components). Switch "Theme" in the toolbar to see dark mode. */
 const meta = {

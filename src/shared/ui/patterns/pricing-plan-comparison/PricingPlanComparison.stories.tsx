@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { PricingPlanComparison } from "./PricingPlanComparison";
+import { PricingPlanComparison } from "@/shared/ui/patterns/pricing-plan-comparison/PricingPlanComparison";
 
 const meta = {
   title: "Patterns/Pricing/Pricing Plan Comparison",

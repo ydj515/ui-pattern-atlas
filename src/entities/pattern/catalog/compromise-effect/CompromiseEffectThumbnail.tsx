@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 const PLAN_OPTIONS = [
   { id: "basic", name: "베이직", price: "5,900원", cadence: "매월", benefits: ["광고 없음"] },

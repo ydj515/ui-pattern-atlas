@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { PricingPlanComparisonThumbnail } from "./PricingPlanComparisonThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { PricingPlanComparisonThumbnail } from "@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonThumbnail";
 
 export const pricingPlanComparisonPattern: Pattern = {
   slug: "pricing-plan-comparison",
@@ -24,7 +24,10 @@ export const pricingPlanComparisonPattern: Pattern = {
     "라디오 그룹에서 한 요금제를 선택하도록 하고 청구 주기와 포함 여부를 말로도 표시합니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./PricingPlanComparisonDemo").then((m) => m.PricingPlanComparisonDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonDemo").then(
+      (m) => m.PricingPlanComparisonDemo,
+    ),
   Thumbnail: PricingPlanComparisonThumbnail,
   sources: [
     {
@@ -36,7 +39,8 @@ export const pricingPlanComparisonPattern: Pattern = {
     {
       fileName: "PricingPlanComparisonDemo.tsx",
       role: "Usage",
-      load: () => import("./PricingPlanComparisonDemo.tsx?raw"),
+      load: () =>
+        import("@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonDemo.tsx?raw"),
     },
   ],
 };

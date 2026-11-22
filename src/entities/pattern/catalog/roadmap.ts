@@ -1,4 +1,4 @@
-import { ROADMAP_DATA } from "./roadmapData";
+import { ROADMAP_DATA } from "@/entities/pattern/catalog/roadmapData";
 
 export type RoadmapPriority = "완료" | "P1" | "P2" | "P3";
 export type RoadmapKind = "컴포넌트" | "개념" | "비교";

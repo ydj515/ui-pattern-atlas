@@ -1,4 +1,4 @@
-import { normalizeSearchText } from "./searchPatterns";
+import { normalizeSearchText } from "@/features/search-patterns/model/searchPatterns";
 
 export function roadmapMatcher(query: string) {
   const tokens = query.split(/\s+/).map(normalizeSearchText).filter(Boolean);

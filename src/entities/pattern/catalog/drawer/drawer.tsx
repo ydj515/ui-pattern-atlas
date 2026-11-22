@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { DrawerThumbnail } from "./DrawerThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { DrawerThumbnail } from "@/entities/pattern/catalog/drawer/DrawerThumbnail";
 
 export const drawerPattern: Pattern = {
   slug: "drawer",
@@ -32,7 +32,8 @@ export const drawerPattern: Pattern = {
     "적용 전까지는 임시 값을 사용해, 닫으면 변경 사항이 취소된다는 점을 명확히 합니다.",
   ],
   tags: [...BASE_TAGS, "dialog element"],
-  loadPreview: () => import("./DrawerDemo").then((m) => m.DrawerDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/drawer/DrawerDemo").then((m) => m.DrawerDemo),
   Thumbnail: DrawerThumbnail,
   sources: [
     {
@@ -40,6 +41,10 @@ export const drawerPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/drawer/Drawer.tsx?raw"),
     },
-    { fileName: "DrawerDemo.tsx", role: "Usage", load: () => import("./DrawerDemo.tsx?raw") },
+    {
+      fileName: "DrawerDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/drawer/DrawerDemo.tsx?raw"),
+    },
   ],
 };

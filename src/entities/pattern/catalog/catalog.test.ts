@@ -2,8 +2,8 @@ import { render } from "@testing-library/react";
 import { createElement } from "react";
 import { describe, expect, it } from "vitest";
 
-import { isPatternCategoryId, PATTERN_CATEGORIES } from "../model/category";
-import { findPatternBySlug, PATTERNS } from "./index";
+import { isPatternCategoryId, PATTERN_CATEGORIES } from "@/entities/pattern/model/category";
+import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
 
 describe("pattern catalog", () => {
   it("has unique, URL-safe slugs", () => {

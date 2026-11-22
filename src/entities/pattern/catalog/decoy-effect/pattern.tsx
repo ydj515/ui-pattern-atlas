@@ -1,5 +1,5 @@
-import { type Pattern } from "../../model/pattern";
-import { DecoyEffectThumbnail } from "./DecoyEffectThumbnail";
+import { type Pattern } from "@/entities/pattern/model/pattern";
+import { DecoyEffectThumbnail } from "@/entities/pattern/catalog/decoy-effect/DecoyEffectThumbnail";
 
 export const decoyEffectPattern: Pattern = {
   slug: "decoy-effect",
@@ -22,7 +22,10 @@ export const decoyEffectPattern: Pattern = {
   ],
   accessibility: ["가격과 포함 혜택을 각 옵션에 동일한 구조의 텍스트로 표시합니다."],
   tags: ["가격의 심리", "비대칭 지배"],
-  loadPreview: () => import("./DecoyEffectDemo").then((m) => m.DecoyEffectDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/decoy-effect/DecoyEffectDemo").then(
+      (m) => m.DecoyEffectDemo,
+    ),
   Thumbnail: DecoyEffectThumbnail,
-  loadDemoSource: () => import("./DecoyEffectDemo.tsx?raw"),
+  loadDemoSource: () => import("@/entities/pattern/catalog/decoy-effect/DecoyEffectDemo.tsx?raw"),
 };

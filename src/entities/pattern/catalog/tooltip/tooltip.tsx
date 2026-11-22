@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { TooltipThumbnail } from "./TooltipThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { TooltipThumbnail } from "@/entities/pattern/catalog/tooltip/TooltipThumbnail";
 
 export const tooltipPattern: Pattern = {
   slug: "tooltip",
@@ -35,7 +35,8 @@ export const tooltipPattern: Pattern = {
     "아이콘 전용 트리거에는 별도의 aria-label을 제공합니다. 툴팁은 이름이 아니라 설명입니다.",
   ],
   tags: [...BASE_TAGS, "WCAG 1.4.13"],
-  loadPreview: () => import("./TooltipDemo").then((m) => m.TooltipDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/tooltip/TooltipDemo").then((m) => m.TooltipDemo),
   Thumbnail: TooltipThumbnail,
   sources: [
     {
@@ -43,6 +44,10 @@ export const tooltipPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/tooltip/Tooltip.tsx?raw"),
     },
-    { fileName: "TooltipDemo.tsx", role: "Usage", load: () => import("./TooltipDemo.tsx?raw") },
+    {
+      fileName: "TooltipDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/tooltip/TooltipDemo.tsx?raw"),
+    },
   ],
 };

@@ -7,7 +7,7 @@ import type { Pattern } from "@/entities/pattern/model/pattern";
 import { commandKLabel, isCommandK } from "@/shared/lib/keyboard";
 import { Highlight } from "@/shared/ui/Highlight";
 
-import { searchPatterns } from "../model/searchPatterns";
+import { searchPatterns } from "@/features/search-patterns/model/searchPatterns";
 
 /**
  * Header search for pages other than the catalog: a trigger button plus a ⌘K (Ctrl+K)

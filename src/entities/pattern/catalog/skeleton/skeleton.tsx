@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { SkeletonThumbnail } from "./SkeletonThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { SkeletonThumbnail } from "@/entities/pattern/catalog/skeleton/SkeletonThumbnail";
 
 export const skeletonPattern: Pattern = {
   slug: "skeleton",
@@ -31,7 +31,8 @@ export const skeletonPattern: Pattern = {
     "pulse 애니메이션은 prefers-reduced-motion에서 멈춥니다.",
   ],
   tags: [...BASE_TAGS, "aria-busy", "Reduced motion"],
-  loadPreview: () => import("./SkeletonDemo").then((m) => m.SkeletonDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/skeleton/SkeletonDemo").then((m) => m.SkeletonDemo),
   Thumbnail: SkeletonThumbnail,
   sources: [
     {
@@ -39,6 +40,10 @@ export const skeletonPattern: Pattern = {
       role: "Component",
       load: () => import("@/shared/ui/patterns/skeleton/Skeleton.tsx?raw"),
     },
-    { fileName: "SkeletonDemo.tsx", role: "Usage", load: () => import("./SkeletonDemo.tsx?raw") },
+    {
+      fileName: "SkeletonDemo.tsx",
+      role: "Usage",
+      load: () => import("@/entities/pattern/catalog/skeleton/SkeletonDemo.tsx?raw"),
+    },
   ],
 };

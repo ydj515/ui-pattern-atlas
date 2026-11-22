@@ -2,7 +2,10 @@ import { describe, expect, it } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
 
-import { normalizeSearchText, searchPatterns } from "./searchPatterns";
+import {
+  normalizeSearchText,
+  searchPatterns,
+} from "@/features/search-patterns/model/searchPatterns";
 
 function slugsFor(
   text: string,

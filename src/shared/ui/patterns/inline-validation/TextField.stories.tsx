@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { TextField } from "./TextField";
+import { TextField } from "@/shared/ui/patterns/inline-validation/TextField";
 
 const meta = {
   title: "Patterns/Feedback/Inline Validation",

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { PullToRefresh } from "./PullToRefresh";
+import { PullToRefresh } from "@/shared/ui/patterns/pull-to-refresh/PullToRefresh";
 
 const meta = {
   title: "Patterns/Gestures/Pull to Refresh",

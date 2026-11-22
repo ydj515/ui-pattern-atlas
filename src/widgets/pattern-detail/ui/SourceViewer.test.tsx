@@ -17,7 +17,7 @@ afterEach(() => {
 
 describe("SourceViewer", () => {
   it("loads the source text on demand, shows plain code first, then colours it like VS Code Dark+", async () => {
-    const { SourceViewer } = await import("./SourceViewer");
+    const { SourceViewer } = await import("@/widgets/pattern-detail/ui/SourceViewer");
     render(<SourceViewer sources={[SOURCE]} />);
     const block = screen.getByLabelText("Example.tsx 소스 코드");
     await waitFor(() => expect(block).toHaveTextContent("export function Example()"));
@@ -38,7 +38,7 @@ describe("SourceViewer", () => {
     vi.doMock("@/shared/lib/highlightCode", () => ({
       highlightCode: () => Promise.reject(new Error("offline")),
     }));
-    const { SourceViewer } = await import("./SourceViewer");
+    const { SourceViewer } = await import("@/widgets/pattern-detail/ui/SourceViewer");
     render(<SourceViewer sources={[SOURCE]} />);
     const block = screen.getByLabelText("Example.tsx 소스 코드");
 
@@ -52,7 +52,7 @@ describe("SourceViewer", () => {
       .fn<() => Promise<{ readonly default: string }>>()
       .mockRejectedValueOnce(new Error("network"))
       .mockResolvedValueOnce({ default: CODE });
-    const { SourceViewer } = await import("./SourceViewer");
+    const { SourceViewer } = await import("@/widgets/pattern-detail/ui/SourceViewer");
     render(<SourceViewer sources={[{ ...SOURCE, load }]} />);
 
     expect(await screen.findByRole("alert")).toHaveTextContent("소스를 불러오지 못했어요");

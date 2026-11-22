@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same flow as ModalDialogDemo: 삭제하기 → confirm dialog → 삭제 → status message. */
 export function ModalDialogThumbnail() {

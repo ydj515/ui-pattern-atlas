@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { ErrorStateThumbnail } from "./ErrorStateThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { ErrorStateThumbnail } from "@/entities/pattern/catalog/error-state/ErrorStateThumbnail";
 
 export const errorStatePattern: Pattern = {
   slug: "error-state",
@@ -21,7 +21,8 @@ export const errorStatePattern: Pattern = {
     "재시도 중에는 버튼의 포커스를 유지하고 중복 요청을 막습니다.",
   ],
   tags: BASE_TAGS,
-  loadPreview: () => import("./ErrorStateDemo").then((m) => m.ErrorStateDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/error-state/ErrorStateDemo").then((m) => m.ErrorStateDemo),
   Thumbnail: ErrorStateThumbnail,
   sources: [
     {
@@ -32,7 +33,7 @@ export const errorStatePattern: Pattern = {
     {
       fileName: "ErrorStateDemo.tsx",
       role: "Usage",
-      load: () => import("./ErrorStateDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/error-state/ErrorStateDemo.tsx?raw"),
     },
   ],
 };

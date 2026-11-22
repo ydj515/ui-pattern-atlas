@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /**
  * Same rules as SwitchDemo: turn 혜택 알림 on → turn 푸시 알림 off (혜택 알림 is then

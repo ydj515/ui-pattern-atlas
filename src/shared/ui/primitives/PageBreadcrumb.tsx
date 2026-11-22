@@ -1,6 +1,6 @@
 import { Link, type To } from "react-router";
 
-import { navLinkClassName } from "./textLink";
+import { navLinkClassName } from "@/shared/ui/primitives/textLink";
 
 interface BreadcrumbParent {
   readonly label: string;

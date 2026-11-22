@@ -1,4 +1,4 @@
-import { ThumbCursor, ThumbStage } from "../../ui/ThumbStage";
+import { ThumbCursor, ThumbStage } from "@/entities/pattern/ui/ThumbStage";
 
 /** Same flow as EmptyStateDemo: 프로젝트 만들기 → the list gets 새 프로젝트 → back to empty. */
 export function EmptyStateThumbnail() {

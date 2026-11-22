@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState, type ComponentProps } from "react";
 
-import { ModalDialog } from "./ModalDialog";
+import { ModalDialog } from "@/shared/ui/patterns/modal-dialog/ModalDialog";
 
 function ModalDialogStory(props: Omit<ComponentProps<typeof ModalDialog>, "open" | "onClose">) {
   const [open, setOpen] = useState(false);

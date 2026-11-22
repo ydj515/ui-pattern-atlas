@@ -1,5 +1,5 @@
-import { BASE_TAGS, type Pattern } from "../../model/pattern";
-import { EmptyStateThumbnail } from "./EmptyStateThumbnail";
+import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
+import { EmptyStateThumbnail } from "@/entities/pattern/catalog/empty-state/EmptyStateThumbnail";
 
 export const emptyStatePattern: Pattern = {
   slug: "empty-state",
@@ -35,7 +35,8 @@ export const emptyStatePattern: Pattern = {
     "주요 행동은 실제 <button> 또는 <a>로 제공해 키보드로 접근할 수 있게 합니다.",
   ],
   tags: [...BASE_TAGS, "UX writing"],
-  loadPreview: () => import("./EmptyStateDemo").then((m) => m.EmptyStateDemo),
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/empty-state/EmptyStateDemo").then((m) => m.EmptyStateDemo),
   Thumbnail: EmptyStateThumbnail,
   sources: [
     {
@@ -46,7 +47,7 @@ export const emptyStatePattern: Pattern = {
     {
       fileName: "EmptyStateDemo.tsx",
       role: "Usage",
-      load: () => import("./EmptyStateDemo.tsx?raw"),
+      load: () => import("@/entities/pattern/catalog/empty-state/EmptyStateDemo.tsx?raw"),
     },
   ],
 };

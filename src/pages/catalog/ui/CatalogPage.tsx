@@ -19,7 +19,7 @@ import { Highlight } from "@/shared/ui/Highlight";
 import { Button } from "@/shared/ui/primitives/Button";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
-import { BackToTopButton } from "./BackToTopButton";
+import { BackToTopButton } from "@/pages/catalog/ui/BackToTopButton";
 
 const QUERY_PARAM = "q";
 const CATEGORY_PARAM = "category";
