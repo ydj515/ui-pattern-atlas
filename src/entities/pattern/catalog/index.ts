@@ -53,6 +53,16 @@ import { noFilterResultsPattern } from "@/entities/pattern/catalog/no-filter-res
 import { allCaughtUpPattern } from "@/entities/pattern/catalog/all-caught-up/pattern";
 import { emptiedStatePattern } from "@/entities/pattern/catalog/emptied-state/pattern";
 import { lockedContentPattern } from "@/entities/pattern/catalog/locked-content/pattern";
+import { textFieldPattern } from "@/entities/pattern/catalog/text-field/pattern";
+import { passwordFieldPattern } from "@/entities/pattern/catalog/password-field/pattern";
+import { searchFieldPattern } from "@/entities/pattern/catalog/search-field/pattern";
+import { otpInputPattern } from "@/entities/pattern/catalog/otp-input/pattern";
+import { textareaPattern } from "@/entities/pattern/catalog/textarea/pattern";
+import { numberStepperPattern } from "@/entities/pattern/catalog/number-stepper/pattern";
+import { inputMaskPattern } from "@/entities/pattern/catalog/input-mask/pattern";
+import { tagInputPattern } from "@/entities/pattern/catalog/tag-input/pattern";
+import { multiStepFormPattern } from "@/entities/pattern/catalog/multi-step-form/pattern";
+import { floatingLabelPattern } from "@/entities/pattern/catalog/floating-label/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -108,6 +118,16 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   allCaughtUpPattern,
   emptiedStatePattern,
   lockedContentPattern,
+  textFieldPattern,
+  passwordFieldPattern,
+  searchFieldPattern,
+  otpInputPattern,
+  textareaPattern,
+  numberStepperPattern,
+  inputMaskPattern,
+  tagInputPattern,
+  multiStepFormPattern,
+  floatingLabelPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

@@ -24,9 +24,15 @@ export const PATTERN_CATEGORIES = [
     description: "긴 내용을 나눠 두고 필요한 만큼만 펼쳐 보기",
   },
   {
+    id: "text-input",
+    label: "Text input",
+    labelKo: "텍스트 입력",
+    description: "글자와 숫자를 직접 입력받는 필드",
+  },
+  {
     id: "selection",
-    label: "Input",
-    labelKo: "입력",
+    label: "Selection",
+    labelKo: "선택 컨트롤",
     description: "켜고 끄거나 하나를 고르는 컨트롤",
   },
   {
