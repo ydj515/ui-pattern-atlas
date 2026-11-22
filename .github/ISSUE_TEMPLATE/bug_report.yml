@@ -1,0 +1,40 @@
+name: Bug Report
+description: Report a broken demo or thumbnail, an accessibility issue, inaccurate guidance copy, or a site UI bug.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Affected Pattern or Page
+      description: Pattern name, slug, or page route where the issue occurs (you may write in English or Korean).
+      placeholder: "e.g., /patterns/modal-dialog, catalog search, mobile menu"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Description and Steps to Reproduce
+      description: Explain what is broken or inaccurate and how to reproduce it.
+      placeholder: |
+        1. Go to ...
+        2. Click or press ...
+        3. Actual result:
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior or Suggested Fix
+      description: What should happen instead, or how should the copy/implementation change?
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Optional. Browser, OS, theme (light/dark), keyboard or screen reader setup.
+      placeholder: "e.g., macOS Safari 18, dark theme, keyboard navigation"

@@ -1,0 +1,58 @@
+name: Pattern or Comparison Request
+description: Suggest a missing UI pattern, design style, UX psychology entry, or UI comparison guide.
+title: "[Pattern] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a pattern or comparison guide to add to UI Pattern Atlas (you may write in English or Korean).
+        Check the [topic index](https://ydj515.github.io/ui-pattern-atlas/roadmap) first to see what is already planned or completed.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which section does this entry belong to?
+      options:
+        - Components
+        - Design styles
+        - UX psychology
+        - UI comparisons
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: pattern-name
+    attributes:
+      label: Pattern Name (English / Korean)
+      description: Include both the English and Korean terms if known.
+      placeholder: "e.g., Toast (토스트) or Toast / Snackbar (토스트 / 스낵바)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Description and Usage Guidance
+      description: What problem does this pattern solve, when should it be used, and when should it be avoided?
+      placeholder: |
+        - Summary:
+        - When to use:
+        - When not to use:
+    validations:
+      required: true
+
+  - type: textarea
+    id: demo-scenario
+    attributes:
+      label: Demo Scenario Idea
+      description: Optional. Describe a concrete user interaction for the live demo and looping thumbnail.
+      placeholder: "e.g., Pressing a Save button shows a status notification at the bottom that dismisses automatically."
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Optional. Links to design system docs, articles, or real-world examples.
