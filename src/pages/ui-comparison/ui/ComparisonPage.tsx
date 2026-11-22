@@ -4,13 +4,14 @@ import { Link, useParams } from "react-router";
 import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 import {
   COMPARISON_TOPIC,
+  catalogCategoryHref,
   comparisonSlug,
   type RoadmapEntry,
 } from "@/entities/pattern/catalog/roadmap";
 import { findPatternByTerm } from "@/entities/pattern/catalog/roadmapLinks";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { NotFoundView } from "@/shared/ui/feedback/NotFoundView";
-import { PageBreadcrumb } from "@/shared/ui/primitives/PageBreadcrumb";
+import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
 
@@ -30,7 +31,10 @@ function ComparisonIndex() {
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
       <title>헷갈리는 UI · UI Pattern Atlas</title>
-      <PageBreadcrumb parents={[{ label: "모든 패턴", to: "/" }]} current="헷갈리는 UI" />
+      <CatalogBreadcrumb
+        parents={[{ label: "헷갈리는 UI", to: catalogCategoryHref("ui-comparison") }]}
+        current="비교 가이드 목차"
+      />
       <h1 className="mt-8 font-serif text-display font-bold">헷갈리는 UI</h1>
       <p className="mt-3 text-lead text-graphite">
         비슷하게 보이는 UI의 동작과 선택 기준을 비교해 보세요.
@@ -102,11 +106,8 @@ function ComparisonDetail({ slug }: { readonly slug: string }) {
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
       <title>{`${pair.nameKo} · UI Pattern Atlas`}</title>
-      <PageBreadcrumb
-        parents={[
-          { label: "모든 패턴", to: "/" },
-          { label: "헷갈리는 UI", to: "/compare" },
-        ]}
+      <CatalogBreadcrumb
+        parents={[{ label: "헷갈리는 UI", to: catalogCategoryHref("ui-comparison") }]}
         current={title}
       />
       <header className="mt-8">

@@ -31,3 +31,48 @@ export function comparisonSlug(entry: RoadmapEntry): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
+
+// Icon names and UX research stay available through All and the full topic index.
+export const CATALOG_SECTIONS = [
+  { id: "components", label: "컴포넌트", includes: (topic) => topic.kind === "컴포넌트" },
+  {
+    id: "styles",
+    label: "디자인 스타일",
+    includes: (topic) => topic.id === "design-style" || topic.id === "typography-style",
+  },
+  {
+    id: "ux-psychology",
+    label: "UX 심리",
+    includes: (topic) => topic.id === "dark-pattern-ux" || topic.id === "pricing-psychology",
+  },
+  { id: "ui-comparison", label: "헷갈리는 UI", includes: (topic) => topic.kind === "비교" },
+] as const satisfies readonly {
+  id: string;
+  label: string;
+  includes: (topic: RoadmapTopic) => boolean;
+}[];
+
+export function catalogSectionFor(topic: RoadmapTopic) {
+  return CATALOG_SECTIONS.find((section) => section.includes(topic));
+}
+
+export const CATALOG_TABS = [{ id: "all", label: "전체" }, ...CATALOG_SECTIONS] as const;
+
+export function resolveCatalogCategory(requested: string | null) {
+  const id = requested === "input" ? "selection" : requested;
+  const topic = ROADMAP_TOPICS.find((candidate) => candidate.id === id);
+  const section = CATALOG_SECTIONS.find((candidate) => candidate.id === id);
+  const category = section?.id ?? topic?.id ?? (id === "status" ? "status" : "all");
+  const activeTab =
+    section?.id ??
+    (topic && catalogSectionFor(topic)?.id) ??
+    (category === "status" ? "components" : "all");
+  return { category, section, activeTab };
+}
+
+export function catalogCategoryHref(category: string, search = "") {
+  const params = new URLSearchParams(search);
+  if (category === "all") params.delete("category");
+  else params.set("category", category);
+  return params.size ? `/?${params}` : "/";
+}

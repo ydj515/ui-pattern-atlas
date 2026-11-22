@@ -28,6 +28,21 @@ export function roadmapEntryHref(topic: RoadmapTopic, entry: RoadmapEntry) {
   return `/roadmap?${params}#${roadmapEntryAnchor(topic, entry)}`;
 }
 
+export function roadmapEntryDestination(topic: RoadmapTopic, entry: RoadmapEntry) {
+  if (topic.kind === "비교") {
+    const hasDemo = entry.priority === "완료";
+    return {
+      href: `/compare/${comparisonSlug(entry)}`,
+      status: hasDemo ? "비교 가이드 · 데모" : "비교 가이드",
+      hasDemo,
+    };
+  }
+  const pattern = patternForRoadmapEntry(topic, entry);
+  if (pattern)
+    return { href: `/patterns/${pattern.slug}`, status: "데모 보기 가능", hasDemo: true };
+  return { href: undefined, status: "준비 중", hasDemo: false };
+}
+
 const comparisonNames: Readonly<Record<string, string>> = {
   Checkbox: "체크박스",
   "Step Indicator": "스테퍼",

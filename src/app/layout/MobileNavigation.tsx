@@ -1,22 +1,35 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink, useLocation, useMatch } from "react-router";
+
+import { findPatternBySlug } from "@/entities/pattern/catalog";
+import {
+  CATALOG_TABS,
+  catalogCategoryHref,
+  resolveCatalogCategory,
+} from "@/entities/pattern/catalog/roadmap";
 
 import { buttonClassName } from "@/shared/ui/primitives/Button";
 import { navLinkClassName } from "@/shared/ui/primitives/textLink";
 
-const LINKS = [
-  { to: "/", label: "UI 패턴 사전" },
-  { to: "/roadmap", label: "전체 주제" },
-  { to: "/compare", label: "헷갈리는 UI" },
-] as const;
-
-const linkClassName = `flex min-h-12 items-center justify-between rounded-control px-3 text-body-sm hover:bg-field aria-[current=page]:bg-field aria-[current=page]:font-semibold aria-[current=page]:text-ink ${navLinkClassName}`;
+const linkClassName = `flex min-h-11 items-center justify-between rounded-control px-3 text-body-sm hover:bg-field aria-[current]:bg-marker aria-[current]:font-medium aria-[current]:text-marker-ink ${navLinkClassName}`;
 
 export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: string }) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const navigationId = useId();
+  const { pathname, search } = useLocation();
+  const patternMatch = useMatch("/patterns/:slug");
+  const comparisonMatch = useMatch("/compare/*");
+  const isCatalog = pathname === "/";
+  const categoryId = isCatalog
+    ? new URLSearchParams(search).get("category")
+    : findPatternBySlug(patternMatch?.params.slug ?? "")?.category;
+  const activeTab = comparisonMatch
+    ? "ui-comparison"
+    : isCatalog || categoryId
+      ? resolveCatalogCategory(categoryId ?? null).activeTab
+      : undefined;
 
   useEffect(() => {
     if (!open) return;
@@ -70,26 +83,31 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
         id={navigationId}
         aria-label="모바일 메뉴"
         hidden={!open}
-        className="absolute inset-x-4 top-full mt-2 rounded-surface border border-rule bg-paper p-2 shadow-overlay"
+        className="absolute inset-x-4 top-full mt-2 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain rounded-surface border border-rule bg-paper p-2 shadow-overlay"
       >
-        <ul className="space-y-1">
-          {LINKS.map(({ to, label }) => (
-            <li key={to}>
-              <NavLink to={to} end className={linkClassName} onClick={closeAndFocus}>
-                {label}
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  className="size-4 shrink-0"
+        <ul aria-label="카테고리">
+          {CATALOG_TABS.map(({ id, label }) => {
+            const to = catalogCategoryHref(id, isCatalog ? search : "");
+            const current =
+              activeTab === id ? (to === pathname + search ? "page" : "location") : undefined;
+            return (
+              <li key={id}>
+                <Link
+                  to={to}
+                  aria-current={current}
+                  className={linkClassName}
+                  onClick={closeAndFocus}
                 >
-                  <path d="M7.3 5.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.3-3.3-3.3-3.3a1 1 0 0 1 0-1.4Z" />
-                </svg>
-              </NavLink>
-            </li>
-          ))}
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <div className="mt-2 border-t border-rule pt-2">
+          <NavLink to="/roadmap" end className={linkClassName} onClick={closeAndFocus}>
+            전체 주제 보기
+          </NavLink>
           <a
             href={repositoryUrl}
             target="_blank"

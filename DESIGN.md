@@ -108,9 +108,12 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   `buttonClassName`.
 - **Links** (`textLinkClassName`): ink text, `rule-strong` underline that turns ink on hover.
   **Navigation links** (`navLinkClassName`): graphite, ink on hover, no underline.
-- **Category chips**: `rounded-control` chips with a `rule` border, centred under the search box;
-  the selected one gets the `marker` highlight. They wrap on wide screens and scroll sideways
-  on narrow ones.
+- **Catalog navigation**: a left-aligned row under the centred search field shows All,
+  Components, Design styles, UX psychology, and UI comparisons. Only the selected filter
+  has a `marker` background. The full topic index sits at the right and remains reachable
+  on narrow screens. Detail breadcrumbs link to both the parent category and the specific
+  topic. A separate return link restores the catalog query and filters. The mobile header
+  menu repeats the five categories in the same order, followed by the topic index and GitHub.
 - **Search input**: `rounded-input`, `rule-strong` border, ink border and ring on focus.
 - **Pattern card**: a `field` surface with the looping thumbnail, a serif headword, the English
   term in `graphite`, and a one-line definition. No border, no shadow; hover underlines the

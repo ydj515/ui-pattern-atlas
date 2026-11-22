@@ -34,10 +34,7 @@ describe("catalog page", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("UI 패턴 사전");
     expect(screen.getByRole("region", { name: /오버레이/ })).toBeInTheDocument();
     expect(getCardLinks()).toHaveLength(PATTERNS.length);
-    expect(screen.getByRole("button", { name: "전체 397" })).toHaveAttribute(
-      "aria-pressed",
-      "true",
-    );
+    expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
     // Every catalog pattern plus every comparison guide that ships a demo.
     const demoCount = PATTERNS.length + Object.keys(COMPARISON_DEMOS).length;
     expect(screen.getByRole("status")).toHaveTextContent(`397개 항목 · 데모 ${demoCount}개`);
@@ -139,10 +136,12 @@ describe("catalog page", () => {
     },
   );
 
-  it("filters by category chip", async () => {
-    renderAt("/");
-    await userEvent.click(screen.getByRole("button", { name: /이동/ }));
-    expect(screen.getByRole("button", { name: /이동/ })).toHaveAttribute("aria-pressed", "true");
+  it("keeps the topic scope of a bookmarked navigation category", () => {
+    renderAt("/?category=navigation");
+    expect(screen.getByRole("button", { name: "컴포넌트" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
     const links = getCardLinks();
     expect(links.map((link) => link.getAttribute("href"))).toEqual([
       "/patterns/breadcrumb",
@@ -152,6 +151,36 @@ describe("catalog page", () => {
     expect(screen.getByRole("link", { name: /뒤로 가기 Back Navigation/ })).toHaveTextContent(
       "준비 중",
     );
+  });
+
+  it("shows five category controls and switches between their topic groups", async () => {
+    const router = renderAt("/");
+    const categories = within(screen.getByRole("group", { name: "카테고리" }));
+    expect(categories.getAllByRole("button").map((button) => button.textContent)).toEqual([
+      "전체",
+      "컴포넌트",
+      "디자인 스타일",
+      "UX 심리",
+      "헷갈리는 UI",
+    ]);
+    await userEvent.click(categories.getByRole("button", { name: "디자인 스타일" }));
+    expect(
+      screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
+    ).toEqual(["디자인 스타일", "글자 스타일"]);
+    await userEvent.click(categories.getByRole("button", { name: "UX 심리" }));
+    expect(
+      screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
+    ).toEqual(["다크 패턴과 UX 심리", "가격의 심리"]);
+    await userEvent.click(screen.getByRole("link", { name: /타협 효과 Compromise Effect/ }));
+    const crumbs = within(screen.getByRole("navigation", { name: "현재 위치" }));
+    expect(crumbs.getAllByRole("link").map((link) => link.textContent)).toEqual([
+      "전체",
+      "UX 심리",
+      "가격의 심리",
+    ]);
+    await userEvent.click(crumbs.getByRole("link", { name: "가격의 심리" }));
+    expect(router.state.location.search).toBe("?category=pricing-psychology");
+    expect(screen.getByRole("button", { name: "UX 심리" })).toHaveAttribute("aria-pressed", "true");
   });
 
   it("shows an empty state and resets the search", async () => {
@@ -178,12 +207,25 @@ describe("mobile header navigation", () => {
     await user.click(menuButton);
     const navigation = screen.getByRole("navigation", { name: "모바일 메뉴" });
     expect(menuButton).toHaveAttribute("aria-expanded", "true");
-    expect(within(navigation).getByRole("link", { name: "UI 패턴 사전" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveAttribute(
       "aria-current",
       "page",
     );
+    expect(
+      within(navigation)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual([
+      "전체",
+      "컴포넌트",
+      "디자인 스타일",
+      "UX 심리",
+      "헷갈리는 UI",
+      "전체 주제 보기",
+      "GitHub",
+    ]);
     await user.tab();
-    expect(within(navigation).getByRole("link", { name: "UI 패턴 사전" })).toHaveFocus();
+    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveFocus();
     await user.keyboard("{Escape}");
     expect(menuButton).toHaveFocus();
     expect(menuButton).toHaveAttribute("aria-expanded", "false");
@@ -198,8 +240,26 @@ describe("mobile header navigation", () => {
         name: "헷갈리는 UI",
       }),
     );
-    expect(router.state.location.pathname).toBe("/compare");
+    expect(router.state.location.search).toBe("?category=ui-comparison");
     expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
+  });
+  it("marks the detail's parent section and keeps a catalog query when switching sections", async () => {
+    const router = renderAt("/patterns/compromise-effect");
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("button", { name: "메뉴" }));
+    const menu = () => within(screen.getByRole("navigation", { name: "모바일 메뉴" }));
+    expect(menu().getByRole("link", { name: "UX 심리" })).toHaveAttribute(
+      "aria-current",
+      "location",
+    );
+    await act(() => router.navigate("/?category=input&q=toggle"));
+    await user.click(screen.getByRole("button", { name: "메뉴" }));
+    expect(menu().getByRole("link", { name: "컴포넌트" })).toHaveAttribute(
+      "aria-current",
+      "location",
+    );
+    await user.click(menu().getByRole("link", { name: "전체" }));
+    expect(router.state.location.search).toBe("?q=toggle");
   });
 });
 
@@ -277,7 +337,7 @@ describe("roadmap and comparison", () => {
 
   it("filters the full comparison topic from the catalog and opens a ready comparison", async () => {
     const router = renderAt("/");
-    await userEvent.click(screen.getByRole("button", { name: "헷갈리는 UI 51" }));
+    await userEvent.click(screen.getByRole("button", { name: "헷갈리는 UI" }));
     expect(router.state.location.search).toBe("?category=ui-comparison");
     expect(screen.getByRole("status")).toHaveTextContent("51개 항목 · 데모 6개");
     await userEvent.click(screen.getByRole("link", { name: /토스트 \/ 스낵바 Toast \/ Snackbar/ }));
@@ -289,7 +349,7 @@ describe("roadmap and comparison", () => {
     const router = renderAt("/roadmap");
     const breadcrumb = within(screen.getByRole("navigation", { name: "현재 위치" }));
     expect(breadcrumb.getAllByRole("link")).toHaveLength(1);
-    expect(breadcrumb.getByRole("link", { name: "모든 패턴" })).toHaveAttribute("href", "/");
+    expect(breadcrumb.getByRole("link", { name: "전체" })).toHaveAttribute("href", "/");
     expect(breadcrumb.getByText("전체 주제")).toHaveAttribute("aria-current", "page");
     await userEvent.selectOptions(screen.getByRole("combobox", { name: "주제" }), "gesture");
     expect(router.state.location.search).toBe("?category=gesture");
@@ -298,9 +358,21 @@ describe("roadmap and comparison", () => {
     expect(screen.getByRole("region", { name: "미리보기" })).toBeInTheDocument();
   });
 
+  it("includes comparison guides and index-only topics in the full index", async () => {
+    renderAt("/roadmap");
+    const topics = screen.getByRole("combobox", { name: "주제" });
+    expect(within(topics).getByRole("option", { name: "UX 리서치" })).toBeInTheDocument();
+    await userEvent.selectOptions(topics, "ui-comparison");
+    expect(screen.getByRole("link", { name: "토스트 / 스낵바" })).toHaveAttribute(
+      "href",
+      "/compare/toast-snackbar",
+    );
+  });
+
   it("finds a comparison by both terms and opens its paired demos", async () => {
     const router = renderAt("/");
-    await userEvent.click(screen.getByRole("link", { name: "헷갈리는 UI" }));
+    await userEvent.click(screen.getByRole("button", { name: "헷갈리는 UI" }));
+    await userEvent.click(screen.getByRole("link", { name: "비교 가이드 목차" }));
     await userEvent.type(screen.getByRole("searchbox", { name: "비교쌍 검색" }), "toast snackbar");
     await userEvent.click(screen.getByRole("link", { name: /토스트 · 스낵바/ }));
     expect(router.state.location.pathname).toBe("/compare/toast-snackbar");
@@ -313,10 +385,11 @@ describe("roadmap and comparison", () => {
     const breadcrumb = within(screen.getByRole("navigation", { name: "현재 위치" }));
     expect(breadcrumb.getByText("토스트 · 스낵바")).toHaveAttribute("aria-current", "page");
     await userEvent.click(breadcrumb.getByRole("link", { name: "헷갈리는 UI" }));
-    expect(router.state.location.pathname).toBe("/compare");
-    expect(
-      within(screen.getByRole("navigation", { name: "현재 위치" })).getByText("헷갈리는 UI"),
-    ).toHaveAttribute("aria-current", "page");
+    expect(router.state.location.search).toBe("?category=ui-comparison");
+    expect(screen.getByRole("button", { name: "헷갈리는 UI" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
   });
 
   it("opens a comparison guide without an interactive demo and handles unknown slugs", async () => {
@@ -334,10 +407,11 @@ describe("roadmap and comparison", () => {
     const links = getCardLinks().map((link) => link.getAttribute("href"));
     expect(links).toEqual(expect.arrayContaining(["/patterns/skeleton", "/patterns/empty-state"]));
     await act(() => router.navigate("/?category=input"));
-    expect(screen.getByRole("button", { name: /^선택 컨트롤/ })).toHaveAttribute(
+    expect(screen.getByRole("button", { name: "컴포넌트" })).toHaveAttribute(
       "aria-pressed",
       "true",
     );
+    expect(screen.getByRole("region", { name: "선택 컨트롤" })).toBeInTheDocument();
     await act(() => router.navigate("/patterns/compromise-effect"));
     expect(screen.getByRole("region", { name: "미리보기" })).toBeInTheDocument();
     expect(screen.queryByText("Implementation")).not.toBeInTheDocument();
@@ -346,7 +420,7 @@ describe("roadmap and comparison", () => {
 
 describe("pattern detail page", () => {
   it("opens from a card and returns to the same search", async () => {
-    const router = renderAt("/?q=toast");
+    const router = renderAt("/?category=components&q=toast");
     await userEvent.click(screen.getAllByRole("link", { name: /토스트/ })[0] as HTMLElement);
     expect(router.state.location.pathname).toBe("/patterns/toast");
     expect(screen.getByRole("heading", { level: 1, name: "토스트 Toast" })).toBeInTheDocument();
@@ -357,8 +431,13 @@ describe("pattern detail page", () => {
       "/?category=feedback",
     );
     expect(breadcrumb.getByText("토스트")).toHaveAttribute("aria-current", "page");
-    await userEvent.click(breadcrumb.getByRole("link", { name: "모든 패턴" }));
-    expect(router.state.location.search).toBe("?q=toast");
+    expect(breadcrumb.getByRole("link", { name: "컴포넌트" })).toHaveAttribute(
+      "href",
+      "/?category=components",
+    );
+    expect(breadcrumb.getByRole("link", { name: "전체" })).toHaveAttribute("href", "/");
+    await userEvent.click(screen.getByRole("link", { name: "탐색 결과로 돌아가기" }));
+    expect(router.state.location.search).toBe("?category=components&q=toast");
   });
 
   it("opens with the description, then the live preview, then other names", () => {

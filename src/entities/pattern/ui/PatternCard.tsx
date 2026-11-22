@@ -25,22 +25,22 @@ export function PatternCard({ pattern, query = "", returnSearch }: PatternCardPr
     <Link to={`/patterns/${pattern.slug}`} state={{ returnSearch }} className="group block">
       <div
         aria-hidden="true"
-        className="grid h-40 place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
+        className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
       >
         <Thumbnail />
       </div>
-      <h3 className="mt-3.5 flex flex-wrap items-baseline gap-x-2">
+      <h3 className="mt-3.5">
         <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
           <Highlight text={pattern.nameKo} query={query} />
         </span>{" "}
-        <span className="text-caption text-graphite">
+        <span className="mt-0.5 block text-caption font-normal text-graphite">
           <Highlight text={pattern.name} query={query} />
         </span>
       </h3>
       <p className="mt-1 text-body-sm text-ink/80">
         <Highlight text={pattern.summary} query={query} />
       </p>
-      <p className="mt-1 text-micro text-graphite">데모</p>
+      <span className="sr-only">데모</span>
     </Link>
   );
 }

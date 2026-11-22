@@ -1,34 +1,33 @@
-import { useLocation, useParams } from "react-router";
+import { useParams } from "react-router";
 
 import { findPatternBySlug } from "@/entities/pattern/catalog";
-import { ROADMAP_PATTERN_TOPICS } from "@/entities/pattern/catalog/roadmap";
+import {
+  catalogCategoryHref,
+  catalogSectionFor,
+  ROADMAP_PATTERN_TOPICS,
+} from "@/entities/pattern/catalog/roadmap";
 import { getCategory } from "@/entities/pattern/model/category";
 import { NotFoundView } from "@/shared/ui/feedback/NotFoundView";
-import { PageBreadcrumb } from "@/shared/ui/primitives/PageBreadcrumb";
+import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
 import { PatternDetail } from "@/widgets/pattern-detail/ui/PatternDetail";
-
-function readReturnSearch(state: unknown): string {
-  if (typeof state !== "object" || state === null || !("returnSearch" in state)) return "";
-  const { returnSearch } = state;
-  return typeof returnSearch === "string" && returnSearch.startsWith("?") ? returnSearch : "";
-}
 
 export function PatternDetailPage() {
   const { slug = "" } = useParams();
-  const location = useLocation();
   const pattern = findPatternBySlug(slug);
   if (!pattern) return <NotFoundView />;
   const topic = ROADMAP_PATTERN_TOPICS.find(({ id }) => id === pattern.category);
 
+  const section = topic && catalogSectionFor(topic);
+
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
       <title>{`${pattern.name} (${pattern.nameKo}) · UI Pattern Atlas`}</title>
-      <PageBreadcrumb
+      <CatalogBreadcrumb
         parents={[
-          { label: "모든 패턴", to: { pathname: "/", search: readReturnSearch(location.state) } },
+          ...(section ? [{ label: section.label, to: catalogCategoryHref(section.id) }] : []),
           {
             label: topic?.nameKo ?? getCategory(pattern.category).labelKo,
-            to: `/?category=${pattern.category}`,
+            to: catalogCategoryHref(pattern.category),
           },
         ]}
         current={pattern.nameKo}

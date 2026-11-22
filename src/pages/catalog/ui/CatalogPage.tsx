@@ -3,12 +3,12 @@ import { Link, useLocation, useNavigationType, useSearchParams } from "react-rou
 
 import { PATTERNS } from "@/entities/pattern/catalog";
 import {
+  resolveCatalogCategory,
   ROADMAP_TOPICS,
-  comparisonSlug,
+  catalogSectionFor,
   type RoadmapEntry,
-  type RoadmapTopic,
 } from "@/entities/pattern/catalog/roadmap";
-import { patternForRoadmapEntry, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
+import { roadmapEntryDestination, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { PatternCard } from "@/entities/pattern/ui/PatternCard";
 import { searchPatterns } from "@/features/search-patterns/model/searchPatterns";
@@ -32,31 +32,15 @@ interface CatalogReference {
   readonly hasDemo: boolean;
 }
 
-function catalogReference(topic: RoadmapTopic, entry: RoadmapEntry): CatalogReference {
-  if (topic.kind === "비교") {
-    const hasDemo = entry.priority === "완료";
-    return {
-      entry,
-      href: `/compare/${comparisonSlug(entry)}`,
-      status: hasDemo ? "비교 가이드 · 데모" : "비교 가이드",
-      hasDemo,
-    };
-  }
-  return { entry, href: roadmapEntryHref(topic, entry), status: "준비 중", hasDemo: false };
-}
-
 const TOPICS = ROADMAP_TOPICS.map((topic) => ({
   ...topic,
-  references: topic.entries
-    .filter((entry) => !patternForRoadmapEntry(topic, entry))
-    .map((entry) => catalogReference(topic, entry)),
+  section: catalogSectionFor(topic),
+  references: topic.entries.flatMap((entry) => {
+    const { href, status, hasDemo } = roadmapEntryDestination(topic, entry);
+    if (topic.kind !== "비교" && hasDemo) return [];
+    return [{ entry, href: href ?? roadmapEntryHref(topic, entry), status, hasDemo }];
+  }),
 }));
-
-function matchesTopic(id: string, category: string) {
-  if (category === "all") return true;
-  if (category === "status") return id === "loading" || id === "empty-error";
-  return id === category;
-}
 
 interface PatternGridProps {
   readonly label: string;
@@ -83,15 +67,17 @@ function PatternGrid({ label, patterns, query, returnSearch }: PatternGridProps)
 function ReferenceList({
   references,
   query,
+  returnSearch,
 }: {
   readonly references: readonly CatalogReference[];
+  readonly returnSearch: string;
   readonly query: string;
 }) {
   return (
     <ul aria-label="로드맵과 비교 항목" className="grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
       {references.map(({ entry, href, status }) => (
         <li key={href} className="border-t border-rule">
-          <Link to={href} className="group block py-4">
+          <Link to={href} state={{ returnSearch }} className="group block py-4">
             <h3 className="flex flex-wrap items-baseline gap-x-2">
               <span className="font-serif text-headword font-semibold underline-offset-4 group-hover:underline">
                 <Highlight text={entry.nameKo} query={query} />
@@ -129,43 +115,30 @@ export function CatalogPage() {
     setSyncedLocationKey(location.key);
     if (navigationType !== "REPLACE") setText(urlText);
   }
-  const requestedCategory = searchParams.get(CATEGORY_PARAM);
-  const categoryId = requestedCategory === "input" ? "selection" : requestedCategory;
-  const category =
-    categoryId === "status"
-      ? categoryId
-      : (TOPICS.find((topic) => topic.id === categoryId)?.id ?? "all");
-  const isBrowsing = text.trim() === "" && category === "all";
+  const {
+    category,
+    section: selectedSection,
+    activeTab,
+  } = resolveCatalogCategory(searchParams.get(CATEGORY_PARAM));
+  const isBrowsing = !text.trim();
+  const visibleTopics = TOPICS.filter((topic) => {
+    if (selectedSection) return topic.section?.id === selectedSection.id;
+    if (category === "status") return topic.id === "loading" || topic.id === "empty-error";
+    return category === "all" || topic.id === category;
+  });
   const returnSearch = searchParams.toString() ? `?${searchParams.toString()}` : "";
   const patternMatches = searchPatterns(PATTERNS, { text, category: "all" });
   const matchesReference = roadmapMatcher(text);
-  const groups = TOPICS.map((topic) => {
+  const groups = visibleTopics.map((topic) => {
     const patterns = patternMatches.filter((pattern) => pattern.category === topic.id);
     const references = topic.references.filter(({ entry }) =>
       matchesReference(entry.nameKo, entry.name, entry.description, topic.nameKo, entry.group),
     );
     return { topic, patterns, references, count: patterns.length + references.length };
   });
-  const options = [
-    { id: "all", label: "전체", count: groups.reduce((total, group) => total + group.count, 0) },
-    ...(category === "status"
-      ? [
-          {
-            id: "status",
-            label: "로딩과 빈 상태",
-            count: groups.reduce(
-              (total, group) => total + (matchesTopic(group.topic.id, "status") ? group.count : 0),
-              0,
-            ),
-          },
-        ]
-      : []),
-    ...groups.map(({ topic, count }) => ({ id: topic.id, label: topic.nameKo, count })),
-  ];
-  const results = patternMatches.filter((pattern) => matchesTopic(pattern.category, category));
-  const related = groups
-    .filter(({ topic }) => matchesTopic(topic.id, category))
-    .flatMap(({ references }) => references);
+  const visibleIds = new Set(visibleTopics.map((topic) => topic.id));
+  const results = patternMatches.filter((pattern) => visibleIds.has(pattern.category));
+  const related = groups.flatMap(({ references }) => references);
   const total = results.length + related.length;
   const demoCount = results.length + related.filter(({ hasDemo }) => hasDemo).length;
 
@@ -188,7 +161,7 @@ export function CatalogPage() {
 
   return (
     <div className="mx-auto max-w-page px-4 pb-24 sm:px-6">
-      <section className="pt-16 pb-10 sm:pt-24 sm:pb-14">
+      <section className="pt-8 pb-6 sm:pt-12 sm:pb-9">
         {/* The search box is the page's first visible element; the title stays for screen
             readers and search engines. */}
         <h1 ref={headingRef} tabIndex={-1} className="sr-only">
@@ -214,25 +187,25 @@ export function CatalogPage() {
 
       <nav
         aria-label="둘러보기"
-        className="mb-4 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-caption sm:flex"
+        className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-x-3 border-b border-rule bg-paper/95 py-2 backdrop-blur"
       >
-        <Link to="/roadmap" className={textLinkClassName}>
-          전체 주제
-        </Link>
-        <Link to="/compare" className={textLinkClassName}>
-          헷갈리는 UI
+        <CategoryFilter
+          value={activeTab}
+          onValueChange={(value) => updateParams({ category: value })}
+        />
+        <Link
+          to="/roadmap"
+          className="group ml-auto inline-flex min-h-10 items-center gap-1 text-caption text-ink"
+        >
+          <span className={`${textLinkClassName} group-hover:decoration-ink`}>전체 주제 보기</span>
+          <span aria-hidden="true">›</span>
         </Link>
       </nav>
 
-      <div className="sticky top-0 z-10 -mx-4 border-b border-rule bg-paper/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
-        <CategoryFilter
-          value={category}
-          onValueChange={(value) => updateParams({ category: value })}
-          options={options}
-        />
-      </div>
-
-      <p role="status" className="mt-4 text-caption text-graphite">
+      <p
+        role="status"
+        className={isBrowsing && category === "all" ? "sr-only" : "mt-4 text-caption text-graphite"}
+      >
         {total}개 항목 · 데모 {demoCount}개
       </p>
 
@@ -257,16 +230,23 @@ export function CatalogPage() {
             <section
               key={topic.id}
               aria-labelledby={`category-${topic.id}`}
-              className="border-b border-rule py-12 last:border-b-0"
+              className="border-b border-rule py-8 last:border-b-0"
             >
-              <div className="mb-8 flex items-baseline justify-between gap-4">
+              <div className="mb-5 flex items-baseline justify-between gap-4">
                 <div>
                   <h2 id={`category-${topic.id}`} className="font-serif text-title font-bold">
                     {topic.nameKo}
                   </h2>
                   <p className="mt-1.5 text-body-sm text-graphite">{topic.description}</p>
                 </div>
-                <span className="shrink-0 text-caption text-graphite tabular-nums">{count}개</span>
+                <div className="flex shrink-0 flex-wrap items-center gap-3 text-caption text-graphite">
+                  {topic.kind === "비교" && (
+                    <Link to="/compare" className={textLinkClassName}>
+                      비교 가이드 목차
+                    </Link>
+                  )}
+                  <span className="tabular-nums">{count}개</span>
+                </div>
               </div>
               <div className="space-y-8">
                 {patterns.length > 0 ? (
@@ -277,7 +257,9 @@ export function CatalogPage() {
                     returnSearch={returnSearch}
                   />
                 ) : null}
-                {references.length > 0 ? <ReferenceList references={references} query="" /> : null}
+                {references.length > 0 ? (
+                  <ReferenceList references={references} query="" returnSearch={returnSearch} />
+                ) : null}
               </div>
             </section>
           );
@@ -295,7 +277,9 @@ export function CatalogPage() {
               returnSearch={returnSearch}
             />
           ) : null}
-          {related.length > 0 ? <ReferenceList references={related} query={text} /> : null}
+          {related.length > 0 ? (
+            <ReferenceList references={related} query={text} returnSearch={returnSearch} />
+          ) : null}
         </section>
       )}
       <BackToTopButton headingRef={headingRef} />
