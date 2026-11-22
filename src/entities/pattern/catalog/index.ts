@@ -32,6 +32,13 @@ import { strikethroughPricePattern } from "@/entities/pattern/catalog/strikethro
 import { compromiseEffectPattern } from "@/entities/pattern/catalog/compromise-effect/pattern";
 import { decoyEffectPattern } from "@/entities/pattern/catalog/decoy-effect/pattern";
 import { leftDigitEffectPattern } from "@/entities/pattern/catalog/left-digit-effect/pattern";
+import { errorSummaryPattern } from "@/entities/pattern/catalog/error-summary/pattern";
+import { undoPattern } from "@/entities/pattern/catalog/undo/pattern";
+import { calloutPattern } from "@/entities/pattern/catalog/callout/pattern";
+import { notificationCenterPattern } from "@/entities/pattern/catalog/notification-center/pattern";
+import { progressToastPattern } from "@/entities/pattern/catalog/progress-toast/pattern";
+import { confirmationMessagePattern } from "@/entities/pattern/catalog/confirmation-message/pattern";
+import { pushNotificationPattern } from "@/entities/pattern/catalog/push-notification/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -66,6 +73,13 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   compromiseEffectPattern,
   decoyEffectPattern,
   leftDigitEffectPattern,
+  errorSummaryPattern,
+  undoPattern,
+  calloutPattern,
+  notificationCenterPattern,
+  progressToastPattern,
+  confirmationMessagePattern,
+  pushNotificationPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

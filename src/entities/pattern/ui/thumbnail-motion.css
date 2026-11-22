@@ -2966,6 +2966,630 @@
   }
 }
 
+/* Error summary: submit empty → summary + red fields → follow the first link. */
+.thumb-es-cursor {
+  animation-name: thumb-es-cursor;
+}
+.thumb-es-summary {
+  animation-name: thumb-es-summary;
+}
+.thumb-es-invalid {
+  animation-name: thumb-es-invalid;
+}
+.thumb-es-focus {
+  animation-name: thumb-es-focus;
+}
+@keyframes thumb-es-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  26% {
+    transform: translate(88px, 98px);
+  }
+  44%,
+  56% {
+    transform: translate(40px, 22px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-es-summary {
+  0%,
+  24% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  28%,
+  88% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-es-invalid {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  28%,
+  88% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-es-focus {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  55%,
+  88% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Undo: delete the second mail → undo bar with a shrinking line → 되돌리기. */
+.thumb-undo-cursor {
+  animation-name: thumb-undo-cursor;
+}
+.thumb-undo-row2 {
+  animation-name: thumb-undo-row2;
+}
+.thumb-undo-row3 {
+  animation-name: thumb-undo-row3;
+}
+.thumb-undo-bar {
+  animation-name: thumb-undo-bar;
+}
+.thumb-undo-line {
+  animation-name: thumb-undo-line;
+  animation-timing-function: linear;
+}
+@keyframes thumb-undo-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  24% {
+    transform: translate(153px, 38px);
+  }
+  46%,
+  60% {
+    transform: translate(142px, 94px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(166px, 70px);
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translate(166px, 70px);
+  }
+}
+@keyframes thumb-undo-row2 {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  25%,
+  57% {
+    opacity: 0;
+  }
+  63%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-undo-row3 {
+  0%,
+  23% {
+    transform: translateY(0);
+  }
+  28%,
+  57% {
+    transform: translateY(-20px);
+  }
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-undo-bar {
+  0%,
+  24% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  28%,
+  58% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  63%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes thumb-undo-line {
+  0%,
+  26% {
+    transform: scaleX(1);
+  }
+  58%,
+  100% {
+    transform: scaleX(0.45);
+  }
+}
+
+/* Callout: switch the tone chips 참고 → 팁 → 주의 → 참고. */
+.thumb-callout-cursor {
+  animation-name: thumb-callout-cursor;
+}
+.thumb-callout-p1,
+.thumb-callout-c1 {
+  animation-name: thumb-callout-1;
+}
+.thumb-callout-p2,
+.thumb-callout-c2 {
+  animation-name: thumb-callout-2;
+}
+.thumb-callout-p3,
+.thumb-callout-c3 {
+  animation-name: thumb-callout-3;
+}
+@keyframes thumb-callout-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  26% {
+    transform: translate(88px, 12px);
+  }
+  46%,
+  54% {
+    transform: translate(113px, 12px);
+  }
+  74%,
+  82% {
+    transform: translate(63px, 12px);
+  }
+  92% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-callout-1 {
+  0%,
+  22% {
+    opacity: 1;
+  }
+  25%,
+  78% {
+    opacity: 0;
+  }
+  81%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-callout-2 {
+  0%,
+  22% {
+    opacity: 0;
+  }
+  25%,
+  50% {
+    opacity: 1;
+  }
+  53%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-callout-3 {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  53%,
+  78% {
+    opacity: 1;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Notification center: open the bell → 모두 읽음 → dots and badge go away. */
+.thumb-nc-cursor {
+  animation-name: thumb-nc-cursor;
+}
+.thumb-nc-panel {
+  animation-name: thumb-nc-panel;
+}
+.thumb-nc-badge,
+.thumb-nc-dot {
+  animation-name: thumb-nc-unread;
+}
+@keyframes thumb-nc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(120px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(120px, 104px);
+  }
+  18%,
+  24% {
+    transform: translate(150px, 18px);
+  }
+  44%,
+  54% {
+    transform: translate(145px, 42px);
+  }
+  74%,
+  82% {
+    transform: translate(24px, 80px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(24px, 104px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(24px, 104px);
+  }
+}
+@keyframes thumb-nc-panel {
+  0%,
+  21% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  25%,
+  79% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  83%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+}
+@keyframes thumb-nc-unread {
+  0%,
+  51% {
+    opacity: 1;
+  }
+  55%,
+  94% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Progress toast: 파일 올리기 → percent and bar climb → 올리기 완료 → toast leaves. */
+.thumb-pt-cursor {
+  animation-name: thumb-pt-cursor;
+}
+.thumb-pt-btn {
+  animation-name: thumb-pt-btn;
+}
+.thumb-pt-toast {
+  animation-name: thumb-pt-toast;
+}
+.thumb-pt-t1 {
+  animation-name: thumb-pt-t1;
+}
+.thumb-pt-t2 {
+  animation-name: thumb-pt-t2;
+}
+.thumb-pt-t3 {
+  animation-name: thumb-pt-t3;
+}
+.thumb-pt-cancel {
+  animation-name: thumb-pt-running;
+}
+.thumb-pt-done,
+.thumb-pt-bar-done {
+  animation-name: thumb-pt-done;
+}
+.thumb-pt-bar {
+  animation-name: thumb-pt-bar;
+}
+@keyframes thumb-pt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 22px);
+  }
+  32% {
+    opacity: 1;
+    transform: translate(150px, 40px);
+  }
+  38%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 40px);
+  }
+}
+@keyframes thumb-pt-btn {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  21%,
+  66% {
+    opacity: 0.5;
+  }
+  68%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pt-toast {
+  0%,
+  19% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  23%,
+  88% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes thumb-pt-t1 {
+  0%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pt-t2 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pt-t3 {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  65% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pt-running {
+  0%,
+  65% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pt-done {
+  0%,
+  65% {
+    opacity: 0;
+  }
+  66%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pt-bar {
+  0%,
+  21% {
+    transform: scaleX(0);
+  }
+  30% {
+    transform: scaleX(0.24);
+  }
+  46% {
+    transform: scaleX(0.6);
+  }
+  62% {
+    transform: scaleX(0.96);
+  }
+  66%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Confirmation message: 보내기 → the form is replaced by the result and next steps. */
+.thumb-cm-cursor {
+  animation-name: thumb-cm-cursor;
+}
+.thumb-cm-form {
+  animation-name: thumb-cm-form;
+}
+.thumb-cm-done {
+  animation-name: thumb-cm-done;
+}
+@keyframes thumb-cm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  26% {
+    transform: translate(88px, 78px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(164px, 96px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(164px, 96px);
+  }
+}
+@keyframes thumb-cm-form {
+  0%,
+  26% {
+    opacity: 1;
+  }
+  30%,
+  92% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cm-done {
+  0%,
+  28% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  33%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+/* Push notification: 미리 보기 → the notification slides down, waits, slides back up. */
+.thumb-push-cursor {
+  animation-name: thumb-push-cursor;
+}
+.thumb-push-banner {
+  animation-name: thumb-push-banner;
+}
+@keyframes thumb-push-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  26% {
+    transform: translate(58px, 91px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(10px, 104px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(10px, 104px);
+  }
+}
+@keyframes thumb-push-banner {
+  0%,
+  26% {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  34%,
+  76% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
