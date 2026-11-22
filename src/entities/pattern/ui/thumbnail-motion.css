@@ -11746,6 +11746,99 @@
   }
 }
 
+/* Top loading bar: click 소식 → the bar creeps along the top → the page arrives. */
+.thumb-tlb-cursor {
+  animation-name: thumb-tlb-cursor;
+}
+.thumb-tlb-bar {
+  animation-name: thumb-tlb-bar;
+}
+.thumb-tlb-home {
+  animation-name: thumb-tlb-home;
+}
+.thumb-tlb-news {
+  animation-name: thumb-tlb-news;
+}
+@keyframes thumb-tlb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(46px, 20px);
+  }
+  38% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  44%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tlb-bar {
+  0%,
+  24% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  26% {
+    opacity: 1;
+    transform: scaleX(0.1);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleX(0.55);
+  }
+  56% {
+    opacity: 1;
+    transform: scaleX(0.82);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes thumb-tlb-home {
+  0%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tlb-news {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

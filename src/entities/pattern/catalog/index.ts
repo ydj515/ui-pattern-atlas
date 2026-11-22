@@ -127,6 +127,7 @@ import { lightboxPattern } from "@/entities/pattern/catalog/lightbox/pattern";
 import { masonryGridPattern } from "@/entities/pattern/catalog/masonry-grid/pattern";
 import { beforeAfterSliderPattern } from "@/entities/pattern/catalog/before-after-slider/pattern";
 import { storiesPattern } from "@/entities/pattern/catalog/stories/pattern";
+import { topLoadingBarPattern } from "@/entities/pattern/catalog/top-loading-bar/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -256,6 +257,7 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   masonryGridPattern,
   beforeAfterSliderPattern,
   storiesPattern,
+  topLoadingBarPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

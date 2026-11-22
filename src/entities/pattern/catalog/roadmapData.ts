@@ -230,7 +230,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "상단 로딩 바",
         name: "Top Loading Bar",
         description: "페이지를 이동할 때 화면 상단의 가는 막대로 로딩 상태 표시",
-        priority: "P2",
+        priority: "완료",
         group: "",
       },
     ],
