@@ -79,7 +79,8 @@ text lines up with the preview and code blocks beside it.
 
 - Tailwind's 4px spacing scale, nothing off-scale.
 - Page container: `max-w-page` (72rem), gutters `px-4` / `sm:px-6`.
-- Sections are separated by a `rule` line and `py-12`; inside a section, `mt-5` to `mt-8`.
+- Pattern detail sections use `space-y-12` between sections and `mt-5` to `mt-8` within each.
+  The previous and next pattern links sit at opposite edges with outward-pointing chevrons.
 - The live demo stage has a fixed height, `h-preview` (24rem), so a demo changing state never
   moves the page. Keep each demo's tallest state within 288px of content; taller content
   scrolls inside the stage.

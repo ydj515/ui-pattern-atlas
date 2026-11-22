@@ -117,7 +117,7 @@ function CodeBlock({ source }: { readonly source: PatternSource }) {
         tabIndex={0}
         aria-label={`${source.fileName} 소스 코드`}
         aria-busy={state.status === "loading"}
-        className="max-h-128 overflow-auto p-4 font-mono text-code text-code-fg"
+        className="max-h-128 overflow-auto p-4 font-mono text-code text-code-fg aria-busy:h-128"
       >
         {state.status === "loaded" ? <CodeLines code={code} /> : null}
         {state.status === "loading" ? (

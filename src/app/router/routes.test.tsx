@@ -451,17 +451,99 @@ describe("pattern detail page", () => {
 
   it("renders the sections in the documented order", () => {
     renderAt("/patterns/modal-dialog");
-    const headings = screen
-      .getAllByRole("heading", { level: 2 })
-      .map((heading) => heading.textContent);
-    expect(headings).toEqual([
+    const headings = screen.getAllByRole("heading", { level: 2 });
+    const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
+    const labels = [
       "When to use",
       "When not to use",
       "Alternatives",
       "Implementation",
       "Accessibility",
-    ]);
+    ];
+    expect(headings).toHaveLength(labels.length);
+    headings.forEach((heading, index) => {
+      const name = labels[index];
+      expect(heading).toHaveAccessibleName(name);
+      const href = toc.getByRole("link", { name }).getAttribute("href");
+      expect(within(heading).getByRole("link", { name })).toHaveAttribute("href", href);
+      expect(href).toBe(`/patterns/modal-dialog#${heading.closest("section")?.id}`);
+    });
     expect(screen.getByRole("link", { name: /Toast/ })).toHaveAttribute("href", "/patterns/toast");
+  });
+
+  it("marks only the current section as the reader scrolls in either direction", () => {
+    renderAt("/patterns/modal-dialog");
+    const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
+    const links = toc.getAllByRole("link");
+    links.forEach((link, index) => {
+      const section = screen.getByRole("region", { name: link.textContent ?? "" });
+      vi.spyOn(section, "getBoundingClientRect").mockImplementation(() =>
+        DOMRect.fromRect({ y: 500 + index * 250 - window.scrollY }),
+      );
+    });
+    vi.spyOn(document.documentElement, "scrollHeight", "get").mockReturnValue(2000);
+    vi.stubGlobal("innerHeight", 700);
+    try {
+      for (const [top, current] of [
+        [0, null],
+        [1010, "Alternatives"],
+        [1300, "Accessibility"],
+        [760, "When not to use"],
+        [0, null],
+      ] as const) {
+        vi.stubGlobal("scrollY", top);
+        fireEvent.scroll(window);
+        expect(
+          toc.queryAllByRole("link", { current: "location" }).map((link) => link.textContent),
+        ).toEqual(current ? [current] : []);
+      }
+    } finally {
+      vi.unstubAllGlobals();
+      vi.restoreAllMocks();
+    }
+  });
+
+  it("keeps the selected anchor active when both guidance sections share a row", async () => {
+    const router = renderAt("/patterns/popover");
+    const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
+    const links = toc.getAllByRole("link");
+    try {
+      links.forEach((link, index) => {
+        const section = screen.getByRole("region", { name: link.textContent ?? "" });
+        vi.spyOn(section, "getBoundingClientRect").mockReturnValue(
+          DOMRect.fromRect({ y: index < 2 ? 0 : index * 200 }),
+        );
+      });
+      fireEvent.scroll(window);
+      expect(toc.getByRole("link", { current: "location" })).toHaveTextContent("When to use");
+      for (const hash of ["#when-not-to-use", "#when-to-use"]) {
+        await act(() => router.navigate(hash));
+        expect(toc.getByRole("link", { current: "location" })).toHaveAttribute(
+          "href",
+          `/patterns/popover${hash}`,
+        );
+      }
+    } finally {
+      vi.restoreAllMocks();
+    }
+  });
+
+  it("opens adjacent patterns and shows only the available direction at each end", async () => {
+    const first = PATTERNS[0]!;
+    const second = PATTERNS[1]!;
+    const last = PATTERNS[PATTERNS.length - 1]!;
+    const router = renderAt(`/patterns/${first.slug}`);
+    const navigation = () => within(screen.getByRole("navigation", { name: "다른 패턴" }));
+    const next = navigation().getByRole("link", { name: `다음 패턴: ${second.nameKo}` });
+    expect(navigation().getAllByRole("link")).toHaveLength(1);
+    await userEvent.click(next);
+    expect(router.state.location.pathname).toBe(`/patterns/${second.slug}`);
+    const previous = navigation().getByRole("link", { name: `이전 패턴: ${first.nameKo}` });
+    await userEvent.click(previous);
+    expect(router.state.location.pathname).toBe(`/patterns/${first.slug}`);
+    await act(() => router.navigate(`/patterns/${last.slug}`));
+    expect(navigation().getAllByRole("link")).toHaveLength(1);
+    expect(navigation().getByRole("link")).toHaveAttribute("rel", "prev");
   });
 
   it("switches between implementation files", async () => {

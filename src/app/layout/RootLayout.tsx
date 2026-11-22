@@ -73,7 +73,14 @@ export function RootLayout() {
           에 남겨 주세요.
         </p>
       </footer>
-      <ScrollRestoration />
+      {/* Fresh deep links share the router key "default". Keep their saved positions distinct. */}
+      <ScrollRestoration
+        getKey={(location) =>
+          location.key === "default" && location.hash
+            ? `${location.pathname}${location.search}${location.hash}`
+            : location.key
+        }
+      />
     </div>
   );
 }
