@@ -28,7 +28,7 @@ export function SlideThumbnail() {
           숨기기
         </span>
       </span>
-      <ThumbCursor motion="thumb-sl-cursor" />
+      <ThumbCursor motion="thumb-slide-cursor" />
     </ThumbStage>
   );
 }

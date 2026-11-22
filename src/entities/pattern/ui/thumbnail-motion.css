@@ -14438,8 +14438,8 @@
   }
 }
 /* Double tap: two taps on the photo → heart → 좋아요 13. */
-.thumb-dt-cursor {
-  animation-name: thumb-dt-cursor;
+.thumb-double-tap-cursor {
+  animation-name: thumb-double-tap-cursor;
 }
 .thumb-dt-burst {
   animation-name: thumb-dt-burst;
@@ -14450,7 +14450,7 @@
 .thumb-dt-on {
   animation-name: thumb-dt-on;
 }
-@keyframes thumb-dt-cursor {
+@keyframes thumb-double-tap-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -14651,8 +14651,8 @@
   }
 }
 /* Edge swipe: pull from the left edge, pick 보낸 편지함. */
-.thumb-es-cursor {
-  animation-name: thumb-es-cursor;
+.thumb-edge-swipe-cursor {
+  animation-name: thumb-edge-swipe-cursor;
 }
 .thumb-es-panel {
   animation-name: thumb-es-panel;
@@ -14666,7 +14666,7 @@
 .thumb-es-sent {
   animation-name: thumb-es-sent;
 }
-@keyframes thumb-es-cursor {
+@keyframes thumb-edge-swipe-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -14765,14 +14765,14 @@
   }
 }
 /* Momentum scrolling: a short flick, then the list glides and slows down. */
-.thumb-ms-cursor {
-  animation-name: thumb-ms-cursor;
+.thumb-momentum-scrolling-cursor {
+  animation-name: thumb-momentum-scrolling-cursor;
 }
 .thumb-ms-list {
   animation-name: thumb-ms-list;
   animation-timing-function: linear;
 }
-@keyframes thumb-ms-cursor {
+@keyframes thumb-momentum-scrolling-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -14827,13 +14827,13 @@
   }
 }
 /* Scroll bounce: pulling past the top stretches the list; it springs back. */
-.thumb-sb-cursor {
-  animation-name: thumb-sb-cursor;
+.thumb-scroll-bounce-cursor {
+  animation-name: thumb-scroll-bounce-cursor;
 }
 .thumb-sb-list {
   animation-name: thumb-sb-list;
 }
-@keyframes thumb-sb-cursor {
+@keyframes thumb-scroll-bounce-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -15107,8 +15107,8 @@
   }
 }
 /* Page transition: 알림 pushes in from the right; ‹ 설정 brings the list back from the left. */
-.thumb-pt-cursor {
-  animation-name: thumb-pt-cursor;
+.thumb-page-transition-cursor {
+  animation-name: thumb-page-transition-cursor;
 }
 .thumb-pt-list {
   animation-name: thumb-pt-list;
@@ -15116,7 +15116,7 @@
 .thumb-pt-detail {
   animation-name: thumb-pt-detail;
 }
-@keyframes thumb-pt-cursor {
+@keyframes thumb-page-transition-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -15267,8 +15267,8 @@
   }
 }
 /* Micro-interaction: 저장 squeezes, pops and fills in → 저장됨. */
-.thumb-mt-cursor {
-  animation-name: thumb-mt-cursor;
+.thumb-micro-interaction-cursor {
+  animation-name: thumb-micro-interaction-cursor;
 }
 .thumb-mt-icon {
   animation-name: thumb-mt-icon;
@@ -15279,7 +15279,7 @@
 .thumb-mt-on {
   animation-name: thumb-mt-on;
 }
-@keyframes thumb-mt-cursor {
+@keyframes thumb-micro-interaction-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -15816,8 +15816,8 @@
   }
 }
 /* Slide: 보여 주기 slides the card up from the bottom edge; 숨기기 sends it back down. */
-.thumb-sl-cursor {
-  animation-name: thumb-sl-cursor;
+.thumb-slide-cursor {
+  animation-name: thumb-slide-cursor;
 }
 .thumb-sl-card {
   animation-name: thumb-sl-card;
@@ -15828,7 +15828,7 @@
 .thumb-sl-hide {
   animation-name: thumb-sl-hide;
 }
-@keyframes thumb-sl-cursor {
+@keyframes thumb-slide-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -16002,8 +16002,8 @@
   }
 }
 /* Bounce: 장바구니 담기 → the cart count hops and lands with smaller hops. */
-.thumb-bn-cursor {
-  animation-name: thumb-bn-cursor;
+.thumb-bounce-cursor {
+  animation-name: thumb-bounce-cursor;
 }
 .thumb-bn-c1 {
   animation-name: thumb-bn-c1;
@@ -16015,7 +16015,7 @@
   animation-name: thumb-bn-cart;
   animation-timing-function: ease-in-out;
 }
-@keyframes thumb-bn-cursor {
+@keyframes thumb-bounce-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -16738,8 +16738,8 @@
   }
 }
 /* Text scramble: 연결하기 → symbols settle into 보안 연결 완료 from the left. */
-.thumb-ts-cursor {
-  animation-name: thumb-ts-cursor;
+.thumb-text-scramble-cursor {
+  animation-name: thumb-text-scramble-cursor;
 }
 .thumb-ts-f0 {
   animation-name: thumb-ts-f0;
@@ -16756,7 +16756,7 @@
 .thumb-ts-f4 {
   animation-name: thumb-ts-f4;
 }
-@keyframes thumb-ts-cursor {
+@keyframes thumb-text-scramble-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -16937,8 +16937,8 @@
   }
 }
 /* Fade up: 다시 보기 → heading, text and button rise in, a little apart. */
-.thumb-fu-cursor {
-  animation-name: thumb-fu-cursor;
+.thumb-fade-up-cursor {
+  animation-name: thumb-fade-up-cursor;
 }
 .thumb-fu-0 {
   animation-name: thumb-fu-0;
@@ -16949,7 +16949,7 @@
 .thumb-fu-2 {
   animation-name: thumb-fu-2;
 }
-@keyframes thumb-fu-cursor {
+@keyframes thumb-fade-up-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -17328,8 +17328,8 @@
   }
 }
 /* Coach mark: the tip points at + → 확인 → 다시 보기 brings it back. */
-.thumb-cm-cursor {
-  animation-name: thumb-cm-cursor;
+.thumb-coach-mark-cursor {
+  animation-name: thumb-coach-mark-cursor;
 }
 .thumb-cm-on {
   animation-name: thumb-cm-on;
@@ -17337,7 +17337,7 @@
 .thumb-cm-again {
   animation-name: thumb-cm-again;
 }
-@keyframes thumb-cm-cursor {
+@keyframes thumb-coach-mark-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -17938,8 +17938,8 @@
   }
 }
 /* Terms agreement: tick both 필수 items → 전체 동의 is mixed → 다음 → 다음 단계로 넘어가요. */
-.thumb-ta-cursor {
-  animation-name: thumb-ta-cursor;
+.thumb-terms-agreement-cursor {
+  animation-name: thumb-terms-agreement-cursor;
 }
 .thumb-ta-c1 {
   animation-name: thumb-ta-c1;
@@ -17956,7 +17956,7 @@
 .thumb-ta-status {
   animation-name: thumb-ta-status;
 }
-@keyframes thumb-ta-cursor {
+@keyframes thumb-terms-agreement-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -18174,8 +18174,8 @@
   }
 }
 /* System permission dialog: 사진 올리기 → the device asks → 사진 선택 → 고른 사진만 쓸 수 있어요. */
-.thumb-sp-cursor {
-  animation-name: thumb-sp-cursor;
+.thumb-system-permission-dialog-cursor {
+  animation-name: thumb-system-permission-dialog-cursor;
 }
 .thumb-sp-dialog {
   animation-name: thumb-sp-dialog;
@@ -18183,7 +18183,7 @@
 .thumb-sp-result {
   animation-name: thumb-sp-result;
 }
-@keyframes thumb-sp-cursor {
+@keyframes thumb-system-permission-dialog-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -18239,8 +18239,8 @@
   }
 }
 /* Permission recovery: 내 위치로 찾기 is refused → 주소 직접 입력. */
-.thumb-pr-cursor {
-  animation-name: thumb-pr-cursor;
+.thumb-permission-recovery-cursor {
+  animation-name: thumb-permission-recovery-cursor;
 }
 .thumb-pr-ask {
   animation-name: thumb-pr-ask;
@@ -18251,7 +18251,7 @@
 .thumb-pr-input {
   animation-name: thumb-pr-input;
 }
-@keyframes thumb-pr-cursor {
+@keyframes thumb-permission-recovery-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);
@@ -18952,8 +18952,8 @@
   }
 }
 /* Receipt summary: the total first; 품목 3개 opens the lines and pushes the sums down. */
-.thumb-rs-cursor {
-  animation-name: thumb-rs-cursor;
+.thumb-receipt-summary-cursor {
+  animation-name: thumb-receipt-summary-cursor;
 }
 .thumb-rs-items {
   animation-name: thumb-rs-items;
@@ -18961,7 +18961,7 @@
 .thumb-rs-sum {
   animation-name: thumb-rs-sum;
 }
-@keyframes thumb-rs-cursor {
+@keyframes thumb-receipt-summary-cursor {
   0% {
     opacity: 0;
     transform: translate(150px, 104px);

@@ -28,7 +28,7 @@ export function PermissionRecoveryThumbnail() {
           성수동
         </span>
       </div>
-      <ThumbCursor motion="thumb-pr-cursor" />
+      <ThumbCursor motion="thumb-permission-recovery-cursor" />
     </ThumbStage>
   );
 }

@@ -16,7 +16,7 @@ export function FadeUpThumbnail() {
       <span className="absolute top-[82px] left-[12px] rounded border border-slate-200 px-[6px] py-[2px] text-[7px]">
         다시 보기
       </span>
-      <ThumbCursor motion="thumb-fu-cursor" />
+      <ThumbCursor motion="thumb-fade-up-cursor" />
     </ThumbStage>
   );
 }

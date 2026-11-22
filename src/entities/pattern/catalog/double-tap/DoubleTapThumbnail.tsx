@@ -36,7 +36,7 @@ export function DoubleTapThumbnail() {
           </span>
         </p>
       </div>
-      <ThumbCursor motion="thumb-dt-cursor" />
+      <ThumbCursor motion="thumb-double-tap-cursor" />
     </ThumbStage>
   );
 }

@@ -33,7 +33,7 @@ export function CoachMarkThumbnail() {
           </div>
         </div>
       </div>
-      <ThumbCursor motion="thumb-cm-cursor" />
+      <ThumbCursor motion="thumb-coach-mark-cursor" />
     </ThumbStage>
   );
 }

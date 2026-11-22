@@ -36,7 +36,7 @@ export function MicroToggleThumbnail() {
           </span>
         </span>
       </div>
-      <ThumbCursor motion="thumb-mt-cursor" />
+      <ThumbCursor motion="thumb-micro-interaction-cursor" />
     </ThumbStage>
   );
 }

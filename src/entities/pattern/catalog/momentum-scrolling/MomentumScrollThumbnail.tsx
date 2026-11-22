@@ -38,7 +38,7 @@ export function MomentumScrollThumbnail() {
           ))}
         </ol>
       </div>
-      <ThumbCursor motion="thumb-ms-cursor" />
+      <ThumbCursor motion="thumb-momentum-scrolling-cursor" />
     </ThumbStage>
   );
 }

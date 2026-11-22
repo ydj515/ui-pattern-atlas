@@ -34,7 +34,7 @@ export function SystemPermissionDialogThumbnail() {
           </div>
         </div>
       </div>
-      <ThumbCursor motion="thumb-sp-cursor" />
+      <ThumbCursor motion="thumb-system-permission-dialog-cursor" />
     </ThumbStage>
   );
 }

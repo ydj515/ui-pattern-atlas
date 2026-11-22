@@ -28,7 +28,7 @@ export function ScrollBounceThumbnail() {
           ))}
         </ul>
       </div>
-      <ThumbCursor motion="thumb-sb-cursor" />
+      <ThumbCursor motion="thumb-scroll-bounce-cursor" />
     </ThumbStage>
   );
 }

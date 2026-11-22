@@ -34,7 +34,7 @@ export function PageTransitionThumbnail() {
           <p className="p-[8px] text-slate-700">알림 설정 화면</p>
         </div>
       </div>
-      <ThumbCursor motion="thumb-pt-cursor" />
+      <ThumbCursor motion="thumb-page-transition-cursor" />
     </ThumbStage>
   );
 }

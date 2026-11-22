@@ -42,7 +42,7 @@ export function ReceiptSummaryThumbnail() {
           </p>
         </div>
       </div>
-      <ThumbCursor motion="thumb-rs-cursor" />
+      <ThumbCursor motion="thumb-receipt-summary-cursor" />
     </ThumbStage>
   );
 }

@@ -30,7 +30,7 @@ export function EdgeSwipeThumbnail() {
           <p className="relative h-[18px] px-[4px] leading-[18px]">임시 보관함</p>
         </div>
       </div>
-      <ThumbCursor motion="thumb-es-cursor" />
+      <ThumbCursor motion="thumb-edge-swipe-cursor" />
     </ThumbStage>
   );
 }

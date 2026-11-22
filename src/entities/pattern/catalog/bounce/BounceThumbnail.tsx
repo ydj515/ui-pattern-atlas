@@ -21,7 +21,7 @@ export function BounceThumbnail() {
       <span className="absolute top-[88px] left-[22px] grid h-[14px] w-[132px] place-items-center rounded bg-slate-900 text-[7px] text-white">
         장바구니 담기
       </span>
-      <ThumbCursor motion="thumb-bn-cursor" />
+      <ThumbCursor motion="thumb-bounce-cursor" />
     </ThumbStage>
   );
 }

@@ -26,7 +26,7 @@ export function TextScrambleThumbnail() {
           연결하기
         </span>
       </div>
-      <ThumbCursor motion="thumb-ts-cursor" />
+      <ThumbCursor motion="thumb-text-scramble-cursor" />
     </ThumbStage>
   );
 }

@@ -50,7 +50,7 @@ export function TermsAgreementThumbnail() {
           다음 단계로 넘어가요
         </p>
       </div>
-      <ThumbCursor motion="thumb-ta-cursor" />
+      <ThumbCursor motion="thumb-terms-agreement-cursor" />
     </ThumbStage>
   );
 }
