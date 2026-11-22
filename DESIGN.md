@@ -118,6 +118,10 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
 - **Pattern card**: a `field` surface with the looping thumbnail, a serif headword, the English
   term in `graphite`, and a one-line definition. No border, no shadow; hover underlines the
   headword and darkens the field.
+- **Copy page**: split button right of the detail page headword (`rule-strong` border,
+  `rounded-control`, graphite text with a `field` hover). The main half copies the page as
+  Markdown for LLMs; the chevron opens a menu (`rounded-surface`, `shadow-overlay`) with the same
+  copy action and a plain-text Markdown view. Arrow keys move, Escape closes.
 - **Code block**: `code-bg` surface with Dark+ syntax colours, file tabs above.
 - **Storybook** (`mise run storybook`) shows the site primitives with a light/dark toolbar and
   every copy-paste pattern component.

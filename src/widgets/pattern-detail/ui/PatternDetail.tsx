@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 
+import { CopyPageButton } from "@/features/copy-page/ui/CopyPageButton";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
 import { SourceViewer } from "@/widgets/pattern-detail/ui/SourceViewer";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
@@ -104,10 +105,13 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
     <div className="grid grid-cols-1 gap-x-16 lg:grid-cols-[minmax(0,1fr)_11rem]">
       <article className="min-w-0">
         <header className="pb-10">
-          <h1 className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <span className="font-serif text-display font-bold">{pattern.nameKo}</span>{" "}
-            <span className="text-headword text-graphite">{pattern.name}</span>
-          </h1>
+          <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
+            <h1 className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="font-serif text-display font-bold">{pattern.nameKo}</span>{" "}
+              <span className="text-headword text-graphite">{pattern.name}</span>
+            </h1>
+            <CopyPageButton pattern={pattern} />
+          </div>
           <p className="mt-6 text-lead">{pattern.description}</p>
           {/* The live demo sits with the definition, so it needs no heading of its own. */}
           <section aria-label="미리보기" className="mt-8">
