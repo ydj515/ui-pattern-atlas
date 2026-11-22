@@ -114,6 +114,12 @@ export const PATTERN_CATEGORIES = [
     description: "끝냈다는 감각을 주는 화면",
   },
   {
+    id: "reaction-share",
+    label: "Reaction and share",
+    labelKo: "반응과 공유",
+    description: "평가하고 퍼뜨리고 함께 쓰는 화면",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",

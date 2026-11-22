@@ -212,6 +212,27 @@ import { achievementBadgePattern } from "@/entities/pattern/catalog/achievement-
 import { completedTaskStrikethroughPattern } from "@/entities/pattern/catalog/completed-task-strikethrough/pattern";
 import { completionStampPattern } from "@/entities/pattern/catalog/completion-stamp/pattern";
 import { sendAnimationPattern } from "@/entities/pattern/catalog/send-animation/pattern";
+import { starRatingPattern } from "@/entities/pattern/catalog/star-rating/pattern";
+import { likeButtonPattern } from "@/entities/pattern/catalog/like-button/pattern";
+import { shareSheetPattern } from "@/entities/pattern/catalog/share-sheet/pattern";
+import { emojiReactionPattern } from "@/entities/pattern/catalog/emoji-reaction/pattern";
+import { thumbsFeedbackPattern } from "@/entities/pattern/catalog/thumbs-feedback/pattern";
+import { ratingSummaryPattern } from "@/entities/pattern/catalog/rating-summary/pattern";
+import { copyLinkPattern } from "@/entities/pattern/catalog/copy-link/pattern";
+import { npsScalePattern } from "@/entities/pattern/catalog/nps-scale/pattern";
+import { inviteDialogPattern } from "@/entities/pattern/catalog/invite-dialog/pattern";
+import { mentionPattern } from "@/entities/pattern/catalog/mention/pattern";
+import { commentThreadPattern } from "@/entities/pattern/catalog/comment-thread/pattern";
+import { emojiRatingPattern } from "@/entities/pattern/catalog/emoji-rating/pattern";
+import { writtenReviewPattern } from "@/entities/pattern/catalog/written-review/pattern";
+import { ratingSliderPattern } from "@/entities/pattern/catalog/rating-slider/pattern";
+import { ratingTagsPattern } from "@/entities/pattern/catalog/rating-tags/pattern";
+import { ratingBadgePattern } from "@/entities/pattern/catalog/rating-badge/pattern";
+import { wishlistBookmarkPattern } from "@/entities/pattern/catalog/wishlist-bookmark/pattern";
+import { qrSharingPattern } from "@/entities/pattern/catalog/qr-sharing/pattern";
+import { sendForwardPattern } from "@/entities/pattern/catalog/send-forward/pattern";
+import { repostPattern } from "@/entities/pattern/catalog/repost/pattern";
+import { nearbySharePattern } from "@/entities/pattern/catalog/nearby-share/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -426,6 +447,27 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   completedTaskStrikethroughPattern,
   completionStampPattern,
   sendAnimationPattern,
+  starRatingPattern,
+  likeButtonPattern,
+  shareSheetPattern,
+  emojiReactionPattern,
+  thumbsFeedbackPattern,
+  ratingSummaryPattern,
+  copyLinkPattern,
+  npsScalePattern,
+  inviteDialogPattern,
+  mentionPattern,
+  commentThreadPattern,
+  emojiRatingPattern,
+  writtenReviewPattern,
+  ratingSliderPattern,
+  ratingTagsPattern,
+  ratingBadgePattern,
+  wishlistBookmarkPattern,
+  qrSharingPattern,
+  sendForwardPattern,
+  repostPattern,
+  nearbySharePattern,
 ];
 
 const categoryOrder = new Map<string, number>(
