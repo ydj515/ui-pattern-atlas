@@ -39,6 +39,11 @@ import { notificationCenterPattern } from "@/entities/pattern/catalog/notificati
 import { progressToastPattern } from "@/entities/pattern/catalog/progress-toast/pattern";
 import { confirmationMessagePattern } from "@/entities/pattern/catalog/confirmation-message/pattern";
 import { pushNotificationPattern } from "@/entities/pattern/catalog/push-notification/pattern";
+import { progressRingPattern } from "@/entities/pattern/catalog/progress-ring/pattern";
+import { optimisticUiPattern } from "@/entities/pattern/catalog/optimistic-ui/pattern";
+import { delayedSpinnerPattern } from "@/entities/pattern/catalog/delayed-spinner/pattern";
+import { loadingOverlayPattern } from "@/entities/pattern/catalog/loading-overlay/pattern";
+import { blurUpImagePattern } from "@/entities/pattern/catalog/blur-up-image/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -80,6 +85,11 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   progressToastPattern,
   confirmationMessagePattern,
   pushNotificationPattern,
+  progressRingPattern,
+  optimisticUiPattern,
+  delayedSpinnerPattern,
+  loadingOverlayPattern,
+  blurUpImagePattern,
 ];
 
 const categoryOrder = new Map<string, number>(

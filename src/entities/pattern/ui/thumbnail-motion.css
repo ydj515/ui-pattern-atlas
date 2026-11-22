@@ -3590,6 +3590,498 @@
   }
 }
 
+/* Progress ring: 백업 시작 → the ring fills in steps → 백업 완료. */
+.thumb-ring-cursor {
+  animation-name: thumb-ring-cursor;
+}
+.thumb-ring-btn {
+  animation-name: thumb-ring-btn;
+}
+.thumb-ring-s0 {
+  animation-name: thumb-ring-s0;
+}
+.thumb-ring-s1 {
+  animation-name: thumb-ring-s1;
+}
+.thumb-ring-s2 {
+  animation-name: thumb-ring-s2;
+}
+.thumb-ring-s3 {
+  animation-name: thumb-ring-s3;
+}
+@keyframes thumb-ring-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(140px, 56px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ring-btn {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  54% {
+    opacity: 0.5;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ring-s0 {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  92% {
+    opacity: 0;
+  }
+  93%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ring-s1 {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  37% {
+    opacity: 1;
+  }
+  38%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-s2 {
+  0%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  54% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-s3 {
+  0%,
+  54% {
+    opacity: 0;
+  }
+  55%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Optimistic UI: like shows 13 before the server; a failing request rolls back with a message. */
+.thumb-opt-cursor {
+  animation-name: thumb-opt-cursor;
+}
+.thumb-opt-on {
+  animation-name: thumb-opt-on;
+}
+.thumb-opt-off {
+  animation-name: thumb-opt-off;
+}
+.thumb-opt-saved12 {
+  animation-name: thumb-opt-saved12;
+}
+.thumb-opt-saved13 {
+  animation-name: thumb-opt-saved13;
+}
+.thumb-opt-error {
+  animation-name: thumb-opt-error;
+}
+.thumb-opt-check {
+  animation-name: thumb-opt-check;
+}
+@keyframes thumb-opt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(58px, 51px);
+  }
+  44%,
+  52% {
+    transform: translate(27px, 93px);
+  }
+  60%,
+  66% {
+    transform: translate(58px, 51px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-opt-on {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  64% {
+    opacity: 1;
+  }
+  65%,
+  77% {
+    opacity: 0;
+  }
+  78%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-opt-off {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  64% {
+    opacity: 0;
+  }
+  65%,
+  77% {
+    opacity: 1;
+  }
+  78%,
+  95% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-opt-saved12 {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  95% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-opt-saved13 {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-opt-error {
+  0%,
+  77% {
+    opacity: 0;
+  }
+  78%,
+  94% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-opt-check {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  77% {
+    opacity: 1;
+  }
+  78%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Delayed spinner: the fast answer shows no spinner; the slow one shows it after a beat. */
+.thumb-ds-cursor {
+  animation-name: thumb-ds-cursor;
+}
+.thumb-ds-idle {
+  animation-name: thumb-ds-idle;
+}
+.thumb-ds-fast {
+  animation-name: thumb-ds-fast;
+}
+.thumb-ds-wait {
+  animation-name: thumb-ds-wait;
+}
+.thumb-ds-slow {
+  animation-name: thumb-ds-slow;
+}
+.thumb-ds-spin,
+.thumb-lo-spin {
+  animation-name: thumb-loading-spin;
+  animation-duration: 0.9s;
+  animation-timing-function: linear;
+}
+@keyframes thumb-loading-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes thumb-ds-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(49px, 19px);
+  }
+  40%,
+  50% {
+    transform: translate(127px, 19px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ds-idle {
+  0%,
+  16% {
+    opacity: 1;
+  }
+  17%,
+  95% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ds-fast {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ds-wait {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  79% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ds-slow {
+  0%,
+  79% {
+    opacity: 0;
+  }
+  80%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Loading overlay: 저장 → the card is covered while saving → 저장했어요. */
+.thumb-lo-cursor {
+  animation-name: thumb-lo-cursor;
+}
+.thumb-lo-overlay {
+  animation-name: thumb-lo-overlay;
+}
+.thumb-lo-done {
+  animation-name: thumb-lo-done;
+}
+@keyframes thumb-lo-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(88px, 79px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lo-overlay {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  23%,
+  68% {
+    opacity: 1;
+  }
+  71%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lo-done {
+  0%,
+  70% {
+    opacity: 0;
+  }
+  72%,
+  94% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Blur-up image: blurred preview → sharp photo; 다시 불러오기 repeats it. */
+.thumb-blur-cursor {
+  animation-name: thumb-blur-cursor;
+}
+.thumb-blur-photo {
+  animation-name: thumb-blur-photo;
+}
+@keyframes thumb-blur-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  44%,
+  54% {
+    transform: translate(122px, 93px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-blur-photo {
+  0%,
+  22% {
+    opacity: 0;
+  }
+  32%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  74% {
+    opacity: 0;
+  }
+  84%,
+  94% {
+    opacity: 1;
+  }
+  99%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
