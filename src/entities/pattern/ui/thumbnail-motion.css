@@ -12839,6 +12839,1043 @@
   }
 }
 
+/* Sticky header: rows scroll under the header; it gains a shadow. */
+.thumb-sh-cursor {
+  animation-name: thumb-sh-cursor;
+}
+.thumb-sh-list {
+  animation-name: thumb-sh-list;
+}
+.thumb-sh-shadow {
+  animation-name: thumb-sh-shadow;
+}
+@keyframes thumb-sh-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(88px, 80px);
+  }
+  60% {
+    transform: translate(88px, 40px);
+  }
+  74% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sh-list {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  60%,
+  90% {
+    transform: translateY(-60px);
+  }
+  96%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-sh-shadow {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sticky action bar: the page scrolls under the bar; 장바구니 담기 → 담았어요. */
+.thumb-sab-cursor {
+  animation-name: thumb-sab-cursor;
+}
+.thumb-sab-page {
+  animation-name: thumb-sab-page;
+}
+.thumb-sab-idle {
+  animation-name: thumb-sab-idle;
+}
+.thumb-sab-done {
+  animation-name: thumb-sab-done;
+}
+@keyframes thumb-sab-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(88px, 70px);
+  }
+  40% {
+    transform: translate(88px, 40px);
+  }
+  50%,
+  62% {
+    transform: translate(98px, 97px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sab-page {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  40%,
+  94% {
+    transform: translateY(-30px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-sab-idle {
+  0%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sab-done {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Split view: side by side when wide, one at a time when narrow. */
+.thumb-sv-cursor {
+  animation-name: thumb-sv-cursor;
+}
+.thumb-sv-wide {
+  animation-name: thumb-sv-wide;
+}
+.thumb-sv-narrow {
+  animation-name: thumb-sv-narrow;
+}
+.thumb-sv-detail {
+  animation-name: thumb-sv-detail;
+}
+@keyframes thumb-sv-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(96px, 7px);
+  }
+  42%,
+  54% {
+    transform: translate(88px, 25px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sv-wide {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sv-narrow {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sv-detail {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sidebar layout: the menu moves on top when narrow. */
+.thumb-slay-cursor {
+  animation-name: thumb-slay-cursor;
+}
+.thumb-slay-wide {
+  animation-name: thumb-slay-wide;
+}
+.thumb-slay-narrow {
+  animation-name: thumb-slay-narrow;
+}
+.thumb-slay-pay {
+  animation-name: thumb-slay-pay;
+}
+@keyframes thumb-slay-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(96px, 7px);
+  }
+  44%,
+  58% {
+    transform: translate(89px, 26px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-slay-wide {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-slay-narrow {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  57% {
+    opacity: 1;
+  }
+  58%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-slay-pay {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Responsive grid: narrowing drops columns from 3 to 2 to 1. */
+.thumb-rgrid-cursor {
+  animation-name: thumb-rgrid-cursor;
+}
+.thumb-rgrid-knob {
+  animation-name: thumb-rgrid-knob;
+}
+.thumb-rgrid-3 {
+  animation-name: thumb-rgrid-3;
+}
+.thumb-rgrid-2 {
+  animation-name: thumb-rgrid-2;
+}
+.thumb-rgrid-1 {
+  animation-name: thumb-rgrid-1;
+}
+@keyframes thumb-rgrid-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(104px, 10px);
+  }
+  32%,
+  56% {
+    transform: translate(84px, 10px);
+  }
+  64% {
+    transform: translate(64px, 10px);
+  }
+  78% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rgrid-knob {
+  0%,
+  24% {
+    transform: translateX(0);
+  }
+  32%,
+  56% {
+    transform: translateX(-20px);
+  }
+  64%,
+  92% {
+    transform: translateX(-40px);
+  }
+  97%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-rgrid-3 {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-rgrid-2 {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rgrid-1 {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Bento grid: the big tile first, the rest fill in around it. */
+.thumb-bg-t0 {
+  animation-name: thumb-bg-t0;
+}
+.thumb-bg-t1 {
+  animation-name: thumb-bg-t1;
+}
+.thumb-bg-t2 {
+  animation-name: thumb-bg-t2;
+}
+.thumb-bg-t3 {
+  animation-name: thumb-bg-t3;
+}
+.thumb-bg-t4 {
+  animation-name: thumb-bg-t4;
+}
+@keyframes thumb-bg-t0 {
+  0%,
+  4% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  12%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes thumb-bg-t1 {
+  0%,
+  12% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  20%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes thumb-bg-t2 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  28%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes thumb-bg-t3 {
+  0%,
+  28% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  36%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes thumb-bg-t4 {
+  0%,
+  36% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  44%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+/* Safe area: without it the header hides under the notch. */
+.thumb-sa-cursor {
+  animation-name: thumb-sa-cursor;
+}
+.thumb-sa-on {
+  animation-name: thumb-sa-on;
+}
+.thumb-sa-off {
+  animation-name: thumb-sa-off;
+}
+@keyframes thumb-sa-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  30% {
+    transform: translate(107px, 53px);
+  }
+  50%,
+  62% {
+    transform: translate(107px, 53px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sa-on {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  60% {
+    opacity: 0;
+  }
+  61%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sa-off {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Hero section: 무료로 시작하기 → 무료로 시작했어요. */
+.thumb-hero-cursor {
+  animation-name: thumb-hero-cursor;
+}
+.thumb-hero-done {
+  animation-name: thumb-hero-done;
+}
+@keyframes thumb-hero-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(30px, 68px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-hero-done {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Card grid: aligned 담기 buttons vs ragged ones. */
+.thumb-cg-cursor {
+  animation-name: thumb-cg-cursor;
+}
+.thumb-cg-on {
+  animation-name: thumb-cg-on;
+}
+.thumb-cg-off {
+  animation-name: thumb-cg-off;
+}
+@keyframes thumb-cg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  28%,
+  40% {
+    transform: translate(101px, 93px);
+  }
+  58%,
+  70% {
+    transform: translate(101px, 93px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cg-on {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  70% {
+    opacity: 0;
+  }
+  71%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cg-off {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  70% {
+    opacity: 1;
+  }
+  71%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Dashboard layout: 이번 주 → 이번 달. */
+.thumb-dash-cursor {
+  animation-name: thumb-dash-cursor;
+}
+.thumb-dash-week {
+  animation-name: thumb-dash-week;
+}
+.thumb-dash-month {
+  animation-name: thumb-dash-month;
+}
+@keyframes thumb-dash-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(50px, 8px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dash-week {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dash-month {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dash-bar-0 {
+  0%,
+  29% {
+    transform: scaleY(0.8);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0.8);
+  }
+}
+@keyframes thumb-dash-bar-1 {
+  0%,
+  29% {
+    transform: scaleY(0.887);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0.887);
+  }
+}
+@keyframes thumb-dash-bar-2 {
+  0%,
+  29% {
+    transform: scaleY(0.828);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0.828);
+  }
+}
+@keyframes thumb-dash-bar-3 {
+  0%,
+  29% {
+    transform: scaleY(1.061);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(1.061);
+  }
+}
+@keyframes thumb-dash-bar-4 {
+  0%,
+  29% {
+    transform: scaleY(0.838);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0.838);
+  }
+}
+@keyframes thumb-dash-bar-5 {
+  0%,
+  29% {
+    transform: scaleY(1.143);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(1.143);
+  }
+}
+@keyframes thumb-dash-bar-6 {
+  0%,
+  29% {
+    transform: scaleY(0.852);
+  }
+  36%,
+  96% {
+    transform: scaleY(1);
+  }
+  98%,
+  100% {
+    transform: scaleY(0.852);
+  }
+}
+/* Magazine layout: open the lead story. */
+.thumb-mag-cursor {
+  animation-name: thumb-mag-cursor;
+}
+.thumb-mag-done {
+  animation-name: thumb-mag-done;
+}
+@keyframes thumb-mag-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  26%,
+  40% {
+    transform: translate(40px, 74px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mag-done {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Z-pattern: the eye runs 모아 → 로그인 → across → 시작하기. */
+.thumb-zp-cursor {
+  animation-name: thumb-zp-cursor;
+}
+.thumb-zp-path {
+  animation-name: thumb-zp-path;
+}
+.thumb-zp-eye {
+  animation-name: thumb-zp-eye;
+}
+@keyframes thumb-zp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(93px, 99px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-zp-path {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-zp-eye {
+  0%,
+  33% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(100px, 0);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(0, 66px);
+  }
+  74%,
+  80% {
+    opacity: 1;
+    transform: translate(100px, 66px);
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translate(100px, 66px);
+  }
+}
+/* Full bleed: the photo goes edge to edge; the text keeps its column. */
+.thumb-fb-cursor {
+  animation-name: thumb-fb-cursor;
+}
+.thumb-fb-on {
+  animation-name: thumb-fb-on;
+}
+.thumb-fb-off {
+  animation-name: thumb-fb-off;
+}
+@keyframes thumb-fb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  28%,
+  40% {
+    transform: translate(85px, 97px);
+  }
+  58%,
+  70% {
+    transform: translate(85px, 97px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fb-on {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  70% {
+    opacity: 0;
+  }
+  71%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-fb-off {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  70% {
+    opacity: 1;
+  }
+  71%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

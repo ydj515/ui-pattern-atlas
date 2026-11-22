@@ -139,6 +139,19 @@ import { presencePattern } from "@/entities/pattern/catalog/presence/pattern";
 import { featureDotPattern } from "@/entities/pattern/catalog/feature-dot/pattern";
 import { scrollProgressPattern } from "@/entities/pattern/catalog/scroll-progress/pattern";
 import { passwordStrengthMeterPattern } from "@/entities/pattern/catalog/password-strength-meter/pattern";
+import { stickyHeaderPattern } from "@/entities/pattern/catalog/sticky-header/pattern";
+import { stickyActionBarPattern } from "@/entities/pattern/catalog/sticky-action-bar/pattern";
+import { splitViewPattern } from "@/entities/pattern/catalog/split-view/pattern";
+import { sidebarLayoutPattern } from "@/entities/pattern/catalog/sidebar-layout/pattern";
+import { responsiveGridPattern } from "@/entities/pattern/catalog/responsive-grid/pattern";
+import { bentoGridPattern } from "@/entities/pattern/catalog/bento-grid/pattern";
+import { safeAreaPattern } from "@/entities/pattern/catalog/safe-area/pattern";
+import { heroSectionPattern } from "@/entities/pattern/catalog/hero-section/pattern";
+import { cardGridPattern } from "@/entities/pattern/catalog/card-grid/pattern";
+import { dashboardLayoutPattern } from "@/entities/pattern/catalog/dashboard-layout/pattern";
+import { magazineLayoutPattern } from "@/entities/pattern/catalog/magazine-layout/pattern";
+import { zPatternPattern } from "@/entities/pattern/catalog/z-pattern/pattern";
+import { fullBleedPattern } from "@/entities/pattern/catalog/full-bleed/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -280,6 +293,19 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   featureDotPattern,
   scrollProgressPattern,
   passwordStrengthMeterPattern,
+  stickyHeaderPattern,
+  stickyActionBarPattern,
+  splitViewPattern,
+  sidebarLayoutPattern,
+  responsiveGridPattern,
+  bentoGridPattern,
+  safeAreaPattern,
+  heroSectionPattern,
+  cardGridPattern,
+  dashboardLayoutPattern,
+  magazineLayoutPattern,
+  zPatternPattern,
+  fullBleedPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

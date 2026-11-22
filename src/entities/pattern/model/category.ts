@@ -66,6 +66,12 @@ export const PATTERN_CATEGORIES = [
     description: "상태와 개수를 작게 알려 주는 표시",
   },
   {
+    id: "layout",
+    label: "Layout",
+    labelKo: "화면 배치",
+    description: "화면을 나누고 고정하는 방법",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",
