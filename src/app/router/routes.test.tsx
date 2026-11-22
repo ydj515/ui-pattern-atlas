@@ -37,13 +37,13 @@ describe("catalog page", () => {
     expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
     // Every catalog pattern plus every comparison guide that ships a demo.
     const demoCount = PATTERNS.length + Object.keys(COMPARISON_DEMOS).length;
-    expect(screen.getByRole("status")).toHaveTextContent(`397개 항목 · 데모 ${demoCount}개`);
+    expect(screen.getByRole("status")).toHaveTextContent(`402개 항목 · 데모 ${demoCount}개`);
     const itemLinks = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href") ?? "")
       .filter((href) => /^\/(patterns\/|roadmap\?|compare\/)/.test(href));
-    expect(itemLinks).toHaveLength(397);
-    expect(new Set(itemLinks).size).toBe(397);
+    expect(itemLinks).toHaveLength(402);
+    expect(new Set(itemLinks).size).toBe(402);
   });
 
   it("filters cards as the user types and keeps the query in the URL", async () => {
