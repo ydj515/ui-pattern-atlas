@@ -20,6 +20,12 @@ import { spinnerPattern } from "@/entities/pattern/catalog/spinner/pattern";
 import { progressBarPattern } from "@/entities/pattern/catalog/progress-bar/pattern";
 import { checkboxPattern } from "@/entities/pattern/catalog/checkbox/pattern";
 import { bottomSheetPattern } from "@/entities/pattern/catalog/bottom-sheet/pattern";
+import { dropdownMenuPattern } from "@/entities/pattern/catalog/dropdown-menu/pattern";
+import { alertDialogPattern } from "@/entities/pattern/catalog/alert-dialog/pattern";
+import { contextMenuPattern } from "@/entities/pattern/catalog/context-menu/pattern";
+import { commandPalettePattern } from "@/entities/pattern/catalog/command-palette/pattern";
+import { hoverCardPattern } from "@/entities/pattern/catalog/hover-card/pattern";
+import { confirmationDialogPattern } from "@/entities/pattern/catalog/confirmation-dialog/pattern";
 import { pullToRefreshPattern } from "@/entities/pattern/catalog/pull-to-refresh/pattern";
 import { pricingPlanComparisonPattern } from "@/entities/pattern/catalog/pricing-plan-comparison/pattern";
 import { strikethroughPricePattern } from "@/entities/pattern/catalog/strikethrough-price/pattern";
@@ -48,6 +54,12 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   progressBarPattern,
   checkboxPattern,
   bottomSheetPattern,
+  dropdownMenuPattern,
+  alertDialogPattern,
+  contextMenuPattern,
+  commandPalettePattern,
+  hoverCardPattern,
+  confirmationDialogPattern,
   pullToRefreshPattern,
   pricingPlanComparisonPattern,
   strikethroughPricePattern,

@@ -4,6 +4,7 @@ import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it, vi } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
+import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 
 import { routes } from "@/app/router/routes";
 
@@ -30,7 +31,9 @@ describe("catalog page", () => {
       "aria-pressed",
       "true",
     );
-    expect(screen.getByRole("status")).toHaveTextContent("397개 항목 · 데모 32개");
+    // Every catalog pattern plus every comparison guide that ships a demo.
+    const demoCount = PATTERNS.length + Object.keys(COMPARISON_DEMOS).length;
+    expect(screen.getByRole("status")).toHaveTextContent(`397개 항목 · 데모 ${demoCount}개`);
     const itemLinks = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href") ?? "")
