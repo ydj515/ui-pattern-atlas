@@ -85,6 +85,15 @@ import { timeSlotsPattern } from "@/entities/pattern/catalog/time-slots/pattern"
 import { monthPickerPattern } from "@/entities/pattern/catalog/month-picker/pattern";
 import { wheelPickerPattern } from "@/entities/pattern/catalog/wheel-picker/pattern";
 import { recurrencePickerPattern } from "@/entities/pattern/catalog/recurrence-picker/pattern";
+import { buttonPattern } from "@/entities/pattern/catalog/button/pattern";
+import { iconButtonPattern } from "@/entities/pattern/catalog/icon-button/pattern";
+import { loadingButtonPattern } from "@/entities/pattern/catalog/loading-button/pattern";
+import { disabledButtonPattern } from "@/entities/pattern/catalog/disabled-button/pattern";
+import { toggleButtonPattern } from "@/entities/pattern/catalog/toggle-button/pattern";
+import { fabPattern } from "@/entities/pattern/catalog/fab/pattern";
+import { copyButtonPattern } from "@/entities/pattern/catalog/copy-button/pattern";
+import { splitButtonPattern } from "@/entities/pattern/catalog/split-button/pattern";
+import { holdToConfirmPattern } from "@/entities/pattern/catalog/hold-to-confirm/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -172,6 +181,15 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   monthPickerPattern,
   wheelPickerPattern,
   recurrencePickerPattern,
+  buttonPattern,
+  iconButtonPattern,
+  loadingButtonPattern,
+  disabledButtonPattern,
+  toggleButtonPattern,
+  fabPattern,
+  copyButtonPattern,
+  splitButtonPattern,
+  holdToConfirmPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

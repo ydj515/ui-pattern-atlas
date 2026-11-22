@@ -36,7 +36,9 @@ describe("searchPatterns", () => {
   it("matches aliases people actually type", () => {
     expect(slugsFor("확인 창")).toContain("modal-dialog");
     expect(slugsFor("스낵바")).toContain("toast");
-    expect(slugsFor("토글")[0]).toBe("switch");
+    expect(slugsFor("토글").slice(0, 2)).toEqual(
+      expect.arrayContaining(["switch", "toggle-button"]),
+    );
   });
 
   it("matches a multi-word name typed with or without spaces", () => {

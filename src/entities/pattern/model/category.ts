@@ -42,6 +42,12 @@ export const PATTERN_CATEGORIES = [
     description: "날짜, 파일, 색처럼 형식이 정해진 입력",
   },
   {
+    id: "button",
+    label: "Buttons",
+    labelKo: "버튼과 상태",
+    description: "누를 수 있는 것과 그 상태",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",

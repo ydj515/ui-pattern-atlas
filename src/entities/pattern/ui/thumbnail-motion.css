@@ -8236,6 +8236,812 @@
   }
 }
 
+/* Button: hover 저장 → press → 저장했어요. */
+.thumb-btn-cursor {
+  animation-name: thumb-btn-cursor;
+}
+.thumb-btn-hover {
+  animation-name: thumb-btn-hover;
+}
+.thumb-btn-press {
+  animation-name: thumb-btn-press;
+}
+.thumb-btn-done {
+  animation-name: thumb-btn-done;
+}
+@keyframes thumb-btn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(141px, 56px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-btn-hover {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  36% {
+    opacity: 1;
+  }
+  37%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-btn-press {
+  0%,
+  29% {
+    transform: scale(1);
+  }
+  32% {
+    transform: scale(0.94);
+  }
+  35%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thumb-btn-done {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Icon button: hover names each icon; 공유 → 링크를 복사했어요. */
+.thumb-ib-cursor {
+  animation-name: thumb-ib-cursor;
+}
+.thumb-ib-tip1 {
+  animation-name: thumb-ib-tip1;
+}
+.thumb-ib-tip2 {
+  animation-name: thumb-ib-tip2;
+}
+.thumb-ib-hover1 {
+  animation-name: thumb-ib-hover1;
+}
+.thumb-ib-hover2 {
+  animation-name: thumb-ib-hover2;
+}
+.thumb-ib-done {
+  animation-name: thumb-ib-done;
+}
+@keyframes thumb-ib-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  40% {
+    transform: translate(95px, 41px);
+  }
+  60%,
+  84% {
+    transform: translate(115px, 41px);
+  }
+  98% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  104%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ib-tip1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ib-hover1 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ib-done {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  58% {
+    opacity: 1;
+  }
+  59%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ib-tip2 {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  64%,
+  86% {
+    opacity: 1;
+  }
+  87%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ib-hover2 {
+  0%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  86% {
+    opacity: 1;
+  }
+  87%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Loading button: 저장 → 저장하는 중 → 저장했어요 → 저장. */
+.thumb-lbtn-cursor {
+  animation-name: thumb-lbtn-cursor;
+}
+.thumb-lbtn-idle {
+  animation-name: thumb-lbtn-idle;
+}
+.thumb-lbtn-busy {
+  animation-name: thumb-lbtn-busy;
+}
+.thumb-lbtn-ok {
+  animation-name: thumb-lbtn-ok;
+}
+@keyframes thumb-lbtn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  20% {
+    transform: translate(88px, 43px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lbtn-idle {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  81% {
+    opacity: 0;
+  }
+  82%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-lbtn-busy {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lbtn-ok {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  81% {
+    opacity: 1;
+  }
+  82%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Disabled button: press → the reason stands out → agree → 가입했어요. */
+.thumb-dbtn-cursor {
+  animation-name: thumb-dbtn-cursor;
+}
+.thumb-dbtn-reason {
+  animation-name: thumb-dbtn-reason;
+}
+.thumb-dbtn-nudge {
+  animation-name: thumb-dbtn-nudge;
+}
+.thumb-dbtn-on {
+  animation-name: thumb-dbtn-on;
+}
+.thumb-dbtn-done {
+  animation-name: thumb-dbtn-done;
+}
+@keyframes thumb-dbtn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  26% {
+    transform: translate(88px, 42px);
+  }
+  36%,
+  44% {
+    transform: translate(27px, 21px);
+  }
+  58%,
+  68% {
+    transform: translate(88px, 42px);
+  }
+  82% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dbtn-reason {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  26%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dbtn-nudge {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dbtn-on {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dbtn-done {
+  0%,
+  67% {
+    opacity: 0;
+  }
+  68%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Toggle button: 굵게, then 밑줄 → both stay on. */
+.thumb-tgl-cursor {
+  animation-name: thumb-tgl-cursor;
+}
+.thumb-tgl-bold {
+  animation-name: thumb-tgl-bold;
+}
+.thumb-tgl-under {
+  animation-name: thumb-tgl-under;
+}
+.thumb-tgl-t0 {
+  animation-name: thumb-tgl-t0;
+}
+.thumb-tgl-t1 {
+  animation-name: thumb-tgl-t1;
+}
+.thumb-tgl-t2 {
+  animation-name: thumb-tgl-t2;
+}
+@keyframes thumb-tgl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(35px, 29px);
+  }
+  44%,
+  54% {
+    transform: translate(67px, 29px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tgl-bold {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tgl-under {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tgl-t0 {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tgl-t1 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tgl-t2 {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* FAB: scroll down shrinks 새 메일, scroll up brings it back, then tap it. */
+.thumb-fab-cursor {
+  animation-name: thumb-fab-cursor;
+}
+.thumb-fab-list {
+  animation-name: thumb-fab-list;
+}
+.thumb-fab-wide {
+  animation-name: thumb-fab-wide;
+}
+.thumb-fab-icon {
+  animation-name: thumb-fab-icon;
+}
+.thumb-fab-done {
+  animation-name: thumb-fab-done;
+}
+@keyframes thumb-fab-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  14% {
+    transform: translate(88px, 70px);
+  }
+  40% {
+    transform: translate(88px, 36px);
+  }
+  56% {
+    transform: translate(88px, 40px);
+  }
+  72% {
+    transform: translate(88px, 62px);
+  }
+  80%,
+  88% {
+    transform: translate(110px, 94px);
+  }
+  102% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  108%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fab-list {
+  0%,
+  14% {
+    transform: translateY(0);
+  }
+  40%,
+  58% {
+    transform: translateY(-40px);
+  }
+  72%,
+  95% {
+    transform: translateY(-14px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-fab-wide {
+  0%,
+  24% {
+    opacity: 1;
+  }
+  25%,
+  65% {
+    opacity: 0;
+  }
+  66%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-fab-icon {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  64% {
+    opacity: 1;
+  }
+  65%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-fab-done {
+  0%,
+  85% {
+    opacity: 0;
+  }
+  86%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Copy button: 복사 → 복사됨 → back. */
+.thumb-copy-cursor {
+  animation-name: thumb-copy-cursor;
+}
+.thumb-copy-done {
+  animation-name: thumb-copy-done;
+}
+@keyframes thumb-copy-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  26% {
+    transform: translate(139px, 45px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-copy-done {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  64% {
+    opacity: 1;
+  }
+  65%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Split button: open the arrow → PDF로 내보내기. */
+.thumb-split-cursor {
+  animation-name: thumb-split-cursor;
+}
+.thumb-split-menu {
+  animation-name: thumb-split-menu;
+}
+.thumb-split-hover {
+  animation-name: thumb-split-hover;
+}
+.thumb-split-done {
+  animation-name: thumb-split-done;
+}
+@keyframes thumb-split-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  20% {
+    transform: translate(100px, 28px);
+  }
+  34%,
+  46% {
+    transform: translate(74px, 60px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-split-menu {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-split-hover {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-split-done {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Hold to confirm: hold until the fill completes → 삭제했어요. */
+.thumb-hold-cursor {
+  animation-name: thumb-hold-cursor;
+}
+.thumb-hold-fill {
+  animation-name: thumb-hold-fill;
+}
+.thumb-hold-form {
+  animation-name: thumb-hold-form;
+}
+.thumb-hold-done {
+  animation-name: thumb-hold-done;
+}
+@keyframes thumb-hold-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  60% {
+    transform: translate(88px, 53px);
+  }
+  74% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-hold-fill {
+  0%,
+  16% {
+    transform: scaleX(0);
+  }
+  58% {
+    transform: scaleX(1);
+  }
+  59%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes thumb-hold-form {
+  0%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-hold-done {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
