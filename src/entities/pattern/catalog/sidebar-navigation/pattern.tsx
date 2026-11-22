@@ -22,7 +22,7 @@ export const sidebarNavigationPattern: Pattern = {
   ],
   alternatives: [
     { name: "상단 내비게이션", slug: "navbar", reason: "메뉴가 적을 때" },
-    { name: "트리 뷰", reason: "파일처럼 깊게 중첩된 구조" },
+    { name: "트리 뷰", slug: "tree-view", reason: "파일처럼 깊게 중첩된 구조" },
   ],
   accessibility: [
     "그룹 제목은 aria-expanded를 가진 버튼이라 하위 메뉴를 펼치고 접을 수 있습니다.",

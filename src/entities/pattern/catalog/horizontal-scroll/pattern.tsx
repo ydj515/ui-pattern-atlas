@@ -20,7 +20,7 @@ export const horizontalScrollPattern: Pattern = {
     "중요한 내용이 잘려 보이지 않을 때",
     "자동으로 넘어가게 할 때(캐러셀의 접근성 문제)",
   ],
-  alternatives: [{ name: "스크롤 탭", reason: "탭이 넘칠 때" }],
+  alternatives: [{ name: "스크롤 탭", slug: "scrollable-tabs", reason: "탭이 넘칠 때" }],
   accessibility: [
     "줄은 이름이 있는 region이고 포커스를 받아 화살표 키로 스크롤됩니다.",
     "이전, 다음 버튼은 이름이 있고 양 끝에서 꺼집니다.",

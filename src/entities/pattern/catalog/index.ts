@@ -106,6 +106,11 @@ import { tableOfContentsPattern } from "@/entities/pattern/catalog/table-of-cont
 import { backToTopPattern } from "@/entities/pattern/catalog/back-to-top/pattern";
 import { backNavigationPattern } from "@/entities/pattern/catalog/back-navigation/pattern";
 import { horizontalScrollPattern } from "@/entities/pattern/catalog/horizontal-scroll/pattern";
+import { readMorePattern } from "@/entities/pattern/catalog/read-more/pattern";
+import { disclosurePattern } from "@/entities/pattern/catalog/disclosure/pattern";
+import { treeViewPattern } from "@/entities/pattern/catalog/tree-view/pattern";
+import { collapsiblePanelPattern } from "@/entities/pattern/catalog/collapsible-panel/pattern";
+import { scrollableTabsPattern } from "@/entities/pattern/catalog/scrollable-tabs/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -214,6 +219,11 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   backToTopPattern,
   backNavigationPattern,
   horizontalScrollPattern,
+  readMorePattern,
+  disclosurePattern,
+  treeViewPattern,
+  collapsiblePanelPattern,
+  scrollableTabsPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

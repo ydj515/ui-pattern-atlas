@@ -10015,6 +10015,405 @@
   }
 }
 
+/* Read more: 더 보기 → the whole text and 접기. */
+.thumb-rm-cursor {
+  animation-name: thumb-rm-cursor;
+}
+.thumb-rm-short {
+  animation-name: thumb-rm-short;
+}
+.thumb-rm-long {
+  animation-name: thumb-rm-long;
+}
+@keyframes thumb-rm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(44px, 60px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rm-short {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-rm-long {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Disclosure: open the question → the answer. */
+.thumb-dc-cursor {
+  animation-name: thumb-dc-cursor;
+}
+.thumb-dc-closed {
+  animation-name: thumb-dc-closed;
+}
+.thumb-dc-open {
+  animation-name: thumb-dc-open;
+}
+@keyframes thumb-dc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  28% {
+    transform: translate(88px, 35px);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  48%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dc-closed {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dc-open {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Tree view: open 아이콘 → select 홈.svg. */
+.thumb-tv-cursor {
+  animation-name: thumb-tv-cursor;
+}
+.thumb-tv-kids {
+  animation-name: thumb-tv-kids;
+}
+.thumb-tv-push {
+  animation-name: thumb-tv-push;
+}
+.thumb-tv-logo {
+  animation-name: thumb-tv-logo;
+}
+.thumb-tv-home {
+  animation-name: thumb-tv-home;
+}
+@keyframes thumb-tv-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  28% {
+    transform: translate(60px, 42px);
+  }
+  38%,
+  52% {
+    transform: translate(66px, 54px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tv-kids {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tv-push {
+  0%,
+  26% {
+    transform: translateY(0);
+  }
+  28%,
+  96% {
+    transform: translateY(24px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-tv-logo {
+  0%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tv-home {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Collapsible panel: fold 속성 into a rail → the canvas gets the room. */
+.thumb-cpn-cursor {
+  animation-name: thumb-cpn-cursor;
+}
+.thumb-cpn-open {
+  animation-name: thumb-cpn-open;
+}
+.thumb-cpn-rail {
+  animation-name: thumb-cpn-rail;
+}
+.thumb-cpn-canvas {
+  animation-name: thumb-cpn-canvas;
+}
+@keyframes thumb-cpn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  30% {
+    transform: translate(158px, 17px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cpn-open {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cpn-rail {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cpn-canvas {
+  0%,
+  29% {
+    transform: translateX(0);
+  }
+  34%,
+  96% {
+    transform: translateX(22px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Scrollable tabs: › shows more → choose 가방. */
+.thumb-st-cursor {
+  animation-name: thumb-st-cursor;
+}
+.thumb-st-strip {
+  animation-name: thumb-st-strip;
+}
+.thumb-st-prev {
+  animation-name: thumb-st-prev;
+}
+.thumb-st-all {
+  animation-name: thumb-st-all;
+}
+.thumb-st-bag {
+  animation-name: thumb-st-bag;
+}
+@keyframes thumb-st-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  24% {
+    transform: translate(162px, 22px);
+  }
+  36%,
+  46% {
+    transform: translate(80px, 23px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-st-strip {
+  0%,
+  22% {
+    transform: translateX(0);
+  }
+  28%,
+  96% {
+    transform: translateX(-80px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-st-prev {
+  0%,
+  23% {
+    opacity: 0.3;
+  }
+  26%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes thumb-st-all {
+  0%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-st-bag {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
