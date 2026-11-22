@@ -1,0 +1,21 @@
+node_modules/
+dist/
+coverage/
+storybook-static/
+*.local
+.DS_Store
+.vite/
+
+# Local design references and planning notes
+/references/
+/docs/pattern-roadmap.md
+
+# local preview launcher
+.claude/launch.json
+
+# mise personal overrides
+mise.local.toml
+mise.local.lock
+mise.*.local.toml
+mise.*.local.lock
+.miserc.local.toml

@@ -1,0 +1,5 @@
+.dev-standards
+pnpm-lock.yaml
+dist
+coverage
+storybook-static

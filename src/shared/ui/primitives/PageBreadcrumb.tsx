@@ -1,0 +1,48 @@
+import { Link, type To } from "react-router";
+
+import { navLinkClassName } from "./textLink";
+
+interface BreadcrumbParent {
+  readonly label: string;
+  readonly to: To;
+}
+
+function Separator() {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+      className="size-3 shrink-0 text-subtle"
+    >
+      <path d="M7.3 5.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.3-3.3-3.3-3.3a1 1 0 0 1 0-1.4Z" />
+    </svg>
+  );
+}
+
+export function PageBreadcrumb({
+  parents,
+  current,
+}: {
+  readonly parents: readonly BreadcrumbParent[];
+  readonly current: string;
+}) {
+  return (
+    <nav aria-label="현재 위치">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-caption">
+        {parents.map(({ label, to }, index) => (
+          <li key={label} className="flex items-center gap-2">
+            {index > 0 ? <Separator /> : null}
+            <Link to={to} className={`${navLinkClassName} underline-offset-4 hover:underline`}>
+              {label}
+            </Link>
+          </li>
+        ))}
+        <li className="flex items-center gap-2 font-medium text-ink" aria-current="page">
+          <Separator />
+          {current}
+        </li>
+      </ol>
+    </nav>
+  );
+}

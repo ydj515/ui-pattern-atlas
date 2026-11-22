@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <style>
+    .tile { fill: #ffffff; stroke: #1d1f23; }
+    .ink { fill: #1d1f23; }
+    .marker { fill: #ffe45c; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #141517; stroke: #43474e; }
+      .ink { fill: #e8e9eb; }
+    }
+  </style>
+  <rect class="tile" x="3" y="3" width="58" height="58" rx="13" stroke-width="3" />
+  <rect class="marker" x="14" y="45" width="36" height="8" rx="3" />
+  <path class="ink" fill-rule="evenodd" clip-rule="evenodd" d="M30.4 11H34.2L44.8 37.2H48V40H36.6V37.2H39.4L36.9 30.8H26.1L23.6 37.2H26.8V40H16V37.2H19.4L30.4 11ZM31.5 17.8L27.3 28H35.7L31.5 17.8Z" />
+</svg>

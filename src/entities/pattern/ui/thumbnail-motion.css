@@ -1,0 +1,2273 @@
+/*
+ * Looping "how it works" animations for catalog thumbnails. Each loop replays the same
+ * scenario as the pattern's interactive demo on the detail page.
+ *
+ * Rules:
+ * - Coordinates are px inside the unscaled 176×112 ThumbStage (see ThumbStage.tsx).
+ * - Only transform and opacity are animated so the loops stay on the compositor.
+ * - Base (non-animated) styles show the most representative frame. That frame is what
+ *   people see when `prefers-reduced-motion: reduce` is set.
+ */
+
+.thumb-anim {
+  animation-duration: var(--thumb-loop, 5.2s);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.thumb-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  transform-origin: 0 0;
+}
+
+/* ---------- Modal dialog: 삭제하기 → confirm → 삭제 → status ---------- */
+.thumb-modal-cursor {
+  animation-name: thumb-modal-cursor;
+}
+.thumb-modal-overlay {
+  animation-name: thumb-modal-overlay;
+}
+.thumb-modal-dialog {
+  animation-name: thumb-modal-dialog;
+}
+.thumb-modal-status {
+  opacity: 0;
+  animation-name: thumb-modal-status;
+}
+@keyframes thumb-modal-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18% {
+    transform: translate(88px, 48px) scale(1);
+  }
+  21% {
+    transform: translate(88px, 48px) scale(0.75);
+  }
+  24% {
+    transform: translate(88px, 48px) scale(1);
+  }
+  48% {
+    transform: translate(137px, 78px) scale(1);
+  }
+  51% {
+    transform: translate(137px, 78px) scale(0.75);
+  }
+  54% {
+    transform: translate(137px, 78px) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(137px, 78px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-modal-overlay {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  30%,
+  55% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-modal-dialog {
+  0%,
+  24% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  31%,
+  55% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  61%,
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+@keyframes thumb-modal-status {
+  0%,
+  58% {
+    opacity: 0;
+  }
+  63%,
+  92% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Drawer: 필터 열기 → 최신순 → 적용하기 → sort label updates ---------- */
+.thumb-drawer-cursor {
+  animation-name: thumb-drawer-cursor;
+}
+.thumb-drawer-overlay {
+  animation-name: thumb-drawer-overlay;
+}
+.thumb-drawer-panel {
+  animation-name: thumb-drawer-panel;
+}
+.thumb-drawer-select {
+  animation-name: thumb-drawer-select;
+}
+.thumb-drawer-sort-before {
+  animation-name: thumb-drawer-sort-before;
+}
+.thumb-drawer-sort-after {
+  opacity: 0;
+  animation-name: thumb-drawer-sort-after;
+}
+@keyframes thumb-drawer-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(70px, 100px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(70px, 100px);
+  }
+  16% {
+    transform: translate(32px, 18px) scale(1);
+  }
+  19% {
+    transform: translate(32px, 18px) scale(0.75);
+  }
+  22% {
+    transform: translate(32px, 18px) scale(1);
+  }
+  40% {
+    transform: translate(128px, 52px) scale(1);
+  }
+  43% {
+    transform: translate(128px, 52px) scale(0.75);
+  }
+  46% {
+    transform: translate(128px, 52px) scale(1);
+  }
+  60% {
+    transform: translate(143px, 100px) scale(1);
+  }
+  63% {
+    transform: translate(143px, 100px) scale(0.75);
+  }
+  66% {
+    transform: translate(143px, 100px) scale(1);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(143px, 100px);
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translate(70px, 100px);
+  }
+}
+@keyframes thumb-drawer-overlay {
+  0%,
+  22% {
+    opacity: 0;
+  }
+  30%,
+  68% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-drawer-panel {
+  0%,
+  22% {
+    transform: translateX(100%);
+  }
+  32%,
+  68% {
+    transform: translateX(0);
+  }
+  78%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes thumb-drawer-select {
+  0%,
+  44% {
+    transform: translateY(0);
+  }
+  48%,
+  84% {
+    transform: translateY(14px);
+  }
+  86%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-drawer-sort-before {
+  0%,
+  70% {
+    opacity: 1;
+  }
+  74%,
+  94% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-drawer-sort-after {
+  0%,
+  70% {
+    opacity: 0;
+  }
+  74%,
+  94% {
+    opacity: 1;
+  }
+  98%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Popover: 요금 계산 방식 → panel → click outside ---------- */
+.thumb-popover-cursor {
+  animation-name: thumb-popover-cursor;
+}
+.thumb-popover-panel {
+  animation-name: thumb-popover-panel;
+}
+@keyframes thumb-popover-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 100px);
+  }
+  16% {
+    transform: translate(88px, 32px) scale(1);
+  }
+  19% {
+    transform: translate(88px, 32px) scale(0.75);
+  }
+  22% {
+    transform: translate(88px, 32px) scale(1);
+  }
+  50% {
+    transform: translate(88px, 32px) scale(1);
+  }
+  62% {
+    transform: translate(12px, 102px) scale(1);
+  }
+  65% {
+    transform: translate(12px, 102px) scale(0.75);
+  }
+  68% {
+    transform: translate(12px, 102px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(12px, 102px);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+}
+@keyframes thumb-popover-panel {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  28%,
+  66% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/* ---------- Tooltip: hover the info icon, then leave ---------- */
+.thumb-tooltip-cursor {
+  animation-name: thumb-tooltip-cursor;
+}
+.thumb-tooltip-bubble {
+  animation-name: thumb-tooltip-bubble;
+}
+@keyframes thumb-tooltip-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(40px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(40px, 104px);
+  }
+  26%,
+  70% {
+    transform: translate(117px, 77px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(40px, 104px);
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translate(40px, 104px);
+  }
+}
+@keyframes thumb-tooltip-bubble {
+  0%,
+  32% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  38%,
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+/* ---------- Toast: 찜하기 → message slides up → leaves on its own ---------- */
+.thumb-toast-cursor {
+  animation-name: thumb-toast-cursor;
+}
+.thumb-toast-message {
+  animation-name: thumb-toast-message;
+}
+.thumb-toast-pressed {
+  animation-name: thumb-toast-pressed;
+}
+@keyframes thumb-toast-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 100px);
+  }
+  18% {
+    transform: translate(88px, 43px) scale(1);
+  }
+  21% {
+    transform: translate(88px, 43px) scale(0.75);
+  }
+  24% {
+    transform: translate(88px, 43px) scale(1);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(88px, 43px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+}
+@keyframes thumb-toast-message {
+  0%,
+  24% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  32%,
+  72% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+@keyframes thumb-toast-pressed {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  24%,
+  88% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Alert banner: dismiss → 배너 다시 보기 → banner returns ---------- */
+.thumb-alert-cursor {
+  animation-name: thumb-alert-cursor;
+}
+.thumb-alert-banner {
+  animation-name: thumb-alert-banner;
+}
+.thumb-alert-reshow {
+  opacity: 0;
+  animation-name: thumb-alert-reshow;
+}
+@keyframes thumb-alert-cursor {
+  0%,
+  14% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(150px, 100px);
+  }
+  34% {
+    transform: translate(158px, 38px) scale(1);
+  }
+  37% {
+    transform: translate(158px, 38px) scale(0.75);
+  }
+  40% {
+    transform: translate(158px, 38px) scale(1);
+  }
+  62% {
+    transform: translate(88px, 43px) scale(1);
+  }
+  65% {
+    transform: translate(88px, 43px) scale(0.75);
+  }
+  68% {
+    transform: translate(88px, 43px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(88px, 43px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+}
+@keyframes thumb-alert-banner {
+  0%,
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  46%,
+  70% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  76%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes thumb-alert-reshow {
+  0%,
+  46% {
+    opacity: 0;
+  }
+  52%,
+  68% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Inline validation: type an invalid email, leave the field, see the error ---------- */
+.thumb-field-cover {
+  transform: translateX(80px);
+  animation-name: thumb-field-cover;
+}
+.thumb-field-error {
+  animation-name: thumb-field-error;
+}
+.thumb-field-message {
+  animation-name: thumb-field-message;
+}
+@keyframes thumb-field-cover {
+  0%,
+  4% {
+    transform: translateX(0);
+    animation-timing-function: steps(9, end);
+  }
+  34%,
+  90% {
+    transform: translateX(80px);
+  }
+  96%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-field-error {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  46%,
+  84% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-field-message {
+  0%,
+  40% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  46%,
+  84% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+}
+
+/* ---------- Breadcrumb: click 주방가전 → trail shortens → go back to the product ---------- */
+.thumb-crumb-cursor {
+  animation-name: thumb-crumb-cursor;
+}
+.thumb-crumb-tail {
+  animation-name: thumb-crumb-tail;
+}
+.thumb-crumb-current {
+  opacity: 0;
+  animation-name: thumb-crumb-current;
+}
+@keyframes thumb-crumb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 100px);
+  }
+  26% {
+    transform: translate(69px, 15px) scale(1);
+  }
+  29% {
+    transform: translate(69px, 15px) scale(0.75);
+  }
+  32% {
+    transform: translate(69px, 15px) scale(1);
+  }
+  60% {
+    transform: translate(58px, 75px) scale(1);
+  }
+  63% {
+    transform: translate(58px, 75px) scale(0.75);
+  }
+  66% {
+    transform: translate(58px, 75px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(58px, 75px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+}
+@keyframes thumb-crumb-tail {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  36%,
+  66% {
+    opacity: 0;
+  }
+  72%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-crumb-current {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  36%,
+  66% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Pagination: next → page 4 → page 5, the orders change with the page ---------- */
+.thumb-page-cursor {
+  animation-name: thumb-page-cursor;
+}
+.thumb-page-active {
+  transform: translateX(80px);
+  animation-name: thumb-page-active;
+}
+.thumb-page-5 {
+  animation-name: thumb-page-5;
+}
+.thumb-page-6 {
+  opacity: 0;
+  animation-name: thumb-page-6;
+}
+.thumb-page-4 {
+  opacity: 0;
+  animation-name: thumb-page-4;
+}
+@keyframes thumb-page-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(160px, 106px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(160px, 106px);
+  }
+  16% {
+    transform: translate(160px, 90px) scale(1);
+  }
+  19% {
+    transform: translate(160px, 90px) scale(0.75);
+  }
+  22% {
+    transform: translate(160px, 90px) scale(1);
+  }
+  44% {
+    transform: translate(70px, 90px) scale(1);
+  }
+  47% {
+    transform: translate(70px, 90px) scale(0.75);
+  }
+  50% {
+    transform: translate(70px, 90px) scale(1);
+  }
+  72% {
+    transform: translate(88px, 90px) scale(1);
+  }
+  75% {
+    transform: translate(88px, 90px) scale(0.75);
+  }
+  78% {
+    transform: translate(88px, 90px) scale(1);
+  }
+  88% {
+    opacity: 1;
+    transform: translate(88px, 90px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(160px, 106px);
+  }
+}
+@keyframes thumb-page-active {
+  0%,
+  22% {
+    transform: translateX(80px);
+  }
+  25%,
+  48% {
+    transform: translateX(98px);
+  }
+  51%,
+  76% {
+    transform: translateX(62px);
+  }
+  79%,
+  100% {
+    transform: translateX(80px);
+  }
+}
+@keyframes thumb-page-5 {
+  0%,
+  22% {
+    opacity: 1;
+  }
+  24%,
+  78% {
+    opacity: 0;
+  }
+  80%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-page-6 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  25%,
+  48% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-page-4 {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  52%,
+  76% {
+    opacity: 1;
+  }
+  78%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Tabs: 리뷰 128 → 배송/교환 → 상세 정보, the panel follows ---------- */
+.thumb-tabs-cursor {
+  animation-name: thumb-tabs-cursor;
+}
+.thumb-tabs-active {
+  animation-name: thumb-tabs-active;
+}
+.thumb-tabs-panel-a {
+  animation-name: thumb-tabs-panel-a;
+}
+.thumb-tabs-panel-b {
+  opacity: 0;
+  animation-name: thumb-tabs-panel-b;
+}
+.thumb-tabs-panel-c {
+  opacity: 0;
+  animation-name: thumb-tabs-panel-c;
+}
+@keyframes thumb-tabs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 100px);
+  }
+  20% {
+    transform: translate(82px, 16px) scale(1);
+  }
+  23% {
+    transform: translate(82px, 16px) scale(0.75);
+  }
+  26% {
+    transform: translate(82px, 16px) scale(1);
+  }
+  50% {
+    transform: translate(130px, 16px) scale(1);
+  }
+  53% {
+    transform: translate(130px, 16px) scale(0.75);
+  }
+  56% {
+    transform: translate(130px, 16px) scale(1);
+  }
+  80% {
+    transform: translate(34px, 16px) scale(1);
+  }
+  83% {
+    transform: translate(34px, 16px) scale(0.75);
+  }
+  86% {
+    transform: translate(34px, 16px) scale(1);
+  }
+  92% {
+    opacity: 1;
+    transform: translate(34px, 16px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(150px, 100px);
+  }
+}
+@keyframes thumb-tabs-active {
+  0%,
+  24% {
+    transform: translateX(0);
+  }
+  28%,
+  54% {
+    transform: translateX(48px);
+  }
+  58%,
+  84% {
+    transform: translateX(96px);
+  }
+  88%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-tabs-panel-a {
+  0%,
+  24% {
+    opacity: 1;
+  }
+  26%,
+  86% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tabs-panel-b {
+  0%,
+  26% {
+    opacity: 0;
+  }
+  30%,
+  54% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tabs-panel-c {
+  0%,
+  56% {
+    opacity: 0;
+  }
+  60%,
+  84% {
+    opacity: 1;
+  }
+  86%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Accordion: opening one question closes the other ---------- */
+.thumb-accordion-cursor {
+  animation-name: thumb-accordion-cursor;
+}
+.thumb-accordion-row2 {
+  transform: translateY(26px);
+  animation-name: thumb-accordion-row2;
+}
+.thumb-accordion-panel1 {
+  transform-origin: top;
+  animation-name: thumb-accordion-panel1;
+}
+.thumb-accordion-panel2 {
+  opacity: 0;
+  animation-name: thumb-accordion-panel2;
+}
+@keyframes thumb-accordion-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20% {
+    transform: translate(88px, 57px) scale(1);
+  }
+  23% {
+    transform: translate(88px, 57px) scale(0.75);
+  }
+  26% {
+    transform: translate(88px, 57px) scale(1);
+  }
+  60% {
+    transform: translate(88px, 13px) scale(1);
+  }
+  63% {
+    transform: translate(88px, 13px) scale(0.75);
+  }
+  66% {
+    transform: translate(88px, 13px) scale(1);
+  }
+  82% {
+    opacity: 1;
+    transform: translate(88px, 13px);
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-accordion-row2 {
+  0%,
+  26% {
+    transform: translateY(26px);
+  }
+  34%,
+  66% {
+    transform: translateY(0);
+  }
+  74%,
+  100% {
+    transform: translateY(26px);
+  }
+}
+@keyframes thumb-accordion-panel1 {
+  0%,
+  26% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  32%,
+  68% {
+    opacity: 0;
+    transform: scaleY(0.6);
+  }
+  74%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes thumb-accordion-panel2 {
+  0%,
+  28% {
+    opacity: 0;
+  }
+  36%,
+  64% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Switch: 혜택 알림 depends on 푸시 알림, exactly as in the demo ---------- */
+.thumb-switch-cursor {
+  animation-name: thumb-switch-cursor;
+}
+.thumb-switch-knob1 {
+  transform: translateX(12px);
+  animation-name: thumb-switch-knob1;
+}
+.thumb-switch-off1 {
+  opacity: 0;
+  animation-name: thumb-switch-off1;
+}
+.thumb-switch-knob2 {
+  animation-name: thumb-switch-knob2;
+}
+.thumb-switch-on2 {
+  opacity: 0;
+  animation-name: thumb-switch-on2;
+}
+.thumb-switch-disabled2 {
+  animation-name: thumb-switch-disabled2;
+}
+.thumb-switch-hint-on {
+  animation-name: thumb-switch-hint-on;
+}
+.thumb-switch-hint-off {
+  opacity: 0;
+  animation-name: thumb-switch-hint-off;
+}
+@keyframes thumb-switch-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20% {
+    transform: translate(150px, 66px) scale(1);
+  }
+  23% {
+    transform: translate(150px, 66px) scale(0.75);
+  }
+  26% {
+    transform: translate(150px, 66px) scale(1);
+  }
+  45% {
+    transform: translate(150px, 26px) scale(1);
+  }
+  48% {
+    transform: translate(150px, 26px) scale(0.75);
+  }
+  51% {
+    transform: translate(150px, 26px) scale(1);
+  }
+  70% {
+    transform: translate(150px, 26px) scale(1);
+  }
+  73% {
+    transform: translate(150px, 26px) scale(0.75);
+  }
+  76% {
+    transform: translate(150px, 26px) scale(1);
+  }
+  86% {
+    opacity: 1;
+    transform: translate(150px, 26px);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-switch-knob1 {
+  0%,
+  49% {
+    transform: translateX(12px);
+  }
+  52%,
+  74% {
+    transform: translateX(0);
+  }
+  77%,
+  100% {
+    transform: translateX(12px);
+  }
+}
+@keyframes thumb-switch-off1 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  52%,
+  74% {
+    opacity: 1;
+  }
+  77%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-switch-knob2 {
+  0%,
+  24% {
+    transform: translateX(0);
+  }
+  27%,
+  49% {
+    transform: translateX(12px);
+  }
+  52%,
+  74% {
+    transform: translateX(0);
+  }
+  77%,
+  92% {
+    transform: translateX(12px);
+  }
+  96%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-switch-on2 {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  27%,
+  49% {
+    opacity: 1;
+  }
+  52%,
+  74% {
+    opacity: 0;
+  }
+  77%,
+  92% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-switch-disabled2 {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  52%,
+  74% {
+    opacity: 0.45;
+  }
+  77%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-switch-hint-on {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  52%,
+  74% {
+    opacity: 0;
+  }
+  77%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-switch-hint-off {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  52%,
+  74% {
+    opacity: 1;
+  }
+  77%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Segmented control: 월간 → 일간 → 주간, the total follows ---------- */
+.thumb-segment-cursor {
+  animation-name: thumb-segment-cursor;
+}
+.thumb-segment-pill {
+  transform: translateX(38px);
+  animation-name: thumb-segment-pill;
+}
+.thumb-segment-week {
+  animation-name: thumb-segment-week;
+}
+.thumb-segment-month {
+  opacity: 0;
+  animation-name: thumb-segment-month;
+}
+.thumb-segment-day {
+  opacity: 0;
+  animation-name: thumb-segment-day;
+}
+@keyframes thumb-segment-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18% {
+    transform: translate(126px, 34px) scale(1);
+  }
+  21% {
+    transform: translate(126px, 34px) scale(0.75);
+  }
+  24% {
+    transform: translate(126px, 34px) scale(1);
+  }
+  46% {
+    transform: translate(50px, 34px) scale(1);
+  }
+  49% {
+    transform: translate(50px, 34px) scale(0.75);
+  }
+  52% {
+    transform: translate(50px, 34px) scale(1);
+  }
+  74% {
+    transform: translate(88px, 34px) scale(1);
+  }
+  77% {
+    transform: translate(88px, 34px) scale(0.75);
+  }
+  80% {
+    transform: translate(88px, 34px) scale(1);
+  }
+  88% {
+    opacity: 1;
+    transform: translate(88px, 34px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-segment-pill {
+  0%,
+  22% {
+    transform: translateX(38px);
+  }
+  26%,
+  50% {
+    transform: translateX(76px);
+  }
+  54%,
+  78% {
+    transform: translateX(0);
+  }
+  82%,
+  100% {
+    transform: translateX(38px);
+  }
+}
+@keyframes thumb-segment-week {
+  0%,
+  22% {
+    opacity: 1;
+  }
+  24%,
+  80% {
+    opacity: 0;
+  }
+  82%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-segment-month {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  26%,
+  50% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-segment-day {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  54%,
+  78% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Skeleton: placeholders → profile → 다시 불러오기 restarts loading ---------- */
+.thumb-skeleton-cursor {
+  animation-name: thumb-skeleton-cursor;
+}
+.thumb-skeleton-placeholder {
+  animation-name: thumb-skeleton-placeholder;
+}
+.thumb-skeleton-content {
+  opacity: 0;
+  animation-name: thumb-skeleton-content;
+}
+.thumb-skeleton-button {
+  animation-name: thumb-skeleton-button;
+}
+.thumb-skeleton-shimmer {
+  --thumb-loop: 1.2s;
+  animation-name: thumb-skeleton-shimmer;
+  animation-timing-function: linear;
+}
+@keyframes thumb-skeleton-cursor {
+  0%,
+  62% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80% {
+    transform: translate(88px, 85px) scale(1);
+  }
+  83% {
+    transform: translate(88px, 85px) scale(0.75);
+  }
+  86% {
+    transform: translate(88px, 85px) scale(1);
+  }
+  92% {
+    opacity: 1;
+    transform: translate(88px, 85px);
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-skeleton-placeholder {
+  0%,
+  56% {
+    opacity: 1;
+  }
+  64%,
+  86% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-skeleton-content {
+  0%,
+  56% {
+    opacity: 0;
+  }
+  64%,
+  86% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-skeleton-button {
+  0%,
+  56% {
+    opacity: 0.5;
+  }
+  62%,
+  86% {
+    opacity: 1;
+  }
+  89%,
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes thumb-skeleton-shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* ---------- Empty state: 프로젝트 만들기 → 새 프로젝트 → 빈 상태로 되돌리기 ---------- */
+.thumb-empty-cursor {
+  animation-name: thumb-empty-cursor;
+}
+.thumb-empty-message {
+  animation-name: thumb-empty-message;
+}
+.thumb-empty-row {
+  opacity: 0;
+  animation-name: thumb-empty-row;
+}
+@keyframes thumb-empty-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  22% {
+    transform: translate(88px, 78px) scale(1);
+  }
+  25% {
+    transform: translate(88px, 78px) scale(0.75);
+  }
+  28% {
+    transform: translate(88px, 78px) scale(1);
+  }
+  60% {
+    transform: translate(88px, 49px) scale(1);
+  }
+  63% {
+    transform: translate(88px, 49px) scale(0.75);
+  }
+  66% {
+    transform: translate(88px, 49px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(88px, 49px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-empty-message {
+  0%,
+  29% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  35%,
+  68% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  74%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes thumb-empty-row {
+  0%,
+  32% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  40%,
+  66% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Loading actions and short single-step selections. */
+.thumb-single-cursor {
+  animation-name: thumb-single-cursor;
+}
+.thumb-single-working {
+  opacity: 0;
+  animation-name: thumb-single-working;
+}
+.thumb-single-done {
+  animation-name: thumb-single-done;
+}
+@keyframes thumb-single-cursor {
+  0%,
+  4% {
+    opacity: 0;
+    transform: translate(119px, 56px);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(88px, 35px);
+  }
+  17% {
+    transform: translate(88px, 35px) scale(0.78);
+  }
+  22% {
+    transform: translate(88px, 35px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(88px, 35px);
+  }
+}
+@keyframes thumb-single-working {
+  0%,
+  17%,
+  52%,
+  100% {
+    opacity: 0;
+  }
+  18%,
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-single-done {
+  0%,
+  51%,
+  91%,
+  100% {
+    opacity: 0;
+  }
+  52%,
+  90% {
+    opacity: 1;
+  }
+}
+.thumb-progress-percent-start {
+  opacity: 0;
+  animation-name: thumb-progress-percent-start;
+}
+.thumb-progress-percent-twenty {
+  opacity: 0;
+  animation-name: thumb-progress-percent-twenty;
+}
+.thumb-progress-percent-forty {
+  opacity: 0;
+  animation-name: thumb-progress-percent-forty;
+}
+.thumb-progress-percent-sixty {
+  opacity: 0;
+  animation-name: thumb-progress-percent-sixty;
+}
+.thumb-progress-percent-eighty {
+  opacity: 0;
+  animation-name: thumb-progress-percent-eighty;
+}
+.thumb-progress-percent-done {
+  animation-name: thumb-progress-percent-done;
+}
+.thumb-progress-value {
+  animation-name: thumb-progress-value;
+  animation-timing-function: steps(1);
+}
+@keyframes thumb-progress-percent-start {
+  0%,
+  23%,
+  94%,
+  100% {
+    opacity: 1;
+  }
+  24%,
+  93% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-progress-percent-twenty {
+  0%,
+  23%,
+  31%,
+  100% {
+    opacity: 0;
+  }
+  24%,
+  30% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-progress-percent-forty {
+  0%,
+  30%,
+  38%,
+  100% {
+    opacity: 0;
+  }
+  31%,
+  37% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-progress-percent-sixty {
+  0%,
+  37%,
+  45%,
+  100% {
+    opacity: 0;
+  }
+  38%,
+  44% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-progress-percent-eighty {
+  0%,
+  44%,
+  52%,
+  100% {
+    opacity: 0;
+  }
+  45%,
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-progress-percent-done {
+  0%,
+  51%,
+  94%,
+  100% {
+    opacity: 0;
+  }
+  52%,
+  93% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-progress-value {
+  0% {
+    transform: scaleX(0);
+  }
+  24% {
+    transform: scaleX(0.2);
+  }
+  31% {
+    transform: scaleX(0.4);
+  }
+  38% {
+    transform: scaleX(0.6);
+  }
+  45% {
+    transform: scaleX(0.8);
+  }
+  52% {
+    transform: scaleX(1);
+  }
+  94%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+.thumb-check-mixed {
+  opacity: 0;
+  animation-name: thumb-check-mixed;
+}
+.thumb-check-first {
+  animation-name: thumb-check-first;
+}
+.thumb-check-all {
+  animation-name: thumb-check-all;
+}
+.thumb-check-cursor {
+  animation-name: thumb-check-cursor;
+}
+@keyframes thumb-check-mixed {
+  0%,
+  20%,
+  53%,
+  100% {
+    opacity: 0;
+  }
+  21%,
+  52% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-check-first {
+  0%,
+  20%,
+  92%,
+  100% {
+    opacity: 0;
+  }
+  21%,
+  91% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-check-all {
+  0%,
+  52%,
+  92%,
+  100% {
+    opacity: 0;
+  }
+  53%,
+  91% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-check-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(42px, 56px);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(26px, 50px);
+  }
+  20% {
+    transform: translate(26px, 50px) scale(0.78);
+  }
+  25%,
+  38% {
+    transform: translate(26px, 50px);
+  }
+  48% {
+    transform: translate(26px, 27px);
+  }
+  52% {
+    transform: translate(26px, 27px) scale(0.78);
+  }
+  58% {
+    transform: translate(26px, 27px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(26px, 27px);
+  }
+}
+
+.thumb-sheet-before {
+  opacity: 0;
+  animation-name: thumb-sheet-before;
+}
+.thumb-sheet-after {
+  animation-name: thumb-sheet-after;
+}
+.thumb-sheet-scrim {
+  animation-name: thumb-sheet-scrim;
+}
+.thumb-sheet-panel {
+  animation-name: thumb-sheet-panel;
+}
+.thumb-sheet-cursor {
+  animation-name: thumb-sheet-cursor;
+}
+@keyframes thumb-sheet-before {
+  0%,
+  19%,
+  95%,
+  100% {
+    opacity: 1;
+  }
+  24%,
+  94% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sheet-after {
+  0%,
+  59%,
+  95%,
+  100% {
+    opacity: 0;
+  }
+  64%,
+  94% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sheet-scrim {
+  0%,
+  19%,
+  65%,
+  100% {
+    opacity: 0;
+  }
+  28%,
+  57% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sheet-panel {
+  0%,
+  19%,
+  65%,
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  28%,
+  57% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-sheet-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(130px, 44px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(89px, 24px);
+  }
+  18% {
+    transform: translate(89px, 24px) scale(0.78);
+  }
+  24%,
+  35% {
+    transform: translate(89px, 24px);
+  }
+  50% {
+    transform: translate(66px, 100px);
+  }
+  56% {
+    transform: translate(66px, 100px) scale(0.78);
+  }
+  61% {
+    transform: translate(66px, 100px);
+  }
+  77%,
+  100% {
+    opacity: 0;
+    transform: translate(66px, 100px);
+  }
+}
+
+.thumb-pull-hint {
+  opacity: 0;
+  animation-name: thumb-pull-hint;
+}
+.thumb-pull-release {
+  opacity: 0;
+  animation-name: thumb-pull-release;
+}
+.thumb-pull-items {
+  opacity: 0;
+  animation-name: thumb-pull-items;
+}
+.thumb-pull-result {
+  animation-name: thumb-pull-result;
+}
+.thumb-pull-loading {
+  opacity: 0;
+  animation-name: thumb-pull-loading;
+}
+.thumb-pull-cursor {
+  animation-name: thumb-pull-cursor;
+}
+@keyframes thumb-pull-hint {
+  0%,
+  14%,
+  25%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  24% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pull-release {
+  0%,
+  24%,
+  40%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  39% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pull-items {
+  0%,
+  14%,
+  46%,
+  57%,
+  96%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  39% {
+    transform: translateY(20px);
+  }
+  0%,
+  57%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+  60%,
+  95% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pull-result {
+  0%,
+  57%,
+  96%,
+  100% {
+    opacity: 0;
+  }
+  60%,
+  95% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pull-loading {
+  0%,
+  39%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  57% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pull-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(100px, 40px);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(100px, 40px) scale(0.78);
+  }
+  28%,
+  38% {
+    transform: translate(100px, 61px) scale(0.78);
+  }
+  44% {
+    transform: translate(100px, 61px);
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate(100px, 61px);
+  }
+}
+
+.thumb-price-before {
+  opacity: 0;
+  animation-name: thumb-price-before;
+}
+.thumb-price-picked {
+  animation-name: thumb-price-picked;
+}
+.thumb-price-cursor {
+  animation-name: thumb-price-cursor;
+}
+.thumb-discount-cursor {
+  animation-name: thumb-discount-cursor;
+}
+.thumb-decoy-cursor {
+  animation-name: thumb-decoy-cursor;
+}
+.thumb-digit-cursor {
+  animation-name: thumb-digit-cursor;
+}
+@keyframes thumb-price-before {
+  0%,
+  19%,
+  95%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  94% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-price-picked {
+  0%,
+  19%,
+  95%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  94% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-price-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(116px, 72px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(83px, 34px);
+  }
+  19% {
+    transform: translate(83px, 34px) scale(0.78);
+  }
+  24% {
+    transform: translate(83px, 34px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(83px, 34px);
+  }
+}
+@keyframes thumb-discount-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(82px, 104px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(53px, 91px);
+  }
+  19% {
+    transform: translate(53px, 91px) scale(0.78);
+  }
+  24% {
+    transform: translate(53px, 91px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(53px, 91px);
+  }
+}
+@keyframes thumb-decoy-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(29px, 26px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(12px, 12px);
+  }
+  19% {
+    transform: translate(12px, 12px) scale(0.78);
+  }
+  24% {
+    transform: translate(12px, 12px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(12px, 12px);
+  }
+}
+@keyframes thumb-digit-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(44px, 36px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(19px, 20px);
+  }
+  19% {
+    transform: translate(19px, 20px) scale(0.78);
+  }
+  24% {
+    transform: translate(19px, 20px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(19px, 20px);
+  }
+}
+
+.thumb-compromise-third {
+  animation-name: thumb-price-picked;
+}
+.thumb-compromise-before {
+  opacity: 0;
+  animation-name: thumb-price-before;
+}
+.thumb-compromise-label {
+  animation-name: thumb-compromise-label;
+}
+.thumb-compromise-cursor {
+  animation-name: thumb-compromise-cursor;
+}
+@keyframes thumb-compromise-label {
+  0%,
+  51%,
+  95%,
+  100% {
+    opacity: 0;
+  }
+  52%,
+  94% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-compromise-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(27px, 25px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(10px, 11px);
+  }
+  19% {
+    transform: translate(10px, 11px) scale(0.78);
+  }
+  24%,
+  39% {
+    transform: translate(10px, 11px);
+  }
+  48% {
+    transform: translate(82px, 11px);
+  }
+  51% {
+    transform: translate(82px, 11px) scale(0.78);
+  }
+  58% {
+    transform: translate(82px, 11px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(82px, 11px);
+  }
+}
+
+/* Error state: failed request → retry → product list. */
+.thumb-error-screen {
+  animation-name: thumb-error-screen;
+}
+.thumb-error-retry {
+  animation-name: thumb-error-retry;
+}
+.thumb-error-retrying {
+  opacity: 0;
+  animation-name: thumb-error-retrying;
+}
+.thumb-error-loaded {
+  opacity: 0;
+  animation-name: thumb-error-loaded;
+}
+.thumb-error-cursor {
+  animation-name: thumb-error-cursor;
+}
+@keyframes thumb-error-screen {
+  0%,
+  34%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+  38%,
+  92% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-error-retry {
+  0%,
+  18%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+  19%,
+  92% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-error-retrying {
+  0%,
+  18%,
+  38%,
+  100% {
+    opacity: 0;
+  }
+  19%,
+  35% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-error-loaded {
+  0%,
+  34%,
+  96%,
+  100% {
+    opacity: 0;
+  }
+  38%,
+  92% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-error-cursor {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translate(125px, 96px);
+  }
+  13% {
+    opacity: 1;
+    transform: translate(88px, 82px);
+  }
+  18% {
+    transform: translate(88px, 82px) scale(0.78);
+  }
+  23% {
+    transform: translate(88px, 82px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(88px, 82px);
+  }
+}
+
+/* Reduced motion: show the representative base frame instead of looping. Kept last and
+   !important so no per-pattern `animation-name` rule above can re-enable a loop. */
+@media (prefers-reduced-motion: reduce) {
+  .thumb-anim {
+    animation: none !important;
+  }
+}

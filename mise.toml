@@ -1,0 +1,77 @@
+# Tested with mise 2026.11.9. Keep CI (jdx/mise-action `version`) on the same release.
+min_version = "2026.11.9"
+
+[settings]
+lockfile = true
+
+[tools]
+# Keep pnpm in sync with package.json#packageManager.
+node = "24.22.3"
+pnpm = "11.28.12"
+
+[tasks.install]
+description = "Install dependencies exactly as locked"
+run = "pnpm install --frozen-lockfile --prod=false"
+
+[tasks."dev:frontend"]
+alias = "dev"
+description = "Start the Vite dev server"
+depends = ["install"]
+env = { NODE_ENV = "development" }
+run = "pnpm run dev"
+
+[tasks.format]
+description = "Rewrite files with Prettier"
+depends = ["install"]
+run = "pnpm run format"
+
+[tasks.format-check]
+description = "Check formatting without writing files"
+depends = ["install"]
+run = "pnpm run format:check"
+
+[tasks.lint]
+description = "Run ESLint"
+depends = ["install"]
+run = "pnpm run lint"
+
+[tasks.typecheck]
+description = "Run the TypeScript compiler without emitting"
+depends = ["install"]
+run = "pnpm run typecheck"
+
+[tasks.test]
+description = "Run the test suite once"
+depends = ["install"]
+run = "pnpm run test"
+
+[tasks."test:coverage"]
+description = "Run tests with coverage thresholds"
+depends = ["install"]
+run = "pnpm run test:coverage"
+
+[tasks.build]
+description = "Build into dist/. Set BASE_PATH (e.g. /ui-pattern-atlas/) for a sub-path deploy"
+depends = ["install"]
+run = "pnpm run build"
+
+[tasks.preview]
+description = "Serve the production build locally"
+depends = ["build"]
+run = "pnpm run preview"
+
+[tasks.verify]
+alias = "ci"
+description = "Full local quality gate: format check, lint, typecheck, coverage, app and Storybook builds"
+depends = ["install"]
+run = "pnpm run verify"
+
+[tasks.storybook]
+description = "Start Storybook for the reusable components on port 6006"
+depends = ["install"]
+run = "pnpm run storybook"
+
+[tasks."storybook:build"]
+description = "Build the static Storybook into storybook-static/"
+depends = ["install"]
+run = "pnpm run build-storybook"

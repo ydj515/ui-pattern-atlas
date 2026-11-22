@@ -44,6 +44,42 @@ Use the repository's test frameworks and test naming conventions. Run checks
 appropriate to the change and follow configured coverage requirements. Report
 actual results and any checks you could not run.
 
+## Design System
+
+`DESIGN.md` defines the site's colour, type, spacing, shape and component rules, and
+`src/app/styles/global.css` holds the matching tokens. Read it before changing site chrome
+styles. Use token names (`text-caption`, `bg-field`, `rounded-control`), not raw values; reuse
+`src/shared/ui/primitives/` for buttons and links. `src/app/styles/designTokens.test.ts`
+enforces this.
+
+## UI Pattern Catalog Conventions
+
+Each pattern lives in `src/entities/pattern/catalog/<slug>/` with a demo
+(`<Name>Demo.tsx`), a catalog thumbnail (`<Name>Thumbnail.tsx`), and its metadata, and
+reuses the component in `src/shared/ui/patterns/<slug>/`.
+
+- The catalog thumbnail and the detail page demo must show the same use case. The
+  looping thumbnail replays the demo's scenario: the same situation, the same copy,
+  the same state rules, and the same order of user actions. Shorten nothing silently;
+  if the copy is too long for the thumbnail, shorten it in the demo too.
+- When the demo changes (copy, flow, or state rules), update the thumbnail and its
+  keyframes in `src/entities/pattern/ui/thumbnail-motion.css` in the same change.
+- `src/entities/pattern/catalog/catalog.test.ts` fails when a thumbnail shows Korean
+  text that is not in its demo source. Do not weaken that check to make a change pass.
+- Thumbnail coordinates are px on the unscaled 176×112 stage (`ThumbStage`); keep element
+  positions and cursor targets in the keyframes in sync, and check click targets in a
+  browser after changing either.
+- Pattern metadata loads detail-only assets lazily via dynamic `import()`: `loadPreview` for
+  `<Name>Demo.tsx`, and `sources[].load` (or `loadDemoSource` for concept entries) for `?raw`
+  source text. Never statically import `<Name>Demo.tsx`, `src/shared/ui/patterns/<slug>/`, or
+  `?raw` sources into a catalog entry or `<Name>Thumbnail.tsx`, as that pulls them back into
+  the initial catalog bundle; do not raise `build.chunkSizeWarningLimit` in `vite.config.ts`
+  to hide app chunk warnings.
+- Every component under `src/shared/ui/patterns/<slug>/` has a `*.stories.tsx` next to it
+  covering its main states; `src/test/stories.test.tsx` renders all stories.
+- Components under `src/shared/ui/patterns/` stay copy-paste ready: React and the default
+  Tailwind palette only, no site tokens and no imports from the rest of the app.
+
 ## Commit & Pull Request Guidelines
 
 - When drafting or revising a commit message, read `workflows/commit.md`.

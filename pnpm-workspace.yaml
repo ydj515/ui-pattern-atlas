@@ -1,0 +1,7 @@
+savePrefix: ""
+engineStrict: true
+strictPeerDependencies: true
+# Dependency lifecycle scripts stay off unless listed here. esbuild (via Storybook) works from its
+# platform binary package without its postinstall script, so the script is explicitly declined.
+allowBuilds:
+  esbuild: false
