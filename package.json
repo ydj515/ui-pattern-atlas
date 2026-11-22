@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Discover, explore, and implement modern UI patterns.",
+  "license": "MIT",
   "packageManager": "pnpm@11.28.12",
   "engines": {
     "node": ">=24"

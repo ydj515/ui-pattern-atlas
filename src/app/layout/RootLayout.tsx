@@ -8,6 +8,7 @@ import { navLinkClassName, textLinkClassName } from "@/shared/ui/primitives/text
 import { MobileNavigation } from "@/app/layout/MobileNavigation";
 
 const REPOSITORY_URL = "https://github.com/ydj515/ui-pattern-atlas";
+const ISSUES_URL = `${REPOSITORY_URL}/issues`;
 
 export function RootLayout() {
   const theme = useTheme();
@@ -67,7 +68,7 @@ export function RootLayout() {
       <footer className="border-t border-rule">
         <p className="mx-auto max-w-page px-4 py-8 text-caption text-graphite sm:px-6">
           UI Pattern Atlas는 오픈소스입니다. 빠진 패턴이나 고칠 점은{" "}
-          <a href={REPOSITORY_URL} className={textLinkClassName}>
+          <a href={ISSUES_URL} className={textLinkClassName}>
             GitHub
           </a>
           에 남겨 주세요.

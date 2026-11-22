@@ -39,4 +39,4 @@ New patterns and fixes are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md
 
 ## License
 
-Not chosen yet.
+[MIT](LICENSE)

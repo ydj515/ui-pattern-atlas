@@ -239,6 +239,9 @@ describe("mobile header navigation", () => {
     );
     expect(router.state.location.search).toBe("?category=ui-comparison");
     expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
+    expect(
+      within(screen.getByRole("contentinfo")).getByRole("link", { name: "GitHub" }),
+    ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
   });
   it("marks the detail's parent section and keeps a catalog query when switching sections", async () => {
     const router = renderAt("/patterns/compromise-effect");
