@@ -233,6 +233,18 @@ import { qrSharingPattern } from "@/entities/pattern/catalog/qr-sharing/pattern"
 import { sendForwardPattern } from "@/entities/pattern/catalog/send-forward/pattern";
 import { repostPattern } from "@/entities/pattern/catalog/repost/pattern";
 import { nearbySharePattern } from "@/entities/pattern/catalog/nearby-share/pattern";
+import { chatInterfacePattern } from "@/entities/pattern/catalog/chat-interface/pattern";
+import { streamingTextPattern } from "@/entities/pattern/catalog/streaming-text/pattern";
+import { promptInputPattern } from "@/entities/pattern/catalog/prompt-input/pattern";
+import { suggestedPromptsPattern } from "@/entities/pattern/catalog/suggested-prompts/pattern";
+import { thinkingIndicatorPattern } from "@/entities/pattern/catalog/thinking-indicator/pattern";
+import { responseFeedbackPattern } from "@/entities/pattern/catalog/response-feedback/pattern";
+import { citationPattern } from "@/entities/pattern/catalog/citation/pattern";
+import { modelPickerPattern } from "@/entities/pattern/catalog/model-picker/pattern";
+import { regenerateResponsePattern } from "@/entities/pattern/catalog/regenerate-response/pattern";
+import { editPromptPattern } from "@/entities/pattern/catalog/edit-prompt/pattern";
+import { fileAttachmentPattern } from "@/entities/pattern/catalog/file-attachment/pattern";
+import { agentStepsPattern } from "@/entities/pattern/catalog/agent-steps/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -468,6 +480,18 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   sendForwardPattern,
   repostPattern,
   nearbySharePattern,
+  chatInterfacePattern,
+  streamingTextPattern,
+  promptInputPattern,
+  suggestedPromptsPattern,
+  thinkingIndicatorPattern,
+  responseFeedbackPattern,
+  citationPattern,
+  modelPickerPattern,
+  regenerateResponsePattern,
+  editPromptPattern,
+  fileAttachmentPattern,
+  agentStepsPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

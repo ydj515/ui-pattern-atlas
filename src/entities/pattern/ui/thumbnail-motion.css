@@ -21287,6 +21287,1493 @@
   }
 }
 
+/* Chat interface: type, send, the answer arrives below. */
+.thumb-chat-cursor {
+  animation-name: thumb-chat-cursor;
+}
+.thumb-chat-hint {
+  animation-name: thumb-chat-hint;
+}
+.thumb-chat-text {
+  animation-name: thumb-chat-text;
+}
+.thumb-chat-mine {
+  animation-name: thumb-chat-mine;
+}
+.thumb-chat-reply {
+  animation-name: thumb-chat-reply;
+}
+@keyframes thumb-chat-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(74px, 99px);
+  }
+  30%,
+  36% {
+    transform: translate(146px, 99px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-chat-hint {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  36% {
+    opacity: 0;
+  }
+  37%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-chat-text {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  36% {
+    opacity: 1;
+  }
+  37%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-chat-mine {
+  0%,
+  36% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  42%,
+  96% {
+    opacity: 1;
+    transform: none;
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes thumb-chat-reply {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  56%,
+  96% {
+    opacity: 1;
+    transform: none;
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+/* Streaming text: 답변 받기 → the answer writes itself line by line. */
+.thumb-stream-cursor {
+  animation-name: thumb-stream-cursor;
+}
+.thumb-stream-empty {
+  animation-name: thumb-stream-empty;
+}
+.thumb-stream-get {
+  animation-name: thumb-stream-get;
+}
+.thumb-stream-stop {
+  animation-name: thumb-stream-stop;
+}
+@keyframes thumb-stream-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(37px, 87px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stream-empty {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stream-get {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stream-stop {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  100% {
+    opacity: 0;
+  }
+}
+.thumb-stream-l0 {
+  animation-name: thumb-stream-l0;
+  animation-timing-function: linear;
+}
+@keyframes thumb-stream-l0 {
+  0%,
+  16% {
+    transform: scaleX(1);
+  }
+  28%,
+  96% {
+    transform: scaleX(0);
+  }
+  98%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+.thumb-stream-l1 {
+  animation-name: thumb-stream-l1;
+  animation-timing-function: linear;
+}
+@keyframes thumb-stream-l1 {
+  0%,
+  28% {
+    transform: scaleX(1);
+  }
+  40%,
+  96% {
+    transform: scaleX(0);
+  }
+  98%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+.thumb-stream-l2 {
+  animation-name: thumb-stream-l2;
+  animation-timing-function: linear;
+}
+@keyframes thumb-stream-l2 {
+  0%,
+  40% {
+    transform: scaleX(1);
+  }
+  52%,
+  96% {
+    transform: scaleX(0);
+  }
+  98%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+/* Prompt input: type and send → send becomes stop while answering. */
+.thumb-prompt-cursor {
+  animation-name: thumb-prompt-cursor;
+}
+.thumb-prompt-hint {
+  animation-name: thumb-prompt-hint;
+}
+.thumb-prompt-text {
+  animation-name: thumb-prompt-text;
+}
+.thumb-prompt-off {
+  animation-name: thumb-prompt-off;
+}
+.thumb-prompt-send {
+  animation-name: thumb-prompt-send;
+}
+.thumb-prompt-stop {
+  animation-name: thumb-prompt-stop;
+}
+.thumb-prompt-busy {
+  animation-name: thumb-prompt-busy;
+}
+@keyframes thumb-prompt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(87px, 78px);
+  }
+  26%,
+  30% {
+    transform: translate(153px, 78px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-prompt-hint {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-prompt-text {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  30% {
+    opacity: 1;
+  }
+  31%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-prompt-off {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-prompt-send {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  31%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-prompt-stop {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-prompt-busy {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Suggested prompts: tap the first example → it is asked. */
+.thumb-sugg-cursor {
+  animation-name: thumb-sugg-cursor;
+}
+.thumb-sugg-empty {
+  animation-name: thumb-sugg-empty;
+}
+.thumb-sugg-asked {
+  animation-name: thumb-sugg-asked;
+}
+@keyframes thumb-sugg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(89px, 36px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sugg-empty {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sugg-asked {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Thinking indicator: dots, then the seconds, then the answer. */
+.thumb-think-cursor {
+  animation-name: thumb-think-cursor;
+}
+.thumb-think-dots {
+  animation-name: thumb-think-dots;
+}
+.thumb-think-sec {
+  animation-name: thumb-think-sec;
+}
+.thumb-think-answer {
+  animation-name: thumb-think-answer;
+}
+.thumb-think-ask {
+  animation-name: thumb-think-ask;
+}
+.thumb-think-again {
+  animation-name: thumb-think-again;
+}
+@keyframes thumb-think-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(37px, 95px);
+  }
+  26% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-think-dots {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  13%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-think-sec {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-think-answer {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  61%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-think-ask {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-think-again {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  61%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+.thumb-think-d0 {
+  animation-name: thumb-think-d0;
+}
+@keyframes thumb-think-d0 {
+  0% {
+    transform: translateY(0);
+  }
+  14% {
+    transform: translateY(0);
+  }
+  16% {
+    transform: translateY(-2px);
+  }
+  18% {
+    transform: translateY(0);
+  }
+  22% {
+    transform: translateY(0);
+  }
+  24% {
+    transform: translateY(-2px);
+  }
+  26% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  32% {
+    transform: translateY(-2px);
+  }
+  34% {
+    transform: translateY(0);
+  }
+  38% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2px);
+  }
+  42% {
+    transform: translateY(0);
+  }
+  46% {
+    transform: translateY(0);
+  }
+  48% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  54% {
+    transform: translateY(0);
+  }
+  56% {
+    transform: translateY(-2px);
+  }
+  58% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.thumb-think-d1 {
+  animation-name: thumb-think-d1;
+}
+@keyframes thumb-think-d1 {
+  0% {
+    transform: translateY(0);
+  }
+  16% {
+    transform: translateY(0);
+  }
+  18% {
+    transform: translateY(-2px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  24% {
+    transform: translateY(0);
+  }
+  26% {
+    transform: translateY(-2px);
+  }
+  28% {
+    transform: translateY(0);
+  }
+  32% {
+    transform: translateY(0);
+  }
+  34% {
+    transform: translateY(-2px);
+  }
+  36% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  42% {
+    transform: translateY(-2px);
+  }
+  44% {
+    transform: translateY(0);
+  }
+  48% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  52% {
+    transform: translateY(0);
+  }
+  56% {
+    transform: translateY(0);
+  }
+  58% {
+    transform: translateY(-2px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.thumb-think-d2 {
+  animation-name: thumb-think-d2;
+}
+@keyframes thumb-think-d2 {
+  0% {
+    transform: translateY(0);
+  }
+  18% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-2px);
+  }
+  22% {
+    transform: translateY(0);
+  }
+  26% {
+    transform: translateY(0);
+  }
+  28% {
+    transform: translateY(-2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  34% {
+    transform: translateY(0);
+  }
+  36% {
+    transform: translateY(-2px);
+  }
+  38% {
+    transform: translateY(0);
+  }
+  42% {
+    transform: translateY(0);
+  }
+  44% {
+    transform: translateY(-2px);
+  }
+  46% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  52% {
+    transform: translateY(-2px);
+  }
+  54% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Response feedback: mark the answer good, then 다시 생성 replaces it. */
+.thumb-rfb-cursor {
+  animation-name: thumb-rfb-cursor;
+}
+.thumb-rfb-a1 {
+  animation-name: thumb-rfb-a1;
+}
+.thumb-rfb-a2 {
+  animation-name: thumb-rfb-a2;
+}
+.thumb-rfb-good {
+  animation-name: thumb-rfb-good;
+}
+.thumb-rfb-s1 {
+  animation-name: thumb-rfb-s1;
+}
+.thumb-rfb-s2 {
+  animation-name: thumb-rfb-s2;
+}
+@keyframes thumb-rfb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(40px, 45px);
+  }
+  46%,
+  52% {
+    transform: translate(68px, 45px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rfb-a1 {
+  0%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-rfb-a2 {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rfb-good {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rfb-s1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rfb-s2 {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Citation: tap marker 1 → the source card. */
+.thumb-cite-cursor {
+  animation-name: thumb-cite-cursor;
+}
+.thumb-cite-card {
+  animation-name: thumb-cite-card;
+}
+@keyframes thumb-cite-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(147px, 16px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cite-card {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Model picker: open the menu → 깊은 모델. */
+.thumb-model-cursor {
+  animation-name: thumb-model-cursor;
+}
+.thumb-model-menu {
+  animation-name: thumb-model-menu;
+}
+.thumb-model-fast {
+  animation-name: thumb-model-fast;
+}
+.thumb-model-deep {
+  animation-name: thumb-model-deep;
+}
+@keyframes thumb-model-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(37px, 18px);
+  }
+  32%,
+  38% {
+    transform: translate(64px, 60px);
+  }
+  52% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  58%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-model-menu {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  38% {
+    opacity: 1;
+  }
+  39%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-model-fast {
+  0%,
+  38% {
+    opacity: 1;
+  }
+  39%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-model-deep {
+  0%,
+  38% {
+    opacity: 0;
+  }
+  39%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Regenerate response: 다시 생성 → a second answer → ‹ back to the first. */
+.thumb-regen-cursor {
+  animation-name: thumb-regen-cursor;
+}
+.thumb-regen-v1 {
+  animation-name: thumb-regen-v1;
+}
+.thumb-regen-busy {
+  animation-name: thumb-regen-busy;
+}
+.thumb-regen-v2 {
+  animation-name: thumb-regen-v2;
+}
+.thumb-regen-p11 {
+  animation-name: thumb-regen-p11;
+}
+.thumb-regen-p22 {
+  animation-name: thumb-regen-p22;
+}
+.thumb-regen-p12 {
+  animation-name: thumb-regen-p12;
+}
+@keyframes thumb-regen-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(68px, 54px);
+  }
+  56%,
+  62% {
+    transform: translate(21px, 54px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-regen-v1 {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  62% {
+    opacity: 0;
+  }
+  63%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-regen-busy {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-regen-v2 {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  62% {
+    opacity: 1;
+  }
+  63%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-regen-p11 {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-regen-p22 {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  62% {
+    opacity: 1;
+  }
+  63%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-regen-p12 {
+  0%,
+  62% {
+    opacity: 0;
+  }
+  63%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Edit prompt: 수정 → change it → 보내기 → a new answer from that point. */
+.thumb-editp-cursor {
+  animation-name: thumb-editp-cursor;
+}
+.thumb-editp-before {
+  animation-name: thumb-editp-before;
+}
+.thumb-editp-form {
+  animation-name: thumb-editp-form;
+}
+.thumb-editp-after {
+  animation-name: thumb-editp-after;
+}
+.thumb-editp-old {
+  animation-name: thumb-editp-old;
+}
+@keyframes thumb-editp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(85px, 19px);
+  }
+  36%,
+  42% {
+    transform: translate(135px, 35px);
+  }
+  56% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  62%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-editp-before {
+  0%,
+  16% {
+    opacity: 1;
+  }
+  17%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-editp-form {
+  0%,
+  16% {
+    opacity: 0;
+  }
+  17%,
+  42% {
+    opacity: 1;
+  }
+  43%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-editp-after {
+  0%,
+  42% {
+    opacity: 0;
+  }
+  43%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-editp-old {
+  0%,
+  42% {
+    opacity: 1;
+  }
+  43%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+/* File attachment: one file finishes uploading, the oversized one is removed. */
+.thumb-attach-cursor {
+  animation-name: thumb-attach-cursor;
+}
+.thumb-attach-p20 {
+  animation-name: thumb-attach-p20;
+}
+.thumb-attach-p60 {
+  animation-name: thumb-attach-p60;
+}
+.thumb-attach-done {
+  animation-name: thumb-attach-done;
+}
+.thumb-attach-bar {
+  animation-name: thumb-attach-bar;
+}
+.thumb-attach-bad {
+  animation-name: thumb-attach-bad;
+}
+.thumb-attach-blocked {
+  animation-name: thumb-attach-blocked;
+}
+.thumb-attach-msg {
+  animation-name: thumb-attach-msg;
+}
+@keyframes thumb-attach-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  46% {
+    transform: translate(152px, 23px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-attach-p20 {
+  0%,
+  9% {
+    opacity: 1;
+  }
+  10%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-attach-p60 {
+  0%,
+  9% {
+    opacity: 0;
+  }
+  10%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-attach-done {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-attach-bar {
+  0% {
+    opacity: 1;
+    transform: scaleX(0.2);
+  }
+  19% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  20%,
+  96% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+  97%,
+  100% {
+    opacity: 1;
+    transform: scaleX(0.2);
+  }
+}
+@keyframes thumb-attach-bad {
+  0%,
+  46% {
+    opacity: 1;
+  }
+  47%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-attach-blocked {
+  0%,
+  46% {
+    opacity: 1;
+  }
+  47%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-attach-msg {
+  0%,
+  46% {
+    opacity: 1;
+  }
+  47%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+/* Agent steps: each step spins, then checks off → 작업을 마쳤어요 → 다시 실행. */
+.thumb-agent-cursor {
+  animation-name: thumb-agent-cursor;
+}
+.thumb-agent-run0 {
+  animation-name: thumb-agent-run0;
+}
+.thumb-agent-run1 {
+  animation-name: thumb-agent-run1;
+}
+.thumb-agent-run2 {
+  animation-name: thumb-agent-run2;
+}
+.thumb-agent-done0 {
+  animation-name: thumb-agent-done0;
+}
+.thumb-agent-done1 {
+  animation-name: thumb-agent-done1;
+}
+.thumb-agent-done2 {
+  animation-name: thumb-agent-done2;
+}
+@keyframes thumb-agent-cursor {
+  0%,
+  80% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  95% {
+    opacity: 1;
+    transform: translate(143px, 97px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(143px, 97px);
+  }
+}
+@keyframes thumb-agent-run0 {
+  0%,
+  24% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-agent-done0 {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  25%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-agent-run1 {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  25%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-agent-done1 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-agent-run2 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  74% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-agent-done2 {
+  0%,
+  74% {
+    opacity: 0;
+  }
+  75%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+.thumb-agent-spin {
+  animation-name: thumb-agent-spin;
+  animation-duration: 0.9s;
+  animation-timing-function: linear;
+}
+@keyframes thumb-agent-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

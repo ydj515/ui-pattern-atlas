@@ -120,6 +120,12 @@ export const PATTERN_CATEGORIES = [
     description: "평가하고 퍼뜨리고 함께 쓰는 화면",
   },
   {
+    id: "ai",
+    label: "AI",
+    labelKo: "AI 화면",
+    description: "AI와 대화하고 결과를 다루는 화면",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",
