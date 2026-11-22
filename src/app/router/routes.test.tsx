@@ -4,6 +4,8 @@ import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it, vi } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
+import { ROADMAP_PATTERN_TOPICS } from "@/entities/pattern/catalog/roadmap";
+import { roadmapEntryAnchor } from "@/entities/pattern/catalog/roadmapLinks";
 import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 
 import { routes } from "@/app/router/routes";
@@ -20,6 +22,11 @@ function renderAt(path: string) {
   render(<RouterProvider router={router} />);
   return router;
 }
+
+const PLANNED = ROADMAP_PATTERN_TOPICS.flatMap((topic) =>
+  topic.entries.map((entry) => ({ topic, entry })),
+).findLast(({ entry }) => entry.priority !== "완료");
+const escapeRegExp = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 describe("catalog page", () => {
   it("counts each roadmap item once and distinguishes ready demos", () => {
@@ -247,18 +254,26 @@ describe("header search (⌘K)", () => {
 });
 
 describe("roadmap and comparison", () => {
-  it("shows planned hits beside catalog search and opens the matching roadmap topic", async () => {
-    const router = renderAt("/?q=File%20Upload");
-    const result = screen.getByRole("link", { name: /파일 업로드 File Upload/ });
-    expect(result).toHaveTextContent("준비 중");
-    await userEvent.click(result);
-    expect(router.state.location.pathname).toBe("/roadmap");
-    expect(router.state.location.hash).toBe("#special-input-file-upload");
-    expect(screen.getByRole("searchbox", { name: "로드맵 검색" })).toHaveValue("File Upload");
-    const topic = screen.getByRole("region", { name: "특수 입력" });
-    expect(within(topic).getByText("파일 업로드")).toBeInTheDocument();
-    expect(within(topic).getByText("준비 중 · P1")).toBeInTheDocument();
-  });
+  // Uses a roadmap entry that is still planned; once every entry ships there is nothing to show.
+  it.skipIf(!PLANNED)(
+    "shows planned hits beside catalog search and opens the matching roadmap topic",
+    async () => {
+      const { topic, entry } = PLANNED!;
+      const router = renderAt(`/?q=${encodeURIComponent(entry.name)}`);
+      const result = screen.getAllByRole("link", {
+        name: new RegExp(`${entry.nameKo} ${escapeRegExp(entry.name)}`),
+      })[0]!;
+      expect(result).toHaveTextContent("준비 중");
+      await userEvent.click(result);
+      expect(router.state.location.pathname).toBe("/roadmap");
+      expect(router.state.location.hash).toBe(`#${roadmapEntryAnchor(topic, entry)}`);
+      expect(screen.getByRole("searchbox", { name: "로드맵 검색" })).toHaveValue(entry.name);
+      const region = screen.getByRole("region", { name: topic.nameKo });
+      const row = region.querySelector<HTMLElement>(`[id="${roadmapEntryAnchor(topic, entry)}"]`)!;
+      expect(within(row).getByText(entry.nameKo)).toBeInTheDocument();
+      expect(within(row).getByText(`준비 중 · ${entry.priority}`)).toBeInTheDocument();
+    },
+  );
 
   it("filters the full comparison topic from the catalog and opens a ready comparison", async () => {
     const router = renderAt("/");

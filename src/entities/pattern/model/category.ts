@@ -36,6 +36,12 @@ export const PATTERN_CATEGORIES = [
     description: "켜고 끄거나 하나를 고르는 컨트롤",
   },
   {
+    id: "special-input",
+    label: "Special input",
+    labelKo: "특수 입력",
+    description: "날짜, 파일, 색처럼 형식이 정해진 입력",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",

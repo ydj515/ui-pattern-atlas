@@ -71,6 +71,20 @@ import { multiSelectPattern } from "@/entities/pattern/catalog/multi-select/patt
 import { sliderPattern } from "@/entities/pattern/catalog/slider/pattern";
 import { rangeSliderPattern } from "@/entities/pattern/catalog/range-slider/pattern";
 import { listboxPattern } from "@/entities/pattern/catalog/listbox/pattern";
+import { datePickerPattern } from "@/entities/pattern/catalog/date-picker/pattern";
+import { fileUploadPattern } from "@/entities/pattern/catalog/file-upload/pattern";
+import { dateRangePickerPattern } from "@/entities/pattern/catalog/date-range-picker/pattern";
+import { timePickerPattern } from "@/entities/pattern/catalog/time-picker/pattern";
+import { calendarPattern } from "@/entities/pattern/catalog/calendar/pattern";
+import { imageCropperPattern } from "@/entities/pattern/catalog/image-cropper/pattern";
+import { colorPickerPattern } from "@/entities/pattern/catalog/color-picker/pattern";
+import { signaturePadPattern } from "@/entities/pattern/catalog/signature-pad/pattern";
+import { dateInputPattern } from "@/entities/pattern/catalog/date-input/pattern";
+import { quickDateChipsPattern } from "@/entities/pattern/catalog/quick-date-chips/pattern";
+import { timeSlotsPattern } from "@/entities/pattern/catalog/time-slots/pattern";
+import { monthPickerPattern } from "@/entities/pattern/catalog/month-picker/pattern";
+import { wheelPickerPattern } from "@/entities/pattern/catalog/wheel-picker/pattern";
+import { recurrencePickerPattern } from "@/entities/pattern/catalog/recurrence-picker/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -144,6 +158,20 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   sliderPattern,
   rangeSliderPattern,
   listboxPattern,
+  datePickerPattern,
+  fileUploadPattern,
+  dateRangePickerPattern,
+  timePickerPattern,
+  calendarPattern,
+  imageCropperPattern,
+  colorPickerPattern,
+  signaturePadPattern,
+  dateInputPattern,
+  quickDateChipsPattern,
+  timeSlotsPattern,
+  monthPickerPattern,
+  wheelPickerPattern,
+  recurrencePickerPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

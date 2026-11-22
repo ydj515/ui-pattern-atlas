@@ -6919,6 +6919,1323 @@
   }
 }
 
+/* Date picker: open → pick 25 → 11월 25일 (수). */
+.thumb-dp-cursor {
+  animation-name: thumb-dp-cursor;
+}
+.thumb-dp-empty {
+  animation-name: thumb-dp-empty;
+}
+.thumb-dp-picked {
+  animation-name: thumb-dp-picked;
+}
+.thumb-dp-pop {
+  animation-name: thumb-dp-pop;
+}
+.thumb-dp-sel {
+  animation-name: thumb-dp-sel;
+}
+@keyframes thumb-dp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(88px, 20px);
+  }
+  38%,
+  48% {
+    transform: translate(88px, 89px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dp-empty {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dp-picked {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dp-pop {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dp-sel {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+/* File upload: drag 영수증.jpg onto the zone → it is listed. */
+.thumb-fu-cursor {
+  animation-name: thumb-fu-cursor;
+}
+.thumb-fu-file {
+  animation-name: thumb-fu-file;
+}
+.thumb-fu-over {
+  animation-name: thumb-fu-over;
+}
+.thumb-fu-row {
+  animation-name: thumb-fu-row;
+}
+@keyframes thumb-fu-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(130px, 92px);
+  }
+  40%,
+  44% {
+    transform: translate(88px, 36px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fu-file {
+  0%,
+  13% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-42px, -55px);
+  }
+  44%,
+  100% {
+    opacity: 0;
+    transform: translate(-42px, -55px);
+  }
+}
+@keyframes thumb-fu-over {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-fu-row {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Date range picker: check-in 27 → check-out 29 → the range and 2박. */
+.thumb-drp-cursor {
+  animation-name: thumb-drp-cursor;
+}
+.thumb-drp-start {
+  animation-name: thumb-drp-start;
+}
+.thumb-drp-mid {
+  animation-name: thumb-drp-mid;
+}
+.thumb-drp-end {
+  animation-name: thumb-drp-end;
+}
+.thumb-drp-t0 {
+  animation-name: thumb-drp-t0;
+}
+.thumb-drp-t1 {
+  animation-name: thumb-drp-t1;
+}
+.thumb-drp-t2 {
+  animation-name: thumb-drp-t2;
+}
+@keyframes thumb-drp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  28% {
+    transform: translate(124px, 63px);
+  }
+  42%,
+  54% {
+    transform: translate(33px, 74px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-drp-start {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-drp-mid {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-drp-end {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-drp-t0 {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-drp-t1 {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-drp-t2 {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Time picker: open the hour → pick 15. */
+.thumb-tp-cursor {
+  animation-name: thumb-tp-cursor;
+}
+.thumb-tp-menu {
+  animation-name: thumb-tp-menu;
+}
+.thumb-tp-hover {
+  animation-name: thumb-tp-hover;
+}
+.thumb-tp-h14 {
+  animation-name: thumb-tp-h14;
+}
+.thumb-tp-h15 {
+  animation-name: thumb-tp-h15;
+}
+@keyframes thumb-tp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  18% {
+    transform: translate(39px, 28px);
+  }
+  36%,
+  46% {
+    transform: translate(39px, 69px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tp-menu {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tp-hover {
+  0%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tp-h14 {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tp-h15 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Calendar: today shows two events → choose 27 → 출시 회고. */
+.thumb-cal-cursor {
+  animation-name: thumb-cal-cursor;
+}
+.thumb-cal-d23 {
+  animation-name: thumb-cal-d23;
+}
+.thumb-cal-d27 {
+  animation-name: thumb-cal-d27;
+}
+.thumb-cal-l23 {
+  animation-name: thumb-cal-l23;
+}
+.thumb-cal-l27 {
+  animation-name: thumb-cal-l27;
+}
+@keyframes thumb-cal-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  22%,
+  36% {
+    transform: translate(124px, 56px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cal-d23 {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cal-d27 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cal-l23 {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cal-l27 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Image cropper: drag the photo into place, then zoom; the previews follow. */
+.thumb-ic-cursor {
+  animation-name: thumb-ic-cursor;
+}
+.thumb-ic-img {
+  animation-name: thumb-ic-img;
+}
+.thumb-ic-p1 {
+  animation-name: thumb-ic-p1;
+}
+.thumb-ic-p2 {
+  animation-name: thumb-ic-p2;
+}
+.thumb-ic-zoom {
+  animation-name: thumb-ic-zoom;
+}
+@keyframes thumb-ic-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  20% {
+    transform: translate(62px, 48px);
+  }
+  40%,
+  44% {
+    transform: translate(72px, 40px);
+  }
+  52%,
+  56% {
+    transform: translate(50px, 100px);
+  }
+  76% {
+    transform: translate(70px, 100px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ic-img {
+  0%,
+  20% {
+    transform: translate(0, 0) scale(1.4);
+  }
+  40%,
+  56% {
+    transform: translate(10px, -8px) scale(1.4);
+  }
+  76%,
+  95% {
+    transform: translate(10px, -8px) scale(2);
+  }
+  97%,
+  100% {
+    transform: translate(0, 0) scale(1.4);
+  }
+}
+@keyframes thumb-ic-p1 {
+  0%,
+  20% {
+    transform: translate(0, 0) scale(1.4);
+  }
+  40%,
+  56% {
+    transform: translate(3.3px, -2.7px) scale(1.4);
+  }
+  76%,
+  95% {
+    transform: translate(3.3px, -2.7px) scale(2);
+  }
+  97%,
+  100% {
+    transform: translate(0, 0) scale(1.4);
+  }
+}
+@keyframes thumb-ic-p2 {
+  0%,
+  20% {
+    transform: translate(0, 0) scale(1.4);
+  }
+  40%,
+  56% {
+    transform: translate(1.7px, -1.3px) scale(1.4);
+  }
+  76%,
+  95% {
+    transform: translate(1.7px, -1.3px) scale(2);
+  }
+  97%,
+  100% {
+    transform: translate(0, 0) scale(1.4);
+  }
+}
+@keyframes thumb-ic-zoom {
+  0%,
+  56% {
+    transform: translateX(-20.4px);
+  }
+  76%,
+  95% {
+    transform: translateX(0);
+  }
+  97%,
+  100% {
+    transform: translateX(-20.4px);
+  }
+}
+/* Color picker: 파랑 → 초록 → 주황, with the hex and the tag preview following. */
+.thumb-cp-cursor {
+  animation-name: thumb-cp-cursor;
+}
+.thumb-cp-c0 {
+  animation-name: thumb-cp-c0;
+}
+.thumb-cp-c1 {
+  animation-name: thumb-cp-c1;
+}
+.thumb-cp-c2 {
+  animation-name: thumb-cp-c2;
+}
+@keyframes thumb-cp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  30% {
+    transform: translate(51px, 27px);
+  }
+  44%,
+  56% {
+    transform: translate(71px, 27px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cp-c0 {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cp-c1 {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cp-c2 {
+  0%,
+  55% {
+    opacity: 0;
+  }
+  56%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Signature pad: sign → 서명 완료 turns on → saved. */
+.thumb-sp-cursor {
+  animation-name: thumb-sp-cursor;
+}
+.thumb-sp-mask {
+  animation-name: thumb-sp-mask;
+}
+.thumb-sp-ready {
+  animation-name: thumb-sp-ready;
+}
+.thumb-sp-form {
+  animation-name: thumb-sp-form;
+}
+.thumb-sp-saved {
+  animation-name: thumb-sp-saved;
+}
+@keyframes thumb-sp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14% {
+    transform: translate(32px, 46px);
+  }
+  20% {
+    transform: translate(48px, 30px);
+  }
+  26% {
+    transform: translate(62px, 48px);
+  }
+  32% {
+    transform: translate(78px, 32px);
+  }
+  38% {
+    transform: translate(96px, 46px);
+  }
+  44% {
+    transform: translate(116px, 34px);
+  }
+  50% {
+    transform: translate(146px, 36px);
+  }
+  62%,
+  70% {
+    transform: translate(132px, 88px);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sp-mask {
+  0%,
+  14% {
+    transform: scaleX(1);
+  }
+  50%,
+  96% {
+    transform: scaleX(0);
+  }
+  97%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes thumb-sp-ready {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sp-form {
+  0%,
+  71% {
+    opacity: 1;
+  }
+  72%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sp-saved {
+  0%,
+  74% {
+    opacity: 0;
+  }
+  75%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Date input: typing digits adds the dots → the date is read back. */
+.thumb-di-cursor {
+  animation-name: thumb-di-cursor;
+}
+.thumb-di-focus {
+  animation-name: thumb-di-focus;
+}
+.thumb-di-ph {
+  animation-name: thumb-di-ph;
+}
+.thumb-di-v1 {
+  animation-name: thumb-di-v1;
+}
+.thumb-di-v2 {
+  animation-name: thumb-di-v2;
+}
+.thumb-di-v3 {
+  animation-name: thumb-di-v3;
+}
+@keyframes thumb-di-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  14% {
+    transform: translate(60px, 32px);
+  }
+  28% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  34%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-di-focus {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  13%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-di-ph {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-di-v1 {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-di-v2 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-di-v3 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Quick date chips: 내일 → 이번 주말. */
+.thumb-qd-cursor {
+  animation-name: thumb-qd-cursor;
+}
+.thumb-qd-tomorrow {
+  animation-name: thumb-qd-tomorrow;
+}
+.thumb-qd-weekend {
+  animation-name: thumb-qd-weekend;
+}
+@keyframes thumb-qd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(55px, 25px);
+  }
+  42%,
+  52% {
+    transform: translate(87px, 25px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-qd-tomorrow {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-qd-weekend {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Time slots: pick 11:00 → the button names it → booked. */
+.thumb-ts-cursor {
+  animation-name: thumb-ts-cursor;
+}
+.thumb-ts-picked {
+  animation-name: thumb-ts-picked;
+}
+.thumb-ts-booked {
+  animation-name: thumb-ts-booked;
+}
+@keyframes thumb-ts-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(135px, 23px);
+  }
+  46%,
+  58% {
+    transform: translate(88px, 70px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ts-picked {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ts-booked {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Month picker: pick 10월 → the statement month follows. */
+.thumb-mp-cursor {
+  animation-name: thumb-mp-cursor;
+}
+.thumb-mp-nov {
+  animation-name: thumb-mp-nov;
+}
+.thumb-mp-oct {
+  animation-name: thumb-mp-oct;
+}
+@keyframes thumb-mp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(77px, 68px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mp-nov {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mp-oct {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Wheel picker: flick the hour to 7 and the minutes to 30. */
+.thumb-wp-cursor {
+  animation-name: thumb-wp-cursor;
+}
+.thumb-wp-hour {
+  animation-name: thumb-wp-hour;
+}
+.thumb-wp-minute {
+  animation-name: thumb-wp-minute;
+}
+.thumb-wp-t0 {
+  animation-name: thumb-wp-t0;
+}
+.thumb-wp-t1 {
+  animation-name: thumb-wp-t1;
+}
+.thumb-wp-t2 {
+  animation-name: thumb-wp-t2;
+}
+@keyframes thumb-wp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  14% {
+    transform: translate(88px, 50px);
+  }
+  30% {
+    transform: translate(88px, 36px);
+  }
+  38%,
+  40% {
+    transform: translate(118px, 64px);
+  }
+  64% {
+    transform: translate(118px, 30px);
+  }
+  78% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-wp-hour {
+  0%,
+  14% {
+    transform: translateY(-41px);
+  }
+  30%,
+  95% {
+    transform: translateY(-55px);
+  }
+  97%,
+  100% {
+    transform: translateY(-41px);
+  }
+}
+@keyframes thumb-wp-minute {
+  0%,
+  40% {
+    transform: translateY(29px);
+  }
+  64%,
+  95% {
+    transform: translateY(-55px);
+  }
+  97%,
+  100% {
+    transform: translateY(29px);
+  }
+}
+@keyframes thumb-wp-t0 {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-wp-t1 {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  63% {
+    opacity: 1;
+  }
+  64%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-wp-t2 {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  64%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Recurrence picker: weekly on 월, 수 → add 금 → the sentence follows. */
+.thumb-rp-cursor {
+  animation-name: thumb-rp-cursor;
+}
+.thumb-rp-fri {
+  animation-name: thumb-rp-fri;
+}
+.thumb-rp-before {
+  animation-name: thumb-rp-before;
+}
+@keyframes thumb-rp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  32% {
+    transform: translate(122px, 28px);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rp-fri {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rp-before {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  32%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
