@@ -111,6 +111,15 @@ import { disclosurePattern } from "@/entities/pattern/catalog/disclosure/pattern
 import { treeViewPattern } from "@/entities/pattern/catalog/tree-view/pattern";
 import { collapsiblePanelPattern } from "@/entities/pattern/catalog/collapsible-panel/pattern";
 import { scrollableTabsPattern } from "@/entities/pattern/catalog/scrollable-tabs/pattern";
+import { listPattern } from "@/entities/pattern/catalog/list/pattern";
+import { dataTablePattern } from "@/entities/pattern/catalog/data-table/pattern";
+import { selectableTablePattern } from "@/entities/pattern/catalog/selectable-table/pattern";
+import { descriptionListPattern } from "@/entities/pattern/catalog/description-list/pattern";
+import { timelinePattern } from "@/entities/pattern/catalog/timeline/pattern";
+import { kanbanBoardPattern } from "@/entities/pattern/catalog/kanban-board/pattern";
+import { sortableListPattern } from "@/entities/pattern/catalog/sortable-list/pattern";
+import { groupedListPattern } from "@/entities/pattern/catalog/grouped-list/pattern";
+import { virtualizedListPattern } from "@/entities/pattern/catalog/virtualized-list/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -224,6 +233,15 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   treeViewPattern,
   collapsiblePanelPattern,
   scrollableTabsPattern,
+  listPattern,
+  dataTablePattern,
+  selectableTablePattern,
+  descriptionListPattern,
+  timelinePattern,
+  kanbanBoardPattern,
+  sortableListPattern,
+  groupedListPattern,
+  virtualizedListPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

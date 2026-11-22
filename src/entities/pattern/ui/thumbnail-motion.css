@@ -10414,6 +10414,722 @@
   }
 }
 
+/* List: tap the first row → opened. */
+.thumb-li-cursor {
+  animation-name: thumb-li-cursor;
+}
+.thumb-li-hover {
+  animation-name: thumb-li-hover;
+}
+.thumb-li-done {
+  animation-name: thumb-li-done;
+}
+@keyframes thumb-li-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  28% {
+    transform: translate(88px, 19px);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  48%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-li-hover {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  30% {
+    opacity: 1;
+  }
+  31%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-li-done {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Data table: sort by 지점. */
+.thumb-dt-cursor {
+  animation-name: thumb-dt-cursor;
+}
+.thumb-dt-given {
+  animation-name: thumb-dt-given;
+}
+.thumb-dt-sorted {
+  animation-name: thumb-dt-sorted;
+}
+@keyframes thumb-dt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  28% {
+    transform: translate(30px, 15px);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  48%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dt-given {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dt-sorted {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Selectable table: check two orders → 보관하기. */
+.thumb-stbl-cursor {
+  animation-name: thumb-stbl-cursor;
+}
+.thumb-stbl-c1 {
+  animation-name: thumb-stbl-c1;
+}
+.thumb-stbl-c3 {
+  animation-name: thumb-stbl-c3;
+}
+.thumb-stbl-bar1 {
+  animation-name: thumb-stbl-bar1;
+}
+.thumb-stbl-bar2 {
+  animation-name: thumb-stbl-bar2;
+}
+.thumb-stbl-before {
+  animation-name: thumb-stbl-before;
+}
+.thumb-stbl-after {
+  animation-name: thumb-stbl-after;
+}
+@keyframes thumb-stbl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  22% {
+    transform: translate(23px, 39px);
+  }
+  30%,
+  36% {
+    transform: translate(23px, 65px);
+  }
+  48%,
+  58% {
+    transform: translate(142px, 13px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stbl-c1 {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stbl-c3 {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stbl-bar1 {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stbl-bar2 {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stbl-before {
+  0%,
+  61% {
+    opacity: 1;
+  }
+  62%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stbl-after {
+  0%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Description list: copy the 주문 번호. */
+.thumb-dl-cursor {
+  animation-name: thumb-dl-cursor;
+}
+.thumb-dl-copied {
+  animation-name: thumb-dl-copied;
+}
+@keyframes thumb-dl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  30% {
+    transform: translate(101px, 33px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dl-copied {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  80% {
+    opacity: 1;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Timeline: 새로 고침 → 배송 완료. */
+.thumb-tl-cursor {
+  animation-name: thumb-tl-cursor;
+}
+.thumb-tl-before {
+  animation-name: thumb-tl-before;
+}
+.thumb-tl-after {
+  animation-name: thumb-tl-after;
+}
+@keyframes thumb-tl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(88px, 96px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tl-before {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tl-after {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Kanban board: drag 회의록 정리 to 진행 중. */
+.thumb-kb-cursor {
+  animation-name: thumb-kb-cursor;
+}
+.thumb-kb-card {
+  animation-name: thumb-kb-card;
+}
+.thumb-kb-rest {
+  animation-name: thumb-kb-rest;
+}
+.thumb-kb-before {
+  animation-name: thumb-kb-before;
+}
+.thumb-kb-after {
+  animation-name: thumb-kb-after;
+}
+@keyframes thumb-kb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(34px, 28px);
+  }
+  40%,
+  44% {
+    transform: translate(90px, 48px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-kb-card {
+  0%,
+  14% {
+    transform: translate(-56px, -20px);
+  }
+  40%,
+  96% {
+    transform: translate(0, 0);
+  }
+  98%,
+  100% {
+    transform: translate(-56px, -20px);
+  }
+}
+@keyframes thumb-kb-rest {
+  0%,
+  42% {
+    transform: translateY(20px);
+  }
+  46%,
+  96% {
+    transform: translateY(0);
+  }
+  98%,
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes thumb-kb-before {
+  0%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-kb-after {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sortable list: drag 보고서 마무리 to the top. */
+.thumb-sort-cursor {
+  animation-name: thumb-sort-cursor;
+}
+.thumb-sort-up {
+  animation-name: thumb-sort-up;
+}
+.thumb-sort-down {
+  animation-name: thumb-sort-down;
+}
+@keyframes thumb-sort-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(39px, 57px);
+  }
+  44% {
+    transform: translate(39px, 23px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sort-up {
+  0%,
+  16% {
+    transform: translateY(0);
+  }
+  44%,
+  96% {
+    transform: translateY(-34px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-sort-down {
+  0%,
+  16% {
+    transform: translateY(0);
+  }
+  44%,
+  96% {
+    transform: translateY(17px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Grouped list: the current group's header stays pinned. */
+.thumb-gl-cursor {
+  animation-name: thumb-gl-cursor;
+}
+.thumb-gl-scroll {
+  animation-name: thumb-gl-scroll;
+}
+.thumb-gl-pin0 {
+  animation-name: thumb-gl-pin0;
+}
+.thumb-gl-pin1 {
+  animation-name: thumb-gl-pin1;
+}
+.thumb-gl-pin2 {
+  animation-name: thumb-gl-pin2;
+}
+@keyframes thumb-gl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(88px, 80px);
+  }
+  36% {
+    transform: translate(88px, 30px);
+  }
+  50% {
+    transform: translate(88px, 80px);
+  }
+  72% {
+    transform: translate(88px, 46px);
+  }
+  86% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-gl-scroll {
+  0%,
+  12% {
+    transform: translateY(0);
+  }
+  36%,
+  48% {
+    transform: translateY(-58px);
+  }
+  72%,
+  92% {
+    transform: translateY(-92px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-gl-pin0 {
+  0%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-gl-pin1 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  71% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-gl-pin2 {
+  0%,
+  71% {
+    opacity: 0;
+  }
+  72%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Virtualized list: jump far down; only the rows in view are drawn. */
+.thumb-vl-cursor {
+  animation-name: thumb-vl-cursor;
+}
+.thumb-vl-start {
+  animation-name: thumb-vl-start;
+}
+.thumb-vl-far {
+  animation-name: thumb-vl-far;
+}
+.thumb-vl-thumb {
+  animation-name: thumb-vl-thumb;
+}
+@keyframes thumb-vl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  14% {
+    transform: translate(134px, 7px);
+  }
+  40% {
+    transform: translate(134px, 43px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-vl-start {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-vl-far {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-vl-thumb {
+  0%,
+  14% {
+    transform: translateY(0);
+  }
+  40%,
+  96% {
+    transform: translateY(36px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

@@ -48,6 +48,12 @@ export const PATTERN_CATEGORIES = [
     description: "누를 수 있는 것과 그 상태",
   },
   {
+    id: "list-table",
+    label: "Lists and tables",
+    labelKo: "목록과 표",
+    description: "여러 항목을 나열하고 비교하는 화면",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",
