@@ -239,6 +239,11 @@ describe("mobile header navigation", () => {
     );
     expect(router.state.location.search).toBe("?category=ui-comparison");
     expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
+    const headerGithubLink = within(screen.getByRole("banner")).getByRole("link", {
+      name: "GitHub",
+    });
+    expect(headerGithubLink).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas");
+    expect(headerGithubLink.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
     expect(
       within(screen.getByRole("contentinfo")).getByRole("link", { name: "GitHub" }),
     ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
