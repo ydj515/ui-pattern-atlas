@@ -176,10 +176,6 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
           </Section>
         </div>
 
-        <p className="mt-12 border-t border-rule pt-6 text-caption text-graphite">
-          {pattern.kind === "concept" ? "관련 개념" : "사용 기술"}: {pattern.tags.join(", ")}
-        </p>
-
         <nav aria-label="다른 패턴" className="mt-12 grid grid-cols-2 border-t border-rule">
           <AdjacentLink pattern={PATTERNS[index - 1]} direction="previous" />
           <AdjacentLink pattern={PATTERNS[index + 1]} direction="next" />

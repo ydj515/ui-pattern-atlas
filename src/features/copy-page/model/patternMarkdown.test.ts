@@ -31,6 +31,7 @@ describe("buildPatternMarkdown", () => {
     );
     expect(markdown).toContain("### Component: Tabs.tsx\n\n```tsx\nexport const a = 1;\n```");
     expect(markdown).toContain("## Accessibility");
+    expect(markdown).not.toContain("Tech:");
     expect(markdown.endsWith("\n")).toBe(true);
   });
 
@@ -66,6 +67,6 @@ describe("loadPatternMarkdown", () => {
     const markdown = await loadPatternMarkdown(requirePattern("decoy-effect"), PAGE_URL);
 
     expect(markdown).not.toContain("## Implementation");
-    expect(markdown).toContain("Related concepts:");
+    expect(markdown).toContain("## Accessibility");
   });
 });

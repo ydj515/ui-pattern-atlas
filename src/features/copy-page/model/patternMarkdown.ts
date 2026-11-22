@@ -87,9 +87,6 @@ export function buildPatternMarkdown(
   }
 
   parts.push("## Accessibility", bulletList(pattern.accessibility));
-  parts.push(
-    `${pattern.kind === "concept" ? "Related concepts" : "Tech"}: ${pattern.tags.join(", ")}`,
-  );
 
   return `${parts.join("\n\n")}\n`;
 }
