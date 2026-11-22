@@ -126,6 +126,12 @@ export const PATTERN_CATEGORIES = [
     description: "AI와 대화하고 결과를 다루는 화면",
   },
   {
+    id: "icon-names",
+    label: "Icon names",
+    labelKo: "아이콘 이름",
+    description: "모양은 아는데 이름이 헷갈리는 아이콘",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",

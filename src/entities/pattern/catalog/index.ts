@@ -245,6 +245,19 @@ import { regenerateResponsePattern } from "@/entities/pattern/catalog/regenerate
 import { editPromptPattern } from "@/entities/pattern/catalog/edit-prompt/pattern";
 import { fileAttachmentPattern } from "@/entities/pattern/catalog/file-attachment/pattern";
 import { agentStepsPattern } from "@/entities/pattern/catalog/agent-steps/pattern";
+import { hamburgerPattern } from "@/entities/pattern/catalog/hamburger/pattern";
+import { kebabPattern } from "@/entities/pattern/catalog/kebab/pattern";
+import { meatballsPattern } from "@/entities/pattern/catalog/meatballs/pattern";
+import { bentoPattern } from "@/entities/pattern/catalog/bento/pattern";
+import { chevronPattern } from "@/entities/pattern/catalog/chevron/pattern";
+import { caretPattern } from "@/entities/pattern/catalog/caret/pattern";
+import { gripPattern } from "@/entities/pattern/catalog/grip/pattern";
+import { sparklesPattern } from "@/entities/pattern/catalog/sparkles/pattern";
+import { donerPattern } from "@/entities/pattern/catalog/doner/pattern";
+import { wafflePattern } from "@/entities/pattern/catalog/waffle/pattern";
+import { veggieBurgerPattern } from "@/entities/pattern/catalog/veggie-burger/pattern";
+import { stairsPattern } from "@/entities/pattern/catalog/stairs/pattern";
+import { slidersPattern } from "@/entities/pattern/catalog/sliders/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -492,6 +505,19 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   editPromptPattern,
   fileAttachmentPattern,
   agentStepsPattern,
+  hamburgerPattern,
+  kebabPattern,
+  meatballsPattern,
+  bentoPattern,
+  chevronPattern,
+  caretPattern,
+  gripPattern,
+  sparklesPattern,
+  donerPattern,
+  wafflePattern,
+  veggieBurgerPattern,
+  stairsPattern,
+  slidersPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

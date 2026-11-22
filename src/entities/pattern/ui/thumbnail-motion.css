@@ -22774,6 +22774,1051 @@
   }
 }
 
+/* Hamburger: ☰ opens the menu → 주문 내역. */
+.thumb-ham-cursor {
+  animation-name: thumb-ham-cursor;
+}
+.thumb-ham-drawer {
+  animation-name: thumb-ham-drawer;
+}
+.thumb-ham-t0 {
+  animation-name: thumb-ham-t0;
+}
+.thumb-ham-t1 {
+  animation-name: thumb-ham-t1;
+}
+@keyframes thumb-ham-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(40px, 15px);
+  }
+  38%,
+  44% {
+    transform: translate(65px, 32px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ham-drawer {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ham-t0 {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ham-t1 {
+  0%,
+  44% {
+    opacity: 0;
+  }
+  45%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Kebab: ⋮ on 회의록.pdf → 삭제 → the rows close up. */
+.thumb-keb-cursor {
+  animation-name: thumb-keb-cursor;
+}
+.thumb-keb-menu {
+  animation-name: thumb-keb-menu;
+}
+.thumb-keb-row0 {
+  animation-name: thumb-keb-row0;
+}
+.thumb-keb-rest {
+  animation-name: thumb-keb-rest;
+}
+.thumb-keb-msg {
+  animation-name: thumb-keb-msg;
+}
+@keyframes thumb-keb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(138px, 33px);
+  }
+  34%,
+  40% {
+    transform: translate(115px, 61px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-keb-menu {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-keb-row0 {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-keb-msg {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-keb-rest {
+  0%,
+  40% {
+    transform: translateY(0);
+  }
+  46%,
+  94% {
+    transform: translateY(-16px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Meatballs: ⋯ → 링크 복사. */
+.thumb-meat-cursor {
+  animation-name: thumb-meat-cursor;
+}
+.thumb-meat-menu {
+  animation-name: thumb-meat-menu;
+}
+.thumb-meat-msg {
+  animation-name: thumb-meat-msg;
+}
+@keyframes thumb-meat-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(138px, 16px);
+  }
+  34%,
+  40% {
+    transform: translate(117px, 31px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-meat-menu {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-meat-msg {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Bento: the nine squares open the app list → 캘린더. */
+.thumb-bento-cursor {
+  animation-name: thumb-bento-cursor;
+}
+.thumb-bento-pop {
+  animation-name: thumb-bento-pop;
+}
+.thumb-bento-t0 {
+  animation-name: thumb-bento-t0;
+}
+.thumb-bento-t1 {
+  animation-name: thumb-bento-t1;
+}
+@keyframes thumb-bento-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(137px, 15px);
+  }
+  34%,
+  40% {
+    transform: translate(105px, 39px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bento-pop {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-bento-t0 {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-bento-t1 {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Chevron: › on 알림 → the detail screen with ‹ 설정. */
+.thumb-chev-cursor {
+  animation-name: thumb-chev-cursor;
+}
+.thumb-chev-list {
+  animation-name: thumb-chev-list;
+}
+.thumb-chev-detail {
+  animation-name: thumb-chev-detail;
+}
+@keyframes thumb-chev-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(89px, 33px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-chev-list {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-chev-detail {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Caret: 최신순 ▾ → 인기순. */
+.thumb-caret-cursor {
+  animation-name: thumb-caret-cursor;
+}
+.thumb-caret-list {
+  animation-name: thumb-caret-list;
+}
+.thumb-caret-a {
+  animation-name: thumb-caret-a;
+}
+.thumb-caret-b {
+  animation-name: thumb-caret-b;
+}
+@keyframes thumb-caret-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(126px, 19px);
+  }
+  34%,
+  40% {
+    transform: translate(114px, 48px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-caret-list {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-caret-a {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-caret-b {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Grip: drag 회의 준비 by its grip to the top. */
+.thumb-grip-cursor {
+  animation-name: thumb-grip-cursor;
+}
+.thumb-grip-r0 {
+  animation-name: thumb-grip-r0;
+}
+.thumb-grip-r1 {
+  animation-name: thumb-grip-r1;
+}
+.thumb-grip-r2 {
+  animation-name: thumb-grip-r2;
+}
+.thumb-grip-msg {
+  animation-name: thumb-grip-msg;
+}
+@keyframes thumb-grip-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  16% {
+    transform: translate(43px, 70px);
+  }
+  40% {
+    transform: translate(43px, 34px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-grip-r2 {
+  0%,
+  16% {
+    transform: translateY(0);
+  }
+  40%,
+  94% {
+    transform: translateY(-36px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-grip-r0 {
+  0%,
+  24% {
+    transform: translateY(0);
+  }
+  36%,
+  94% {
+    transform: translateY(18px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-grip-r1 {
+  0%,
+  24% {
+    transform: translateY(0);
+  }
+  36%,
+  94% {
+    transform: translateY(18px);
+  }
+  97%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-grip-msg {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sparkles: ✦ AI로 다듬기 rewrites the draft. */
+.thumb-spark-cursor {
+  animation-name: thumb-spark-cursor;
+}
+.thumb-spark-draft {
+  animation-name: thumb-spark-draft;
+}
+.thumb-spark-done {
+  animation-name: thumb-spark-done;
+}
+@keyframes thumb-spark-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(60px, 64px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-spark-draft {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-spark-done {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Döner: the stepped lines open 정렬 → 가격 낮은 순. */
+.thumb-doner-cursor {
+  animation-name: thumb-doner-cursor;
+}
+.thumb-doner-sheet {
+  animation-name: thumb-doner-sheet;
+}
+.thumb-doner-a {
+  animation-name: thumb-doner-a;
+}
+.thumb-doner-b {
+  animation-name: thumb-doner-b;
+}
+@keyframes thumb-doner-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(137px, 15px);
+  }
+  34%,
+  40% {
+    transform: translate(89px, 85px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-doner-sheet {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-doner-a {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-doner-b {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Waffle: the nine dots switch apps → 메모. */
+.thumb-waffle-cursor {
+  animation-name: thumb-waffle-cursor;
+}
+.thumb-waffle-pop {
+  animation-name: thumb-waffle-pop;
+}
+.thumb-waffle-t0 {
+  animation-name: thumb-waffle-t0;
+}
+.thumb-waffle-t1 {
+  animation-name: thumb-waffle-t1;
+}
+@keyframes thumb-waffle-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(40px, 15px);
+  }
+  34%,
+  40% {
+    transform: translate(48px, 61px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-waffle-pop {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-waffle-t0 {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-waffle-t1 {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Veggie burger: the two-line 메뉴 button → 탐색. */
+.thumb-veg-cursor {
+  animation-name: thumb-veg-cursor;
+}
+.thumb-veg-nav {
+  animation-name: thumb-veg-nav;
+}
+.thumb-veg-t0 {
+  animation-name: thumb-veg-t0;
+}
+.thumb-veg-t1 {
+  animation-name: thumb-veg-t1;
+}
+@keyframes thumb-veg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(130px, 15px);
+  }
+  34%,
+  40% {
+    transform: translate(89px, 49px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-veg-nav {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-veg-t0 {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-veg-t1 {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Stairs: 목차 → 인왕산. */
+.thumb-stairs-cursor {
+  animation-name: thumb-stairs-cursor;
+}
+.thumb-stairs-menu {
+  animation-name: thumb-stairs-menu;
+}
+.thumb-stairs-done {
+  animation-name: thumb-stairs-done;
+}
+@keyframes thumb-stairs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(130px, 15px);
+  }
+  34%,
+  40% {
+    transform: translate(114px, 61px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stairs-menu {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  19%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-stairs-done {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Sliders: open the filter → 무료 배송만 → 적용. */
+.thumb-sliders-cursor {
+  animation-name: thumb-sliders-cursor;
+}
+.thumb-sliders-sheet {
+  animation-name: thumb-sliders-sheet;
+}
+.thumb-sliders-check {
+  animation-name: thumb-sliders-check;
+}
+.thumb-sliders-none {
+  animation-name: thumb-sliders-none;
+}
+.thumb-sliders-on {
+  animation-name: thumb-sliders-on;
+}
+@keyframes thumb-sliders-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  16% {
+    transform: translate(137px, 15px);
+  }
+  28%,
+  34% {
+    transform: translate(40px, 80px);
+  }
+  42%,
+  48% {
+    transform: translate(89px, 95px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sliders-sheet {
+  0%,
+  16% {
+    opacity: 0;
+  }
+  17%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sliders-check {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sliders-none {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sliders-on {
+  0%,
+  48% {
+    opacity: 0;
+  }
+  49%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
