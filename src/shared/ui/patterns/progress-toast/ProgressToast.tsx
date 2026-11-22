@@ -58,7 +58,7 @@ export function ProgressToast({
         className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/15"
       >
         <div
-          className={`h-full origin-left rounded-full transition-transform duration-300 motion-reduce:transition-none ${barColor[status]}`}
+          className={`h-full origin-left rounded-full transition-transform duration-300 ease-linear motion-reduce:transition-none ${barColor[status]}`}
           style={{ transform: `scaleX(${value / 100})` }}
         />
       </div>

@@ -19,7 +19,7 @@ export function ProgressRingDemo() {
 
   return (
     <div className="flex w-full max-w-xs items-center gap-4 rounded-xl border border-slate-200 bg-white p-4">
-      <ProgressRing value={progress ?? 0} label="사진 백업" />
+      <ProgressRing value={progress ?? 0} label="사진 백업" smoothMs={TICK_MS} />
       <div className="flex-1">
         <p className="text-sm font-semibold text-slate-900">사진 백업</p>
         <p role="status" className="text-xs text-slate-500">

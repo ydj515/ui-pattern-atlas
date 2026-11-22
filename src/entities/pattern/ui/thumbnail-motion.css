@@ -1588,7 +1588,7 @@
 }
 .thumb-progress-value {
   animation-name: thumb-progress-value;
-  animation-timing-function: steps(1);
+  animation-timing-function: linear;
 }
 @keyframes thumb-progress-percent-start {
   0%,
@@ -1663,22 +1663,13 @@
   }
 }
 @keyframes thumb-progress-value {
-  0% {
+  /* Same pace as the demo: an even fill from the click until 100%. */
+  0%,
+  24% {
     transform: scaleX(0);
   }
-  24% {
-    transform: scaleX(0.2);
-  }
-  31% {
-    transform: scaleX(0.4);
-  }
-  38% {
-    transform: scaleX(0.6);
-  }
-  45% {
-    transform: scaleX(0.8);
-  }
-  52% {
+  59%,
+  93% {
     transform: scaleX(1);
   }
   94%,
@@ -3590,24 +3581,64 @@
   }
 }
 
-/* Progress ring: 백업 시작 → the ring fills in steps → 백업 완료. */
+/* Progress ring: 백업 시작 → the arc fills at an even pace (two rotating half rings) → 백업 완료. */
 .thumb-ring-cursor {
   animation-name: thumb-ring-cursor;
 }
 .thumb-ring-btn {
   animation-name: thumb-ring-btn;
 }
-.thumb-ring-s0 {
-  animation-name: thumb-ring-s0;
+.thumb-ring-right,
+.thumb-ring-left {
+  animation-timing-function: linear;
 }
-.thumb-ring-s1 {
-  animation-name: thumb-ring-s1;
+.thumb-ring-right {
+  animation-name: thumb-ring-right;
 }
-.thumb-ring-s2 {
-  animation-name: thumb-ring-s2;
+.thumb-ring-left {
+  animation-name: thumb-ring-left;
 }
-.thumb-ring-s3 {
-  animation-name: thumb-ring-s3;
+.thumb-ring-done {
+  animation-name: thumb-ring-done;
+}
+.thumb-ring-idle {
+  animation-name: thumb-ring-idle;
+}
+.thumb-ring-busy {
+  animation-name: thumb-ring-busy;
+}
+.thumb-ring-p0 {
+  animation-name: thumb-ring-p0;
+}
+.thumb-ring-p10 {
+  animation-name: thumb-ring-p10;
+}
+.thumb-ring-p20 {
+  animation-name: thumb-ring-p20;
+}
+.thumb-ring-p30 {
+  animation-name: thumb-ring-p30;
+}
+.thumb-ring-p40 {
+  animation-name: thumb-ring-p40;
+}
+.thumb-ring-p50 {
+  animation-name: thumb-ring-p50;
+}
+.thumb-ring-p60 {
+  animation-name: thumb-ring-p60;
+}
+.thumb-ring-p70 {
+  animation-name: thumb-ring-p70;
+}
+.thumb-ring-p80 {
+  animation-name: thumb-ring-p80;
+}
+.thumb-ring-p90 {
+  animation-name: thumb-ring-p90;
+}
+.thumb-ring-p100 {
+  animation-name: thumb-ring-p100;
 }
 @keyframes thumb-ring-cursor {
   0% {
@@ -3646,13 +3677,69 @@
     opacity: 1;
   }
 }
-@keyframes thumb-ring-s0 {
+@keyframes thumb-ring-right {
   0%,
-  20% {
+  21% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  21.5% {
+    opacity: 1;
+    transform: rotate(5.45deg);
+  }
+  37.5%,
+  93% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes thumb-ring-left {
+  0%,
+  37.5% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  38.0% {
+    opacity: 1;
+    transform: rotate(5.45deg);
+  }
+  54%,
+  93% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes thumb-ring-done {
+  0%,
+  54% {
+    opacity: 0;
+  }
+  55%,
+  92% {
+    opacity: 1;
+  }
+  93%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-idle {
+  0%,
+  20.99% {
     opacity: 1;
   }
   21%,
-  92% {
+  92.99% {
     opacity: 0;
   }
   93%,
@@ -3660,41 +3747,167 @@
     opacity: 1;
   }
 }
-@keyframes thumb-ring-s1 {
+@keyframes thumb-ring-busy {
   0%,
-  20% {
+  20.99% {
     opacity: 0;
   }
   21%,
-  37% {
+  53.99% {
     opacity: 1;
   }
-  38%,
+  54%,
   100% {
     opacity: 0;
   }
 }
-@keyframes thumb-ring-s2 {
+@keyframes thumb-ring-p0 {
   0%,
-  37% {
-    opacity: 0;
-  }
-  38%,
-  54% {
+  22.64% {
     opacity: 1;
   }
-  55%,
+  22.65%,
+  92.99% {
+    opacity: 0;
+  }
+  93%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ring-p10 {
+  0%,
+  22.64% {
+    opacity: 0;
+  }
+  22.65%,
+  25.94% {
+    opacity: 1;
+  }
+  25.95%,
   100% {
     opacity: 0;
   }
 }
-@keyframes thumb-ring-s3 {
+@keyframes thumb-ring-p20 {
   0%,
-  54% {
+  25.94% {
     opacity: 0;
   }
-  55%,
-  92% {
+  25.95%,
+  29.24% {
+    opacity: 1;
+  }
+  29.25%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p30 {
+  0%,
+  29.24% {
+    opacity: 0;
+  }
+  29.25%,
+  32.54% {
+    opacity: 1;
+  }
+  32.55%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p40 {
+  0%,
+  32.54% {
+    opacity: 0;
+  }
+  32.55%,
+  35.84% {
+    opacity: 1;
+  }
+  35.85%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p50 {
+  0%,
+  35.84% {
+    opacity: 0;
+  }
+  35.85%,
+  39.14% {
+    opacity: 1;
+  }
+  39.15%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p60 {
+  0%,
+  39.14% {
+    opacity: 0;
+  }
+  39.15%,
+  42.44% {
+    opacity: 1;
+  }
+  42.45%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p70 {
+  0%,
+  42.44% {
+    opacity: 0;
+  }
+  42.45%,
+  45.74% {
+    opacity: 1;
+  }
+  45.75%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p80 {
+  0%,
+  45.74% {
+    opacity: 0;
+  }
+  45.75%,
+  49.04% {
+    opacity: 1;
+  }
+  49.05%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p90 {
+  0%,
+  49.04% {
+    opacity: 0;
+  }
+  49.05%,
+  52.34% {
+    opacity: 1;
+  }
+  52.35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ring-p100 {
+  0%,
+  52.34% {
+    opacity: 0;
+  }
+  52.35%,
+  92.99% {
     opacity: 1;
   }
   93%,

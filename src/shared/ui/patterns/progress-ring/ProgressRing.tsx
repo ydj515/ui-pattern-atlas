@@ -6,6 +6,8 @@ export interface ProgressRingProps {
   /** Outer size in px. */
   readonly size?: number;
   readonly strokeWidth?: number;
+  /** How long the arc takes to reach a new value; match it to the update interval. */
+  readonly smoothMs?: number;
 }
 
 /**
@@ -14,7 +16,13 @@ export interface ProgressRingProps {
  * It is a real progressbar with the current value, so the arc is not the only signal.
  * The percentage in the middle is hidden from screen readers to avoid reading it twice.
  */
-export function ProgressRing({ value, label, size = 56, strokeWidth = 5 }: ProgressRingProps) {
+export function ProgressRing({
+  value,
+  label,
+  size = 56,
+  strokeWidth = 5,
+  smoothMs = 300,
+}: ProgressRingProps) {
   const clamped = Math.round(Math.min(100, Math.max(0, value)));
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -51,7 +59,8 @@ export function ProgressRing({ value, label, size = 56, strokeWidth = 5 }: Progr
           strokeLinecap="round"
           strokeDasharray={circumference}
           strokeDashoffset={circumference * (1 - clamped / 100)}
-          className={`transition-[stroke-dashoffset] duration-300 motion-reduce:transition-none ${
+          style={{ transitionDuration: `${smoothMs}ms` }}
+          className={`transition-[stroke-dashoffset,stroke] ease-linear motion-reduce:transition-none ${
             clamped === 100 ? "stroke-emerald-500" : "stroke-blue-600"
           }`}
         />

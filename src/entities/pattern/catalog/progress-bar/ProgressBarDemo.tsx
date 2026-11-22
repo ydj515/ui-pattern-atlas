@@ -30,7 +30,7 @@ export function ProgressBarDemo() {
       >
         업로드 시작
       </button>
-      <ProgressBar label="포트폴리오 파일" percent={percent} />
+      <ProgressBar label="포트폴리오 파일" percent={percent} smoothMs={220} />
       <p role="status" className="min-h-5 text-sm text-slate-700">
         {percent === 100 ? "업로드 완료" : ""}
       </p>
