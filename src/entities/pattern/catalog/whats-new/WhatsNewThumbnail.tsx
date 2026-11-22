@@ -17,17 +17,14 @@ export function WhatsNewThumbnail() {
         </p>
         <div className="thumb-anim thumb-wn-open absolute inset-0 bg-slate-900/40">
           <div className="absolute inset-x-[4px] bottom-[4px] rounded-lg bg-white p-[4px] text-[5px] leading-[6px]">
-            <p className="font-semibold text-blue-700">버전 3.2</p>
-            <p className="text-[7px] leading-[9px] font-bold">새로워진 점</p>
-            {ITEMS.map(([title, body], index) => (
-              <p key={title} className="mt-[2px] flex gap-[3px]">
-                <span className="grid size-[7px] shrink-0 place-items-center rounded-full bg-slate-100 text-[4.5px]">
-                  {index + 1}
-                </span>
-                <span>
-                  <b className="block text-[5.5px] leading-[7px]">{title}</b>
-                  <span className="text-slate-600">{body}</span>
-                </span>
+            <p className="flex items-baseline justify-between">
+              <b className="text-[7px] leading-[9px]">새로워진 점</b>
+              <span className="text-slate-500">버전 3.2</span>
+            </p>
+            {ITEMS.map(([title, body]) => (
+              <p key={title} className="mt-[3px]">
+                <b className="block text-[5.5px] leading-[7px]">{title}</b>
+                <span className="text-slate-600">{body}</span>
               </p>
             ))}
             <span className="mt-[3px] block rounded bg-slate-900 py-[2px] text-center text-[6px] font-semibold text-white">

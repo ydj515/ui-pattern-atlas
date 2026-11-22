@@ -49,7 +49,7 @@ export function RotatingWords({
             {words.map((word, wordIndex) => (
               <span
                 key={word}
-                className={`col-start-1 row-start-1 text-blue-700 transition duration-500 ease-out motion-reduce:transition-none ${wordIndex === index ? "translate-y-0 opacity-100" : wordIndex === (index - 1 + words.length) % words.length ? "-translate-y-full opacity-0" : "translate-y-full opacity-0"}`}
+                className={`col-start-1 row-start-1 transition duration-500 ease-out motion-reduce:transition-none ${wordIndex === index ? "translate-y-0 opacity-100" : wordIndex === (index - 1 + words.length) % words.length ? "-translate-y-full opacity-0" : "translate-y-full opacity-0"}`}
               >
                 {word}
               </span>

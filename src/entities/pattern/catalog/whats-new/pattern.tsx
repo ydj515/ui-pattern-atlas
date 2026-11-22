@@ -23,10 +23,10 @@ export const whatsNewPattern: Pattern = {
   accessibility: [
     "role=dialog와 제목으로 이름을 붙입니다.",
     "열리면 확인 버튼에 포커스가 갑니다.",
-    "항목 번호는 장식이고 순서는 ol 목록으로 전달합니다.",
+    "항목은 목록으로 묶어 몇 개인지 함께 전달합니다.",
     "버전은 글자로 함께 보여 줍니다.",
   ],
-  tags: [...BASE_TAGS, "role=dialog", "Release notes", "ol"],
+  tags: [...BASE_TAGS, "role=dialog", "Release notes", "ul"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/whats-new/WhatsNewDemo").then((m) => m.WhatsNewDemo),
   Thumbnail: WhatsNewThumbnail,

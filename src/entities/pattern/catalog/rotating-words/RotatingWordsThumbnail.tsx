@@ -8,7 +8,7 @@ export function RotatingWordsThumbnail() {
         <p className="text-[6px] text-slate-600">팀 협업 도구</p>
         <p className="mt-[6px] flex items-end gap-[4px] text-[12px] leading-[16px] font-bold">
           <span>함께 만드는</span>
-          <span className="relative h-[16px] w-[40px] overflow-hidden text-blue-700">
+          <span className="relative h-[16px] w-[40px] overflow-hidden">
             <span className="thumb-anim thumb-rw-col absolute inset-x-0 top-0 grid">
               <span className="h-[16px]">디자인</span>
               <span className="h-[16px]">문서</span>

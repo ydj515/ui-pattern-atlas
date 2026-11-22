@@ -27,26 +27,20 @@ export function WhatsNew({
   const id = useId();
   return (
     <section role="dialog" aria-labelledby={id} className="rounded-2xl bg-white p-5 shadow-xl">
-      <p className="text-xs font-semibold text-blue-700">{version}</p>
-      <h2 id={id} className="mt-0.5 text-lg font-bold text-slate-900">
-        {title}
-      </h2>
-      <ol className="mt-3 grid gap-3">
-        {items.map((item, index) => (
-          <li key={item.title} className="flex gap-3">
-            <span
-              aria-hidden="true"
-              className="grid size-6 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-semibold text-slate-700"
-            >
-              {index + 1}
-            </span>
-            <span>
-              <span className="block text-sm font-semibold text-slate-900">{item.title}</span>
-              <span className="block text-xs text-slate-600">{item.body}</span>
-            </span>
+      <div className="flex items-baseline justify-between gap-2">
+        <h2 id={id} className="text-lg font-bold text-slate-900">
+          {title}
+        </h2>
+        <p className="text-xs text-slate-500">{version}</p>
+      </div>
+      <ul className="mt-3 grid gap-3 border-t border-slate-100 pt-3">
+        {items.map((item) => (
+          <li key={item.title}>
+            <span className="block text-sm font-semibold text-slate-900">{item.title}</span>
+            <span className="block text-xs text-slate-600">{item.body}</span>
           </li>
         ))}
-      </ol>
+      </ul>
       <button
         type="button"
         autoFocus
