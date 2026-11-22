@@ -60,6 +60,12 @@ export const PATTERN_CATEGORIES = [
     description: "이미지와 내용을 묶어 보여 주는 화면",
   },
   {
+    id: "indicator",
+    label: "Indicators",
+    labelKo: "인디케이터",
+    description: "상태와 개수를 작게 알려 주는 표시",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",

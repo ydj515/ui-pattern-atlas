@@ -12052,6 +12052,793 @@
   }
 }
 
+/* Badge: 담기 → 4, 120개 → 99+. */
+.thumb-bdg-cursor {
+  animation-name: thumb-bdg-cursor;
+}
+.thumb-bdg-3 {
+  animation-name: thumb-bdg-3;
+}
+.thumb-bdg-4 {
+  animation-name: thumb-bdg-4;
+}
+.thumb-bdg-99 {
+  animation-name: thumb-bdg-99;
+}
+@keyframes thumb-bdg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  24% {
+    transform: translate(83px, 72px);
+  }
+  44%,
+  54% {
+    transform: translate(112px, 72px);
+  }
+  68% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-bdg-3 {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-bdg-4 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-bdg-99 {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Status dot: 새로 고침 → the statuses change. */
+.thumb-sd-cursor {
+  animation-name: thumb-sd-cursor;
+}
+.thumb-sd-before {
+  animation-name: thumb-sd-before;
+}
+.thumb-sd-after {
+  animation-name: thumb-sd-after;
+}
+@keyframes thumb-sd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  30% {
+    transform: translate(88px, 71px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sd-before {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sd-after {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Tag: remove 접근성. */
+.thumb-tg-cursor {
+  animation-name: thumb-tg-cursor;
+}
+.thumb-tg-gone {
+  animation-name: thumb-tg-gone;
+}
+.thumb-tg-shift {
+  animation-name: thumb-tg-shift;
+}
+.thumb-tg-undo {
+  animation-name: thumb-tg-undo;
+}
+@keyframes thumb-tg-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(91px, 44px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tg-gone {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tg-shift {
+  0%,
+  29% {
+    transform: translateX(0);
+  }
+  33%,
+  96% {
+    transform: translateX(-34px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-tg-undo {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Avatar: the photo fails → the initial shows. */
+.thumb-av-cursor {
+  animation-name: thumb-av-cursor;
+}
+.thumb-av-photo {
+  animation-name: thumb-av-photo;
+}
+.thumb-av-fallback {
+  animation-name: thumb-av-fallback;
+}
+@keyframes thumb-av-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(88px, 73px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-av-photo {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-av-fallback {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Avatar group: add a person → +3. */
+.thumb-ag-cursor {
+  animation-name: thumb-ag-cursor;
+}
+.thumb-ag-before {
+  animation-name: thumb-ag-before;
+}
+.thumb-ag-after {
+  animation-name: thumb-ag-after;
+}
+@keyframes thumb-ag-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(150px, 50px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ag-before {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ag-after {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Page indicator: 다음 three times; the wide dot follows. */
+.thumb-pi-cursor {
+  animation-name: thumb-pi-cursor;
+}
+.thumb-pi-next {
+  animation-name: thumb-pi-next;
+}
+.thumb-pi-p0 {
+  animation-name: thumb-pi-p0;
+}
+.thumb-pi-p1 {
+  animation-name: thumb-pi-p1;
+}
+.thumb-pi-p2 {
+  animation-name: thumb-pi-p2;
+}
+.thumb-pi-p3 {
+  animation-name: thumb-pi-p3;
+}
+@keyframes thumb-pi-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  68% {
+    transform: translate(88px, 91px);
+  }
+  82% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-pi-next {
+  0%,
+  69% {
+    opacity: 1;
+  }
+  70%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pi-p0 {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pi-p1 {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pi-p2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  69% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pi-p3 {
+  0%,
+  69% {
+    opacity: 0;
+  }
+  70%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Unread indicator: open the first mail. */
+.thumb-un-cursor {
+  animation-name: thumb-un-cursor;
+}
+.thumb-un-new {
+  animation-name: thumb-un-new;
+}
+@keyframes thumb-un-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(70px, 23px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-un-new {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+/* Presence: 내 상태 → 자리 비움. */
+.thumb-pr-cursor {
+  animation-name: thumb-pr-cursor;
+}
+.thumb-pr-online {
+  animation-name: thumb-pr-online;
+}
+.thumb-pr-away {
+  animation-name: thumb-pr-away;
+}
+@keyframes thumb-pr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  36% {
+    transform: translate(124px, 79px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-pr-online {
+  0%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pr-away {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Feature dot: open 보고서 → the dot goes away. */
+.thumb-fd-cursor {
+  animation-name: thumb-fd-cursor;
+}
+.thumb-fd-before {
+  animation-name: thumb-fd-before;
+}
+.thumb-fd-after {
+  animation-name: thumb-fd-after;
+}
+@keyframes thumb-fd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  30% {
+    transform: translate(50px, 41px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-fd-before {
+  0%,
+  29% {
+    opacity: 1;
+  }
+  30%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-fd-after {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Scroll progress: the bar fills as the article scrolls. */
+.thumb-scp-cursor {
+  animation-name: thumb-scp-cursor;
+}
+.thumb-scp-text {
+  animation-name: thumb-scp-text;
+}
+.thumb-scp-bar,
+.thumb-scp-text {
+  animation-timing-function: linear;
+}
+.thumb-scp-bar {
+  animation-name: thumb-scp-bar;
+}
+@keyframes thumb-scp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10% {
+    transform: translate(88px, 70px);
+  }
+  45% {
+    transform: translate(88px, 62px);
+  }
+  80% {
+    transform: translate(88px, 70px);
+  }
+  94% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  100%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-scp-text {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  80%,
+  92% {
+    transform: translateY(-91px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-scp-bar {
+  0%,
+  10% {
+    transform: scaleX(0);
+  }
+  80%,
+  92% {
+    transform: scaleX(1);
+  }
+  98%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+/* Password strength meter: typing raises it from 약함 to 아주 강함. */
+.thumb-pwm-cursor {
+  animation-name: thumb-pwm-cursor;
+}
+.thumb-pwm-s0 {
+  animation-name: thumb-pwm-s0;
+}
+.thumb-pwm-s1 {
+  animation-name: thumb-pwm-s1;
+}
+.thumb-pwm-s2 {
+  animation-name: thumb-pwm-s2;
+}
+.thumb-pwm-s3 {
+  animation-name: thumb-pwm-s3;
+}
+@keyframes thumb-pwm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  14% {
+    transform: translate(60px, 32px);
+  }
+  28% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  34%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-pwm-s0 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pwm-s1 {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  53% {
+    opacity: 1;
+  }
+  54%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pwm-s2 {
+  0%,
+  53% {
+    opacity: 0;
+  }
+  54%,
+  71% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-pwm-s3 {
+  0%,
+  71% {
+    opacity: 0;
+  }
+  72%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

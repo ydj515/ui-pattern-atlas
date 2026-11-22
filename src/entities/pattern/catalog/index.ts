@@ -128,6 +128,17 @@ import { masonryGridPattern } from "@/entities/pattern/catalog/masonry-grid/patt
 import { beforeAfterSliderPattern } from "@/entities/pattern/catalog/before-after-slider/pattern";
 import { storiesPattern } from "@/entities/pattern/catalog/stories/pattern";
 import { topLoadingBarPattern } from "@/entities/pattern/catalog/top-loading-bar/pattern";
+import { badgePattern } from "@/entities/pattern/catalog/badge/pattern";
+import { statusDotPattern } from "@/entities/pattern/catalog/status-dot/pattern";
+import { tagPattern } from "@/entities/pattern/catalog/tag/pattern";
+import { avatarPattern } from "@/entities/pattern/catalog/avatar/pattern";
+import { avatarGroupPattern } from "@/entities/pattern/catalog/avatar-group/pattern";
+import { pageIndicatorPattern } from "@/entities/pattern/catalog/page-indicator/pattern";
+import { unreadIndicatorPattern } from "@/entities/pattern/catalog/unread-indicator/pattern";
+import { presencePattern } from "@/entities/pattern/catalog/presence/pattern";
+import { featureDotPattern } from "@/entities/pattern/catalog/feature-dot/pattern";
+import { scrollProgressPattern } from "@/entities/pattern/catalog/scroll-progress/pattern";
+import { passwordStrengthMeterPattern } from "@/entities/pattern/catalog/password-strength-meter/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -258,6 +269,17 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   beforeAfterSliderPattern,
   storiesPattern,
   topLoadingBarPattern,
+  badgePattern,
+  statusDotPattern,
+  tagPattern,
+  avatarPattern,
+  avatarGroupPattern,
+  pageIndicatorPattern,
+  unreadIndicatorPattern,
+  presencePattern,
+  featureDotPattern,
+  scrollProgressPattern,
+  passwordStrengthMeterPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
