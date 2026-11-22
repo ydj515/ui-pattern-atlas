@@ -120,6 +120,13 @@ import { kanbanBoardPattern } from "@/entities/pattern/catalog/kanban-board/patt
 import { sortableListPattern } from "@/entities/pattern/catalog/sortable-list/pattern";
 import { groupedListPattern } from "@/entities/pattern/catalog/grouped-list/pattern";
 import { virtualizedListPattern } from "@/entities/pattern/catalog/virtualized-list/pattern";
+import { cardPattern } from "@/entities/pattern/catalog/card/pattern";
+import { carouselPattern } from "@/entities/pattern/catalog/carousel/pattern";
+import { imageGalleryPattern } from "@/entities/pattern/catalog/image-gallery/pattern";
+import { lightboxPattern } from "@/entities/pattern/catalog/lightbox/pattern";
+import { masonryGridPattern } from "@/entities/pattern/catalog/masonry-grid/pattern";
+import { beforeAfterSliderPattern } from "@/entities/pattern/catalog/before-after-slider/pattern";
+import { storiesPattern } from "@/entities/pattern/catalog/stories/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -242,6 +249,13 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   sortableListPattern,
   groupedListPattern,
   virtualizedListPattern,
+  cardPattern,
+  carouselPattern,
+  imageGalleryPattern,
+  lightboxPattern,
+  masonryGridPattern,
+  beforeAfterSliderPattern,
+  storiesPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

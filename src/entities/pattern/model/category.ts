@@ -54,6 +54,12 @@ export const PATTERN_CATEGORIES = [
     description: "여러 항목을 나열하고 비교하는 화면",
   },
   {
+    id: "card-gallery",
+    label: "Cards and gallery",
+    labelKo: "카드와 갤러리",
+    description: "이미지와 내용을 묶어 보여 주는 화면",
+  },
+  {
     id: "loading",
     label: "Loading",
     labelKo: "로딩",

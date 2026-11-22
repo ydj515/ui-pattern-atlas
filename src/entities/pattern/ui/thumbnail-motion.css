@@ -11130,6 +11130,622 @@
   }
 }
 
+/* Card: save the first article, then open it from its title. */
+.thumb-cd-cursor {
+  animation-name: thumb-cd-cursor;
+}
+.thumb-cd-hover {
+  animation-name: thumb-cd-hover;
+}
+.thumb-cd-saved {
+  animation-name: thumb-cd-saved;
+}
+.thumb-cd-open {
+  animation-name: thumb-cd-open;
+}
+@keyframes thumb-cd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  24% {
+    transform: translate(77px, 17px);
+  }
+  40%,
+  52% {
+    transform: translate(40px, 66px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cd-hover {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cd-saved {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cd-open {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Carousel: advances on its own, then › to the third banner. */
+.thumb-car-cursor {
+  animation-name: thumb-car-cursor;
+}
+.thumb-car-s0 {
+  animation-name: thumb-car-s0;
+}
+.thumb-car-s1 {
+  animation-name: thumb-car-s1;
+}
+.thumb-car-s2 {
+  animation-name: thumb-car-s2;
+}
+@keyframes thumb-car-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  62% {
+    transform: translate(146px, 50px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-car-s0 {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  31%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-car-s1 {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  62% {
+    opacity: 1;
+  }
+  63%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-car-s2 {
+  0%,
+  62% {
+    opacity: 0;
+  }
+  63%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Image gallery: pick the second, then the third thumbnail. */
+.thumb-ig-cursor {
+  animation-name: thumb-ig-cursor;
+}
+.thumb-ig-p0 {
+  animation-name: thumb-ig-p0;
+}
+.thumb-ig-p1 {
+  animation-name: thumb-ig-p1;
+}
+.thumb-ig-p2 {
+  animation-name: thumb-ig-p2;
+}
+@keyframes thumb-ig-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  28% {
+    transform: translate(79px, 89px);
+  }
+  46%,
+  58% {
+    transform: translate(97px, 89px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ig-p0 {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ig-p1 {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  57% {
+    opacity: 1;
+  }
+  58%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ig-p2 {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Lightbox: open 비자림 숲길 → › → close. */
+.thumb-lbx-cursor {
+  animation-name: thumb-lbx-cursor;
+}
+.thumb-lbx-open {
+  animation-name: thumb-lbx-open;
+}
+.thumb-lbx-p1 {
+  animation-name: thumb-lbx-p1;
+}
+.thumb-lbx-p2 {
+  animation-name: thumb-lbx-p2;
+}
+@keyframes thumb-lbx-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  18% {
+    transform: translate(113px, 27px);
+  }
+  34%,
+  46% {
+    transform: translate(96px, 96px);
+  }
+  62%,
+  74% {
+    transform: translate(132px, 8px);
+  }
+  88% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lbx-open {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  76% {
+    opacity: 1;
+  }
+  77%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lbx-p1 {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lbx-p2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  100% {
+    opacity: 1;
+  }
+}
+/* Masonry grid: 3열 → 2열. */
+.thumb-mas-cursor {
+  animation-name: thumb-mas-cursor;
+}
+.thumb-mas-three {
+  animation-name: thumb-mas-three;
+}
+.thumb-mas-two {
+  animation-name: thumb-mas-two;
+}
+@keyframes thumb-mas-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20%,
+  32% {
+    transform: translate(121px, 10px);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mas-three {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  32%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mas-two {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Before/after slider: drag the handle right, then left. */
+.thumb-ba-cursor {
+  animation-name: thumb-ba-cursor;
+}
+.thumb-ba-clip {
+  animation-name: thumb-ba-clip;
+}
+.thumb-ba-inner {
+  animation-name: thumb-ba-inner;
+}
+.thumb-ba-line {
+  animation-name: thumb-ba-line;
+}
+@keyframes thumb-ba-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  14% {
+    transform: translate(88px, 53px);
+  }
+  36%,
+  44% {
+    transform: translate(124px, 53px);
+  }
+  70%,
+  80% {
+    transform: translate(52px, 53px);
+  }
+  94% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  100%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ba-clip {
+  0%,
+  14% {
+    transform: translateX(-60px);
+  }
+  36%,
+  44% {
+    transform: translateX(-24px);
+  }
+  70%,
+  80% {
+    transform: translateX(-96px);
+  }
+  94%,
+  100% {
+    transform: translateX(-60px);
+  }
+}
+@keyframes thumb-ba-inner {
+  0%,
+  14% {
+    transform: translateX(60px);
+  }
+  36%,
+  44% {
+    transform: translateX(24px);
+  }
+  70%,
+  80% {
+    transform: translateX(96px);
+  }
+  94%,
+  100% {
+    transform: translateX(60px);
+  }
+}
+@keyframes thumb-ba-line {
+  0%,
+  14% {
+    transform: translateX(0);
+  }
+  36%,
+  44% {
+    transform: translateX(36px);
+  }
+  70%,
+  80% {
+    transform: translateX(-36px);
+  }
+  94%,
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Stories: each fills its bar and moves on; a tap on the right skips ahead. */
+.thumb-sto-cursor {
+  animation-name: thumb-sto-cursor;
+}
+.thumb-sto-s0 {
+  animation-name: thumb-sto-s0;
+}
+.thumb-sto-s1 {
+  animation-name: thumb-sto-s1;
+}
+.thumb-sto-s2 {
+  animation-name: thumb-sto-s2;
+}
+.thumb-sto-b0,
+.thumb-sto-b1,
+.thumb-sto-b2 {
+  animation-timing-function: linear;
+}
+.thumb-sto-b0 {
+  animation-name: thumb-sto-b0;
+}
+.thumb-sto-b1 {
+  animation-name: thumb-sto-b1;
+}
+.thumb-sto-b2 {
+  animation-name: thumb-sto-b2;
+}
+@keyframes thumb-sto-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  42%,
+  50% {
+    transform: translate(110px, 60px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sto-s0 {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  31%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sto-s1 {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sto-s2 {
+  0%,
+  48% {
+    opacity: 0;
+  }
+  49%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sto-b0 {
+  0% {
+    transform: scaleX(0);
+  }
+  30%,
+  96% {
+    transform: scaleX(1);
+  }
+  97%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes thumb-sto-b1 {
+  0%,
+  31% {
+    transform: scaleX(0);
+  }
+  48% {
+    transform: scaleX(0.55);
+  }
+  49%,
+  96% {
+    transform: scaleX(1);
+  }
+  97%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes thumb-sto-b2 {
+  0%,
+  49% {
+    transform: scaleX(0);
+  }
+  94%,
+  96% {
+    transform: scaleX(1);
+  }
+  97%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
