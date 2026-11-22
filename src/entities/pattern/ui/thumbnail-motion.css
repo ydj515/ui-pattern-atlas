@@ -18459,6 +18459,1006 @@
   }
 }
 
+/* Success screen: 39,000원 결제하기 → 결제를 마쳤어요 with the order facts. */
+.thumb-ssc-cursor {
+  animation-name: thumb-ssc-cursor;
+}
+.thumb-ssc-before {
+  animation-name: thumb-ssc-before;
+}
+.thumb-ssc-after {
+  animation-name: thumb-ssc-after;
+}
+@keyframes thumb-ssc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 50px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ssc-before {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ssc-after {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Success checkmark: 보내기 → 보내는 중 → the check draws itself → 보냈어요. */
+.thumb-sck-cursor {
+  animation-name: thumb-sck-cursor;
+}
+.thumb-sck-before {
+  animation-name: thumb-sck-before;
+}
+.thumb-sck-after {
+  animation-name: thumb-sck-after;
+}
+.thumb-sck-idle {
+  animation-name: thumb-sck-idle;
+}
+.thumb-sck-busy {
+  animation-name: thumb-sck-busy;
+}
+.thumb-sck-circle {
+  animation-name: thumb-sck-circle;
+}
+.thumb-sck-cover {
+  animation-name: thumb-sck-cover;
+}
+@keyframes thumb-sck-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(88px, 68px);
+  }
+  32% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  38%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sck-before {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sck-after {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sck-idle {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sck-busy {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-sck-circle {
+  0%,
+  35% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  40%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes thumb-sck-cover {
+  0%,
+  39% {
+    transform: scaleX(1);
+  }
+  48%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+/* Confetti: 오늘 걷기 기록 → 30/30일 → a burst of paper → 목표를 달성했어요. */
+.thumb-cf-cursor {
+  animation-name: thumb-cf-cursor;
+}
+.thumb-cf-before {
+  animation-name: thumb-cf-before;
+}
+.thumb-cf-after {
+  animation-name: thumb-cf-after;
+}
+.thumb-cf-fill {
+  animation-name: thumb-cf-fill;
+}
+@keyframes thumb-cf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 92px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cf-before {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cf-after {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cf-fill {
+  0%,
+  20% {
+    transform: scaleX(0.967);
+  }
+  24%,
+  96% {
+    transform: scaleX(1);
+  }
+  98%,
+  100% {
+    transform: scaleX(0.967);
+  }
+}
+.thumb-cf-p0 {
+  animation-name: thumb-cf-p0;
+}
+@keyframes thumb-cf-p0 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(30px, -8px) rotate(0deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(30px, 22px) rotate(0deg);
+  }
+}
+.thumb-cf-p1 {
+  animation-name: thumb-cf-p1;
+}
+@keyframes thumb-cf-p1 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(31px, 8px) rotate(60deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(31px, 38px) rotate(120deg);
+  }
+}
+.thumb-cf-p2 {
+  animation-name: thumb-cf-p2;
+}
+@keyframes thumb-cf-p2 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(14px, 23px) rotate(120deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(14px, 53px) rotate(240deg);
+  }
+}
+.thumb-cf-p3 {
+  animation-name: thumb-cf-p3;
+}
+@keyframes thumb-cf-p3 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(-9px, 12px) rotate(180deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(-9px, 42px) rotate(360deg);
+  }
+}
+.thumb-cf-p4 {
+  animation-name: thumb-cf-p4;
+}
+@keyframes thumb-cf-p4 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(-31px, 8px) rotate(240deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(-31px, 38px) rotate(480deg);
+  }
+}
+.thumb-cf-p5 {
+  animation-name: thumb-cf-p5;
+}
+@keyframes thumb-cf-p5 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(-46px, -8px) rotate(300deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(-46px, 22px) rotate(600deg);
+  }
+}
+.thumb-cf-p6 {
+  animation-name: thumb-cf-p6;
+}
+@keyframes thumb-cf-p6 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(-24px, -20px) rotate(360deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(-24px, 10px) rotate(720deg);
+  }
+}
+.thumb-cf-p7 {
+  animation-name: thumb-cf-p7;
+}
+@keyframes thumb-cf-p7 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(-12px, -33px) rotate(420deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(-12px, -3px) rotate(840deg);
+  }
+}
+.thumb-cf-p8 {
+  animation-name: thumb-cf-p8;
+}
+@keyframes thumb-cf-p8 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(14px, -39px) rotate(480deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(14px, -9px) rotate(960deg);
+  }
+}
+.thumb-cf-p9 {
+  animation-name: thumb-cf-p9;
+}
+@keyframes thumb-cf-p9 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  21% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(24px, -20px) rotate(540deg);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(24px, 10px) rotate(1080deg);
+  }
+}
+/* Receipt summary: the total first; 품목 3개 opens the lines and pushes the sums down. */
+.thumb-rs-cursor {
+  animation-name: thumb-rs-cursor;
+}
+.thumb-rs-items {
+  animation-name: thumb-rs-items;
+}
+.thumb-rs-sum {
+  animation-name: thumb-rs-sum;
+}
+@keyframes thumb-rs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 40px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-rs-items {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  21%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-rs-sum {
+  0%,
+  20% {
+    transform: translateY(-29px);
+  }
+  26%,
+  94% {
+    transform: translateY(0);
+  }
+  98%,
+  100% {
+    transform: translateY(-29px);
+  }
+}
+/* Streak: 오늘 기록하기 fills 목 and the count becomes 10일 연속. */
+.thumb-stk-cursor {
+  animation-name: thumb-stk-cursor;
+}
+.thumb-stk-before {
+  animation-name: thumb-stk-before;
+}
+.thumb-stk-after {
+  animation-name: thumb-stk-after;
+}
+@keyframes thumb-stk-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 89px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stk-before {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stk-after {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+.thumb-stk-today {
+  animation-name: thumb-stk-today;
+}
+@keyframes thumb-stk-today {
+  0%,
+  19% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  24%,
+  96% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+/* Achievement badge: 후기 쓰기 → 후기 다섯 개 turns from 4/5 to earned. */
+.thumb-ab-cursor {
+  animation-name: thumb-ab-cursor;
+}
+.thumb-ab-locked {
+  animation-name: thumb-ab-locked;
+}
+.thumb-ab-text {
+  animation-name: thumb-ab-text;
+}
+.thumb-ab-earned {
+  animation-name: thumb-ab-earned;
+}
+@keyframes thumb-ab-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 96px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ab-locked {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-ab-text {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-ab-earned {
+  0%,
+  19% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  26%,
+  96% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+/* Completed task strikethrough: check 택배 보내기 → a line runs through it. */
+.thumb-tsk-cursor {
+  animation-name: thumb-tsk-cursor;
+}
+.thumb-tsk-before {
+  animation-name: thumb-tsk-before;
+}
+.thumb-tsk-after {
+  animation-name: thumb-tsk-after;
+}
+.thumb-tsk-line {
+  animation-name: thumb-tsk-line;
+}
+@keyframes thumb-tsk-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  22% {
+    transform: translate(40.5px, 54px);
+  }
+  36% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  42%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tsk-before {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tsk-after {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tsk-line {
+  0%,
+  22% {
+    transform: scaleX(0);
+  }
+  30%,
+  96% {
+    transform: scaleX(1);
+  }
+  98%,
+  100% {
+    transform: scaleX(0);
+  }
+}
+/* Completion stamp: 한 잔 더 → 8/8잔 → the 완료 stamp lands. */
+.thumb-cs-cursor {
+  animation-name: thumb-cs-cursor;
+}
+.thumb-cs-before {
+  animation-name: thumb-cs-before;
+}
+.thumb-cs-after {
+  animation-name: thumb-cs-after;
+}
+.thumb-cs-stamp {
+  animation-name: thumb-cs-stamp;
+}
+@keyframes thumb-cs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 94px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-cs-before {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-cs-after {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-cs-stamp {
+  0%,
+  21% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+  27%,
+  96% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+/* Send animation: type 곧 도착해요 → send → the plane flies off and the bubble rises in. */
+.thumb-snd-cursor {
+  animation-name: thumb-snd-cursor;
+}
+.thumb-snd-hint {
+  animation-name: thumb-snd-hint;
+}
+.thumb-snd-text {
+  animation-name: thumb-snd-text;
+}
+.thumb-snd-ready {
+  animation-name: thumb-snd-ready;
+}
+.thumb-snd-plane {
+  animation-name: thumb-snd-plane;
+}
+.thumb-snd-bubble {
+  animation-name: thumb-snd-bubble;
+}
+@keyframes thumb-snd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(70px, 98px);
+  }
+  28%,
+  34% {
+    transform: translate(134px, 98px);
+  }
+  48% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  54%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-snd-hint {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  34% {
+    opacity: 0;
+  }
+  35%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-snd-text {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-snd-ready {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-snd-plane {
+  0%,
+  34% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  40% {
+    opacity: 0;
+    transform: translate(8px, -8px);
+  }
+  41% {
+    opacity: 0;
+    transform: translate(-6px, 6px);
+  }
+  48%,
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes thumb-snd-bubble {
+  0%,
+  35% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  42%,
+  94% {
+    opacity: 1;
+    transform: none;
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

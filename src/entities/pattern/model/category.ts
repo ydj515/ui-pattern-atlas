@@ -108,6 +108,12 @@ export const PATTERN_CATEGORIES = [
     description: "처음 온 사람이 길을 찾게 돕는 화면",
   },
   {
+    id: "completion",
+    label: "Completion and reward",
+    labelKo: "완료와 보상",
+    description: "끝냈다는 감각을 주는 화면",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",

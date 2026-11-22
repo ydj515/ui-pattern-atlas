@@ -203,6 +203,15 @@ import { profileSetupPattern } from "@/entities/pattern/catalog/profile-setup/pa
 import { systemPermissionDialogPattern } from "@/entities/pattern/catalog/system-permission-dialog/pattern";
 import { permissionRecoveryPattern } from "@/entities/pattern/catalog/permission-recovery/pattern";
 import { limitedAccessPattern } from "@/entities/pattern/catalog/limited-access/pattern";
+import { successScreenPattern } from "@/entities/pattern/catalog/success-screen/pattern";
+import { successCheckmarkPattern } from "@/entities/pattern/catalog/success-checkmark/pattern";
+import { confettiPattern } from "@/entities/pattern/catalog/confetti/pattern";
+import { receiptSummaryPattern } from "@/entities/pattern/catalog/receipt-summary/pattern";
+import { streakPattern } from "@/entities/pattern/catalog/streak/pattern";
+import { achievementBadgePattern } from "@/entities/pattern/catalog/achievement-badge/pattern";
+import { completedTaskStrikethroughPattern } from "@/entities/pattern/catalog/completed-task-strikethrough/pattern";
+import { completionStampPattern } from "@/entities/pattern/catalog/completion-stamp/pattern";
+import { sendAnimationPattern } from "@/entities/pattern/catalog/send-animation/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -408,6 +417,15 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   systemPermissionDialogPattern,
   permissionRecoveryPattern,
   limitedAccessPattern,
+  successScreenPattern,
+  successCheckmarkPattern,
+  confettiPattern,
+  receiptSummaryPattern,
+  streakPattern,
+  achievementBadgePattern,
+  completedTaskStrikethroughPattern,
+  completionStampPattern,
+  sendAnimationPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
