@@ -44,6 +44,15 @@ import { optimisticUiPattern } from "@/entities/pattern/catalog/optimistic-ui/pa
 import { delayedSpinnerPattern } from "@/entities/pattern/catalog/delayed-spinner/pattern";
 import { loadingOverlayPattern } from "@/entities/pattern/catalog/loading-overlay/pattern";
 import { blurUpImagePattern } from "@/entities/pattern/catalog/blur-up-image/pattern";
+import { noResultsPattern } from "@/entities/pattern/catalog/no-results/pattern";
+import { offlineStatePattern } from "@/entities/pattern/catalog/offline-state/pattern";
+import { notFoundPagePattern } from "@/entities/pattern/catalog/not-found-page/pattern";
+import { permissionDeniedPattern } from "@/entities/pattern/catalog/permission-denied/pattern";
+import { maintenancePagePattern } from "@/entities/pattern/catalog/maintenance-page/pattern";
+import { noFilterResultsPattern } from "@/entities/pattern/catalog/no-filter-results/pattern";
+import { allCaughtUpPattern } from "@/entities/pattern/catalog/all-caught-up/pattern";
+import { emptiedStatePattern } from "@/entities/pattern/catalog/emptied-state/pattern";
+import { lockedContentPattern } from "@/entities/pattern/catalog/locked-content/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -90,6 +99,15 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   delayedSpinnerPattern,
   loadingOverlayPattern,
   blurUpImagePattern,
+  noResultsPattern,
+  offlineStatePattern,
+  notFoundPagePattern,
+  permissionDeniedPattern,
+  maintenancePagePattern,
+  noFilterResultsPattern,
+  allCaughtUpPattern,
+  emptiedStatePattern,
+  lockedContentPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

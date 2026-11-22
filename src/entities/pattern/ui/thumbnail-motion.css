@@ -4082,6 +4082,647 @@
   }
 }
 
+/* No results: a typo finds nothing → pick the suggestion → it is found. */
+.thumb-nr-cursor {
+  animation-name: thumb-nr-cursor;
+}
+.thumb-nr-typo {
+  animation-name: thumb-nr-typo;
+}
+.thumb-nr-fixed {
+  animation-name: thumb-nr-fixed;
+}
+.thumb-nr-empty {
+  animation-name: thumb-nr-empty;
+}
+.thumb-nr-found {
+  animation-name: thumb-nr-found;
+}
+@keyframes thumb-nr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  28% {
+    transform: translate(82px, 50px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-nr-typo {
+  0%,
+  26% {
+    opacity: 1;
+  }
+  28%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-nr-fixed {
+  0%,
+  26% {
+    opacity: 0;
+  }
+  28%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-nr-empty {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  29%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-nr-found {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  29%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Offline state: offline message → connection back → the content loads. */
+.thumb-off-cursor {
+  animation-name: thumb-off-cursor;
+}
+.thumb-off-check {
+  animation-name: thumb-off-check;
+}
+.thumb-off-state {
+  animation-name: thumb-off-state;
+}
+.thumb-off-news {
+  animation-name: thumb-off-news;
+}
+@keyframes thumb-off-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  28% {
+    transform: translate(103px, 9px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-off-check {
+  0%,
+  26% {
+    opacity: 1;
+  }
+  27%,
+  93% {
+    opacity: 0;
+  }
+  94%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-off-state {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  29%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-off-news {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  29%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* 404 page: 홈으로 가기 → the home page. */
+.thumb-nf-cursor {
+  animation-name: thumb-nf-cursor;
+}
+.thumb-nf-p404 {
+  animation-name: thumb-nf-p404;
+}
+.thumb-nf-home {
+  animation-name: thumb-nf-home;
+}
+@keyframes thumb-nf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  22%,
+  36% {
+    transform: translate(88px, 82px);
+  }
+  52% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  58%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-nf-p404 {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  36%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-nf-home {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  36%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Permission denied: 권한 요청 → 요청함 and the next step. */
+.thumb-pd-cursor {
+  animation-name: thumb-pd-cursor;
+}
+.thumb-pd-idle {
+  animation-name: thumb-pd-idle;
+}
+.thumb-pd-sent {
+  animation-name: thumb-pd-sent;
+}
+@keyframes thumb-pd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  30% {
+    transform: translate(88px, 70px);
+  }
+  46% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-pd-idle {
+  0%,
+  28% {
+    opacity: 1;
+  }
+  30%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pd-sent {
+  0%,
+  28% {
+    opacity: 0;
+  }
+  30%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Maintenance page: 끝나면 알림 받기 → confirmed. */
+.thumb-mt-cursor {
+  animation-name: thumb-mt-cursor;
+}
+.thumb-mt-idle {
+  animation-name: thumb-mt-idle;
+}
+.thumb-mt-done {
+  animation-name: thumb-mt-done;
+}
+@keyframes thumb-mt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  22%,
+  36% {
+    transform: translate(88px, 75px);
+  }
+  52% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  58%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-mt-idle {
+  0%,
+  34% {
+    opacity: 1;
+  }
+  36%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-mt-done {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  36%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* No filter results: drop 수영장 → a stay shows up. */
+.thumb-nfr-cursor {
+  animation-name: thumb-nfr-cursor;
+}
+.thumb-nfr-empty {
+  animation-name: thumb-nfr-empty;
+}
+.thumb-nfr-found {
+  animation-name: thumb-nfr-found;
+}
+@keyframes thumb-nfr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20%,
+  32% {
+    transform: translate(137px, 46px);
+  }
+  48% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  54%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-nfr-empty {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  32%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-nfr-found {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  32%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* All caught up: 확인 both notifications → 모두 확인했어요. */
+.thumb-acu-cursor {
+  animation-name: thumb-acu-cursor;
+}
+.thumb-acu-row1 {
+  animation-name: thumb-acu-row1;
+}
+.thumb-acu-row2 {
+  animation-name: thumb-acu-row2;
+}
+.thumb-acu-done {
+  animation-name: thumb-acu-done;
+}
+@keyframes thumb-acu-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(140px, 18px);
+  }
+  40%,
+  50% {
+    transform: translate(140px, 18px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-acu-row1 {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  23%,
+  95% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-acu-row2 {
+  0%,
+  21% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  49% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  51%,
+  95% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  96% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  98%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes thumb-acu-done {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  53%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Emptied state: delete the last item → empty cart → 되돌리기. */
+.thumb-emp-cursor {
+  animation-name: thumb-emp-cursor;
+}
+.thumb-emp-cart {
+  animation-name: thumb-emp-cart;
+}
+.thumb-emp-empty {
+  animation-name: thumb-emp-empty;
+}
+@keyframes thumb-emp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  22% {
+    transform: translate(133px, 39px);
+  }
+  42%,
+  54% {
+    transform: translate(62px, 54px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-emp-cart {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  21%,
+  52% {
+    opacity: 0;
+  }
+  54%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-emp-empty {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  22%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Locked content: 멤버십 시작하기 → the full article. */
+.thumb-lock-cursor {
+  animation-name: thumb-lock-cursor;
+}
+.thumb-lock-locked {
+  animation-name: thumb-lock-locked;
+}
+.thumb-lock-open {
+  animation-name: thumb-lock-open;
+}
+@keyframes thumb-lock-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20%,
+  34% {
+    transform: translate(88px, 87px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lock-locked {
+  0%,
+  32% {
+    opacity: 1;
+  }
+  34%,
+  92% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-lock-open {
+  0%,
+  32% {
+    opacity: 0;
+  }
+  34%,
+  92% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
