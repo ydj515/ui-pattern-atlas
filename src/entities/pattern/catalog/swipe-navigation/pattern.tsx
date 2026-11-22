@@ -30,7 +30,7 @@ export const swipeNavigationPattern: Pattern = {
     "보이지 않는 화면은 inert라 Tab이 넘어가지 않습니다.",
     "scroll-snap은 브라우저 기능이라 키보드 스크롤도 화면 단위로 멈춥니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Scroll snap", "inert"],
+  tags: [...BASE_TAGS, "Scroll snap", "inert"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/swipe-navigation/SwipeNavigationDemo").then(
       (m) => m.SwipeNavigationDemo,

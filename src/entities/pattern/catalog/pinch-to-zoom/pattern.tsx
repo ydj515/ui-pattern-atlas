@@ -30,7 +30,7 @@ export const pinchToZoomPattern: Pattern = {
     "user-scalable=no 같은 페이지 확대 차단은 하지 않습니다.",
     "touch-action: none은 그림 영역에만 둡니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Pointer Events", "WCAG 2.5.1"],
+  tags: [...BASE_TAGS, "Pointer Events", "WCAG 2.5.1"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/pinch-to-zoom/PinchToZoomDemo").then(
       (m) => m.PinchToZoomDemo,

@@ -30,7 +30,7 @@ export const doubleTapPattern: Pattern = {
     "touch-manipulation으로 브라우저의 두 번 눌러 확대를 막고 지연을 없앱니다.",
     "동작 줄이기 설정에서는 하트가 커지는 효과를 끕니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "aria-pressed", "Reduced motion"],
+  tags: [...BASE_TAGS, "aria-pressed", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/double-tap/DoubleTapDemo").then((m) => m.DoubleTapDemo),
   Thumbnail: DoubleTapThumbnail,

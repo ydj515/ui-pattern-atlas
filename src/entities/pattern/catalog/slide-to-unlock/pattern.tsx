@@ -30,7 +30,7 @@ export const slideToUnlockPattern: Pattern = {
     "포커스가 오면 트랙에 테두리를 보여 줍니다.",
     "되돌아가는 애니메이션은 동작 줄이기 설정에서 꺼집니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "input range", "Reduced motion"],
+  tags: [...BASE_TAGS, "input range", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/slide-to-unlock/SlideToUnlockDemo").then(
       (m) => m.SlideToUnlockDemo,

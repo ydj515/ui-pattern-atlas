@@ -30,7 +30,7 @@ export const swipeToDeletePattern: Pattern = {
     "지운 결과와 되돌리기는 role=status로 알립니다.",
     "touch-action: pan-y로 세로 스크롤은 그대로 둡니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Pointer Events", "Undo"],
+  tags: [...BASE_TAGS, "Pointer Events", "Undo"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/swipe-to-delete/SwipeToDeleteDemo").then(
       (m) => m.SwipeToDeleteDemo,

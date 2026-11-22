@@ -30,7 +30,7 @@ export const dragAndDropPattern: Pattern = {
     "놓을 칸은 이름이 있는 section이라 위치를 구분할 수 있습니다.",
     "강조는 색과 점선 테두리 두 가지로 보여 줍니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "HTML Drag and Drop", "WCAG 2.5.7"],
+  tags: [...BASE_TAGS, "HTML Drag and Drop", "WCAG 2.5.7"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/drag-and-drop/DragAndDropDemo").then(
       (m) => m.DragAndDropDemo,

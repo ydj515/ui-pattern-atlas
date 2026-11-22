@@ -30,7 +30,7 @@ export const longPressPattern: Pattern = {
     "메뉴가 열리면 첫 항목으로 포커스가 가고 Esc로 닫힙니다.",
     "8px 넘게 움직이면 취소되어 스크롤 중에 잘못 열리지 않습니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Pointer Events", "aria-haspopup"],
+  tags: [...BASE_TAGS, "Pointer Events", "aria-haspopup"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/long-press/LongPressDemo").then((m) => m.LongPressDemo),
   Thumbnail: LongPressThumbnail,

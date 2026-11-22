@@ -30,7 +30,7 @@ export const tapPattern: Pattern = {
     "touch-manipulation으로 누른 뒤의 지연을 없앱니다.",
     "누른 상태는 색으로 바로 보여 줍니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "WCAG 2.5.8", "touch-action"],
+  tags: [...BASE_TAGS, "WCAG 2.5.8", "touch-action"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/tap/TapTargetDemo").then((m) => m.TapTargetDemo),
   Thumbnail: TapTargetThumbnail,

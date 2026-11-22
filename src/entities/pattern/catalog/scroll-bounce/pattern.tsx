@@ -30,7 +30,7 @@ export const scrollBouncePattern: Pattern = {
     "늘어나는 효과는 장식이라 정보 전달에 쓰지 않습니다.",
     "동작 줄이기 설정에서는 튕기는 애니메이션을 끕니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "overscroll-behavior", "Reduced motion"],
+  tags: [...BASE_TAGS, "overscroll-behavior", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/scroll-bounce/ScrollBounceDemo").then(
       (m) => m.ScrollBounceDemo,

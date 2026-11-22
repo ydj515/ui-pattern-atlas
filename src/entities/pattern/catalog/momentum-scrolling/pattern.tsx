@@ -30,7 +30,7 @@ export const momentumScrollingPattern: Pattern = {
     "터치와 휠은 브라우저 기본 동작을 그대로 씁니다.",
     "overscroll-behavior: contain으로 끝에서 페이지가 함께 밀리지 않습니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "requestAnimationFrame", "Reduced motion"],
+  tags: [...BASE_TAGS, "requestAnimationFrame", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/momentum-scrolling/MomentumScrollDemo").then(
       (m) => m.MomentumScrollDemo,

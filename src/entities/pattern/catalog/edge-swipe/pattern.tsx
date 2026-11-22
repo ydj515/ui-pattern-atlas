@@ -30,7 +30,7 @@ export const edgeSwipePattern: Pattern = {
     "닫혀 있을 때 메뉴는 hidden이라 Tab이 들어가지 않습니다.",
     "지금 편지함은 aria-current로 표시합니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Pointer Events", "aria-expanded"],
+  tags: [...BASE_TAGS, "Pointer Events", "aria-expanded"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/edge-swipe/EdgeSwipeDemo").then((m) => m.EdgeSwipeDemo),
   Thumbnail: EdgeSwipeThumbnail,

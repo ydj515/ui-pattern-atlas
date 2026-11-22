@@ -30,7 +30,7 @@ export const swipeToDismissPattern: Pattern = {
     "끄는 영역은 손잡이로 한정해 시트 안의 스크롤을 막지 않습니다.",
     "동작 줄이기 설정에서는 되돌아가는 애니메이션을 끕니다.",
   ],
-  tags: [...BASE_TAGS, "React", "Tailwind CSS", "Pointer Events", "Reduced motion"],
+  tags: [...BASE_TAGS, "Pointer Events", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/swipe-to-dismiss/SwipeToDismissDemo").then(
       (m) => m.SwipeToDismissDemo,
