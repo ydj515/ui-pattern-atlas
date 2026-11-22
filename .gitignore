@@ -5,6 +5,7 @@ storybook-static/
 *.local
 .DS_Store
 .vite/
+*.tsbuildinfo
 
 # Local design references and planning notes
 /references/
