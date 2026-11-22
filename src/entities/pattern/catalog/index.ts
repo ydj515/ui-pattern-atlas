@@ -152,6 +152,18 @@ import { dashboardLayoutPattern } from "@/entities/pattern/catalog/dashboard-lay
 import { magazineLayoutPattern } from "@/entities/pattern/catalog/magazine-layout/pattern";
 import { zPatternPattern } from "@/entities/pattern/catalog/z-pattern/pattern";
 import { fullBleedPattern } from "@/entities/pattern/catalog/full-bleed/pattern";
+import { swipeToDeletePattern } from "@/entities/pattern/catalog/swipe-to-delete/pattern";
+import { dragAndDropPattern } from "@/entities/pattern/catalog/drag-and-drop/pattern";
+import { longPressPattern } from "@/entities/pattern/catalog/long-press/pattern";
+import { swipeToDismissPattern } from "@/entities/pattern/catalog/swipe-to-dismiss/pattern";
+import { pinchToZoomPattern } from "@/entities/pattern/catalog/pinch-to-zoom/pattern";
+import { swipeNavigationPattern } from "@/entities/pattern/catalog/swipe-navigation/pattern";
+import { doubleTapPattern } from "@/entities/pattern/catalog/double-tap/pattern";
+import { tapPattern } from "@/entities/pattern/catalog/tap/pattern";
+import { edgeSwipePattern } from "@/entities/pattern/catalog/edge-swipe/pattern";
+import { momentumScrollingPattern } from "@/entities/pattern/catalog/momentum-scrolling/pattern";
+import { scrollBouncePattern } from "@/entities/pattern/catalog/scroll-bounce/pattern";
+import { slideToUnlockPattern } from "@/entities/pattern/catalog/slide-to-unlock/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -306,6 +318,18 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   magazineLayoutPattern,
   zPatternPattern,
   fullBleedPattern,
+  swipeToDeletePattern,
+  dragAndDropPattern,
+  longPressPattern,
+  swipeToDismissPattern,
+  pinchToZoomPattern,
+  swipeNavigationPattern,
+  doubleTapPattern,
+  tapPattern,
+  edgeSwipePattern,
+  momentumScrollingPattern,
+  scrollBouncePattern,
+  slideToUnlockPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

@@ -13876,6 +13876,1105 @@
   }
 }
 
+/* Swipe to delete: slide 장보기 left, tap 삭제, the row collapses, 되돌리기 appears. */
+.thumb-std-cursor {
+  animation-name: thumb-std-cursor;
+}
+.thumb-std-slide {
+  animation-name: thumb-std-slide;
+}
+.thumb-std-row {
+  animation-name: thumb-std-row;
+}
+.thumb-std-last {
+  animation-name: thumb-std-last;
+}
+.thumb-std-toast {
+  animation-name: thumb-std-toast;
+}
+@keyframes thumb-std-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12% {
+    transform: translate(120px, 52px);
+  }
+  30% {
+    transform: translate(86px, 52px);
+  }
+  40%,
+  46% {
+    transform: translate(143px, 52px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-std-slide {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  30%,
+  96% {
+    transform: translateX(-34px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-std-row {
+  0%,
+  46% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  52%,
+  96% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  98%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes thumb-std-last {
+  0%,
+  48% {
+    transform: translateY(20px);
+  }
+  54%,
+  94% {
+    transform: translateY(0);
+  }
+  98%,
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes thumb-std-toast {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Drag and drop: 디자인 검토 moves from 할 일 to 완료; the zone lights up on hover. */
+.thumb-dnd-cursor {
+  animation-name: thumb-dnd-cursor;
+}
+.thumb-dnd-card {
+  animation-name: thumb-dnd-card;
+}
+.thumb-dnd-over {
+  animation-name: thumb-dnd-over;
+}
+.thumb-dnd-rest {
+  animation-name: thumb-dnd-rest;
+}
+.thumb-dnd-msg {
+  animation-name: thumb-dnd-msg;
+}
+@keyframes thumb-dnd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  16% {
+    transform: translate(40px, 35px);
+  }
+  50% {
+    transform: translate(122px, 49px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dnd-card {
+  0%,
+  16% {
+    transform: translate(0, 0);
+  }
+  50%,
+  94% {
+    transform: translate(82px, 16px);
+  }
+  98%,
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes thumb-dnd-over {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-dnd-rest {
+  0%,
+  50% {
+    transform: translateY(14px);
+  }
+  56%,
+  94% {
+    transform: translateY(0);
+  }
+  98%,
+  100% {
+    transform: translateY(14px);
+  }
+}
+@keyframes thumb-dnd-msg {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Long press: hold the bubble until the ring fills → 답장 · 복사 · 고정 → 고정 선택함. */
+.thumb-lp-cursor {
+  animation-name: thumb-lp-cursor;
+}
+.thumb-lp-bubble {
+  animation-name: thumb-lp-bubble;
+}
+.thumb-lp-ring {
+  animation-name: thumb-lp-ring;
+}
+.thumb-lp-menu {
+  animation-name: thumb-lp-menu;
+}
+.thumb-lp-done {
+  animation-name: thumb-lp-done;
+}
+@keyframes thumb-lp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  40% {
+    transform: translate(60px, 27px);
+  }
+  54%,
+  62% {
+    transform: translate(87px, 51px);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-lp-bubble {
+  0%,
+  13% {
+    transform: scale(1);
+  }
+  16%,
+  38% {
+    transform: scale(0.95);
+  }
+  42%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thumb-lp-ring {
+  0%,
+  13% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  38% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  42%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes thumb-lp-menu {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  63% {
+    opacity: 1;
+  }
+  64%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-lp-done {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  64%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Swipe to dismiss: 공유하기 opens the sheet; dragging the handle down closes it. */
+.thumb-sdm-cursor {
+  animation-name: thumb-sdm-cursor;
+}
+.thumb-sdm-sheet {
+  animation-name: thumb-sdm-sheet;
+}
+.thumb-sdm-scrim {
+  animation-name: thumb-sdm-scrim;
+}
+@keyframes thumb-sdm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(26px, 81px);
+  }
+  34%,
+  38% {
+    transform: translate(88px, 52px);
+  }
+  60% {
+    transform: translate(88px, 100px);
+  }
+  74% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sdm-sheet {
+  0%,
+  18% {
+    transform: translateY(70px);
+  }
+  26%,
+  38% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(48px);
+  }
+  66%,
+  100% {
+    transform: translateY(70px);
+  }
+}
+@keyframes thumb-sdm-scrim {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  26%,
+  58% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Pinch to zoom: two fingers spread and the map grows to 200%. */
+.thumb-pz-map {
+  animation-name: thumb-pz-map;
+}
+.thumb-pz-f1 {
+  animation-name: thumb-pz-f1;
+}
+.thumb-pz-f2 {
+  animation-name: thumb-pz-f2;
+}
+.thumb-pz-p100 {
+  animation-name: thumb-pz-p100;
+}
+.thumb-pz-p200 {
+  animation-name: thumb-pz-p200;
+}
+@keyframes thumb-pz-map {
+  0%,
+  20% {
+    transform: scale(1);
+  }
+  60%,
+  92% {
+    transform: scale(2);
+  }
+  98%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thumb-pz-f1 {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  14%,
+  20% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-28px, -10px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(-28px, -10px);
+  }
+}
+@keyframes thumb-pz-f2 {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  14%,
+  20% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(28px, 10px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(28px, 10px);
+  }
+}
+@keyframes thumb-pz-p100 {
+  0%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-pz-p200 {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Swipe navigation: drag 오늘 aside and 내일 snaps in. */
+.thumb-sn-cursor {
+  animation-name: thumb-sn-cursor;
+}
+.thumb-sn-track {
+  animation-name: thumb-sn-track;
+}
+.thumb-sn-t1 {
+  animation-name: thumb-sn-t1;
+}
+.thumb-sn-t2 {
+  animation-name: thumb-sn-t2;
+}
+@keyframes thumb-sn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14% {
+    transform: translate(120px, 60px);
+  }
+  40% {
+    transform: translate(60px, 60px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sn-track {
+  0%,
+  14% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-60px);
+  }
+  48%,
+  94% {
+    transform: translateX(-120px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-sn-t1 {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-sn-t2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Double tap: two taps on the photo → heart → 좋아요 13. */
+.thumb-dt-cursor {
+  animation-name: thumb-dt-cursor;
+}
+.thumb-dt-burst {
+  animation-name: thumb-dt-burst;
+}
+.thumb-dt-off {
+  animation-name: thumb-dt-off;
+}
+.thumb-dt-on {
+  animation-name: thumb-dt-on;
+}
+@keyframes thumb-dt-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(88px, 44px);
+  }
+  22% {
+    transform: translate(88px, 46px);
+  }
+  24% {
+    transform: translate(88px, 44px);
+  }
+  26% {
+    transform: translate(88px, 46px);
+  }
+  28%,
+  40% {
+    transform: translate(88px, 44px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-dt-burst {
+  0%,
+  28% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  42% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes thumb-dt-off {
+  0%,
+  31% {
+    opacity: 1;
+  }
+  32%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-dt-on {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Tap: show the 44px area, tap ×, the alert closes. */
+.thumb-tap-cursor {
+  animation-name: thumb-tap-cursor;
+}
+.thumb-tap-check {
+  animation-name: thumb-tap-check;
+}
+.thumb-tap-area {
+  animation-name: thumb-tap-area;
+}
+.thumb-tap-press {
+  animation-name: thumb-tap-press;
+}
+.thumb-tap-card {
+  animation-name: thumb-tap-card;
+}
+.thumb-tap-done {
+  animation-name: thumb-tap-done;
+}
+@keyframes thumb-tap-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  18% {
+    transform: translate(18px, 68px);
+  }
+  30%,
+  40% {
+    transform: translate(151px, 35px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-tap-check {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tap-area {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tap-press {
+  0%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  46% {
+    opacity: 1;
+  }
+  47%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-tap-card {
+  0%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  97% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-tap-done {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Edge swipe: pull from the left edge, pick 보낸 편지함. */
+.thumb-es-cursor {
+  animation-name: thumb-es-cursor;
+}
+.thumb-es-panel {
+  animation-name: thumb-es-panel;
+}
+.thumb-es-scrim {
+  animation-name: thumb-es-scrim;
+}
+.thumb-es-inbox {
+  animation-name: thumb-es-inbox;
+}
+.thumb-es-sent {
+  animation-name: thumb-es-sent;
+}
+@keyframes thumb-es-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12% {
+    transform: translate(2px, 60px);
+  }
+  36% {
+    transform: translate(96px, 60px);
+  }
+  46%,
+  56% {
+    transform: translate(40px, 37px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-es-panel {
+  0%,
+  12% {
+    transform: translateX(-96px);
+  }
+  36%,
+  56% {
+    transform: translateX(0);
+  }
+  62%,
+  100% {
+    transform: translateX(-96px);
+  }
+}
+.thumb-es-pick {
+  animation-name: thumb-es-pick;
+}
+@keyframes thumb-es-pick {
+  0%,
+  55% {
+    transform: translateY(0);
+  }
+  57%,
+  100% {
+    transform: translateY(18px);
+  }
+}
+@keyframes thumb-es-scrim {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  36%,
+  56% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes thumb-es-inbox {
+  0%,
+  57% {
+    opacity: 1;
+  }
+  58%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-es-sent {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+/* Momentum scrolling: a short flick, then the list glides and slows down. */
+.thumb-ms-cursor {
+  animation-name: thumb-ms-cursor;
+}
+.thumb-ms-list {
+  animation-name: thumb-ms-list;
+  animation-timing-function: linear;
+}
+@keyframes thumb-ms-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12% {
+    transform: translate(88px, 90px);
+  }
+  22% {
+    transform: translate(88px, 50px);
+  }
+  36% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  42%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-ms-list {
+  0%,
+  12% {
+    transform: translateY(0);
+  }
+  22% {
+    transform: translateY(-40px);
+  }
+  30% {
+    transform: translateY(-72px);
+  }
+  38% {
+    transform: translateY(-94px);
+  }
+  48% {
+    transform: translateY(-108px);
+  }
+  60% {
+    transform: translateY(-115px);
+  }
+  72%,
+  92% {
+    transform: translateY(-118px);
+  }
+  98%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Scroll bounce: pulling past the top stretches the list; it springs back. */
+.thumb-sb-cursor {
+  animation-name: thumb-sb-cursor;
+}
+.thumb-sb-list {
+  animation-name: thumb-sb-list;
+}
+@keyframes thumb-sb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12% {
+    transform: translate(88px, 40px);
+  }
+  40%,
+  44% {
+    transform: translate(88px, 80px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-sb-list {
+  0%,
+  12% {
+    transform: translateY(0);
+  }
+  40%,
+  44% {
+    transform: translateY(13px);
+  }
+  54% {
+    transform: translateY(-2px);
+  }
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Slide to unlock: drag the knob to the end → 잠금이 해제됐어요. */
+.thumb-stu-cursor {
+  animation-name: thumb-stu-cursor;
+}
+.thumb-stu-knob {
+  animation-name: thumb-stu-knob;
+}
+.thumb-stu-hint {
+  animation-name: thumb-stu-hint;
+}
+.thumb-stu-lock {
+  animation-name: thumb-stu-lock;
+}
+.thumb-stu-open {
+  animation-name: thumb-stu-open;
+}
+@keyframes thumb-stu-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  12%,
+  16% {
+    transform: translate(39px, 85px);
+  }
+  46% {
+    transform: translate(137px, 85px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+@keyframes thumb-stu-knob {
+  0%,
+  16% {
+    transform: translateX(0);
+  }
+  46%,
+  94% {
+    transform: translateX(98px);
+  }
+  97%,
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes thumb-stu-hint {
+  0%,
+  16% {
+    opacity: 1;
+  }
+  36%,
+  94% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stu-lock {
+  0%,
+  54% {
+    opacity: 1;
+  }
+  55%,
+  97% {
+    opacity: 0;
+  }
+  98%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thumb-stu-open {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  94% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
