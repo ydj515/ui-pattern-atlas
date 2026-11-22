@@ -189,6 +189,20 @@ import { fadeUpPattern } from "@/entities/pattern/catalog/fade-up/pattern";
 import { animatedHighlightPattern } from "@/entities/pattern/catalog/animated-highlight/pattern";
 import { maskRevealPattern } from "@/entities/pattern/catalog/mask-reveal/pattern";
 import { blurInPattern } from "@/entities/pattern/catalog/blur-in/pattern";
+import { onboardingCarouselPattern } from "@/entities/pattern/catalog/onboarding-carousel/pattern";
+import { coachMarkPattern } from "@/entities/pattern/catalog/coach-mark/pattern";
+import { productTourPattern } from "@/entities/pattern/catalog/product-tour/pattern";
+import { setupChecklistPattern } from "@/entities/pattern/catalog/setup-checklist/pattern";
+import { permissionPrimingPattern } from "@/entities/pattern/catalog/permission-priming/pattern";
+import { welcomeScreenPattern } from "@/entities/pattern/catalog/welcome-screen/pattern";
+import { whatsNewPattern } from "@/entities/pattern/catalog/whats-new/pattern";
+import { splashScreenPattern } from "@/entities/pattern/catalog/splash-screen/pattern";
+import { socialSignInPattern } from "@/entities/pattern/catalog/social-sign-in/pattern";
+import { termsAgreementPattern } from "@/entities/pattern/catalog/terms-agreement/pattern";
+import { profileSetupPattern } from "@/entities/pattern/catalog/profile-setup/pattern";
+import { systemPermissionDialogPattern } from "@/entities/pattern/catalog/system-permission-dialog/pattern";
+import { permissionRecoveryPattern } from "@/entities/pattern/catalog/permission-recovery/pattern";
+import { limitedAccessPattern } from "@/entities/pattern/catalog/limited-access/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -380,6 +394,20 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   animatedHighlightPattern,
   maskRevealPattern,
   blurInPattern,
+  onboardingCarouselPattern,
+  coachMarkPattern,
+  productTourPattern,
+  setupChecklistPattern,
+  permissionPrimingPattern,
+  welcomeScreenPattern,
+  whatsNewPattern,
+  splashScreenPattern,
+  socialSignInPattern,
+  termsAgreementPattern,
+  profileSetupPattern,
+  systemPermissionDialogPattern,
+  permissionRecoveryPattern,
+  limitedAccessPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

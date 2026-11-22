@@ -102,6 +102,12 @@ export const PATTERN_CATEGORIES = [
     description: "숫자와 글자가 움직이는 표현",
   },
   {
+    id: "onboarding",
+    label: "Onboarding",
+    labelKo: "첫 실행",
+    description: "처음 온 사람이 길을 찾게 돕는 화면",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",
