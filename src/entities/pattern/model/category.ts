@@ -168,6 +168,12 @@ export const PATTERN_CATEGORIES = [
     description: "지우고, 나가고, 덮어쓰기 전에 지키고 되돌리게 하는 화면",
   },
   {
+    id: "leave-return",
+    label: "Leaving and coming back",
+    labelKo: "떠남과 다시 옴",
+    description: "자리를 비우고, 해지하고, 오랜만에 돌아오는 순간의 화면",
+  },
+  {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",

@@ -43312,6 +43312,449 @@
   }
 }
 
+/* Situations: leaving and returning (thumb-lr-). */
+.thumb-lr-so-cursor {
+  animation-name: thumb-lr-so-cursor;
+}
+.thumb-lr-so-t3 {
+  animation-name: thumb-lr-so-t3;
+}
+.thumb-lr-so-t2 {
+  animation-name: thumb-lr-so-t2;
+}
+.thumb-lr-so-t1 {
+  animation-name: thumb-lr-so-t1;
+}
+.thumb-lr-so-t60 {
+  animation-name: thumb-lr-so-t60;
+}
+.thumb-lr-so-warn {
+  animation-name: thumb-lr-so-warn;
+}
+.thumb-lr-so-out {
+  animation-name: thumb-lr-so-out;
+}
+.thumb-lr-so-done {
+  animation-name: thumb-lr-so-done;
+}
+.thumb-lr-rp-cursor {
+  animation-name: thumb-lr-rp-cursor;
+}
+.thumb-lr-rp-card {
+  animation-name: thumb-lr-rp-card;
+}
+.thumb-lr-rp-done {
+  animation-name: thumb-lr-rp-done;
+}
+.thumb-lr-sc-cursor {
+  animation-name: thumb-lr-sc-cursor;
+}
+.thumb-lr-sc-pick {
+  animation-name: thumb-lr-sc-pick;
+}
+.thumb-lr-sc-done {
+  animation-name: thumb-lr-sc-done;
+}
+.thumb-lr-da-cursor {
+  animation-name: thumb-lr-da-cursor;
+}
+.thumb-lr-da-done {
+  animation-name: thumb-lr-da-done;
+}
+.thumb-lr-up-cursor {
+  animation-name: thumb-lr-up-cursor;
+}
+.thumb-lr-up-opt {
+  animation-name: thumb-lr-up-opt;
+}
+.thumb-lr-up-req {
+  animation-name: thumb-lr-up-req;
+}
+.thumb-lr-up-done {
+  animation-name: thumb-lr-up-done;
+}
+.thumb-lr-up-seg {
+  animation-name: thumb-lr-up-seg;
+}
+
+/* Session timeout: the time runs out, what was kept is said, one step back in. */
+
+@keyframes thumb-lr-so-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  52%,
+  58% {
+    transform: translate(89px, 57px);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-lr-so-t3 {
+  0%,
+  11% {
+    opacity: 1;
+  }
+  12%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-lr-so-t2 {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-so-t1 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-so-t60 {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-so-warn {
+  0%,
+  35% {
+    opacity: 1;
+  }
+  36%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-lr-so-out {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  59% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-so-done {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Resume prompt: one button goes back to where it stopped. */
+
+@keyframes thumb-lr-rp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  20%,
+  26% {
+    transform: translate(71px, 70px);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  46%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-lr-rp-card {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-lr-rp-done {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Subscription cancellation: an optional reason, then cancel beside a pause. */
+
+@keyframes thumb-lr-sc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(74px, 70px);
+  }
+  40%,
+  46% {
+    transform: translate(123px, 93px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-lr-sc-pick {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-sc-done {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Dormant account: which account, what was kept, one step back in. */
+
+@keyframes thumb-lr-da-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  24%,
+  30% {
+    transform: translate(89px, 95px);
+  }
+  44% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-lr-da-done {
+  0%,
+  31% {
+    opacity: 0;
+  }
+  32%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Update prompt: the required update drops the later button and says why. */
+
+@keyframes thumb-lr-up-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(122px, 20px);
+  }
+  42%,
+  48% {
+    transform: translate(89px, 83px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-lr-up-opt {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-lr-up-req {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-up-done {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-lr-up-seg {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  22%,
+  96% {
+    transform: translateX(67px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

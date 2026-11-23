@@ -37,13 +37,13 @@ describe("catalog page", () => {
     expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
     // Every catalog pattern plus every comparison guide that ships a demo.
     const demoCount = PATTERNS.length + Object.keys(COMPARISON_GUIDES).length;
-    expect(screen.getByRole("status")).toHaveTextContent(`442개 항목 · 데모 ${demoCount}개`);
+    expect(screen.getByRole("status")).toHaveTextContent(`447개 항목 · 데모 ${demoCount}개`);
     const itemLinks = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href") ?? "")
       .filter((href) => /^\/(patterns\/|concepts\/|roadmap\?|compare\/)/.test(href));
-    expect(itemLinks).toHaveLength(442);
-    expect(new Set(itemLinks).size).toBe(442);
+    expect(itemLinks).toHaveLength(447);
+    expect(new Set(itemLinks).size).toBe(447);
   });
 
   it("serves concepts under /concepts and moves a concept opened under /patterns", () => {
@@ -186,6 +186,7 @@ describe("catalog page", () => {
       "주문과 결제",
       "설정과 권한",
       "위험한 동작과 되돌리기",
+      "떠남과 다시 옴",
     ]);
     await userEvent.click(categories.getByRole("button", { name: "디자인 스타일" }));
     expect(

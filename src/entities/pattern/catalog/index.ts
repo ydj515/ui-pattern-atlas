@@ -391,6 +391,11 @@ import { autosaveIndicatorPattern } from "@/entities/pattern/catalog/autosave-in
 import { unsavedChangesPattern } from "@/entities/pattern/catalog/unsaved-changes/pattern";
 import { bulkActionsPattern } from "@/entities/pattern/catalog/bulk-actions/pattern";
 import { versionHistoryPattern } from "@/entities/pattern/catalog/version-history/pattern";
+import { sessionTimeoutPattern } from "@/entities/pattern/catalog/session-timeout/pattern";
+import { resumePromptPattern } from "@/entities/pattern/catalog/resume-prompt/pattern";
+import { subscriptionCancellationPattern } from "@/entities/pattern/catalog/subscription-cancellation/pattern";
+import { dormantAccountPattern } from "@/entities/pattern/catalog/dormant-account/pattern";
+import { updatePromptPattern } from "@/entities/pattern/catalog/update-prompt/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -784,6 +789,11 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   unsavedChangesPattern,
   bulkActionsPattern,
   versionHistoryPattern,
+  sessionTimeoutPattern,
+  resumePromptPattern,
+  subscriptionCancellationPattern,
+  dormantAccountPattern,
+  updatePromptPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
