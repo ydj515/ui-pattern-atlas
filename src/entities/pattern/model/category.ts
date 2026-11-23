@@ -138,6 +138,12 @@ export const PATTERN_CATEGORIES = [
     description: "같은 화면을 다른 스타일로 그린 비교",
   },
   {
+    id: "dark-pattern-ux",
+    label: "Dark patterns and UX psychology",
+    labelKo: "다크 패턴과 UX 심리",
+    description: "사람을 속이는 화면과, 행동에 영향을 주는 원리",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",

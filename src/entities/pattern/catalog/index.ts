@@ -269,6 +269,29 @@ import { minimalismPattern } from "@/entities/pattern/catalog/minimalism/pattern
 import { neoBrutalismPattern } from "@/entities/pattern/catalog/neo-brutalism/pattern";
 import { threeDIconPattern } from "@/entities/pattern/catalog/three-d-icon/pattern";
 import { liquidGlassPattern } from "@/entities/pattern/catalog/liquid-glass/pattern";
+import { confirmshamingPattern } from "@/entities/pattern/catalog/confirmshaming/pattern";
+import { preCheckedOptInPattern } from "@/entities/pattern/catalog/pre-checked-opt-in/pattern";
+import { roachMotelPattern } from "@/entities/pattern/catalog/roach-motel/pattern";
+import { hiddenCostsPattern } from "@/entities/pattern/catalog/hidden-costs/pattern";
+import { fakeUrgencyPattern } from "@/entities/pattern/catalog/fake-urgency/pattern";
+import { disguisedAdsPattern } from "@/entities/pattern/catalog/disguised-ads/pattern";
+import { naggingPattern } from "@/entities/pattern/catalog/nagging/pattern";
+import { hicksLawPattern } from "@/entities/pattern/catalog/hicks-law/pattern";
+import { fittsLawPattern } from "@/entities/pattern/catalog/fitts-law/pattern";
+import { jakobsLawPattern } from "@/entities/pattern/catalog/jakobs-law/pattern";
+import { vonRestorffEffectPattern } from "@/entities/pattern/catalog/von-restorff-effect/pattern";
+import { peakEndRulePattern } from "@/entities/pattern/catalog/peak-end-rule/pattern";
+import { zeigarnikEffectPattern } from "@/entities/pattern/catalog/zeigarnik-effect/pattern";
+import { anchoringPattern } from "@/entities/pattern/catalog/anchoring/pattern";
+import { sneakIntoBasketPattern } from "@/entities/pattern/catalog/sneak-into-basket/pattern";
+import { fakeScarcityPattern } from "@/entities/pattern/catalog/fake-scarcity/pattern";
+import { forcedContinuityPattern } from "@/entities/pattern/catalog/forced-continuity/pattern";
+import { lossAversionPattern } from "@/entities/pattern/catalog/loss-aversion/pattern";
+import { defaultEffectPattern } from "@/entities/pattern/catalog/default-effect/pattern";
+import { socialProofPattern } from "@/entities/pattern/catalog/social-proof/pattern";
+import { scarcityPattern } from "@/entities/pattern/catalog/scarcity/pattern";
+import { framingEffectPattern } from "@/entities/pattern/catalog/framing-effect/pattern";
+import { choiceOverloadPattern } from "@/entities/pattern/catalog/choice-overload/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -540,6 +563,29 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   neoBrutalismPattern,
   threeDIconPattern,
   liquidGlassPattern,
+  confirmshamingPattern,
+  preCheckedOptInPattern,
+  roachMotelPattern,
+  hiddenCostsPattern,
+  fakeUrgencyPattern,
+  disguisedAdsPattern,
+  naggingPattern,
+  hicksLawPattern,
+  fittsLawPattern,
+  jakobsLawPattern,
+  vonRestorffEffectPattern,
+  peakEndRulePattern,
+  zeigarnikEffectPattern,
+  anchoringPattern,
+  sneakIntoBasketPattern,
+  fakeScarcityPattern,
+  forcedContinuityPattern,
+  lossAversionPattern,
+  defaultEffectPattern,
+  socialProofPattern,
+  scarcityPattern,
+  framingEffectPattern,
+  choiceOverloadPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
