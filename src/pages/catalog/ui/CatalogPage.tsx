@@ -6,8 +6,10 @@ import {
   resolveCatalogCategory,
   ROADMAP_TOPICS,
   catalogSectionFor,
+  comparisonSlug,
   type RoadmapEntry,
 } from "@/entities/pattern/catalog/roadmap";
+import { COMPARISON_THUMBNAILS } from "@/entities/pattern/catalog/comparisons/ComparisonThumbnails";
 import { roadmapEntryDestination, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { PatternCard } from "@/entities/pattern/ui/PatternCard";
@@ -93,6 +95,48 @@ function ReferenceList({
           </Link>
         </li>
       ))}
+    </ul>
+  );
+}
+
+/** Comparison guides as dictionary-style cards: a looping miniature of both sides, then the pair. */
+function ComparisonGrid({
+  references,
+  returnSearch,
+}: {
+  readonly references: readonly CatalogReference[];
+  readonly returnSearch: string;
+}) {
+  return (
+    <ul
+      aria-label="비교 가이드"
+      className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    >
+      {references.map(({ entry, href, status }) => {
+        const Thumbnail = COMPARISON_THUMBNAILS[comparisonSlug(entry)];
+        return (
+          <li key={href}>
+            <Link to={href} state={{ returnSearch }} className="group block">
+              <div
+                aria-hidden="true"
+                className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
+              >
+                {Thumbnail ? <Thumbnail /> : null}
+              </div>
+              <h3 className="mt-3.5">
+                <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
+                  {entry.nameKo}
+                </span>{" "}
+                <span className="mt-0.5 block text-caption font-normal text-graphite">
+                  {entry.name}
+                </span>
+              </h3>
+              <p className="mt-1 text-body-sm text-ink/80">{entry.description}</p>
+              <p className="mt-1 text-micro text-graphite">{status}</p>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -258,7 +302,11 @@ export function CatalogPage() {
                   />
                 ) : null}
                 {references.length > 0 ? (
-                  <ReferenceList references={references} query="" returnSearch={returnSearch} />
+                  topic.kind === "비교" ? (
+                    <ComparisonGrid references={references} returnSearch={returnSearch} />
+                  ) : (
+                    <ReferenceList references={references} query="" returnSearch={returnSearch} />
+                  )
                 ) : null}
               </div>
             </section>

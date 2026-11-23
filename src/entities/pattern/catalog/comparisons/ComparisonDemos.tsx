@@ -1,6 +1,7 @@
 import { useEffect, useState, type ComponentType } from "react";
 
 import { MORE_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
+import { REST_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosRest";
 import {
   Panel,
   Panels,
@@ -343,4 +344,5 @@ export const COMPARISON_DEMOS: Readonly<Record<string, ComparisonDemo>> = {
     Preview: SpinnerAndSkeleton,
   },
   ...MORE_COMPARISON_DEMOS,
+  ...REST_COMPARISON_DEMOS,
 };
