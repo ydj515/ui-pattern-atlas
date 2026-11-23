@@ -43,6 +43,7 @@ const SITUATION_TOPICS: readonly string[] = [
   "ai",
   "pricing-display",
   "search-discovery",
+  "auth",
 ];
 
 export const CATALOG_SECTIONS = [

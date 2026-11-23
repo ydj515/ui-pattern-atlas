@@ -367,6 +367,12 @@ import { waffleChartPattern } from "@/entities/pattern/catalog/waffle-chart/patt
 import { calendarHeatmapPattern } from "@/entities/pattern/catalog/calendar-heatmap/pattern";
 import { slopeChartPattern } from "@/entities/pattern/catalog/slope-chart/pattern";
 import { polarAreaChartPattern } from "@/entities/pattern/catalog/polar-area-chart/pattern";
+import { loginFormPattern } from "@/entities/pattern/catalog/login-form/pattern";
+import { signupFormPattern } from "@/entities/pattern/catalog/signup-form/pattern";
+import { emailVerificationPattern } from "@/entities/pattern/catalog/email-verification/pattern";
+import { passwordResetPattern } from "@/entities/pattern/catalog/password-reset/pattern";
+import { twoFactorAuthPattern } from "@/entities/pattern/catalog/two-factor-auth/pattern";
+import { accountDeletionPattern } from "@/entities/pattern/catalog/account-deletion/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -736,6 +742,12 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   calendarHeatmapPattern,
   slopeChartPattern,
   polarAreaChartPattern,
+  loginFormPattern,
+  signupFormPattern,
+  emailVerificationPattern,
+  passwordResetPattern,
+  twoFactorAuthPattern,
+  accountDeletionPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

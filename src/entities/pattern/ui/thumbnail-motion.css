@@ -40312,6 +40312,704 @@
   }
 }
 
+/* Situations: sign-up and login (thumb-auth-). */
+.thumb-auth-lf-cursor {
+  animation-name: thumb-auth-lf-cursor;
+}
+.thumb-auth-lf-email {
+  animation-name: thumb-auth-lf-email;
+}
+.thumb-auth-lf-pw {
+  animation-name: thumb-auth-lf-pw;
+}
+.thumb-auth-lf-bad {
+  animation-name: thumb-auth-lf-bad;
+}
+.thumb-auth-sf-cursor {
+  animation-name: thumb-auth-sf-cursor;
+}
+.thumb-auth-sf-email {
+  animation-name: thumb-auth-sf-email;
+}
+.thumb-auth-sf-taken {
+  animation-name: thumb-auth-sf-taken;
+}
+.thumb-auth-sf-pw {
+  animation-name: thumb-auth-sf-pw;
+}
+.thumb-auth-sf-rule-from {
+  animation-name: thumb-auth-sf-rule-from;
+}
+.thumb-auth-sf-rule-to {
+  animation-name: thumb-auth-sf-rule-to;
+}
+.thumb-auth-ev-cursor {
+  animation-name: thumb-auth-ev-cursor;
+}
+.thumb-auth-ev-ready {
+  animation-name: thumb-auth-ev-ready;
+}
+.thumb-auth-ev-w0 {
+  animation-name: thumb-auth-ev-w0;
+}
+.thumb-auth-ev-w1 {
+  animation-name: thumb-auth-ev-w1;
+}
+.thumb-auth-ev-w2 {
+  animation-name: thumb-auth-ev-w2;
+}
+.thumb-auth-ev-sent {
+  animation-name: thumb-auth-ev-sent;
+}
+.thumb-auth-pr-cursor {
+  animation-name: thumb-auth-pr-cursor;
+}
+.thumb-auth-pr-form {
+  animation-name: thumb-auth-pr-form;
+}
+.thumb-auth-pr-sent {
+  animation-name: thumb-auth-pr-sent;
+}
+.thumb-auth-pr-email-from {
+  animation-name: thumb-auth-pr-email-from;
+}
+.thumb-auth-pr-email-to {
+  animation-name: thumb-auth-pr-email-to;
+}
+.thumb-auth-tf-cursor {
+  animation-name: thumb-auth-tf-cursor;
+}
+.thumb-auth-tf-c0 {
+  animation-name: thumb-auth-tf-c0;
+}
+.thumb-auth-tf-c1 {
+  animation-name: thumb-auth-tf-c1;
+}
+.thumb-auth-tf-c2 {
+  animation-name: thumb-auth-tf-c2;
+}
+.thumb-auth-tf-bad {
+  animation-name: thumb-auth-tf-bad;
+}
+.thumb-auth-tf-form {
+  animation-name: thumb-auth-tf-form;
+}
+.thumb-auth-tf-done {
+  animation-name: thumb-auth-tf-done;
+}
+.thumb-auth-ad-cursor {
+  animation-name: thumb-auth-ad-cursor;
+}
+.thumb-auth-ad-typed {
+  animation-name: thumb-auth-ad-typed;
+}
+.thumb-auth-ad-lock {
+  animation-name: thumb-auth-ad-lock;
+}
+.thumb-auth-ad-form {
+  animation-name: thumb-auth-ad-form;
+}
+.thumb-auth-ad-done {
+  animation-name: thumb-auth-ad-done;
+}
+
+/* Login form: type both fields, 로그인 → one message for either field. */
+
+@keyframes thumb-auth-lf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(70px, 41px);
+  }
+  20%,
+  24% {
+    transform: translate(70px, 63px);
+  }
+  34%,
+  40% {
+    transform: translate(89px, 85px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-lf-email {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-lf-pw {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-lf-bad {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Signup form: a taken email shows on leaving the field; rules tick off. */
+
+@keyframes thumb-auth-sf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(70px, 40px);
+  }
+  24%,
+  30% {
+    transform: translate(70px, 66px);
+  }
+  50%,
+  56% {
+    transform: translate(89px, 98px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  76%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-sf-email {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-sf-taken {
+  0%,
+  29% {
+    opacity: 0;
+  }
+  30%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-sf-pw {
+  0%,
+  35% {
+    opacity: 0;
+  }
+  36%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-sf-rule-from {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-sf-rule-to {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Email verification: resend, then a counted cooldown. */
+
+@keyframes thumb-auth-ev-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  22% {
+    transform: translate(89px, 55px);
+  }
+  36% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  42%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-ev-ready {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-ev-w0 {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  46% {
+    opacity: 1;
+  }
+  47%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-ev-w1 {
+  0%,
+  46% {
+    opacity: 0;
+  }
+  47%,
+  71% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-ev-w2 {
+  0%,
+  71% {
+    opacity: 0;
+  }
+  72%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-ev-sent {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Password reset: the confirmation is the same for any address. */
+
+@keyframes thumb-auth-pr-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(70px, 52px);
+  }
+  28%,
+  34% {
+    transform: translate(89px, 70px);
+  }
+  48% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  54%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-pr-form {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-pr-sent {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-pr-email-from {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-pr-email-to {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Two-factor: a wrong code counts the tries left; the right one signs in. */
+
+@keyframes thumb-auth-tf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(70px, 51px);
+  }
+  22%,
+  28% {
+    transform: translate(89px, 74px);
+  }
+  40%,
+  44% {
+    transform: translate(70px, 51px);
+  }
+  60%,
+  66% {
+    transform: translate(89px, 74px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-tf-c0 {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-tf-c1 {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-tf-c2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-tf-bad {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-tf-form {
+  0%,
+  65% {
+    opacity: 1;
+  }
+  66%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-tf-done {
+  0%,
+  65% {
+    opacity: 0;
+  }
+  66%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Account deletion: typing 탈퇴 unlocks the button; the result says how to undo. */
+
+@keyframes thumb-auth-ad-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  10%,
+  14% {
+    transform: translate(70px, 67px);
+  }
+  36%,
+  42% {
+    transform: translate(89px, 81px);
+  }
+  56% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  62%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-auth-ad-typed {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-auth-ad-lock {
+  0%,
+  21% {
+    opacity: 1;
+  }
+  22%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-ad-form {
+  0%,
+  41% {
+    opacity: 1;
+  }
+  42%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-auth-ad-done {
+  0%,
+  41% {
+    opacity: 0;
+  }
+  42%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

@@ -144,6 +144,12 @@ export const PATTERN_CATEGORIES = [
     description: "검색을 시작하고 원하는 결과를 좁히는 화면",
   },
   {
+    id: "auth",
+    label: "Sign-up and login",
+    labelKo: "가입과 로그인",
+    description: "계정을 만들고, 들어오고, 떠나는 화면",
+  },
+  {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",

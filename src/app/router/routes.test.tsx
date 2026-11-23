@@ -37,13 +37,13 @@ describe("catalog page", () => {
     expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
     // Every catalog pattern plus every comparison guide that ships a demo.
     const demoCount = PATTERNS.length + Object.keys(COMPARISON_GUIDES).length;
-    expect(screen.getByRole("status")).toHaveTextContent(`418개 항목 · 데모 ${demoCount}개`);
+    expect(screen.getByRole("status")).toHaveTextContent(`424개 항목 · 데모 ${demoCount}개`);
     const itemLinks = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href") ?? "")
       .filter((href) => /^\/(patterns\/|concepts\/|roadmap\?|compare\/)/.test(href));
-    expect(itemLinks).toHaveLength(418);
-    expect(new Set(itemLinks).size).toBe(418);
+    expect(itemLinks).toHaveLength(424);
+    expect(new Set(itemLinks).size).toBe(424);
   });
 
   it("serves concepts under /concepts and moves a concept opened under /patterns", () => {
@@ -182,6 +182,7 @@ describe("catalog page", () => {
       "AI 화면",
       "가격과 할인 표시",
       "검색과 탐색",
+      "가입과 로그인",
     ]);
     await userEvent.click(categories.getByRole("button", { name: "디자인 스타일" }));
     expect(
