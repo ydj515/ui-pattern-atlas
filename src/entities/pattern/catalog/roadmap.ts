@@ -46,6 +46,7 @@ const SITUATION_TOPICS: readonly string[] = [
   "auth",
   "checkout",
   "settings",
+  "risky-actions",
 ];
 
 export const CATALOG_SECTIONS = [

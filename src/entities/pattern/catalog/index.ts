@@ -385,6 +385,12 @@ import { themeSwitcherPattern } from "@/entities/pattern/catalog/theme-switcher/
 import { languagePickerPattern } from "@/entities/pattern/catalog/language-picker/pattern";
 import { privacySettingsPattern } from "@/entities/pattern/catalog/privacy-settings/pattern";
 import { connectedAccountsPattern } from "@/entities/pattern/catalog/connected-accounts/pattern";
+import { typeToConfirmPattern } from "@/entities/pattern/catalog/type-to-confirm/pattern";
+import { trashPattern } from "@/entities/pattern/catalog/trash/pattern";
+import { autosaveIndicatorPattern } from "@/entities/pattern/catalog/autosave-indicator/pattern";
+import { unsavedChangesPattern } from "@/entities/pattern/catalog/unsaved-changes/pattern";
+import { bulkActionsPattern } from "@/entities/pattern/catalog/bulk-actions/pattern";
+import { versionHistoryPattern } from "@/entities/pattern/catalog/version-history/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -772,6 +778,12 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   languagePickerPattern,
   privacySettingsPattern,
   connectedAccountsPattern,
+  typeToConfirmPattern,
+  trashPattern,
+  autosaveIndicatorPattern,
+  unsavedChangesPattern,
+  bulkActionsPattern,
+  versionHistoryPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

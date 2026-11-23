@@ -162,6 +162,12 @@ export const PATTERN_CATEGORIES = [
     description: "알림, 화면, 공개 범위처럼 내 계정을 내 뜻대로 바꾸는 화면",
   },
   {
+    id: "risky-actions",
+    label: "Risky actions and undo",
+    labelKo: "위험한 동작과 되돌리기",
+    description: "지우고, 나가고, 덮어쓰기 전에 지키고 되돌리게 하는 화면",
+  },
+  {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",
