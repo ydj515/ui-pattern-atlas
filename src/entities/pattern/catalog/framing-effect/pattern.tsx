@@ -7,7 +7,7 @@ export const framingEffectPattern: Pattern = {
   name: "Framing Effect",
   nameKo: "프레이밍 효과",
   aliases: ["프레이밍", "틀 효과", "framing effect", "positive vs negative framing"],
-  category: "dark-pattern-ux",
+  category: "cognitive-bias",
   summary: "같은 정보도 표현 방식에 따라 판단이 달라진다",
   description:
     "같은 사실이라도 긍정적인 틀(무지방 80%)과 부정적인 틀(지방 20%)로 말하면 다르게 받아들인다는 원리입니다. 중요한 결정에는 두 틀을 함께 보여 주거나 숫자 자체를 분명히 써야 합니다.",
@@ -31,7 +31,7 @@ export const framingEffectPattern: Pattern = {
     "필요하면 두 표현을 함께 보여 줍니다.",
     "성분표처럼 전체 정보로 연결합니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["인지 편향", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/framing-effect/FramingEffectDemo").then(
       (m) => m.FramingEffectDemo,

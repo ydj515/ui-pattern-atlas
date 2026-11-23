@@ -7,7 +7,7 @@ export const anchoringPattern: Pattern = {
   name: "Anchoring",
   nameKo: "앵커링",
   aliases: ["앵커 효과", "닻 내림 효과", "anchoring bias", "reference price"],
-  category: "dark-pattern-ux",
+  category: "pricing-psychology",
   summary: "처음 본 숫자가 이후 판단 기준이 된다",
   description:
     "처음 제시된 숫자가 닻처럼 기준이 되어 이후 판단에 영향을 준다는 원리입니다. 정가를 먼저 보여 주면 할인가가 더 싸게 느껴지므로, 실제로 판매된 적 있는 가격만 기준으로 써야 합니다.",
@@ -31,7 +31,7 @@ export const anchoringPattern: Pattern = {
     "색과 취소선만으로 의미를 전하지 않습니다.",
     "가격은 tabular-nums로 정렬합니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["가격의 심리", "기준점"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/anchoring/AnchoringDemo").then((m) => m.AnchoringDemo),
   Thumbnail: AnchoringThumbnail,

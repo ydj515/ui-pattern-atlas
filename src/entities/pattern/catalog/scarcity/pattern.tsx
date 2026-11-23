@@ -7,7 +7,7 @@ export const scarcityPattern: Pattern = {
   name: "Scarcity",
   nameKo: "희소성",
   aliases: ["희소성 원리", "한정 효과", "scarcity principle", "limited availability"],
-  category: "dark-pattern-ux",
+  category: "cognitive-bias",
   summary: "수량이나 시간 제약이 선택에 영향을 준다",
   description:
     "수량이나 시간이 제한되면 더 가치 있게 느끼고 빨리 결정하려는 경향입니다. 실제로 제약이 있을 때 담담하게 알리면 놓치지 않게 돕지만, 꾸민 제약은 가짜 희소성이 됩니다.",
@@ -31,7 +31,7 @@ export const scarcityPattern: Pattern = {
     "자주 바뀌는 숫자는 aria-live로 계속 읽히지 않게 합니다.",
     "날짜와 시각은 글로 적습니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["인지 편향", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/scarcity/ScarcityDemo").then((m) => m.ScarcityDemo),
   Thumbnail: ScarcityThumbnail,

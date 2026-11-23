@@ -7,7 +7,7 @@ export const fittsLawPattern: Pattern = {
   name: "Fitts's Law",
   nameKo: "피츠의 법칙",
   aliases: ["피츠 법칙", "목표 크기와 거리", "Fitts law", "target size"],
-  category: "dark-pattern-ux",
+  category: "ux-laws",
   summary: "크고 가까운 버튼이 누르기 쉽다",
   description:
     "누를 대상이 크고 가까울수록 빨리, 정확하게 누를 수 있다는 원리입니다. 자주 쓰는 주요 버튼은 크게 만들고 손가락이나 커서가 닿기 쉬운 곳에 둡니다.",
@@ -31,7 +31,7 @@ export const fittsLawPattern: Pattern = {
     "작은 글자 링크를 주요 행동에 쓰지 않습니다.",
     "버튼 사이 간격을 둬 잘못 누르지 않게 합니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/fitts-law/FittsLawDemo").then((m) => m.FittsLawDemo),
   Thumbnail: FittsLawThumbnail,

@@ -7,8 +7,8 @@ export const confirmshamingPattern: Pattern = {
   name: "Confirmshaming",
   nameKo: "컨펌셰이밍",
   aliases: ["컨펌 셰이밍", "죄책감 버튼", "manipulink", "guilt-tripping"],
-  category: "dark-pattern-ux",
-  summary: "거절 버튼에 죄책감을 씌우기 (안티패턴)",
+  category: "dark-patterns",
+  summary: "거절 버튼에 죄책감을 씌우기 (다크 패턴)",
   description:
     "거절 선택지를 '아니요, 저는 제값 다 낼게요'처럼 놀리는 말로 써서 거절하는 사람이 부끄럽게 느끼도록 만드는 다크 패턴입니다. 바른 방법은 두 선택지를 같은 말투와 무게로 쓰는 것입니다.",
   whenToUse: [
@@ -31,7 +31,7 @@ export const confirmshamingPattern: Pattern = {
     "밑줄 글자만으로 거절을 숨기지 않습니다.",
     "결과는 화면 읽기에도 같은 말로 들립니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "안티패턴"],
+  tags: ["다크 패턴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/confirmshaming/ConfirmshamingDemo").then(
       (m) => m.ConfirmshamingDemo,

@@ -4,6 +4,7 @@ import { PATTERNS } from "@/entities/pattern/catalog";
 import { COMPARISON_GUIDES } from "@/entities/pattern/catalog/comparisons/comparisonGuides";
 import {
   COMPARISON_TOPIC,
+  resolveCatalogCategory,
   ROADMAP_PATTERN_TOPICS,
   ROADMAP_TOPICS,
   comparisonSlug,
@@ -37,8 +38,15 @@ describe("roadmap catalog", () => {
   });
 
   it("keeps every topic and item available in the catalog data", () => {
-    expect(ROADMAP_TOPICS).toHaveLength(31);
+    expect(ROADMAP_TOPICS).toHaveLength(33);
     expect(new Set(ROADMAP_TOPICS.map(({ id }) => id)).size).toBe(ROADMAP_TOPICS.length);
     expect(ROADMAP_TOPICS.flatMap(({ entries }) => entries)).toHaveLength(418);
+  });
+
+  it("keeps the old combined dark pattern link working after the split", () => {
+    expect(resolveCatalogCategory("dark-pattern-ux")).toMatchObject({
+      category: "dark-patterns",
+      activeTab: "ux-psychology",
+    });
   });
 });

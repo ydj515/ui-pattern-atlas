@@ -7,7 +7,7 @@ export const vonRestorffEffectPattern: Pattern = {
   name: "Von Restorff Effect",
   nameKo: "폰 레스토프 효과",
   aliases: ["고립 효과", "레스토프 효과", "isolation effect", "von Restorff"],
-  category: "dark-pattern-ux",
+  category: "ux-laws",
   summary: "튀는 하나가 기억에 남는다",
   description:
     "비슷한 것들 사이에서 하나만 다르게 생긴 것이 더 눈에 띄고 기억에 남는다는 원리입니다. 꼭 알려야 할 하나만 색, 크기, 테두리로 구분하고 나머지는 같게 둡니다.",
@@ -31,7 +31,7 @@ export const vonRestorffEffectPattern: Pattern = {
     "대비를 충분히 둡니다.",
     "강조 이유를 글로 알려 줍니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/von-restorff-effect/VonRestorffDemo").then(
       (m) => m.VonRestorffDemo,

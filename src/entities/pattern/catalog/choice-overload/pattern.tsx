@@ -7,7 +7,7 @@ export const choiceOverloadPattern: Pattern = {
   name: "Choice Overload",
   nameKo: "선택 과부하",
   aliases: ["선택의 역설", "선택 마비", "choice overload", "paradox of choice"],
-  category: "dark-pattern-ux",
+  category: "ux-laws",
   summary: "대안이 많고 비교가 어려우면 결정을 미룬다",
   description:
     "선택지가 너무 많고 서로 비교하기 어려우면 오히려 고르지 못하고 결정을 미루는 경향입니다. 처음 보여 줄 선택지를 줄이고 추천이나 필터로 좁혀 주면 결정하기 쉬워집니다.",
@@ -31,7 +31,7 @@ export const choiceOverloadPattern: Pattern = {
     "전체 목록으로 가는 링크를 남깁니다.",
     "선택지는 키보드로 고를 수 있게 합니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/choice-overload/ChoiceOverloadDemo").then(
       (m) => m.ChoiceOverloadDemo,

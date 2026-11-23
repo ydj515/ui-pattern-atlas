@@ -7,8 +7,8 @@ export const sneakIntoBasketPattern: Pattern = {
   name: "Sneak into Basket",
   nameKo: "장바구니 몰래 담기",
   aliases: ["몰래 담기", "자동 추가 옵션", "sneak into basket", "pre-added items"],
-  category: "dark-pattern-ux",
-  summary: "동의 없이 상품이나 옵션을 장바구니에 추가 (안티패턴)",
+  category: "dark-patterns",
+  summary: "동의 없이 상품이나 옵션을 장바구니에 추가 (다크 패턴)",
   description:
     "사용자가 고르지 않은 보험, 기부, 유료 옵션을 장바구니에 미리 담아 두어 알아채지 못하면 함께 결제되게 하는 다크 패턴입니다. 바른 방법은 추가 상품을 체크되지 않은 선택지로 보여 주는 것입니다.",
   whenToUse: [
@@ -31,7 +31,7 @@ export const sneakIntoBasketPattern: Pattern = {
     "자동 추가를 작은 회색 글씨로 숨기지 않습니다.",
     "label로 문구 전체를 눌러 고를 수 있게 합니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "안티패턴"],
+  tags: ["다크 패턴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/sneak-into-basket/SneakIntoBasketDemo").then(
       (m) => m.SneakIntoBasketDemo,

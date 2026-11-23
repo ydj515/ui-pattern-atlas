@@ -138,10 +138,28 @@ export const PATTERN_CATEGORIES = [
     description: "같은 화면을 다른 스타일로 그린 비교",
   },
   {
-    id: "dark-pattern-ux",
-    label: "Dark patterns and UX psychology",
-    labelKo: "다크 패턴과 UX 심리",
-    description: "사람을 속이는 화면과, 행동에 영향을 주는 원리",
+    id: "dark-patterns",
+    label: "Dark patterns",
+    labelKo: "다크 패턴",
+    description: "사람을 속여 원하지 않는 선택을 하게 만드는 화면",
+  },
+  {
+    id: "ux-laws",
+    label: "Laws of UX",
+    labelKo: "UX 법칙",
+    description: "사람이 화면을 보고 고르고 기억하는 방식에 관한 원리",
+  },
+  {
+    id: "cognitive-bias",
+    label: "Cognitive biases",
+    labelKo: "인지 편향",
+    description: "같은 정보도 보여 주는 방식에 따라 판단이 달라지는 현상",
+  },
+  {
+    id: "pricing-psychology",
+    label: "Pricing psychology",
+    labelKo: "가격의 심리",
+    description: "가격과 선택지를 보여 주는 방식이 선택에 주는 영향",
   },
   {
     id: "typography-style",
@@ -166,12 +184,6 @@ export const PATTERN_CATEGORIES = [
     label: "Data visualization",
     labelKo: "데이터 시각화",
     description: "숫자의 차이, 변화, 구성비를 보여 주는 화면",
-  },
-  {
-    id: "pricing-psychology",
-    label: "Pricing psychology",
-    labelKo: "가격의 심리",
-    description: "가격과 선택지를 보여 주는 방식이 선택에 주는 영향",
   },
   {
     id: "ux-research",

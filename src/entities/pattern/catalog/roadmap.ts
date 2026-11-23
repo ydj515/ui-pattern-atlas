@@ -43,7 +43,8 @@ export const CATALOG_SECTIONS = [
   {
     id: "ux-psychology",
     label: "UX 심리",
-    includes: (topic) => topic.id === "dark-pattern-ux" || topic.id === "pricing-psychology",
+    includes: (topic) =>
+      ["dark-patterns", "ux-laws", "cognitive-bias", "pricing-psychology"].includes(topic.id),
   },
   { id: "ui-comparison", label: "헷갈리는 UI", includes: (topic) => topic.kind === "비교" },
 ] as const satisfies readonly {
@@ -59,7 +60,13 @@ export function catalogSectionFor(topic: RoadmapTopic) {
 export const CATALOG_TABS = [{ id: "all", label: "전체" }, ...CATALOG_SECTIONS] as const;
 
 export function resolveCatalogCategory(requested: string | null) {
-  const id = requested === "input" ? "selection" : requested;
+  // Old category ids that were split or renamed keep working as links.
+  const id =
+    requested === "input"
+      ? "selection"
+      : requested === "dark-pattern-ux"
+        ? "dark-patterns"
+        : requested;
   const topic = ROADMAP_TOPICS.find((candidate) => candidate.id === id);
   const section = CATALOG_SECTIONS.find((candidate) => candidate.id === id);
   const category = section?.id ?? topic?.id ?? (id === "status" ? "status" : "all");

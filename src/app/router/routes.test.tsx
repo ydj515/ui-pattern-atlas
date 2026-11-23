@@ -167,7 +167,7 @@ describe("catalog page", () => {
     await userEvent.click(categories.getByRole("button", { name: "UX 심리" }));
     expect(
       screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
-    ).toEqual(["다크 패턴과 UX 심리", "가격의 심리"]);
+    ).toEqual(["다크 패턴", "UX 법칙", "인지 편향", "가격의 심리"]);
     await userEvent.click(screen.getByRole("link", { name: /타협 효과 Compromise Effect/ }));
     const crumbs = within(screen.getByRole("navigation", { name: "현재 위치" }));
     expect(crumbs.getAllByRole("link").map((link) => link.textContent)).toEqual([

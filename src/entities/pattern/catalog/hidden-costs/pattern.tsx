@@ -7,8 +7,8 @@ export const hiddenCostsPattern: Pattern = {
   name: "Hidden Costs",
   nameKo: "숨은 비용",
   aliases: ["드립 프라이싱", "숨은 수수료", "drip pricing", "junk fees"],
-  category: "dark-pattern-ux",
-  summary: "마지막 단계에서 붙는 요금 (안티패턴)",
+  category: "dark-patterns",
+  summary: "마지막 단계에서 붙는 요금 (다크 패턴)",
   description:
     "상품 페이지에는 낮은 가격만 보여 주고, 결제 마지막 단계에서 수수료와 배송비를 더해 처음과 다른 금액을 내게 하는 다크 패턴입니다. 바른 방법은 처음 보는 가격에 피할 수 없는 비용을 모두 포함하는 것입니다.",
   whenToUse: [
@@ -35,7 +35,7 @@ export const hiddenCostsPattern: Pattern = {
     "추가 비용을 색으로만 강조하지 않습니다.",
     "결제 전 최종 금액을 한 번 더 보여 줍니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "안티패턴"],
+  tags: ["다크 패턴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/hidden-costs/HiddenCostsDemo").then(
       (m) => m.HiddenCostsDemo,

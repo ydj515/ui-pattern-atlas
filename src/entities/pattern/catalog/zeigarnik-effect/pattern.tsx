@@ -7,7 +7,7 @@ export const zeigarnikEffectPattern: Pattern = {
   name: "Zeigarnik Effect",
   nameKo: "자이가르닉 효과",
   aliases: ["미완성 효과", "자이가르닉", "Zeigarnik effect", "open loops"],
-  category: "dark-pattern-ux",
+  category: "ux-laws",
   summary: "끝내지 못한 일이 계속 떠오른다",
   description:
     "끝낸 일보다 끝내지 못한 일이 더 오래 기억에 남고 마무리하고 싶어진다는 원리입니다. 진행률과 남은 일을 보여 주면 설정이나 프로필을 끝까지 채우게 돕습니다.",
@@ -31,7 +31,7 @@ export const zeigarnikEffectPattern: Pattern = {
     "남은 일은 바로 할 수 있는 링크로 둡니다.",
     "색만으로 진행을 알리지 않습니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/zeigarnik-effect/ZeigarnikDemo").then(
       (m) => m.ZeigarnikDemo,

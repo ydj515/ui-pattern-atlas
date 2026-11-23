@@ -7,7 +7,7 @@ export const lossAversionPattern: Pattern = {
   name: "Loss Aversion",
   nameKo: "손실 회피",
   aliases: ["손실 혐오", "손실 기피", "loss aversion", "prospect theory"],
-  category: "dark-pattern-ux",
+  category: "cognitive-bias",
   summary: "같은 크기의 이득보다 손실을 더 크게 받아들인다",
   description:
     "같은 크기라도 얻는 것보다 잃는 것을 더 크게 느끼는 경향입니다. '잃는다'는 말은 강하게 작용하므로, 정보를 알리는 데는 쓰되 불안을 키워 결정을 몰아붙이는 데 쓰지 않아야 합니다.",
@@ -31,7 +31,7 @@ export const lossAversionPattern: Pattern = {
     "같은 크기와 무게로 선택지를 보여 줍니다.",
     "시간 제한은 날짜로 알립니다.",
   ],
-  tags: ["다크 패턴과 UX 심리", "UX 심리"],
+  tags: ["인지 편향", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/loss-aversion/LossAversionDemo").then(
       (m) => m.LossAversionDemo,
