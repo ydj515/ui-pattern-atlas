@@ -258,6 +258,17 @@ import { wafflePattern } from "@/entities/pattern/catalog/waffle/pattern";
 import { veggieBurgerPattern } from "@/entities/pattern/catalog/veggie-burger/pattern";
 import { stairsPattern } from "@/entities/pattern/catalog/stairs/pattern";
 import { slidersPattern } from "@/entities/pattern/catalog/sliders/pattern";
+import { flatDesignPattern } from "@/entities/pattern/catalog/flat-design/pattern";
+import { materialDesignPattern } from "@/entities/pattern/catalog/material-design/pattern";
+import { glassmorphismPattern } from "@/entities/pattern/catalog/glassmorphism/pattern";
+import { neumorphismPattern } from "@/entities/pattern/catalog/neumorphism/pattern";
+import { skeuomorphismPattern } from "@/entities/pattern/catalog/skeuomorphism/pattern";
+import { claymorphismPattern } from "@/entities/pattern/catalog/claymorphism/pattern";
+import { brutalismPattern } from "@/entities/pattern/catalog/brutalism/pattern";
+import { minimalismPattern } from "@/entities/pattern/catalog/minimalism/pattern";
+import { neoBrutalismPattern } from "@/entities/pattern/catalog/neo-brutalism/pattern";
+import { threeDIconPattern } from "@/entities/pattern/catalog/three-d-icon/pattern";
+import { liquidGlassPattern } from "@/entities/pattern/catalog/liquid-glass/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -518,6 +529,17 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   veggieBurgerPattern,
   stairsPattern,
   slidersPattern,
+  flatDesignPattern,
+  materialDesignPattern,
+  glassmorphismPattern,
+  neumorphismPattern,
+  skeuomorphismPattern,
+  claymorphismPattern,
+  brutalismPattern,
+  minimalismPattern,
+  neoBrutalismPattern,
+  threeDIconPattern,
+  liquidGlassPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

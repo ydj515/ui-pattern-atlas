@@ -132,6 +132,12 @@ export const PATTERN_CATEGORIES = [
     description: "모양은 아는데 이름이 헷갈리는 아이콘",
   },
   {
+    id: "design-style",
+    label: "Design style",
+    labelKo: "디자인 스타일",
+    description: "같은 화면을 다른 스타일로 그린 비교",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",
