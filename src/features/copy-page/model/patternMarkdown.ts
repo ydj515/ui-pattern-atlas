@@ -55,6 +55,10 @@ export function buildPatternMarkdown(
     parts.push(`Also known as: ${pattern.aliases.join(", ")}`);
   }
 
+  if (pattern.origin) {
+    parts.push(`Name origin: ${pattern.origin}`);
+  }
+
   parts.push("## When to use", bulletList(pattern.whenToUse));
   parts.push("## When not to use", bulletList(pattern.whenNotToUse));
 

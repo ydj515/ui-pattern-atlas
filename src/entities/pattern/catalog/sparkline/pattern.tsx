@@ -10,6 +10,8 @@ export const sparklinePattern: Pattern = {
   summary: "카드나 표 안의 작은 추세선",
   description:
     "축과 눈금 없이 글자 크기만 한 선으로 추세를 보여 줍니다. 표나 카드의 한 칸에 들어가 숫자 옆에서 흐름을 보여 주고, 마지막 값에 점을 찍습니다. 정확한 값은 옆에 글자로 둡니다.",
+  origin:
+    "통계 그래픽 연구자 에드워드 터프티(Edward Tufte)가 이름 붙인 말로, '단어만 한 크기의 그래픽'이라고 정의했어요.",
   whenToUse: [
     "표의 각 행에 추세를 덧붙일 때",
     "KPI 카드 숫자 옆",

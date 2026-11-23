@@ -11,6 +11,7 @@ export const socialProofPattern: Pattern = {
   summary: "다른 사람의 행동이나 평가를 판단 근거로 참고",
   description:
     "확신이 없을 때 다른 사람들이 무엇을 골랐는지를 보고 판단하는 경향입니다. 구매 수, 리뷰 수처럼 실제 데이터로 보여 주면 결정을 돕지만, 꾸민 숫자는 다크 패턴이 됩니다.",
+  origin: "1984년 로버트 치알디니(Robert Cialdini)가 책 「설득의 심리학」에서 소개한 용어예요.",
   whenToUse: [
     "상품, 요금제 선택을 도울 때",
     "리뷰와 평점을 보여 줄 때",

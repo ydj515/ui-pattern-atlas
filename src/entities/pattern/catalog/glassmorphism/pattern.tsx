@@ -11,6 +11,8 @@ export const glassmorphismPattern: Pattern = {
   summary: "흐린 유리 질감",
   description:
     "반투명한 면 뒤의 배경을 흐리게 비쳐 젖빛 유리처럼 보이게 하는 스타일입니다. backdrop-filter로 뒤를 흐리고 얇은 흰 테두리로 유리의 모서리를 표현합니다.",
+  origin:
+    "유리(glass)와 '-morphism'을 합친 말이에요. 2020년 무렵 디자이너 미하우 말레비치(Michał Malewicz)가 이름 붙인 것으로 알려져 있어요.",
   whenToUse: [
     "색이 풍부한 배경 위에 떠 있는 카드나 메뉴",
     "뒤의 맥락을 살짝 보여 주며 겹칠 때",

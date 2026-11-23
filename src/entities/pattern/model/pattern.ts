@@ -38,6 +38,11 @@ interface PatternEntry {
   /** One line shown on catalog cards. */
   readonly summary: string;
   readonly description: string;
+  /**
+   * Where the name comes from, when the story helps people remember the pattern
+   * (e.g. why a toast is called a toast). Leave it out when the name explains itself.
+   */
+  readonly origin?: string;
   readonly whenToUse: readonly string[];
   readonly whenNotToUse: readonly string[];
   readonly alternatives: readonly PatternAlternative[];

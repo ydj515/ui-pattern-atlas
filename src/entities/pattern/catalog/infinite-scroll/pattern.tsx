@@ -10,6 +10,8 @@ export const infiniteScrollPattern: Pattern = {
   summary: "끝에 닿으면 이어서 불러오기",
   description:
     "목록 끝에 가까워지면 다음 묶음을 자동으로 불러와 이어 붙이는 패턴입니다. 피드처럼 계속 훑어보는 화면에서 페이지를 넘기는 수고를 없앱니다.",
+  origin:
+    "끝없이(infinite) 이어 불러온다는 뜻 그대로예요. 2006년 에이자 래스킨(Aza Raskin)이 고안한 것으로 알려져 있어요.",
   whenToUse: [
     "SNS 피드, 사진처럼 계속 훑어보는 콘텐츠",
     "순서보다 발견이 중요한 목록",

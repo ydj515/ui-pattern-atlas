@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it, vi } from "vitest";
@@ -460,6 +460,16 @@ describe("pattern detail page", () => {
     expect(follows(description, preview)).toBe(true);
     expect(follows(preview, aliases)).toBe(true);
     expect(screen.queryByRole("heading", { name: "Interactive Preview" })).not.toBeInTheDocument();
+  });
+
+  it("tells where the name comes from only when there is a story", () => {
+    renderAt("/patterns/toast");
+    expect(screen.getByRole("complementary", { name: "이름의 유래" })).toHaveTextContent(
+      "토스터에서",
+    );
+    cleanup();
+    renderAt("/patterns/switch");
+    expect(screen.queryByRole("complementary", { name: "이름의 유래" })).toBeNull();
   });
 
   it("renders the sections in the documented order", () => {

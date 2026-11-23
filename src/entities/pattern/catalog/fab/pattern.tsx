@@ -10,6 +10,8 @@ export const fabPattern: Pattern = {
   summary: "화면 위에 떠 있는 주요 동작",
   description:
     "스크롤해도 화면 구석에 떠 있는 주요 행동 버튼입니다. 아래로 스크롤할 때는 아이콘만 남겨 내용을 덜 가리고, 위로 올리면 다시 이름을 보여 줍니다.",
+  origin:
+    "Floating Action Button의 줄임말로, 2014년 구글이 머티리얼 디자인을 발표하며 붙인 이름이에요. 화면 위에 떠(floating) 있는 주요 동작 버튼이라는 뜻이에요.",
   whenToUse: [
     "메일 쓰기, 글쓰기처럼 화면의 대표 행동이 하나일 때",
     "긴 목록을 보다가도 바로 눌러야 할 때",

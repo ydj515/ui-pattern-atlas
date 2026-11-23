@@ -11,6 +11,8 @@ export const vonRestorffEffectPattern: Pattern = {
   summary: "튀는 하나가 기억에 남는다",
   description:
     "비슷한 것들 사이에서 하나만 다르게 생긴 것이 더 눈에 띄고 기억에 남는다는 원리입니다. 꼭 알려야 할 하나만 색, 크기, 테두리로 구분하고 나머지는 같게 둡니다.",
+  origin:
+    "1933년 독일 심리학자 헤트비히 폰 레스토프(Hedwig von Restorff)의 기억 실험에서 이름을 따왔어요. 고립 효과(isolation effect)라고도 해요.",
   whenToUse: [
     "요금제, 옵션 중 추천을 알릴 때",
     "중요한 경고나 새 기능을 목록에서 드러낼 때",

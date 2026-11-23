@@ -208,6 +208,12 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
               다른 이름: {pattern.aliases.join(", ")}
             </p>
           ) : null}
+          {pattern.origin ? (
+            <aside aria-label="이름의 유래" className="mt-6 rounded-surface bg-field p-4">
+              <p className="text-caption font-semibold text-ink">이름의 유래</p>
+              <p className="mt-1 text-body-sm text-ink/80">{pattern.origin}</p>
+            </aside>
+          ) : null}
         </header>
 
         <div className="space-y-12">

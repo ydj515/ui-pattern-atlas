@@ -11,6 +11,8 @@ export const artDecoPattern: Pattern = {
   summary: "대칭과 장식적인 기하학 선을 강조",
   description:
     "가늘고 높은 글자, 넓은 자간, 금색과 겹선 장식으로 1920년대 아르데코의 화려함을 표현하는 스타일입니다. 대칭과 반복되는 선이 특징입니다.",
+  origin:
+    "1925년 파리에서 열린 장식 미술 박람회(Exposition internationale des arts décoratifs)의 이름을 줄여 1960년대부터 부른 말이에요.",
   whenToUse: ["호텔, 바, 공연 같은 고급스러운 분위기", "초대장, 기념 행사", "짧은 제목"],
   whenNotToUse: [
     "작은 글자(가는 획이 사라짐)",
