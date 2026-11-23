@@ -29726,6 +29726,733 @@
   }
 }
 
+/* Discount badge: 쿠폰 적용 → 25% becomes 50% from the same 30-day reference. */
+
+.thumb-pdb-cursor {
+  animation-name: thumb-pdb-cursor;
+}
+
+.thumb-pdb-a {
+  animation-name: thumb-pdb-a;
+}
+
+.thumb-pdb-b {
+  animation-name: thumb-pdb-b;
+}
+
+@keyframes thumb-pdb-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(55px, 73px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pdb-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pdb-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Countdown: ticks down, 3초 뒤 종료로 바꾸기, then 할인이 끝났어요 (no restart). */
+
+.thumb-pcd-cursor {
+  animation-name: thumb-pcd-cursor;
+}
+
+.thumb-pcd-run {
+  animation-name: thumb-pcd-run;
+}
+
+.thumb-pcd-end {
+  animation-name: thumb-pcd-end;
+}
+
+.thumb-pcd-t0 {
+  animation-name: thumb-pcd-t0;
+}
+
+.thumb-pcd-t1 {
+  animation-name: thumb-pcd-t1;
+}
+
+.thumb-pcd-t2 {
+  animation-name: thumb-pcd-t2;
+}
+
+.thumb-pcd-t3 {
+  animation-name: thumb-pcd-t3;
+}
+
+.thumb-pcd-t4 {
+  animation-name: thumb-pcd-t4;
+}
+
+.thumb-pcd-t5 {
+  animation-name: thumb-pcd-t5;
+}
+
+@keyframes thumb-pcd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  32%,
+  38% {
+    transform: translate(66px, 78px);
+  }
+  52% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  58%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pcd-run {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  76%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pcd-end {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  76%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pcd-t0 {
+  0%,
+  12% {
+    opacity: 1;
+  }
+  13%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pcd-t1 {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  13%,
+  25% {
+    opacity: 1;
+  }
+  26%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pcd-t2 {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  38% {
+    opacity: 1;
+  }
+  39%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pcd-t3 {
+  0%,
+  38% {
+    opacity: 0;
+  }
+  39%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pcd-t4 {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  63% {
+    opacity: 1;
+  }
+  64%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pcd-t5 {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  64%,
+  75% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Coupon claim: 쿠폰 받기 → 받았어요, usable at checkout. */
+
+.thumb-pcc-cursor {
+  animation-name: thumb-pcc-cursor;
+}
+
+.thumb-pcc-a {
+  animation-name: thumb-pcc-a;
+}
+
+.thumb-pcc-b {
+  animation-name: thumb-pcc-b;
+}
+
+@keyframes thumb-pcc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(144px, 51px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pcc-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pcc-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Bundle deal: + to 2 → 묶음 10% 할인 적용, 24,000원 struck to 21,600원. */
+
+.thumb-pbd-cursor {
+  animation-name: thumb-pbd-cursor;
+}
+
+.thumb-pbd-a {
+  animation-name: thumb-pbd-a;
+}
+
+.thumb-pbd-b {
+  animation-name: thumb-pbd-b;
+}
+
+@keyframes thumb-pbd-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(58px, 46px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pbd-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pbd-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Low stock: S 재고 있음 → M 남은 수량 3개 → L 품절, 재입고 알림 받기. */
+
+.thumb-pls-cursor {
+  animation-name: thumb-pls-cursor;
+}
+
+.thumb-pls-s0 {
+  animation-name: thumb-pls-s0;
+}
+
+.thumb-pls-s1 {
+  animation-name: thumb-pls-s1;
+}
+
+.thumb-pls-s2 {
+  animation-name: thumb-pls-s2;
+}
+
+.thumb-pls-buy {
+  animation-name: thumb-pls-buy;
+}
+
+@keyframes thumb-pls-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  24% {
+    transform: translate(65px, 44px);
+  }
+  42%,
+  48% {
+    transform: translate(84px, 44px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pls-s0 {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pls-s1 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pls-s2 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pls-buy {
+  0%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Lowest price label: 기준 보기 shows the period and what was compared. */
+
+.thumb-plp-cursor {
+  animation-name: thumb-plp-cursor;
+}
+
+.thumb-plp-open {
+  animation-name: thumb-plp-open;
+}
+
+@keyframes thumb-plp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(95px, 77px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-plp-open {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Reward points: 계좌이체 → 780원 적립 예정 (2%). */
+
+.thumb-prp-cursor {
+  animation-name: thumb-prp-cursor;
+}
+
+.thumb-prp-a {
+  animation-name: thumb-prp-a;
+}
+
+.thumb-prp-b {
+  animation-name: thumb-prp-b;
+}
+
+@keyframes thumb-prp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(50px, 52px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-prp-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-prp-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Free shipping progress: 담기 twice → 8,000원 → 3,000원 → 무료배송이에요. */
+
+.thumb-pfs-cursor {
+  animation-name: thumb-pfs-cursor;
+}
+
+.thumb-pfs-s0 {
+  animation-name: thumb-pfs-s0;
+}
+
+.thumb-pfs-s1 {
+  animation-name: thumb-pfs-s1;
+}
+
+.thumb-pfs-s2 {
+  animation-name: thumb-pfs-s2;
+}
+
+.thumb-pfs-bar {
+  animation-name: thumb-pfs-bar;
+}
+
+@keyframes thumb-pfs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  24% {
+    transform: translate(131px, 53px);
+  }
+  42%,
+  48% {
+    transform: translate(131px, 68px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-pfs-s0 {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-pfs-s1 {
+  0%,
+  23% {
+    opacity: 0;
+  }
+  24%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pfs-s2 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-pfs-bar {
+  0%,
+  23% {
+    transform: scaleX(0.733);
+  }
+  27%,
+  47% {
+    transform: scaleX(0.9);
+  }
+  51%,
+  96% {
+    transform: scaleX(1);
+  }
+  99%,
+  100% {
+    transform: scaleX(0.733);
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

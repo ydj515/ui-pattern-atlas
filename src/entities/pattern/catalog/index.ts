@@ -319,6 +319,14 @@ import { gradientTypographyPattern } from "@/entities/pattern/catalog/gradient-t
 import { embossPattern } from "@/entities/pattern/catalog/emboss/pattern";
 import { inflatedThreeDPattern } from "@/entities/pattern/catalog/inflated-three-d/pattern";
 import { chromeTypographyPattern } from "@/entities/pattern/catalog/chrome-typography/pattern";
+import { discountBadgePattern } from "@/entities/pattern/catalog/discount-badge/pattern";
+import { countdownPattern } from "@/entities/pattern/catalog/countdown/pattern";
+import { couponClaimPattern } from "@/entities/pattern/catalog/coupon-claim/pattern";
+import { bundleDealPattern } from "@/entities/pattern/catalog/bundle-deal/pattern";
+import { lowStockIndicatorPattern } from "@/entities/pattern/catalog/low-stock-indicator/pattern";
+import { lowestPriceLabelPattern } from "@/entities/pattern/catalog/lowest-price-label/pattern";
+import { rewardPointsPattern } from "@/entities/pattern/catalog/reward-points/pattern";
+import { freeShippingProgressPattern } from "@/entities/pattern/catalog/free-shipping-progress/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -640,6 +648,14 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   embossPattern,
   inflatedThreeDPattern,
   chromeTypographyPattern,
+  discountBadgePattern,
+  countdownPattern,
+  couponClaimPattern,
+  bundleDealPattern,
+  lowStockIndicatorPattern,
+  lowestPriceLabelPattern,
+  rewardPointsPattern,
+  freeShippingProgressPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
