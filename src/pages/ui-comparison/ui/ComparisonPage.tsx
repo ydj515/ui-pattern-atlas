@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { patternPath } from "@/entities/pattern/model/pattern";
 import { Link, useParams } from "react-router";
 
 import { COMPARISON_GUIDES } from "@/entities/pattern/catalog/comparisons/comparisonGuides";
@@ -88,7 +89,7 @@ function RelatedPatterns({ pair }: { readonly pair: RoadmapEntry }) {
       {Array.from(patterns, (pattern) =>
         pattern ? (
           <li key={pattern.slug}>
-            <Link to={`/patterns/${pattern.slug}`} className={textLinkClassName}>
+            <Link to={patternPath(pattern)} className={textLinkClassName}>
               {pattern.nameKo} 패턴
             </Link>
           </li>

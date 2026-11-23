@@ -14,7 +14,7 @@ import { routes } from "@/app/router/routes";
 function getCardLinks() {
   return screen
     .getAllByRole("link")
-    .filter((link) => link.getAttribute("href")?.startsWith("/patterns/"));
+    .filter((link) => /^\/(patterns|concepts)\//.test(link.getAttribute("href") ?? ""));
 }
 
 function renderAt(path: string) {
@@ -41,9 +41,18 @@ describe("catalog page", () => {
     const itemLinks = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href") ?? "")
-      .filter((href) => /^\/(patterns\/|roadmap\?|compare\/)/.test(href));
+      .filter((href) => /^\/(patterns\/|concepts\/|roadmap\?|compare\/)/.test(href));
     expect(itemLinks).toHaveLength(418);
     expect(new Set(itemLinks).size).toBe(418);
+  });
+
+  it("serves concepts under /concepts and moves a concept opened under /patterns", () => {
+    const pattern = renderAt("/patterns/hicks-law");
+    expect(pattern.state.location.pathname).toBe("/concepts/hicks-law");
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("힉의 법칙");
+    cleanup();
+    const component = renderAt("/concepts/toast");
+    expect(component.state.location.pathname).toBe("/patterns/toast");
   });
 
   it("filters cards as the user types and keeps the query in the URL", async () => {

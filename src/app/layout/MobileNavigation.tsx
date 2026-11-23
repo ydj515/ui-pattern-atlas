@@ -20,11 +20,12 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
   const navigationId = useId();
   const { pathname, search } = useLocation();
   const patternMatch = useMatch("/patterns/:slug");
+  const conceptMatch = useMatch("/concepts/:slug");
   const comparisonMatch = useMatch("/compare/*");
   const isCatalog = pathname === "/";
   const categoryId = isCatalog
     ? new URLSearchParams(search).get("category")
-    : findPatternBySlug(patternMatch?.params.slug ?? "")?.category;
+    : findPatternBySlug((patternMatch ?? conceptMatch)?.params.slug ?? "")?.category;
   const activeTab = comparisonMatch
     ? "ui-comparison"
     : isCatalog || categoryId

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 import { Highlight } from "@/shared/ui/Highlight";
 
-import type { Pattern } from "@/entities/pattern/model/pattern";
+import { patternPath, type Pattern } from "@/entities/pattern/model/pattern";
 
 export interface PatternCardProps {
   readonly pattern: Pattern;
@@ -22,7 +22,7 @@ export function PatternCard({ pattern, query = "", returnSearch }: PatternCardPr
   const { Thumbnail } = pattern;
 
   return (
-    <Link to={`/patterns/${pattern.slug}`} state={{ returnSearch }} className="group block">
+    <Link to={patternPath(pattern)} state={{ returnSearch }} className="group block">
       <div
         aria-hidden="true"
         className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"

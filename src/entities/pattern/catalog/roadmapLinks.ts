@@ -1,4 +1,5 @@
 import { PATTERNS } from "@/entities/pattern/catalog";
+import { patternPath } from "@/entities/pattern/model/pattern";
 import {
   comparisonSlug,
   type RoadmapEntry,
@@ -38,8 +39,7 @@ export function roadmapEntryDestination(topic: RoadmapTopic, entry: RoadmapEntry
     };
   }
   const pattern = patternForRoadmapEntry(topic, entry);
-  if (pattern)
-    return { href: `/patterns/${pattern.slug}`, status: "데모 보기 가능", hasDemo: true };
+  if (pattern) return { href: patternPath(pattern), status: "데모 보기 가능", hasDemo: true };
   return { href: undefined, status: "준비 중", hasDemo: false };
 }
 

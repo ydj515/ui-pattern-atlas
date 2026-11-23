@@ -61,3 +61,12 @@ export type Pattern = PatternEntry &
   );
 
 export const BASE_TAGS = ["React", "TypeScript", "Tailwind CSS", "Accessibility"] as const;
+
+/**
+ * Detail page address. UI patterns live under /patterns and concepts (styles, psychology,
+ * icon names, research methods) under /concepts. The address follows what an entry is,
+ * not which catalog tab shows it, so regrouping the catalog never changes a link.
+ */
+export function patternPath(pattern: Pick<Pattern, "slug" | "kind">): string {
+  return `${pattern.kind === "concept" ? "/concepts" : "/patterns"}/${pattern.slug}`;
+}

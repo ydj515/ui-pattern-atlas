@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { patternPath } from "@/entities/pattern/model/pattern";
 import { useNavigate } from "react-router";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
@@ -97,7 +98,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
 
   function openPattern(pattern: Pattern) {
     onClose();
-    navigate(`/patterns/${pattern.slug}`);
+    navigate(patternPath(pattern));
   }
 
   return (

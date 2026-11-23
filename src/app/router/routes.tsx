@@ -35,6 +35,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <CatalogPage /> },
       { path: "patterns/:slug", element: <PatternDetailPage /> },
+      { path: "concepts/:slug", element: <PatternDetailPage /> },
       { path: "roadmap", element: <RoadmapPage /> },
       { path: "compare", element: <ComparisonPage /> },
       { path: "compare/:slug", element: <ComparisonPage /> },

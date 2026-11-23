@@ -2,7 +2,7 @@ import { useSyncExternalStore, type ReactNode } from "react";
 import { Link, useLocation, type LinkProps } from "react-router";
 
 import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
-import type { Pattern } from "@/entities/pattern/model/pattern";
+import { patternPath, type Pattern } from "@/entities/pattern/model/pattern";
 
 import { CopyPageButton } from "@/features/copy-page/ui/CopyPageButton";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
@@ -166,7 +166,7 @@ function AdjacentLink({
   const isNext = direction === "next";
   return (
     <Link
-      to={`/patterns/${pattern.slug}`}
+      to={patternPath(pattern)}
       rel={isNext ? "next" : "prev"}
       aria-label={`${isNext ? "다음" : "이전"} 패턴: ${pattern.nameKo}`}
       className={`group inline-flex min-h-11 items-center gap-2 text-caption font-semibold text-ink ${isNext ? "col-start-2 flex-row-reverse justify-self-end text-right" : "justify-self-start"}`}
@@ -245,7 +245,7 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
                   >
                     <dt className="font-medium">
                       {target ? (
-                        <Link to={`/patterns/${target.slug}`} className={textLinkClassName}>
+                        <Link to={patternPath(target)} className={textLinkClassName}>
                           {alternative.name}
                         </Link>
                       ) : (
