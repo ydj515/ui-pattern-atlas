@@ -41010,6 +41010,872 @@
   }
 }
 
+/* Situations: order and payment (thumb-co-). */
+.thumb-co-ct-cursor {
+  animation-name: thumb-co-ct-cursor;
+}
+.thumb-co-ct-bag {
+  animation-name: thumb-co-ct-bag;
+}
+.thumb-co-ct-all {
+  animation-name: thumb-co-ct-all;
+}
+.thumb-co-ct-t0 {
+  animation-name: thumb-co-ct-t0;
+}
+.thumb-co-ct-t1 {
+  animation-name: thumb-co-ct-t1;
+}
+.thumb-co-ct-t2 {
+  animation-name: thumb-co-ct-t2;
+}
+.thumb-co-ct-btn0 {
+  animation-name: thumb-co-ct-btn0;
+}
+.thumb-co-ct-btn1 {
+  animation-name: thumb-co-ct-btn1;
+}
+.thumb-co-ct-q0 {
+  animation-name: thumb-co-ct-q0;
+}
+.thumb-co-ct-q1 {
+  animation-name: thumb-co-ct-q1;
+}
+.thumb-co-ct-tp0 {
+  animation-name: thumb-co-ct-tp0;
+}
+.thumb-co-ct-tp1 {
+  animation-name: thumb-co-ct-tp1;
+}
+.thumb-co-cs-cursor {
+  animation-name: thumb-co-cs-cursor;
+}
+.thumb-co-cs-agree {
+  animation-name: thumb-co-cs-agree;
+}
+.thumb-co-cs-lock {
+  animation-name: thumb-co-cs-lock;
+}
+.thumb-co-cs-paid {
+  animation-name: thumb-co-cs-paid;
+}
+.thumb-co-af-cursor {
+  animation-name: thumb-co-af-cursor;
+}
+.thumb-co-af-list {
+  animation-name: thumb-co-af-list;
+}
+.thumb-co-af-picked {
+  animation-name: thumb-co-af-picked;
+}
+.thumb-co-af-detail {
+  animation-name: thumb-co-af-detail;
+}
+.thumb-co-af-q-from {
+  animation-name: thumb-co-af-q-from;
+}
+.thumb-co-af-q-to {
+  animation-name: thumb-co-af-q-to;
+}
+.thumb-co-pm-cursor {
+  animation-name: thumb-co-pm-cursor;
+}
+.thumb-co-pm-card {
+  animation-name: thumb-co-pm-card;
+}
+.thumb-co-pm-easy {
+  animation-name: thumb-co-pm-easy;
+}
+.thumb-co-pm-inst {
+  animation-name: thumb-co-pm-inst;
+}
+.thumb-co-pm-s-from {
+  animation-name: thumb-co-pm-s-from;
+}
+.thumb-co-pm-s-to {
+  animation-name: thumb-co-pm-s-to;
+}
+.thumb-co-ot-cursor {
+  animation-name: thumb-co-ot-cursor;
+}
+.thumb-co-ot-next {
+  animation-name: thumb-co-ot-next;
+}
+.thumb-co-ot-copied {
+  animation-name: thumb-co-ot-copied;
+}
+.thumb-co-oc-cursor {
+  animation-name: thumb-co-oc-cursor;
+}
+.thumb-co-oc-a {
+  animation-name: thumb-co-oc-a;
+}
+.thumb-co-oc-b {
+  animation-name: thumb-co-oc-b;
+}
+.thumb-co-oc-amt0 {
+  animation-name: thumb-co-oc-amt0;
+}
+.thumb-co-oc-amt1 {
+  animation-name: thumb-co-oc-amt1;
+}
+.thumb-co-oc-amt2 {
+  animation-name: thumb-co-oc-amt2;
+}
+.thumb-co-oc-back0 {
+  animation-name: thumb-co-oc-back0;
+}
+.thumb-co-oc-back1 {
+  animation-name: thumb-co-oc-back1;
+}
+.thumb-co-oc-back2 {
+  animation-name: thumb-co-oc-back2;
+}
+.thumb-co-oc-ref0 {
+  animation-name: thumb-co-oc-ref0;
+}
+.thumb-co-oc-ref1 {
+  animation-name: thumb-co-oc-ref1;
+}
+.thumb-co-oc-ref2 {
+  animation-name: thumb-co-oc-ref2;
+}
+
+/* Cart: leave 캔버스 백 out, add a 행주; only selected lines count. */
+
+@keyframes thumb-co-ct-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(25px, 52px);
+  }
+  44%,
+  50% {
+    transform: translate(155px, 67px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-ct-bag {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-all {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-t0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-t1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-ct-t2 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-ct-btn0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-btn1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-ct-q0 {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-q1 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-ct-tp0 {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-ct-tp1 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Checkout summary: the pay button waits for the agreement. */
+
+@keyframes thumb-co-cs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(25px, 77px);
+  }
+  36%,
+  42% {
+    transform: translate(89px, 89px);
+  }
+  56% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  62%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-cs-agree {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-cs-lock {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-cs-paid {
+  0%,
+  41% {
+    opacity: 0;
+  }
+  42%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Address form: search 서울숲, pick, then type only the detail. */
+
+@keyframes thumb-co-af-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(77px, 40px);
+  }
+  20%,
+  26% {
+    transform: translate(146px, 40px);
+  }
+  40%,
+  46% {
+    transform: translate(89px, 57px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-af-list {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  26%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-af-picked {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-af-detail {
+  0%,
+  55% {
+    opacity: 0;
+  }
+  56%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-af-q-from {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-af-q-to {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Payment method: the card reveals instalments inside it. */
+
+@keyframes thumb-co-pm-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(50px, 28px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-pm-card {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-pm-easy {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-pm-inst {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-pm-s-from {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-pm-s-to {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Order tracking: the next step lights up; the number copies. */
+
+@keyframes thumb-co-ot-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  22% {
+    transform: translate(43px, 93px);
+  }
+  44%,
+  50% {
+    transform: translate(140px, 28px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-ot-next {
+  0%,
+  21% {
+    opacity: 0;
+  }
+  22%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-ot-copied {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Order cancellation: the refund follows the chosen items and the coupon rule. */
+
+@keyframes thumb-co-oc-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(25px, 38px);
+  }
+  42%,
+  48% {
+    transform: translate(25px, 47px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-co-oc-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-b {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-amt0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-oc-amt1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-amt2 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-back0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-oc-back1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-back2 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-ref0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-co-oc-ref1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-co-oc-ref2 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

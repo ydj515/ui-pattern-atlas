@@ -150,6 +150,12 @@ export const PATTERN_CATEGORIES = [
     description: "계정을 만들고, 들어오고, 떠나는 화면",
   },
   {
+    id: "checkout",
+    label: "Order and payment",
+    labelKo: "주문과 결제",
+    description: "담고, 결제하고, 받고, 되돌리는 화면",
+  },
+  {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",

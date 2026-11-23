@@ -44,6 +44,7 @@ const SITUATION_TOPICS: readonly string[] = [
   "pricing-display",
   "search-discovery",
   "auth",
+  "checkout",
 ];
 
 export const CATALOG_SECTIONS = [
