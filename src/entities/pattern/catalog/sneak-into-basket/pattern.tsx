@@ -8,7 +8,7 @@ export const sneakIntoBasketPattern: Pattern = {
   nameKo: "장바구니 몰래 담기",
   aliases: ["몰래 담기", "자동 추가 옵션", "sneak into basket", "pre-added items"],
   category: "dark-patterns",
-  summary: "동의 없이 상품이나 옵션을 장바구니에 추가 (다크 패턴)",
+  summary: "동의 없이 상품이나 옵션을 장바구니에 추가",
   description:
     "사용자가 고르지 않은 보험, 기부, 유료 옵션을 장바구니에 미리 담아 두어 알아채지 못하면 함께 결제되게 하는 다크 패턴입니다. 바른 방법은 추가 상품을 체크되지 않은 선택지로 보여 주는 것입니다.",
   whenToUse: [
