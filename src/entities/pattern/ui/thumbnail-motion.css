@@ -30453,6 +30453,855 @@
   }
 }
 
+/* Search suggestions: type 린넨 → completions in bold → 린넨 바지 → its results. */
+
+.thumb-sgs-cursor {
+  animation-name: thumb-sgs-cursor;
+}
+
+.thumb-sgs-t0 {
+  animation-name: thumb-sgs-t0;
+}
+
+.thumb-sgs-t1 {
+  animation-name: thumb-sgs-t1;
+}
+
+.thumb-sgs-t2 {
+  animation-name: thumb-sgs-t2;
+}
+
+.thumb-sgs-t3 {
+  animation-name: thumb-sgs-t3;
+}
+
+.thumb-sgs-list {
+  animation-name: thumb-sgs-list;
+}
+
+.thumb-sgs-l1 {
+  animation-name: thumb-sgs-l1;
+}
+
+.thumb-sgs-l2 {
+  animation-name: thumb-sgs-l2;
+}
+
+.thumb-sgs-done {
+  animation-name: thumb-sgs-done;
+}
+
+@keyframes thumb-sgs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  6%,
+  11% {
+    transform: translate(70px, 21px);
+  }
+  40%,
+  47% {
+    transform: translate(40px, 65px);
+  }
+  61% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  67%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-sgs-t0 {
+  0%,
+  11% {
+    opacity: 1;
+  }
+  12%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-sgs-t1 {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sgs-t2 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sgs-t3 {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sgs-list {
+  0%,
+  11% {
+    opacity: 0;
+  }
+  12%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sgs-l1 {
+  0%,
+  17% {
+    opacity: 1;
+  }
+  18%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sgs-l2 {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-sgs-done {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Recent searches: delete 캔버스 백 → tap 린넨 셔츠 to search it again. */
+
+.thumb-srs-cursor {
+  animation-name: thumb-srs-cursor;
+}
+
+.thumb-srs-empty {
+  animation-name: thumb-srs-empty;
+}
+
+.thumb-srs-filled {
+  animation-name: thumb-srs-filled;
+}
+
+.thumb-srs-gone {
+  animation-name: thumb-srs-gone;
+}
+
+.thumb-srs-up {
+  animation-name: thumb-srs-up;
+}
+
+@keyframes thumb-srs-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  18%,
+  24% {
+    transform: translate(152px, 65px);
+  }
+  42%,
+  48% {
+    transform: translate(38px, 53px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-srs-empty {
+  0%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-srs-filled {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-srs-gone {
+  0%,
+  23% {
+    opacity: 1;
+  }
+  24%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-srs-up {
+  0%,
+  23% {
+    transform: translateY(0);
+  }
+  27%,
+  96% {
+    transform: translateY(-12px);
+  }
+  99%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Trending searches: 지금 → 이번 주 changes the ranks and the counting period together. */
+
+.thumb-str-cursor {
+  animation-name: thumb-str-cursor;
+}
+
+.thumb-str-a {
+  animation-name: thumb-str-a;
+}
+
+.thumb-str-b {
+  animation-name: thumb-str-b;
+}
+
+.thumb-str-pill {
+  animation-name: thumb-str-pill;
+}
+
+@keyframes thumb-str-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-str-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-str-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-str-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Search filters: 흰색 → 결과 4개, 3만 원 이하 → 결과 2개, applied filters as chips. */
+
+.thumb-sfl-cursor {
+  animation-name: thumb-sfl-cursor;
+}
+
+.thumb-sfl-white {
+  animation-name: thumb-sfl-white;
+}
+
+.thumb-sfl-price {
+  animation-name: thumb-sfl-price;
+}
+
+.thumb-sfl-s0 {
+  animation-name: thumb-sfl-s0;
+}
+
+.thumb-sfl-s1 {
+  animation-name: thumb-sfl-s1;
+}
+
+.thumb-sfl-s2 {
+  animation-name: thumb-sfl-s2;
+}
+
+@keyframes thumb-sfl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(33px, 61px);
+  }
+  38%,
+  44% {
+    transform: translate(42px, 40px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-sfl-white {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sfl-price {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sfl-s0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-sfl-s1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sfl-s2 {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Search sort: 추천순 → menu → 낮은 가격순, and the list reorders by price. */
+
+.thumb-sst-cursor {
+  animation-name: thumb-sst-cursor;
+}
+
+.thumb-sst-a {
+  animation-name: thumb-sst-a;
+}
+
+.thumb-sst-b {
+  animation-name: thumb-sst-b;
+}
+
+.thumb-sst-menu {
+  animation-name: thumb-sst-menu;
+}
+
+.thumb-sst-r0 {
+  animation-name: thumb-sst-r0;
+}
+
+.thumb-sst-r1 {
+  animation-name: thumb-sst-r1;
+}
+
+.thumb-sst-r2 {
+  animation-name: thumb-sst-r2;
+}
+
+.thumb-sst-r3 {
+  animation-name: thumb-sst-r3;
+}
+
+@keyframes thumb-sst-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(134px, 21px);
+  }
+  34%,
+  40% {
+    transform: translate(125px, 47px);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-sst-a {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-sst-b {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sst-menu {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sst-r0 {
+  0%,
+  39% {
+    transform: translateY(0);
+  }
+  43%,
+  96% {
+    transform: translateY(14px);
+  }
+  99%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes thumb-sst-r1 {
+  0%,
+  39% {
+    transform: translateY(0);
+  }
+  43%,
+  96% {
+    transform: translateY(14px);
+  }
+  99%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes thumb-sst-r2 {
+  0%,
+  39% {
+    transform: translateY(0);
+  }
+  43%,
+  96% {
+    transform: translateY(14px);
+  }
+  99%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes thumb-sst-r3 {
+  0%,
+  39% {
+    transform: translateY(0);
+  }
+  43%,
+  96% {
+    transform: translateY(-42px);
+  }
+  99%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Search term highlight: 린넨 marked → type 셔츠 → both words marked in the results. */
+
+.thumb-shl-cursor {
+  animation-name: thumb-shl-cursor;
+}
+
+.thumb-shl-s0 {
+  animation-name: thumb-shl-s0;
+}
+
+.thumb-shl-s1 {
+  animation-name: thumb-shl-s1;
+}
+
+.thumb-shl-s2 {
+  animation-name: thumb-shl-s2;
+}
+
+@keyframes thumb-shl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(70px, 20px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-shl-s0 {
+  0%,
+  27% {
+    opacity: 1;
+  }
+  28%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-shl-s1 {
+  0%,
+  27% {
+    opacity: 0;
+  }
+  28%,
+  37% {
+    opacity: 1;
+  }
+  38%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-shl-s2 {
+  0%,
+  37% {
+    opacity: 0;
+  }
+  38%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Search scope tabs: 린넨 stays; 브랜드, then 기획전 narrow the results. */
+
+.thumb-sscope-cursor {
+  animation-name: thumb-sscope-cursor;
+}
+
+.thumb-sscope-s0 {
+  animation-name: thumb-sscope-s0;
+}
+
+.thumb-sscope-s1 {
+  animation-name: thumb-sscope-s1;
+}
+
+.thumb-sscope-s2 {
+  animation-name: thumb-sscope-s2;
+}
+
+@keyframes thumb-sscope-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(100px, 40px);
+  }
+  38%,
+  44% {
+    transform: translate(136px, 40px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-sscope-s0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-sscope-s1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-sscope-s2 {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

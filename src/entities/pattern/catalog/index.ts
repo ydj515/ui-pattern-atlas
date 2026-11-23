@@ -327,6 +327,13 @@ import { lowStockIndicatorPattern } from "@/entities/pattern/catalog/low-stock-i
 import { lowestPriceLabelPattern } from "@/entities/pattern/catalog/lowest-price-label/pattern";
 import { rewardPointsPattern } from "@/entities/pattern/catalog/reward-points/pattern";
 import { freeShippingProgressPattern } from "@/entities/pattern/catalog/free-shipping-progress/pattern";
+import { searchSuggestionsPattern } from "@/entities/pattern/catalog/search-suggestions/pattern";
+import { recentSearchesPattern } from "@/entities/pattern/catalog/recent-searches/pattern";
+import { trendingSearchesPattern } from "@/entities/pattern/catalog/trending-searches/pattern";
+import { searchFiltersPattern } from "@/entities/pattern/catalog/search-filters/pattern";
+import { searchSortPattern } from "@/entities/pattern/catalog/search-sort/pattern";
+import { searchTermHighlightPattern } from "@/entities/pattern/catalog/search-term-highlight/pattern";
+import { searchScopeTabsPattern } from "@/entities/pattern/catalog/search-scope-tabs/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -656,6 +663,13 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   lowestPriceLabelPattern,
   rewardPointsPattern,
   freeShippingProgressPattern,
+  searchSuggestionsPattern,
+  recentSearchesPattern,
+  trendingSearchesPattern,
+  searchFiltersPattern,
+  searchSortPattern,
+  searchTermHighlightPattern,
+  searchScopeTabsPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

@@ -156,6 +156,12 @@ export const PATTERN_CATEGORIES = [
     description: "가격과 혜택, 청구 조건을 쉽게 비교하는 화면",
   },
   {
+    id: "search-discovery",
+    label: "Search and discovery",
+    labelKo: "검색과 탐색",
+    description: "검색을 시작하고 원하는 결과를 좁히는 화면",
+  },
+  {
     id: "pricing-psychology",
     label: "Pricing psychology",
     labelKo: "가격의 심리",
