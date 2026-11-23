@@ -349,7 +349,7 @@ describe("roadmap and comparison", () => {
     const router = renderAt("/");
     await userEvent.click(screen.getByRole("button", { name: "헷갈리는 UI" }));
     expect(router.state.location.search).toBe("?category=ui-comparison");
-    expect(screen.getByRole("status")).toHaveTextContent("51개 항목 · 데모 6개");
+    expect(screen.getByRole("status")).toHaveTextContent("51개 항목 · 데모 22개");
     await userEvent.click(screen.getByRole("link", { name: /토스트 \/ 스낵바 Toast \/ Snackbar/ }));
     expect(router.state.location.pathname).toBe("/compare/toast-snackbar");
     expect(screen.getByRole("region", { name: "비교 미리보기" })).toBeInTheDocument();

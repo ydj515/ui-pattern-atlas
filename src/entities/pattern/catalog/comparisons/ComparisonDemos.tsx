@@ -1,4 +1,12 @@
-import { useEffect, useState, type ComponentType, type ReactNode } from "react";
+import { useEffect, useState, type ComponentType } from "react";
+
+import { MORE_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
+import {
+  Panel,
+  Panels,
+  action,
+  secondary,
+} from "@/entities/pattern/catalog/comparisons/ComparisonPanels";
 
 import { BottomSheet } from "@/shared/ui/patterns/bottom-sheet/BottomSheet";
 import { Checkbox } from "@/shared/ui/patterns/checkbox/Checkbox";
@@ -11,27 +19,6 @@ import { Switch } from "@/shared/ui/patterns/switch/Switch";
 import { Tabs } from "@/shared/ui/patterns/tabs/Tabs";
 import { ToastProvider, useToast } from "@/shared/ui/patterns/toast/Toast";
 import { Tooltip } from "@/shared/ui/patterns/tooltip/Tooltip";
-
-const action =
-  "w-fit rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white disabled:opacity-50";
-const secondary =
-  "w-fit rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-900";
-
-function Panel({ name, children }: { readonly name: string; readonly children: ReactNode }) {
-  return (
-    <section
-      aria-label={name}
-      className="min-w-0 space-y-3 rounded-lg border border-slate-200 bg-white p-4 text-slate-900"
-    >
-      <h3 className="text-sm font-semibold">{name}</h3>
-      {children}
-    </section>
-  );
-}
-
-function Panels({ children }: { readonly children: ReactNode }) {
-  return <div className="grid w-full max-w-2xl gap-3 sm:grid-cols-2">{children}</div>;
-}
 
 function SwitchAndCheckbox() {
   const [immediate, setImmediate] = useState(false);
@@ -325,7 +312,7 @@ function SpinnerAndSkeleton() {
   );
 }
 
-interface ComparisonDemo {
+export interface ComparisonDemo {
   readonly scenario: string;
   readonly Preview: ComponentType;
 }
@@ -355,4 +342,5 @@ export const COMPARISON_DEMOS: Readonly<Record<string, ComparisonDemo>> = {
     scenario: "같은 프로필을 요청하고 기다리는 동안 표시되는 내용을 비교해 보세요.",
     Preview: SpinnerAndSkeleton,
   },
+  ...MORE_COMPARISON_DEMOS,
 };

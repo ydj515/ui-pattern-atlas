@@ -2830,7 +2830,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "라디오 / 체크박스",
         name: "Radio Group / Checkbox",
         description: "하나를 고를 때와 여러 항목을 고를 수 있을 때",
-        priority: "P2",
+        priority: "완료",
         group: "선택과 컴포넌트",
       },
       {
@@ -2851,7 +2851,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "칩 / 배지",
         name: "Chip / Badge",
         description: "선택·삭제 가능한 조건이나 속성과 상태·개수를 읽는 표시",
-        priority: "P2",
+        priority: "완료",
         group: "선택과 컴포넌트",
       },
       {
@@ -2865,14 +2865,14 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "수량 스테퍼 / 슬라이더",
         name: "Number Stepper / Slider",
         description: "정해진 단위로 정확히 조절할 때와 범위 안의 값을 빠르게 고를 때",
-        priority: "P2",
+        priority: "완료",
         group: "선택과 컴포넌트",
       },
       {
         nameKo: "햄버거 / 케밥",
         name: "Hamburger / Kebab",
         description: "전체 탐색 메뉴와 현재 항목의 추가 동작 메뉴",
-        priority: "P2",
+        priority: "완료",
         group: "메뉴와 아이콘",
       },
       {
@@ -2914,7 +2914,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "필터 / 정렬",
         name: "Filter / Sort",
         description: "결과에 포함될 항목을 바꿀 때와 같은 결과의 순서를 바꿀 때",
-        priority: "P2",
+        priority: "완료",
         group: "메뉴와 아이콘",
       },
       {
@@ -2949,7 +2949,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "페이지네이션 / 무한 스크롤",
         name: "Pagination / Infinite Scroll",
         description: "특정 위치로 다시 갈 필요가 있을 때와 읽는 흐름에서 계속 불러올 때",
-        priority: "P2",
+        priority: "완료",
         group: "탐색과 배치",
       },
       {
@@ -2963,28 +2963,28 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "진행 바 / 단계 표시",
         name: "Progress Bar / Step Indicator",
         description: "연속적인 완료 비율을 알릴 때와 이름 있는 단계의 현재 위치를 알릴 때",
-        priority: "P2",
+        priority: "완료",
         group: "탐색과 배치",
       },
       {
         nameKo: "아코디언 / 더 보기 접기",
         name: "Accordion / Read More",
         description: "여러 제목의 내용을 골라 펼칠 때와 하나의 긴 내용을 확장할 때",
-        priority: "P2",
+        priority: "완료",
         group: "탐색과 배치",
       },
       {
         nameKo: "플레이스홀더 / 라벨",
         name: "Placeholder / Label",
         description: "비어 있을 때 형식 예시를 보여 줄 때와 입력 후에도 필드의 의미를 알려 줄 때",
-        priority: "P2",
+        priority: "완료",
         group: "입력과 폼",
       },
       {
         nameKo: "안내 문구 / 오류 문구",
         name: "Helper Text / Error Message",
         description: "입력 전에 규칙을 안내할 때와 제출에 필요한 수정을 알려 줄 때",
-        priority: "P2",
+        priority: "완료",
         group: "입력과 폼",
       },
       {
@@ -2998,7 +2998,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "자동완성 / 추천 검색어",
         name: "Autocomplete / Search Suggestion",
         description: "입력 중인 검색어를 완성할 때와 관련 있거나 인기 있는 검색어를 제안할 때",
-        priority: "P2",
+        priority: "완료",
         group: "입력과 폼",
       },
       {
@@ -3047,7 +3047,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "얼럿 / 컨펌",
         name: "Alert / Confirmation Dialog",
         description: "중요한 내용을 인지·확인하게 할 때와 진행·취소 결정을 받을 때",
-        priority: "P2",
+        priority: "완료",
         group: "알림과 오버레이",
       },
       {
@@ -3055,7 +3055,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         name: "Non-modal Popup / Modal Dialog",
         description:
           "페이지와 계속 상호작용할 수 있는 작은 창과 응답 전까지 배경 조작을 막는 창. 팝업은 문맥에 따라 범위가 달라짐",
-        priority: "P2",
+        priority: "완료",
         group: "알림과 오버레이",
       },
       {
@@ -3076,14 +3076,14 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "바텀시트 / 드로어",
         name: "Bottom Sheet / Drawer",
         description: "화면 아래 작업 패널과 옆에서 여는 탐색·작업 패널",
-        priority: "P2",
+        priority: "완료",
         group: "알림과 오버레이",
       },
       {
         nameKo: "배너 / 푸시 알림",
         name: "Alert Banner / Push Notification",
         description: "사이트나 앱을 보는 중에 안내할 때와 시스템 알림 영역으로 전달할 때",
-        priority: "P2",
+        priority: "완료",
         group: "알림과 오버레이",
       },
       {
@@ -3111,7 +3111,7 @@ export const ROADMAP_DATA: readonly RoadmapTopic[] = [
         nameKo: "얼럿 / 토스트",
         name: "Alert Dialog / Toast",
         description: "확인이 필요한 안내와 흐름을 이어 갈 수 있는 짧은 안내",
-        priority: "P2",
+        priority: "완료",
         group: "알림과 오버레이",
       },
       {
