@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
-import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
+import { COMPARISON_GUIDES } from "@/entities/pattern/catalog/comparisons/comparisonGuides";
 import {
   COMPARISON_TOPIC,
   ROADMAP_PATTERN_TOPICS,
@@ -33,7 +33,7 @@ describe("roadmap catalog", () => {
         .filter(({ priority }) => priority === "완료")
         .map(comparisonSlug)
         .toSorted(),
-    ).toEqual(Object.keys(COMPARISON_DEMOS).toSorted());
+    ).toEqual(Object.keys(COMPARISON_GUIDES).toSorted());
   });
 
   it("keeps every topic and item available in the catalog data", () => {

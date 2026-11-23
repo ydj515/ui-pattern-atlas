@@ -1349,123 +1349,34 @@ function SaveDownload() {
   );
 }
 
-export const REST_COMPARISON_DEMOS: Readonly<
-  Record<string, { readonly scenario: string; readonly Preview: ComponentType }>
-> = {
-  "kebab-meatballs": {
-    scenario: "같은 주문 메뉴를 세로 점과 가로 점으로 열어 보세요.",
-    Preview: KebabMeatballs,
-  },
-  "share-export": {
-    scenario: "같은 주문 내역을 누군가에게 보내거나 파일로 만들어 보세요.",
-    Preview: ShareExport,
-  },
-  "close-back": {
-    scenario: "떠 있는 창을 닫는 것과 이전 화면으로 돌아가는 것을 비교해 보세요.",
-    Preview: CloseBack,
-  },
-  "refresh-undo": {
-    scenario: "새 내용을 다시 불러오는 것과 방금 한 일을 취소하는 것을 비교해 보세요.",
-    Preview: RefreshUndo,
-  },
-  "search-zoom-in": {
-    scenario: "돋보기 모양 두 버튼이 무엇을 하는지 눌러 보세요.",
-    Preview: SearchZoom,
-  },
-  "edit-compose": {
-    scenario: "있는 글을 고치는 것과 새 글을 쓰는 것을 비교해 보세요.",
-    Preview: EditCompose,
-  },
-  "dropdown-picker": {
-    scenario: "간단한 옵션은 펼쳐서, 날짜는 달력에서 골라 보세요.",
-    Preview: DropdownPicker,
-  },
-  "carousel-horizontal-scroll": {
-    scenario: "같은 추천 상품을 한 장씩 넘기거나 옆으로 밀어 보세요.",
-    Preview: CarouselScroll,
-  },
-  "top-bar-bottom-tab-bar": {
-    scenario: "화면 위의 제목 영역과 화면 아래의 주요 메뉴를 써 보세요.",
-    Preview: TopBottomBar,
-  },
-  "floating-action-button-sticky-action-bar": {
-    scenario: "띄운 버튼 하나와 아래에 고정한 가격·구매 영역을 비교해 보세요.",
-    Preview: FabSticky,
-  },
-  "text-field-textarea": {
-    scenario: "받는 분 이름과 여러 줄 배송 메모를 입력해 보세요.",
-    Preview: FieldTextarea,
-  },
-  "password-otp": {
-    scenario: "정해 둔 비밀번호와 문자로 받은 인증번호 칸을 비교해 보세요.",
-    Preview: PasswordOtp,
-  },
-  "clear-show-password": {
-    scenario: "입력값을 지우는 버튼과 값을 보이게 하는 버튼을 눌러 보세요.",
-    Preview: ClearShow,
-  },
-  "character-counter-max-length": {
-    scenario: "두 칸에 길게 입력해 보고 무엇이 다른지 보세요.",
-    Preview: CounterLimit,
-  },
-  "numeric-keypad-keyboard": {
-    scenario: "두 칸을 눌러 어떤 키보드가 뜨는지 비교해 보세요.",
-    Preview: KeypadKeyboard,
-  },
-  "date-input-date-picker": {
-    scenario: "아는 날짜는 직접 입력하고, 배송일은 달력에서 골라 보세요.",
-    Preview: DateInputPicker,
-  },
-  "required-optional": {
-    scenario: "두 칸을 비워 둔 채로 다음을 눌러 보세요.",
-    Preview: RequiredOptional,
-  },
-  "badge-notification-dot": {
-    scenario: "새 알림이 올 때 숫자와 점이 어떻게 다른지 보세요.",
-    Preview: BadgeDot,
-  },
-  "onboarding-coach-mark": {
-    scenario: "처음 안내 화면과 지금 화면의 한 곳을 짚는 안내를 비교해 보세요.",
-    Preview: OnboardingCoach,
-  },
-  "dim-blur": {
-    scenario: "같은 창을 띄우고 배경이 어떻게 가려지는지 비교해 보세요.",
-    Preview: DimBlur,
-  },
-  "like-wishlist": {
-    scenario: "사진에 반응하는 하트와 상품을 모아 두는 하트를 눌러 보세요.",
-    Preview: LikeWishlist,
-  },
-  "wishlist-cart": {
-    scenario: "같은 셔츠를 찜하거나 장바구니에 담아 보세요.",
-    Preview: WishlistCart,
-  },
-  "bookmark-like": {
-    scenario: "같은 글을 저장하거나 좋아요를 눌러 보세요.",
-    Preview: BookmarkLike,
-  },
-  "follow-subscribe-to-notifications": {
-    scenario: "계정을 팔로우하는 것과 알림 조건을 정하는 것을 비교해 보세요.",
-    Preview: FollowNotify,
-  },
-  "share-copy-link": {
-    scenario: "받을 곳을 고르는 공유와 주소만 담는 링크 복사를 비교해 보세요.",
-    Preview: ShareCopy,
-  },
-  "rating-review": {
-    scenario: "점수만 남기는 별점과 경험을 적는 리뷰를 비교해 보세요.",
-    Preview: RatingReview,
-  },
-  "recently-viewed-wishlist": {
-    scenario: "상품을 열어 보거나 직접 찜해 두 목록이 어떻게 쌓이는지 보세요.",
-    Preview: RecentWishlist,
-  },
-  "like-reaction": {
-    scenario: "좋아요 하나와 여러 감정 중 고르는 리액션을 비교해 보세요.",
-    Preview: LikeReaction,
-  },
-  "save-download": {
-    scenario: "같은 영수증을 앱에 저장하거나 기기에 내려받아 보세요.",
-    Preview: SaveDownload,
-  },
+export const REST_COMPARISON_PREVIEWS: Readonly<Record<string, ComponentType>> = {
+  "kebab-meatballs": KebabMeatballs,
+  "share-export": ShareExport,
+  "close-back": CloseBack,
+  "refresh-undo": RefreshUndo,
+  "search-zoom-in": SearchZoom,
+  "edit-compose": EditCompose,
+  "dropdown-picker": DropdownPicker,
+  "carousel-horizontal-scroll": CarouselScroll,
+  "top-bar-bottom-tab-bar": TopBottomBar,
+  "floating-action-button-sticky-action-bar": FabSticky,
+  "text-field-textarea": FieldTextarea,
+  "password-otp": PasswordOtp,
+  "clear-show-password": ClearShow,
+  "character-counter-max-length": CounterLimit,
+  "numeric-keypad-keyboard": KeypadKeyboard,
+  "date-input-date-picker": DateInputPicker,
+  "required-optional": RequiredOptional,
+  "badge-notification-dot": BadgeDot,
+  "onboarding-coach-mark": OnboardingCoach,
+  "dim-blur": DimBlur,
+  "like-wishlist": LikeWishlist,
+  "wishlist-cart": WishlistCart,
+  "bookmark-like": BookmarkLike,
+  "follow-subscribe-to-notifications": FollowNotify,
+  "share-copy-link": ShareCopy,
+  "rating-review": RatingReview,
+  "recently-viewed-wishlist": RecentWishlist,
+  "like-reaction": LikeReaction,
+  "save-download": SaveDownload,
 };

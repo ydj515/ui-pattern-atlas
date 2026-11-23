@@ -13,7 +13,7 @@ import { ProgressBarDemo } from "@/entities/pattern/catalog/progress-bar/Progres
 import { PullToRefreshDemo } from "@/entities/pattern/catalog/pull-to-refresh/PullToRefreshDemo";
 import { SpinnerDemo } from "@/entities/pattern/catalog/spinner/SpinnerDemo";
 import { StrikethroughPriceDemo } from "@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceDemo";
-import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
+import { COMPARISON_PREVIEWS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
 
 afterEach(() => vi.useRealTimers());
 
@@ -179,13 +179,13 @@ describe("new pattern demos", () => {
 });
 
 describe("comparison demos", () => {
-  it.each(Object.entries(COMPARISON_DEMOS))("renders both sides for %s", (_slug, { Preview }) => {
+  it.each(Object.entries(COMPARISON_PREVIEWS))("renders both sides for %s", (_slug, Preview) => {
     render(<Preview />);
     expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(2);
   });
 
   it("applies a switch immediately and submits the checkbox change later", async () => {
-    const { Preview } = COMPARISON_DEMOS["switch-checkbox"]!;
+    const Preview = COMPARISON_PREVIEWS["switch-checkbox"]!;
     render(<Preview />);
     const instant = within(screen.getByRole("region", { name: "토글" }));
     const draft = within(screen.getByRole("region", { name: "체크박스" }));
@@ -198,7 +198,7 @@ describe("comparison demos", () => {
   });
 
   it("offers undo in the snackbar with the same operation and message", async () => {
-    const { Preview } = COMPARISON_DEMOS["toast-snackbar"]!;
+    const Preview = COMPARISON_PREVIEWS["toast-snackbar"]!;
     render(<Preview />);
     const toast = within(screen.getByRole("region", { name: "토스트" }));
     const snackbar = within(screen.getByRole("region", { name: "스낵바" }));

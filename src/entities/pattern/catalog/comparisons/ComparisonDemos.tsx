@@ -1,7 +1,7 @@
 import { useEffect, useState, type ComponentType } from "react";
 
-import { MORE_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
-import { REST_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosRest";
+import { MORE_COMPARISON_PREVIEWS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
+import { REST_COMPARISON_PREVIEWS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosRest";
 import {
   Panel,
   Panels,
@@ -313,36 +313,13 @@ function SpinnerAndSkeleton() {
   );
 }
 
-export interface ComparisonDemo {
-  readonly scenario: string;
-  readonly Preview: ComponentType;
-}
-
-export const COMPARISON_DEMOS: Readonly<Record<string, ComparisonDemo>> = {
-  "switch-checkbox": {
-    scenario: "이벤트 소식 수신을 켜고 저장이 필요한지 확인해 보세요.",
-    Preview: SwitchAndCheckbox,
-  },
-  "tabs-segmented-control": {
-    scenario: "받은 알림의 분류를 바꾸거나 읽지 않은 항목만 모아 보세요.",
-    Preview: TabsAndSegmentedControl,
-  },
-  "modal-dialog-bottom-sheet": {
-    scenario: "배송 알림에 되돌릴 수 없는 삭제를 요청하거나 보관 옵션을 열어 보세요.",
-    Preview: ModalAndSheet,
-  },
-  "toast-snackbar": {
-    scenario: "같은 알림을 보관한 뒤 되돌릴 수 있는지 확인해 보세요.",
-    Preview: ToastAndSnackbar,
-  },
-  "tooltip-popover": {
-    scenario: "예상 배송일의 기준을 읽거나 배송일 계산 옵션을 바꿔 보세요.",
-    Preview: TooltipAndPopover,
-  },
-  "spinner-skeleton": {
-    scenario: "같은 프로필을 요청하고 기다리는 동안 표시되는 내용을 비교해 보세요.",
-    Preview: SpinnerAndSkeleton,
-  },
-  ...MORE_COMPARISON_DEMOS,
-  ...REST_COMPARISON_DEMOS,
+export const COMPARISON_PREVIEWS: Readonly<Record<string, ComponentType>> = {
+  "switch-checkbox": SwitchAndCheckbox,
+  "tabs-segmented-control": TabsAndSegmentedControl,
+  "modal-dialog-bottom-sheet": ModalAndSheet,
+  "toast-snackbar": ToastAndSnackbar,
+  "tooltip-popover": TooltipAndPopover,
+  "spinner-skeleton": SpinnerAndSkeleton,
+  ...MORE_COMPARISON_PREVIEWS,
+  ...REST_COMPARISON_PREVIEWS,
 };

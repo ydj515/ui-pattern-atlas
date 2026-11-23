@@ -2,19 +2,19 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
-import { REST_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosRest";
+import { REST_COMPARISON_PREVIEWS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosRest";
 
 function renderDemo(slug: string) {
-  const demo = REST_COMPARISON_DEMOS[slug];
-  if (!demo) throw new Error(`missing comparison ${slug}`);
-  render(<demo.Preview />);
+  const Preview = REST_COMPARISON_PREVIEWS[slug];
+  if (!Preview) throw new Error(`missing comparison ${slug}`);
+  render(<Preview />);
   return (name: string) => within(screen.getByRole("region", { name }));
 }
 
 describe("rest of the comparison demos", () => {
-  it.each(Object.entries(REST_COMPARISON_DEMOS))(
+  it.each(Object.entries(REST_COMPARISON_PREVIEWS))(
     "renders both sides for %s",
-    (_slug, { Preview }) => {
+    (_slug, Preview) => {
       render(<Preview />);
       expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(2);
     },

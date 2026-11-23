@@ -797,71 +797,21 @@ function FilterAndSort() {
   );
 }
 
-export const MORE_COMPARISON_DEMOS: Readonly<
-  Record<string, { readonly scenario: string; readonly Preview: ComponentType }>
-> = {
-  "radio-group-checkbox": {
-    scenario: "주문서에서 배송 방법은 하나만, 배송 요청은 여러 개를 골라 보세요.",
-    Preview: RadioAndCheckbox,
-  },
-  "chip-badge": {
-    scenario: "칩으로 배송 조건을 고르고, 배지로 읽지 않은 알림 수를 확인해 보세요.",
-    Preview: ChipAndBadge,
-  },
-  "number-stepper-slider": {
-    scenario: "수량은 하나씩 정확히, 가격 상한은 범위 안에서 빠르게 정해 보세요.",
-    Preview: StepperAndSlider,
-  },
-  "hamburger-kebab": {
-    scenario: "서비스 전체 메뉴와 주문 한 건의 추가 동작을 각각 열어 보세요.",
-    Preview: HamburgerAndKebab,
-  },
-  "alert-dialog-toast": {
-    scenario: "확인해야 넘어가는 안내와 흐름을 끊지 않는 안내를 비교해 보세요.",
-    Preview: AlertDialogAndToast,
-  },
-  "non-modal-popup-modal-dialog": {
-    scenario: "같은 쿠폰 안내를 연 채로 뒤의 담기 버튼을 눌러 보세요.",
-    Preview: PopupAndModal,
-  },
-  "bottom-sheet-drawer": {
-    scenario: "상품을 공유하는 짧은 작업과 카테고리를 옮기는 탐색을 비교해 보세요.",
-    Preview: SheetAndDrawer,
-  },
-  "alert-banner-push-notification": {
-    scenario: "화면 안에서 보이는 안내와 휴대폰 알림 영역으로 가는 안내를 비교해 보세요.",
-    Preview: BannerAndPush,
-  },
-  "alert-confirmation-dialog": {
-    scenario: "확인만 하면 되는 안내와 진행 여부를 고르는 질문을 비교해 보세요.",
-    Preview: AlertAndConfirm,
-  },
-  "helper-text-error-message": {
-    scenario: "입력 전 규칙 안내와, 짧은 비밀번호로 변경했을 때의 오류를 비교해 보세요.",
-    Preview: HelperAndError,
-  },
-  "placeholder-label": {
-    scenario: "두 칸에 번호를 입력한 뒤에도 무엇을 쓰는 칸인지 알 수 있는지 보세요.",
-    Preview: PlaceholderAndLabel,
-  },
-  "autocomplete-search-suggestion": {
-    scenario: "입력 중에 완성해 주는 검색어와 결과 화면의 관련 검색어를 비교해 보세요.",
-    Preview: AutocompleteAndSuggestions,
-  },
-  "pagination-infinite-scroll": {
-    scenario: "같은 주문 내역을 쪽으로 넘기거나 아래로 이어 불러와 보세요.",
-    Preview: PaginationAndInfinite,
-  },
-  "progress-bar-step-indicator": {
-    scenario: "사진 올리기의 진행률과 주문의 현재 단계를 비교해 보세요.",
-    Preview: ProgressAndSteps,
-  },
-  "accordion-read-more": {
-    scenario: "여러 질문 중 하나를 펼치는 것과 긴 설명 하나를 펼치는 것을 비교해 보세요.",
-    Preview: AccordionAndReadMore,
-  },
-  "filter-sort": {
-    scenario: "같은 상품 목록에서 보이는 항목을 바꾸거나 순서만 바꿔 보세요.",
-    Preview: FilterAndSort,
-  },
+export const MORE_COMPARISON_PREVIEWS: Readonly<Record<string, ComponentType>> = {
+  "radio-group-checkbox": RadioAndCheckbox,
+  "chip-badge": ChipAndBadge,
+  "number-stepper-slider": StepperAndSlider,
+  "hamburger-kebab": HamburgerAndKebab,
+  "alert-dialog-toast": AlertDialogAndToast,
+  "non-modal-popup-modal-dialog": PopupAndModal,
+  "bottom-sheet-drawer": SheetAndDrawer,
+  "alert-banner-push-notification": BannerAndPush,
+  "alert-confirmation-dialog": AlertAndConfirm,
+  "helper-text-error-message": HelperAndError,
+  "placeholder-label": PlaceholderAndLabel,
+  "autocomplete-search-suggestion": AutocompleteAndSuggestions,
+  "pagination-infinite-scroll": PaginationAndInfinite,
+  "progress-bar-step-indicator": ProgressAndSteps,
+  "accordion-read-more": AccordionAndReadMore,
+  "filter-sort": FilterAndSort,
 };

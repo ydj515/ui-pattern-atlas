@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router";
 
-import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
+import { COMPARISON_GUIDES } from "@/entities/pattern/catalog/comparisons/comparisonGuides";
 import {
   COMPARISON_TOPIC,
   catalogCategoryHref,
@@ -101,7 +101,7 @@ function RelatedPatterns({ pair }: { readonly pair: RoadmapEntry }) {
 function ComparisonDetail({ slug }: { readonly slug: string }) {
   const pair = comparisons.find((entry) => comparisonSlug(entry) === slug);
   if (!pair) return <NotFoundView />;
-  const demo = COMPARISON_DEMOS[slug];
+  const demo = COMPARISON_GUIDES[slug];
   const title = pair.nameKo.replace(" / ", " · ");
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
@@ -121,7 +121,7 @@ function ComparisonDetail({ slug }: { readonly slug: string }) {
             비교 미리보기
           </h2>
           <p className="mb-3 text-body text-graphite">{demo.scenario}</p>
-          <PatternPreview key={slug} Preview={demo.Preview} />
+          <PatternPreview key={slug} loadPreview={demo.loadPreview} />
         </section>
       ) : null}
       <section aria-labelledby="selection-guide" className="mt-10 border-t border-rule pt-6">

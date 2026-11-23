@@ -6,7 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 import { PATTERNS } from "@/entities/pattern/catalog";
 import { ROADMAP_PATTERN_TOPICS } from "@/entities/pattern/catalog/roadmap";
 import { roadmapEntryAnchor } from "@/entities/pattern/catalog/roadmapLinks";
-import { COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemos";
+import { COMPARISON_GUIDES } from "@/entities/pattern/catalog/comparisons/comparisonGuides";
 
 import { routes } from "@/app/router/routes";
 
@@ -36,7 +36,7 @@ describe("catalog page", () => {
     expect(getCardLinks()).toHaveLength(PATTERNS.length);
     expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
     // Every catalog pattern plus every comparison guide that ships a demo.
-    const demoCount = PATTERNS.length + Object.keys(COMPARISON_DEMOS).length;
+    const demoCount = PATTERNS.length + Object.keys(COMPARISON_GUIDES).length;
     expect(screen.getByRole("status")).toHaveTextContent(`418개 항목 · 데모 ${demoCount}개`);
     const itemLinks = screen
       .getAllByRole("link")

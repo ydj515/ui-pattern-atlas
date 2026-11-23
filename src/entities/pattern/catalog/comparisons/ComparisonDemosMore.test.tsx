@@ -2,12 +2,12 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
-import { MORE_COMPARISON_DEMOS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
+import { MORE_COMPARISON_PREVIEWS } from "@/entities/pattern/catalog/comparisons/ComparisonDemosMore";
 
 function renderDemo(slug: string) {
-  const demo = MORE_COMPARISON_DEMOS[slug];
-  if (!demo) throw new Error(`missing comparison ${slug}`);
-  render(<demo.Preview />);
+  const Preview = MORE_COMPARISON_PREVIEWS[slug];
+  if (!Preview) throw new Error(`missing comparison ${slug}`);
+  render(<Preview />);
   return (name: string) => within(screen.getByRole("region", { name }));
 }
 
