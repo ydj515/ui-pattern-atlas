@@ -22,7 +22,7 @@ export const permissionRecoveryPattern: Pattern = {
   ],
   alternatives: [
     {
-      name: "권한 거부 화면",
+      name: "권한 없음",
       slug: "permission-denied",
       reason: "화면 전체가 권한에 묶여 있을 때",
     },

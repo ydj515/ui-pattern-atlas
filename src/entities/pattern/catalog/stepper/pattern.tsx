@@ -22,7 +22,7 @@ export const stepperPattern: Pattern = {
   ],
   alternatives: [
     { name: "단계형 폼", slug: "multi-step-form", reason: "입력과 진행 표시를 함께 다룰 때" },
-    { name: "진행 바", slug: "progress-bar", reason: "단계 대신 비율로 보여 줄 때" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "단계 대신 비율로 보여 줄 때" },
   ],
   accessibility: [
     'ol 목록으로 순서를 전하고 현재 단계는 aria-current="step"입니다.',

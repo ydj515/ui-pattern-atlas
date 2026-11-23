@@ -21,8 +21,8 @@ export const drawerPattern: Pattern = {
     "주요 내비게이션을 모바일 외 환경에서도 숨겨 버릴 때",
   ],
   alternatives: [
-    { name: "Modal Dialog", slug: "modal-dialog", reason: "짧고 중요한 결정" },
-    { name: "Accordion", slug: "accordion", reason: "페이지 안에서 펼쳐 보는 설정" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "짧고 중요한 결정" },
+    { name: "아코디언", slug: "accordion", reason: "페이지 안에서 펼쳐 보는 설정" },
     { name: "Bottom Sheet", reason: "모바일에서 한 손으로 다루는 선택지" },
   ],
   accessibility: [

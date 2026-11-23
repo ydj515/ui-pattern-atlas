@@ -21,7 +21,7 @@ export const shakeOnErrorPattern: Pattern = {
     "흔들림만 있고 오류 문구가 없을 때",
   ],
   alternatives: [
-    { name: "인라인 검증", slug: "inline-validation", reason: "칸마다 바로 오류를 보여 줄 때" },
+    { name: "인라인 오류", slug: "inline-validation", reason: "칸마다 바로 오류를 보여 줄 때" },
     { name: "오류 요약", slug: "error-summary", reason: "여러 오류를 한곳에 모을 때" },
   ],
   accessibility: [

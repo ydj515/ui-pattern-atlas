@@ -22,7 +22,7 @@ export const streakPattern: Pattern = {
   ],
   alternatives: [
     { name: "업적 배지", slug: "achievement-badge", reason: "누적 목표를 기록할 때" },
-    { name: "진행 바", slug: "progress-bar", reason: "정해진 목표까지의 진행" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "정해진 목표까지의 진행" },
   ],
   accessibility: [
     "요일마다 기록함, 기록 없음을 글자로 붙여 색에만 기대지 않습니다.",

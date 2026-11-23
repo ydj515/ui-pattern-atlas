@@ -22,7 +22,7 @@ export const undoPattern: Pattern = {
   ],
   alternatives: [
     {
-      name: "확인 대화상자",
+      name: "확인 다이얼로그",
       slug: "confirmation-dialog",
       reason: "되돌릴 수 없는 작업을 하기 전에 한 번 더 묻기",
     },

@@ -22,7 +22,11 @@ export const selectableTablePattern: Pattern = {
   ],
   alternatives: [
     { name: "데이터 테이블", slug: "data-table", reason: "보기와 정렬만 할 때" },
-    { name: "확인 대화상자", slug: "confirmation-dialog", reason: "일괄 삭제 전에 한 번 더 묻기" },
+    {
+      name: "확인 다이얼로그",
+      slug: "confirmation-dialog",
+      reason: "일괄 삭제 전에 한 번 더 묻기",
+    },
   ],
   accessibility: [
     '체크박스 이름이 "A-1021 선택"처럼 행을 가리킵니다.',

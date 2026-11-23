@@ -23,7 +23,7 @@ export const roachMotelPattern: Pattern = {
   ],
   alternatives: [
     { name: "몰래 자동 결제", slug: "forced-continuity", reason: "체험이 유료로 넘어가는 흐름" },
-    { name: "확인 대화상자", slug: "confirmation-dialog", reason: "해지 전에 한 번 확인할 때" },
+    { name: "확인 다이얼로그", slug: "confirmation-dialog", reason: "해지 전에 한 번 확인할 때" },
   ],
   accessibility: [
     "해지 버튼을 다른 버튼과 같은 방식으로 찾을 수 있게 둡니다.",

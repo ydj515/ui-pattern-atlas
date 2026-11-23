@@ -21,9 +21,9 @@ export const tooltipPattern: Pattern = {
     "터치 환경이 주 사용 환경일 때",
   ],
   alternatives: [
-    { name: "Popover", slug: "popover", reason: "링크나 버튼이 포함된 설명" },
+    { name: "팝오버", slug: "popover", reason: "링크나 버튼이 포함된 설명" },
     {
-      name: "Inline Validation",
+      name: "인라인 오류",
       slug: "inline-validation",
       reason: "입력 필드 아래 항상 보이는 안내",
     },

@@ -21,7 +21,7 @@ export const progressRingPattern: Pattern = {
     "목표 대비 달성률처럼 진행이 아닌 수치(도넛 차트 사용)",
   ],
   alternatives: [
-    { name: "진행 바", slug: "progress-bar", reason: "가로 공간이 충분할 때" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "가로 공간이 충분할 때" },
     { name: "스피너", slug: "spinner", reason: "얼마나 남았는지 알 수 없을 때" },
   ],
   accessibility: [

@@ -22,7 +22,7 @@ export const countUpPattern: Pattern = {
   ],
   alternatives: [
     {
-      name: "대시보드 배치",
+      name: "대시보드 레이아웃",
       slug: "dashboard-layout",
       reason: "여러 숫자를 움직임 없이 한 화면에 모을 때",
     },

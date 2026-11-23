@@ -27,7 +27,7 @@ export const freeShippingProgressPattern: Pattern = {
     "배송비가 지역마다 크게 다를 때",
   ],
   alternatives: [
-    { name: "진행 바", slug: "progress-bar", reason: "작업 진행률을 보여 줄 때" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "작업 진행률을 보여 줄 때" },
     { name: "묶음 할인", slug: "bundle-deal", reason: "금액 대신 수량이 기준일 때" },
   ],
   accessibility: [

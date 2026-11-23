@@ -21,8 +21,8 @@ export const setupChecklistPattern: Pattern = {
     "모두 마친 뒤에도 계속 남겨 둘 때",
   ],
   alternatives: [
-    { name: "단계 표시", slug: "stepper", reason: "순서가 정해진 절차" },
-    { name: "진행 바", slug: "progress-bar", reason: "진행률만 보여 줄 때" },
+    { name: "스테퍼", slug: "stepper", reason: "순서가 정해진 절차" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "진행률만 보여 줄 때" },
   ],
   accessibility: [
     "진행률은 progress 요소와 숫자(2 / 4) 둘 다로 보여 줍니다.",

@@ -23,7 +23,7 @@ export const gripPattern: Pattern = {
   ],
   alternatives: [
     { name: "드래그 앤 드롭", slug: "drag-and-drop", reason: "다른 영역으로 옮길 때" },
-    { name: "순서 바꾸기", slug: "sortable-list", reason: "목록 순서 바꾸기 전체 패턴" },
+    { name: "순서 바꾸기 목록", slug: "sortable-list", reason: "목록 순서 바꾸기 전체 패턴" },
   ],
   accessibility: [
     "손잡이는 버튼이고 위아래 화살표로 순서를 바꿀 수 있습니다.",

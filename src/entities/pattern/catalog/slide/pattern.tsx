@@ -22,7 +22,7 @@ export const slidePattern: Pattern = {
   ],
   alternatives: [
     { name: "페이드", slug: "fade", reason: "위치는 그대로 두고 나타날 때" },
-    { name: "서랍", slug: "drawer", reason: "옆에서 나오는 메뉴 전체 패턴" },
+    { name: "드로어", slug: "drawer", reason: "옆에서 나오는 메뉴 전체 패턴" },
   ],
   accessibility: [
     "숨기기 버튼은 aria-pressed로 표시 상태를 알립니다.",

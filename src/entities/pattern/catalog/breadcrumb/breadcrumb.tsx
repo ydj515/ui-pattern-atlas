@@ -21,7 +21,7 @@ export const breadcrumbPattern: Pattern = {
     "방문 기록(뒤로 가기)을 대신하려 할 때",
   ],
   alternatives: [
-    { name: "Tabs", slug: "tabs", reason: "같은 수준의 화면 사이를 오갈 때" },
+    { name: "탭", slug: "tabs", reason: "같은 수준의 화면 사이를 오갈 때" },
     { name: "Stepper", reason: "순서가 있는 진행 단계 표시" },
   ],
   accessibility: [

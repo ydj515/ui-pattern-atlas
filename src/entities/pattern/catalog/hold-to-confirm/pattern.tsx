@@ -21,7 +21,7 @@ export const holdToConfirmPattern: Pattern = {
     "자주 하는 행동(매번 기다려야 함)",
   ],
   alternatives: [
-    { name: "확인 대화상자", slug: "confirmation-dialog", reason: "한 번 더 묻는 일반적인 방법" },
+    { name: "확인 다이얼로그", slug: "confirmation-dialog", reason: "한 번 더 묻는 일반적인 방법" },
     { name: "되돌리기", slug: "undo", reason: "먼저 실행하고 잠시 되돌릴 기회를 줄 때" },
   ],
   accessibility: [

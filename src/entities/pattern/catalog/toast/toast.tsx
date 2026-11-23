@@ -21,9 +21,9 @@ export const toastPattern: Pattern = {
     "메시지가 길거나 여러 개의 액션이 필요할 때",
   ],
   alternatives: [
-    { name: "Alert Banner", slug: "alert-banner", reason: "사라지면 안 되는 중요한 안내" },
-    { name: "Modal Dialog", slug: "modal-dialog", reason: "결정이 필요한 경우" },
-    { name: "Inline Validation", slug: "inline-validation", reason: "특정 입력 필드의 오류" },
+    { name: "배너 알림", slug: "alert-banner", reason: "사라지면 안 되는 중요한 안내" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "결정이 필요한 경우" },
+    { name: "인라인 오류", slug: "inline-validation", reason: "특정 입력 필드의 오류" },
   ],
   accessibility: [
     '항상 마운트된 aria-live="polite" 영역에 메시지를 추가해 스크린 리더가 읽게 합니다.',

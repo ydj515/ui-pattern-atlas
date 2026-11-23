@@ -23,7 +23,7 @@ export const topLoadingBarPattern: Pattern = {
   alternatives: [
     { name: "스켈레톤", slug: "skeleton", reason: "새 화면의 자리를 먼저 그릴 때" },
     { name: "지연 표시 로더", slug: "delayed-spinner", reason: "영역 안에서 기다릴 때" },
-    { name: "진행 바", slug: "progress-bar", reason: "진행률을 알 때" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "진행률을 알 때" },
   ],
   accessibility: [
     "막대는 이름이 있는 progressbar이고, 보이지 않을 때는 aria-hidden입니다.",

@@ -27,7 +27,7 @@ describe("buildPatternMarkdown", () => {
     expect(markdown).toContain("## When to use\n\n- 상세 정보");
     expect(markdown).toContain("## When not to use");
     expect(markdown).toContain(
-      "[Segmented Control](https://atlas.example/patterns/segmented-control): 같은 데이터의 보기 방식 전환",
+      "[세그먼트 컨트롤](https://atlas.example/patterns/segmented-control): 같은 데이터의 보기 방식 전환",
     );
     expect(markdown).toContain("### Component: Tabs.tsx\n\n```tsx\nexport const a = 1;\n```");
     expect(markdown).toContain("## Accessibility");

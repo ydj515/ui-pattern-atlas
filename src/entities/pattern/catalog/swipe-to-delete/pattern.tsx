@@ -21,8 +21,8 @@ export const swipeToDeletePattern: Pattern = {
     "행 안에 가로로 스크롤되는 내용이 있을 때",
   ],
   alternatives: [
-    { name: "실행 취소", slug: "undo", reason: "지운 뒤 바로 되돌릴 기회를 줄 때" },
-    { name: "확인 대화상자", slug: "confirmation-dialog", reason: "되돌릴 수 없는 삭제일 때" },
+    { name: "되돌리기", slug: "undo", reason: "지운 뒤 바로 되돌릴 기회를 줄 때" },
+    { name: "확인 다이얼로그", slug: "confirmation-dialog", reason: "되돌릴 수 없는 삭제일 때" },
   ],
   accessibility: [
     "삭제 버튼은 실제 button이라 Tab으로 가면 행이 밀리며 드러나 제스처 없이도 지울 수 있습니다.",

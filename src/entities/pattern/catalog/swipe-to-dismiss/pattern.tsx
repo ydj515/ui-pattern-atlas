@@ -21,8 +21,8 @@ export const swipeToDismissPattern: Pattern = {
     "데스크톱 대화상자",
   ],
   alternatives: [
-    { name: "바텀 시트", slug: "bottom-sheet", reason: "시트 자체의 구조와 높이" },
-    { name: "모달 대화상자", slug: "modal-dialog", reason: "데스크톱이나 확인이 필요할 때" },
+    { name: "바텀시트", slug: "bottom-sheet", reason: "시트 자체의 구조와 높이" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "데스크톱이나 확인이 필요할 때" },
   ],
   accessibility: [
     "닫기 버튼과 Esc로도 닫을 수 있어 끌기가 유일한 방법이 아닙니다.",

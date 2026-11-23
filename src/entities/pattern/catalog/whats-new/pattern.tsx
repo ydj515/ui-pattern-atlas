@@ -18,7 +18,7 @@ export const whatsNewPattern: Pattern = {
   ],
   alternatives: [
     { name: "코치마크", slug: "coach-mark", reason: "바뀐 버튼 하나를 짚을 때" },
-    { name: "알림 배너", slug: "alert-banner", reason: "화면 위에 짧게 알릴 때" },
+    { name: "배너 알림", slug: "alert-banner", reason: "화면 위에 짧게 알릴 때" },
   ],
   accessibility: [
     "role=dialog와 제목으로 이름을 붙입니다.",

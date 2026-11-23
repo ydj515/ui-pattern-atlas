@@ -481,7 +481,7 @@ describe("pattern detail page", () => {
       expect(within(heading).getByRole("link", { name })).toHaveAttribute("href", href);
       expect(href).toBe(`/patterns/modal-dialog#${heading.closest("section")?.id}`);
     });
-    expect(screen.getByRole("link", { name: /Toast/ })).toHaveAttribute("href", "/patterns/toast");
+    expect(screen.getByRole("link", { name: /토스트/ })).toHaveAttribute("href", "/patterns/toast");
   });
 
   it("marks only the current section as the reader scrolls in either direction", () => {

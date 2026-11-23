@@ -22,7 +22,7 @@ export const noFilterResultsPattern: Pattern = {
   ],
   alternatives: [
     { name: "검색 결과 없음", slug: "no-results", reason: "검색어가 원인일 때" },
-    { name: "빈 상태", slug: "empty-state", reason: "데이터 자체가 없을 때" },
+    { name: "빈 화면", slug: "empty-state", reason: "데이터 자체가 없을 때" },
   ],
   accessibility: [
     '필터 칩은 버튼이고 이름이 "수영장 필터 빼기"처럼 누르면 일어날 일을 말합니다.',

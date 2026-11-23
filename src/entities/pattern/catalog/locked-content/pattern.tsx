@@ -23,7 +23,7 @@ export const lockedContentPattern: Pattern = {
   alternatives: [
     { name: "권한 없음", slug: "permission-denied", reason: "소유자에게 권한을 요청해야 할 때" },
     {
-      name: "가격 비교표",
+      name: "요금제 비교",
       slug: "pricing-plan-comparison",
       reason: "여러 요금제 중에서 골라야 할 때",
     },

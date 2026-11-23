@@ -22,7 +22,7 @@ export const notFoundPagePattern: Pattern = {
   ],
   alternatives: [
     { name: "권한 없음", slug: "permission-denied", reason: "페이지는 있지만 볼 수 없을 때" },
-    { name: "오류 상태", slug: "error-state", reason: "페이지 일부만 불러오지 못했을 때" },
+    { name: "오류 화면", slug: "error-state", reason: "페이지 일부만 불러오지 못했을 때" },
   ],
   accessibility: [
     '제목("페이지를 찾을 수 없어요")이 먼저 읽히고, 404 숫자는 보조 정보로 둡니다.',

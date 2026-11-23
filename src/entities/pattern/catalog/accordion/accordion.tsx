@@ -21,8 +21,8 @@ export const accordionPattern: Pattern = {
     "내용이 한두 줄뿐이라 접을 이유가 없을 때",
   ],
   alternatives: [
-    { name: "Tabs", slug: "tabs", reason: "가로로 나눈 같은 수준의 콘텐츠" },
-    { name: "Drawer", slug: "drawer", reason: "본문과 분리된 상세 내용" },
+    { name: "탭", slug: "tabs", reason: "가로로 나눈 같은 수준의 콘텐츠" },
+    { name: "드로어", slug: "drawer", reason: "본문과 분리된 상세 내용" },
   ],
   accessibility: [
     "각 제목은 heading 안의 <button>으로 만들어 문서 구조와 키보드 조작을 함께 지원합니다.",

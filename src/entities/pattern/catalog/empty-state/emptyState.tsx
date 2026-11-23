@@ -21,10 +21,10 @@ export const emptyStatePattern: Pattern = {
     "행동을 유도할 버튼이 여러 개 경쟁할 때",
   ],
   alternatives: [
-    { name: "Skeleton", slug: "skeleton", reason: "로딩 중인 상태" },
-    { name: "Error State", slug: "error-state", reason: "오류로 인해 내용을 표시할 수 없을 때" },
+    { name: "스켈레톤", slug: "skeleton", reason: "로딩 중인 상태" },
+    { name: "오류 화면", slug: "error-state", reason: "오류로 인해 내용을 표시할 수 없을 때" },
     {
-      name: "Alert Banner",
+      name: "배너 알림",
       slug: "alert-banner",
       reason: "나머지 콘텐츠를 탐색할 수 있는 부분 실패",
     },

@@ -21,7 +21,7 @@ export const offlineStatePattern: Pattern = {
     "입력 중인 폼을 지울 때(입력은 지우지 말고 위에 배너로 알리기)",
   ],
   alternatives: [
-    { name: "오류 상태", slug: "error-state", reason: "서버나 요청 자체가 실패했을 때" },
+    { name: "오류 화면", slug: "error-state", reason: "서버나 요청 자체가 실패했을 때" },
     { name: "배너 알림", slug: "alert-banner", reason: "화면은 그대로 두고 연결 상태만 알릴 때" },
   ],
   accessibility: [

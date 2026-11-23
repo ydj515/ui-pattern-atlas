@@ -21,7 +21,7 @@ export const edgeSwipePattern: Pattern = {
     "데스크톱",
   ],
   alternatives: [
-    { name: "서랍", slug: "drawer", reason: "메뉴 버튼으로 여는 서랍" },
+    { name: "드로어", slug: "drawer", reason: "메뉴 버튼으로 여는 서랍" },
     { name: "스와이프 이동", slug: "swipe-navigation", reason: "같은 종류의 화면을 넘길 때" },
   ],
   accessibility: [

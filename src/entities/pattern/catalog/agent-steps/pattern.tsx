@@ -22,7 +22,7 @@ export const agentStepsPattern: Pattern = {
   ],
   alternatives: [
     { name: "생각 중 표시", slug: "thinking-indicator", reason: "단계 없이 기다릴 때" },
-    { name: "단계 표시", slug: "stepper", reason: "사용자가 직접 진행하는 단계" },
+    { name: "스테퍼", slug: "stepper", reason: "사용자가 직접 진행하는 단계" },
   ],
   accessibility: [
     "ol 목록이 aria-live라 단계가 바뀌면 알립니다.",

@@ -23,7 +23,7 @@ export const zeigarnikEffectPattern: Pattern = {
   ],
   alternatives: [
     { name: "설정 체크리스트", slug: "setup-checklist", reason: "처음 할 일 목록" },
-    { name: "진행 바", slug: "progress-bar", reason: "진행률 표시" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "진행률 표시" },
   ],
   accessibility: [
     "진행률은 숫자와 글로 함께 보여 줍니다.",

@@ -26,7 +26,7 @@ export const maintenancePagePattern: Pattern = {
       slug: "alert-banner",
       reason: "점검 전에 미리 알리거나 일부 기능만 멈출 때",
     },
-    { name: "오류 상태", slug: "error-state", reason: "예상하지 못한 장애" },
+    { name: "오류 화면", slug: "error-state", reason: "예상하지 못한 장애" },
   ],
   accessibility: [
     "시간은 time 요소와 dateTime 값으로 표시하고, 보는 사람의 시간대로 바꿔 보여 줍니다.",

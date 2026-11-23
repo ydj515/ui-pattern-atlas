@@ -22,7 +22,7 @@ export const welcomeScreenPattern: Pattern = {
   ],
   alternatives: [
     { name: "온보딩 슬라이드", slug: "onboarding-carousel", reason: "여러 장으로 소개할 때" },
-    { name: "모달 대화상자", slug: "modal-dialog", reason: "일반적인 확인 창" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "일반적인 확인 창" },
   ],
   accessibility: [
     "기본 dialog 요소의 showModal로 열어 포커스가 안에 머뭅니다.",

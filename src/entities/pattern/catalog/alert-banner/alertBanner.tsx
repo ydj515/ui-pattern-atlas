@@ -21,9 +21,9 @@ export const alertBannerPattern: Pattern = {
     "특정 입력 필드에만 해당하는 오류일 때",
   ],
   alternatives: [
-    { name: "Toast", slug: "toast", reason: "잠시 보여주면 되는 결과 안내" },
-    { name: "Inline Validation", slug: "inline-validation", reason: "필드 단위 오류" },
-    { name: "Modal Dialog", slug: "modal-dialog", reason: "즉시 결정이 필요한 경우" },
+    { name: "토스트", slug: "toast", reason: "잠시 보여주면 되는 결과 안내" },
+    { name: "인라인 오류", slug: "inline-validation", reason: "필드 단위 오류" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "즉시 결정이 필요한 경우" },
   ],
   accessibility: [
     '오류 톤은 role="alert", 나머지는 role="status"로 심각도에 맞게 알립니다.',

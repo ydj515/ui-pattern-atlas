@@ -22,7 +22,7 @@ export const receiptSummaryPattern: Pattern = {
   ],
   alternatives: [
     { name: "완료 화면", slug: "success-screen", reason: "결과와 다음 단계를 함께 보여 줄 때" },
-    { name: "표", slug: "data-table", reason: "많은 주문을 비교할 때" },
+    { name: "데이터 테이블", slug: "data-table", reason: "많은 주문을 비교할 때" },
   ],
   accessibility: [
     "품목 펼치기 버튼은 aria-expanded와 aria-controls를 가집니다.",

@@ -21,7 +21,11 @@ export const successScreenPattern: Pattern = {
     "광고와 추천으로 결과를 덮을 때",
   ],
   alternatives: [
-    { name: "확인 메시지", slug: "confirmation-message", reason: "화면 이동 없이 결과를 알릴 때" },
+    {
+      name: "제출 완료 안내",
+      slug: "confirmation-message",
+      reason: "화면 이동 없이 결과를 알릴 때",
+    },
     { name: "영수증 요약", slug: "receipt-summary", reason: "금액 내역을 자세히 보여 줄 때" },
   ],
   accessibility: [

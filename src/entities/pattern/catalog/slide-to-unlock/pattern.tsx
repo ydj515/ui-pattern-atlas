@@ -21,8 +21,8 @@ export const slideToUnlockPattern: Pattern = {
     "데스크톱 폼 제출",
   ],
   alternatives: [
-    { name: "확인 대화상자", slug: "confirmation-dialog", reason: "실행 전에 한 번 더 물을 때" },
-    { name: "눌러서 확인", slug: "hold-to-confirm", reason: "누르고 있어야 실행될 때" },
+    { name: "확인 다이얼로그", slug: "confirmation-dialog", reason: "실행 전에 한 번 더 물을 때" },
+    { name: "길게 눌러 확인", slug: "hold-to-confirm", reason: "누르고 있어야 실행될 때" },
   ],
   accessibility: [
     "밑에 기본 range 입력이 있어 방향키와 End 키로도 해제할 수 있습니다.",

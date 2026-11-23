@@ -21,9 +21,9 @@ export const popoverPattern: Pattern = {
     "호버만으로 열려야 하는 짧은 라벨일 때",
   ],
   alternatives: [
-    { name: "Tooltip", slug: "tooltip", reason: "한 줄짜리 비대화형 설명" },
-    { name: "Modal Dialog", slug: "modal-dialog", reason: "반드시 결정이 필요한 경우" },
-    { name: "Accordion", slug: "accordion", reason: "항상 페이지 흐름 안에 보여야 하는 설명" },
+    { name: "툴팁", slug: "tooltip", reason: "한 줄짜리 비대화형 설명" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "반드시 결정이 필요한 경우" },
+    { name: "아코디언", slug: "accordion", reason: "항상 페이지 흐름 안에 보여야 하는 설명" },
   ],
   accessibility: [
     "트리거 버튼에 aria-expanded와 aria-controls를 설정해 열림 상태를 알립니다.",

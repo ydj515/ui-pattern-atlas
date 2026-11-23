@@ -21,8 +21,8 @@ export const segmentedControlPattern: Pattern = {
     "여러 개를 동시에 선택해야 할 때",
   ],
   alternatives: [
-    { name: "Tabs", slug: "tabs", reason: "서로 다른 콘텐츠 패널 전환" },
-    { name: "Switch", slug: "switch", reason: "켜고 끄는 두 가지 상태" },
+    { name: "탭", slug: "tabs", reason: "서로 다른 콘텐츠 패널 전환" },
+    { name: "스위치", slug: "switch", reason: "켜고 끄는 두 가지 상태" },
     { name: "Select", reason: "선택지가 6개 이상" },
   ],
   accessibility: [

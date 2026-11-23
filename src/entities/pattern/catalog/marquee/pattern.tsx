@@ -21,7 +21,7 @@ export const marqueePattern: Pattern = {
     "본문 사이에 두어 읽기를 방해할 때",
   ],
   alternatives: [
-    { name: "알림 배너", slug: "alert-banner", reason: "꼭 읽어야 하는 공지" },
+    { name: "배너 알림", slug: "alert-banner", reason: "꼭 읽어야 하는 공지" },
     { name: "캐러셀", slug: "carousel", reason: "사용자가 넘기며 볼 때" },
   ],
   accessibility: [

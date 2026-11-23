@@ -21,7 +21,7 @@ export const bundleDealPattern: Pattern = {
     "서로 다른 상품을 묶는 세트 구성",
   ],
   alternatives: [
-    { name: "수량 선택기", slug: "number-stepper", reason: "할인 없이 수량만 고를 때" },
+    { name: "숫자 입력", slug: "number-stepper", reason: "할인 없이 수량만 고를 때" },
     {
       name: "무료배송 진행 바",
       slug: "free-shipping-progress",

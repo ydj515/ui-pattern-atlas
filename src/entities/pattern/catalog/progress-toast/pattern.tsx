@@ -27,7 +27,7 @@ export const progressToastPattern: Pattern = {
     "진행률을 알 수 없는 작업(스피너 사용)",
   ],
   alternatives: [
-    { name: "진행 바", slug: "progress-bar", reason: "작업 화면 안에서 진행률을 보여 줄 때" },
+    { name: "프로그레스 바", slug: "progress-bar", reason: "작업 화면 안에서 진행률을 보여 줄 때" },
     { name: "토스트", slug: "toast", reason: "끝난 결과만 짧게 알릴 때" },
     { name: "스피너", slug: "spinner", reason: "진행률을 알 수 없을 때" },
   ],

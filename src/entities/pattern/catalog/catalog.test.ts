@@ -42,6 +42,10 @@ describe("pattern catalog", () => {
             `${pattern.slug} → ${alternative.slug}`,
           ).toBeDefined();
           expect(alternative.slug).not.toBe(pattern.slug);
+          // The link text should read like the title the reader lands on.
+          expect(alternative.name, `${pattern.slug} → ${alternative.slug}`).toBe(
+            findPatternBySlug(alternative.slug)?.nameKo,
+          );
         }
       }
     }

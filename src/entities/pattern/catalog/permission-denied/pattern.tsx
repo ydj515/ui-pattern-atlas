@@ -22,7 +22,11 @@ export const permissionDeniedPattern: Pattern = {
   ],
   alternatives: [
     { name: "잠긴 콘텐츠", slug: "locked-content", reason: "결제나 멤버십으로 풀 수 있을 때" },
-    { name: "404 페이지", slug: "not-found-page", reason: "있는지조차 알려 주면 안 될 때" },
+    {
+      name: "찾을 수 없는 페이지",
+      slug: "not-found-page",
+      reason: "있는지조차 알려 주면 안 될 때",
+    },
   ],
   accessibility: [
     '요청 뒤 결과 문구("승인되면 메일로 알려 드려요.")를 role="status"로 알립니다.',

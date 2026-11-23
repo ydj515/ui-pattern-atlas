@@ -21,7 +21,7 @@ export const allCaughtUpPattern: Pattern = {
     "불러오기에 실패해 비어 보이는 경우(오류 상태 사용)",
   ],
   alternatives: [
-    { name: "빈 상태", slug: "empty-state", reason: "처음 써 보는 화면" },
+    { name: "빈 화면", slug: "empty-state", reason: "처음 써 보는 화면" },
     { name: "삭제 직후 빈 화면", slug: "emptied-state", reason: "마지막 항목을 지워서 비었을 때" },
   ],
   accessibility: [

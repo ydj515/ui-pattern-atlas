@@ -21,9 +21,9 @@ export const modalDialogPattern: Pattern = {
     "긴 폼이나 여러 단계의 입력이 필요할 때",
   ],
   alternatives: [
-    { name: "Toast", slug: "toast", reason: "간단한 처리 결과 안내" },
-    { name: "Popover", slug: "popover", reason: "현재 맥락을 유지하는 부가 정보" },
-    { name: "Drawer", slug: "drawer", reason: "상대적으로 복잡한 입력 작업" },
+    { name: "토스트", slug: "toast", reason: "간단한 처리 결과 안내" },
+    { name: "팝오버", slug: "popover", reason: "현재 맥락을 유지하는 부가 정보" },
+    { name: "드로어", slug: "drawer", reason: "상대적으로 복잡한 입력 작업" },
   ],
   accessibility: [
     "네이티브 <dialog>의 showModal()을 사용해 포커스가 창 안에 갇히고 배경은 inert 상태가 됩니다.",

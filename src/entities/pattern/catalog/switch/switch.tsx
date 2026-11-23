@@ -22,7 +22,7 @@ export const switchPattern: Pattern = {
   ],
   alternatives: [
     { name: "Checkbox", reason: "폼 제출과 함께 반영되는 선택" },
-    { name: "Segmented Control", slug: "segmented-control", reason: "두 개 이상의 이름 있는 상태" },
+    { name: "세그먼트 컨트롤", slug: "segmented-control", reason: "두 개 이상의 이름 있는 상태" },
   ],
   accessibility: [
     '네이티브 <button>에 role="switch"와 aria-checked를 지정해 상태를 알립니다.',

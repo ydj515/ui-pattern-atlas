@@ -23,7 +23,7 @@ export const skeletonPattern: Pattern = {
   alternatives: [
     { name: "Spinner", reason: "작은 영역이나 짧은 처리" },
     { name: "Progress Bar", reason: "진행률을 알 수 있는 긴 작업" },
-    { name: "Empty State", slug: "empty-state", reason: "불러온 결과가 없을 때" },
+    { name: "빈 화면", slug: "empty-state", reason: "불러온 결과가 없을 때" },
   ],
   accessibility: [
     '회색 블록은 aria-hidden으로 숨기고, 대신 role="status"로 로딩 문구를 한 번 읽어줍니다.',

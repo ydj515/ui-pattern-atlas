@@ -21,7 +21,7 @@ export const noResultsPattern: Pattern = {
     "검색 서버 오류(오류 상태 사용)",
   ],
   alternatives: [
-    { name: "빈 상태", slug: "empty-state", reason: "아직 아무것도 만들지 않은 처음 화면" },
+    { name: "빈 화면", slug: "empty-state", reason: "아직 아무것도 만들지 않은 처음 화면" },
     { name: "필터 결과 없음", slug: "no-filter-results", reason: "필터 조건이 너무 좁을 때" },
   ],
   accessibility: [

@@ -28,8 +28,8 @@ export const inlineValidationPattern: Pattern = {
     "오류 문구가 '잘못된 입력' 같이 해결 방법을 주지 못할 때",
   ],
   alternatives: [
-    { name: "Alert Banner", slug: "alert-banner", reason: "폼 전체 또는 시스템 오류" },
-    { name: "Toast", slug: "toast", reason: "제출 성공 같은 결과 안내" },
+    { name: "배너 알림", slug: "alert-banner", reason: "폼 전체 또는 시스템 오류" },
+    { name: "토스트", slug: "toast", reason: "제출 성공 같은 결과 안내" },
   ],
   accessibility: [
     "<label>을 입력 필드와 연결하고 placeholder를 라벨 대신 쓰지 않습니다.",

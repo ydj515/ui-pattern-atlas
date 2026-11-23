@@ -21,7 +21,7 @@ export const dragAndDropPattern: Pattern = {
     "터치 화면에서 스크롤과 자주 겹칠 때",
   ],
   alternatives: [
-    { name: "순서 바꾸기", slug: "sortable-list", reason: "같은 목록 안에서 순서만 바꿀 때" },
+    { name: "순서 바꾸기 목록", slug: "sortable-list", reason: "같은 목록 안에서 순서만 바꿀 때" },
     { name: "파일 업로드", slug: "file-upload", reason: "파일을 끌어다 놓을 때" },
   ],
   accessibility: [

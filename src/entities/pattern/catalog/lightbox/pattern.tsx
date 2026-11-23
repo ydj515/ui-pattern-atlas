@@ -22,7 +22,7 @@ export const lightboxPattern: Pattern = {
   ],
   alternatives: [
     { name: "이미지 갤러리", slug: "image-gallery", reason: "페이지 안에서 바꿔 볼 때" },
-    { name: "모달 대화상자", slug: "modal-dialog", reason: "사진이 아닌 내용" },
+    { name: "모달 다이얼로그", slug: "modal-dialog", reason: "사진이 아닌 내용" },
   ],
   accessibility: [
     "기본 dialog를 showModal로 열어 뒤 화면을 막고 포커스를 가둡니다.",

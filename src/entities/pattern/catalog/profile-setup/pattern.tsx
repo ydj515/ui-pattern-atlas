@@ -22,7 +22,7 @@ export const profileSetupPattern: Pattern = {
   ],
   alternatives: [
     { name: "아바타", slug: "avatar", reason: "프로필 사진 표시" },
-    { name: "인라인 검증", slug: "inline-validation", reason: "입력 규칙을 바로 알릴 때" },
+    { name: "인라인 오류", slug: "inline-validation", reason: "입력 규칙을 바로 알릴 때" },
   ],
   accessibility: [
     "닉네임 칸은 label과 연결하고 규칙과 글자 수를 aria-describedby로 묶습니다.",

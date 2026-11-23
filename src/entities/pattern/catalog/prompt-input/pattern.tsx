@@ -21,8 +21,8 @@ export const promptInputPattern: Pattern = {
     "보내기와 멈추기를 다른 곳에 따로 둘 때",
   ],
   alternatives: [
-    { name: "검색 필드", slug: "search-field", reason: "한 줄 검색어를 받을 때" },
-    { name: "여러 줄 입력", slug: "textarea", reason: "긴 글을 쓸 때" },
+    { name: "검색창", slug: "search-field", reason: "한 줄 검색어를 받을 때" },
+    { name: "텍스트 영역", slug: "textarea", reason: "긴 글을 쓸 때" },
   ],
   accessibility: [
     "입력창은 숨겨진 label로 이름을 붙입니다.",

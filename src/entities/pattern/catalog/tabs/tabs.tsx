@@ -22,11 +22,11 @@ export const tabsPattern: Pattern = {
   ],
   alternatives: [
     {
-      name: "Segmented Control",
+      name: "세그먼트 컨트롤",
       slug: "segmented-control",
       reason: "같은 데이터의 보기 방식 전환",
     },
-    { name: "Accordion", slug: "accordion", reason: "모바일에서 여러 섹션을 세로로 나열" },
+    { name: "아코디언", slug: "accordion", reason: "모바일에서 여러 섹션을 세로로 나열" },
   ],
   accessibility: [
     'role="tablist", "tab", "tabpanel"과 aria-selected, aria-controls로 관계를 연결합니다.',
