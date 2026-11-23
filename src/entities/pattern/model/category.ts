@@ -78,12 +78,6 @@ export const PATTERN_CATEGORIES = [
     description: "작업 중이나 콘텐츠를 기다릴 때 보여 주는 상태",
   },
   {
-    id: "empty-error",
-    label: "Empty and error",
-    labelKo: "빈 화면과 오류",
-    description: "결과가 비었거나 불러오지 못했을 때의 안내",
-  },
-  {
     id: "gesture",
     label: "Gesture",
     labelKo: "제스처",
@@ -100,6 +94,18 @@ export const PATTERN_CATEGORIES = [
     label: "Text motion",
     labelKo: "글자 모션",
     description: "숫자와 글자가 움직이는 표현",
+  },
+  {
+    id: "data-viz",
+    label: "Data visualization",
+    labelKo: "데이터 시각화",
+    description: "숫자의 차이, 변화, 구성비를 보여 주는 화면",
+  },
+  {
+    id: "empty-error",
+    label: "Empty and error",
+    labelKo: "빈 화면과 오류",
+    description: "결과가 비었거나 불러오지 못했을 때의 안내",
   },
   {
     id: "onboarding",
@@ -126,16 +132,28 @@ export const PATTERN_CATEGORIES = [
     description: "AI와 대화하고 결과를 다루는 화면",
   },
   {
-    id: "icon-names",
-    label: "Icon names",
-    labelKo: "아이콘 이름",
-    description: "모양은 아는데 이름이 헷갈리는 아이콘",
+    id: "pricing-display",
+    label: "Pricing and discounts",
+    labelKo: "가격과 할인 표시",
+    description: "가격과 혜택, 청구 조건을 쉽게 비교하는 화면",
+  },
+  {
+    id: "search-discovery",
+    label: "Search and discovery",
+    labelKo: "검색과 탐색",
+    description: "검색을 시작하고 원하는 결과를 좁히는 화면",
   },
   {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",
     description: "같은 화면을 다른 스타일로 그린 비교",
+  },
+  {
+    id: "typography-style",
+    label: "Typography style",
+    labelKo: "글자 스타일",
+    description: "같은 문구로 글자 형태와 질감의 차이를 비교",
   },
   {
     id: "dark-patterns",
@@ -162,28 +180,10 @@ export const PATTERN_CATEGORIES = [
     description: "가격과 선택지를 보여 주는 방식이 선택에 주는 영향",
   },
   {
-    id: "typography-style",
-    label: "Typography style",
-    labelKo: "글자 스타일",
-    description: "같은 문구로 글자 형태와 질감의 차이를 비교",
-  },
-  {
-    id: "pricing-display",
-    label: "Pricing and discounts",
-    labelKo: "가격과 할인 표시",
-    description: "가격과 혜택, 청구 조건을 쉽게 비교하는 화면",
-  },
-  {
-    id: "search-discovery",
-    label: "Search and discovery",
-    labelKo: "검색과 탐색",
-    description: "검색을 시작하고 원하는 결과를 좁히는 화면",
-  },
-  {
-    id: "data-viz",
-    label: "Data visualization",
-    labelKo: "데이터 시각화",
-    description: "숫자의 차이, 변화, 구성비를 보여 주는 화면",
+    id: "icon-names",
+    label: "Icon names",
+    labelKo: "아이콘 이름",
+    description: "모양은 아는데 이름이 헷갈리는 아이콘",
   },
   {
     id: "ux-research",
