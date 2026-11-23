@@ -32802,6 +32802,646 @@
   }
 }
 
+/* Column chart: 상반기 → 하반기, columns grow on the same scale. */
+
+.thumb-dv-col-cursor {
+  animation-name: thumb-dv-col-cursor;
+}
+
+.thumb-dv-col-pill {
+  animation-name: thumb-dv-col-pill;
+}
+
+.thumb-dv-col-a {
+  animation-name: thumb-dv-col-a;
+}
+
+.thumb-dv-col-b {
+  animation-name: thumb-dv-col-b;
+}
+
+@keyframes thumb-dv-col-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-col-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-col-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-col-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.thumb-dv-col-grow {
+  animation-name: thumb-dv-col-grow;
+}
+
+@keyframes thumb-dv-col-grow {
+  0%,
+  19% {
+    transform: scaleY(1);
+  }
+  25%,
+  96% {
+    transform: scaleY(var(--to));
+  }
+  99%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Pie chart: 방문 → 구매. */
+
+.thumb-dv-pie-cursor {
+  animation-name: thumb-dv-pie-cursor;
+}
+
+.thumb-dv-pie-pill {
+  animation-name: thumb-dv-pie-pill;
+}
+
+.thumb-dv-pie-a {
+  animation-name: thumb-dv-pie-a;
+}
+
+.thumb-dv-pie-b {
+  animation-name: thumb-dv-pie-b;
+}
+
+@keyframes thumb-dv-pie-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-pie-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-pie-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-pie-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Histogram: 1만 원씩 → 2만 원씩 regroups the same orders. */
+
+.thumb-dv-hist-cursor {
+  animation-name: thumb-dv-hist-cursor;
+}
+
+.thumb-dv-hist-pill {
+  animation-name: thumb-dv-hist-pill;
+}
+
+.thumb-dv-hist-a {
+  animation-name: thumb-dv-hist-a;
+}
+
+.thumb-dv-hist-b {
+  animation-name: thumb-dv-hist-b;
+}
+
+@keyframes thumb-dv-hist-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-hist-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-hist-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-hist-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Venn diagram: 이메일, then 문자, outlines that set and reads its total. */
+
+.thumb-dv-venn-cursor {
+  animation-name: thumb-dv-venn-cursor;
+}
+
+.thumb-dv-venn-a {
+  animation-name: thumb-dv-venn-a;
+}
+
+.thumb-dv-venn-b {
+  animation-name: thumb-dv-venn-b;
+}
+
+@keyframes thumb-dv-venn-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(55px, 86px);
+  }
+  46%,
+  52% {
+    transform: translate(126px, 86px);
+  }
+  66% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-venn-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  51% {
+    opacity: 1;
+  }
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-venn-b {
+  0%,
+  51% {
+    opacity: 0;
+  }
+  52%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Bubble chart: pointing at 니트, then 가방. */
+
+.thumb-dv-bub-cursor {
+  animation-name: thumb-dv-bub-cursor;
+}
+
+.thumb-dv-bub-a {
+  animation-name: thumb-dv-bub-a;
+}
+
+.thumb-dv-bub-b {
+  animation-name: thumb-dv-bub-b;
+}
+
+@keyframes thumb-dv-bub-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(106px, 63px);
+  }
+  46%,
+  66% {
+    transform: translate(140px, 92px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-bub-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-bub-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Radar chart: 에어 14와 비교 overlays the second shape. */
+
+.thumb-dv-radar-cursor {
+  animation-name: thumb-dv-radar-cursor;
+}
+
+.thumb-dv-radar-b {
+  animation-name: thumb-dv-radar-b;
+}
+
+@keyframes thumb-dv-radar-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(26px, 98px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-radar-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Scatter plot: the outlier reads 8km · 10시간, then 평균선 보기. */
+
+.thumb-dv-scat-cursor {
+  animation-name: thumb-dv-scat-cursor;
+}
+
+.thumb-dv-scat-hit {
+  animation-name: thumb-dv-scat-hit;
+}
+
+.thumb-dv-scat-mean {
+  animation-name: thumb-dv-scat-mean;
+}
+
+@keyframes thumb-dv-scat-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  34% {
+    transform: translate(54px, 39px);
+  }
+  44%,
+  50% {
+    transform: translate(26px, 100px);
+  }
+  64% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-scat-hit {
+  0%,
+  17% {
+    opacity: 0;
+  }
+  18%,
+  34% {
+    opacity: 1;
+  }
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-scat-mean {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Area chart: the crosshair reads 2일, 5일 and 7일. */
+
+.thumb-dv-area-cursor {
+  animation-name: thumb-dv-area-cursor;
+}
+
+.thumb-dv-area-p0 {
+  animation-name: thumb-dv-area-p0;
+}
+
+.thumb-dv-area-p1 {
+  animation-name: thumb-dv-area-p1;
+}
+
+.thumb-dv-area-p2 {
+  animation-name: thumb-dv-area-p2;
+}
+
+@keyframes thumb-dv-area-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  34% {
+    transform: translate(53px, 70px);
+  }
+  40%,
+  56% {
+    transform: translate(106px, 64px);
+  }
+  62%,
+  72% {
+    transform: translate(141px, 62px);
+  }
+  86% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-area-p0 {
+  0%,
+  15% {
+    opacity: 0;
+  }
+  16%,
+  36% {
+    opacity: 1;
+  }
+  37%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-area-p1 {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  58% {
+    opacity: 1;
+  }
+  59%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-area-p2 {
+  0%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  74% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

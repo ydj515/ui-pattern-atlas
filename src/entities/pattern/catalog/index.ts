@@ -351,6 +351,14 @@ import { surveyPattern } from "@/entities/pattern/catalog/survey/pattern";
 import { diaryStudyPattern } from "@/entities/pattern/catalog/diary-study/pattern";
 import { behavioralHeatmapPattern } from "@/entities/pattern/catalog/behavioral-heatmap/pattern";
 import { funnelAnalysisPattern } from "@/entities/pattern/catalog/funnel-analysis/pattern";
+import { columnChartPattern } from "@/entities/pattern/catalog/column-chart/pattern";
+import { pieChartPattern } from "@/entities/pattern/catalog/pie-chart/pattern";
+import { vennDiagramPattern } from "@/entities/pattern/catalog/venn-diagram/pattern";
+import { bubbleChartPattern } from "@/entities/pattern/catalog/bubble-chart/pattern";
+import { radarChartPattern } from "@/entities/pattern/catalog/radar-chart/pattern";
+import { scatterPlotPattern } from "@/entities/pattern/catalog/scatter-plot/pattern";
+import { areaChartPattern } from "@/entities/pattern/catalog/area-chart/pattern";
+import { histogramPattern } from "@/entities/pattern/catalog/histogram/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -704,6 +712,14 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   diaryStudyPattern,
   behavioralHeatmapPattern,
   funnelAnalysisPattern,
+  columnChartPattern,
+  pieChartPattern,
+  vennDiagramPattern,
+  bubbleChartPattern,
+  radarChartPattern,
+  scatterPlotPattern,
+  areaChartPattern,
+  histogramPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
