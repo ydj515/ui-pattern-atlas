@@ -342,6 +342,15 @@ import { gaugePattern } from "@/entities/pattern/catalog/gauge/pattern";
 import { heatmapPattern } from "@/entities/pattern/catalog/heatmap/pattern";
 import { kpiCardPattern } from "@/entities/pattern/catalog/kpi-card/pattern";
 import { stackedBarChartPattern } from "@/entities/pattern/catalog/stacked-bar-chart/pattern";
+import { userInterviewPattern } from "@/entities/pattern/catalog/user-interview/pattern";
+import { usabilityTestPattern } from "@/entities/pattern/catalog/usability-test/pattern";
+import { abTestPattern } from "@/entities/pattern/catalog/ab-test/pattern";
+import { cardSortingPattern } from "@/entities/pattern/catalog/card-sorting/pattern";
+import { treeTestingPattern } from "@/entities/pattern/catalog/tree-testing/pattern";
+import { surveyPattern } from "@/entities/pattern/catalog/survey/pattern";
+import { diaryStudyPattern } from "@/entities/pattern/catalog/diary-study/pattern";
+import { behavioralHeatmapPattern } from "@/entities/pattern/catalog/behavioral-heatmap/pattern";
+import { funnelAnalysisPattern } from "@/entities/pattern/catalog/funnel-analysis/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -686,6 +695,15 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   heatmapPattern,
   kpiCardPattern,
   stackedBarChartPattern,
+  userInterviewPattern,
+  usabilityTestPattern,
+  abTestPattern,
+  cardSortingPattern,
+  treeTestingPattern,
+  surveyPattern,
+  diaryStudyPattern,
+  behavioralHeatmapPattern,
+  funnelAnalysisPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

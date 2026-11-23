@@ -173,6 +173,12 @@ export const PATTERN_CATEGORIES = [
     labelKo: "가격의 심리",
     description: "가격과 선택지를 보여 주는 방식이 선택에 주는 영향",
   },
+  {
+    id: "ux-research",
+    label: "UX research",
+    labelKo: "UX 리서치",
+    description: "제품에 관한 질문에 답하려고 관찰하고 모으는 방법",
+  },
 ] as const satisfies readonly {
   id: string;
   label: string;

@@ -32049,6 +32049,759 @@
   }
 }
 
+/* User interview: 유도 질문 → 열린 질문, the answer explains what happened. */
+
+.thumb-ux-interview-cursor {
+  animation-name: thumb-ux-interview-cursor;
+}
+
+.thumb-ux-interview-a {
+  animation-name: thumb-ux-interview-a;
+}
+
+.thumb-ux-interview-b {
+  animation-name: thumb-ux-interview-b;
+}
+
+.thumb-ux-interview-pill {
+  animation-name: thumb-ux-interview-pill;
+}
+
+@keyframes thumb-ux-interview-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-interview-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-interview-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-interview-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* A/B test: 1일째 → 14일째, judge only with the planned sample. */
+
+.thumb-ux-ab-cursor {
+  animation-name: thumb-ux-ab-cursor;
+}
+
+.thumb-ux-ab-a {
+  animation-name: thumb-ux-ab-a;
+}
+
+.thumb-ux-ab-b {
+  animation-name: thumb-ux-ab-b;
+}
+
+.thumb-ux-ab-pill {
+  animation-name: thumb-ux-ab-pill;
+}
+
+@keyframes thumb-ux-ab-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-ab-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-ab-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-ab-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Card sorting: 쿠폰함 → 배송 조회, which cards people grouped with it. */
+
+.thumb-ux-sort-cursor {
+  animation-name: thumb-ux-sort-cursor;
+}
+
+.thumb-ux-sort-a {
+  animation-name: thumb-ux-sort-a;
+}
+
+.thumb-ux-sort-b {
+  animation-name: thumb-ux-sort-b;
+}
+
+@keyframes thumb-ux-sort-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(92px, 33px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-sort-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-sort-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Tree testing: 성공한 경로 → 틀린 경로. */
+
+.thumb-ux-tree-cursor {
+  animation-name: thumb-ux-tree-cursor;
+}
+
+.thumb-ux-tree-a {
+  animation-name: thumb-ux-tree-a;
+}
+
+.thumb-ux-tree-b {
+  animation-name: thumb-ux-tree-b;
+}
+
+.thumb-ux-tree-pill {
+  animation-name: thumb-ux-tree-pill;
+}
+
+@keyframes thumb-ux-tree-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 36px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-tree-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-tree-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-tree-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Survey: 한 문항 → 나눈 문항 shows where the problem is. */
+
+.thumb-ux-survey-cursor {
+  animation-name: thumb-ux-survey-cursor;
+}
+
+.thumb-ux-survey-a {
+  animation-name: thumb-ux-survey-a;
+}
+
+.thumb-ux-survey-b {
+  animation-name: thumb-ux-survey-b;
+}
+
+.thumb-ux-survey-pill {
+  animation-name: thumb-ux-survey-pill;
+}
+
+@keyframes thumb-ux-survey-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-survey-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-survey-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-survey-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Diary study: 화 → 목, entries add up to a finding. */
+
+.thumb-ux-diary-cursor {
+  animation-name: thumb-ux-diary-cursor;
+}
+
+.thumb-ux-diary-a {
+  animation-name: thumb-ux-diary-a;
+}
+
+.thumb-ux-diary-b {
+  animation-name: thumb-ux-diary-b;
+}
+
+@keyframes thumb-ux-diary-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(89px, 34px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-diary-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-diary-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Behavioral heatmap: 클릭 → 스크롤. */
+
+.thumb-ux-heat-cursor {
+  animation-name: thumb-ux-heat-cursor;
+}
+
+.thumb-ux-heat-a {
+  animation-name: thumb-ux-heat-a;
+}
+
+.thumb-ux-heat-b {
+  animation-name: thumb-ux-heat-b;
+}
+
+.thumb-ux-heat-pill {
+  animation-name: thumb-ux-heat-pill;
+}
+
+@keyframes thumb-ux-heat-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-heat-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-heat-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-heat-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Funnel analysis: 전체 → 모바일, the biggest drop moves. */
+
+.thumb-ux-funnel-cursor {
+  animation-name: thumb-ux-funnel-cursor;
+}
+
+.thumb-ux-funnel-a {
+  animation-name: thumb-ux-funnel-a;
+}
+
+.thumb-ux-funnel-b {
+  animation-name: thumb-ux-funnel-b;
+}
+
+.thumb-ux-funnel-pill {
+  animation-name: thumb-ux-funnel-pill;
+}
+
+@keyframes thumb-ux-funnel-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-funnel-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-ux-funnel-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-funnel-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Usability test: 다음 관찰 three times reveals the stuck step and the problem. */
+
+.thumb-ux-usab-cursor {
+  animation-name: thumb-ux-usab-cursor;
+}
+
+.thumb-ux-usab-s1 {
+  animation-name: thumb-ux-usab-s1;
+}
+
+.thumb-ux-usab-s2 {
+  animation-name: thumb-ux-usab-s2;
+}
+
+.thumb-ux-usab-s3 {
+  animation-name: thumb-ux-usab-s3;
+}
+
+@keyframes thumb-ux-usab-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(39px, 95px);
+  }
+  34%,
+  40% {
+    transform: translate(39px, 95px);
+  }
+  54%,
+  60% {
+    transform: translate(39px, 95px);
+  }
+  74% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-ux-usab-s1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-usab-s2 {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-ux-usab-s3 {
+  0%,
+  59% {
+    opacity: 0;
+  }
+  60%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {
