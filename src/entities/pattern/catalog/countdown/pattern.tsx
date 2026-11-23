@@ -16,13 +16,13 @@ export const countdownPattern: Pattern = {
     "결제 대기 시간처럼 실제로 시간이 제한될 때",
   ],
   whenNotToUse: [
-    "새로고침하면 다시 시작하는 가짜 마감(다크 패턴)",
+    "새로고침하면 다시 시작하는 가짜 마감(가짜 긴급함 참고)",
     "마감까지 며칠 이상 남았을 때(날짜만 표시)",
     "압박을 줄 이유가 없는 화면",
   ],
   alternatives: [
     {
-      name: "가짜 긴급성",
+      name: "가짜 긴급함",
       slug: "fake-urgency",
       reason: "다시 시작하는 타이머가 왜 문제인지 볼 때",
     },

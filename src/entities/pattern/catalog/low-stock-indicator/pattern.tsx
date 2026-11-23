@@ -16,13 +16,13 @@ export const lowStockIndicatorPattern: Pattern = {
     "품절 옵션을 고르기 전에 알려야 할 때",
   ],
   whenNotToUse: [
-    "재고와 상관없이 늘 적게 보일 때(다크 패턴)",
+    "재고와 상관없이 늘 적게 보일 때(가짜 희소성 참고)",
     "디지털 상품처럼 재고가 없을 때",
     "정확한 재고를 알 수 없을 때",
   ],
   alternatives: [
     { name: "가짜 희소성", slug: "fake-scarcity", reason: "거짓 재고 표시가 왜 문제인지 볼 때" },
-    { name: "희소성 효과", slug: "scarcity", reason: "실제 제약을 알리는 방법을 볼 때" },
+    { name: "희소성", slug: "scarcity", reason: "실제 제약을 알리는 방법을 볼 때" },
   ],
   accessibility: [
     "상태마다 모양이 다른 아이콘과 글자를 함께 써 색에 기대지 않습니다.",
