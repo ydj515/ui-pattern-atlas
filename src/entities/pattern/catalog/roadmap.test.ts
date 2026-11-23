@@ -38,9 +38,9 @@ describe("roadmap catalog", () => {
   });
 
   it("keeps every topic and item available in the catalog data", () => {
-    expect(ROADMAP_TOPICS).toHaveLength(35);
+    expect(ROADMAP_TOPICS).toHaveLength(36);
     expect(new Set(ROADMAP_TOPICS.map(({ id }) => id)).size).toBe(ROADMAP_TOPICS.length);
-    expect(ROADMAP_TOPICS.flatMap(({ entries }) => entries)).toHaveLength(430);
+    expect(ROADMAP_TOPICS.flatMap(({ entries }) => entries)).toHaveLength(436);
   });
 
   it("keeps the old combined dark pattern link working after the split", () => {

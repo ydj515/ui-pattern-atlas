@@ -41876,6 +41876,648 @@
   }
 }
 
+/* Situations: settings (thumb-st-). */
+.thumb-st-sl-cursor {
+  animation-name: thumb-st-sl-cursor;
+}
+.thumb-st-sl-mk-bg {
+  animation-name: thumb-st-sl-mk-bg;
+}
+.thumb-st-sl-open {
+  animation-name: thumb-st-sl-open;
+}
+.thumb-st-sl-mk-knob {
+  animation-name: thumb-st-sl-mk-knob;
+}
+.thumb-st-ns-cursor {
+  animation-name: thumb-st-ns-cursor;
+}
+.thumb-st-ns-new {
+  animation-name: thumb-st-ns-new;
+}
+.thumb-st-ns-c-from {
+  animation-name: thumb-st-ns-c-from;
+}
+.thumb-st-ns-c-to {
+  animation-name: thumb-st-ns-c-to;
+}
+.thumb-st-ts-cursor {
+  animation-name: thumb-st-ts-cursor;
+}
+.thumb-st-ts-sys {
+  animation-name: thumb-st-ts-sys;
+}
+.thumb-st-ts-dark {
+  animation-name: thumb-st-ts-dark;
+}
+.thumb-st-ts-preview {
+  animation-name: thumb-st-ts-preview;
+}
+.thumb-st-lp-cursor {
+  animation-name: thumb-st-lp-cursor;
+}
+.thumb-st-lp-all {
+  animation-name: thumb-st-lp-all;
+}
+.thumb-st-lp-one {
+  animation-name: thumb-st-lp-one;
+}
+.thumb-st-lp-pick {
+  animation-name: thumb-st-lp-pick;
+}
+.thumb-st-lp-q-from {
+  animation-name: thumb-st-lp-q-from;
+}
+.thumb-st-lp-q-to {
+  animation-name: thumb-st-lp-q-to;
+}
+.thumb-st-lp-s-from {
+  animation-name: thumb-st-lp-s-from;
+}
+.thumb-st-lp-s-to {
+  animation-name: thumb-st-lp-s-to;
+}
+.thumb-st-ps-cursor {
+  animation-name: thumb-st-ps-cursor;
+}
+.thumb-st-ps-pub {
+  animation-name: thumb-st-ps-pub;
+}
+.thumb-st-ps-priv {
+  animation-name: thumb-st-ps-priv;
+}
+.thumb-st-ps-req {
+  animation-name: thumb-st-ps-req;
+}
+.thumb-st-ca-cursor {
+  animation-name: thumb-st-ca-cursor;
+}
+.thumb-st-ca-lock {
+  animation-name: thumb-st-ca-lock;
+}
+.thumb-st-ca-free {
+  animation-name: thumb-st-ca-free;
+}
+.thumb-st-ca-google-from {
+  animation-name: thumb-st-ca-google-from;
+}
+.thumb-st-ca-google-to {
+  animation-name: thumb-st-ca-google-to;
+}
+.thumb-st-ca-kakao-from {
+  animation-name: thumb-st-ca-kakao-from;
+}
+.thumb-st-ca-kakao-to {
+  animation-name: thumb-st-ca-kakao-to;
+}
+
+/* Settings list: a switch changes at once; a value row opens its own choice. */
+
+@keyframes thumb-st-sl-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(147px, 42px);
+  }
+  42%,
+  48% {
+    transform: translate(89px, 69px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-sl-mk-bg {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-sl-open {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-sl-mk-knob {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  21%,
+  96% {
+    transform: translateX(5px);
+  }
+  98%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Notification settings: one topic on one channel; the count follows. */
+
+@keyframes thumb-st-ns-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(81px, 53px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-ns-new {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-ns-c-from {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ns-c-to {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Theme switcher: 다크 replaces the system choice and the preview turns dark. */
+
+@keyframes thumb-st-ts-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(135px, 47px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-ts-sys {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ts-dark {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-ts-preview {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Language picker: search 일본 in Korean, pick 日本語. */
+
+@keyframes thumb-st-lp-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  8%,
+  12% {
+    transform: translate(89px, 32px);
+  }
+  40%,
+  46% {
+    transform: translate(150px, 45px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-lp-all {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-lp-one {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-lp-pick {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-lp-q-from {
+  0%,
+  13% {
+    opacity: 1;
+  }
+  14%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-lp-q-to {
+  0%,
+  13% {
+    opacity: 0;
+  }
+  14%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-lp-s-from {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-lp-s-to {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Privacy settings: pick 나만 보기, then ask for a copy of the data. */
+
+@keyframes thumb-st-ps-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(89px, 70px);
+  }
+  42%,
+  48% {
+    transform: translate(54px, 86px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-ps-pub {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ps-priv {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-ps-req {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Connected accounts: the only sign-in unlocks once 구글 is connected. */
+
+@keyframes thumb-st-ca-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(143px, 64px);
+  }
+  42%,
+  48% {
+    transform: translate(143px, 36px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-st-ca-lock {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ca-free {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-ca-google-from {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ca-google-to {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-st-ca-kakao-from {
+  0%,
+  47% {
+    opacity: 1;
+  }
+  48%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-st-ca-kakao-to {
+  0%,
+  47% {
+    opacity: 0;
+  }
+  48%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

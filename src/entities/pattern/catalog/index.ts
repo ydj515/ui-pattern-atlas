@@ -379,6 +379,12 @@ import { addressFormPattern } from "@/entities/pattern/catalog/address-form/patt
 import { paymentMethodPattern } from "@/entities/pattern/catalog/payment-method/pattern";
 import { orderTrackingPattern } from "@/entities/pattern/catalog/order-tracking/pattern";
 import { orderCancellationPattern } from "@/entities/pattern/catalog/order-cancellation/pattern";
+import { settingsListPattern } from "@/entities/pattern/catalog/settings-list/pattern";
+import { notificationSettingsPattern } from "@/entities/pattern/catalog/notification-settings/pattern";
+import { themeSwitcherPattern } from "@/entities/pattern/catalog/theme-switcher/pattern";
+import { languagePickerPattern } from "@/entities/pattern/catalog/language-picker/pattern";
+import { privacySettingsPattern } from "@/entities/pattern/catalog/privacy-settings/pattern";
+import { connectedAccountsPattern } from "@/entities/pattern/catalog/connected-accounts/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -760,6 +766,12 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   paymentMethodPattern,
   orderTrackingPattern,
   orderCancellationPattern,
+  settingsListPattern,
+  notificationSettingsPattern,
+  themeSwitcherPattern,
+  languagePickerPattern,
+  privacySettingsPattern,
+  connectedAccountsPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

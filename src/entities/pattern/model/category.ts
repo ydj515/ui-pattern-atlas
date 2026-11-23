@@ -156,6 +156,12 @@ export const PATTERN_CATEGORIES = [
     description: "담고, 결제하고, 받고, 되돌리는 화면",
   },
   {
+    id: "settings",
+    label: "Settings and permissions",
+    labelKo: "설정과 권한",
+    description: "알림, 화면, 공개 범위처럼 내 계정을 내 뜻대로 바꾸는 화면",
+  },
+  {
     id: "design-style",
     label: "Design style",
     labelKo: "디자인 스타일",
