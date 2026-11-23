@@ -144,6 +144,12 @@ export const PATTERN_CATEGORIES = [
     description: "사람을 속이는 화면과, 행동에 영향을 주는 원리",
   },
   {
+    id: "typography-style",
+    label: "Typography style",
+    labelKo: "글자 스타일",
+    description: "같은 문구로 글자 형태와 질감의 차이를 비교",
+  },
+  {
     id: "pricing-display",
     label: "Pricing and discounts",
     labelKo: "가격과 할인 표시",

@@ -292,6 +292,33 @@ import { socialProofPattern } from "@/entities/pattern/catalog/social-proof/patt
 import { scarcityPattern } from "@/entities/pattern/catalog/scarcity/pattern";
 import { framingEffectPattern } from "@/entities/pattern/catalog/framing-effect/pattern";
 import { choiceOverloadPattern } from "@/entities/pattern/catalog/choice-overload/pattern";
+import { acidGraphicPattern } from "@/entities/pattern/catalog/acid-graphic/pattern";
+import { glitchPattern } from "@/entities/pattern/catalog/glitch/pattern";
+import { bauhausPattern } from "@/entities/pattern/catalog/bauhaus/pattern";
+import { artDecoPattern } from "@/entities/pattern/catalog/art-deco/pattern";
+import { outlinePattern } from "@/entities/pattern/catalog/outline/pattern";
+import { monospacePattern } from "@/entities/pattern/catalog/monospace/pattern";
+import { handLetteringPattern } from "@/entities/pattern/catalog/hand-lettering/pattern";
+import { minimalTypographyPattern } from "@/entities/pattern/catalog/minimal-typography/pattern";
+import { brutalistTypographyPattern } from "@/entities/pattern/catalog/brutalist-typography/pattern";
+import { neoBrutalistTypographyPattern } from "@/entities/pattern/catalog/neo-brutalist-typography/pattern";
+import { swissStylePattern } from "@/entities/pattern/catalog/swiss-style/pattern";
+import { editorialTypographyPattern } from "@/entities/pattern/catalog/editorial-typography/pattern";
+import { chunkyPattern } from "@/entities/pattern/catalog/chunky/pattern";
+import { retroGroovyPattern } from "@/entities/pattern/catalog/retro-groovy/pattern";
+import { pixelTypographyPattern } from "@/entities/pattern/catalog/pixel-typography/pattern";
+import { kineticTypographyPattern } from "@/entities/pattern/catalog/kinetic-typography/pattern";
+import { neonSignPattern } from "@/entities/pattern/catalog/neon-sign/pattern";
+import { graffitiPattern } from "@/entities/pattern/catalog/graffiti/pattern";
+import { blackletterPattern } from "@/entities/pattern/catalog/blackletter/pattern";
+import { stencilPattern } from "@/entities/pattern/catalog/stencil/pattern";
+import { comicPopArtPattern } from "@/entities/pattern/catalog/comic-pop-art/pattern";
+import { cutoutCollagePattern } from "@/entities/pattern/catalog/cutout-collage/pattern";
+import { threeDExtrudePattern } from "@/entities/pattern/catalog/three-d-extrude/pattern";
+import { gradientTypographyPattern } from "@/entities/pattern/catalog/gradient-typography/pattern";
+import { embossPattern } from "@/entities/pattern/catalog/emboss/pattern";
+import { inflatedThreeDPattern } from "@/entities/pattern/catalog/inflated-three-d/pattern";
+import { chromeTypographyPattern } from "@/entities/pattern/catalog/chrome-typography/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -586,6 +613,33 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   scarcityPattern,
   framingEffectPattern,
   choiceOverloadPattern,
+  acidGraphicPattern,
+  glitchPattern,
+  bauhausPattern,
+  artDecoPattern,
+  outlinePattern,
+  monospacePattern,
+  handLetteringPattern,
+  minimalTypographyPattern,
+  brutalistTypographyPattern,
+  neoBrutalistTypographyPattern,
+  swissStylePattern,
+  editorialTypographyPattern,
+  chunkyPattern,
+  retroGroovyPattern,
+  pixelTypographyPattern,
+  kineticTypographyPattern,
+  neonSignPattern,
+  graffitiPattern,
+  blackletterPattern,
+  stencilPattern,
+  comicPopArtPattern,
+  cutoutCollagePattern,
+  threeDExtrudePattern,
+  gradientTypographyPattern,
+  embossPattern,
+  inflatedThreeDPattern,
+  chromeTypographyPattern,
 ];
 
 const categoryOrder = new Map<string, number>(

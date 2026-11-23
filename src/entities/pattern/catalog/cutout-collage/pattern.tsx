@@ -1,0 +1,34 @@
+import { type Pattern } from "@/entities/pattern/model/pattern";
+import { CutoutCollageThumbnail } from "@/entities/pattern/catalog/cutout-collage/CutoutCollageThumbnail";
+
+export const cutoutCollagePattern: Pattern = {
+  slug: "cutout-collage",
+  kind: "concept",
+  name: "Cutout Collage",
+  nameKo: "콜라주",
+  aliases: ["콜라주 글자", "오려 붙인 글자", "ransom note", "cutout type"],
+  category: "typography-style",
+  summary: "다른 글자 조각과 종이 질감을 한 문구로 조합",
+  description:
+    "글자마다 다른 서체, 색 종이, 기울기를 섞어 잡지에서 오려 붙인 것처럼 보이게 하는 스타일입니다. 글자를 하나씩 나누므로 화면 읽기에는 문구 전체를 따로 줍니다.",
+  whenToUse: ["진, 포스터, 실험적인 브랜드", "수작업 느낌의 연출", "짧은 단어"],
+  whenNotToUse: ["긴 문장", "협박 편지처럼 불쾌하게 읽힐 수 있는 맥락", "정보 전달이 중요한 화면"],
+  alternatives: [
+    { name: "네오 브루털리즘 타이포그래피", slug: "neo-brutalist-typography", reason: "상자 라벨" },
+    { name: "핸드레터링", slug: "hand-lettering", reason: "손으로 쓴 느낌" },
+  ],
+  accessibility: [
+    "효과가 들어간 큰 글자도 배경과 대비를 확인합니다.",
+    "화면 읽기에는 꾸민 글자 대신 같은 문구가 그대로 읽히게 합니다.",
+    "장식 효과를 빼도 문구 뜻이 그대로 전해지게 둡니다.",
+    "기본 글자와 비교 전환으로 효과의 차이를 확인할 수 있습니다.",
+  ],
+  tags: ["글자 스타일", "Cutout Collage"],
+  loadPreview: () =>
+    import("@/entities/pattern/catalog/cutout-collage/CutoutCollageDemo").then(
+      (m) => m.CutoutCollageDemo,
+    ),
+  Thumbnail: CutoutCollageThumbnail,
+  loadDemoSource: () =>
+    import("@/entities/pattern/catalog/cutout-collage/CutoutCollageDemo.tsx?raw"),
+};
