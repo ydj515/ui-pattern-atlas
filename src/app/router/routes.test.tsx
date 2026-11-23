@@ -454,7 +454,7 @@ describe("pattern detail page", () => {
     renderAt("/patterns/modal-dialog");
     const description = screen.getByText(/사용자의 주의를 집중시키고/);
     const preview = screen.getByRole("region", { name: "미리보기" });
-    const aliases = screen.getByText(/^다른 이름:/);
+    const aliases = screen.getByText("다른 이름", { selector: "dt" });
     const follows = (a: Node, b: Node) =>
       Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
     expect(follows(description, preview)).toBe(true);
@@ -464,12 +464,11 @@ describe("pattern detail page", () => {
 
   it("tells where the name comes from only when there is a story", () => {
     renderAt("/patterns/toast");
-    expect(screen.getByRole("complementary", { name: "이름의 유래" })).toHaveTextContent(
-      "토스터에서",
-    );
+    const origin = screen.getByText("이름의 유래", { selector: "dt" });
+    expect(origin.nextElementSibling).toHaveTextContent("토스터에서");
     cleanup();
     renderAt("/patterns/switch");
-    expect(screen.queryByRole("complementary", { name: "이름의 유래" })).toBeNull();
+    expect(screen.queryByText("이름의 유래", { selector: "dt" })).toBeNull();
   });
 
   it("renders the sections in the documented order", () => {

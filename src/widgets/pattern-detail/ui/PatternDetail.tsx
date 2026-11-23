@@ -184,6 +184,15 @@ function AdjacentLink({
   );
 }
 
+function EntryLine({ term, children }: { readonly term: string; readonly children: ReactNode }) {
+  return (
+    <div className="grid gap-1 py-3 sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-6">
+      <dt className="text-caption text-graphite sm:pt-0.5">{term}</dt>
+      <dd className="text-ink/80">{children}</dd>
+    </div>
+  );
+}
+
 /** Full guidance page for a single pattern, laid out like a dictionary entry. */
 export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
   const index = PATTERNS.indexOf(pattern);
@@ -203,16 +212,15 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
           <section aria-label="미리보기" className="mt-8">
             <PatternPreview loadPreview={pattern.loadPreview} />
           </section>
-          {pattern.aliases.length > 0 ? (
-            <p className="mt-4 text-body-sm text-graphite">
-              다른 이름: {pattern.aliases.join(", ")}
-            </p>
-          ) : null}
-          {pattern.origin ? (
-            <aside aria-label="이름의 유래" className="mt-6 rounded-surface bg-field p-4">
-              <p className="text-caption font-semibold text-ink">이름의 유래</p>
-              <p className="mt-1 text-body-sm text-ink/80">{pattern.origin}</p>
-            </aside>
+          {/* Like the synonym and etymology lines under a dictionary headword: ruled, not boxed,
+              so it never reads as another surface next to the preview. */}
+          {pattern.aliases.length > 0 || pattern.origin ? (
+            <dl className="mt-6 divide-y divide-rule border-y border-rule text-body-sm">
+              {pattern.aliases.length > 0 ? (
+                <EntryLine term="다른 이름">{pattern.aliases.join(", ")}</EntryLine>
+              ) : null}
+              {pattern.origin ? <EntryLine term="이름의 유래">{pattern.origin}</EntryLine> : null}
+            </dl>
           ) : null}
         </header>
 
