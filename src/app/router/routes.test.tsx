@@ -150,15 +150,29 @@ describe("catalog page", () => {
     expect(screen.getByRole("status")).toHaveTextContent(`14개 항목 · 데모 ${navigation.length}개`);
   });
 
-  it("shows five category controls and switches between their topic groups", async () => {
+  it("shows six category controls and switches between their topic groups", async () => {
     const router = renderAt("/");
     const categories = within(screen.getByRole("group", { name: "카테고리" }));
     expect(categories.getAllByRole("button").map((button) => button.textContent)).toEqual([
       "전체",
       "컴포넌트",
+      "상황별 화면",
       "디자인 스타일",
       "UX 심리",
       "헷갈리는 UI",
+    ]);
+    await userEvent.click(categories.getByRole("button", { name: "상황별 화면" }));
+    expect(router.state.location.search).toBe("?category=situations");
+    expect(
+      screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
+    ).toEqual([
+      "빈 화면과 오류",
+      "첫 실행",
+      "완료와 보상",
+      "반응과 공유",
+      "AI 화면",
+      "가격과 할인 표시",
+      "검색과 탐색",
     ]);
     await userEvent.click(categories.getByRole("button", { name: "디자인 스타일" }));
     expect(
@@ -215,6 +229,7 @@ describe("mobile header navigation", () => {
     ).toEqual([
       "전체",
       "컴포넌트",
+      "상황별 화면",
       "디자인 스타일",
       "UX 심리",
       "헷갈리는 UI",

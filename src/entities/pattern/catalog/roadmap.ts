@@ -33,8 +33,29 @@ export function comparisonSlug(entry: RoadmapEntry): string {
 }
 
 // Icon names and UX research stay available through All and the full topic index.
+// Components are named by what they are (a button, a list); situations by when they appear
+// (the first run, finishing a task). A new topic goes to whichever question its name answers.
+const SITUATION_TOPICS: readonly string[] = [
+  "onboarding",
+  "completion",
+  "empty-error",
+  "reaction-share",
+  "ai",
+  "pricing-display",
+  "search-discovery",
+];
+
 export const CATALOG_SECTIONS = [
-  { id: "components", label: "컴포넌트", includes: (topic) => topic.kind === "컴포넌트" },
+  {
+    id: "components",
+    label: "컴포넌트",
+    includes: (topic) => topic.kind === "컴포넌트" && !SITUATION_TOPICS.includes(topic.id),
+  },
+  {
+    id: "situations",
+    label: "상황별 화면",
+    includes: (topic) => SITUATION_TOPICS.includes(topic.id),
+  },
   {
     id: "styles",
     label: "디자인 스타일",
