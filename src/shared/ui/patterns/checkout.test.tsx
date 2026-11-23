@@ -58,7 +58,9 @@ describe("AddressForm", () => {
     expect(screen.getByLabelText("상세 주소")).toHaveFocus();
     await user.type(screen.getByLabelText("상세 주소"), "101동 1203호");
     await user.click(screen.getByRole("button", { name: "배송지 저장" }));
-    expect(screen.getByText(/배송지를 저장했어요/)).toHaveTextContent("뚝섬로 273 (서울숲) 101동 1203호");
+    expect(screen.getByText(/배송지를 저장했어요/)).toHaveTextContent(
+      "뚝섬로 273 (서울숲) 101동 1203호",
+    );
   });
 });
 
