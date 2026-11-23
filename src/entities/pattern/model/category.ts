@@ -162,6 +162,12 @@ export const PATTERN_CATEGORIES = [
     description: "검색을 시작하고 원하는 결과를 좁히는 화면",
   },
   {
+    id: "data-viz",
+    label: "Data visualization",
+    labelKo: "데이터 시각화",
+    description: "숫자의 차이, 변화, 구성비를 보여 주는 화면",
+  },
+  {
     id: "pricing-psychology",
     label: "Pricing psychology",
     labelKo: "가격의 심리",

@@ -31302,6 +31302,753 @@
   }
 }
 
+/* Bar chart: 이번 주 → 지난주, every bar eases to its new length on the same scale. */
+
+.thumb-dv-bar-cursor {
+  animation-name: thumb-dv-bar-cursor;
+}
+
+.thumb-dv-bar-pill {
+  animation-name: thumb-dv-bar-pill;
+}
+
+.thumb-dv-bar-a {
+  animation-name: thumb-dv-bar-a;
+}
+
+.thumb-dv-bar-b {
+  animation-name: thumb-dv-bar-b;
+}
+
+.thumb-dv-bar-grow {
+  animation-name: thumb-dv-bar-grow;
+}
+
+@keyframes thumb-dv-bar-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-bar-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-bar-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-bar-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-bar-grow {
+  0%,
+  19% {
+    transform: scaleX(1);
+  }
+  25%,
+  96% {
+    transform: scaleX(var(--to));
+  }
+  99%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Stacked bar chart: 개수 → 비율, then 11월 대기 shows its value. */
+
+.thumb-dv-stk-cursor {
+  animation-name: thumb-dv-stk-cursor;
+}
+
+.thumb-dv-stk-pill {
+  animation-name: thumb-dv-stk-pill;
+}
+
+.thumb-dv-stk-a {
+  animation-name: thumb-dv-stk-a;
+}
+
+.thumb-dv-stk-b {
+  animation-name: thumb-dv-stk-b;
+}
+
+.thumb-dv-stk-tip {
+  animation-name: thumb-dv-stk-tip;
+}
+
+@keyframes thumb-dv-stk-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  42%,
+  60% {
+    transform: translate(136px, 89px);
+  }
+  74% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-stk-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-stk-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-stk-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-stk-tip {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Line chart: the crosshair reads out 올해 and 작년 at 8월, 10월 and 11월. */
+
+.thumb-dv-line-cursor {
+  animation-name: thumb-dv-line-cursor;
+}
+
+.thumb-dv-line-p0 {
+  animation-name: thumb-dv-line-p0;
+}
+
+.thumb-dv-line-p1 {
+  animation-name: thumb-dv-line-p1;
+}
+
+.thumb-dv-line-p2 {
+  animation-name: thumb-dv-line-p2;
+}
+
+@keyframes thumb-dv-line-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  34% {
+    transform: translate(70px, 62px);
+  }
+  40%,
+  56% {
+    transform: translate(106px, 58px);
+  }
+  62%,
+  72% {
+    transform: translate(124px, 54px);
+  }
+  86% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-line-p0 {
+  0%,
+  15% {
+    opacity: 0;
+  }
+  16%,
+  36% {
+    opacity: 1;
+  }
+  37%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-line-p1 {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  58% {
+    opacity: 1;
+  }
+  59%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-line-p2 {
+  0%,
+  61% {
+    opacity: 0;
+  }
+  62%,
+  74% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Donut chart: pointing at 교통, then 식비, puts its share in the centre. */
+
+.thumb-dv-donut-cursor {
+  animation-name: thumb-dv-donut-cursor;
+}
+
+.thumb-dv-donut-total {
+  animation-name: thumb-dv-donut-total;
+}
+
+.thumb-dv-donut-a {
+  animation-name: thumb-dv-donut-a;
+}
+
+.thumb-dv-donut-b {
+  animation-name: thumb-dv-donut-b;
+}
+
+@keyframes thumb-dv-donut-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(100px, 67px);
+  }
+  46%,
+  66% {
+    transform: translate(100px, 44px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-donut-total {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  66% {
+    opacity: 0;
+  }
+  67%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-donut-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-donut-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Sparkline: 7일 → 30일 redraws each page's trend. */
+
+.thumb-dv-spark-cursor {
+  animation-name: thumb-dv-spark-cursor;
+}
+
+.thumb-dv-spark-pill {
+  animation-name: thumb-dv-spark-pill;
+}
+
+.thumb-dv-spark-a {
+  animation-name: thumb-dv-spark-a;
+}
+
+.thumb-dv-spark-b {
+  animation-name: thumb-dv-spark-b;
+}
+
+@keyframes thumb-dv-spark-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-spark-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-spark-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-spark-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Gauge: 1,000걸음 더하기 twice passes the 8,000 target → 목표를 채웠어요. */
+
+.thumb-dv-gauge-cursor {
+  animation-name: thumb-dv-gauge-cursor;
+}
+
+.thumb-dv-gauge-s0 {
+  animation-name: thumb-dv-gauge-s0;
+}
+
+.thumb-dv-gauge-s1 {
+  animation-name: thumb-dv-gauge-s1;
+}
+
+.thumb-dv-gauge-s2 {
+  animation-name: thumb-dv-gauge-s2;
+}
+
+@keyframes thumb-dv-gauge-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(70px, 101px);
+  }
+  38%,
+  44% {
+    transform: translate(70px, 101px);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-gauge-s0 {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-gauge-s1 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  43% {
+    opacity: 1;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-gauge-s2 {
+  0%,
+  43% {
+    opacity: 0;
+  }
+  44%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Heatmap: pointing at a cell outlines it and reads out day, hour and count. */
+
+.thumb-dv-heat-cursor {
+  animation-name: thumb-dv-heat-cursor;
+}
+
+.thumb-dv-heat-f0 {
+  animation-name: thumb-dv-heat-f0;
+}
+
+.thumb-dv-heat-f1 {
+  animation-name: thumb-dv-heat-f1;
+}
+
+@keyframes thumb-dv-heat-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(120px, 86px);
+  }
+  46%,
+  66% {
+    transform: translate(47px, 40px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-heat-f0 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-heat-f1 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* KPI card: 이번 주 → 이번 달; colour follows whether the change is good for the metric. */
+
+.thumb-dv-kpi-cursor {
+  animation-name: thumb-dv-kpi-cursor;
+}
+
+.thumb-dv-kpi-pill {
+  animation-name: thumb-dv-kpi-pill;
+}
+
+.thumb-dv-kpi-a {
+  animation-name: thumb-dv-kpi-a;
+}
+
+.thumb-dv-kpi-b {
+  animation-name: thumb-dv-kpi-b;
+}
+
+@keyframes thumb-dv-kpi-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-kpi-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-kpi-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-kpi-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

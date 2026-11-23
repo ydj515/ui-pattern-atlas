@@ -334,6 +334,14 @@ import { searchFiltersPattern } from "@/entities/pattern/catalog/search-filters/
 import { searchSortPattern } from "@/entities/pattern/catalog/search-sort/pattern";
 import { searchTermHighlightPattern } from "@/entities/pattern/catalog/search-term-highlight/pattern";
 import { searchScopeTabsPattern } from "@/entities/pattern/catalog/search-scope-tabs/pattern";
+import { barChartPattern } from "@/entities/pattern/catalog/bar-chart/pattern";
+import { lineChartPattern } from "@/entities/pattern/catalog/line-chart/pattern";
+import { donutChartPattern } from "@/entities/pattern/catalog/donut-chart/pattern";
+import { sparklinePattern } from "@/entities/pattern/catalog/sparkline/pattern";
+import { gaugePattern } from "@/entities/pattern/catalog/gauge/pattern";
+import { heatmapPattern } from "@/entities/pattern/catalog/heatmap/pattern";
+import { kpiCardPattern } from "@/entities/pattern/catalog/kpi-card/pattern";
+import { stackedBarChartPattern } from "@/entities/pattern/catalog/stacked-bar-chart/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -670,6 +678,14 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   searchSortPattern,
   searchTermHighlightPattern,
   searchScopeTabsPattern,
+  barChartPattern,
+  lineChartPattern,
+  donutChartPattern,
+  sparklinePattern,
+  gaugePattern,
+  heatmapPattern,
+  kpiCardPattern,
+  stackedBarChartPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
