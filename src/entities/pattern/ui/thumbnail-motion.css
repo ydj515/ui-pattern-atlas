@@ -33442,6 +33442,661 @@
   }
 }
 
+/* Treemap: 휴대폰 → 태블릿. */
+
+.thumb-dv-tree-cursor {
+  animation-name: thumb-dv-tree-cursor;
+}
+
+.thumb-dv-tree-pill {
+  animation-name: thumb-dv-tree-pill;
+}
+
+.thumb-dv-tree-a {
+  animation-name: thumb-dv-tree-a;
+}
+
+.thumb-dv-tree-b {
+  animation-name: thumb-dv-tree-b;
+}
+
+@keyframes thumb-dv-tree-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-tree-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-tree-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-tree-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Waterfall chart: 11월 → 10월. */
+
+.thumb-dv-wf-cursor {
+  animation-name: thumb-dv-wf-cursor;
+}
+
+.thumb-dv-wf-pill {
+  animation-name: thumb-dv-wf-pill;
+}
+
+.thumb-dv-wf-a {
+  animation-name: thumb-dv-wf-a;
+}
+
+.thumb-dv-wf-b {
+  animation-name: thumb-dv-wf-b;
+}
+
+@keyframes thumb-dv-wf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(57px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-wf-pill {
+  0%,
+  19% {
+    transform: translateX(66px);
+  }
+  23%,
+  96% {
+    transform: translateX(0);
+  }
+  99%,
+  100% {
+    transform: translateX(66px);
+  }
+}
+
+@keyframes thumb-dv-wf-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-wf-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Bullet chart: 이번 달 → 지난달, bars move against fixed targets. */
+
+.thumb-dv-bul-cursor {
+  animation-name: thumb-dv-bul-cursor;
+}
+
+.thumb-dv-bul-pill {
+  animation-name: thumb-dv-bul-pill;
+}
+
+.thumb-dv-bul-a {
+  animation-name: thumb-dv-bul-a;
+}
+
+.thumb-dv-bul-b {
+  animation-name: thumb-dv-bul-b;
+}
+
+@keyframes thumb-dv-bul-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-bul-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-bul-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-bul-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.thumb-dv-bul-grow {
+  animation-name: thumb-dv-bul-grow;
+}
+
+@keyframes thumb-dv-bul-grow {
+  0%,
+  19% {
+    transform: scaleX(1);
+  }
+  25%,
+  96% {
+    transform: scaleX(var(--to));
+  }
+  99%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Waffle chart: 재구매 → 배송 만족. */
+
+.thumb-dv-waf-cursor {
+  animation-name: thumb-dv-waf-cursor;
+}
+
+.thumb-dv-waf-pill {
+  animation-name: thumb-dv-waf-pill;
+}
+
+.thumb-dv-waf-a {
+  animation-name: thumb-dv-waf-a;
+}
+
+.thumb-dv-waf-b {
+  animation-name: thumb-dv-waf-b;
+}
+
+@keyframes thumb-dv-waf-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  14%,
+  20% {
+    transform: translate(121px, 21px);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-waf-pill {
+  0%,
+  19% {
+    transform: translateX(0);
+  }
+  23%,
+  96% {
+    transform: translateX(66px);
+  }
+  99%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes thumb-dv-waf-a {
+  0%,
+  19% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thumb-dv-waf-b {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  96% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Box plot: 서울, then 강원. */
+
+.thumb-dv-box-cursor {
+  animation-name: thumb-dv-box-cursor;
+}
+
+.thumb-dv-box-a {
+  animation-name: thumb-dv-box-a;
+}
+
+.thumb-dv-box-b {
+  animation-name: thumb-dv-box-b;
+}
+
+@keyframes thumb-dv-box-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(98px, 35px);
+  }
+  46%,
+  66% {
+    transform: translate(98px, 71px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-box-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-box-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Calendar heatmap: 21일, then 2일. */
+
+.thumb-dv-cal-cursor {
+  animation-name: thumb-dv-cal-cursor;
+}
+
+.thumb-dv-cal-a {
+  animation-name: thumb-dv-cal-a;
+}
+
+.thumb-dv-cal-b {
+  animation-name: thumb-dv-cal-b;
+}
+
+@keyframes thumb-dv-cal-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(60px, 76px);
+  }
+  46%,
+  66% {
+    transform: translate(42px, 31px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-cal-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-cal-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slope chart: 간편결제, then 카드. */
+
+.thumb-dv-slope-cursor {
+  animation-name: thumb-dv-slope-cursor;
+}
+
+.thumb-dv-slope-a {
+  animation-name: thumb-dv-slope-a;
+}
+
+.thumb-dv-slope-b {
+  animation-name: thumb-dv-slope-b;
+}
+
+@keyframes thumb-dv-slope-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(90px, 66px);
+  }
+  46%,
+  66% {
+    transform: translate(90px, 46px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-slope-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-slope-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Polar area chart: 7월, then 1월. */
+
+.thumb-dv-polar-cursor {
+  animation-name: thumb-dv-polar-cursor;
+}
+
+.thumb-dv-polar-a {
+  animation-name: thumb-dv-polar-a;
+}
+
+.thumb-dv-polar-b {
+  animation-name: thumb-dv-polar-b;
+}
+
+@keyframes thumb-dv-polar-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  16%,
+  40% {
+    transform: translate(82px, 75px);
+  }
+  46%,
+  66% {
+    transform: translate(91px, 57px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(150px, 104px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translate(150px, 104px);
+  }
+}
+
+@keyframes thumb-dv-polar-a {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes thumb-dv-polar-b {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  46%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion: show the representative base frame instead of looping. Kept last and
    !important so no per-pattern `animation-name` rule above can re-enable a loop. */
 @media (prefers-reduced-motion: reduce) {

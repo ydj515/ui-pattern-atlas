@@ -359,6 +359,14 @@ import { radarChartPattern } from "@/entities/pattern/catalog/radar-chart/patter
 import { scatterPlotPattern } from "@/entities/pattern/catalog/scatter-plot/pattern";
 import { areaChartPattern } from "@/entities/pattern/catalog/area-chart/pattern";
 import { histogramPattern } from "@/entities/pattern/catalog/histogram/pattern";
+import { treemapPattern } from "@/entities/pattern/catalog/treemap/pattern";
+import { waterfallChartPattern } from "@/entities/pattern/catalog/waterfall-chart/pattern";
+import { boxPlotPattern } from "@/entities/pattern/catalog/box-plot/pattern";
+import { bulletChartPattern } from "@/entities/pattern/catalog/bullet-chart/pattern";
+import { waffleChartPattern } from "@/entities/pattern/catalog/waffle-chart/pattern";
+import { calendarHeatmapPattern } from "@/entities/pattern/catalog/calendar-heatmap/pattern";
+import { slopeChartPattern } from "@/entities/pattern/catalog/slope-chart/pattern";
+import { polarAreaChartPattern } from "@/entities/pattern/catalog/polar-area-chart/pattern";
 
 const UNORDERED_PATTERNS: readonly Pattern[] = [
   modalDialogPattern,
@@ -720,6 +728,14 @@ const UNORDERED_PATTERNS: readonly Pattern[] = [
   scatterPlotPattern,
   areaChartPattern,
   histogramPattern,
+  treemapPattern,
+  waterfallChartPattern,
+  boxPlotPattern,
+  bulletChartPattern,
+  waffleChartPattern,
+  calendarHeatmapPattern,
+  slopeChartPattern,
+  polarAreaChartPattern,
 ];
 
 const categoryOrder = new Map<string, number>(
