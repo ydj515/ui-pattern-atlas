@@ -13,6 +13,7 @@ import { COMPARISON_THUMBNAILS } from "@/entities/pattern/catalog/comparisons/Co
 import { roadmapEntryDestination, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { PatternCard } from "@/entities/pattern/ui/PatternCard";
+import { ThumbnailFrame } from "@/entities/pattern/ui/ThumbnailFrame";
 import { searchPatterns } from "@/features/search-patterns/model/searchPatterns";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CategoryFilter } from "@/features/search-patterns/ui/CategoryFilter";
@@ -117,12 +118,7 @@ function ComparisonGrid({
         return (
           <li key={href}>
             <Link to={href} state={{ returnSearch }} className="group block">
-              <div
-                aria-hidden="true"
-                className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
-              >
-                {Thumbnail ? <Thumbnail /> : null}
-              </div>
+              <ThumbnailFrame Thumbnail={Thumbnail} />
               <h3 className="mt-3.5">
                 <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
                   {entry.nameKo}

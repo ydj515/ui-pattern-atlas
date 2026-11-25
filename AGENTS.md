@@ -75,6 +75,9 @@ reuses the component in `src/shared/ui/patterns/<slug>/`.
   `?raw` sources into a catalog entry or `<Name>Thumbnail.tsx`, as that pulls them back into
   the initial catalog bundle; do not raise `build.chunkSizeWarningLimit` in `vite.config.ts`
   to hide app chunk warnings.
+- Catalog lists render thumbnails through `ThumbnailFrame` (`src/entities/pattern/ui/`), which
+  mounts a thumbnail only while its card is near the viewport. Do not render a list of
+  thumbnails directly; hundreds of off-screen loops drop frames on slow phones.
 - Every component under `src/shared/ui/patterns/<slug>/` has a `*.stories.tsx` next to it
   covering its main states; `src/test/stories.test.tsx` renders all stories.
 - Components under `src/shared/ui/patterns/` stay copy-paste ready: React and the default

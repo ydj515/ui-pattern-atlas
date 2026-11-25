@@ -1,10 +1,9 @@
-import "@/entities/pattern/ui/thumbnail-motion.css";
-
 import { Link } from "react-router";
 
 import { Highlight } from "@/shared/ui/Highlight";
 
 import { patternPath, type Pattern } from "@/entities/pattern/model/pattern";
+import { ThumbnailFrame } from "@/entities/pattern/ui/ThumbnailFrame";
 
 export interface PatternCardProps {
   readonly pattern: Pattern;
@@ -23,12 +22,7 @@ export function PatternCard({ pattern, query = "", returnSearch }: PatternCardPr
 
   return (
     <Link to={patternPath(pattern)} state={{ returnSearch }} className="group block">
-      <div
-        aria-hidden="true"
-        className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
-      >
-        <Thumbnail />
-      </div>
+      <ThumbnailFrame Thumbnail={Thumbnail} />
       <h3 className="mt-3.5">
         <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
           <Highlight text={pattern.nameKo} query={query} />
