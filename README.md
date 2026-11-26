@@ -14,6 +14,8 @@
 
 Website: <https://ui-pattern-atlas.pages.dev/> · English: <https://ui-pattern-atlas.pages.dev/en/>
 
+[![Searching the atlas for "snackbar", opening the Toast pattern and trying its live demo](docs/hero.gif)](https://ui-pattern-atlas.pages.dev/en/)
+
 UI Pattern Atlas is an open-source catalog of UI patterns and components, featuring interactive previews, usage guidelines, and reusable implementations built with React, TypeScript, and Tailwind CSS.
 
 From basic components to complex interaction patterns, it helps developers discover the right UI solutions, understand their behavior, and integrate them into real-world applications.
