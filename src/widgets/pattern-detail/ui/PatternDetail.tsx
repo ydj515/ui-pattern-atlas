@@ -1,12 +1,18 @@
-import { useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { Link, useLocation, type LinkProps } from "react-router";
 
 import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
-import { patternPath, type Pattern } from "@/entities/pattern/model/pattern";
+import {
+  patternPath,
+  type GuideLoader,
+  type Pattern,
+  type PatternGuide,
+} from "@/entities/pattern/model/pattern";
 
 import { CopyPageButton } from "@/features/copy-page/ui/CopyPageButton";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
 import { SourceViewer } from "@/widgets/pattern-detail/ui/SourceViewer";
+import { Button } from "@/shared/ui/primitives/Button";
 import { navLinkClassName, textLinkClassName } from "@/shared/ui/primitives/textLink";
 
 const SECTIONS = [
@@ -193,9 +199,66 @@ function EntryLine({ term, children }: { readonly term: string; readonly childre
   );
 }
 
+const guides = new Map<GuideLoader, PatternGuide>();
+
+type GuideState =
+  | { readonly status: "ready"; readonly guide: PatternGuide }
+  | { readonly status: "loading" | "failed"; readonly guide?: never };
+
+/** Loads an entry's guidance once per page; pages seen before render it right away. */
+function usePatternGuide(load: GuideLoader): GuideState & { readonly retry: () => void } {
+  const [attempt, setAttempt] = useState(0);
+  const [state, setState] = useState<GuideState & { readonly load: GuideLoader }>(() => {
+    const guide = guides.get(load);
+    return guide ? { load, status: "ready", guide } : { load, status: "loading" };
+  });
+
+  useEffect(() => {
+    if (guides.has(load)) return;
+    let active = true;
+    load().then(
+      (guide) => {
+        guides.set(load, guide);
+        if (active) setState({ load, status: "ready", guide });
+      },
+      () => {
+        if (active) setState({ load, status: "failed" });
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, [load, attempt]);
+
+  const cached = guides.get(load);
+  const current: GuideState =
+    state.load === load
+      ? state
+      : cached
+        ? { status: "ready", guide: cached }
+        : { status: "loading" };
+  return {
+    ...current,
+    retry: () => {
+      setState({ load, status: "loading" });
+      setAttempt((count) => count + 1);
+    },
+  };
+}
+
 /** Full guidance page for a single pattern, laid out like a dictionary entry. */
 export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
   const index = PATTERNS.indexOf(pattern);
+  const { hash } = useLocation();
+  const { status, guide, retry } = usePatternGuide(pattern.loadGuide);
+  // The sections arrive after the first render on a fresh visit, so a link to one of them
+  // (e.g. #accessibility) lands only once they exist.
+  const arrivedLate = useRef(status !== "ready");
+  useEffect(() => {
+    if (status !== "ready" || !arrivedLate.current) return;
+    arrivedLate.current = false;
+    if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
+  }, [status, hash]);
   return (
     <div className="grid grid-cols-1 gap-x-16 lg:grid-cols-[minmax(0,1fr)_11rem]">
       <article className="min-w-0">
@@ -214,72 +277,83 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
           </section>
           {/* Like the synonym and etymology lines under a dictionary headword: ruled, not boxed,
               so it never reads as another surface next to the preview. */}
-          {pattern.aliases.length > 0 || pattern.origin ? (
+          {pattern.aliases.length > 0 || guide?.origin ? (
             <dl className="mt-6 divide-y divide-rule border-y border-rule text-body-sm">
               {pattern.aliases.length > 0 ? (
                 <EntryLine term="다른 이름">{pattern.aliases.join(", ")}</EntryLine>
               ) : null}
-              {pattern.origin ? <EntryLine term="이름의 유래">{pattern.origin}</EntryLine> : null}
+              {guide?.origin ? <EntryLine term="이름의 유래">{guide.origin}</EntryLine> : null}
             </dl>
           ) : null}
         </header>
 
-        <div className="space-y-12">
-          <div className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-8">
-            <Section id="when-to-use">
-              <GuidanceList items={pattern.whenToUse} tone="do" />
+        {guide ? (
+          <div className="space-y-12">
+            <div className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-8">
+              <Section id="when-to-use">
+                <GuidanceList items={guide.whenToUse} tone="do" />
+              </Section>
+              <Section id="when-not-to-use">
+                <GuidanceList items={guide.whenNotToUse} tone="dont" />
+              </Section>
+            </div>
+
+            <Section id="alternatives">
+              <dl className="divide-y divide-rule border-y border-rule">
+                {guide.alternatives.map((alternative) => {
+                  const target = alternative.slug ? findPatternBySlug(alternative.slug) : undefined;
+                  return (
+                    <div
+                      key={alternative.name}
+                      className="grid gap-1 py-3 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-6"
+                    >
+                      <dt className="font-medium">
+                        {target ? (
+                          <Link to={patternPath(target)} className={textLinkClassName}>
+                            {alternative.name}
+                          </Link>
+                        ) : (
+                          <>
+                            {alternative.name}{" "}
+                            <span className="text-caption font-normal text-graphite">
+                              (준비 중)
+                            </span>
+                          </>
+                        )}
+                      </dt>
+                      <dd className="text-graphite">{alternative.reason}</dd>
+                    </div>
+                  );
+                })}
+              </dl>
             </Section>
-            <Section id="when-not-to-use">
-              <GuidanceList items={pattern.whenNotToUse} tone="dont" />
+
+            {pattern.kind !== "concept" ? (
+              <Section id="implementation">
+                <p className="mb-5 text-body text-graphite">
+                  React 19, TypeScript, Tailwind CSS v4 기준이며 UI 라이브러리 없이 동작합니다.
+                  컴포넌트 파일 하나만 복사해도 됩니다.
+                </p>
+                <SourceViewer sources={pattern.sources} />
+              </Section>
+            ) : null}
+
+            <Section id="accessibility">
+              <ul className="list-disc space-y-3 pl-5 text-body">
+                {guide.accessibility.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </Section>
           </div>
-
-          <Section id="alternatives">
-            <dl className="divide-y divide-rule border-y border-rule">
-              {pattern.alternatives.map((alternative) => {
-                const target = alternative.slug ? findPatternBySlug(alternative.slug) : undefined;
-                return (
-                  <div
-                    key={alternative.name}
-                    className="grid gap-1 py-3 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-6"
-                  >
-                    <dt className="font-medium">
-                      {target ? (
-                        <Link to={patternPath(target)} className={textLinkClassName}>
-                          {alternative.name}
-                        </Link>
-                      ) : (
-                        <>
-                          {alternative.name}{" "}
-                          <span className="text-caption font-normal text-graphite">(준비 중)</span>
-                        </>
-                      )}
-                    </dt>
-                    <dd className="text-graphite">{alternative.reason}</dd>
-                  </div>
-                );
-              })}
-            </dl>
-          </Section>
-
-          {pattern.kind !== "concept" ? (
-            <Section id="implementation">
-              <p className="mb-5 text-body text-graphite">
-                React 19, TypeScript, Tailwind CSS v4 기준이며 UI 라이브러리 없이 동작합니다.
-                컴포넌트 파일 하나만 복사해도 됩니다.
-              </p>
-              <SourceViewer sources={pattern.sources} />
-            </Section>
-          ) : null}
-
-          <Section id="accessibility">
-            <ul className="list-disc space-y-3 pl-5 text-body">
-              {pattern.accessibility.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </Section>
-        </div>
+        ) : status === "failed" ? (
+          <div role="alert" className="flex flex-wrap items-center gap-3 text-body text-graphite">
+            설명을 불러오지 못했어요.
+            <Button onClick={retry}>다시 시도</Button>
+          </div>
+        ) : (
+          <div aria-busy="true" aria-label="설명을 불러오는 중" />
+        )}
 
         <nav aria-label="다른 패턴" className="mt-12 grid grid-cols-2 gap-x-4">
           <AdjacentLink pattern={PATTERNS[index - 1]} direction="previous" />

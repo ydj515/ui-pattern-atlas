@@ -1,5 +1,5 @@
 import { findPatternBySlug } from "@/entities/pattern/catalog";
-import type { Pattern } from "@/entities/pattern/model/pattern";
+import type { Pattern, PatternGuide } from "@/entities/pattern/model/pattern";
 
 export interface LoadedSource {
   readonly fileName: string;
@@ -42,6 +42,7 @@ function siblingPageUrl(pageUrl: string, slug: string): string {
  */
 export function buildPatternMarkdown(
   pattern: Pattern,
+  guide: PatternGuide,
   sources: readonly LoadedSource[],
   pageUrl: string,
 ): string {
@@ -55,17 +56,17 @@ export function buildPatternMarkdown(
     parts.push(`Also known as: ${pattern.aliases.join(", ")}`);
   }
 
-  if (pattern.origin) {
-    parts.push(`Name origin: ${pattern.origin}`);
+  if (guide.origin) {
+    parts.push(`Name origin: ${guide.origin}`);
   }
 
-  parts.push("## When to use", bulletList(pattern.whenToUse));
-  parts.push("## When not to use", bulletList(pattern.whenNotToUse));
+  parts.push("## When to use", bulletList(guide.whenToUse));
+  parts.push("## When not to use", bulletList(guide.whenNotToUse));
 
   parts.push(
     "## Alternatives",
     bulletList(
-      pattern.alternatives.map((alternative) => {
+      guide.alternatives.map((alternative) => {
         const target = alternative.slug ? findPatternBySlug(alternative.slug) : undefined;
         const name = target
           ? `[${alternative.name}](${siblingPageUrl(pageUrl, target.slug)})`
@@ -90,22 +91,24 @@ export function buildPatternMarkdown(
     }
   }
 
-  parts.push("## Accessibility", bulletList(pattern.accessibility));
+  parts.push("## Accessibility", bulletList(guide.accessibility));
 
   return `${parts.join("\n\n")}\n`;
 }
 
-/** Loads every implementation file of a pattern, then renders the page as Markdown. */
+/** Loads the guidance and every implementation file of a pattern, then renders it as Markdown. */
 export async function loadPatternMarkdown(pattern: Pattern, pageUrl: string): Promise<string> {
-  const sources =
+  const [guide, sources] = await Promise.all([
+    pattern.loadGuide(),
     pattern.kind === "concept"
       ? []
-      : await Promise.all(
+      : Promise.all(
           pattern.sources.map(async (source) => ({
             fileName: source.fileName,
             role: source.role,
             code: (await source.load()).default,
           })),
-        );
-  return buildPatternMarkdown(pattern, sources, pageUrl);
+        ),
+  ]);
+  return buildPatternMarkdown(pattern, guide, sources, pageUrl);
 }

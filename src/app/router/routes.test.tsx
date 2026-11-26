@@ -23,6 +23,13 @@ function renderAt(path: string) {
   return router;
 }
 
+/** Opens a detail page and waits for its guidance sections, which load after the header. */
+async function renderDetailAt(path: string) {
+  const router = renderAt(path);
+  await screen.findByRole("region", { name: "Accessibility" });
+  return router;
+}
+
 const PLANNED = ROADMAP_PATTERN_TOPICS.flatMap((topic) =>
   topic.entries.map((entry) => ({ topic, entry })),
 ).findLast(({ entry }) => entry.priority !== "완료");
@@ -491,17 +498,17 @@ describe("pattern detail page", () => {
     expect(screen.queryByRole("heading", { name: "Interactive Preview" })).not.toBeInTheDocument();
   });
 
-  it("tells where the name comes from only when there is a story", () => {
-    renderAt("/patterns/toast");
+  it("tells where the name comes from only when there is a story", async () => {
+    await renderDetailAt("/patterns/toast");
     const origin = screen.getByText("이름의 유래", { selector: "dt" });
     expect(origin.nextElementSibling).toHaveTextContent("토스터에서");
     cleanup();
-    renderAt("/patterns/switch");
+    await renderDetailAt("/patterns/switch");
     expect(screen.queryByText("이름의 유래", { selector: "dt" })).toBeNull();
   });
 
-  it("renders the sections in the documented order", () => {
-    renderAt("/patterns/modal-dialog");
+  it("renders the sections in the documented order", async () => {
+    await renderDetailAt("/patterns/modal-dialog");
     const headings = screen.getAllByRole("heading", { level: 2 });
     const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
     const labels = [
@@ -522,8 +529,8 @@ describe("pattern detail page", () => {
     expect(screen.getByRole("link", { name: /토스트/ })).toHaveAttribute("href", "/patterns/toast");
   });
 
-  it("marks only the current section as the reader scrolls in either direction", () => {
-    renderAt("/patterns/modal-dialog");
+  it("marks only the current section as the reader scrolls in either direction", async () => {
+    await renderDetailAt("/patterns/modal-dialog");
     const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
     const links = toc.getAllByRole("link");
     links.forEach((link, index) => {
@@ -555,7 +562,7 @@ describe("pattern detail page", () => {
   });
 
   it("keeps the selected anchor active when both guidance sections share a row", async () => {
-    const router = renderAt("/patterns/popover");
+    const router = await renderDetailAt("/patterns/popover");
     const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
     const links = toc.getAllByRole("link");
     try {
@@ -576,6 +583,22 @@ describe("pattern detail page", () => {
       }
     } finally {
       vi.restoreAllMocks();
+    }
+  });
+
+  it("lands on a linked section once the guidance has loaded", async () => {
+    const scrollIntoView = vi.fn();
+    const original = Object.getOwnPropertyDescriptor(Element.prototype, "scrollIntoView");
+    Element.prototype.scrollIntoView = scrollIntoView;
+    try {
+      await renderDetailAt("/patterns/pagination#accessibility");
+      expect(scrollIntoView).toHaveBeenCalledTimes(1);
+      expect(scrollIntoView.mock.contexts[0]).toBe(
+        screen.getByRole("region", { name: "Accessibility" }),
+      );
+    } finally {
+      if (original) Object.defineProperty(Element.prototype, "scrollIntoView", original);
+      else delete (Element.prototype as Partial<Element>).scrollIntoView;
     }
   });
 

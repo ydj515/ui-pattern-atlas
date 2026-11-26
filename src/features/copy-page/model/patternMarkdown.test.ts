@@ -15,9 +15,11 @@ function requirePattern(slug: string) {
 }
 
 describe("buildPatternMarkdown", () => {
-  it("renders every page section with the implementation inlined", () => {
+  it("renders every page section with the implementation inlined", async () => {
+    const tabs = requirePattern("tabs");
     const markdown = buildPatternMarkdown(
-      requirePattern("tabs"),
+      tabs,
+      await tabs.loadGuide(),
       [{ fileName: "Tabs.tsx", role: "Component", code: "export const a = 1;\n\n" }],
       PAGE_URL,
     );
@@ -35,9 +37,11 @@ describe("buildPatternMarkdown", () => {
     expect(markdown.endsWith("\n")).toBe(true);
   });
 
-  it("uses a longer fence when the code contains backticks", () => {
+  it("uses a longer fence when the code contains backticks", async () => {
+    const tabs = requirePattern("tabs");
     const markdown = buildPatternMarkdown(
-      requirePattern("tabs"),
+      tabs,
+      await tabs.loadGuide(),
       [{ fileName: "a.ts", role: "Usage", code: "const s = ```nested```;" }],
       PAGE_URL,
     );
@@ -45,8 +49,9 @@ describe("buildPatternMarkdown", () => {
     expect(markdown).toContain("````ts\nconst s = ```nested```;\n````");
   });
 
-  it("omits the implementation section when there are no sources", () => {
-    const markdown = buildPatternMarkdown(requirePattern("tabs"), [], PAGE_URL);
+  it("omits the implementation section when there are no sources", async () => {
+    const tabs = requirePattern("tabs");
+    const markdown = buildPatternMarkdown(tabs, await tabs.loadGuide(), [], PAGE_URL);
 
     expect(markdown).not.toContain("## Implementation");
   });

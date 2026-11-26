@@ -33,7 +33,25 @@ export interface PatternSource {
   readonly load: SourceLoader;
 }
 
-/** A catalog entry: guidance, a live demo and the code behind it. */
+/**
+ * Guidance shown only on an entry's detail page. It lives in `<slug>/guide.ts` and is loaded
+ * with the page, so the catalog bundle carries only what cards and search need.
+ */
+export interface PatternGuide {
+  /**
+   * Where the name comes from, when the story helps people remember the pattern
+   * (e.g. why a toast is called a toast). Leave it out when the name explains itself.
+   */
+  readonly origin?: string;
+  readonly whenToUse: readonly string[];
+  readonly whenNotToUse: readonly string[];
+  readonly alternatives: readonly PatternAlternative[];
+  readonly accessibility: readonly string[];
+}
+
+export type GuideLoader = () => Promise<PatternGuide>;
+
+/** A catalog entry: what cards and search need, plus loaders for the detail page. */
 interface PatternEntry {
   readonly slug: string;
   readonly name: string;
@@ -44,16 +62,9 @@ interface PatternEntry {
   /** One line shown on catalog cards. */
   readonly summary: string;
   readonly description: string;
-  /**
-   * Where the name comes from, when the story helps people remember the pattern
-   * (e.g. why a toast is called a toast). Leave it out when the name explains itself.
-   */
-  readonly origin?: string;
-  readonly whenToUse: readonly string[];
-  readonly whenNotToUse: readonly string[];
-  readonly alternatives: readonly PatternAlternative[];
-  readonly accessibility: readonly string[];
   readonly tags: readonly string[];
+  /** Loads the detail-page guidance (when to use, alternatives, accessibility). */
+  readonly loadGuide: GuideLoader;
   /** Loads the interactive demo rendered on the detail page. */
   readonly loadPreview: PreviewLoader;
   /** Loads the looping miniature rendered on catalog cards. It must be decorative. */

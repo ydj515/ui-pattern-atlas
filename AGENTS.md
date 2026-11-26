@@ -55,8 +55,10 @@ enforces this.
 ## UI Pattern Catalog Conventions
 
 Each pattern lives in `src/entities/pattern/catalog/<slug>/` with a demo
-(`<Name>Demo.tsx`), a catalog thumbnail (`<Name>Thumbnail.tsx`), and its metadata, and
-reuses the component in `src/shared/ui/patterns/<slug>/`.
+(`<Name>Demo.tsx`), a catalog thumbnail (`<Name>Thumbnail.tsx`), its metadata (the entry
+file: names, summary, description and tags for cards and search), and its detail-page
+guidance (`guide.ts`: origin, when to use, alternatives, accessibility), and reuses the
+component in `src/shared/ui/patterns/<slug>/`.
 
 - The catalog thumbnail and the detail page demo must show the same use case. The
   looping thumbnail replays the demo's scenario: the same situation, the same copy,
@@ -70,13 +72,14 @@ reuses the component in `src/shared/ui/patterns/<slug>/`.
   positions and cursor targets in the keyframes in sync, and check click targets in a
   browser after changing either.
 - Pattern metadata loads its assets lazily via dynamic `import()`: `loadThumbnail` for
-  `<Name>Thumbnail.tsx`, `loadPreview` for `<Name>Demo.tsx`, and `sources[].load` (or
-  `loadDemoSource` for concept entries) for `?raw` source text. Never statically import
-  `<Name>Thumbnail.tsx`, `<Name>Demo.tsx`, `src/shared/ui/patterns/<slug>/`, or `?raw` sources
-  into a catalog entry, or the demo and sources into `<Name>Thumbnail.tsx`, as that pulls them
-  back into the initial catalog bundle; do not raise `build.chunkSizeWarningLimit` in
-  `vite.config.ts` to hide app chunk warnings. `vite.config.ts` bundles thumbnails into one
-  chunk per category, read from each entry's `category`.
+  `<Name>Thumbnail.tsx`, `loadGuide` for `guide.ts`, `loadPreview` for `<Name>Demo.tsx`, and
+  `sources[].load` (or `loadDemoSource` for concept entries) for `?raw` source text. Never
+  statically import `<Name>Thumbnail.tsx`, `guide.ts`, `<Name>Demo.tsx`,
+  `src/shared/ui/patterns/<slug>/`, or `?raw` sources into a catalog entry, or the demo and
+  sources into `<Name>Thumbnail.tsx`, as that pulls them back into the initial catalog
+  bundle; do not raise `build.chunkSizeWarningLimit` in `vite.config.ts` to hide app chunk
+  warnings. `vite.config.ts` bundles thumbnails into one chunk per category, read from each
+  entry's `category`.
 - Catalog lists render thumbnails through `ThumbnailFrame` (`src/entities/pattern/ui/`), which
   loads a thumbnail and `thumbnail-motion.css` when its card nears the viewport and keeps it
   mounted only while it is near. Do not render a list of thumbnails directly or import

@@ -17,10 +17,11 @@ describe("pattern catalog", () => {
     async (_slug, pattern) => {
       expect(isPatternCategoryId(pattern.category)).toBe(true);
       expect(pattern.description.length).toBeGreaterThan(0);
-      expect(pattern.whenToUse.length).toBeGreaterThan(0);
-      expect(pattern.whenNotToUse.length).toBeGreaterThan(0);
-      expect(pattern.alternatives.length).toBeGreaterThan(0);
-      expect(pattern.accessibility.length).toBeGreaterThan(0);
+      const guide = await pattern.loadGuide();
+      expect(guide.whenToUse.length).toBeGreaterThan(0);
+      expect(guide.whenNotToUse.length).toBeGreaterThan(0);
+      expect(guide.alternatives.length).toBeGreaterThan(0);
+      expect(guide.accessibility.length).toBeGreaterThan(0);
       if (pattern.kind === "concept") {
         expect(pattern.sources).toBeUndefined();
         expect((await pattern.loadDemoSource()).default).toContain("export function");
@@ -33,9 +34,10 @@ describe("pattern catalog", () => {
     },
   );
 
-  it("links alternatives only to patterns that exist", () => {
+  it("links alternatives only to patterns that exist", async () => {
     for (const pattern of PATTERNS) {
-      for (const alternative of pattern.alternatives) {
+      const { alternatives } = await pattern.loadGuide();
+      for (const alternative of alternatives) {
         if (alternative.slug) {
           expect(
             findPatternBySlug(alternative.slug),
