@@ -16,6 +16,11 @@ concurrency:
 
 jobs:
   deploy:
+    # Deploy only main of this repository: never forks, pull requests or other branches.
+    # The production environment also admits only main, and CLOUDFLARE_API_TOKEN and
+    # CLOUDFLARE_ACCOUNT_ID are secrets of that environment, not of the repository, so they
+    # stay out of reach even if a pull request edits this file.
+    if: github.repository == 'ydj515/ui-pattern-atlas' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: production
