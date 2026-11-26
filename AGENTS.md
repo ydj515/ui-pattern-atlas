@@ -81,9 +81,11 @@ component in `src/shared/ui/patterns/<slug>/`.
   warnings. `vite.config.ts` bundles thumbnails into one chunk per category, read from each
   entry's `category`.
 - Catalog lists render thumbnails through `ThumbnailFrame` (`src/entities/pattern/ui/`), which
-  loads a thumbnail and `thumbnail-motion.css` when its card nears the viewport and keeps it
-  mounted only while it is near. Do not render a list of thumbnails directly or import
-  `thumbnail-motion.css` statically; hundreds of off-screen loops drop frames on slow phones.
+  loads a thumbnail when its card nears the viewport and keeps it mounted only while it is
+  near. Do not render a list of thumbnails directly; hundreds of off-screen loops drop frames
+  on slow phones. `ThumbnailFrame` imports `thumbnail-motion.css` statically so the keyframes
+  arrive with the first CSS; loading them lazily left first-screen thumbnails blank on slow
+  connections while the web fonts downloaded.
 - Every component under `src/shared/ui/patterns/<slug>/` has a `*.stories.tsx` next to it
   covering its main states; `src/test/stories.test.tsx` renders all stories.
 - Components under `src/shared/ui/patterns/` stay copy-paste ready: React and the default
