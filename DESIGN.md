@@ -114,7 +114,8 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   has a `marker` background. The full topic index sits at the right and remains reachable
   on narrow screens. Detail breadcrumbs link to both the parent category and the specific
   topic. A separate return link restores the catalog query and filters. The mobile header
-  menu repeats the five categories in the same order, followed by the topic index and GitHub.
+  menu repeats the five categories in the same order, followed by the topic index, GitHub and
+  the languages.
 - **Search input**: `rounded-input`, `rule-strong` border, ink border and ring on focus.
 - **Pattern card**: a `field` surface with the looping thumbnail, a serif headword, the English
   term in `graphite`, and a one-line definition. No border, no shadow; hover underlines the
@@ -128,6 +129,12 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   every copy-paste pattern component.
 - **Theme toggle**: one `icon` button in the header. The icon shows the current theme (sun or
   moon); the label says what pressing it does.
+- **Language menu**: the last item in the desktop header, after a thin `rule` divider (on
+  small screens the languages sit at the end of the header menu instead): the current
+  language name and a chevron as a `quiet` button. It opens a small list (`rounded-surface`,
+  `shadow-overlay`) linking the same page in each language, each name written in its own
+  language. English pages add one `caption` line under the catalog suggestions and on the demo
+  stage saying the demos use Korean UI copy.
 - **Search**: the catalog opens with a centred search box and no visible title (the `h1` is
   screen-reader only). Other pages put a search button in the header that opens a command
   palette with ⌘K / Ctrl+K: type, ↑/↓, Enter to open.

@@ -1,5 +1,6 @@
 import { useSyncExternalStore, type RefObject } from "react";
 
+import { useMessages } from "@/shared/i18n/messages";
 import { Button } from "@/shared/ui/primitives/Button";
 
 function observeScroll(onChange: () => void) {
@@ -20,13 +21,14 @@ export function BackToTopButton({
 }: {
   readonly headingRef: RefObject<HTMLHeadingElement | null>;
 }) {
+  const messages = useMessages();
   const visible = useSyncExternalStore(observeScroll, hasScrolledPastFirstScreen, () => false);
   if (!visible) return null;
 
   return (
     <Button
       variant="icon"
-      aria-label="맨 위로"
+      aria-label={messages.nav.backToTop}
       className="fixed right-[calc(1rem_+_env(safe-area-inset-right))] bottom-[calc(1rem_+_env(safe-area-inset-bottom))] z-20 min-h-12 min-w-12 rounded-full! border border-rule-strong bg-paper text-ink shadow-overlay active:bg-field-hover motion-safe:transition-colors sm:right-6 sm:bottom-6"
       onClick={() => {
         headingRef.current?.focus({ preventScroll: true });

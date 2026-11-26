@@ -9,16 +9,29 @@ import {
 } from "@/entities/pattern/catalog/roadmap";
 
 import { buttonClassName } from "@/shared/ui/primitives/Button";
+import { LOCALE_NAMES, LOCALES, localizedHref, useLocale } from "@/shared/i18n/locale";
+import { useMessages } from "@/shared/i18n/messages";
 import { navLinkClassName } from "@/shared/ui/primitives/textLink";
 
 const linkClassName = `flex min-h-11 items-center justify-between rounded-control px-3 text-body-sm hover:bg-field aria-[current]:bg-marker aria-[current]:font-medium aria-[current]:text-marker-ink ${navLinkClassName}`;
+// The marker highlight is for the selected category only; the current language is just bolder.
+const languageLinkClassName = `flex min-h-11 items-center rounded-control px-3 text-body-sm hover:bg-field aria-[current]:font-medium aria-[current]:text-ink ${navLinkClassName}`;
 
-export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: string }) {
+export function MobileNavigation({
+  repositoryUrl,
+  base = import.meta.env.BASE_URL,
+}: {
+  readonly repositoryUrl: string;
+  /** Deploy base path for the language links; tests pass their own. */
+  readonly base?: string;
+}) {
+  const locale = useLocale();
+  const messages = useMessages();
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const navigationId = useId();
-  const { pathname, search } = useLocation();
+  const { pathname, search, hash } = useLocation();
   const patternMatch = useMatch("/patterns/:slug");
   const conceptMatch = useMatch("/concepts/:slug");
   const comparisonMatch = useMatch("/compare/*");
@@ -64,7 +77,7 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
       <button
         ref={buttonRef}
         type="button"
-        aria-label="메뉴"
+        aria-label={messages.nav.menu}
         aria-expanded={open}
         aria-controls={navigationId}
         className={`${buttonClassName("icon")} min-h-11 min-w-11 aria-expanded:bg-field aria-expanded:text-ink`}
@@ -82,12 +95,12 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
       </button>
       <nav
         id={navigationId}
-        aria-label="모바일 메뉴"
+        aria-label={messages.nav.mobileMenu}
         hidden={!open}
         className="absolute inset-x-4 top-full mt-2 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain rounded-surface border border-rule bg-paper p-2 shadow-overlay"
       >
-        <ul aria-label="카테고리">
-          {CATALOG_TABS.map(({ id, label }) => {
+        <ul aria-label={messages.nav.categories}>
+          {CATALOG_TABS.map(({ id }) => {
             const to = catalogCategoryHref(id, isCatalog ? search : "");
             const current =
               activeTab === id ? (to === pathname + search ? "page" : "location") : undefined;
@@ -99,7 +112,7 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
                   className={linkClassName}
                   onClick={closeAndFocus}
                 >
-                  {label}
+                  {messages.sections[id]}
                 </Link>
               </li>
             );
@@ -107,7 +120,7 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
         </ul>
         <div className="mt-2 border-t border-rule pt-2">
           <NavLink to="/roadmap" end className={linkClassName} onClick={closeAndFocus}>
-            전체 주제 보기
+            {messages.nav.allTopics}
           </NavLink>
           <a
             href={repositoryUrl}
@@ -141,6 +154,21 @@ export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: st
             </svg>
           </a>
         </div>
+        <ul aria-label={messages.site.language} className="mt-2 border-t border-rule pt-2">
+          {LOCALES.map((target) => (
+            <li key={target}>
+              <a
+                href={localizedHref(base, target, `${pathname}${search}${hash}`)}
+                lang={target}
+                hrefLang={target}
+                aria-current={target === locale ? "true" : undefined}
+                className={languageLinkClassName}
+              >
+                {LOCALE_NAMES[target]}
+              </a>
+            </li>
+          ))}
+        </ul>
       </nav>
     </div>
   );

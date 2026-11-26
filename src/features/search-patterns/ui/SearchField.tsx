@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+import { useMessages } from "@/shared/i18n/messages";
 import { isCommandK, isEditableTarget } from "@/shared/lib/keyboard";
 
 const SLASH_KEY = "/";
@@ -11,6 +12,7 @@ export interface SearchFieldProps {
 
 /** Search box for the catalog. Press "/" or ⌘K (Ctrl+K) anywhere on the page to focus it. */
 export function SearchField({ value, onValueChange }: SearchFieldProps) {
+  const messages = useMessages();
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export function SearchField({ value, onValueChange }: SearchFieldProps) {
   return (
     <form role="search" onSubmit={(event) => event.preventDefault()} className="relative">
       <label htmlFor="pattern-search" className="sr-only">
-        UI 패턴 검색
+        {messages.search.label}
       </label>
       <svg
         viewBox="0 0 20 20"
@@ -54,7 +56,7 @@ export function SearchField({ value, onValueChange }: SearchFieldProps) {
             onValueChange("");
           }
         }}
-        placeholder="이름이나 생김새로 찾아보세요"
+        placeholder={messages.search.placeholder}
         autoComplete="off"
         spellCheck={false}
         className="h-14 w-full rounded-input border border-rule-strong bg-paper pr-14 pl-12 text-lead text-ink placeholder:text-subtle focus:border-ink focus:ring-1 focus:ring-ink focus:outline-none [&::-webkit-search-cancel-button]:hidden"
@@ -66,7 +68,7 @@ export function SearchField({ value, onValueChange }: SearchFieldProps) {
             onValueChange("");
             inputRef.current?.focus();
           }}
-          aria-label="검색어 지우기"
+          aria-label={messages.search.clear}
           className="absolute top-1/2 right-3 grid size-8 -translate-y-1/2 place-items-center rounded-full text-graphite hover:bg-field hover:text-ink"
         >
           <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-4">

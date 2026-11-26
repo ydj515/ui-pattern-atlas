@@ -10,15 +10,22 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import { routes } from "@/app/router/routes";
+import { LocaleProvider, localeFromPathname, routerBasename } from "@/shared/i18n/locale";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Root element #root is missing in index.html");
 
-// Matches Vite's `base` so routes work when deployed under a sub-path (GitHub Pages).
-const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL });
+// English pages live under `<base>en/`; each language gets its own router basename, so every
+// route and link stays language-neutral. Matches Vite's `base` for sub-path deploys (GitHub Pages).
+const base = import.meta.env.BASE_URL;
+const locale = localeFromPathname(window.location.pathname, base);
+document.documentElement.lang = locale;
+const router = createBrowserRouter(routes, { basename: routerBasename(base, locale) });
 
 createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LocaleProvider locale={locale}>
+      <RouterProvider router={router} />
+    </LocaleProvider>
   </StrictMode>,
 );

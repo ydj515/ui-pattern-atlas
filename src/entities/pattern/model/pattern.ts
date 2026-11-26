@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 
 import type { PatternCategoryId } from "@/entities/pattern/model/category";
+import type { Locale } from "@/shared/i18n/locale";
 
 export interface PatternAlternative {
   readonly name: string;
@@ -76,6 +77,19 @@ export type Pattern = PatternEntry &
     | { readonly kind?: "component"; readonly sources: readonly PatternSource[] }
     | { readonly kind: "concept"; readonly loadDemoSource: SourceLoader; readonly sources?: never }
   );
+
+/**
+ * Headword of an entry in a page language. Korean pages lead with the Korean name and show the
+ * English term beside it; English pages show the English name once.
+ */
+export function patternHeadword(pattern: Pick<Pattern, "name" | "nameKo">, locale: Locale) {
+  return locale === "en" ? pattern.name : pattern.nameKo;
+}
+
+/** The second name shown beside the headword, or null when the headword already is it. */
+export function patternSecondaryName(pattern: Pick<Pattern, "name">, locale: Locale) {
+  return locale === "en" ? null : pattern.name;
+}
 
 export const BASE_TAGS = ["React", "TypeScript", "Tailwind CSS", "Accessibility"] as const;
 

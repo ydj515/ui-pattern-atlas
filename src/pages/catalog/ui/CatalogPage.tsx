@@ -10,7 +10,11 @@ import {
   type RoadmapEntry,
 } from "@/entities/pattern/catalog/roadmap";
 import { comparisonThumbnailLoader } from "@/entities/pattern/catalog/comparisons/comparisonThumbnailLoader";
-import { roadmapEntryDestination, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
+import {
+  roadmapEntryDestination,
+  roadmapEntryHref,
+  type RoadmapEntryStatus,
+} from "@/entities/pattern/catalog/roadmapLinks";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { PatternCard } from "@/entities/pattern/ui/PatternCard";
 import { ThumbnailFrame } from "@/entities/pattern/ui/ThumbnailFrame";
@@ -18,6 +22,7 @@ import { searchPatterns } from "@/features/search-patterns/model/searchPatterns"
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CategoryFilter } from "@/features/search-patterns/ui/CategoryFilter";
 import { SearchField } from "@/features/search-patterns/ui/SearchField";
+import { useMessages } from "@/shared/i18n/messages";
 import { Highlight } from "@/shared/ui/Highlight";
 import { Button } from "@/shared/ui/primitives/Button";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
@@ -26,12 +31,11 @@ import { BackToTopButton } from "@/pages/catalog/ui/BackToTopButton";
 
 const QUERY_PARAM = "q";
 const CATEGORY_PARAM = "category";
-const SUGGESTED_QUERIES = ["확인 창", "알림", "로딩", "토글"] as const;
 
 interface CatalogReference {
   readonly entry: RoadmapEntry;
   readonly href: string;
-  readonly status: string;
+  readonly status: RoadmapEntryStatus;
   readonly hasDemo: boolean;
 }
 
@@ -76,8 +80,12 @@ function ReferenceList({
   readonly returnSearch: string;
   readonly query: string;
 }) {
+  const messages = useMessages();
   return (
-    <ul aria-label="로드맵과 비교 항목" className="grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+    <ul
+      aria-label={messages.catalog.references}
+      className="grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3"
+    >
       {references.map(({ entry, href, status }) => (
         <li key={href} className="border-t border-rule">
           <Link to={href} state={{ returnSearch }} className="group block py-4">
@@ -92,7 +100,7 @@ function ReferenceList({
             <p className="mt-1 text-body-sm text-ink/80">
               <Highlight text={entry.description} query={query} />
             </p>
-            <p className="mt-1 text-micro text-graphite">{status}</p>
+            <p className="mt-1 text-micro text-graphite">{messages.entryStatus[status]}</p>
           </Link>
         </li>
       ))}
@@ -108,9 +116,10 @@ function ComparisonGrid({
   readonly references: readonly CatalogReference[];
   readonly returnSearch: string;
 }) {
+  const messages = useMessages();
   return (
     <ul
-      aria-label="비교 가이드"
+      aria-label={messages.catalog.comparisonGuides}
       className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
     >
       {references.map(({ entry, href, status }) => {
@@ -128,7 +137,7 @@ function ComparisonGrid({
                 </span>
               </h3>
               <p className="mt-1 text-body-sm text-ink/80">{entry.description}</p>
-              <p className="mt-1 text-micro text-graphite">{status}</p>
+              <p className="mt-1 text-micro text-graphite">{messages.entryStatus[status]}</p>
             </Link>
           </li>
         );
@@ -138,6 +147,7 @@ function ComparisonGrid({
 }
 
 export function CatalogPage() {
+  const messages = useMessages();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
@@ -205,13 +215,13 @@ export function CatalogPage() {
         {/* The search box is the page's first visible element; the title stays for screen
             readers and search engines. */}
         <h1 ref={headingRef} tabIndex={-1} className="sr-only">
-          UI 패턴 사전
+          {messages.site.name}
         </h1>
         <div className="mx-auto max-w-search">
           <SearchField value={text} onValueChange={(value) => updateParams({ text: value })} />
           <p className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-caption text-graphite">
-            <span>예:</span>
-            {SUGGESTED_QUERIES.map((suggestion) => (
+            <span>{messages.catalog.suggestionsLabel}</span>
+            {messages.catalog.suggestions.map((suggestion) => (
               <button
                 key={suggestion}
                 type="button"
@@ -222,11 +232,16 @@ export function CatalogPage() {
               </button>
             ))}
           </p>
+          {messages.catalog.demoLanguageNote ? (
+            <p className="mt-2 text-center text-caption text-graphite">
+              {messages.catalog.demoLanguageNote}
+            </p>
+          ) : null}
         </div>
       </section>
 
       <nav
-        aria-label="둘러보기"
+        aria-label={messages.nav.browse}
         className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-x-3 border-b border-rule bg-paper/95 py-2 backdrop-blur"
       >
         <CategoryFilter
@@ -237,7 +252,9 @@ export function CatalogPage() {
           to="/roadmap"
           className="group ml-auto inline-flex min-h-10 items-center gap-1 text-caption text-ink"
         >
-          <span className={`${textLinkClassName} group-hover:decoration-ink`}>전체 주제 보기</span>
+          <span className={`${textLinkClassName} group-hover:decoration-ink`}>
+            {messages.nav.allTopics}
+          </span>
           <span aria-hidden="true">›</span>
         </Link>
       </nav>
@@ -246,21 +263,21 @@ export function CatalogPage() {
         role="status"
         className={isBrowsing && category === "all" ? "sr-only" : "mt-4 text-caption text-graphite"}
       >
-        {total}개 항목 · 데모 {demoCount}개
+        {messages.catalog.status(total, demoCount)}
       </p>
 
       {total === 0 ? (
         <div className="py-20">
           <p className="font-serif text-title font-semibold">
-            {text ? `'${text}'에 맞는 패턴이 없어요` : "이 카테고리에는 아직 패턴이 없어요"}
+            {text ? messages.search.noMatch(text) : messages.catalog.emptyCategory}
           </p>
-          <p className="mt-2 text-graphite">다른 이름이나 생김새로 찾아보세요.</p>
+          <p className="mt-2 text-graphite">{messages.catalog.tryOtherWords}</p>
           <Button
             variant="primary"
             className="mt-6"
             onClick={() => updateParams({ text: "", category: "all" })}
           >
-            전체 패턴 보기
+            {messages.catalog.showAll}
           </Button>
         </div>
       ) : isBrowsing ? (
@@ -282,16 +299,16 @@ export function CatalogPage() {
                 <div className="flex shrink-0 flex-wrap items-center gap-3 text-caption text-graphite">
                   {topic.kind === "비교" && (
                     <Link to="/compare" className={textLinkClassName}>
-                      비교 가이드 목차
+                      {messages.catalog.comparisonIndex}
                     </Link>
                   )}
-                  <span className="tabular-nums">{count}개</span>
+                  <span className="tabular-nums">{messages.catalog.topicCount(count)}</span>
                 </div>
               </div>
               <div className="space-y-8">
                 {patterns.length > 0 ? (
                   <PatternGrid
-                    label={`${topic.nameKo} 데모`}
+                    label={messages.catalog.topicDemos(topic.nameKo)}
                     patterns={patterns}
                     query=""
                     returnSearch={returnSearch}
@@ -311,11 +328,11 @@ export function CatalogPage() {
       ) : (
         <section aria-labelledby="search-results" className="space-y-8 py-10">
           <h2 id="search-results" className="font-serif text-title font-bold">
-            검색 결과
+            {messages.catalog.searchResults}
           </h2>
           {results.length > 0 ? (
             <PatternGrid
-              label="패턴 데모"
+              label={messages.catalog.patternDemos}
               patterns={results}
               query={text}
               returnSearch={returnSearch}

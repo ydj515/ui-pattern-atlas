@@ -1,6 +1,7 @@
 import type { ComponentProps } from "react";
 import { Link, useLocation } from "react-router";
 
+import { useMessages } from "@/shared/i18n/messages";
 import { PageBreadcrumb } from "@/shared/ui/primitives/PageBreadcrumb";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
@@ -13,19 +14,24 @@ export function CatalogBreadcrumb({
   readonly parents?: BreadcrumbProps["parents"];
   readonly current: string;
 }) {
+  const messages = useMessages();
   const state: unknown = useLocation().state;
   const returnSearch =
     state && typeof state === "object" && "returnSearch" in state ? state.returnSearch : undefined;
 
   return (
     <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-      <PageBreadcrumb parents={[{ label: "전체", to: "/" }, ...parents]} current={current} />
+      <PageBreadcrumb
+        label={messages.nav.breadcrumb}
+        parents={[{ label: messages.sections.all, to: "/" }, ...parents]}
+        current={current}
+      />
       {typeof returnSearch === "string" && returnSearch.startsWith("?") && (
         <Link
           to={{ pathname: "/", search: returnSearch }}
           className={`text-caption ${textLinkClassName}`}
         >
-          탐색 결과로 돌아가기
+          {messages.nav.backToResults}
         </Link>
       )}
     </div>

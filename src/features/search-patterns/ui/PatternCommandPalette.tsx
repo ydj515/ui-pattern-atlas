@@ -1,10 +1,16 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { patternPath } from "@/entities/pattern/model/pattern";
+import {
+  patternHeadword,
+  patternPath,
+  patternSecondaryName,
+} from "@/entities/pattern/model/pattern";
 import { useNavigate } from "react-router";
 
 import { PATTERNS } from "@/entities/pattern/catalog";
 import { getCategory } from "@/entities/pattern/model/category";
 import type { Pattern } from "@/entities/pattern/model/pattern";
+import { useLocale } from "@/shared/i18n/locale";
+import { useMessages } from "@/shared/i18n/messages";
 import { commandKLabel, isCommandK } from "@/shared/lib/keyboard";
 import { Highlight } from "@/shared/ui/Highlight";
 
@@ -15,6 +21,7 @@ import { searchPatterns } from "@/features/search-patterns/model/searchPatterns"
  * shortcut that opens a command palette. Type to filter, ↑/↓ to move, Enter to open.
  */
 export function PatternCommandPalette() {
+  const messages = useMessages();
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -54,14 +61,16 @@ export function PatternCommandPalette() {
             d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.45 4.39l3.08 3.08a.75.75 0 1 1-1.06 1.06l-3.08-3.08A7 7 0 0 1 2 9Z"
           />
         </svg>
-        <span className="sr-only sm:not-sr-only sm:flex-1 sm:text-left">패턴 검색</span>
+        <span className="sr-only sm:not-sr-only sm:flex-1 sm:text-left">
+          {messages.search.open}
+        </span>
         <kbd className="hidden rounded-tag border border-rule px-1.5 font-sans text-micro sm:inline">
           {commandKLabel()}
         </kbd>
       </button>
       <dialog
         ref={dialogRef}
-        aria-label="패턴 검색"
+        aria-label={messages.search.open}
         onCancel={(event) => {
           event.preventDefault();
           setOpen(false);
@@ -80,6 +89,8 @@ export function PatternCommandPalette() {
 }
 
 function PaletteContent({ onClose }: { readonly onClose: () => void }) {
+  const locale = useLocale();
+  const messages = useMessages();
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
@@ -119,7 +130,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
         <input
           type="text"
           role="combobox"
-          aria-label="패턴 이름이나 생김새"
+          aria-label={messages.search.input}
           aria-expanded={results.length > 0}
           aria-controls={listboxId}
           aria-activedescendant={activePattern ? optionId(activePattern) : undefined}
@@ -142,7 +153,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
               openPattern(activePattern);
             }
           }}
-          placeholder="이름이나 생김새로 찾아보세요"
+          placeholder={messages.search.placeholder}
           autoComplete="off"
           spellCheck={false}
           className="h-14 flex-1 bg-transparent text-lead placeholder:text-subtle focus:outline-none"
@@ -153,7 +164,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
         <ul
           id={listboxId}
           role="listbox"
-          aria-label="검색 결과"
+          aria-label={messages.search.results}
           className="max-h-96 overflow-y-auto p-2"
         >
           {results.map((pattern, index) => (
@@ -167,11 +178,13 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
               className="flex cursor-pointer items-baseline gap-2 rounded-control px-3 py-2.5 aria-selected:bg-field"
             >
               <span className="font-serif text-headword font-semibold">
-                <Highlight text={pattern.nameKo} query={query} />
+                <Highlight text={patternHeadword(pattern, locale)} query={query} />
               </span>
-              <span className="text-caption text-graphite">
-                <Highlight text={pattern.name} query={query} />
-              </span>
+              {patternSecondaryName(pattern, locale) ? (
+                <span className="text-caption text-graphite">
+                  <Highlight text={pattern.name} query={query} />
+                </span>
+              ) : null}
               <span className="ml-auto shrink-0 text-micro text-graphite">
                 {getCategory(pattern.category).labelKo}
               </span>
@@ -180,14 +193,14 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
         </ul>
       ) : (
         <p className="px-4 py-10 text-center text-body-sm text-graphite">
-          &apos;{query}&apos;에 맞는 패턴이 없어요
+          {messages.search.noMatch(query)}
         </p>
       )}
 
       <p className="flex gap-4 border-t border-rule px-4 py-2.5 text-micro text-graphite">
-        <span>↑↓ 이동</span>
-        <span>Enter 열기</span>
-        <span>Esc 닫기</span>
+        <span>{messages.search.keyMove}</span>
+        <span>{messages.search.keyOpen}</span>
+        <span>{messages.search.keyClose}</span>
       </p>
     </div>
   );

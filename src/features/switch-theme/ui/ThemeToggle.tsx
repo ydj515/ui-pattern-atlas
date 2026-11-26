@@ -1,3 +1,4 @@
+import { useMessages } from "@/shared/i18n/messages";
 import { Button } from "@/shared/ui/primitives/Button";
 
 import type { ResolvedTheme } from "@/features/switch-theme/model/theme";
@@ -12,7 +13,8 @@ export interface ThemeToggleProps {
  * (sun or moon); the label says what pressing it will do.
  */
 export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
-  const label = theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환";
+  const messages = useMessages();
+  const label = theme === "dark" ? messages.theme.toLight : messages.theme.toDark;
 
   return (
     <Button variant="icon" onClick={onToggle} aria-label={label} title={label}>

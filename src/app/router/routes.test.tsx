@@ -256,6 +256,8 @@ describe("mobile header navigation", () => {
       "헷갈리는 UI",
       "전체 주제 보기",
       "GitHub",
+      "한국어",
+      "English",
     ]);
     expect(
       within(navigation)

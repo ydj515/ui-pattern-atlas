@@ -3,7 +3,9 @@ import { Link, useLocation, type LinkProps } from "react-router";
 
 import { findPatternBySlug, PATTERNS } from "@/entities/pattern/catalog";
 import {
+  patternHeadword,
   patternPath,
+  patternSecondaryName,
   type GuideLoader,
   type Pattern,
   type PatternGuide,
@@ -12,6 +14,8 @@ import {
 import { CopyPageButton } from "@/features/copy-page/ui/CopyPageButton";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
 import { SourceViewer } from "@/widgets/pattern-detail/ui/SourceViewer";
+import { useLocale } from "@/shared/i18n/locale";
+import { useMessages } from "@/shared/i18n/messages";
 import { Button } from "@/shared/ui/primitives/Button";
 import { navLinkClassName, textLinkClassName } from "@/shared/ui/primitives/textLink";
 
@@ -99,11 +103,12 @@ function getCurrentSection(hash: string) {
 }
 
 function SectionNavigation({ concept }: { readonly concept: boolean }) {
+  const messages = useMessages();
   const { hash } = useLocation();
   const current = useSyncExternalStore(observeSectionPosition, () => getCurrentSection(hash));
   return (
     <aside className="hidden lg:block">
-      <nav aria-label="이 페이지의 섹션" className="sticky top-8">
+      <nav aria-label={messages.detail.sections} className="sticky top-8">
         <ul className="space-y-2.5 border-l border-rule">
           {SECTIONS.filter((section) => !concept || section.id !== "implementation").map(
             (section) => (
@@ -168,13 +173,16 @@ function AdjacentLink({
   readonly pattern: Pattern | undefined;
   readonly direction: "previous" | "next";
 }) {
+  const locale = useLocale();
+  const messages = useMessages();
   if (!pattern) return null;
   const isNext = direction === "next";
+  const name = patternHeadword(pattern, locale);
   return (
     <Link
       to={patternPath(pattern)}
       rel={isNext ? "next" : "prev"}
-      aria-label={`${isNext ? "다음" : "이전"} 패턴: ${pattern.nameKo}`}
+      aria-label={isNext ? messages.detail.next(name) : messages.detail.previous(name)}
       className={`group inline-flex min-h-11 items-center gap-2 text-caption font-semibold text-ink ${isNext ? "col-start-2 flex-row-reverse justify-self-end text-right" : "justify-self-start"}`}
     >
       <svg
@@ -185,7 +193,7 @@ function AdjacentLink({
       >
         <path d="M7.8 4.8a1 1 0 0 1 1.4 0l4.5 4.5a1 1 0 0 1 0 1.4l-4.5 4.5a1 1 0 0 1-1.4-1.4l3.8-3.8-3.8-3.8a1 1 0 0 1 0-1.4Z" />
       </svg>
-      <span className="underline-offset-4 group-hover:underline">{pattern.nameKo}</span>
+      <span className="underline-offset-4 group-hover:underline">{name}</span>
     </Link>
   );
 }
@@ -249,6 +257,9 @@ function usePatternGuide(load: GuideLoader): GuideState & { readonly retry: () =
 /** Full guidance page for a single pattern, laid out like a dictionary entry. */
 export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
   const index = PATTERNS.indexOf(pattern);
+  const locale = useLocale();
+  const messages = useMessages();
+  const secondaryName = patternSecondaryName(pattern, locale);
   const { hash } = useLocation();
   const { status, guide, retry } = usePatternGuide(pattern.loadGuide);
   // The sections arrive after the first render on a fresh visit, so a link to one of them
@@ -265,14 +276,21 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
         <header className="pb-10">
           <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
             <h1 className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <span className="font-serif text-display font-bold">{pattern.nameKo}</span>{" "}
-              <span className="text-headword text-graphite">{pattern.name}</span>
+              <span className="font-serif text-display font-bold">
+                {patternHeadword(pattern, locale)}
+              </span>
+              {secondaryName ? (
+                <>
+                  {" "}
+                  <span className="text-headword text-graphite">{secondaryName}</span>
+                </>
+              ) : null}
             </h1>
             <CopyPageButton pattern={pattern} />
           </div>
           <p className="mt-6 text-lead">{pattern.description}</p>
           {/* The live demo sits with the definition, so it needs no heading of its own. */}
-          <section aria-label="미리보기" className="mt-8">
+          <section aria-label={messages.detail.preview} className="mt-8">
             <PatternPreview loadPreview={pattern.loadPreview} />
           </section>
           {/* Like the synonym and etymology lines under a dictionary headword: ruled, not boxed,
@@ -280,9 +298,11 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
           {pattern.aliases.length > 0 || guide?.origin ? (
             <dl className="mt-6 divide-y divide-rule border-y border-rule text-body-sm">
               {pattern.aliases.length > 0 ? (
-                <EntryLine term="다른 이름">{pattern.aliases.join(", ")}</EntryLine>
+                <EntryLine term={messages.detail.aliases}>{pattern.aliases.join(", ")}</EntryLine>
               ) : null}
-              {guide?.origin ? <EntryLine term="이름의 유래">{guide.origin}</EntryLine> : null}
+              {guide?.origin ? (
+                <EntryLine term={messages.detail.origin}>{guide.origin}</EntryLine>
+              ) : null}
             </dl>
           ) : null}
         </header>
@@ -316,7 +336,7 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
                           <>
                             {alternative.name}{" "}
                             <span className="text-caption font-normal text-graphite">
-                              (준비 중)
+                              {messages.detail.planned}
                             </span>
                           </>
                         )}
@@ -330,10 +350,7 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
 
             {pattern.kind !== "concept" ? (
               <Section id="implementation">
-                <p className="mb-5 text-body text-graphite">
-                  React 19, TypeScript, Tailwind CSS v4 기준이며 UI 라이브러리 없이 동작합니다.
-                  컴포넌트 파일 하나만 복사해도 됩니다.
-                </p>
+                <p className="mb-5 text-body text-graphite">{messages.detail.implementationNote}</p>
                 <SourceViewer sources={pattern.sources} />
               </Section>
             ) : null}
@@ -348,14 +365,14 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
           </div>
         ) : status === "failed" ? (
           <div role="alert" className="flex flex-wrap items-center gap-3 text-body text-graphite">
-            설명을 불러오지 못했어요.
-            <Button onClick={retry}>다시 시도</Button>
+            {messages.detail.guideFailed}
+            <Button onClick={retry}>{messages.detail.retry}</Button>
           </div>
         ) : (
-          <div aria-busy="true" aria-label="설명을 불러오는 중" />
+          <div aria-busy="true" aria-label={messages.detail.guideLoading} />
         )}
 
-        <nav aria-label="다른 패턴" className="mt-12 grid grid-cols-2 gap-x-4">
+        <nav aria-label={messages.detail.otherPatterns} className="mt-12 grid grid-cols-2 gap-x-4">
           <AdjacentLink pattern={PATTERNS[index - 1]} direction="previous" />
           <AdjacentLink pattern={PATTERNS[index + 1]} direction="next" />
         </nav>

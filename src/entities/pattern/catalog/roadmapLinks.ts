@@ -29,18 +29,24 @@ export function roadmapEntryHref(topic: RoadmapTopic, entry: RoadmapEntry) {
   return `/roadmap?${params}#${roadmapEntryAnchor(topic, entry)}`;
 }
 
-export function roadmapEntryDestination(topic: RoadmapTopic, entry: RoadmapEntry) {
+/** Where an entry stands; pages turn it into words in their own language. */
+export type RoadmapEntryStatus = "comparisonDemo" | "comparison" | "demo" | "planned";
+
+export function roadmapEntryDestination(
+  topic: RoadmapTopic,
+  entry: RoadmapEntry,
+): { href: string | undefined; status: RoadmapEntryStatus; hasDemo: boolean } {
   if (topic.kind === "비교") {
     const hasDemo = entry.priority === "완료";
     return {
       href: `/compare/${comparisonSlug(entry)}`,
-      status: hasDemo ? "비교 가이드 · 데모" : "비교 가이드",
+      status: hasDemo ? "comparisonDemo" : "comparison",
       hasDemo,
     };
   }
   const pattern = patternForRoadmapEntry(topic, entry);
-  if (pattern) return { href: patternPath(pattern), status: "데모 보기 가능", hasDemo: true };
-  return { href: undefined, status: "준비 중", hasDemo: false };
+  if (pattern) return { href: patternPath(pattern), status: "demo", hasDemo: true };
+  return { href: undefined, status: "planned", hasDemo: false };
 }
 
 const comparisonNames: Readonly<Record<string, string>> = {

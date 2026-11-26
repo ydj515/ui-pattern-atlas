@@ -21,14 +21,17 @@ function Separator() {
 }
 
 export function PageBreadcrumb({
+  label,
   parents,
   current,
 }: {
+  /** Accessible name of the trail, in the page's language. */
+  readonly label: string;
   readonly parents: readonly BreadcrumbParent[];
   readonly current: string;
 }) {
   return (
-    <nav aria-label="현재 위치">
+    <nav aria-label={label}>
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-caption">
         {parents.map(({ label, to }, index) => (
           <li key={label} className="flex items-center gap-2">

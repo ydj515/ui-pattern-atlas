@@ -2,6 +2,7 @@ import { useEffect, useState, type CSSProperties } from "react";
 
 import type { PatternSource, SourceLoader } from "@/entities/pattern/model/pattern";
 import { CopyCodeButton } from "@/features/copy-code/ui/CopyCodeButton";
+import { useMessages } from "@/shared/i18n/messages";
 import { highlightCode, type HighlightedLines } from "@/shared/lib/highlightCode";
 import { Tabs } from "@/shared/ui/patterns/tabs/Tabs";
 
@@ -97,6 +98,7 @@ function useSourceCode(load: SourceLoader): { state: SourceState; retry: () => v
 }
 
 function CodeBlock({ source }: { readonly source: PatternSource }) {
+  const messages = useMessages();
   const { state, retry } = useSourceCode(source.load);
   const code = state.status === "loaded" ? state.code.trimEnd() : "";
 
@@ -106,7 +108,9 @@ function CodeBlock({ source }: { readonly source: PatternSource }) {
         <span className="text-caption text-code-fg">
           {source.fileName}{" "}
           {state.status === "loaded" ? (
-            <span className="ml-2 text-code-muted">{code.split("\n").length}줄</span>
+            <span className="ml-2 text-code-muted">
+              {messages.source.lines(code.split("\n").length)}
+            </span>
           ) : null}
         </span>
         {state.status === "loaded" ? (
@@ -115,23 +119,23 @@ function CodeBlock({ source }: { readonly source: PatternSource }) {
       </div>
       <pre
         tabIndex={0}
-        aria-label={`${source.fileName} 소스 코드`}
+        aria-label={messages.source.code(source.fileName)}
         aria-busy={state.status === "loading"}
         className="max-h-128 overflow-auto p-4 font-mono text-code text-code-fg aria-busy:h-128"
       >
         {state.status === "loaded" ? <CodeLines code={code} /> : null}
         {state.status === "loading" ? (
-          <span className="text-code-muted">소스를 불러오는 중이에요</span>
+          <span className="text-code-muted">{messages.source.loading}</span>
         ) : null}
         {state.status === "failed" ? (
           <span className="flex items-center gap-3">
-            <span role="alert">소스를 불러오지 못했어요</span>
+            <span role="alert">{messages.source.failed}</span>
             <button
               type="button"
               onClick={retry}
               className="rounded-control border border-code-rule px-2.5 py-1 text-micro font-medium text-code-fg hover:bg-code-rule"
             >
-              다시 시도
+              {messages.source.retry}
             </button>
           </span>
         ) : null}
@@ -142,9 +146,10 @@ function CodeBlock({ source }: { readonly source: PatternSource }) {
 
 /** File tabs for the implementation files of a pattern. */
 export function SourceViewer({ sources }: { readonly sources: readonly PatternSource[] }) {
+  const messages = useMessages();
   return (
     <Tabs
-      label="구현 파일"
+      label={messages.source.files}
       items={sources.map((source) => ({
         id: source.fileName,
         label: `${source.role} · ${source.fileName}`,

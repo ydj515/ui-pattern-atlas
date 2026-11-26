@@ -2,18 +2,12 @@ import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { loadPatternMarkdown } from "@/features/copy-page/model/patternMarkdown";
+import { useMessages, type Messages } from "@/shared/i18n/messages";
 
 type CopyStatus = "idle" | "loading" | "copied" | "failed";
 
 const RESET_DELAY_MS = 2000;
 const BLOB_URL_LIFETIME_MS = 60_000;
-
-const statusLabel: Record<CopyStatus, string> = {
-  idle: "페이지 복사",
-  loading: "복사 중",
-  copied: "복사됨",
-  failed: "복사 실패",
-};
 
 const ICON_COPY =
   "M7 3.5A1.5 1.5 0 0 1 8.5 2h6A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-6A1.5 1.5 0 0 1 7 12.5v-9ZM4 7a1 1 0 0 1 1 1v7.5c0 .3.2.5.5.5H11a1 1 0 1 1 0 2H5.5A2.5 2.5 0 0 1 3 15.5V8a1 1 0 0 1 1-1Z";
@@ -24,20 +18,22 @@ const ICON_CHEVRON =
 const ICON_DOCUMENT =
   "M5 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.4a2 2 0 0 0-.6-1.4L12 1.6A2 2 0 0 0 10.6 1H5Zm1 8a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm1 3a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H7Z";
 
-const MENU_ITEMS = [
-  {
-    id: "copy",
-    label: "페이지 복사",
-    description: "LLM에 붙여 넣기 좋은 Markdown으로 복사",
-    path: ICON_COPY,
-  },
-  {
-    id: "view",
-    label: "Markdown으로 보기",
-    description: "새 탭에서 일반 텍스트로 열기",
-    path: ICON_DOCUMENT,
-  },
-] as const;
+function menuItems(copyPage: Messages["copyPage"]) {
+  return [
+    {
+      id: "copy",
+      label: copyPage.copyLabel,
+      description: copyPage.copyDescription,
+      path: ICON_COPY,
+    },
+    {
+      id: "view",
+      label: copyPage.viewLabel,
+      description: copyPage.viewDescription,
+      path: ICON_DOCUMENT,
+    },
+  ] as const;
+}
 
 function Icon({ path }: { readonly path: string }) {
   return (
@@ -69,6 +65,13 @@ export interface CopyPageButtonProps {
  * menu with the same copy action and a plain-text view of the Markdown.
  */
 export function CopyPageButton({ pattern }: CopyPageButtonProps) {
+  const messages = useMessages();
+  const statusLabel: Record<CopyStatus, string> = {
+    idle: messages.copyPage.idle,
+    loading: messages.copyPage.loading,
+    copied: messages.copyPage.copied,
+    failed: messages.copyPage.failed,
+  };
   const [status, setStatus] = useState<CopyStatus>("idle");
   const [menuOpen, setMenuOpen] = useState(false);
   const timerRef = useRef<number | undefined>(undefined);
@@ -194,7 +197,7 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
         <button
           ref={triggerRef}
           type="button"
-          aria-label="더 보기"
+          aria-label={messages.copyPage.more}
           aria-haspopup="menu"
           aria-expanded={menuOpen}
           aria-controls={menuOpen ? menuId : undefined}
@@ -209,11 +212,11 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
         <div
           id={menuId}
           role="menu"
-          aria-label="페이지 작업"
+          aria-label={messages.copyPage.actions}
           onKeyDown={onMenuKeyDown}
           className="absolute top-full right-0 z-20 mt-2 w-64 rounded-surface border border-rule bg-paper p-1 shadow-overlay"
         >
-          {MENU_ITEMS.map((item, index) => (
+          {menuItems(messages.copyPage).map((item, index) => (
             <button
               key={item.id}
               ref={(element) => {

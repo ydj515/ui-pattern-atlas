@@ -2,7 +2,9 @@ import { Link, Outlet, ScrollRestoration, useLocation } from "react-router";
 
 import { useTheme } from "@/features/switch-theme/model/useTheme";
 import { PatternCommandPalette } from "@/features/search-patterns/ui/PatternCommandPalette";
+import { LanguageSwitcher } from "@/features/switch-language/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/features/switch-theme/ui/ThemeToggle";
+import { useMessages } from "@/shared/i18n/messages";
 import { buttonClassName } from "@/shared/ui/primitives/Button";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
@@ -13,6 +15,7 @@ const ISSUES_URL = `${REPOSITORY_URL}/issues`;
 
 export function RootLayout() {
   const theme = useTheme();
+  const messages = useMessages();
   // The catalog has its own large search box; elsewhere the header offers ⌘K search.
   const { pathname } = useLocation();
   const isCatalog = pathname === "/";
@@ -23,7 +26,7 @@ export function RootLayout() {
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-control focus:bg-paper focus:px-4 focus:py-2 focus:shadow-overlay"
       >
-        본문으로 건너뛰기
+        {messages.site.skipToContent}
       </a>
       <header className="relative z-30 border-b border-rule">
         <div className="mx-auto flex h-14 max-w-page items-center justify-between px-4 sm:px-6">
@@ -67,6 +70,10 @@ export function RootLayout() {
               </svg>
             </a>
             <ThemeToggle theme={theme.resolved} onToggle={theme.toggle} />
+            <span aria-hidden="true" className="h-5 w-px bg-rule max-sm:hidden" />
+            <div className="max-sm:hidden">
+              <LanguageSwitcher />
+            </div>
             <MobileNavigation key={pathname} repositoryUrl={REPOSITORY_URL} />
           </div>
         </div>
@@ -76,11 +83,11 @@ export function RootLayout() {
       </main>
       <footer className="border-t border-rule">
         <p className="mx-auto max-w-page px-4 py-8 text-caption text-graphite sm:px-6">
-          UI Pattern Atlas는 오픈소스입니다. 빠진 패턴이나 고칠 점은{" "}
+          {messages.site.footer.before}
           <a href={ISSUES_URL} className={textLinkClassName}>
             GitHub
           </a>
-          에 남겨 주세요.
+          {messages.site.footer.after}
         </p>
       </footer>
       {/* Fresh deep links share the router key "default". Keep their saved positions distinct. */}

@@ -7,13 +7,17 @@ import {
   ROADMAP_PATTERN_TOPICS,
 } from "@/entities/pattern/catalog/roadmap";
 import { getCategory } from "@/entities/pattern/model/category";
-import { patternPath } from "@/entities/pattern/model/pattern";
+import { patternHeadword, patternPath } from "@/entities/pattern/model/pattern";
+import { useLocale } from "@/shared/i18n/locale";
+import { useMessages } from "@/shared/i18n/messages";
 import { NotFoundView } from "@/shared/ui/feedback/NotFoundView";
 import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
 import { PatternDetail } from "@/widgets/pattern-detail/ui/PatternDetail";
 
 export function PatternDetailPage() {
   const { slug = "" } = useParams();
+  const locale = useLocale();
+  const messages = useMessages();
   const pattern = findPatternBySlug(slug);
   const { pathname, search, hash } = useLocation();
   if (!pattern) return <NotFoundView />;
@@ -27,16 +31,22 @@ export function PatternDetailPage() {
 
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
-      <title>{`${pattern.name} (${pattern.nameKo}) · UI Pattern Atlas`}</title>
+      <title>
+        {locale === "en"
+          ? `${pattern.name} · UI Pattern Atlas`
+          : `${pattern.name} (${pattern.nameKo}) · UI Pattern Atlas`}
+      </title>
       <CatalogBreadcrumb
         parents={[
-          ...(section ? [{ label: section.label, to: catalogCategoryHref(section.id) }] : []),
+          ...(section
+            ? [{ label: messages.sections[section.id], to: catalogCategoryHref(section.id) }]
+            : []),
           {
             label: topic?.nameKo ?? getCategory(pattern.category).labelKo,
             to: catalogCategoryHref(pattern.category),
           },
         ]}
-        current={pattern.nameKo}
+        current={patternHeadword(pattern, locale)}
       />
       <div className="mt-8">
         <PatternDetail key={pattern.slug} pattern={pattern} />

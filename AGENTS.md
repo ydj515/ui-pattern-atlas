@@ -52,6 +52,20 @@ styles. Use token names (`text-caption`, `bg-field`, `rounded-control`), not raw
 `src/shared/ui/primitives/` for buttons and links. `src/app/styles/designTokens.test.ts`
 enforces this.
 
+## Languages
+
+The site has Korean pages at the existing addresses and English pages under `/en/`. Each
+language gets its own router basename (`src/main.tsx`), so routes and `Link`s stay
+language-neutral; switching languages is a full page load.
+
+- Site copy lives in `src/shared/i18n/messages.ts`; read it with `useMessages()`. Add a key to
+  both languages; the type makes English fill every Korean key, and
+  `src/shared/i18n/locale.test.ts` fails on Korean left in the English copy.
+- Pattern thumbnails, demos and their source stay in Korean on English pages, with a note
+  saying so. Do not translate them as part of site copy.
+- Show a pattern's name with `patternHeadword` / `patternSecondaryName`: Korean pages show the
+  Korean name with the English term beside it, English pages the English name once.
+
 ## UI Pattern Catalog Conventions
 
 Each pattern lives in `src/entities/pattern/catalog/<slug>/` with a demo

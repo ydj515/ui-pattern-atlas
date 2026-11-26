@@ -1,6 +1,7 @@
 import { createElement, useEffect, useState, type ComponentType } from "react";
 
 import type { PreviewLoader } from "@/entities/pattern/model/pattern";
+import { useMessages } from "@/shared/i18n/messages";
 import { Button } from "@/shared/ui/primitives/Button";
 
 export type PatternPreviewProps =
@@ -32,22 +33,28 @@ function usePreviewComponent(
 }
 
 /**
- * Stage for the live demo. "처음부터" remounts the demo to reset its state.
+ * Stage for the live demo. The reset button remounts the demo to reset its state.
  * The height is fixed so a demo growing or shrinking never shifts the rest of the page;
  * content taller than the stage scrolls inside it instead.
  */
 export function PatternPreview({ Preview, loadPreview }: PatternPreviewProps) {
+  const messages = useMessages();
   const [resetKey, setResetKey] = useState(0);
   const component = usePreviewComponent(Preview, loadPreview);
 
   return (
     <div className="relative h-preview rounded-surface bg-canvas">
+      {messages.detail.demoLanguageNote ? (
+        <p className="absolute top-4 left-4 text-caption text-canvas-muted">
+          {messages.detail.demoLanguageNote}
+        </p>
+      ) : null}
       <Button
         variant="quietOnCanvas"
         className="absolute top-3 right-3"
         onClick={() => setResetKey((key) => key + 1)}
       >
-        처음부터
+        {messages.detail.resetDemo}
       </Button>
       <div
         aria-busy={component === null}

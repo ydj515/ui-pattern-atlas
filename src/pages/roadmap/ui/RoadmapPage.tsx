@@ -12,9 +12,10 @@ import {
 } from "@/entities/pattern/catalog/roadmapLinks";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
+import { useMessages } from "@/shared/i18n/messages";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
-const topicGroups = [...CATALOG_SECTIONS, { id: "other", label: "기타 주제" }].map((section) => ({
+const topicGroups = [...CATALOG_SECTIONS, { id: "other" as const }].map((section) => ({
   ...section,
   topics: ROADMAP_TOPICS.filter(
     (topic) => (catalogSectionFor(topic)?.id ?? "other") === section.id,
@@ -27,6 +28,7 @@ export function RoadmapPage() {
 }
 
 function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
+  const messages = useMessages();
   const [params, setParams] = useSearchParams();
   const selectedTopic = ROADMAP_TOPICS.find((topic) => topic.id === params.get("category"));
   const category = selectedTopic?.id ?? "";
@@ -43,19 +45,17 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
 
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
-      <title>전체 주제 · UI Pattern Atlas</title>
+      <title>{`${messages.roadmap.title} · UI Pattern Atlas`}</title>
       <CatalogBreadcrumb
-        parents={selectedTopic ? [{ label: "전체 주제", to: "/roadmap" }] : []}
-        current={selectedTopic?.nameKo ?? "전체 주제"}
+        parents={selectedTopic ? [{ label: messages.roadmap.title, to: "/roadmap" }] : []}
+        current={selectedTopic?.nameKo ?? messages.roadmap.title}
       />
-      <h1 className="mt-8 font-serif text-display font-bold">전체 주제</h1>
-      <p className="mt-3 text-lead text-graphite">
-        카탈로그의 패턴과 구현 예정 항목을 주제별로 찾아보세요.
-      </p>
+      <h1 className="mt-8 font-serif text-display font-bold">{messages.roadmap.title}</h1>
+      <p className="mt-3 text-lead text-graphite">{messages.roadmap.lead}</p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <label className="grid gap-1 text-caption">
-          주제
+          {messages.roadmap.topic}
           <select
             value={category}
             onChange={(event) =>
@@ -65,9 +65,9 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
             }
             className="min-h-11 w-full rounded-input border border-rule-strong bg-paper px-3 text-body"
           >
-            <option value="">모든 주제</option>
+            <option value="">{messages.roadmap.allTopics}</option>
             {topicGroups.map((section) => (
-              <optgroup key={section.id} label={section.label}>
+              <optgroup key={section.id} label={messages.sections[section.id]}>
                 {section.topics.map((topic) => (
                   <option key={topic.id} value={topic.id}>
                     {topic.nameKo}
@@ -78,7 +78,7 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
           </select>
         </label>
         <label className="grid gap-1 text-caption">
-          로드맵 검색
+          {messages.roadmap.search}
           <input
             type="search"
             value={query}
@@ -88,7 +88,9 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
         </label>
       </div>
       <p role="status" className="mt-4 text-caption text-graphite">
-        {sections.reduce((count, topic) => count + topic.entries.length, 0)}개 항목
+        {messages.roadmap.status(
+          sections.reduce((count, topic) => count + topic.entries.length, 0),
+        )}
       </p>
 
       {sections.map((topic) => (
@@ -122,7 +124,9 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
                   </div>
                   <p className="text-body-sm text-graphite">{entry.description}</p>
                   <span className="text-caption text-graphite">
-                    {href ? status : `${status} · ${entry.priority}`}
+                    {href
+                      ? messages.entryStatus[status]
+                      : `${messages.entryStatus[status]} · ${entry.priority}`}
                   </span>
                 </li>
               );
@@ -130,7 +134,7 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
           </ul>
         </section>
       ))}
-      {sections.length === 0 && <p className="mt-8 text-body">검색에 맞는 항목이 없어요.</p>}
+      {sections.length === 0 && <p className="mt-8 text-body">{messages.roadmap.empty}</p>}
     </div>
   );
 }

@@ -1,14 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
+import { useMessages } from "@/shared/i18n/messages";
+
 type CopyStatus = "idle" | "copied" | "failed";
 
 const RESET_DELAY_MS = 2000;
-
-const statusLabel: Record<CopyStatus, string> = {
-  idle: "복사",
-  copied: "복사됨",
-  failed: "복사 실패",
-};
 
 export interface CopyCodeButtonProps {
   readonly code: string;
@@ -17,6 +13,12 @@ export interface CopyCodeButtonProps {
 
 /** Copies source code to the clipboard and reports the result in a live region. */
 export function CopyCodeButton({ code, fileName }: CopyCodeButtonProps) {
+  const messages = useMessages();
+  const statusLabel: Record<CopyStatus, string> = {
+    idle: messages.source.copy,
+    copied: messages.source.copied,
+    failed: messages.source.copyFailed,
+  };
   const [status, setStatus] = useState<CopyStatus>("idle");
   const timerRef = useRef<number | undefined>(undefined);
 
@@ -37,7 +39,7 @@ export function CopyCodeButton({ code, fileName }: CopyCodeButtonProps) {
     <button
       type="button"
       onClick={copy}
-      aria-label={`${fileName} 코드 복사`}
+      aria-label={messages.source.copyFile(fileName)}
       className="inline-flex items-center gap-1.5 rounded-control border border-code-rule px-2.5 py-1 text-micro font-medium text-code-fg hover:bg-code-rule"
     >
       <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-3.5">
