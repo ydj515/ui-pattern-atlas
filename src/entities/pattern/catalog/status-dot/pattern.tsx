@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StatusDotThumbnail } from "@/entities/pattern/catalog/status-dot/StatusDotThumbnail";
 
 export const statusDotPattern: Pattern = {
   slug: "status-dot",
@@ -33,7 +32,10 @@ export const statusDotPattern: Pattern = {
   tags: [...BASE_TAGS, "Color independence", "Dashboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/status-dot/StatusDotDemo").then((m) => m.StatusDotDemo),
-  Thumbnail: StatusDotThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/status-dot/StatusDotThumbnail").then(
+      (m) => m.StatusDotThumbnail,
+    ),
   sources: [
     {
       fileName: "StatusDot.tsx",

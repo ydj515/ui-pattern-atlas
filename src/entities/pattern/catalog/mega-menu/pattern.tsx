@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MegaMenuThumbnail } from "@/entities/pattern/catalog/mega-menu/MegaMenuThumbnail";
 
 export const megaMenuPattern: Pattern = {
   slug: "mega-menu",
@@ -33,7 +32,10 @@ export const megaMenuPattern: Pattern = {
   tags: [...BASE_TAGS, "Disclosure", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/mega-menu/MegaMenuDemo").then((m) => m.MegaMenuDemo),
-  Thumbnail: MegaMenuThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/mega-menu/MegaMenuThumbnail").then(
+      (m) => m.MegaMenuThumbnail,
+    ),
   sources: [
     {
       fileName: "MegaMenu.tsx",

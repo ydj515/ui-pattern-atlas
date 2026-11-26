@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { OptimisticUiThumbnail } from "@/entities/pattern/catalog/optimistic-ui/OptimisticUiThumbnail";
 
 export const optimisticUiPattern: Pattern = {
   slug: "optimistic-ui",
@@ -35,7 +34,10 @@ export const optimisticUiPattern: Pattern = {
     import("@/entities/pattern/catalog/optimistic-ui/OptimisticUiDemo").then(
       (m) => m.OptimisticUiDemo,
     ),
-  Thumbnail: OptimisticUiThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/optimistic-ui/OptimisticUiThumbnail").then(
+      (m) => m.OptimisticUiThumbnail,
+    ),
   sources: [
     {
       fileName: "OptimisticLikeButton.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { UnreadIndicatorThumbnail } from "@/entities/pattern/catalog/unread-indicator/UnreadIndicatorThumbnail";
 
 export const unreadIndicatorPattern: Pattern = {
   slug: "unread-indicator",
@@ -35,7 +34,10 @@ export const unreadIndicatorPattern: Pattern = {
     import("@/entities/pattern/catalog/unread-indicator/UnreadIndicatorDemo").then(
       (m) => m.UnreadIndicatorDemo,
     ),
-  Thumbnail: UnreadIndicatorThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/unread-indicator/UnreadIndicatorThumbnail").then(
+      (m) => m.UnreadIndicatorThumbnail,
+    ),
   sources: [
     {
       fileName: "UnreadIndicator.tsx",

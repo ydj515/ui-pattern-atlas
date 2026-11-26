@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { LossAversionThumbnail } from "@/entities/pattern/catalog/loss-aversion/LossAversionThumbnail";
 
 export const lossAversionPattern: Pattern = {
   slug: "loss-aversion",
@@ -38,6 +37,9 @@ export const lossAversionPattern: Pattern = {
     import("@/entities/pattern/catalog/loss-aversion/LossAversionDemo").then(
       (m) => m.LossAversionDemo,
     ),
-  Thumbnail: LossAversionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/loss-aversion/LossAversionThumbnail").then(
+      (m) => m.LossAversionThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/loss-aversion/LossAversionDemo.tsx?raw"),
 };

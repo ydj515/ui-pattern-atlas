@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MasonryGridThumbnail } from "@/entities/pattern/catalog/masonry-grid/MasonryGridThumbnail";
 
 export const masonryGridPattern: Pattern = {
   slug: "masonry-grid",
@@ -37,7 +36,10 @@ export const masonryGridPattern: Pattern = {
     import("@/entities/pattern/catalog/masonry-grid/MasonryGridDemo").then(
       (m) => m.MasonryGridDemo,
     ),
-  Thumbnail: MasonryGridThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/masonry-grid/MasonryGridThumbnail").then(
+      (m) => m.MasonryGridThumbnail,
+    ),
   sources: [
     {
       fileName: "MasonryGrid.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RegenerateResponseThumbnail } from "@/entities/pattern/catalog/regenerate-response/RegenerateResponseThumbnail";
 
 export const regenerateResponsePattern: Pattern = {
   slug: "regenerate-response",
@@ -35,7 +34,10 @@ export const regenerateResponsePattern: Pattern = {
     import("@/entities/pattern/catalog/regenerate-response/RegenerateResponseDemo").then(
       (m) => m.RegenerateResponseDemo,
     ),
-  Thumbnail: RegenerateResponseThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/regenerate-response/RegenerateResponseThumbnail").then(
+      (m) => m.RegenerateResponseThumbnail,
+    ),
   sources: [
     {
       fileName: "RegenerateResponse.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { JakobsLawThumbnail } from "@/entities/pattern/catalog/jakobs-law/JakobsLawThumbnail";
 
 export const jakobsLawPattern: Pattern = {
   slug: "jakobs-law",
@@ -35,6 +34,9 @@ export const jakobsLawPattern: Pattern = {
   tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/jakobs-law/JakobsLawDemo").then((m) => m.JakobsLawDemo),
-  Thumbnail: JakobsLawThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/jakobs-law/JakobsLawThumbnail").then(
+      (m) => m.JakobsLawThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/jakobs-law/JakobsLawDemo.tsx?raw"),
 };

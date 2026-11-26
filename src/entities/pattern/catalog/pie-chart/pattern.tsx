@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PieChartThumbnail } from "@/entities/pattern/catalog/pie-chart/PieChartThumbnail";
 
 export const pieChartPattern: Pattern = {
   slug: "pie-chart",
@@ -38,7 +37,10 @@ export const pieChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "path", "button"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/pie-chart/PieChartDemo").then((m) => m.PieChartDemo),
-  Thumbnail: PieChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pie-chart/PieChartThumbnail").then(
+      (m) => m.PieChartThumbnail,
+    ),
   sources: [
     {
       fileName: "PieChart.tsx",

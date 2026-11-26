@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { KineticTypographyThumbnail } from "@/entities/pattern/catalog/kinetic-typography/KineticTypographyThumbnail";
 
 export const kineticTypographyPattern: Pattern = {
   slug: "kinetic-typography",
@@ -28,7 +27,10 @@ export const kineticTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/kinetic-typography/KineticTypographyDemo").then(
       (m) => m.KineticTypographyDemo,
     ),
-  Thumbnail: KineticTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/kinetic-typography/KineticTypographyThumbnail").then(
+      (m) => m.KineticTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/kinetic-typography/KineticTypographyDemo.tsx?raw"),
 };

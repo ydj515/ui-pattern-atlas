@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { VeggieBurgerThumbnail } from "@/entities/pattern/catalog/veggie-burger/VeggieBurgerThumbnail";
 
 export const veggieBurgerPattern: Pattern = {
   slug: "veggie-burger",
@@ -36,6 +35,9 @@ export const veggieBurgerPattern: Pattern = {
     import("@/entities/pattern/catalog/veggie-burger/VeggieBurgerDemo").then(
       (m) => m.VeggieBurgerDemo,
     ),
-  Thumbnail: VeggieBurgerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/veggie-burger/VeggieBurgerThumbnail").then(
+      (m) => m.VeggieBurgerThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/veggie-burger/VeggieBurgerDemo.tsx?raw"),
 };

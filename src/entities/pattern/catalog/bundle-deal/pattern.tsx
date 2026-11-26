@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BundleDealThumbnail } from "@/entities/pattern/catalog/bundle-deal/BundleDealThumbnail";
 
 export const bundleDealPattern: Pattern = {
   slug: "bundle-deal",
@@ -36,7 +35,10 @@ export const bundleDealPattern: Pattern = {
   tags: [...BASE_TAGS, "output", "aria-live", "del"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/bundle-deal/BundleDealDemo").then((m) => m.BundleDealDemo),
-  Thumbnail: BundleDealThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bundle-deal/BundleDealThumbnail").then(
+      (m) => m.BundleDealThumbnail,
+    ),
   sources: [
     {
       fileName: "BundleDeal.tsx",

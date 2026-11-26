@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { KebabThumbnail } from "@/entities/pattern/catalog/kebab/KebabThumbnail";
 
 export const kebabPattern: Pattern = {
   slug: "kebab",
@@ -33,6 +32,7 @@ export const kebabPattern: Pattern = {
   ],
   tags: ["아이콘 이름", "더보기"],
   loadPreview: () => import("@/entities/pattern/catalog/kebab/KebabDemo").then((m) => m.KebabDemo),
-  Thumbnail: KebabThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/kebab/KebabThumbnail").then((m) => m.KebabThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/kebab/KebabDemo.tsx?raw"),
 };

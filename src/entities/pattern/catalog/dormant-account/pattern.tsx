@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DormantAccountThumbnail } from "@/entities/pattern/catalog/dormant-account/DormantAccountThumbnail";
 
 export const dormantAccountPattern: Pattern = {
   slug: "dormant-account",
@@ -40,7 +39,10 @@ export const dormantAccountPattern: Pattern = {
     import("@/entities/pattern/catalog/dormant-account/DormantAccountDemo").then(
       (m) => m.DormantAccountDemo,
     ),
-  Thumbnail: DormantAccountThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/dormant-account/DormantAccountThumbnail").then(
+      (m) => m.DormantAccountThumbnail,
+    ),
   sources: [
     {
       fileName: "DormantAccount.tsx",

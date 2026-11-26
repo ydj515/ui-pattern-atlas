@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { EmbossThumbnail } from "@/entities/pattern/catalog/emboss/EmbossThumbnail";
 
 export const embossPattern: Pattern = {
   slug: "emboss",
@@ -26,6 +25,7 @@ export const embossPattern: Pattern = {
   tags: ["글자 스타일", "Emboss"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/emboss/EmbossDemo").then((m) => m.EmbossDemo),
-  Thumbnail: EmbossThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/emboss/EmbossThumbnail").then((m) => m.EmbossThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/emboss/EmbossDemo.tsx?raw"),
 };

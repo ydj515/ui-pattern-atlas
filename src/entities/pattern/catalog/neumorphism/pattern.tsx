@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { NeumorphismThumbnail } from "@/entities/pattern/catalog/neumorphism/NeumorphismThumbnail";
 
 export const neumorphismPattern: Pattern = {
   slug: "neumorphism",
@@ -36,6 +35,9 @@ export const neumorphismPattern: Pattern = {
   tags: ["디자인 스타일", "그림자"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/neumorphism/NeumorphismDemo").then((m) => m.NeumorphismDemo),
-  Thumbnail: NeumorphismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/neumorphism/NeumorphismThumbnail").then(
+      (m) => m.NeumorphismThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/neumorphism/NeumorphismDemo.tsx?raw"),
 };

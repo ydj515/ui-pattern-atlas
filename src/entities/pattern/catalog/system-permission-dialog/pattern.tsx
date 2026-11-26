@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SystemPermissionDialogThumbnail } from "@/entities/pattern/catalog/system-permission-dialog/SystemPermissionDialogThumbnail";
 
 export const systemPermissionDialogPattern: Pattern = {
   slug: "system-permission-dialog",
@@ -39,7 +38,10 @@ export const systemPermissionDialogPattern: Pattern = {
     import("@/entities/pattern/catalog/system-permission-dialog/SystemPermissionDialogDemo").then(
       (m) => m.SystemPermissionDialogDemo,
     ),
-  Thumbnail: SystemPermissionDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/system-permission-dialog/SystemPermissionDialogThumbnail").then(
+      (m) => m.SystemPermissionDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "SystemPermissionDialog.tsx",

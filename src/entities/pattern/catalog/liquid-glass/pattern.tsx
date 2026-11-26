@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { LiquidGlassThumbnail } from "@/entities/pattern/catalog/liquid-glass/LiquidGlassThumbnail";
 
 export const liquidGlassPattern: Pattern = {
   slug: "liquid-glass",
@@ -37,6 +36,9 @@ export const liquidGlassPattern: Pattern = {
     import("@/entities/pattern/catalog/liquid-glass/LiquidGlassDemo").then(
       (m) => m.LiquidGlassDemo,
     ),
-  Thumbnail: LiquidGlassThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/liquid-glass/LiquidGlassThumbnail").then(
+      (m) => m.LiquidGlassThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/liquid-glass/LiquidGlassDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CheckboxThumbnail } from "@/entities/pattern/catalog/checkbox/CheckboxThumbnail";
 
 export const checkboxPattern: Pattern = {
   slug: "checkbox",
@@ -21,7 +20,10 @@ export const checkboxPattern: Pattern = {
   tags: BASE_TAGS,
   loadPreview: () =>
     import("@/entities/pattern/catalog/checkbox/CheckboxDemo").then((m) => m.CheckboxDemo),
-  Thumbnail: CheckboxThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/checkbox/CheckboxThumbnail").then(
+      (m) => m.CheckboxThumbnail,
+    ),
   sources: [
     {
       fileName: "Checkbox.tsx",

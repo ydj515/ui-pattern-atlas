@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ComboboxThumbnail } from "@/entities/pattern/catalog/combobox/ComboboxThumbnail";
 
 export const comboboxPattern: Pattern = {
   slug: "combobox",
@@ -35,7 +34,10 @@ export const comboboxPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/combobox/ComboboxDemo").then((m) => m.ComboboxDemo),
-  Thumbnail: ComboboxThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/combobox/ComboboxThumbnail").then(
+      (m) => m.ComboboxThumbnail,
+    ),
   sources: [
     {
       fileName: "Combobox.tsx",

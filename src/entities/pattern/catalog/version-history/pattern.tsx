@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { VersionHistoryThumbnail } from "@/entities/pattern/catalog/version-history/VersionHistoryThumbnail";
 
 export const versionHistoryPattern: Pattern = {
   slug: "version-history",
@@ -34,7 +33,10 @@ export const versionHistoryPattern: Pattern = {
     import("@/entities/pattern/catalog/version-history/VersionHistoryDemo").then(
       (m) => m.VersionHistoryDemo,
     ),
-  Thumbnail: VersionHistoryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/version-history/VersionHistoryThumbnail").then(
+      (m) => m.VersionHistoryThumbnail,
+    ),
   sources: [
     {
       fileName: "VersionHistory.tsx",

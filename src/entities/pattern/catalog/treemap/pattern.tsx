@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TreemapThumbnail } from "@/entities/pattern/catalog/treemap/TreemapThumbnail";
 
 export const treemapPattern: Pattern = {
   slug: "treemap",
@@ -34,7 +33,8 @@ export const treemapPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "squarify", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/treemap/TreemapDemo").then((m) => m.TreemapDemo),
-  Thumbnail: TreemapThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/treemap/TreemapThumbnail").then((m) => m.TreemapThumbnail),
   sources: [
     {
       fileName: "Treemap.tsx",

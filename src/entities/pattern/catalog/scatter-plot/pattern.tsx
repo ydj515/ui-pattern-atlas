@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ScatterPlotThumbnail } from "@/entities/pattern/catalog/scatter-plot/ScatterPlotThumbnail";
 
 export const scatterPlotPattern: Pattern = {
   slug: "scatter-plot",
@@ -34,7 +33,10 @@ export const scatterPlotPattern: Pattern = {
     import("@/entities/pattern/catalog/scatter-plot/ScatterPlotDemo").then(
       (m) => m.ScatterPlotDemo,
     ),
-  Thumbnail: ScatterPlotThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scatter-plot/ScatterPlotThumbnail").then(
+      (m) => m.ScatterPlotThumbnail,
+    ),
   sources: [
     {
       fileName: "ScatterPlot.tsx",

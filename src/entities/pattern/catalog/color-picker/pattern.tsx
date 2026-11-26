@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ColorPickerThumbnail } from "@/entities/pattern/catalog/color-picker/ColorPickerThumbnail";
 
 export const colorPickerPattern: Pattern = {
   slug: "color-picker",
@@ -34,7 +33,10 @@ export const colorPickerPattern: Pattern = {
     import("@/entities/pattern/catalog/color-picker/ColorPickerDemo").then(
       (m) => m.ColorPickerDemo,
     ),
-  Thumbnail: ColorPickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/color-picker/ColorPickerThumbnail").then(
+      (m) => m.ColorPickerThumbnail,
+    ),
   sources: [
     {
       fileName: "ColorPicker.tsx",

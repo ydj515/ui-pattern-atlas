@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SuccessScreenThumbnail } from "@/entities/pattern/catalog/success-screen/SuccessScreenThumbnail";
 
 export const successScreenPattern: Pattern = {
   slug: "success-screen",
@@ -39,7 +38,10 @@ export const successScreenPattern: Pattern = {
     import("@/entities/pattern/catalog/success-screen/SuccessScreenDemo").then(
       (m) => m.SuccessScreenDemo,
     ),
-  Thumbnail: SuccessScreenThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/success-screen/SuccessScreenThumbnail").then(
+      (m) => m.SuccessScreenThumbnail,
+    ),
   sources: [
     {
       fileName: "SuccessScreen.tsx",

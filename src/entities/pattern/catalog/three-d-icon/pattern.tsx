@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ThreeDIconThumbnail } from "@/entities/pattern/catalog/three-d-icon/ThreeDIconThumbnail";
 
 export const threeDIconPattern: Pattern = {
   slug: "three-d-icon",
@@ -34,6 +33,9 @@ export const threeDIconPattern: Pattern = {
   tags: ["디자인 스타일", "아이콘"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/three-d-icon/ThreeDIconDemo").then((m) => m.ThreeDIconDemo),
-  Thumbnail: ThreeDIconThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/three-d-icon/ThreeDIconThumbnail").then(
+      (m) => m.ThreeDIconThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/three-d-icon/ThreeDIconDemo.tsx?raw"),
 };

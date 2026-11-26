@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PullToRefreshThumbnail } from "@/entities/pattern/catalog/pull-to-refresh/PullToRefreshThumbnail";
 
 export const pullToRefreshPattern: Pattern = {
   slug: "pull-to-refresh",
@@ -29,7 +28,10 @@ export const pullToRefreshPattern: Pattern = {
     import("@/entities/pattern/catalog/pull-to-refresh/PullToRefreshDemo").then(
       (m) => m.PullToRefreshDemo,
     ),
-  Thumbnail: PullToRefreshThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pull-to-refresh/PullToRefreshThumbnail").then(
+      (m) => m.PullToRefreshThumbnail,
+    ),
   sources: [
     {
       fileName: "PullToRefresh.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MarqueeThumbnail } from "@/entities/pattern/catalog/marquee/MarqueeThumbnail";
 
 export const marqueePattern: Pattern = {
   slug: "marquee",
@@ -35,7 +34,8 @@ export const marqueePattern: Pattern = {
   tags: [...BASE_TAGS, "CSS animation", "WCAG 2.2.2", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/marquee/MarqueeDemo").then((m) => m.MarqueeDemo),
-  Thumbnail: MarqueeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/marquee/MarqueeThumbnail").then((m) => m.MarqueeThumbnail),
   sources: [
     {
       fileName: "Marquee.tsx",

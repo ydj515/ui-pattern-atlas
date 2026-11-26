@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TrashThumbnail } from "@/entities/pattern/catalog/trash/TrashThumbnail";
 
 export const trashPattern: Pattern = {
   slug: "trash",
@@ -31,7 +30,8 @@ export const trashPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "soft delete", "role=status"],
   loadPreview: () => import("@/entities/pattern/catalog/trash/TrashDemo").then((m) => m.TrashDemo),
-  Thumbnail: TrashThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/trash/TrashThumbnail").then((m) => m.TrashThumbnail),
   sources: [
     {
       fileName: "Trash.tsx",

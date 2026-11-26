@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ZPatternThumbnail } from "@/entities/pattern/catalog/z-pattern/ZPatternThumbnail";
 
 export const zPatternPattern: Pattern = {
   slug: "z-pattern",
@@ -28,7 +27,10 @@ export const zPatternPattern: Pattern = {
   tags: [...BASE_TAGS, "Visual hierarchy", "CSS grid"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/z-pattern/ZPatternDemo").then((m) => m.ZPatternDemo),
-  Thumbnail: ZPatternThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/z-pattern/ZPatternThumbnail").then(
+      (m) => m.ZPatternThumbnail,
+    ),
   sources: [
     {
       fileName: "ZPattern.tsx",

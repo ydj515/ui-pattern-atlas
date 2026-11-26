@@ -69,15 +69,18 @@ reuses the component in `src/shared/ui/patterns/<slug>/`.
 - Thumbnail coordinates are px on the unscaled 176×112 stage (`ThumbStage`); keep element
   positions and cursor targets in the keyframes in sync, and check click targets in a
   browser after changing either.
-- Pattern metadata loads detail-only assets lazily via dynamic `import()`: `loadPreview` for
-  `<Name>Demo.tsx`, and `sources[].load` (or `loadDemoSource` for concept entries) for `?raw`
-  source text. Never statically import `<Name>Demo.tsx`, `src/shared/ui/patterns/<slug>/`, or
-  `?raw` sources into a catalog entry or `<Name>Thumbnail.tsx`, as that pulls them back into
-  the initial catalog bundle; do not raise `build.chunkSizeWarningLimit` in `vite.config.ts`
-  to hide app chunk warnings.
+- Pattern metadata loads its assets lazily via dynamic `import()`: `loadThumbnail` for
+  `<Name>Thumbnail.tsx`, `loadPreview` for `<Name>Demo.tsx`, and `sources[].load` (or
+  `loadDemoSource` for concept entries) for `?raw` source text. Never statically import
+  `<Name>Thumbnail.tsx`, `<Name>Demo.tsx`, `src/shared/ui/patterns/<slug>/`, or `?raw` sources
+  into a catalog entry, or the demo and sources into `<Name>Thumbnail.tsx`, as that pulls them
+  back into the initial catalog bundle; do not raise `build.chunkSizeWarningLimit` in
+  `vite.config.ts` to hide app chunk warnings. `vite.config.ts` bundles thumbnails into one
+  chunk per category, read from each entry's `category`.
 - Catalog lists render thumbnails through `ThumbnailFrame` (`src/entities/pattern/ui/`), which
-  mounts a thumbnail only while its card is near the viewport. Do not render a list of
-  thumbnails directly; hundreds of off-screen loops drop frames on slow phones.
+  loads a thumbnail and `thumbnail-motion.css` when its card nears the viewport and keeps it
+  mounted only while it is near. Do not render a list of thumbnails directly or import
+  `thumbnail-motion.css` statically; hundreds of off-screen loops drop frames on slow phones.
 - Every component under `src/shared/ui/patterns/<slug>/` has a `*.stories.tsx` next to it
   covering its main states; `src/test/stories.test.tsx` renders all stories.
 - Components under `src/shared/ui/patterns/` stay copy-paste ready: React and the default

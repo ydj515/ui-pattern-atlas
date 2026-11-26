@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LockedContentThumbnail } from "@/entities/pattern/catalog/locked-content/LockedContentThumbnail";
 
 export const lockedContentPattern: Pattern = {
   slug: "locked-content",
@@ -39,7 +38,10 @@ export const lockedContentPattern: Pattern = {
     import("@/entities/pattern/catalog/locked-content/LockedContentDemo").then(
       (m) => m.LockedContentDemo,
     ),
-  Thumbnail: LockedContentThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/locked-content/LockedContentThumbnail").then(
+      (m) => m.LockedContentThumbnail,
+    ),
   sources: [
     {
       fileName: "LockedContent.tsx",

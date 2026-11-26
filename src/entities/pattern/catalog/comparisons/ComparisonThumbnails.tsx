@@ -1,5 +1,3 @@
-import "@/entities/pattern/ui/thumbnail-motion.css";
-
 import type { ComponentType, CSSProperties } from "react";
 
 import {

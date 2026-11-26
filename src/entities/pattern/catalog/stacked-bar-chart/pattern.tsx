@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StackedBarChartThumbnail } from "@/entities/pattern/catalog/stacked-bar-chart/StackedBarChartThumbnail";
 
 export const stackedBarChartPattern: Pattern = {
   slug: "stacked-bar-chart",
@@ -34,7 +33,10 @@ export const stackedBarChartPattern: Pattern = {
     import("@/entities/pattern/catalog/stacked-bar-chart/StackedBarChartDemo").then(
       (m) => m.StackedBarChartDemo,
     ),
-  Thumbnail: StackedBarChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stacked-bar-chart/StackedBarChartThumbnail").then(
+      (m) => m.StackedBarChartThumbnail,
+    ),
   sources: [
     {
       fileName: "StackedBarChart.tsx",

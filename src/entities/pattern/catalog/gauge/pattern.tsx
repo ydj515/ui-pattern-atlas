@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { GaugeThumbnail } from "@/entities/pattern/catalog/gauge/GaugeThumbnail";
 
 export const gaugePattern: Pattern = {
   slug: "gauge",
@@ -31,7 +30,8 @@ export const gaugePattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "role=meter", "SVG", "pathLength"],
   loadPreview: () => import("@/entities/pattern/catalog/gauge/GaugeDemo").then((m) => m.GaugeDemo),
-  Thumbnail: GaugeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/gauge/GaugeThumbnail").then((m) => m.GaugeThumbnail),
   sources: [
     {
       fileName: "Gauge.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ScrollBounceThumbnail } from "@/entities/pattern/catalog/scroll-bounce/ScrollBounceThumbnail";
 
 export const scrollBouncePattern: Pattern = {
   slug: "scroll-bounce",
@@ -35,7 +34,10 @@ export const scrollBouncePattern: Pattern = {
     import("@/entities/pattern/catalog/scroll-bounce/ScrollBounceDemo").then(
       (m) => m.ScrollBounceDemo,
     ),
-  Thumbnail: ScrollBounceThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scroll-bounce/ScrollBounceThumbnail").then(
+      (m) => m.ScrollBounceThumbnail,
+    ),
   sources: [
     {
       fileName: "ScrollBounce.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { UndoThumbnail } from "@/entities/pattern/catalog/undo/UndoThumbnail";
 
 export const undoPattern: Pattern = {
   slug: "undo",
@@ -36,7 +35,8 @@ export const undoPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "role=status", "WCAG 2.2.1"],
   loadPreview: () => import("@/entities/pattern/catalog/undo/UndoDemo").then((m) => m.UndoDemo),
-  Thumbnail: UndoThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/undo/UndoThumbnail").then((m) => m.UndoThumbnail),
   sources: [
     {
       fileName: "UndoBar.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HistogramThumbnail } from "@/entities/pattern/catalog/histogram/HistogramThumbnail";
 
 export const histogramPattern: Pattern = {
   slug: "histogram",
@@ -33,7 +32,10 @@ export const histogramPattern: Pattern = {
   tags: [...BASE_TAGS, "CSS flex", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/histogram/HistogramDemo").then((m) => m.HistogramDemo),
-  Thumbnail: HistogramThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/histogram/HistogramThumbnail").then(
+      (m) => m.HistogramThumbnail,
+    ),
   sources: [
     {
       fileName: "Histogram.tsx",

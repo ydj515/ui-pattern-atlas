@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { OfflineStateThumbnail } from "@/entities/pattern/catalog/offline-state/OfflineStateThumbnail";
 
 export const offlineStatePattern: Pattern = {
   slug: "offline-state",
@@ -35,7 +34,10 @@ export const offlineStatePattern: Pattern = {
     import("@/entities/pattern/catalog/offline-state/OfflineStateDemo").then(
       (m) => m.OfflineStateDemo,
     ),
-  Thumbnail: OfflineStateThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/offline-state/OfflineStateThumbnail").then(
+      (m) => m.OfflineStateThumbnail,
+    ),
   sources: [
     {
       fileName: "OfflineState.tsx",

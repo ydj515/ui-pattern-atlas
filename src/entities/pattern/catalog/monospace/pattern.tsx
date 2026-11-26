@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { MonospaceTypeThumbnail } from "@/entities/pattern/catalog/monospace/MonospaceTypeThumbnail";
 
 export const monospacePattern: Pattern = {
   slug: "monospace",
@@ -38,6 +37,9 @@ export const monospacePattern: Pattern = {
     import("@/entities/pattern/catalog/monospace/MonospaceTypeDemo").then(
       (m) => m.MonospaceTypeDemo,
     ),
-  Thumbnail: MonospaceTypeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/monospace/MonospaceTypeThumbnail").then(
+      (m) => m.MonospaceTypeThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/monospace/MonospaceTypeDemo.tsx?raw"),
 };

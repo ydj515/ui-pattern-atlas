@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ProfileSetupThumbnail } from "@/entities/pattern/catalog/profile-setup/ProfileSetupThumbnail";
 
 export const profileSetupPattern: Pattern = {
   slug: "profile-setup",
@@ -35,7 +34,10 @@ export const profileSetupPattern: Pattern = {
     import("@/entities/pattern/catalog/profile-setup/ProfileSetupDemo").then(
       (m) => m.ProfileSetupDemo,
     ),
-  Thumbnail: ProfileSetupThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/profile-setup/ProfileSetupThumbnail").then(
+      (m) => m.ProfileSetupThumbnail,
+    ),
   sources: [
     {
       fileName: "ProfileSetup.tsx",

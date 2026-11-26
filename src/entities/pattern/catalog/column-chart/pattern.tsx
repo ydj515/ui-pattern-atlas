@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ColumnChartThumbnail } from "@/entities/pattern/catalog/column-chart/ColumnChartThumbnail";
 
 export const columnChartPattern: Pattern = {
   slug: "column-chart",
@@ -34,7 +33,10 @@ export const columnChartPattern: Pattern = {
     import("@/entities/pattern/catalog/column-chart/ColumnChartDemo").then(
       (m) => m.ColumnChartDemo,
     ),
-  Thumbnail: ColumnChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/column-chart/ColumnChartThumbnail").then(
+      (m) => m.ColumnChartThumbnail,
+    ),
   sources: [
     {
       fileName: "ColumnChart.tsx",

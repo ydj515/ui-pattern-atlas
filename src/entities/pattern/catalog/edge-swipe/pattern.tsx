@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EdgeSwipeThumbnail } from "@/entities/pattern/catalog/edge-swipe/EdgeSwipeThumbnail";
 
 export const edgeSwipePattern: Pattern = {
   slug: "edge-swipe",
@@ -33,7 +32,10 @@ export const edgeSwipePattern: Pattern = {
   tags: [...BASE_TAGS, "Pointer Events", "aria-expanded"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/edge-swipe/EdgeSwipeDemo").then((m) => m.EdgeSwipeDemo),
-  Thumbnail: EdgeSwipeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/edge-swipe/EdgeSwipeThumbnail").then(
+      (m) => m.EdgeSwipeThumbnail,
+    ),
   sources: [
     {
       fileName: "EdgeSwipe.tsx",

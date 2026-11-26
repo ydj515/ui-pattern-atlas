@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ConnectedAccountsThumbnail } from "@/entities/pattern/catalog/connected-accounts/ConnectedAccountsThumbnail";
 
 export const connectedAccountsPattern: Pattern = {
   slug: "connected-accounts",
@@ -34,7 +33,10 @@ export const connectedAccountsPattern: Pattern = {
     import("@/entities/pattern/catalog/connected-accounts/ConnectedAccountsDemo").then(
       (m) => m.ConnectedAccountsDemo,
     ),
-  Thumbnail: ConnectedAccountsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/connected-accounts/ConnectedAccountsThumbnail").then(
+      (m) => m.ConnectedAccountsThumbnail,
+    ),
   sources: [
     {
       fileName: "ConnectedAccounts.tsx",

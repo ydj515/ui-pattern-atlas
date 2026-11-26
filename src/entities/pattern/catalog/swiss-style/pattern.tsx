@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SwissStyleThumbnail } from "@/entities/pattern/catalog/swiss-style/SwissStyleThumbnail";
 
 export const swissStylePattern: Pattern = {
   slug: "swiss-style",
@@ -33,6 +32,9 @@ export const swissStylePattern: Pattern = {
   tags: ["글자 스타일", "Swiss Style"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/swiss-style/SwissStyleDemo").then((m) => m.SwissStyleDemo),
-  Thumbnail: SwissStyleThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/swiss-style/SwissStyleThumbnail").then(
+      (m) => m.SwissStyleThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/swiss-style/SwissStyleDemo.tsx?raw"),
 };

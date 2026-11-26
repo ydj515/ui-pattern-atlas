@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ProgressToastThumbnail } from "@/entities/pattern/catalog/progress-toast/ProgressToastThumbnail";
 
 export const progressToastPattern: Pattern = {
   slug: "progress-toast",
@@ -42,7 +41,10 @@ export const progressToastPattern: Pattern = {
     import("@/entities/pattern/catalog/progress-toast/ProgressToastDemo").then(
       (m) => m.ProgressToastDemo,
     ),
-  Thumbnail: ProgressToastThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/progress-toast/ProgressToastThumbnail").then(
+      (m) => m.ProgressToastThumbnail,
+    ),
   sources: [
     {
       fileName: "ProgressToast.tsx",

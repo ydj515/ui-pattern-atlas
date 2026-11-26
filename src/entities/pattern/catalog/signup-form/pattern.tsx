@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SignupFormThumbnail } from "@/entities/pattern/catalog/signup-form/SignupFormThumbnail";
 
 export const signupFormPattern: Pattern = {
   slug: "signup-form",
@@ -37,7 +36,10 @@ export const signupFormPattern: Pattern = {
   tags: [...BASE_TAGS, "form", "aria-describedby", "aria-live"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/signup-form/SignupFormDemo").then((m) => m.SignupFormDemo),
-  Thumbnail: SignupFormThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/signup-form/SignupFormThumbnail").then(
+      (m) => m.SignupFormThumbnail,
+    ),
   sources: [
     {
       fileName: "SignupForm.tsx",

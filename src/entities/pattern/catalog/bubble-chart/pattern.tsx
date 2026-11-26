@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BubbleChartThumbnail } from "@/entities/pattern/catalog/bubble-chart/BubbleChartThumbnail";
 
 export const bubbleChartPattern: Pattern = {
   slug: "bubble-chart",
@@ -34,7 +33,10 @@ export const bubbleChartPattern: Pattern = {
     import("@/entities/pattern/catalog/bubble-chart/BubbleChartDemo").then(
       (m) => m.BubbleChartDemo,
     ),
-  Thumbnail: BubbleChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bubble-chart/BubbleChartThumbnail").then(
+      (m) => m.BubbleChartThumbnail,
+    ),
   sources: [
     {
       fileName: "BubbleChart.tsx",

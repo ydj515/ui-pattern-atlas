@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { GlitchThumbnail } from "@/entities/pattern/catalog/glitch/GlitchThumbnail";
 
 export const glitchPattern: Pattern = {
   slug: "glitch",
@@ -30,6 +29,7 @@ export const glitchPattern: Pattern = {
   tags: ["글자 스타일", "Glitch"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/glitch/GlitchDemo").then((m) => m.GlitchDemo),
-  Thumbnail: GlitchThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/glitch/GlitchThumbnail").then((m) => m.GlitchThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/glitch/GlitchDemo.tsx?raw"),
 };

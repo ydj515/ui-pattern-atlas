@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FeatureDotThumbnail } from "@/entities/pattern/catalog/feature-dot/FeatureDotThumbnail";
 
 export const featureDotPattern: Pattern = {
   slug: "feature-dot",
@@ -33,7 +32,10 @@ export const featureDotPattern: Pattern = {
   tags: [...BASE_TAGS, "Visually hidden text", "Onboarding"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/feature-dot/FeatureDotDemo").then((m) => m.FeatureDotDemo),
-  Thumbnail: FeatureDotThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/feature-dot/FeatureDotThumbnail").then(
+      (m) => m.FeatureDotThumbnail,
+    ),
   sources: [
     {
       fileName: "FeatureDot.tsx",

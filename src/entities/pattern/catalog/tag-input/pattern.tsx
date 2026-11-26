@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TagInputThumbnail } from "@/entities/pattern/catalog/tag-input/TagInputThumbnail";
 
 export const tagInputPattern: Pattern = {
   slug: "tag-input",
@@ -33,7 +32,10 @@ export const tagInputPattern: Pattern = {
   tags: [...BASE_TAGS, "IME", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/tag-input/TagInputDemo").then((m) => m.TagInputDemo),
-  Thumbnail: TagInputThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tag-input/TagInputThumbnail").then(
+      (m) => m.TagInputThumbnail,
+    ),
   sources: [
     {
       fileName: "TagInput.tsx",

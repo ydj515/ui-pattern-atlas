@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { StairsThumbnail } from "@/entities/pattern/catalog/stairs/StairsThumbnail";
 
 export const stairsPattern: Pattern = {
   slug: "stairs",
@@ -34,6 +33,7 @@ export const stairsPattern: Pattern = {
   tags: ["아이콘 이름", "목차"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/stairs/StairsDemo").then((m) => m.StairsDemo),
-  Thumbnail: StairsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stairs/StairsThumbnail").then((m) => m.StairsThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/stairs/StairsDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ParallaxThumbnail } from "@/entities/pattern/catalog/parallax/ParallaxThumbnail";
 
 export const parallaxPattern: Pattern = {
   slug: "parallax",
@@ -33,7 +32,10 @@ export const parallaxPattern: Pattern = {
   tags: [...BASE_TAGS, "Scroll events", "will-change", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/parallax/ParallaxDemo").then((m) => m.ParallaxDemo),
-  Thumbnail: ParallaxThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/parallax/ParallaxThumbnail").then(
+      (m) => m.ParallaxThumbnail,
+    ),
   sources: [
     {
       fileName: "Parallax.tsx",

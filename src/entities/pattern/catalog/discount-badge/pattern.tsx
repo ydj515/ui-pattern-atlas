@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DiscountBadgeThumbnail } from "@/entities/pattern/catalog/discount-badge/DiscountBadgeThumbnail";
 
 export const discountBadgePattern: Pattern = {
   slug: "discount-badge",
@@ -38,7 +37,10 @@ export const discountBadgePattern: Pattern = {
     import("@/entities/pattern/catalog/discount-badge/DiscountBadgeDemo").then(
       (m) => m.DiscountBadgeDemo,
     ),
-  Thumbnail: DiscountBadgeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/discount-badge/DiscountBadgeThumbnail").then(
+      (m) => m.DiscountBadgeThumbnail,
+    ),
   sources: [
     {
       fileName: "DiscountBadge.tsx",

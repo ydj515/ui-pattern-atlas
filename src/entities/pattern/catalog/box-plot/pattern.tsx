@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BoxPlotThumbnail } from "@/entities/pattern/catalog/box-plot/BoxPlotThumbnail";
 
 export const boxPlotPattern: Pattern = {
   slug: "box-plot",
@@ -34,7 +33,8 @@ export const boxPlotPattern: Pattern = {
   tags: [...BASE_TAGS, "quantile", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/box-plot/BoxPlotDemo").then((m) => m.BoxPlotDemo),
-  Thumbnail: BoxPlotThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/box-plot/BoxPlotThumbnail").then((m) => m.BoxPlotThumbnail),
   sources: [
     {
       fileName: "BoxPlot.tsx",

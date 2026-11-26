@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TimeSlotsThumbnail } from "@/entities/pattern/catalog/time-slots/TimeSlotsThumbnail";
 
 export const timeSlotsPattern: Pattern = {
   slug: "time-slots",
@@ -32,7 +31,10 @@ export const timeSlotsPattern: Pattern = {
   tags: [...BASE_TAGS, "Native radio", "Booking"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/time-slots/TimeSlotsDemo").then((m) => m.TimeSlotsDemo),
-  Thumbnail: TimeSlotsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/time-slots/TimeSlotsThumbnail").then(
+      (m) => m.TimeSlotsThumbnail,
+    ),
   sources: [
     {
       fileName: "TimeSlots.tsx",

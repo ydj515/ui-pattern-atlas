@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { WishlistButtonThumbnail } from "@/entities/pattern/catalog/wishlist-bookmark/WishlistButtonThumbnail";
 
 export const wishlistBookmarkPattern: Pattern = {
   slug: "wishlist-bookmark",
@@ -35,7 +34,10 @@ export const wishlistBookmarkPattern: Pattern = {
     import("@/entities/pattern/catalog/wishlist-bookmark/WishlistButtonDemo").then(
       (m) => m.WishlistButtonDemo,
     ),
-  Thumbnail: WishlistButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/wishlist-bookmark/WishlistButtonThumbnail").then(
+      (m) => m.WishlistButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "WishlistButton.tsx",

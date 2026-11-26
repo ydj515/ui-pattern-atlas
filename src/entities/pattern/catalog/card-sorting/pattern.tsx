@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { CardSortingThumbnail } from "@/entities/pattern/catalog/card-sorting/CardSortingThumbnail";
 
 export const cardSortingPattern: Pattern = {
   slug: "card-sorting",
@@ -35,6 +34,9 @@ export const cardSortingPattern: Pattern = {
     import("@/entities/pattern/catalog/card-sorting/CardSortingDemo").then(
       (m) => m.CardSortingDemo,
     ),
-  Thumbnail: CardSortingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/card-sorting/CardSortingThumbnail").then(
+      (m) => m.CardSortingThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/card-sorting/CardSortingDemo.tsx?raw"),
 };

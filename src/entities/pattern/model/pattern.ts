@@ -20,6 +20,12 @@ export type SourceLoader = () => Promise<{ readonly default: string }>;
  */
 export type PreviewLoader = () => Promise<ComponentType>;
 
+/**
+ * Loads a catalog thumbnail when its card nears the viewport, so the initial catalog bundle
+ * does not carry every miniature.
+ */
+export type ThumbnailLoader = () => Promise<ComponentType>;
+
 export interface PatternSource {
   readonly fileName: string;
   /** What this file is for, e.g. "Component" or "Usage". */
@@ -50,8 +56,8 @@ interface PatternEntry {
   readonly tags: readonly string[];
   /** Loads the interactive demo rendered on the detail page. */
   readonly loadPreview: PreviewLoader;
-  /** Static miniature rendered on catalog cards. Must be decorative. */
-  readonly Thumbnail: ComponentType;
+  /** Loads the looping miniature rendered on catalog cards. It must be decorative. */
+  readonly loadThumbnail: ThumbnailLoader;
 }
 
 export type Pattern = PatternEntry &

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { UserInterviewThumbnail } from "@/entities/pattern/catalog/user-interview/UserInterviewThumbnail";
 
 export const userInterviewPattern: Pattern = {
   slug: "user-interview",
@@ -35,7 +34,10 @@ export const userInterviewPattern: Pattern = {
     import("@/entities/pattern/catalog/user-interview/UserInterviewDemo").then(
       (m) => m.UserInterviewDemo,
     ),
-  Thumbnail: UserInterviewThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/user-interview/UserInterviewThumbnail").then(
+      (m) => m.UserInterviewThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/user-interview/UserInterviewDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { WrittenReviewThumbnail } from "@/entities/pattern/catalog/written-review/WrittenReviewThumbnail";
 
 export const writtenReviewPattern: Pattern = {
   slug: "written-review",
@@ -35,7 +34,10 @@ export const writtenReviewPattern: Pattern = {
     import("@/entities/pattern/catalog/written-review/WrittenReviewDemo").then(
       (m) => m.WrittenReviewDemo,
     ),
-  Thumbnail: WrittenReviewThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/written-review/WrittenReviewThumbnail").then(
+      (m) => m.WrittenReviewThumbnail,
+    ),
   sources: [
     {
       fileName: "WrittenReview.tsx",

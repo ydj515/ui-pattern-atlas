@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CopyLinkThumbnail } from "@/entities/pattern/catalog/copy-link/CopyLinkThumbnail";
 
 export const copyLinkPattern: Pattern = {
   slug: "copy-link",
@@ -33,7 +32,10 @@ export const copyLinkPattern: Pattern = {
   tags: [...BASE_TAGS, "Clipboard API", "readonly", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/copy-link/CopyLinkDemo").then((m) => m.CopyLinkDemo),
-  Thumbnail: CopyLinkThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/copy-link/CopyLinkThumbnail").then(
+      (m) => m.CopyLinkThumbnail,
+    ),
   sources: [
     {
       fileName: "CopyLink.tsx",

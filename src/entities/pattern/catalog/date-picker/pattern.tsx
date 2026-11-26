@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DatePickerThumbnail } from "@/entities/pattern/catalog/date-picker/DatePickerThumbnail";
 
 export const datePickerPattern: Pattern = {
   slug: "date-picker",
@@ -34,7 +33,10 @@ export const datePickerPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/date-picker/DatePickerDemo").then((m) => m.DatePickerDemo),
-  Thumbnail: DatePickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/date-picker/DatePickerThumbnail").then(
+      (m) => m.DatePickerThumbnail,
+    ),
   sources: [
     {
       fileName: "DatePicker.tsx",

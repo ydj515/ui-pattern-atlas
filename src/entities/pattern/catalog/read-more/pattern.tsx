@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ReadMoreThumbnail } from "@/entities/pattern/catalog/read-more/ReadMoreThumbnail";
 
 export const readMorePattern: Pattern = {
   slug: "read-more",
@@ -33,7 +32,10 @@ export const readMorePattern: Pattern = {
   tags: [...BASE_TAGS, "aria-expanded", "line-clamp"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/read-more/ReadMoreDemo").then((m) => m.ReadMoreDemo),
-  Thumbnail: ReadMoreThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/read-more/ReadMoreThumbnail").then(
+      (m) => m.ReadMoreThumbnail,
+    ),
   sources: [
     {
       fileName: "ReadMore.tsx",

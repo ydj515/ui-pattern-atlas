@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ChoiceOverloadThumbnail } from "@/entities/pattern/catalog/choice-overload/ChoiceOverloadThumbnail";
 
 export const choiceOverloadPattern: Pattern = {
   slug: "choice-overload",
@@ -38,7 +37,10 @@ export const choiceOverloadPattern: Pattern = {
     import("@/entities/pattern/catalog/choice-overload/ChoiceOverloadDemo").then(
       (m) => m.ChoiceOverloadDemo,
     ),
-  Thumbnail: ChoiceOverloadThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/choice-overload/ChoiceOverloadThumbnail").then(
+      (m) => m.ChoiceOverloadThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/choice-overload/ChoiceOverloadDemo.tsx?raw"),
 };

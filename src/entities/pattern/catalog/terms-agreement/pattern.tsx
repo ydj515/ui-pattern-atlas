@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TermsAgreementThumbnail } from "@/entities/pattern/catalog/terms-agreement/TermsAgreementThumbnail";
 
 export const termsAgreementPattern: Pattern = {
   slug: "terms-agreement",
@@ -35,7 +34,10 @@ export const termsAgreementPattern: Pattern = {
     import("@/entities/pattern/catalog/terms-agreement/TermsAgreementDemo").then(
       (m) => m.TermsAgreementDemo,
     ),
-  Thumbnail: TermsAgreementThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/terms-agreement/TermsAgreementThumbnail").then(
+      (m) => m.TermsAgreementThumbnail,
+    ),
   sources: [
     {
       fileName: "TermsAgreement.tsx",

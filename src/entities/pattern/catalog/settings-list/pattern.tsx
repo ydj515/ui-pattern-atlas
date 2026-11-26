@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SettingsListThumbnail } from "@/entities/pattern/catalog/settings-list/SettingsListThumbnail";
 
 export const settingsListPattern: Pattern = {
   slug: "settings-list",
@@ -35,7 +34,10 @@ export const settingsListPattern: Pattern = {
     import("@/entities/pattern/catalog/settings-list/SettingsListDemo").then(
       (m) => m.SettingsListDemo,
     ),
-  Thumbnail: SettingsListThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/settings-list/SettingsListThumbnail").then(
+      (m) => m.SettingsListThumbnail,
+    ),
   sources: [
     {
       fileName: "SettingsList.tsx",

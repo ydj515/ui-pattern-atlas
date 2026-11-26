@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HeroSectionThumbnail } from "@/entities/pattern/catalog/hero-section/HeroSectionThumbnail";
 
 export const heroSectionPattern: Pattern = {
   slug: "hero-section",
@@ -35,7 +34,10 @@ export const heroSectionPattern: Pattern = {
     import("@/entities/pattern/catalog/hero-section/HeroSectionDemo").then(
       (m) => m.HeroSectionDemo,
     ),
-  Thumbnail: HeroSectionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hero-section/HeroSectionThumbnail").then(
+      (m) => m.HeroSectionThumbnail,
+    ),
   sources: [
     {
       fileName: "HeroSection.tsx",

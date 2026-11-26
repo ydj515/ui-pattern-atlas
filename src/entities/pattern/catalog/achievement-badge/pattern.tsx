@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AchievementBadgeThumbnail } from "@/entities/pattern/catalog/achievement-badge/AchievementBadgeThumbnail";
 
 export const achievementBadgePattern: Pattern = {
   slug: "achievement-badge",
@@ -35,7 +34,10 @@ export const achievementBadgePattern: Pattern = {
     import("@/entities/pattern/catalog/achievement-badge/AchievementBadgeDemo").then(
       (m) => m.AchievementBadgeDemo,
     ),
-  Thumbnail: AchievementBadgeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/achievement-badge/AchievementBadgeThumbnail").then(
+      (m) => m.AchievementBadgeThumbnail,
+    ),
   sources: [
     {
       fileName: "AchievementBadge.tsx",

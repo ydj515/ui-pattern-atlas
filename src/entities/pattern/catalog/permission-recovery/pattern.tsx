@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PermissionRecoveryThumbnail } from "@/entities/pattern/catalog/permission-recovery/PermissionRecoveryThumbnail";
 
 export const permissionRecoveryPattern: Pattern = {
   slug: "permission-recovery",
@@ -39,7 +38,10 @@ export const permissionRecoveryPattern: Pattern = {
     import("@/entities/pattern/catalog/permission-recovery/PermissionRecoveryDemo").then(
       (m) => m.PermissionRecoveryDemo,
     ),
-  Thumbnail: PermissionRecoveryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/permission-recovery/PermissionRecoveryThumbnail").then(
+      (m) => m.PermissionRecoveryThumbnail,
+    ),
   sources: [
     {
       fileName: "PermissionRecovery.tsx",

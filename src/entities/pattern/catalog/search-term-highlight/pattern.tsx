@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SearchTermHighlightThumbnail } from "@/entities/pattern/catalog/search-term-highlight/SearchTermHighlightThumbnail";
 
 export const searchTermHighlightPattern: Pattern = {
   slug: "search-term-highlight",
@@ -44,7 +43,10 @@ export const searchTermHighlightPattern: Pattern = {
     import("@/entities/pattern/catalog/search-term-highlight/SearchTermHighlightDemo").then(
       (m) => m.SearchTermHighlightDemo,
     ),
-  Thumbnail: SearchTermHighlightThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/search-term-highlight/SearchTermHighlightThumbnail").then(
+      (m) => m.SearchTermHighlightThumbnail,
+    ),
   sources: [
     {
       fileName: "HighlightText.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { CompromiseEffectThumbnail } from "@/entities/pattern/catalog/compromise-effect/CompromiseEffectThumbnail";
 
 export const compromiseEffectPattern: Pattern = {
   slug: "compromise-effect",
@@ -33,7 +32,10 @@ export const compromiseEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/compromise-effect/CompromiseEffectDemo").then(
       (m) => m.CompromiseEffectDemo,
     ),
-  Thumbnail: CompromiseEffectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/compromise-effect/CompromiseEffectThumbnail").then(
+      (m) => m.CompromiseEffectThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/compromise-effect/CompromiseEffectDemo.tsx?raw"),
 };

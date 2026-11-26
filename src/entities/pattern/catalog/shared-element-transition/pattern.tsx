@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SharedElementThumbnail } from "@/entities/pattern/catalog/shared-element-transition/SharedElementThumbnail";
 
 export const sharedElementTransitionPattern: Pattern = {
   slug: "shared-element-transition",
@@ -35,7 +34,10 @@ export const sharedElementTransitionPattern: Pattern = {
     import("@/entities/pattern/catalog/shared-element-transition/SharedElementDemo").then(
       (m) => m.SharedElementDemo,
     ),
-  Thumbnail: SharedElementThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/shared-element-transition/SharedElementThumbnail").then(
+      (m) => m.SharedElementThumbnail,
+    ),
   sources: [
     {
       fileName: "SharedElement.tsx",

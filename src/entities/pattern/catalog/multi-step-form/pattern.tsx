@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MultiStepFormThumbnail } from "@/entities/pattern/catalog/multi-step-form/MultiStepFormThumbnail";
 
 export const multiStepFormPattern: Pattern = {
   slug: "multi-step-form",
@@ -35,7 +34,10 @@ export const multiStepFormPattern: Pattern = {
     import("@/entities/pattern/catalog/multi-step-form/MultiStepFormDemo").then(
       (m) => m.MultiStepFormDemo,
     ),
-  Thumbnail: MultiStepFormThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/multi-step-form/MultiStepFormThumbnail").then(
+      (m) => m.MultiStepFormThumbnail,
+    ),
   sources: [
     {
       fileName: "MultiStepForm.tsx",

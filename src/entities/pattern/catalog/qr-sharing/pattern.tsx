@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { QrShareThumbnail } from "@/entities/pattern/catalog/qr-sharing/QrShareThumbnail";
 
 export const qrSharingPattern: Pattern = {
   slug: "qr-sharing",
@@ -33,7 +32,10 @@ export const qrSharingPattern: Pattern = {
   tags: [...BASE_TAGS, "QR code", "SVG", "role=img"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/qr-sharing/QrShareDemo").then((m) => m.QrShareDemo),
-  Thumbnail: QrShareThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/qr-sharing/QrShareThumbnail").then(
+      (m) => m.QrShareThumbnail,
+    ),
   sources: [
     {
       fileName: "QrShare.tsx",

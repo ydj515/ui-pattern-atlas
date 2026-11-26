@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RangeSliderThumbnail } from "@/entities/pattern/catalog/range-slider/RangeSliderThumbnail";
 
 export const rangeSliderPattern: Pattern = {
   slug: "range-slider",
@@ -32,7 +31,10 @@ export const rangeSliderPattern: Pattern = {
     import("@/entities/pattern/catalog/range-slider/RangeSliderDemo").then(
       (m) => m.RangeSliderDemo,
     ),
-  Thumbnail: RangeSliderThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/range-slider/RangeSliderThumbnail").then(
+      (m) => m.RangeSliderThumbnail,
+    ),
   sources: [
     {
       fileName: "RangeSlider.tsx",

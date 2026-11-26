@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { WaterfallChartThumbnail } from "@/entities/pattern/catalog/waterfall-chart/WaterfallChartThumbnail";
 
 export const waterfallChartPattern: Pattern = {
   slug: "waterfall-chart",
@@ -34,7 +33,10 @@ export const waterfallChartPattern: Pattern = {
     import("@/entities/pattern/catalog/waterfall-chart/WaterfallChartDemo").then(
       (m) => m.WaterfallChartDemo,
     ),
-  Thumbnail: WaterfallChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/waterfall-chart/WaterfallChartThumbnail").then(
+      (m) => m.WaterfallChartThumbnail,
+    ),
   sources: [
     {
       fileName: "WaterfallChart.tsx",

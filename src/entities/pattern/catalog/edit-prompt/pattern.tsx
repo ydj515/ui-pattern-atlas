@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EditPromptThumbnail } from "@/entities/pattern/catalog/edit-prompt/EditPromptThumbnail";
 
 export const editPromptPattern: Pattern = {
   slug: "edit-prompt",
@@ -33,7 +32,10 @@ export const editPromptPattern: Pattern = {
   tags: [...BASE_TAGS, "Inline edit", "Focus management", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/edit-prompt/EditPromptDemo").then((m) => m.EditPromptDemo),
-  Thumbnail: EditPromptThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/edit-prompt/EditPromptThumbnail").then(
+      (m) => m.EditPromptThumbnail,
+    ),
   sources: [
     {
       fileName: "EditPrompt.tsx",

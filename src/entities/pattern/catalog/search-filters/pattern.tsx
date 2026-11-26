@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SearchFiltersThumbnail } from "@/entities/pattern/catalog/search-filters/SearchFiltersThumbnail";
 
 export const searchFiltersPattern: Pattern = {
   slug: "search-filters",
@@ -35,7 +34,10 @@ export const searchFiltersPattern: Pattern = {
     import("@/entities/pattern/catalog/search-filters/SearchFiltersDemo").then(
       (m) => m.SearchFiltersDemo,
     ),
-  Thumbnail: SearchFiltersThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/search-filters/SearchFiltersThumbnail").then(
+      (m) => m.SearchFiltersThumbnail,
+    ),
   sources: [
     {
       fileName: "SearchFilters.tsx",

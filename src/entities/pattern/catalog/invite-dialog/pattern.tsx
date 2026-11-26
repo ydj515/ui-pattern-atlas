@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { InviteDialogThumbnail } from "@/entities/pattern/catalog/invite-dialog/InviteDialogThumbnail";
 
 export const inviteDialogPattern: Pattern = {
   slug: "invite-dialog",
@@ -35,7 +34,10 @@ export const inviteDialogPattern: Pattern = {
     import("@/entities/pattern/catalog/invite-dialog/InviteDialogDemo").then(
       (m) => m.InviteDialogDemo,
     ),
-  Thumbnail: InviteDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/invite-dialog/InviteDialogThumbnail").then(
+      (m) => m.InviteDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "InviteDialog.tsx",

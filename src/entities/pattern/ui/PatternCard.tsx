@@ -18,11 +18,9 @@ export interface PatternCardProps {
  * its English term, and a one-line definition. The whole entry is one link.
  */
 export function PatternCard({ pattern, query = "", returnSearch }: PatternCardProps) {
-  const { Thumbnail } = pattern;
-
   return (
     <Link to={patternPath(pattern)} state={{ returnSearch }} className="group block">
-      <ThumbnailFrame Thumbnail={Thumbnail} />
+      <ThumbnailFrame load={pattern.loadThumbnail} />
       <h3 className="mt-3.5">
         <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
           <Highlight text={pattern.nameKo} query={query} />

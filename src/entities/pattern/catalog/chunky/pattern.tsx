@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ChunkyThumbnail } from "@/entities/pattern/catalog/chunky/ChunkyThumbnail";
 
 export const chunkyPattern: Pattern = {
   slug: "chunky",
@@ -26,6 +25,7 @@ export const chunkyPattern: Pattern = {
   tags: ["글자 스타일", "Chunky"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/chunky/ChunkyDemo").then((m) => m.ChunkyDemo),
-  Thumbnail: ChunkyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/chunky/ChunkyThumbnail").then((m) => m.ChunkyThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/chunky/ChunkyDemo.tsx?raw"),
 };

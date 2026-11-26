@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NpsScaleThumbnail } from "@/entities/pattern/catalog/nps-scale/NpsScaleThumbnail";
 
 export const npsScalePattern: Pattern = {
   slug: "nps-scale",
@@ -33,7 +32,10 @@ export const npsScalePattern: Pattern = {
   tags: [...BASE_TAGS, "radio", "fieldset", "Survey"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/nps-scale/NpsScaleDemo").then((m) => m.NpsScaleDemo),
-  Thumbnail: NpsScaleThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/nps-scale/NpsScaleThumbnail").then(
+      (m) => m.NpsScaleThumbnail,
+    ),
   sources: [
     {
       fileName: "NpsScale.tsx",

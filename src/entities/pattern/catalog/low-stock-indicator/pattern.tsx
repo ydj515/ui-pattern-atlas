@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LowStockIndicatorThumbnail } from "@/entities/pattern/catalog/low-stock-indicator/LowStockIndicatorThumbnail";
 
 export const lowStockIndicatorPattern: Pattern = {
   slug: "low-stock-indicator",
@@ -34,7 +33,10 @@ export const lowStockIndicatorPattern: Pattern = {
     import("@/entities/pattern/catalog/low-stock-indicator/LowStockIndicatorDemo").then(
       (m) => m.LowStockIndicatorDemo,
     ),
-  Thumbnail: LowStockIndicatorThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/low-stock-indicator/LowStockIndicatorThumbnail").then(
+      (m) => m.LowStockIndicatorThumbnail,
+    ),
   sources: [
     {
       fileName: "LowStockIndicator.tsx",

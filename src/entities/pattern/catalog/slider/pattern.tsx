@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SliderThumbnail } from "@/entities/pattern/catalog/slider/SliderThumbnail";
 
 export const sliderPattern: Pattern = {
   slug: "slider",
@@ -33,7 +32,8 @@ export const sliderPattern: Pattern = {
   tags: [...BASE_TAGS, "Native range", "aria-valuetext"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/slider/SliderDemo").then((m) => m.SliderDemo),
-  Thumbnail: SliderThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/slider/SliderThumbnail").then((m) => m.SliderThumbnail),
   sources: [
     {
       fileName: "Slider.tsx",

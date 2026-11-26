@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ErrorSummaryThumbnail } from "@/entities/pattern/catalog/error-summary/ErrorSummaryThumbnail";
 
 export const errorSummaryPattern: Pattern = {
   slug: "error-summary",
@@ -39,7 +38,10 @@ export const errorSummaryPattern: Pattern = {
     import("@/entities/pattern/catalog/error-summary/ErrorSummaryDemo").then(
       (m) => m.ErrorSummaryDemo,
     ),
-  Thumbnail: ErrorSummaryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/error-summary/ErrorSummaryThumbnail").then(
+      (m) => m.ErrorSummaryThumbnail,
+    ),
   sources: [
     {
       fileName: "ErrorSummary.tsx",

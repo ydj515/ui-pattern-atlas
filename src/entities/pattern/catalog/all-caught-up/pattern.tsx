@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AllCaughtUpThumbnail } from "@/entities/pattern/catalog/all-caught-up/AllCaughtUpThumbnail";
 
 export const allCaughtUpPattern: Pattern = {
   slug: "all-caught-up",
@@ -35,7 +34,10 @@ export const allCaughtUpPattern: Pattern = {
     import("@/entities/pattern/catalog/all-caught-up/AllCaughtUpDemo").then(
       (m) => m.AllCaughtUpDemo,
     ),
-  Thumbnail: AllCaughtUpThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/all-caught-up/AllCaughtUpThumbnail").then(
+      (m) => m.AllCaughtUpThumbnail,
+    ),
   sources: [
     {
       fileName: "AllCaughtUp.tsx",

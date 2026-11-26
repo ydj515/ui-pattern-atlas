@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { EditorialTypographyThumbnail } from "@/entities/pattern/catalog/editorial-typography/EditorialTypographyThumbnail";
 
 export const editorialTypographyPattern: Pattern = {
   slug: "editorial-typography",
@@ -28,7 +27,10 @@ export const editorialTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/editorial-typography/EditorialTypographyDemo").then(
       (m) => m.EditorialTypographyDemo,
     ),
-  Thumbnail: EditorialTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/editorial-typography/EditorialTypographyThumbnail").then(
+      (m) => m.EditorialTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/editorial-typography/EditorialTypographyDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ComicPopArtThumbnail } from "@/entities/pattern/catalog/comic-pop-art/ComicPopArtThumbnail";
 
 export const comicPopArtPattern: Pattern = {
   slug: "comic-pop-art",
@@ -32,6 +31,9 @@ export const comicPopArtPattern: Pattern = {
     import("@/entities/pattern/catalog/comic-pop-art/ComicPopArtDemo").then(
       (m) => m.ComicPopArtDemo,
     ),
-  Thumbnail: ComicPopArtThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/comic-pop-art/ComicPopArtThumbnail").then(
+      (m) => m.ComicPopArtThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/comic-pop-art/ComicPopArtDemo.tsx?raw"),
 };

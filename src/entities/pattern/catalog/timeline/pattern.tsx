@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TimelineThumbnail } from "@/entities/pattern/catalog/timeline/TimelineThumbnail";
 
 export const timelinePattern: Pattern = {
   slug: "timeline",
@@ -29,7 +28,10 @@ export const timelinePattern: Pattern = {
   tags: [...BASE_TAGS, "Ordered list", "aria-current"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/timeline/TimelineDemo").then((m) => m.TimelineDemo),
-  Thumbnail: TimelineThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/timeline/TimelineThumbnail").then(
+      (m) => m.TimelineThumbnail,
+    ),
   sources: [
     {
       fileName: "Timeline.tsx",

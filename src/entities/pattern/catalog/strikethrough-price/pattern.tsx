@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StrikethroughPriceThumbnail } from "@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceThumbnail";
 
 export const strikethroughPricePattern: Pattern = {
   slug: "strikethrough-price",
@@ -28,7 +27,10 @@ export const strikethroughPricePattern: Pattern = {
     import("@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceDemo").then(
       (m) => m.StrikethroughPriceDemo,
     ),
-  Thumbnail: StrikethroughPriceThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/strikethrough-price/StrikethroughPriceThumbnail").then(
+      (m) => m.StrikethroughPriceThumbnail,
+    ),
   sources: [
     {
       fileName: "StrikethroughPrice.tsx",

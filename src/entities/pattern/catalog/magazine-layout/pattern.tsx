@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MagazineLayoutThumbnail } from "@/entities/pattern/catalog/magazine-layout/MagazineLayoutThumbnail";
 
 export const magazineLayoutPattern: Pattern = {
   slug: "magazine-layout",
@@ -31,7 +30,10 @@ export const magazineLayoutPattern: Pattern = {
     import("@/entities/pattern/catalog/magazine-layout/MagazineLayoutDemo").then(
       (m) => m.MagazineLayoutDemo,
     ),
-  Thumbnail: MagazineLayoutThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/magazine-layout/MagazineLayoutThumbnail").then(
+      (m) => m.MagazineLayoutThumbnail,
+    ),
   sources: [
     {
       fileName: "MagazineLayout.tsx",

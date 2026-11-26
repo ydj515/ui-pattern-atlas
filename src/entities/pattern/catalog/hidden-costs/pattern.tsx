@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { HiddenCostsThumbnail } from "@/entities/pattern/catalog/hidden-costs/HiddenCostsThumbnail";
 
 export const hiddenCostsPattern: Pattern = {
   slug: "hidden-costs",
@@ -40,6 +39,9 @@ export const hiddenCostsPattern: Pattern = {
     import("@/entities/pattern/catalog/hidden-costs/HiddenCostsDemo").then(
       (m) => m.HiddenCostsDemo,
     ),
-  Thumbnail: HiddenCostsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hidden-costs/HiddenCostsThumbnail").then(
+      (m) => m.HiddenCostsThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/hidden-costs/HiddenCostsDemo.tsx?raw"),
 };

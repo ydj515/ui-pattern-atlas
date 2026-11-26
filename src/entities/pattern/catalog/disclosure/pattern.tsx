@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DisclosureThumbnail } from "@/entities/pattern/catalog/disclosure/DisclosureThumbnail";
 
 export const disclosurePattern: Pattern = {
   slug: "disclosure",
@@ -33,7 +32,10 @@ export const disclosurePattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "aria-expanded"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/disclosure/DisclosureDemo").then((m) => m.DisclosureDemo),
-  Thumbnail: DisclosureThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/disclosure/DisclosureThumbnail").then(
+      (m) => m.DisclosureThumbnail,
+    ),
   sources: [
     {
       fileName: "Disclosure.tsx",

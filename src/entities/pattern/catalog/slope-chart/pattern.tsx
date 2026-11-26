@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SlopeChartThumbnail } from "@/entities/pattern/catalog/slope-chart/SlopeChartThumbnail";
 
 export const slopeChartPattern: Pattern = {
   slug: "slope-chart",
@@ -34,7 +33,10 @@ export const slopeChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "sr-only"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/slope-chart/SlopeChartDemo").then((m) => m.SlopeChartDemo),
-  Thumbnail: SlopeChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/slope-chart/SlopeChartThumbnail").then(
+      (m) => m.SlopeChartThumbnail,
+    ),
   sources: [
     {
       fileName: "SlopeChart.tsx",

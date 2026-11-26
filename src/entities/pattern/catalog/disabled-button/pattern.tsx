@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DisabledButtonThumbnail } from "@/entities/pattern/catalog/disabled-button/DisabledButtonThumbnail";
 
 export const disabledButtonPattern: Pattern = {
   slug: "disabled-button",
@@ -35,7 +34,10 @@ export const disabledButtonPattern: Pattern = {
     import("@/entities/pattern/catalog/disabled-button/DisabledButtonDemo").then(
       (m) => m.DisabledButtonDemo,
     ),
-  Thumbnail: DisabledButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/disabled-button/DisabledButtonThumbnail").then(
+      (m) => m.DisabledButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "ReasonButton.tsx",

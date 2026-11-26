@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SetupChecklistThumbnail } from "@/entities/pattern/catalog/setup-checklist/SetupChecklistThumbnail";
 
 export const setupChecklistPattern: Pattern = {
   slug: "setup-checklist",
@@ -35,7 +34,10 @@ export const setupChecklistPattern: Pattern = {
     import("@/entities/pattern/catalog/setup-checklist/SetupChecklistDemo").then(
       (m) => m.SetupChecklistDemo,
     ),
-  Thumbnail: SetupChecklistThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/setup-checklist/SetupChecklistThumbnail").then(
+      (m) => m.SetupChecklistThumbnail,
+    ),
   sources: [
     {
       fileName: "SetupChecklist.tsx",

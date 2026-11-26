@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { HandLetteringThumbnail } from "@/entities/pattern/catalog/hand-lettering/HandLetteringThumbnail";
 
 export const handLetteringPattern: Pattern = {
   slug: "hand-lettering",
@@ -32,7 +31,10 @@ export const handLetteringPattern: Pattern = {
     import("@/entities/pattern/catalog/hand-lettering/HandLetteringDemo").then(
       (m) => m.HandLetteringDemo,
     ),
-  Thumbnail: HandLetteringThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hand-lettering/HandLetteringThumbnail").then(
+      (m) => m.HandLetteringThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/hand-lettering/HandLetteringDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ErrorStateThumbnail } from "@/entities/pattern/catalog/error-state/ErrorStateThumbnail";
 
 export const errorStatePattern: Pattern = {
   slug: "error-state",
@@ -23,7 +22,10 @@ export const errorStatePattern: Pattern = {
   tags: BASE_TAGS,
   loadPreview: () =>
     import("@/entities/pattern/catalog/error-state/ErrorStateDemo").then((m) => m.ErrorStateDemo),
-  Thumbnail: ErrorStateThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/error-state/ErrorStateThumbnail").then(
+      (m) => m.ErrorStateThumbnail,
+    ),
   sources: [
     {
       fileName: "ErrorState.tsx",

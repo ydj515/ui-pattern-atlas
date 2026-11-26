@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CalendarThumbnail } from "@/entities/pattern/catalog/calendar/CalendarThumbnail";
 
 export const calendarPattern: Pattern = {
   slug: "calendar",
@@ -30,7 +29,10 @@ export const calendarPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-current", "aria-live"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/calendar/CalendarDemo").then((m) => m.CalendarDemo),
-  Thumbnail: CalendarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/calendar/CalendarThumbnail").then(
+      (m) => m.CalendarThumbnail,
+    ),
   sources: [
     {
       fileName: "MonthCalendar.tsx",

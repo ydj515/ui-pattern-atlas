@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TextareaThumbnail } from "@/entities/pattern/catalog/textarea/TextareaThumbnail";
 
 export const textareaPattern: Pattern = {
   slug: "textarea",
@@ -30,7 +29,10 @@ export const textareaPattern: Pattern = {
   tags: [...BASE_TAGS, "Forms", "Character count"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/textarea/TextareaDemo").then((m) => m.TextareaDemo),
-  Thumbnail: TextareaThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/textarea/TextareaThumbnail").then(
+      (m) => m.TextareaThumbnail,
+    ),
   sources: [
     {
       fileName: "AutoTextarea.tsx",

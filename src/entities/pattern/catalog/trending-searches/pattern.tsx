@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TrendingSearchesThumbnail } from "@/entities/pattern/catalog/trending-searches/TrendingSearchesThumbnail";
 
 export const trendingSearchesPattern: Pattern = {
   slug: "trending-searches",
@@ -38,7 +37,10 @@ export const trendingSearchesPattern: Pattern = {
     import("@/entities/pattern/catalog/trending-searches/TrendingSearchesDemo").then(
       (m) => m.TrendingSearchesDemo,
     ),
-  Thumbnail: TrendingSearchesThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/trending-searches/TrendingSearchesThumbnail").then(
+      (m) => m.TrendingSearchesThumbnail,
+    ),
   sources: [
     {
       fileName: "TrendingSearches.tsx",

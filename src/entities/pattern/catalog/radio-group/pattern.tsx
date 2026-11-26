@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RadioGroupThumbnail } from "@/entities/pattern/catalog/radio-group/RadioGroupThumbnail";
 
 export const radioGroupPattern: Pattern = {
   slug: "radio-group",
@@ -40,7 +39,10 @@ export const radioGroupPattern: Pattern = {
   tags: [...BASE_TAGS, "Native radio", "fieldset"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/radio-group/RadioGroupDemo").then((m) => m.RadioGroupDemo),
-  Thumbnail: RadioGroupThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/radio-group/RadioGroupThumbnail").then(
+      (m) => m.RadioGroupThumbnail,
+    ),
   sources: [
     {
       fileName: "RadioGroup.tsx",

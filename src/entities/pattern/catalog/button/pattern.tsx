@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ButtonThumbnail } from "@/entities/pattern/catalog/button/ButtonThumbnail";
 
 export const buttonPattern: Pattern = {
   slug: "button",
@@ -33,7 +32,8 @@ export const buttonPattern: Pattern = {
   tags: [...BASE_TAGS, "focus-visible", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/button/ButtonDemo").then((m) => m.ButtonDemo),
-  Thumbnail: ButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/button/ButtonThumbnail").then((m) => m.ButtonThumbnail),
   sources: [
     {
       fileName: "Button.tsx",

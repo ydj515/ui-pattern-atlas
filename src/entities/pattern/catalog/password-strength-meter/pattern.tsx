@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PasswordStrengthMeterThumbnail } from "@/entities/pattern/catalog/password-strength-meter/PasswordStrengthMeterThumbnail";
 
 export const passwordStrengthMeterPattern: Pattern = {
   slug: "password-strength-meter",
@@ -34,7 +33,10 @@ export const passwordStrengthMeterPattern: Pattern = {
     import("@/entities/pattern/catalog/password-strength-meter/PasswordStrengthMeterDemo").then(
       (m) => m.PasswordStrengthMeterDemo,
     ),
-  Thumbnail: PasswordStrengthMeterThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/password-strength-meter/PasswordStrengthMeterThumbnail").then(
+      (m) => m.PasswordStrengthMeterThumbnail,
+    ),
   sources: [
     {
       fileName: "PasswordStrengthMeter.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PromptInputThumbnail } from "@/entities/pattern/catalog/prompt-input/PromptInputThumbnail";
 
 export const promptInputPattern: Pattern = {
   slug: "prompt-input",
@@ -35,7 +34,10 @@ export const promptInputPattern: Pattern = {
     import("@/entities/pattern/catalog/prompt-input/PromptInputDemo").then(
       (m) => m.PromptInputDemo,
     ),
-  Thumbnail: PromptInputThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/prompt-input/PromptInputThumbnail").then(
+      (m) => m.PromptInputThumbnail,
+    ),
   sources: [
     {
       fileName: "PromptInput.tsx",

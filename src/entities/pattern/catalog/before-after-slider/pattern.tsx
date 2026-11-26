@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BeforeAfterSliderThumbnail } from "@/entities/pattern/catalog/before-after-slider/BeforeAfterSliderThumbnail";
 
 export const beforeAfterSliderPattern: Pattern = {
   slug: "before-after-slider",
@@ -32,7 +31,10 @@ export const beforeAfterSliderPattern: Pattern = {
     import("@/entities/pattern/catalog/before-after-slider/BeforeAfterSliderDemo").then(
       (m) => m.BeforeAfterSliderDemo,
     ),
-  Thumbnail: BeforeAfterSliderThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/before-after-slider/BeforeAfterSliderThumbnail").then(
+      (m) => m.BeforeAfterSliderThumbnail,
+    ),
   sources: [
     {
       fileName: "BeforeAfterSlider.tsx",

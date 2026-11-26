@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ConfirmationDialogThumbnail } from "@/entities/pattern/catalog/confirmation-dialog/ConfirmationDialogThumbnail";
 
 export const confirmationDialogPattern: Pattern = {
   slug: "confirmation-dialog",
@@ -44,7 +43,10 @@ export const confirmationDialogPattern: Pattern = {
     import("@/entities/pattern/catalog/confirmation-dialog/ConfirmationDialogDemo").then(
       (m) => m.ConfirmationDialogDemo,
     ),
-  Thumbnail: ConfirmationDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/confirmation-dialog/ConfirmationDialogThumbnail").then(
+      (m) => m.ConfirmationDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "ConfirmationDialog.tsx",

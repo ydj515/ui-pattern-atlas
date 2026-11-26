@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CopyButtonThumbnail } from "@/entities/pattern/catalog/copy-button/CopyButtonThumbnail";
 
 export const copyButtonPattern: Pattern = {
   slug: "copy-button",
@@ -32,7 +31,10 @@ export const copyButtonPattern: Pattern = {
   tags: [...BASE_TAGS, "Clipboard API", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/copy-button/CopyButtonDemo").then((m) => m.CopyButtonDemo),
-  Thumbnail: CopyButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/copy-button/CopyButtonThumbnail").then(
+      (m) => m.CopyButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "CopyButton.tsx",

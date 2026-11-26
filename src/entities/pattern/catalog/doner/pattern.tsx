@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { DonerThumbnail } from "@/entities/pattern/catalog/doner/DonerThumbnail";
 
 export const donerPattern: Pattern = {
   slug: "doner",
@@ -33,6 +32,7 @@ export const donerPattern: Pattern = {
   ],
   tags: ["아이콘 이름", "정렬"],
   loadPreview: () => import("@/entities/pattern/catalog/doner/DonerDemo").then((m) => m.DonerDemo),
-  Thumbnail: DonerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/doner/DonerThumbnail").then((m) => m.DonerThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/doner/DonerDemo.tsx?raw"),
 };

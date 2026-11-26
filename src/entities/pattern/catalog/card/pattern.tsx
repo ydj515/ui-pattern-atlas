@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CardThumbnail } from "@/entities/pattern/catalog/card/CardThumbnail";
 
 export const cardPattern: Pattern = {
   slug: "card",
@@ -32,7 +31,8 @@ export const cardPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "Stretched link", "article"],
   loadPreview: () => import("@/entities/pattern/catalog/card/CardDemo").then((m) => m.CardDemo),
-  Thumbnail: CardThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/card/CardThumbnail").then((m) => m.CardThumbnail),
   sources: [
     {
       fileName: "Card.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { FramingEffectThumbnail } from "@/entities/pattern/catalog/framing-effect/FramingEffectThumbnail";
 
 export const framingEffectPattern: Pattern = {
   slug: "framing-effect",
@@ -38,7 +37,10 @@ export const framingEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/framing-effect/FramingEffectDemo").then(
       (m) => m.FramingEffectDemo,
     ),
-  Thumbnail: FramingEffectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/framing-effect/FramingEffectThumbnail").then(
+      (m) => m.FramingEffectThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/framing-effect/FramingEffectDemo.tsx?raw"),
 };

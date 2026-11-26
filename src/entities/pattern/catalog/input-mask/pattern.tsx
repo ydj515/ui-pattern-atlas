@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { InputMaskThumbnail } from "@/entities/pattern/catalog/input-mask/InputMaskThumbnail";
 
 export const inputMaskPattern: Pattern = {
   slug: "input-mask",
@@ -33,7 +32,10 @@ export const inputMaskPattern: Pattern = {
   tags: [...BASE_TAGS, "inputmode", "autocomplete"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/input-mask/InputMaskDemo").then((m) => m.InputMaskDemo),
-  Thumbnail: InputMaskThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/input-mask/InputMaskThumbnail").then(
+      (m) => m.InputMaskThumbnail,
+    ),
   sources: [
     {
       fileName: "MaskedInput.tsx",

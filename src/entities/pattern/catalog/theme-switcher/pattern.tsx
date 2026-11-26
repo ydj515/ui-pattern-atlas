@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ThemeSwitcherThumbnail } from "@/entities/pattern/catalog/theme-switcher/ThemeSwitcherThumbnail";
 
 export const themeSwitcherPattern: Pattern = {
   slug: "theme-switcher",
@@ -34,7 +33,10 @@ export const themeSwitcherPattern: Pattern = {
     import("@/entities/pattern/catalog/theme-switcher/ThemeSwitcherDemo").then(
       (m) => m.ThemeSwitcherDemo,
     ),
-  Thumbnail: ThemeSwitcherThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/theme-switcher/ThemeSwitcherThumbnail").then(
+      (m) => m.ThemeSwitcherThumbnail,
+    ),
   sources: [
     {
       fileName: "ThemeSwitcher.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PricingPlanComparisonThumbnail } from "@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonThumbnail";
 
 export const pricingPlanComparisonPattern: Pattern = {
   slug: "pricing-plan-comparison",
@@ -28,7 +27,10 @@ export const pricingPlanComparisonPattern: Pattern = {
     import("@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonDemo").then(
       (m) => m.PricingPlanComparisonDemo,
     ),
-  Thumbnail: PricingPlanComparisonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pricing-plan-comparison/PricingPlanComparisonThumbnail").then(
+      (m) => m.PricingPlanComparisonThumbnail,
+    ),
   sources: [
     {
       fileName: "PricingPlanComparison.tsx",

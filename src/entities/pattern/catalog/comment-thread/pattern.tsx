@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CommentThreadThumbnail } from "@/entities/pattern/catalog/comment-thread/CommentThreadThumbnail";
 
 export const commentThreadPattern: Pattern = {
   slug: "comment-thread",
@@ -35,7 +34,10 @@ export const commentThreadPattern: Pattern = {
     import("@/entities/pattern/catalog/comment-thread/CommentThreadDemo").then(
       (m) => m.CommentThreadDemo,
     ),
-  Thumbnail: CommentThreadThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/comment-thread/CommentThreadThumbnail").then(
+      (m) => m.CommentThreadThumbnail,
+    ),
   sources: [
     {
       fileName: "CommentThread.tsx",

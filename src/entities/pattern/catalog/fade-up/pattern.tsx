@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FadeUpThumbnail } from "@/entities/pattern/catalog/fade-up/FadeUpThumbnail";
 
 export const fadeUpPattern: Pattern = {
   slug: "fade-up",
@@ -33,7 +32,8 @@ export const fadeUpPattern: Pattern = {
   tags: [...BASE_TAGS, "@starting-style", "CSS variables", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/fade-up/FadeUpDemo").then((m) => m.FadeUpDemo),
-  Thumbnail: FadeUpThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/fade-up/FadeUpThumbnail").then((m) => m.FadeUpThumbnail),
   sources: [
     {
       fileName: "FadeUp.tsx",

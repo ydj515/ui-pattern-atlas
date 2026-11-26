@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { UsabilityTestThumbnail } from "@/entities/pattern/catalog/usability-test/UsabilityTestThumbnail";
 
 export const usabilityTestPattern: Pattern = {
   slug: "usability-test",
@@ -39,7 +38,10 @@ export const usabilityTestPattern: Pattern = {
     import("@/entities/pattern/catalog/usability-test/UsabilityTestDemo").then(
       (m) => m.UsabilityTestDemo,
     ),
-  Thumbnail: UsabilityTestThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/usability-test/UsabilityTestThumbnail").then(
+      (m) => m.UsabilityTestThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/usability-test/UsabilityTestDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BlurInThumbnail } from "@/entities/pattern/catalog/blur-in/BlurInThumbnail";
 
 export const blurInPattern: Pattern = {
   slug: "blur-in",
@@ -33,7 +32,8 @@ export const blurInPattern: Pattern = {
   tags: [...BASE_TAGS, "@starting-style", "CSS filter", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/blur-in/BlurInDemo").then((m) => m.BlurInDemo),
-  Thumbnail: BlurInThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/blur-in/BlurInThumbnail").then((m) => m.BlurInThumbnail),
   sources: [
     {
       fileName: "BlurIn.tsx",

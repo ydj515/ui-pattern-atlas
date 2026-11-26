@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AccordionThumbnail } from "@/entities/pattern/catalog/accordion/AccordionThumbnail";
 
 export const accordionPattern: Pattern = {
   slug: "accordion",
@@ -35,7 +34,10 @@ export const accordionPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/accordion/AccordionDemo").then((m) => m.AccordionDemo),
-  Thumbnail: AccordionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/accordion/AccordionThumbnail").then(
+      (m) => m.AccordionThumbnail,
+    ),
   sources: [
     {
       fileName: "Accordion.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ListThumbnail } from "@/entities/pattern/catalog/list/ListThumbnail";
 
 export const listPattern: Pattern = {
   slug: "list",
@@ -32,7 +31,8 @@ export const listPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "List", "Button"],
   loadPreview: () => import("@/entities/pattern/catalog/list/ListDemo").then((m) => m.ListDemo),
-  Thumbnail: ListThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/list/ListThumbnail").then((m) => m.ListThumbnail),
   sources: [
     {
       fileName: "List.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SplashScreenThumbnail } from "@/entities/pattern/catalog/splash-screen/SplashScreenThumbnail";
 
 export const splashScreenPattern: Pattern = {
   slug: "splash-screen",
@@ -35,7 +34,10 @@ export const splashScreenPattern: Pattern = {
     import("@/entities/pattern/catalog/splash-screen/SplashScreenDemo").then(
       (m) => m.SplashScreenDemo,
     ),
-  Thumbnail: SplashScreenThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/splash-screen/SplashScreenThumbnail").then(
+      (m) => m.SplashScreenThumbnail,
+    ),
   sources: [
     {
       fileName: "SplashScreen.tsx",

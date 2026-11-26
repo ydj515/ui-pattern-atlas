@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TabsThumbnail } from "@/entities/pattern/catalog/tabs/TabsThumbnail";
 
 export const tabsPattern: Pattern = {
   slug: "tabs",
@@ -36,7 +35,8 @@ export const tabsPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
   loadPreview: () => import("@/entities/pattern/catalog/tabs/TabsDemo").then((m) => m.TabsDemo),
-  Thumbnail: TabsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tabs/TabsThumbnail").then((m) => m.TabsThumbnail),
   sources: [
     {
       fileName: "Tabs.tsx",

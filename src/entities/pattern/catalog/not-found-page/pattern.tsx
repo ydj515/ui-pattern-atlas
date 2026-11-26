@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NotFoundPageThumbnail } from "@/entities/pattern/catalog/not-found-page/NotFoundPageThumbnail";
 
 export const notFoundPagePattern: Pattern = {
   slug: "not-found-page",
@@ -37,7 +36,10 @@ export const notFoundPagePattern: Pattern = {
     import("@/entities/pattern/catalog/not-found-page/NotFoundPageDemo").then(
       (m) => m.NotFoundPageDemo,
     ),
-  Thumbnail: NotFoundPageThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/not-found-page/NotFoundPageThumbnail").then(
+      (m) => m.NotFoundPageThumbnail,
+    ),
   sources: [
     {
       fileName: "NotFoundPage.tsx",

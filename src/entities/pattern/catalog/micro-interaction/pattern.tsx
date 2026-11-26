@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MicroToggleThumbnail } from "@/entities/pattern/catalog/micro-interaction/MicroToggleThumbnail";
 
 export const microInteractionPattern: Pattern = {
   slug: "micro-interaction",
@@ -35,7 +34,10 @@ export const microInteractionPattern: Pattern = {
     import("@/entities/pattern/catalog/micro-interaction/MicroToggleDemo").then(
       (m) => m.MicroToggleDemo,
     ),
-  Thumbnail: MicroToggleThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/micro-interaction/MicroToggleThumbnail").then(
+      (m) => m.MicroToggleThumbnail,
+    ),
   sources: [
     {
       fileName: "MicroToggle.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { NaggingThumbnail } from "@/entities/pattern/catalog/nagging/NaggingThumbnail";
 
 export const naggingPattern: Pattern = {
   slug: "nagging",
@@ -34,6 +33,7 @@ export const naggingPattern: Pattern = {
   tags: ["다크 패턴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/nagging/NaggingDemo").then((m) => m.NaggingDemo),
-  Thumbnail: NaggingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/nagging/NaggingThumbnail").then((m) => m.NaggingThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/nagging/NaggingDemo.tsx?raw"),
 };

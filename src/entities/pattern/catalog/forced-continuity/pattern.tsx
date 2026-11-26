@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ForcedContinuityThumbnail } from "@/entities/pattern/catalog/forced-continuity/ForcedContinuityThumbnail";
 
 export const forcedContinuityPattern: Pattern = {
   slug: "forced-continuity",
@@ -36,7 +35,10 @@ export const forcedContinuityPattern: Pattern = {
     import("@/entities/pattern/catalog/forced-continuity/ForcedContinuityDemo").then(
       (m) => m.ForcedContinuityDemo,
     ),
-  Thumbnail: ForcedContinuityThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/forced-continuity/ForcedContinuityThumbnail").then(
+      (m) => m.ForcedContinuityThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/forced-continuity/ForcedContinuityDemo.tsx?raw"),
 };

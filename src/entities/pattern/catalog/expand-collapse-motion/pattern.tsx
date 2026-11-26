@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ExpandCardThumbnail } from "@/entities/pattern/catalog/expand-collapse-motion/ExpandCardThumbnail";
 
 export const expandCollapseMotionPattern: Pattern = {
   slug: "expand-collapse-motion",
@@ -35,7 +34,10 @@ export const expandCollapseMotionPattern: Pattern = {
     import("@/entities/pattern/catalog/expand-collapse-motion/ExpandCardDemo").then(
       (m) => m.ExpandCardDemo,
     ),
-  Thumbnail: ExpandCardThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/expand-collapse-motion/ExpandCardThumbnail").then(
+      (m) => m.ExpandCardThumbnail,
+    ),
   sources: [
     {
       fileName: "ExpandCard.tsx",

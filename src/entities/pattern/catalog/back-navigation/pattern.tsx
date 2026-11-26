@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BackNavigationThumbnail } from "@/entities/pattern/catalog/back-navigation/BackNavigationThumbnail";
 
 export const backNavigationPattern: Pattern = {
   slug: "back-navigation",
@@ -32,7 +31,10 @@ export const backNavigationPattern: Pattern = {
     import("@/entities/pattern/catalog/back-navigation/BackNavigationDemo").then(
       (m) => m.BackNavigationDemo,
     ),
-  Thumbnail: BackNavigationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/back-navigation/BackNavigationThumbnail").then(
+      (m) => m.BackNavigationThumbnail,
+    ),
   sources: [
     {
       fileName: "BackNavigation.tsx",

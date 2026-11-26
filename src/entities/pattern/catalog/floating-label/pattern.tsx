@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FloatingLabelThumbnail } from "@/entities/pattern/catalog/floating-label/FloatingLabelThumbnail";
 
 export const floatingLabelPattern: Pattern = {
   slug: "floating-label",
@@ -34,7 +33,10 @@ export const floatingLabelPattern: Pattern = {
     import("@/entities/pattern/catalog/floating-label/FloatingLabelDemo").then(
       (m) => m.FloatingLabelDemo,
     ),
-  Thumbnail: FloatingLabelThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/floating-label/FloatingLabelThumbnail").then(
+      (m) => m.FloatingLabelThumbnail,
+    ),
   sources: [
     {
       fileName: "FloatingLabelInput.tsx",

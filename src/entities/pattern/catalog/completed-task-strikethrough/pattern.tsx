@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TaskItemThumbnail } from "@/entities/pattern/catalog/completed-task-strikethrough/TaskItemThumbnail";
 
 export const completedTaskStrikethroughPattern: Pattern = {
   slug: "completed-task-strikethrough",
@@ -35,7 +34,10 @@ export const completedTaskStrikethroughPattern: Pattern = {
     import("@/entities/pattern/catalog/completed-task-strikethrough/TaskItemDemo").then(
       (m) => m.TaskItemDemo,
     ),
-  Thumbnail: TaskItemThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/completed-task-strikethrough/TaskItemThumbnail").then(
+      (m) => m.TaskItemThumbnail,
+    ),
   sources: [
     {
       fileName: "TaskItem.tsx",

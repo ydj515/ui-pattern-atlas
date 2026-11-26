@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MobileMenuThumbnail } from "@/entities/pattern/catalog/mobile-menu/MobileMenuThumbnail";
 
 export const mobileMenuPattern: Pattern = {
   slug: "mobile-menu",
@@ -33,7 +32,10 @@ export const mobileMenuPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-expanded", "Focus management"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/mobile-menu/MobileMenuDemo").then((m) => m.MobileMenuDemo),
-  Thumbnail: MobileMenuThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/mobile-menu/MobileMenuThumbnail").then(
+      (m) => m.MobileMenuThumbnail,
+    ),
   sources: [
     {
       fileName: "MobileMenu.tsx",

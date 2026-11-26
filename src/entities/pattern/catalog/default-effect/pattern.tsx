@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { DefaultEffectThumbnail } from "@/entities/pattern/catalog/default-effect/DefaultEffectThumbnail";
 
 export const defaultEffectPattern: Pattern = {
   slug: "default-effect",
@@ -36,7 +35,10 @@ export const defaultEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/default-effect/DefaultEffectDemo").then(
       (m) => m.DefaultEffectDemo,
     ),
-  Thumbnail: DefaultEffectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/default-effect/DefaultEffectThumbnail").then(
+      (m) => m.DefaultEffectThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/default-effect/DefaultEffectDemo.tsx?raw"),
 };

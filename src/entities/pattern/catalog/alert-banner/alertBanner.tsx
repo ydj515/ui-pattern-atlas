@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AlertBannerThumbnail } from "@/entities/pattern/catalog/alert-banner/AlertBannerThumbnail";
 
 export const alertBannerPattern: Pattern = {
   slug: "alert-banner",
@@ -36,7 +35,10 @@ export const alertBannerPattern: Pattern = {
     import("@/entities/pattern/catalog/alert-banner/AlertBannerDemo").then(
       (m) => m.AlertBannerDemo,
     ),
-  Thumbnail: AlertBannerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/alert-banner/AlertBannerThumbnail").then(
+      (m) => m.AlertBannerThumbnail,
+    ),
   sources: [
     {
       fileName: "AlertBanner.tsx",

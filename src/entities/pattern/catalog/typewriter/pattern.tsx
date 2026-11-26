@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TypewriterThumbnail } from "@/entities/pattern/catalog/typewriter/TypewriterThumbnail";
 
 export const typewriterPattern: Pattern = {
   slug: "typewriter",
@@ -37,7 +36,10 @@ export const typewriterPattern: Pattern = {
   tags: [...BASE_TAGS, "setInterval", "sr-only", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/typewriter/TypewriterDemo").then((m) => m.TypewriterDemo),
-  Thumbnail: TypewriterThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/typewriter/TypewriterThumbnail").then(
+      (m) => m.TypewriterThumbnail,
+    ),
   sources: [
     {
       fileName: "Typewriter.tsx",

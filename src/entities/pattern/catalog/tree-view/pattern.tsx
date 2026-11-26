@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TreeViewThumbnail } from "@/entities/pattern/catalog/tree-view/TreeViewThumbnail";
 
 export const treeViewPattern: Pattern = {
   slug: "tree-view",
@@ -33,7 +32,10 @@ export const treeViewPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/tree-view/TreeViewDemo").then((m) => m.TreeViewDemo),
-  Thumbnail: TreeViewThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tree-view/TreeViewThumbnail").then(
+      (m) => m.TreeViewThumbnail,
+    ),
   sources: [
     {
       fileName: "TreeView.tsx",

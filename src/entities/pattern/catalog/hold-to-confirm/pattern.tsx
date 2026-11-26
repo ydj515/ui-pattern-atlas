@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HoldToConfirmThumbnail } from "@/entities/pattern/catalog/hold-to-confirm/HoldToConfirmThumbnail";
 
 export const holdToConfirmPattern: Pattern = {
   slug: "hold-to-confirm",
@@ -35,7 +34,10 @@ export const holdToConfirmPattern: Pattern = {
     import("@/entities/pattern/catalog/hold-to-confirm/HoldToConfirmDemo").then(
       (m) => m.HoldToConfirmDemo,
     ),
-  Thumbnail: HoldToConfirmThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hold-to-confirm/HoldToConfirmThumbnail").then(
+      (m) => m.HoldToConfirmThumbnail,
+    ),
   sources: [
     {
       fileName: "HoldToConfirm.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SidebarLayoutThumbnail } from "@/entities/pattern/catalog/sidebar-layout/SidebarLayoutThumbnail";
 
 export const sidebarLayoutPattern: Pattern = {
   slug: "sidebar-layout",
@@ -35,7 +34,10 @@ export const sidebarLayoutPattern: Pattern = {
     import("@/entities/pattern/catalog/sidebar-layout/SidebarLayoutDemo").then(
       (m) => m.SidebarLayoutDemo,
     ),
-  Thumbnail: SidebarLayoutThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sidebar-layout/SidebarLayoutThumbnail").then(
+      (m) => m.SidebarLayoutThumbnail,
+    ),
   sources: [
     {
       fileName: "SidebarLayout.tsx",

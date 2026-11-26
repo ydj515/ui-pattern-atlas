@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { GlassmorphismThumbnail } from "@/entities/pattern/catalog/glassmorphism/GlassmorphismThumbnail";
 
 export const glassmorphismPattern: Pattern = {
   slug: "glassmorphism",
@@ -38,7 +37,10 @@ export const glassmorphismPattern: Pattern = {
     import("@/entities/pattern/catalog/glassmorphism/GlassmorphismDemo").then(
       (m) => m.GlassmorphismDemo,
     ),
-  Thumbnail: GlassmorphismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/glassmorphism/GlassmorphismThumbnail").then(
+      (m) => m.GlassmorphismThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/glassmorphism/GlassmorphismDemo.tsx?raw"),
 };

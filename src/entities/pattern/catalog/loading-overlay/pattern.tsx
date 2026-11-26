@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LoadingOverlayThumbnail } from "@/entities/pattern/catalog/loading-overlay/LoadingOverlayThumbnail";
 
 export const loadingOverlayPattern: Pattern = {
   slug: "loading-overlay",
@@ -35,7 +34,10 @@ export const loadingOverlayPattern: Pattern = {
     import("@/entities/pattern/catalog/loading-overlay/LoadingOverlayDemo").then(
       (m) => m.LoadingOverlayDemo,
     ),
-  Thumbnail: LoadingOverlayThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/loading-overlay/LoadingOverlayThumbnail").then(
+      (m) => m.LoadingOverlayThumbnail,
+    ),
   sources: [
     {
       fileName: "LoadingOverlay.tsx",

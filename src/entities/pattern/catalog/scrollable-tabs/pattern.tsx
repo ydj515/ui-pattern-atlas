@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ScrollableTabsThumbnail } from "@/entities/pattern/catalog/scrollable-tabs/ScrollableTabsThumbnail";
 
 export const scrollableTabsPattern: Pattern = {
   slug: "scrollable-tabs",
@@ -36,7 +35,10 @@ export const scrollableTabsPattern: Pattern = {
     import("@/entities/pattern/catalog/scrollable-tabs/ScrollableTabsDemo").then(
       (m) => m.ScrollableTabsDemo,
     ),
-  Thumbnail: ScrollableTabsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scrollable-tabs/ScrollableTabsThumbnail").then(
+      (m) => m.ScrollableTabsThumbnail,
+    ),
   sources: [
     {
       fileName: "ScrollableTabs.tsx",

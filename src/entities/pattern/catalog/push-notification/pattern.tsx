@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PushNotificationThumbnail } from "@/entities/pattern/catalog/push-notification/PushNotificationThumbnail";
 
 export const pushNotificationPattern: Pattern = {
   slug: "push-notification",
@@ -39,7 +38,10 @@ export const pushNotificationPattern: Pattern = {
     import("@/entities/pattern/catalog/push-notification/PushNotificationDemo").then(
       (m) => m.PushNotificationDemo,
     ),
-  Thumbnail: PushNotificationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/push-notification/PushNotificationThumbnail").then(
+      (m) => m.PushNotificationThumbnail,
+    ),
   sources: [
     {
       fileName: "PushNotification.tsx",

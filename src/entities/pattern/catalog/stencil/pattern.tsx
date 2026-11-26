@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { StencilThumbnail } from "@/entities/pattern/catalog/stencil/StencilThumbnail";
 
 export const stencilPattern: Pattern = {
   slug: "stencil",
@@ -26,6 +25,7 @@ export const stencilPattern: Pattern = {
   tags: ["글자 스타일", "Stencil"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/stencil/StencilDemo").then((m) => m.StencilDemo),
-  Thumbnail: StencilThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stencil/StencilThumbnail").then((m) => m.StencilThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/stencil/StencilDemo.tsx?raw"),
 };

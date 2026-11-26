@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DonutChartThumbnail } from "@/entities/pattern/catalog/donut-chart/DonutChartThumbnail";
 
 export const donutChartPattern: Pattern = {
   slug: "donut-chart",
@@ -36,7 +35,10 @@ export const donutChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "stroke-dasharray", "button"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/donut-chart/DonutChartDemo").then((m) => m.DonutChartDemo),
-  Thumbnail: DonutChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/donut-chart/DonutChartThumbnail").then(
+      (m) => m.DonutChartThumbnail,
+    ),
   sources: [
     {
       fileName: "DonutChart.tsx",

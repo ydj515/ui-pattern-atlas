@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { FunnelAnalysisThumbnail } from "@/entities/pattern/catalog/funnel-analysis/FunnelAnalysisThumbnail";
 
 export const funnelAnalysisPattern: Pattern = {
   slug: "funnel-analysis",
@@ -35,7 +34,10 @@ export const funnelAnalysisPattern: Pattern = {
     import("@/entities/pattern/catalog/funnel-analysis/FunnelAnalysisDemo").then(
       (m) => m.FunnelAnalysisDemo,
     ),
-  Thumbnail: FunnelAnalysisThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/funnel-analysis/FunnelAnalysisThumbnail").then(
+      (m) => m.FunnelAnalysisThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/funnel-analysis/FunnelAnalysisDemo.tsx?raw"),
 };

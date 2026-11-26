@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SessionTimeoutThumbnail } from "@/entities/pattern/catalog/session-timeout/SessionTimeoutThumbnail";
 
 export const sessionTimeoutPattern: Pattern = {
   slug: "session-timeout",
@@ -34,7 +33,10 @@ export const sessionTimeoutPattern: Pattern = {
     import("@/entities/pattern/catalog/session-timeout/SessionTimeoutDemo").then(
       (m) => m.SessionTimeoutDemo,
     ),
-  Thumbnail: SessionTimeoutThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/session-timeout/SessionTimeoutThumbnail").then(
+      (m) => m.SessionTimeoutThumbnail,
+    ),
   sources: [
     {
       fileName: "SessionTimeout.tsx",

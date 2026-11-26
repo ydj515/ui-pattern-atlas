@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ArtDecoThumbnail } from "@/entities/pattern/catalog/art-deco/ArtDecoThumbnail";
 
 export const artDecoPattern: Pattern = {
   slug: "art-deco",
@@ -32,6 +31,7 @@ export const artDecoPattern: Pattern = {
   tags: ["글자 스타일", "Art Deco"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/art-deco/ArtDecoDemo").then((m) => m.ArtDecoDemo),
-  Thumbnail: ArtDecoThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/art-deco/ArtDecoThumbnail").then((m) => m.ArtDecoThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/art-deco/ArtDecoDemo.tsx?raw"),
 };

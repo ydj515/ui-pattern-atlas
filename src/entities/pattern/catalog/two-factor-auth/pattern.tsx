@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TwoFactorAuthThumbnail } from "@/entities/pattern/catalog/two-factor-auth/TwoFactorAuthThumbnail";
 
 export const twoFactorAuthPattern: Pattern = {
   slug: "two-factor-auth",
@@ -34,7 +33,10 @@ export const twoFactorAuthPattern: Pattern = {
     import("@/entities/pattern/catalog/two-factor-auth/TwoFactorAuthDemo").then(
       (m) => m.TwoFactorAuthDemo,
     ),
-  Thumbnail: TwoFactorAuthThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/two-factor-auth/TwoFactorAuthThumbnail").then(
+      (m) => m.TwoFactorAuthThumbnail,
+    ),
   sources: [
     {
       fileName: "TwoFactorAuth.tsx",

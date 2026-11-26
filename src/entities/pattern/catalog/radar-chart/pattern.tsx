@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RadarChartThumbnail } from "@/entities/pattern/catalog/radar-chart/RadarChartThumbnail";
 
 export const radarChartPattern: Pattern = {
   slug: "radar-chart",
@@ -32,7 +31,10 @@ export const radarChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "polygon", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/radar-chart/RadarChartDemo").then((m) => m.RadarChartDemo),
-  Thumbnail: RadarChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/radar-chart/RadarChartThumbnail").then(
+      (m) => m.RadarChartThumbnail,
+    ),
   sources: [
     {
       fileName: "RadarChart.tsx",

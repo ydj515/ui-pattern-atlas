@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NearbyShareThumbnail } from "@/entities/pattern/catalog/nearby-share/NearbyShareThumbnail";
 
 export const nearbySharePattern: Pattern = {
   slug: "nearby-share",
@@ -35,7 +34,10 @@ export const nearbySharePattern: Pattern = {
     import("@/entities/pattern/catalog/nearby-share/NearbyShareDemo").then(
       (m) => m.NearbyShareDemo,
     ),
-  Thumbnail: NearbyShareThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/nearby-share/NearbyShareThumbnail").then(
+      (m) => m.NearbyShareThumbnail,
+    ),
   sources: [
     {
       fileName: "NearbyShare.tsx",

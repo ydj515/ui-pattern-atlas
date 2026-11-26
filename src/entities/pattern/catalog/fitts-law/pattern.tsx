@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { FittsLawThumbnail } from "@/entities/pattern/catalog/fitts-law/FittsLawThumbnail";
 
 export const fittsLawPattern: Pattern = {
   slug: "fitts-law",
@@ -36,6 +35,9 @@ export const fittsLawPattern: Pattern = {
   tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/fitts-law/FittsLawDemo").then((m) => m.FittsLawDemo),
-  Thumbnail: FittsLawThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/fitts-law/FittsLawThumbnail").then(
+      (m) => m.FittsLawThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/fitts-law/FittsLawDemo.tsx?raw"),
 };

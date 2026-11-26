@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NotificationSettingsThumbnail } from "@/entities/pattern/catalog/notification-settings/NotificationSettingsThumbnail";
 
 export const notificationSettingsPattern: Pattern = {
   slug: "notification-settings",
@@ -34,7 +33,10 @@ export const notificationSettingsPattern: Pattern = {
     import("@/entities/pattern/catalog/notification-settings/NotificationSettingsDemo").then(
       (m) => m.NotificationSettingsDemo,
     ),
-  Thumbnail: NotificationSettingsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/notification-settings/NotificationSettingsThumbnail").then(
+      (m) => m.NotificationSettingsThumbnail,
+    ),
   sources: [
     {
       fileName: "NotificationSettings.tsx",

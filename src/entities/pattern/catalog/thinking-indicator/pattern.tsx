@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ThinkingIndicatorThumbnail } from "@/entities/pattern/catalog/thinking-indicator/ThinkingIndicatorThumbnail";
 
 export const thinkingIndicatorPattern: Pattern = {
   slug: "thinking-indicator",
@@ -35,7 +34,10 @@ export const thinkingIndicatorPattern: Pattern = {
     import("@/entities/pattern/catalog/thinking-indicator/ThinkingIndicatorDemo").then(
       (m) => m.ThinkingIndicatorDemo,
     ),
-  Thumbnail: ThinkingIndicatorThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/thinking-indicator/ThinkingIndicatorThumbnail").then(
+      (m) => m.ThinkingIndicatorThumbnail,
+    ),
   sources: [
     {
       fileName: "ThinkingIndicator.tsx",

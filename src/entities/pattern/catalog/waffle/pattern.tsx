@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { WaffleThumbnail } from "@/entities/pattern/catalog/waffle/WaffleThumbnail";
 
 export const wafflePattern: Pattern = {
   slug: "waffle",
@@ -30,6 +29,7 @@ export const wafflePattern: Pattern = {
   tags: ["아이콘 이름", "앱 전환"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/waffle/WaffleDemo").then((m) => m.WaffleDemo),
-  Thumbnail: WaffleThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/waffle/WaffleThumbnail").then((m) => m.WaffleThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/waffle/WaffleDemo.tsx?raw"),
 };

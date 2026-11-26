@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SegmentedControlThumbnail } from "@/entities/pattern/catalog/segmented-control/SegmentedControlThumbnail";
 
 export const segmentedControlPattern: Pattern = {
   slug: "segmented-control",
@@ -36,7 +35,10 @@ export const segmentedControlPattern: Pattern = {
     import("@/entities/pattern/catalog/segmented-control/SegmentedControlDemo").then(
       (m) => m.SegmentedControlDemo,
     ),
-  Thumbnail: SegmentedControlThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/segmented-control/SegmentedControlThumbnail").then(
+      (m) => m.SegmentedControlThumbnail,
+    ),
   sources: [
     {
       fileName: "SegmentedControl.tsx",

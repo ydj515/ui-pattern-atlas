@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FreeShippingProgressThumbnail } from "@/entities/pattern/catalog/free-shipping-progress/FreeShippingProgressThumbnail";
 
 export const freeShippingProgressPattern: Pattern = {
   slug: "free-shipping-progress",
@@ -40,7 +39,10 @@ export const freeShippingProgressPattern: Pattern = {
     import("@/entities/pattern/catalog/free-shipping-progress/FreeShippingProgressDemo").then(
       (m) => m.FreeShippingProgressDemo,
     ),
-  Thumbnail: FreeShippingProgressThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/free-shipping-progress/FreeShippingProgressThumbnail").then(
+      (m) => m.FreeShippingProgressThumbnail,
+    ),
   sources: [
     {
       fileName: "FreeShippingProgress.tsx",

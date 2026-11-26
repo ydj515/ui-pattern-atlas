@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CoachMarkThumbnail } from "@/entities/pattern/catalog/coach-mark/CoachMarkThumbnail";
 
 export const coachMarkPattern: Pattern = {
   slug: "coach-mark",
@@ -33,7 +32,10 @@ export const coachMarkPattern: Pattern = {
   tags: [...BASE_TAGS, "role=dialog", "Focus management", "box-shadow"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/coach-mark/CoachMarkDemo").then((m) => m.CoachMarkDemo),
-  Thumbnail: CoachMarkThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/coach-mark/CoachMarkThumbnail").then(
+      (m) => m.CoachMarkThumbnail,
+    ),
   sources: [
     {
       fileName: "CoachMark.tsx",

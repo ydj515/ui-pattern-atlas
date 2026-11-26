@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BentoThumbnail } from "@/entities/pattern/catalog/bento/BentoThumbnail";
 
 export const bentoPattern: Pattern = {
   slug: "bento",
@@ -33,6 +32,7 @@ export const bentoPattern: Pattern = {
   ],
   tags: ["아이콘 이름", "앱 전환"],
   loadPreview: () => import("@/entities/pattern/catalog/bento/BentoDemo").then((m) => m.BentoDemo),
-  Thumbnail: BentoThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bento/BentoThumbnail").then((m) => m.BentoThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/bento/BentoDemo.tsx?raw"),
 };

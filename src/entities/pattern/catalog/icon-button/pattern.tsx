@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { IconButtonThumbnail } from "@/entities/pattern/catalog/icon-button/IconButtonThumbnail";
 
 export const iconButtonPattern: Pattern = {
   slug: "icon-button",
@@ -33,7 +32,10 @@ export const iconButtonPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-label", "Tooltip"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/icon-button/IconButtonDemo").then((m) => m.IconButtonDemo),
-  Thumbnail: IconButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/icon-button/IconButtonThumbnail").then(
+      (m) => m.IconButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "IconButton.tsx",

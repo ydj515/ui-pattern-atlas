@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HeatmapThumbnail } from "@/entities/pattern/catalog/heatmap/HeatmapThumbnail";
 
 export const heatmapPattern: Pattern = {
   slug: "heatmap",
@@ -32,7 +31,8 @@ export const heatmapPattern: Pattern = {
   tags: [...BASE_TAGS, "CSS grid", "aria-live", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/heatmap/HeatmapDemo").then((m) => m.HeatmapDemo),
-  Thumbnail: HeatmapThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/heatmap/HeatmapThumbnail").then((m) => m.HeatmapThumbnail),
   sources: [
     {
       fileName: "Heatmap.tsx",

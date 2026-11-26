@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SearchSortThumbnail } from "@/entities/pattern/catalog/search-sort/SearchSortThumbnail";
 
 export const searchSortPattern: Pattern = {
   slug: "search-sort",
@@ -32,7 +31,10 @@ export const searchSortPattern: Pattern = {
   tags: [...BASE_TAGS, "menu", "menuitemradio", "aria-haspopup"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/search-sort/SearchSortDemo").then((m) => m.SearchSortDemo),
-  Thumbnail: SearchSortThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/search-sort/SearchSortThumbnail").then(
+      (m) => m.SearchSortThumbnail,
+    ),
   sources: [
     {
       fileName: "SearchSort.tsx",

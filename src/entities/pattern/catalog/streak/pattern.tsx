@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StreakThumbnail } from "@/entities/pattern/catalog/streak/StreakThumbnail";
 
 export const streakPattern: Pattern = {
   slug: "streak",
@@ -33,7 +32,8 @@ export const streakPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-live", "Habit", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/streak/StreakDemo").then((m) => m.StreakDemo),
-  Thumbnail: StreakThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/streak/StreakThumbnail").then((m) => m.StreakThumbnail),
   sources: [
     {
       fileName: "Streak.tsx",

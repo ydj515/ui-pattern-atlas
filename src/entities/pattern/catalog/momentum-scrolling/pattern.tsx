@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MomentumScrollThumbnail } from "@/entities/pattern/catalog/momentum-scrolling/MomentumScrollThumbnail";
 
 export const momentumScrollingPattern: Pattern = {
   slug: "momentum-scrolling",
@@ -35,7 +34,10 @@ export const momentumScrollingPattern: Pattern = {
     import("@/entities/pattern/catalog/momentum-scrolling/MomentumScrollDemo").then(
       (m) => m.MomentumScrollDemo,
     ),
-  Thumbnail: MomentumScrollThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/momentum-scrolling/MomentumScrollThumbnail").then(
+      (m) => m.MomentumScrollThumbnail,
+    ),
   sources: [
     {
       fileName: "MomentumScroll.tsx",

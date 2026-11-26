@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BounceThumbnail } from "@/entities/pattern/catalog/bounce/BounceThumbnail";
 
 export const bouncePattern: Pattern = {
   slug: "bounce",
@@ -33,7 +32,8 @@ export const bouncePattern: Pattern = {
   tags: [...BASE_TAGS, "Web Animations API", "Keyframes", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/bounce/BounceDemo").then((m) => m.BounceDemo),
-  Thumbnail: BounceThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bounce/BounceThumbnail").then((m) => m.BounceThumbnail),
   sources: [
     {
       fileName: "Bounce.tsx",

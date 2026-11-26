@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PasswordResetThumbnail } from "@/entities/pattern/catalog/password-reset/PasswordResetThumbnail";
 
 export const passwordResetPattern: Pattern = {
   slug: "password-reset",
@@ -38,7 +37,10 @@ export const passwordResetPattern: Pattern = {
     import("@/entities/pattern/catalog/password-reset/PasswordResetDemo").then(
       (m) => m.PasswordResetDemo,
     ),
-  Thumbnail: PasswordResetThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/password-reset/PasswordResetThumbnail").then(
+      (m) => m.PasswordResetThumbnail,
+    ),
   sources: [
     {
       fileName: "PasswordReset.tsx",

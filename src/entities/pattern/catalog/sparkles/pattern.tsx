@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SparklesThumbnail } from "@/entities/pattern/catalog/sparkles/SparklesThumbnail";
 
 export const sparklesPattern: Pattern = {
   slug: "sparkles",
@@ -34,6 +33,9 @@ export const sparklesPattern: Pattern = {
   tags: ["아이콘 이름", "AI"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/sparkles/SparklesDemo").then((m) => m.SparklesDemo),
-  Thumbnail: SparklesThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sparkles/SparklesThumbnail").then(
+      (m) => m.SparklesThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/sparkles/SparklesDemo.tsx?raw"),
 };

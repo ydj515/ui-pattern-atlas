@@ -37,12 +37,10 @@ class FakeObserver {
   }
 }
 
-function Mini({ label }: { readonly label: string }) {
-  return <span>{label}</span>;
+/** A loader that resolves to a thumbnail showing `label`, counted with vi.fn. */
+function loaderFor(label: string) {
+  return vi.fn(() => Promise.resolve(() => <span>{label}</span>));
 }
-
-const First = () => <Mini label="첫 썸네일" />;
-const Second = () => <Mini label="둘째 썸네일" />;
 
 describe("ThumbnailFrame", () => {
   afterEach(() => {
@@ -50,35 +48,63 @@ describe("ThumbnailFrame", () => {
     FakeObserver.instances = [];
   });
 
-  it("shows the thumbnail right away without IntersectionObserver", () => {
-    render(<ThumbnailFrame Thumbnail={First} />);
-    expect(screen.getByText("첫 썸네일")).toBeInTheDocument();
+  it("loads and shows the thumbnail right away without IntersectionObserver", async () => {
+    const load = loaderFor("첫 썸네일");
+    render(<ThumbnailFrame load={load} />);
+    expect(await screen.findByText("첫 썸네일")).toBeInTheDocument();
+    expect(load).toHaveBeenCalledTimes(1);
   });
 
-  it("mounts thumbnails only while near the viewport, with one shared observer", () => {
+  it("loads near the viewport, unmounts when far, and reuses what it loaded", async () => {
     vi.stubGlobal("IntersectionObserver", FakeObserver);
+    const first = loaderFor("첫 썸네일");
+    const second = loaderFor("둘째 썸네일");
     const { unmount } = render(
       <>
-        <ThumbnailFrame Thumbnail={First} />
-        <ThumbnailFrame Thumbnail={Second} />
+        <ThumbnailFrame load={first} />
+        <ThumbnailFrame load={second} />
       </>,
     );
     expect(FakeObserver.instances).toHaveLength(1);
     const [observer] = FakeObserver.instances;
     expect(observer?.options?.rootMargin).toBe("100% 0px");
     expect(observer?.targets.size).toBe(2);
-    expect(screen.queryByText("첫 썸네일")).toBeNull();
+    expect(first).not.toHaveBeenCalled();
 
     observer?.report(true);
-    expect(screen.getByText("첫 썸네일")).toBeInTheDocument();
-    expect(screen.getByText("둘째 썸네일")).toBeInTheDocument();
+    expect(await screen.findByText("첫 썸네일")).toBeInTheDocument();
+    expect(await screen.findByText("둘째 썸네일")).toBeInTheDocument();
 
     observer?.report(false);
     expect(screen.queryByText("첫 썸네일")).toBeNull();
     expect(screen.queryByText("둘째 썸네일")).toBeNull();
 
+    observer?.report(true);
+    expect(screen.getByText("첫 썸네일")).toBeInTheDocument();
+    expect(first).toHaveBeenCalledTimes(1);
+    expect(second).toHaveBeenCalledTimes(1);
+
     unmount();
     expect(observer?.disconnected).toBe(true);
+  });
+
+  it("stays empty when loading fails and tries again next time it is near", async () => {
+    vi.stubGlobal("IntersectionObserver", FakeObserver);
+    const load = vi
+      .fn<() => Promise<() => React.JSX.Element>>()
+      .mockRejectedValueOnce(new Error("offline"))
+      .mockResolvedValue(() => <span>다시 불러온 썸네일</span>);
+    const { container } = render(<ThumbnailFrame load={load} />);
+    const [observer] = FakeObserver.instances;
+
+    observer?.report(true);
+    await act(() => Promise.resolve());
+    expect(container.firstElementChild).toBeEmptyDOMElement();
+
+    observer?.report(false);
+    observer?.report(true);
+    expect(await screen.findByText("다시 불러온 썸네일")).toBeInTheDocument();
+    expect(load).toHaveBeenCalledTimes(2);
   });
 
   it("keeps the frame empty when there is no thumbnail", () => {

@@ -9,7 +9,7 @@ import {
   comparisonSlug,
   type RoadmapEntry,
 } from "@/entities/pattern/catalog/roadmap";
-import { COMPARISON_THUMBNAILS } from "@/entities/pattern/catalog/comparisons/ComparisonThumbnails";
+import { comparisonThumbnailLoader } from "@/entities/pattern/catalog/comparisons/comparisonThumbnailLoader";
 import { roadmapEntryDestination, roadmapEntryHref } from "@/entities/pattern/catalog/roadmapLinks";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { PatternCard } from "@/entities/pattern/ui/PatternCard";
@@ -114,11 +114,11 @@ function ComparisonGrid({
       className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
     >
       {references.map(({ entry, href, status }) => {
-        const Thumbnail = COMPARISON_THUMBNAILS[comparisonSlug(entry)];
+        const loadThumbnail = comparisonThumbnailLoader(comparisonSlug(entry));
         return (
           <li key={href}>
             <Link to={href} state={{ returnSearch }} className="group block">
-              <ThumbnailFrame Thumbnail={Thumbnail} />
+              <ThumbnailFrame load={loadThumbnail} />
               <h3 className="mt-3.5">
                 <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
                   {entry.nameKo}

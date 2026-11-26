@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { KanbanBoardThumbnail } from "@/entities/pattern/catalog/kanban-board/KanbanBoardThumbnail";
 
 export const kanbanBoardPattern: Pattern = {
   slug: "kanban-board",
@@ -37,7 +36,10 @@ export const kanbanBoardPattern: Pattern = {
     import("@/entities/pattern/catalog/kanban-board/KanbanBoardDemo").then(
       (m) => m.KanbanBoardDemo,
     ),
-  Thumbnail: KanbanBoardThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/kanban-board/KanbanBoardThumbnail").then(
+      (m) => m.KanbanBoardThumbnail,
+    ),
   sources: [
     {
       fileName: "KanbanBoard.tsx",

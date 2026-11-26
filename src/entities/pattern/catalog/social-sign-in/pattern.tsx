@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SocialSignInThumbnail } from "@/entities/pattern/catalog/social-sign-in/SocialSignInThumbnail";
 
 export const socialSignInPattern: Pattern = {
   slug: "social-sign-in",
@@ -35,7 +34,10 @@ export const socialSignInPattern: Pattern = {
     import("@/entities/pattern/catalog/social-sign-in/SocialSignInDemo").then(
       (m) => m.SocialSignInDemo,
     ),
-  Thumbnail: SocialSignInThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/social-sign-in/SocialSignInThumbnail").then(
+      (m) => m.SocialSignInThumbnail,
+    ),
   sources: [
     {
       fileName: "SocialSignIn.tsx",

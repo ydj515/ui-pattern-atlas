@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ScrollProgressThumbnail } from "@/entities/pattern/catalog/scroll-progress/ScrollProgressThumbnail";
 
 export const scrollProgressPattern: Pattern = {
   slug: "scroll-progress",
@@ -35,7 +34,10 @@ export const scrollProgressPattern: Pattern = {
     import("@/entities/pattern/catalog/scroll-progress/ScrollProgressDemo").then(
       (m) => m.ScrollProgressDemo,
     ),
-  Thumbnail: ScrollProgressThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scroll-progress/ScrollProgressThumbnail").then(
+      (m) => m.ScrollProgressThumbnail,
+    ),
   sources: [
     {
       fileName: "ScrollProgress.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { AcidGraphicThumbnail } from "@/entities/pattern/catalog/acid-graphic/AcidGraphicThumbnail";
 
 export const acidGraphicPattern: Pattern = {
   slug: "acid-graphic",
@@ -36,6 +35,9 @@ export const acidGraphicPattern: Pattern = {
     import("@/entities/pattern/catalog/acid-graphic/AcidGraphicDemo").then(
       (m) => m.AcidGraphicDemo,
     ),
-  Thumbnail: AcidGraphicThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/acid-graphic/AcidGraphicThumbnail").then(
+      (m) => m.AcidGraphicThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/acid-graphic/AcidGraphicDemo.tsx?raw"),
 };

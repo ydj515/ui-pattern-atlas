@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DoubleTapThumbnail } from "@/entities/pattern/catalog/double-tap/DoubleTapThumbnail";
 
 export const doubleTapPattern: Pattern = {
   slug: "double-tap",
@@ -33,7 +32,10 @@ export const doubleTapPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-pressed", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/double-tap/DoubleTapDemo").then((m) => m.DoubleTapDemo),
-  Thumbnail: DoubleTapThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/double-tap/DoubleTapThumbnail").then(
+      (m) => m.DoubleTapThumbnail,
+    ),
   sources: [
     {
       fileName: "DoubleTap.tsx",

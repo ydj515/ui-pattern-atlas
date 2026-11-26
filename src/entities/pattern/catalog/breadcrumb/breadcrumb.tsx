@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BreadcrumbThumbnail } from "@/entities/pattern/catalog/breadcrumb/BreadcrumbThumbnail";
 
 export const breadcrumbPattern: Pattern = {
   slug: "breadcrumb",
@@ -34,7 +33,10 @@ export const breadcrumbPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-current"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/breadcrumb/BreadcrumbDemo").then((m) => m.BreadcrumbDemo),
-  Thumbnail: BreadcrumbThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/breadcrumb/BreadcrumbThumbnail").then(
+      (m) => m.BreadcrumbThumbnail,
+    ),
   sources: [
     {
       fileName: "Breadcrumb.tsx",

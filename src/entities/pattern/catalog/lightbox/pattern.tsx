@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LightboxThumbnail } from "@/entities/pattern/catalog/lightbox/LightboxThumbnail";
 
 export const lightboxPattern: Pattern = {
   slug: "lightbox",
@@ -35,7 +34,10 @@ export const lightboxPattern: Pattern = {
   tags: [...BASE_TAGS, "dialog element", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/lightbox/LightboxDemo").then((m) => m.LightboxDemo),
-  Thumbnail: LightboxThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/lightbox/LightboxThumbnail").then(
+      (m) => m.LightboxThumbnail,
+    ),
   sources: [
     {
       fileName: "Lightbox.tsx",

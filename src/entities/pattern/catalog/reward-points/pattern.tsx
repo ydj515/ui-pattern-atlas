@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RewardPointsThumbnail } from "@/entities/pattern/catalog/reward-points/RewardPointsThumbnail";
 
 export const rewardPointsPattern: Pattern = {
   slug: "reward-points",
@@ -38,7 +37,10 @@ export const rewardPointsPattern: Pattern = {
     import("@/entities/pattern/catalog/reward-points/RewardPointsDemo").then(
       (m) => m.RewardPointsDemo,
     ),
-  Thumbnail: RewardPointsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/reward-points/RewardPointsThumbnail").then(
+      (m) => m.RewardPointsThumbnail,
+    ),
   sources: [
     {
       fileName: "RewardPoints.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { OtpInputThumbnail } from "@/entities/pattern/catalog/otp-input/OtpInputThumbnail";
 
 export const otpInputPattern: Pattern = {
   slug: "otp-input",
@@ -33,7 +32,10 @@ export const otpInputPattern: Pattern = {
   tags: [...BASE_TAGS, "autocomplete", "inputmode"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/otp-input/OtpInputDemo").then((m) => m.OtpInputDemo),
-  Thumbnail: OtpInputThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/otp-input/OtpInputThumbnail").then(
+      (m) => m.OtpInputThumbnail,
+    ),
   sources: [
     {
       fileName: "OtpInput.tsx",

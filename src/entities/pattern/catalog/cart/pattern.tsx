@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CartThumbnail } from "@/entities/pattern/catalog/cart/CartThumbnail";
 
 export const cartPattern: Pattern = {
   slug: "cart",
@@ -36,7 +35,8 @@ export const cartPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "checkbox", "indeterminate", "aria-live"],
   loadPreview: () => import("@/entities/pattern/catalog/cart/CartDemo").then((m) => m.CartDemo),
-  Thumbnail: CartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/cart/CartThumbnail").then((m) => m.CartThumbnail),
   sources: [
     {
       fileName: "Cart.tsx",

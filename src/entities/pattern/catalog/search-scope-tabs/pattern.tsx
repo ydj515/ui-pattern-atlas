@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SearchScopeTabsThumbnail } from "@/entities/pattern/catalog/search-scope-tabs/SearchScopeTabsThumbnail";
 
 export const searchScopeTabsPattern: Pattern = {
   slug: "search-scope-tabs",
@@ -35,7 +34,10 @@ export const searchScopeTabsPattern: Pattern = {
     import("@/entities/pattern/catalog/search-scope-tabs/SearchScopeTabsDemo").then(
       (m) => m.SearchScopeTabsDemo,
     ),
-  Thumbnail: SearchScopeTabsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/search-scope-tabs/SearchScopeTabsThumbnail").then(
+      (m) => m.SearchScopeTabsThumbnail,
+    ),
   sources: [
     {
       fileName: "SearchScopeTabs.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { FlatDesignThumbnail } from "@/entities/pattern/catalog/flat-design/FlatDesignThumbnail";
 
 export const flatDesignPattern: Pattern = {
   slug: "flat-design",
@@ -36,6 +35,9 @@ export const flatDesignPattern: Pattern = {
   tags: ["디자인 스타일", "플랫"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/flat-design/FlatDesignDemo").then((m) => m.FlatDesignDemo),
-  Thumbnail: FlatDesignThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/flat-design/FlatDesignThumbnail").then(
+      (m) => m.FlatDesignThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/flat-design/FlatDesignDemo.tsx?raw"),
 };

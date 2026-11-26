@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PaginationThumbnail } from "@/entities/pattern/catalog/pagination/PaginationThumbnail";
 
 export const paginationPattern: Pattern = {
   slug: "pagination",
@@ -33,7 +32,10 @@ export const paginationPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-current"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/pagination/PaginationDemo").then((m) => m.PaginationDemo),
-  Thumbnail: PaginationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pagination/PaginationThumbnail").then(
+      (m) => m.PaginationThumbnail,
+    ),
   sources: [
     {
       fileName: "Pagination.tsx",

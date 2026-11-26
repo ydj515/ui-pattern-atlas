@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TopLoadingBarThumbnail } from "@/entities/pattern/catalog/top-loading-bar/TopLoadingBarThumbnail";
 
 export const topLoadingBarPattern: Pattern = {
   slug: "top-loading-bar",
@@ -36,7 +35,10 @@ export const topLoadingBarPattern: Pattern = {
     import("@/entities/pattern/catalog/top-loading-bar/TopLoadingBarDemo").then(
       (m) => m.TopLoadingBarDemo,
     ),
-  Thumbnail: TopLoadingBarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/top-loading-bar/TopLoadingBarThumbnail").then(
+      (m) => m.TopLoadingBarThumbnail,
+    ),
   sources: [
     {
       fileName: "TopLoadingBar.tsx",

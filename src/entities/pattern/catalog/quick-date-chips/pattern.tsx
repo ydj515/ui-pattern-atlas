@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { QuickDateChipsThumbnail } from "@/entities/pattern/catalog/quick-date-chips/QuickDateChipsThumbnail";
 
 export const quickDateChipsPattern: Pattern = {
   slug: "quick-date-chips",
@@ -34,7 +33,10 @@ export const quickDateChipsPattern: Pattern = {
     import("@/entities/pattern/catalog/quick-date-chips/QuickDateChipsDemo").then(
       (m) => m.QuickDateChipsDemo,
     ),
-  Thumbnail: QuickDateChipsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/quick-date-chips/QuickDateChipsThumbnail").then(
+      (m) => m.QuickDateChipsThumbnail,
+    ),
   sources: [
     {
       fileName: "QuickDateChips.tsx",

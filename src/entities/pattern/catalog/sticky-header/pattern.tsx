@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StickyHeaderThumbnail } from "@/entities/pattern/catalog/sticky-header/StickyHeaderThumbnail";
 
 export const stickyHeaderPattern: Pattern = {
   slug: "sticky-header",
@@ -35,7 +34,10 @@ export const stickyHeaderPattern: Pattern = {
     import("@/entities/pattern/catalog/sticky-header/StickyHeaderDemo").then(
       (m) => m.StickyHeaderDemo,
     ),
-  Thumbnail: StickyHeaderThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sticky-header/StickyHeaderThumbnail").then(
+      (m) => m.StickyHeaderThumbnail,
+    ),
   sources: [
     {
       fileName: "StickyHeader.tsx",

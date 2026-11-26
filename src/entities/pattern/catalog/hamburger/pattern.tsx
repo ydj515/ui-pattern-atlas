@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { HamburgerThumbnail } from "@/entities/pattern/catalog/hamburger/HamburgerThumbnail";
 
 export const hamburgerPattern: Pattern = {
   slug: "hamburger",
@@ -36,6 +35,9 @@ export const hamburgerPattern: Pattern = {
   tags: ["아이콘 이름", "메뉴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/hamburger/HamburgerDemo").then((m) => m.HamburgerDemo),
-  Thumbnail: HamburgerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hamburger/HamburgerThumbnail").then(
+      (m) => m.HamburgerThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/hamburger/HamburgerDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { InlineValidationThumbnail } from "@/entities/pattern/catalog/inline-validation/InlineValidationThumbnail";
 
 export const inlineValidationPattern: Pattern = {
   slug: "inline-validation",
@@ -42,7 +41,10 @@ export const inlineValidationPattern: Pattern = {
     import("@/entities/pattern/catalog/inline-validation/InlineValidationDemo").then(
       (m) => m.InlineValidationDemo,
     ),
-  Thumbnail: InlineValidationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/inline-validation/InlineValidationThumbnail").then(
+      (m) => m.InlineValidationThumbnail,
+    ),
   sources: [
     {
       fileName: "TextField.tsx",

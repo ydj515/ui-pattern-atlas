@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SlideToUnlockThumbnail } from "@/entities/pattern/catalog/slide-to-unlock/SlideToUnlockThumbnail";
 
 export const slideToUnlockPattern: Pattern = {
   slug: "slide-to-unlock",
@@ -35,7 +34,10 @@ export const slideToUnlockPattern: Pattern = {
     import("@/entities/pattern/catalog/slide-to-unlock/SlideToUnlockDemo").then(
       (m) => m.SlideToUnlockDemo,
     ),
-  Thumbnail: SlideToUnlockThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/slide-to-unlock/SlideToUnlockThumbnail").then(
+      (m) => m.SlideToUnlockThumbnail,
+    ),
   sources: [
     {
       fileName: "SlideToUnlock.tsx",

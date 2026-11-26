@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SneakIntoBasketThumbnail } from "@/entities/pattern/catalog/sneak-into-basket/SneakIntoBasketThumbnail";
 
 export const sneakIntoBasketPattern: Pattern = {
   slug: "sneak-into-basket",
@@ -36,7 +35,10 @@ export const sneakIntoBasketPattern: Pattern = {
     import("@/entities/pattern/catalog/sneak-into-basket/SneakIntoBasketDemo").then(
       (m) => m.SneakIntoBasketDemo,
     ),
-  Thumbnail: SneakIntoBasketThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sneak-into-basket/SneakIntoBasketThumbnail").then(
+      (m) => m.SneakIntoBasketThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/sneak-into-basket/SneakIntoBasketDemo.tsx?raw"),
 };

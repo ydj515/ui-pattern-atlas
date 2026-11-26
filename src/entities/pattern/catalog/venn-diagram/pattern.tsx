@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { VennDiagramThumbnail } from "@/entities/pattern/catalog/venn-diagram/VennDiagramThumbnail";
 
 export const vennDiagramPattern: Pattern = {
   slug: "venn-diagram",
@@ -35,7 +34,10 @@ export const vennDiagramPattern: Pattern = {
     import("@/entities/pattern/catalog/venn-diagram/VennDiagramDemo").then(
       (m) => m.VennDiagramDemo,
     ),
-  Thumbnail: VennDiagramThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/venn-diagram/VennDiagramThumbnail").then(
+      (m) => m.VennDiagramThumbnail,
+    ),
   sources: [
     {
       fileName: "VennDiagram.tsx",

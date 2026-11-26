@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PresenceThumbnail } from "@/entities/pattern/catalog/presence/PresenceThumbnail";
 
 export const presencePattern: Pattern = {
   slug: "presence",
@@ -33,7 +32,10 @@ export const presencePattern: Pattern = {
   tags: [...BASE_TAGS, "role=img", "Color independence"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/presence/PresenceDemo").then((m) => m.PresenceDemo),
-  Thumbnail: PresenceThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/presence/PresenceThumbnail").then(
+      (m) => m.PresenceThumbnail,
+    ),
   sources: [
     {
       fileName: "Presence.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { OnboardingCarouselThumbnail } from "@/entities/pattern/catalog/onboarding-carousel/OnboardingCarouselThumbnail";
 
 export const onboardingCarouselPattern: Pattern = {
   slug: "onboarding-carousel",
@@ -35,7 +34,10 @@ export const onboardingCarouselPattern: Pattern = {
     import("@/entities/pattern/catalog/onboarding-carousel/OnboardingCarouselDemo").then(
       (m) => m.OnboardingCarouselDemo,
     ),
-  Thumbnail: OnboardingCarouselThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/onboarding-carousel/OnboardingCarouselThumbnail").then(
+      (m) => m.OnboardingCarouselThumbnail,
+    ),
   sources: [
     {
       fileName: "OnboardingCarousel.tsx",

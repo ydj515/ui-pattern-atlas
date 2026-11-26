@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SkeuomorphismThumbnail } from "@/entities/pattern/catalog/skeuomorphism/SkeuomorphismThumbnail";
 
 export const skeuomorphismPattern: Pattern = {
   slug: "skeuomorphism",
@@ -38,7 +37,10 @@ export const skeuomorphismPattern: Pattern = {
     import("@/entities/pattern/catalog/skeuomorphism/SkeuomorphismDemo").then(
       (m) => m.SkeuomorphismDemo,
     ),
-  Thumbnail: SkeuomorphismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/skeuomorphism/SkeuomorphismThumbnail").then(
+      (m) => m.SkeuomorphismThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/skeuomorphism/SkeuomorphismDemo.tsx?raw"),
 };

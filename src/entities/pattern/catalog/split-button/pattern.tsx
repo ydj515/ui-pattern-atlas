@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SplitButtonThumbnail } from "@/entities/pattern/catalog/split-button/SplitButtonThumbnail";
 
 export const splitButtonPattern: Pattern = {
   slug: "split-button",
@@ -35,7 +34,10 @@ export const splitButtonPattern: Pattern = {
     import("@/entities/pattern/catalog/split-button/SplitButtonDemo").then(
       (m) => m.SplitButtonDemo,
     ),
-  Thumbnail: SplitButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/split-button/SplitButtonThumbnail").then(
+      (m) => m.SplitButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "SplitButton.tsx",

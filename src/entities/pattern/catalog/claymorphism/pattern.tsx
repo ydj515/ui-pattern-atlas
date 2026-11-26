@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ClaymorphismThumbnail } from "@/entities/pattern/catalog/claymorphism/ClaymorphismThumbnail";
 
 export const claymorphismPattern: Pattern = {
   slug: "claymorphism",
@@ -36,6 +35,9 @@ export const claymorphismPattern: Pattern = {
     import("@/entities/pattern/catalog/claymorphism/ClaymorphismDemo").then(
       (m) => m.ClaymorphismDemo,
     ),
-  Thumbnail: ClaymorphismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/claymorphism/ClaymorphismThumbnail").then(
+      (m) => m.ClaymorphismThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/claymorphism/ClaymorphismDemo.tsx?raw"),
 };

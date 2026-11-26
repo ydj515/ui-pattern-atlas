@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BehavioralHeatmapThumbnail } from "@/entities/pattern/catalog/behavioral-heatmap/BehavioralHeatmapThumbnail";
 
 export const behavioralHeatmapPattern: Pattern = {
   slug: "behavioral-heatmap",
@@ -35,7 +34,10 @@ export const behavioralHeatmapPattern: Pattern = {
     import("@/entities/pattern/catalog/behavioral-heatmap/BehavioralHeatmapDemo").then(
       (m) => m.BehavioralHeatmapDemo,
     ),
-  Thumbnail: BehavioralHeatmapThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/behavioral-heatmap/BehavioralHeatmapThumbnail").then(
+      (m) => m.BehavioralHeatmapThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/behavioral-heatmap/BehavioralHeatmapDemo.tsx?raw"),
 };

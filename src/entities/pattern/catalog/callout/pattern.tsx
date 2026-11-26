@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CalloutThumbnail } from "@/entities/pattern/catalog/callout/CalloutThumbnail";
 
 export const calloutPattern: Pattern = {
   slug: "callout",
@@ -33,7 +32,8 @@ export const calloutPattern: Pattern = {
   tags: [...BASE_TAGS, "role=note", "UX writing"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/callout/CalloutDemo").then((m) => m.CalloutDemo),
-  Thumbnail: CalloutThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/callout/CalloutThumbnail").then((m) => m.CalloutThumbnail),
   sources: [
     {
       fileName: "Callout.tsx",

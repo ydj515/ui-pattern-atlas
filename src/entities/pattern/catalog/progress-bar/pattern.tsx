@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ProgressBarThumbnail } from "@/entities/pattern/catalog/progress-bar/ProgressBarThumbnail";
 
 export const progressBarPattern: Pattern = {
   slug: "progress-bar",
@@ -20,7 +19,10 @@ export const progressBarPattern: Pattern = {
     import("@/entities/pattern/catalog/progress-bar/ProgressBarDemo").then(
       (m) => m.ProgressBarDemo,
     ),
-  Thumbnail: ProgressBarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/progress-bar/ProgressBarThumbnail").then(
+      (m) => m.ProgressBarThumbnail,
+    ),
   sources: [
     {
       fileName: "ProgressBar.tsx",

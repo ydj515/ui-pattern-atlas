@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EmptyStateThumbnail } from "@/entities/pattern/catalog/empty-state/EmptyStateThumbnail";
 
 export const emptyStatePattern: Pattern = {
   slug: "empty-state",
@@ -37,7 +36,10 @@ export const emptyStatePattern: Pattern = {
   tags: [...BASE_TAGS, "UX writing"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/empty-state/EmptyStateDemo").then((m) => m.EmptyStateDemo),
-  Thumbnail: EmptyStateThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/empty-state/EmptyStateThumbnail").then(
+      (m) => m.EmptyStateThumbnail,
+    ),
   sources: [
     {
       fileName: "EmptyState.tsx",

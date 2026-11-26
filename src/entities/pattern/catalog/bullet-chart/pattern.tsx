@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BulletChartThumbnail } from "@/entities/pattern/catalog/bullet-chart/BulletChartThumbnail";
 
 export const bulletChartPattern: Pattern = {
   slug: "bullet-chart",
@@ -36,7 +35,10 @@ export const bulletChartPattern: Pattern = {
     import("@/entities/pattern/catalog/bullet-chart/BulletChartDemo").then(
       (m) => m.BulletChartDemo,
     ),
-  Thumbnail: BulletChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bullet-chart/BulletChartThumbnail").then(
+      (m) => m.BulletChartThumbnail,
+    ),
   sources: [
     {
       fileName: "BulletChart.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PolarAreaChartThumbnail } from "@/entities/pattern/catalog/polar-area-chart/PolarAreaChartThumbnail";
 
 export const polarAreaChartPattern: Pattern = {
   slug: "polar-area-chart",
@@ -36,7 +35,10 @@ export const polarAreaChartPattern: Pattern = {
     import("@/entities/pattern/catalog/polar-area-chart/PolarAreaChartDemo").then(
       (m) => m.PolarAreaChartDemo,
     ),
-  Thumbnail: PolarAreaChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/polar-area-chart/PolarAreaChartThumbnail").then(
+      (m) => m.PolarAreaChartThumbnail,
+    ),
   sources: [
     {
       fileName: "PolarAreaChart.tsx",

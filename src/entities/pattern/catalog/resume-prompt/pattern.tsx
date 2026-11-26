@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ResumePromptThumbnail } from "@/entities/pattern/catalog/resume-prompt/ResumePromptThumbnail";
 
 export const resumePromptPattern: Pattern = {
   slug: "resume-prompt",
@@ -36,7 +35,10 @@ export const resumePromptPattern: Pattern = {
     import("@/entities/pattern/catalog/resume-prompt/ResumePromptDemo").then(
       (m) => m.ResumePromptDemo,
     ),
-  Thumbnail: ResumePromptThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/resume-prompt/ResumePromptThumbnail").then(
+      (m) => m.ResumePromptThumbnail,
+    ),
   sources: [
     {
       fileName: "ResumePrompt.tsx",

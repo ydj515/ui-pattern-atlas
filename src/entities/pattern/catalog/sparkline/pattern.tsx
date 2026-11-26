@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SparklineThumbnail } from "@/entities/pattern/catalog/sparkline/SparklineThumbnail";
 
 export const sparklinePattern: Pattern = {
   slug: "sparkline",
@@ -34,7 +33,10 @@ export const sparklinePattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "role=img", "polyline"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/sparkline/SparklineDemo").then((m) => m.SparklineDemo),
-  Thumbnail: SparklineThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sparkline/SparklineThumbnail").then(
+      (m) => m.SparklineThumbnail,
+    ),
   sources: [
     {
       fileName: "Sparkline.tsx",

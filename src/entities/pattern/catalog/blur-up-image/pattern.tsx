@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BlurUpImageThumbnail } from "@/entities/pattern/catalog/blur-up-image/BlurUpImageThumbnail";
 
 export const blurUpImagePattern: Pattern = {
   slug: "blur-up-image",
@@ -34,7 +33,10 @@ export const blurUpImagePattern: Pattern = {
     import("@/entities/pattern/catalog/blur-up-image/BlurUpImageDemo").then(
       (m) => m.BlurUpImageDemo,
     ),
-  Thumbnail: BlurUpImageThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/blur-up-image/BlurUpImageThumbnail").then(
+      (m) => m.BlurUpImageThumbnail,
+    ),
   sources: [
     {
       fileName: "BlurUpImage.tsx",

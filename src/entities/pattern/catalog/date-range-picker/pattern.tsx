@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DateRangePickerThumbnail } from "@/entities/pattern/catalog/date-range-picker/DateRangePickerThumbnail";
 
 export const dateRangePickerPattern: Pattern = {
   slug: "date-range-picker",
@@ -32,7 +31,10 @@ export const dateRangePickerPattern: Pattern = {
     import("@/entities/pattern/catalog/date-range-picker/DateRangePickerDemo").then(
       (m) => m.DateRangePickerDemo,
     ),
-  Thumbnail: DateRangePickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/date-range-picker/DateRangePickerThumbnail").then(
+      (m) => m.DateRangePickerThumbnail,
+    ),
   sources: [
     {
       fileName: "DateRangePicker.tsx",

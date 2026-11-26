@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MaskRevealThumbnail } from "@/entities/pattern/catalog/mask-reveal/MaskRevealThumbnail";
 
 export const maskRevealPattern: Pattern = {
   slug: "mask-reveal",
@@ -37,7 +36,10 @@ export const maskRevealPattern: Pattern = {
   tags: [...BASE_TAGS, "@starting-style", "overflow-hidden", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/mask-reveal/MaskRevealDemo").then((m) => m.MaskRevealDemo),
-  Thumbnail: MaskRevealThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/mask-reveal/MaskRevealThumbnail").then(
+      (m) => m.MaskRevealThumbnail,
+    ),
   sources: [
     {
       fileName: "MaskReveal.tsx",

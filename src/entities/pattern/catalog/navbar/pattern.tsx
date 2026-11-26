@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NavbarThumbnail } from "@/entities/pattern/catalog/navbar/NavbarThumbnail";
 
 export const navbarPattern: Pattern = {
   slug: "navbar",
@@ -34,7 +33,8 @@ export const navbarPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-current", "nav landmark"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/navbar/NavbarDemo").then((m) => m.NavbarDemo),
-  Thumbnail: NavbarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/navbar/NavbarThumbnail").then((m) => m.NavbarThumbnail),
   sources: [
     {
       fileName: "Navbar.tsx",

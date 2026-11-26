@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StaggeredTextThumbnail } from "@/entities/pattern/catalog/staggered-text-reveal/StaggeredTextThumbnail";
 
 export const staggeredTextRevealPattern: Pattern = {
   slug: "staggered-text-reveal",
@@ -31,7 +30,10 @@ export const staggeredTextRevealPattern: Pattern = {
     import("@/entities/pattern/catalog/staggered-text-reveal/StaggeredTextDemo").then(
       (m) => m.StaggeredTextDemo,
     ),
-  Thumbnail: StaggeredTextThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/staggered-text-reveal/StaggeredTextThumbnail").then(
+      (m) => m.StaggeredTextThumbnail,
+    ),
   sources: [
     {
       fileName: "StaggeredText.tsx",

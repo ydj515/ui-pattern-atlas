@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MentionInputThumbnail } from "@/entities/pattern/catalog/mention/MentionInputThumbnail";
 
 export const mentionPattern: Pattern = {
   slug: "mention",
@@ -33,7 +32,10 @@ export const mentionPattern: Pattern = {
   tags: [...BASE_TAGS, "combobox", "listbox", "aria-activedescendant"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/mention/MentionInputDemo").then((m) => m.MentionInputDemo),
-  Thumbnail: MentionInputThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/mention/MentionInputThumbnail").then(
+      (m) => m.MentionInputThumbnail,
+    ),
   sources: [
     {
       fileName: "MentionInput.tsx",

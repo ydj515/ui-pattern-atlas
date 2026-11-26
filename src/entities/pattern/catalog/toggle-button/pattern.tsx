@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ToggleButtonThumbnail } from "@/entities/pattern/catalog/toggle-button/ToggleButtonThumbnail";
 
 export const toggleButtonPattern: Pattern = {
   slug: "toggle-button",
@@ -35,7 +34,10 @@ export const toggleButtonPattern: Pattern = {
     import("@/entities/pattern/catalog/toggle-button/ToggleButtonDemo").then(
       (m) => m.ToggleButtonDemo,
     ),
-  Thumbnail: ToggleButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/toggle-button/ToggleButtonThumbnail").then(
+      (m) => m.ToggleButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "ToggleButton.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BadgeThumbnail } from "@/entities/pattern/catalog/badge/BadgeThumbnail";
 
 export const badgePattern: Pattern = {
   slug: "badge",
@@ -32,7 +31,8 @@ export const badgePattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "aria-label", "Icon button"],
   loadPreview: () => import("@/entities/pattern/catalog/badge/BadgeDemo").then((m) => m.BadgeDemo),
-  Thumbnail: BadgeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/badge/BadgeThumbnail").then((m) => m.BadgeThumbnail),
   sources: [
     {
       fileName: "Badge.tsx",

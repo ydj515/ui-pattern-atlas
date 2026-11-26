@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AttachmentTrayThumbnail } from "@/entities/pattern/catalog/file-attachment/AttachmentTrayThumbnail";
 
 export const fileAttachmentPattern: Pattern = {
   slug: "file-attachment",
@@ -35,7 +34,10 @@ export const fileAttachmentPattern: Pattern = {
     import("@/entities/pattern/catalog/file-attachment/AttachmentTrayDemo").then(
       (m) => m.AttachmentTrayDemo,
     ),
-  Thumbnail: AttachmentTrayThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/file-attachment/AttachmentTrayThumbnail").then(
+      (m) => m.AttachmentTrayThumbnail,
+    ),
   sources: [
     {
       fileName: "AttachmentTray.tsx",

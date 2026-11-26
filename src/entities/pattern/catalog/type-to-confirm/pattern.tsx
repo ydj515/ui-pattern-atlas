@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TypeToConfirmThumbnail } from "@/entities/pattern/catalog/type-to-confirm/TypeToConfirmThumbnail";
 
 export const typeToConfirmPattern: Pattern = {
   slug: "type-to-confirm",
@@ -39,7 +38,10 @@ export const typeToConfirmPattern: Pattern = {
     import("@/entities/pattern/catalog/type-to-confirm/TypeToConfirmDemo").then(
       (m) => m.TypeToConfirmDemo,
     ),
-  Thumbnail: TypeToConfirmThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/type-to-confirm/TypeToConfirmThumbnail").then(
+      (m) => m.TypeToConfirmThumbnail,
+    ),
   sources: [
     {
       fileName: "TypeToConfirm.tsx",

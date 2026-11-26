@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TextScrambleThumbnail } from "@/entities/pattern/catalog/text-scramble/TextScrambleThumbnail";
 
 export const textScramblePattern: Pattern = {
   slug: "text-scramble",
@@ -35,7 +34,10 @@ export const textScramblePattern: Pattern = {
     import("@/entities/pattern/catalog/text-scramble/TextScrambleDemo").then(
       (m) => m.TextScrambleDemo,
     ),
-  Thumbnail: TextScrambleThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/text-scramble/TextScrambleThumbnail").then(
+      (m) => m.TextScrambleThumbnail,
+    ),
   sources: [
     {
       fileName: "TextScramble.tsx",

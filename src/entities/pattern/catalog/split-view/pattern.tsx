@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SplitViewThumbnail } from "@/entities/pattern/catalog/split-view/SplitViewThumbnail";
 
 export const splitViewPattern: Pattern = {
   slug: "split-view",
@@ -33,7 +32,10 @@ export const splitViewPattern: Pattern = {
   tags: [...BASE_TAGS, "Container queries", "Responsive"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/split-view/SplitViewDemo").then((m) => m.SplitViewDemo),
-  Thumbnail: SplitViewThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/split-view/SplitViewThumbnail").then(
+      (m) => m.SplitViewThumbnail,
+    ),
   sources: [
     {
       fileName: "SplitView.tsx",

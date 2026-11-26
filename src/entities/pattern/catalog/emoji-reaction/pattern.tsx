@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EmojiReactionThumbnail } from "@/entities/pattern/catalog/emoji-reaction/EmojiReactionThumbnail";
 
 export const emojiReactionPattern: Pattern = {
   slug: "emoji-reaction",
@@ -35,7 +34,10 @@ export const emojiReactionPattern: Pattern = {
     import("@/entities/pattern/catalog/emoji-reaction/EmojiReactionDemo").then(
       (m) => m.EmojiReactionDemo,
     ),
-  Thumbnail: EmojiReactionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/emoji-reaction/EmojiReactionThumbnail").then(
+      (m) => m.EmojiReactionThumbnail,
+    ),
   sources: [
     {
       fileName: "EmojiReaction.tsx",

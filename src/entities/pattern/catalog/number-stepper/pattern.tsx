@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NumberStepperThumbnail } from "@/entities/pattern/catalog/number-stepper/NumberStepperThumbnail";
 
 export const numberStepperPattern: Pattern = {
   slug: "number-stepper",
@@ -35,7 +34,10 @@ export const numberStepperPattern: Pattern = {
     import("@/entities/pattern/catalog/number-stepper/NumberStepperDemo").then(
       (m) => m.NumberStepperDemo,
     ),
-  Thumbnail: NumberStepperThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/number-stepper/NumberStepperThumbnail").then(
+      (m) => m.NumberStepperThumbnail,
+    ),
   sources: [
     {
       fileName: "NumberStepper.tsx",

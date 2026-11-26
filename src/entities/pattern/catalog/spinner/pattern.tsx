@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SpinnerThumbnail } from "@/entities/pattern/catalog/spinner/SpinnerThumbnail";
 
 export const spinnerPattern: Pattern = {
   slug: "spinner",
@@ -23,7 +22,8 @@ export const spinnerPattern: Pattern = {
   tags: BASE_TAGS,
   loadPreview: () =>
     import("@/entities/pattern/catalog/spinner/SpinnerDemo").then((m) => m.SpinnerDemo),
-  Thumbnail: SpinnerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/spinner/SpinnerThumbnail").then((m) => m.SpinnerThumbnail),
   sources: [
     {
       fileName: "Spinner.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TextFieldThumbnail } from "@/entities/pattern/catalog/text-field/TextFieldThumbnail";
 
 export const textFieldPattern: Pattern = {
   slug: "text-field",
@@ -38,7 +37,10 @@ export const textFieldPattern: Pattern = {
   tags: [...BASE_TAGS, "Forms", "aria-describedby"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/text-field/TextFieldDemo").then((m) => m.TextFieldDemo),
-  Thumbnail: TextFieldThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/text-field/TextFieldThumbnail").then(
+      (m) => m.TextFieldThumbnail,
+    ),
   sources: [
     {
       fileName: "TextField.tsx",

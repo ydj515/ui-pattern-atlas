@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ContextMenuThumbnail } from "@/entities/pattern/catalog/context-menu/ContextMenuThumbnail";
 
 export const contextMenuPattern: Pattern = {
   slug: "context-menu",
@@ -49,7 +48,10 @@ export const contextMenuPattern: Pattern = {
     import("@/entities/pattern/catalog/context-menu/ContextMenuDemo").then(
       (m) => m.ContextMenuDemo,
     ),
-  Thumbnail: ContextMenuThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/context-menu/ContextMenuThumbnail").then(
+      (m) => m.ContextMenuThumbnail,
+    ),
   sources: [
     {
       fileName: "ContextMenu.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DataTableThumbnail } from "@/entities/pattern/catalog/data-table/DataTableThumbnail";
 
 export const dataTablePattern: Pattern = {
   slug: "data-table",
@@ -33,7 +32,10 @@ export const dataTablePattern: Pattern = {
   tags: [...BASE_TAGS, "aria-sort", "table"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/data-table/DataTableDemo").then((m) => m.DataTableDemo),
-  Thumbnail: DataTableThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/data-table/DataTableThumbnail").then(
+      (m) => m.DataTableThumbnail,
+    ),
   sources: [
     {
       fileName: "DataTable.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RepostMenuThumbnail } from "@/entities/pattern/catalog/repost/RepostMenuThumbnail";
 
 export const repostPattern: Pattern = {
   slug: "repost",
@@ -33,7 +32,10 @@ export const repostPattern: Pattern = {
   tags: [...BASE_TAGS, "menu", "aria-haspopup", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/repost/RepostMenuDemo").then((m) => m.RepostMenuDemo),
-  Thumbnail: RepostMenuThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/repost/RepostMenuThumbnail").then(
+      (m) => m.RepostMenuThumbnail,
+    ),
   sources: [
     {
       fileName: "RepostMenu.tsx",

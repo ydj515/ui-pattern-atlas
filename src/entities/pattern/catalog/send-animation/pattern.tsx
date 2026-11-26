@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SendButtonThumbnail } from "@/entities/pattern/catalog/send-animation/SendButtonThumbnail";
 
 export const sendAnimationPattern: Pattern = {
   slug: "send-animation",
@@ -35,7 +34,10 @@ export const sendAnimationPattern: Pattern = {
     import("@/entities/pattern/catalog/send-animation/SendButtonDemo").then(
       (m) => m.SendButtonDemo,
     ),
-  Thumbnail: SendButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/send-animation/SendButtonThumbnail").then(
+      (m) => m.SendButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "SendButton.tsx",

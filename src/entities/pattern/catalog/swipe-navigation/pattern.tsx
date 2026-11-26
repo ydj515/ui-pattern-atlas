@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SwipeNavigationThumbnail } from "@/entities/pattern/catalog/swipe-navigation/SwipeNavigationThumbnail";
 
 export const swipeNavigationPattern: Pattern = {
   slug: "swipe-navigation",
@@ -35,7 +34,10 @@ export const swipeNavigationPattern: Pattern = {
     import("@/entities/pattern/catalog/swipe-navigation/SwipeNavigationDemo").then(
       (m) => m.SwipeNavigationDemo,
     ),
-  Thumbnail: SwipeNavigationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/swipe-navigation/SwipeNavigationThumbnail").then(
+      (m) => m.SwipeNavigationThumbnail,
+    ),
   sources: [
     {
       fileName: "SwipeNavigation.tsx",

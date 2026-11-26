@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RatingSliderThumbnail } from "@/entities/pattern/catalog/rating-slider/RatingSliderThumbnail";
 
 export const ratingSliderPattern: Pattern = {
   slug: "rating-slider",
@@ -35,7 +34,10 @@ export const ratingSliderPattern: Pattern = {
     import("@/entities/pattern/catalog/rating-slider/RatingSliderDemo").then(
       (m) => m.RatingSliderDemo,
     ),
-  Thumbnail: RatingSliderThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/rating-slider/RatingSliderThumbnail").then(
+      (m) => m.RatingSliderThumbnail,
+    ),
   sources: [
     {
       fileName: "RatingSlider.tsx",

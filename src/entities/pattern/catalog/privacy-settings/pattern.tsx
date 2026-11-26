@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PrivacySettingsThumbnail } from "@/entities/pattern/catalog/privacy-settings/PrivacySettingsThumbnail";
 
 export const privacySettingsPattern: Pattern = {
   slug: "privacy-settings",
@@ -44,7 +43,10 @@ export const privacySettingsPattern: Pattern = {
     import("@/entities/pattern/catalog/privacy-settings/PrivacySettingsDemo").then(
       (m) => m.PrivacySettingsDemo,
     ),
-  Thumbnail: PrivacySettingsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/privacy-settings/PrivacySettingsThumbnail").then(
+      (m) => m.PrivacySettingsThumbnail,
+    ),
   sources: [
     {
       fileName: "PrivacySettings.tsx",

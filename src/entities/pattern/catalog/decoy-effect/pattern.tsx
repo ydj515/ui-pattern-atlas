@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { DecoyEffectThumbnail } from "@/entities/pattern/catalog/decoy-effect/DecoyEffectThumbnail";
 
 export const decoyEffectPattern: Pattern = {
   slug: "decoy-effect",
@@ -28,6 +27,9 @@ export const decoyEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/decoy-effect/DecoyEffectDemo").then(
       (m) => m.DecoyEffectDemo,
     ),
-  Thumbnail: DecoyEffectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/decoy-effect/DecoyEffectThumbnail").then(
+      (m) => m.DecoyEffectThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/decoy-effect/DecoyEffectDemo.tsx?raw"),
 };

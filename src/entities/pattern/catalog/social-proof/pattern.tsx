@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SocialProofThumbnail } from "@/entities/pattern/catalog/social-proof/SocialProofThumbnail";
 
 export const socialProofPattern: Pattern = {
   slug: "social-proof",
@@ -37,6 +36,9 @@ export const socialProofPattern: Pattern = {
     import("@/entities/pattern/catalog/social-proof/SocialProofDemo").then(
       (m) => m.SocialProofDemo,
     ),
-  Thumbnail: SocialProofThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/social-proof/SocialProofThumbnail").then(
+      (m) => m.SocialProofThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/social-proof/SocialProofDemo.tsx?raw"),
 };

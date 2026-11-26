@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { UpdatePromptThumbnail } from "@/entities/pattern/catalog/update-prompt/UpdatePromptThumbnail";
 
 export const updatePromptPattern: Pattern = {
   slug: "update-prompt",
@@ -34,7 +33,10 @@ export const updatePromptPattern: Pattern = {
     import("@/entities/pattern/catalog/update-prompt/UpdatePromptDemo").then(
       (m) => m.UpdatePromptDemo,
     ),
-  Thumbnail: UpdatePromptThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/update-prompt/UpdatePromptThumbnail").then(
+      (m) => m.UpdatePromptThumbnail,
+    ),
   sources: [
     {
       fileName: "UpdatePrompt.tsx",

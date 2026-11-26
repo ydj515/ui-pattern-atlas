@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { OrderTrackingThumbnail } from "@/entities/pattern/catalog/order-tracking/OrderTrackingThumbnail";
 
 export const orderTrackingPattern: Pattern = {
   slug: "order-tracking",
@@ -34,7 +33,10 @@ export const orderTrackingPattern: Pattern = {
     import("@/entities/pattern/catalog/order-tracking/OrderTrackingDemo").then(
       (m) => m.OrderTrackingDemo,
     ),
-  Thumbnail: OrderTrackingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/order-tracking/OrderTrackingThumbnail").then(
+      (m) => m.OrderTrackingThumbnail,
+    ),
   sources: [
     {
       fileName: "OrderTracking.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LikeButtonThumbnail } from "@/entities/pattern/catalog/like-button/LikeButtonThumbnail";
 
 export const likeButtonPattern: Pattern = {
   slug: "like-button",
@@ -33,7 +32,10 @@ export const likeButtonPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-pressed", "Optimistic UI", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/like-button/LikeButtonDemo").then((m) => m.LikeButtonDemo),
-  Thumbnail: LikeButtonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/like-button/LikeButtonThumbnail").then(
+      (m) => m.LikeButtonThumbnail,
+    ),
   sources: [
     {
       fileName: "LikeButton.tsx",

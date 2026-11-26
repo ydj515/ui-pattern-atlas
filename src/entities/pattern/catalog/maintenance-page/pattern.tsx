@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MaintenancePageThumbnail } from "@/entities/pattern/catalog/maintenance-page/MaintenancePageThumbnail";
 
 export const maintenancePagePattern: Pattern = {
   slug: "maintenance-page",
@@ -39,7 +38,10 @@ export const maintenancePagePattern: Pattern = {
     import("@/entities/pattern/catalog/maintenance-page/MaintenancePageDemo").then(
       (m) => m.MaintenancePageDemo,
     ),
-  Thumbnail: MaintenancePageThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/maintenance-page/MaintenancePageThumbnail").then(
+      (m) => m.MaintenancePageThumbnail,
+    ),
   sources: [
     {
       fileName: "MaintenancePage.tsx",

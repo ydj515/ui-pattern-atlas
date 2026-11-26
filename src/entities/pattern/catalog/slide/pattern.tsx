@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SlideThumbnail } from "@/entities/pattern/catalog/slide/SlideThumbnail";
 
 export const slidePattern: Pattern = {
   slug: "slide",
@@ -32,7 +31,8 @@ export const slidePattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "@starting-style", "CSS transition", "Reduced motion"],
   loadPreview: () => import("@/entities/pattern/catalog/slide/SlideDemo").then((m) => m.SlideDemo),
-  Thumbnail: SlideThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/slide/SlideThumbnail").then((m) => m.SlideThumbnail),
   sources: [
     {
       fileName: "Slide.tsx",

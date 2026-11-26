@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BarChartThumbnail } from "@/entities/pattern/catalog/bar-chart/BarChartThumbnail";
 
 export const barChartPattern: Pattern = {
   slug: "bar-chart",
@@ -38,7 +37,10 @@ export const barChartPattern: Pattern = {
   tags: [...BASE_TAGS, "figure", "figcaption", "transition"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/bar-chart/BarChartDemo").then((m) => m.BarChartDemo),
-  Thumbnail: BarChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bar-chart/BarChartThumbnail").then(
+      (m) => m.BarChartThumbnail,
+    ),
   sources: [
     {
       fileName: "BarChart.tsx",

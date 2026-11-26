@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StreamingTextThumbnail } from "@/entities/pattern/catalog/streaming-text/StreamingTextThumbnail";
 
 export const streamingTextPattern: Pattern = {
   slug: "streaming-text",
@@ -35,7 +34,10 @@ export const streamingTextPattern: Pattern = {
     import("@/entities/pattern/catalog/streaming-text/StreamingTextDemo").then(
       (m) => m.StreamingTextDemo,
     ),
-  Thumbnail: StreamingTextThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/streaming-text/StreamingTextThumbnail").then(
+      (m) => m.StreamingTextThumbnail,
+    ),
   sources: [
     {
       fileName: "StreamingText.tsx",

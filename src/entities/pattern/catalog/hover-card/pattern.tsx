@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HoverCardThumbnail } from "@/entities/pattern/catalog/hover-card/HoverCardThumbnail";
 
 export const hoverCardPattern: Pattern = {
   slug: "hover-card",
@@ -33,7 +32,10 @@ export const hoverCardPattern: Pattern = {
   tags: [...BASE_TAGS, "Pointer", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/hover-card/HoverCardDemo").then((m) => m.HoverCardDemo),
-  Thumbnail: HoverCardThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/hover-card/HoverCardThumbnail").then(
+      (m) => m.HoverCardThumbnail,
+    ),
   sources: [
     {
       fileName: "HoverCard.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { MinimalTypographyThumbnail } from "@/entities/pattern/catalog/minimal-typography/MinimalTypographyThumbnail";
 
 export const minimalTypographyPattern: Pattern = {
   slug: "minimal-typography",
@@ -28,7 +27,10 @@ export const minimalTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/minimal-typography/MinimalTypographyDemo").then(
       (m) => m.MinimalTypographyDemo,
     ),
-  Thumbnail: MinimalTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/minimal-typography/MinimalTypographyThumbnail").then(
+      (m) => m.MinimalTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/minimal-typography/MinimalTypographyDemo.tsx?raw"),
 };

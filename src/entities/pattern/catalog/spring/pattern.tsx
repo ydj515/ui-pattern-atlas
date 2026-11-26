@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SpringThumbnail } from "@/entities/pattern/catalog/spring/SpringThumbnail";
 
 export const springPattern: Pattern = {
   slug: "spring",
@@ -33,7 +32,8 @@ export const springPattern: Pattern = {
   tags: [...BASE_TAGS, "requestAnimationFrame", "Spring physics", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/spring/SpringDemo").then((m) => m.SpringDemo),
-  Thumbnail: SpringThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/spring/SpringThumbnail").then((m) => m.SpringThumbnail),
   sources: [
     {
       fileName: "Spring.tsx",

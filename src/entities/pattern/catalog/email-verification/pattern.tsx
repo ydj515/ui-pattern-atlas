@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EmailVerificationThumbnail } from "@/entities/pattern/catalog/email-verification/EmailVerificationThumbnail";
 
 export const emailVerificationPattern: Pattern = {
   slug: "email-verification",
@@ -34,7 +33,10 @@ export const emailVerificationPattern: Pattern = {
     import("@/entities/pattern/catalog/email-verification/EmailVerificationDemo").then(
       (m) => m.EmailVerificationDemo,
     ),
-  Thumbnail: EmailVerificationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/email-verification/EmailVerificationThumbnail").then(
+      (m) => m.EmailVerificationThumbnail,
+    ),
   sources: [
     {
       fileName: "EmailVerification.tsx",

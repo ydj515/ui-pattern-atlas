@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { Y2KChromeThumbnail } from "@/entities/pattern/catalog/chrome-typography/Y2KChromeThumbnail";
 
 export const chromeTypographyPattern: Pattern = {
   slug: "chrome-typography",
@@ -28,7 +27,10 @@ export const chromeTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/chrome-typography/Y2KChromeDemo").then(
       (m) => m.Y2KChromeDemo,
     ),
-  Thumbnail: Y2KChromeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/chrome-typography/Y2KChromeThumbnail").then(
+      (m) => m.Y2KChromeThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/chrome-typography/Y2KChromeDemo.tsx?raw"),
 };

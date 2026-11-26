@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SignaturePadThumbnail } from "@/entities/pattern/catalog/signature-pad/SignaturePadThumbnail";
 
 export const signaturePadPattern: Pattern = {
   slug: "signature-pad",
@@ -35,7 +34,10 @@ export const signaturePadPattern: Pattern = {
     import("@/entities/pattern/catalog/signature-pad/SignaturePadDemo").then(
       (m) => m.SignaturePadDemo,
     ),
-  Thumbnail: SignaturePadThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/signature-pad/SignaturePadThumbnail").then(
+      (m) => m.SignaturePadThumbnail,
+    ),
   sources: [
     {
       fileName: "SignaturePad.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SelectableTableThumbnail } from "@/entities/pattern/catalog/selectable-table/SelectableTableThumbnail";
 
 export const selectableTablePattern: Pattern = {
   slug: "selectable-table",
@@ -39,7 +38,10 @@ export const selectableTablePattern: Pattern = {
     import("@/entities/pattern/catalog/selectable-table/SelectableTableDemo").then(
       (m) => m.SelectableTableDemo,
     ),
-  Thumbnail: SelectableTableThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/selectable-table/SelectableTableThumbnail").then(
+      (m) => m.SelectableTableThumbnail,
+    ),
   sources: [
     {
       fileName: "SelectableTable.tsx",

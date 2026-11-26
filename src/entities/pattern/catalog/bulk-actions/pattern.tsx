@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BulkActionsThumbnail } from "@/entities/pattern/catalog/bulk-actions/BulkActionsThumbnail";
 
 export const bulkActionsPattern: Pattern = {
   slug: "bulk-actions",
@@ -35,7 +34,10 @@ export const bulkActionsPattern: Pattern = {
     import("@/entities/pattern/catalog/bulk-actions/BulkActionsDemo").then(
       (m) => m.BulkActionsDemo,
     ),
-  Thumbnail: BulkActionsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bulk-actions/BulkActionsThumbnail").then(
+      (m) => m.BulkActionsThumbnail,
+    ),
   sources: [
     {
       fileName: "BulkActions.tsx",

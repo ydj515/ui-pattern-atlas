@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { RoachMotelThumbnail } from "@/entities/pattern/catalog/roach-motel/RoachMotelThumbnail";
 
 export const roachMotelPattern: Pattern = {
   slug: "roach-motel",
@@ -36,6 +35,9 @@ export const roachMotelPattern: Pattern = {
   tags: ["다크 패턴"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/roach-motel/RoachMotelDemo").then((m) => m.RoachMotelDemo),
-  Thumbnail: RoachMotelThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/roach-motel/RoachMotelThumbnail").then(
+      (m) => m.RoachMotelThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/roach-motel/RoachMotelDemo.tsx?raw"),
 };

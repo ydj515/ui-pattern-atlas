@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ZeigarnikThumbnail } from "@/entities/pattern/catalog/zeigarnik-effect/ZeigarnikThumbnail";
 
 export const zeigarnikEffectPattern: Pattern = {
   slug: "zeigarnik-effect",
@@ -38,6 +37,9 @@ export const zeigarnikEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/zeigarnik-effect/ZeigarnikDemo").then(
       (m) => m.ZeigarnikDemo,
     ),
-  Thumbnail: ZeigarnikThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/zeigarnik-effect/ZeigarnikThumbnail").then(
+      (m) => m.ZeigarnikThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/zeigarnik-effect/ZeigarnikDemo.tsx?raw"),
 };

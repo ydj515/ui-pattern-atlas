@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PopoverThumbnail } from "@/entities/pattern/catalog/popover/PopoverThumbnail";
 
 export const popoverPattern: Pattern = {
   slug: "popover",
@@ -34,7 +33,8 @@ export const popoverPattern: Pattern = {
   tags: [...BASE_TAGS, "Non-modal"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/popover/PopoverDemo").then((m) => m.PopoverDemo),
-  Thumbnail: PopoverThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/popover/PopoverThumbnail").then((m) => m.PopoverThumbnail),
   sources: [
     {
       fileName: "Popover.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DrawerThumbnail } from "@/entities/pattern/catalog/drawer/DrawerThumbnail";
 
 export const drawerPattern: Pattern = {
   slug: "drawer",
@@ -36,7 +35,8 @@ export const drawerPattern: Pattern = {
   tags: [...BASE_TAGS, "dialog element"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/drawer/DrawerDemo").then((m) => m.DrawerDemo),
-  Thumbnail: DrawerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/drawer/DrawerThumbnail").then((m) => m.DrawerThumbnail),
   sources: [
     {
       fileName: "Drawer.tsx",

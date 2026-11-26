@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StickyActionBarThumbnail } from "@/entities/pattern/catalog/sticky-action-bar/StickyActionBarThumbnail";
 
 export const stickyActionBarPattern: Pattern = {
   slug: "sticky-action-bar",
@@ -35,7 +34,10 @@ export const stickyActionBarPattern: Pattern = {
     import("@/entities/pattern/catalog/sticky-action-bar/StickyActionBarDemo").then(
       (m) => m.StickyActionBarDemo,
     ),
-  Thumbnail: StickyActionBarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sticky-action-bar/StickyActionBarThumbnail").then(
+      (m) => m.StickyActionBarThumbnail,
+    ),
   sources: [
     {
       fileName: "StickyActionBar.tsx",

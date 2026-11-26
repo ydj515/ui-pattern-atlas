@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StepperThumbnail } from "@/entities/pattern/catalog/stepper/StepperThumbnail";
 
 export const stepperPattern: Pattern = {
   slug: "stepper",
@@ -33,7 +32,8 @@ export const stepperPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-current", "Ordered list"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/stepper/StepperDemo").then((m) => m.StepperDemo),
-  Thumbnail: StepperThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stepper/StepperThumbnail").then((m) => m.StepperThumbnail),
   sources: [
     {
       fileName: "Stepper.tsx",

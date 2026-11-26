@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FileUploadThumbnail } from "@/entities/pattern/catalog/file-upload/FileUploadThumbnail";
 
 export const fileUploadPattern: Pattern = {
   slug: "file-upload",
@@ -36,7 +35,10 @@ export const fileUploadPattern: Pattern = {
   tags: [...BASE_TAGS, "Drag and drop", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/file-upload/FileUploadDemo").then((m) => m.FileUploadDemo),
-  Thumbnail: FileUploadThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/file-upload/FileUploadThumbnail").then(
+      (m) => m.FileUploadThumbnail,
+    ),
   sources: [
     {
       fileName: "FileUpload.tsx",

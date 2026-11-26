@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { MinimalismThumbnail } from "@/entities/pattern/catalog/minimalism/MinimalismThumbnail";
 
 export const minimalismPattern: Pattern = {
   slug: "minimalism",
@@ -34,6 +33,9 @@ export const minimalismPattern: Pattern = {
   tags: ["디자인 스타일", "여백"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/minimalism/MinimalismDemo").then((m) => m.MinimalismDemo),
-  Thumbnail: MinimalismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/minimalism/MinimalismThumbnail").then(
+      (m) => m.MinimalismThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/minimalism/MinimalismDemo.tsx?raw"),
 };

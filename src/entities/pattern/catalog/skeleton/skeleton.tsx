@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SkeletonThumbnail } from "@/entities/pattern/catalog/skeleton/SkeletonThumbnail";
 
 export const skeletonPattern: Pattern = {
   slug: "skeleton",
@@ -35,7 +34,10 @@ export const skeletonPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-busy", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/skeleton/SkeletonDemo").then((m) => m.SkeletonDemo),
-  Thumbnail: SkeletonThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/skeleton/SkeletonThumbnail").then(
+      (m) => m.SkeletonThumbnail,
+    ),
   sources: [
     {
       fileName: "Skeleton.tsx",

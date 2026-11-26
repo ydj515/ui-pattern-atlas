@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { CutoutCollageThumbnail } from "@/entities/pattern/catalog/cutout-collage/CutoutCollageThumbnail";
 
 export const cutoutCollagePattern: Pattern = {
   slug: "cutout-collage",
@@ -28,7 +27,10 @@ export const cutoutCollagePattern: Pattern = {
     import("@/entities/pattern/catalog/cutout-collage/CutoutCollageDemo").then(
       (m) => m.CutoutCollageDemo,
     ),
-  Thumbnail: CutoutCollageThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/cutout-collage/CutoutCollageThumbnail").then(
+      (m) => m.CutoutCollageThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/cutout-collage/CutoutCollageDemo.tsx?raw"),
 };

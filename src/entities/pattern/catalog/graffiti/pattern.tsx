@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { GraffitiThumbnail } from "@/entities/pattern/catalog/graffiti/GraffitiThumbnail";
 
 export const graffitiPattern: Pattern = {
   slug: "graffiti",
@@ -26,6 +25,9 @@ export const graffitiPattern: Pattern = {
   tags: ["글자 스타일", "Graffiti"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/graffiti/GraffitiDemo").then((m) => m.GraffitiDemo),
-  Thumbnail: GraffitiThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/graffiti/GraffitiThumbnail").then(
+      (m) => m.GraffitiThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/graffiti/GraffitiDemo.tsx?raw"),
 };

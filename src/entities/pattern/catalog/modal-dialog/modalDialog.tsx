@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ModalDialogThumbnail } from "@/entities/pattern/catalog/modal-dialog/ModalDialogThumbnail";
 
 export const modalDialogPattern: Pattern = {
   slug: "modal-dialog",
@@ -38,7 +37,10 @@ export const modalDialogPattern: Pattern = {
     import("@/entities/pattern/catalog/modal-dialog/ModalDialogDemo").then(
       (m) => m.ModalDialogDemo,
     ),
-  Thumbnail: ModalDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/modal-dialog/ModalDialogThumbnail").then(
+      (m) => m.ModalDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "ModalDialog.tsx",

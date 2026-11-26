@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { NeoBrutalismThumbnail } from "@/entities/pattern/catalog/neo-brutalism/NeoBrutalismThumbnail";
 
 export const neoBrutalismPattern: Pattern = {
   slug: "neo-brutalism",
@@ -38,6 +37,9 @@ export const neoBrutalismPattern: Pattern = {
     import("@/entities/pattern/catalog/neo-brutalism/NeoBrutalismDemo").then(
       (m) => m.NeoBrutalismDemo,
     ),
-  Thumbnail: NeoBrutalismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/neo-brutalism/NeoBrutalismThumbnail").then(
+      (m) => m.NeoBrutalismThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/neo-brutalism/NeoBrutalismDemo.tsx?raw"),
 };

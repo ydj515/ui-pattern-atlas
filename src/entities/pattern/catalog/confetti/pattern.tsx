@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ConfettiThumbnail } from "@/entities/pattern/catalog/confetti/ConfettiThumbnail";
 
 export const confettiPattern: Pattern = {
   slug: "confetti",
@@ -33,7 +32,10 @@ export const confettiPattern: Pattern = {
   tags: [...BASE_TAGS, "Web Animations API", "aria-hidden", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/confetti/ConfettiDemo").then((m) => m.ConfettiDemo),
-  Thumbnail: ConfettiThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/confetti/ConfettiThumbnail").then(
+      (m) => m.ConfettiThumbnail,
+    ),
   sources: [
     {
       fileName: "Confetti.tsx",

@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { TreeTestingThumbnail } from "@/entities/pattern/catalog/tree-testing/TreeTestingThumbnail";
 
 export const treeTestingPattern: Pattern = {
   slug: "tree-testing",
@@ -41,6 +40,9 @@ export const treeTestingPattern: Pattern = {
     import("@/entities/pattern/catalog/tree-testing/TreeTestingDemo").then(
       (m) => m.TreeTestingDemo,
     ),
-  Thumbnail: TreeTestingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tree-testing/TreeTestingThumbnail").then(
+      (m) => m.TreeTestingThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/tree-testing/TreeTestingDemo.tsx?raw"),
 };

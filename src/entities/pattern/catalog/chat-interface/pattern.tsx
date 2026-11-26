@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ChatInterfaceThumbnail } from "@/entities/pattern/catalog/chat-interface/ChatInterfaceThumbnail";
 
 export const chatInterfacePattern: Pattern = {
   slug: "chat-interface",
@@ -35,7 +34,10 @@ export const chatInterfacePattern: Pattern = {
     import("@/entities/pattern/catalog/chat-interface/ChatInterfaceDemo").then(
       (m) => m.ChatInterfaceDemo,
     ),
-  Thumbnail: ChatInterfaceThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/chat-interface/ChatInterfaceThumbnail").then(
+      (m) => m.ChatInterfaceThumbnail,
+    ),
   sources: [
     {
       fileName: "ChatInterface.tsx",

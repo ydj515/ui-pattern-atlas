@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SafeAreaThumbnail } from "@/entities/pattern/catalog/safe-area/SafeAreaThumbnail";
 
 export const safeAreaPattern: Pattern = {
   slug: "safe-area",
@@ -36,7 +35,10 @@ export const safeAreaPattern: Pattern = {
   tags: [...BASE_TAGS, "env()", "Mobile"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/safe-area/SafeAreaDemo").then((m) => m.SafeAreaDemo),
-  Thumbnail: SafeAreaThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/safe-area/SafeAreaThumbnail").then(
+      (m) => m.SafeAreaThumbnail,
+    ),
   sources: [
     {
       fileName: "SafeArea.tsx",

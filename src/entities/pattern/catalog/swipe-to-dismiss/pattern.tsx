@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SwipeToDismissThumbnail } from "@/entities/pattern/catalog/swipe-to-dismiss/SwipeToDismissThumbnail";
 
 export const swipeToDismissPattern: Pattern = {
   slug: "swipe-to-dismiss",
@@ -35,7 +34,10 @@ export const swipeToDismissPattern: Pattern = {
     import("@/entities/pattern/catalog/swipe-to-dismiss/SwipeToDismissDemo").then(
       (m) => m.SwipeToDismissDemo,
     ),
-  Thumbnail: SwipeToDismissThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/swipe-to-dismiss/SwipeToDismissThumbnail").then(
+      (m) => m.SwipeToDismissThumbnail,
+    ),
   sources: [
     {
       fileName: "SwipeToDismiss.tsx",

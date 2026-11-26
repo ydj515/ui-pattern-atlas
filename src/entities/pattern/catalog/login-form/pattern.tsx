@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LoginFormThumbnail } from "@/entities/pattern/catalog/login-form/LoginFormThumbnail";
 
 export const loginFormPattern: Pattern = {
   slug: "login-form",
@@ -32,7 +31,10 @@ export const loginFormPattern: Pattern = {
   tags: [...BASE_TAGS, "form", "autocomplete", "role=alert"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/login-form/LoginFormDemo").then((m) => m.LoginFormDemo),
-  Thumbnail: LoginFormThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/login-form/LoginFormThumbnail").then(
+      (m) => m.LoginFormThumbnail,
+    ),
   sources: [
     {
       fileName: "LoginForm.tsx",

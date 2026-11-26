@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CommandPaletteThumbnail } from "@/entities/pattern/catalog/command-palette/CommandPaletteThumbnail";
 
 export const commandPalettePattern: Pattern = {
   slug: "command-palette",
@@ -35,7 +34,10 @@ export const commandPalettePattern: Pattern = {
     import("@/entities/pattern/catalog/command-palette/CommandPaletteDemo").then(
       (m) => m.CommandPaletteDemo,
     ),
-  Thumbnail: CommandPaletteThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/command-palette/CommandPaletteThumbnail").then(
+      (m) => m.CommandPaletteThumbnail,
+    ),
   sources: [
     {
       fileName: "CommandPalette.tsx",

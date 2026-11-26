@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { DisguisedAdsThumbnail } from "@/entities/pattern/catalog/disguised-ads/DisguisedAdsThumbnail";
 
 export const disguisedAdsPattern: Pattern = {
   slug: "disguised-ads",
@@ -36,6 +35,9 @@ export const disguisedAdsPattern: Pattern = {
     import("@/entities/pattern/catalog/disguised-ads/DisguisedAdsDemo").then(
       (m) => m.DisguisedAdsDemo,
     ),
-  Thumbnail: DisguisedAdsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/disguised-ads/DisguisedAdsThumbnail").then(
+      (m) => m.DisguisedAdsThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/disguised-ads/DisguisedAdsDemo.tsx?raw"),
 };

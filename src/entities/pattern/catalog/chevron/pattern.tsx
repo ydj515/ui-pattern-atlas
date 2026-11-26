@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ChevronThumbnail } from "@/entities/pattern/catalog/chevron/ChevronThumbnail";
 
 export const chevronPattern: Pattern = {
   slug: "chevron",
@@ -34,6 +33,7 @@ export const chevronPattern: Pattern = {
   tags: ["아이콘 이름", "이동"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/chevron/ChevronDemo").then((m) => m.ChevronDemo),
-  Thumbnail: ChevronThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/chevron/ChevronThumbnail").then((m) => m.ChevronThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/chevron/ChevronDemo.tsx?raw"),
 };

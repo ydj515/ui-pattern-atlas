@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AvatarThumbnail } from "@/entities/pattern/catalog/avatar/AvatarThumbnail";
 
 export const avatarPattern: Pattern = {
   slug: "avatar",
@@ -35,7 +34,8 @@ export const avatarPattern: Pattern = {
   tags: [...BASE_TAGS, "Images", "Fallback"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/avatar/AvatarDemo").then((m) => m.AvatarDemo),
-  Thumbnail: AvatarThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/avatar/AvatarThumbnail").then((m) => m.AvatarThumbnail),
   sources: [
     {
       fileName: "Avatar.tsx",

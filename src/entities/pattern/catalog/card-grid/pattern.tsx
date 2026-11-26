@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CardGridThumbnail } from "@/entities/pattern/catalog/card-grid/CardGridThumbnail";
 
 export const cardGridPattern: Pattern = {
   slug: "card-grid",
@@ -33,7 +32,10 @@ export const cardGridPattern: Pattern = {
   tags: [...BASE_TAGS, "CSS grid", "Flexbox"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/card-grid/CardGridDemo").then((m) => m.CardGridDemo),
-  Thumbnail: CardGridThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/card-grid/CardGridThumbnail").then(
+      (m) => m.CardGridThumbnail,
+    ),
   sources: [
     {
       fileName: "CardGrid.tsx",

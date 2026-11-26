@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DateInputThumbnail } from "@/entities/pattern/catalog/date-input/DateInputThumbnail";
 
 export const dateInputPattern: Pattern = {
   slug: "date-input",
@@ -33,7 +32,10 @@ export const dateInputPattern: Pattern = {
   tags: [...BASE_TAGS, "inputmode", "Validation"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/date-input/DateInputDemo").then((m) => m.DateInputDemo),
-  Thumbnail: DateInputThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/date-input/DateInputThumbnail").then(
+      (m) => m.DateInputThumbnail,
+    ),
   sources: [
     {
       fileName: "DateInput.tsx",

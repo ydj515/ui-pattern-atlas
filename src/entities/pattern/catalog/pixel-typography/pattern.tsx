@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { PixelTypographyThumbnail } from "@/entities/pattern/catalog/pixel-typography/PixelTypographyThumbnail";
 
 export const pixelTypographyPattern: Pattern = {
   slug: "pixel-typography",
@@ -28,7 +27,10 @@ export const pixelTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/pixel-typography/PixelTypographyDemo").then(
       (m) => m.PixelTypographyDemo,
     ),
-  Thumbnail: PixelTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pixel-typography/PixelTypographyThumbnail").then(
+      (m) => m.PixelTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/pixel-typography/PixelTypographyDemo.tsx?raw"),
 };

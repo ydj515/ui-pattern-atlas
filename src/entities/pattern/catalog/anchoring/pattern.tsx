@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { AnchoringThumbnail } from "@/entities/pattern/catalog/anchoring/AnchoringThumbnail";
 
 export const anchoringPattern: Pattern = {
   slug: "anchoring",
@@ -36,6 +35,9 @@ export const anchoringPattern: Pattern = {
   tags: ["가격의 심리", "기준점"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/anchoring/AnchoringDemo").then((m) => m.AnchoringDemo),
-  Thumbnail: AnchoringThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/anchoring/AnchoringThumbnail").then(
+      (m) => m.AnchoringThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/anchoring/AnchoringDemo.tsx?raw"),
 };

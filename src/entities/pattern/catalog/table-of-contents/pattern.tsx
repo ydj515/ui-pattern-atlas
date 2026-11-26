@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TableOfContentsThumbnail } from "@/entities/pattern/catalog/table-of-contents/TableOfContentsThumbnail";
 
 export const tableOfContentsPattern: Pattern = {
   slug: "table-of-contents",
@@ -35,7 +34,10 @@ export const tableOfContentsPattern: Pattern = {
     import("@/entities/pattern/catalog/table-of-contents/TableOfContentsDemo").then(
       (m) => m.TableOfContentsDemo,
     ),
-  Thumbnail: TableOfContentsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/table-of-contents/TableOfContentsThumbnail").then(
+      (m) => m.TableOfContentsThumbnail,
+    ),
   sources: [
     {
       fileName: "TableOfContents.tsx",

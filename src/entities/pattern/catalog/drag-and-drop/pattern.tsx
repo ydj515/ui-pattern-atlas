@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DragAndDropThumbnail } from "@/entities/pattern/catalog/drag-and-drop/DragAndDropThumbnail";
 
 export const dragAndDropPattern: Pattern = {
   slug: "drag-and-drop",
@@ -35,7 +34,10 @@ export const dragAndDropPattern: Pattern = {
     import("@/entities/pattern/catalog/drag-and-drop/DragAndDropDemo").then(
       (m) => m.DragAndDropDemo,
     ),
-  Thumbnail: DragAndDropThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/drag-and-drop/DragAndDropThumbnail").then(
+      (m) => m.DragAndDropThumbnail,
+    ),
   sources: [
     {
       fileName: "DragAndDrop.tsx",

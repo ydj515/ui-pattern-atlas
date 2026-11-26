@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CarouselThumbnail } from "@/entities/pattern/catalog/carousel/CarouselThumbnail";
 
 export const carouselPattern: Pattern = {
   slug: "carousel",
@@ -35,7 +34,10 @@ export const carouselPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "WCAG 2.2.2"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/carousel/CarouselDemo").then((m) => m.CarouselDemo),
-  Thumbnail: CarouselThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/carousel/CarouselThumbnail").then(
+      (m) => m.CarouselThumbnail,
+    ),
   sources: [
     {
       fileName: "Carousel.tsx",

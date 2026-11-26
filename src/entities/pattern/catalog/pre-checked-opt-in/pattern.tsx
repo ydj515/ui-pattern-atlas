@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { PreCheckedOptInThumbnail } from "@/entities/pattern/catalog/pre-checked-opt-in/PreCheckedOptInThumbnail";
 
 export const preCheckedOptInPattern: Pattern = {
   slug: "pre-checked-opt-in",
@@ -36,7 +35,10 @@ export const preCheckedOptInPattern: Pattern = {
     import("@/entities/pattern/catalog/pre-checked-opt-in/PreCheckedOptInDemo").then(
       (m) => m.PreCheckedOptInDemo,
     ),
-  Thumbnail: PreCheckedOptInThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pre-checked-opt-in/PreCheckedOptInThumbnail").then(
+      (m) => m.PreCheckedOptInThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/pre-checked-opt-in/PreCheckedOptInDemo.tsx?raw"),
 };

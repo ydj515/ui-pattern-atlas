@@ -1,3 +1,5 @@
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 
 import tailwindcss from "@tailwindcss/vite";
@@ -34,6 +36,37 @@ function spaFallback(): Plugin {
   };
 }
 
+/**
+ * Maps each catalog folder to its pattern category by reading the entry file, so thumbnails
+ * can be bundled per category.
+ */
+function readPatternCategories(): ReadonlyMap<string, string> {
+  const root = fileURLToPath(new URL("./src/entities/pattern/catalog", import.meta.url));
+  const categories = new Map<string, string>();
+  for (const folder of readdirSync(root, { withFileTypes: true })) {
+    if (!folder.isDirectory()) continue;
+    for (const file of readdirSync(join(root, folder.name))) {
+      if (!/^[a-z][A-Za-z]*\.tsx$/.test(file)) continue;
+      const source = readFileSync(join(root, folder.name, file), "utf8");
+      const category = /^\s*category: "([^"]+)",$/m.exec(source)?.[1];
+      if (category) categories.set(folder.name, category);
+    }
+  }
+  return categories;
+}
+
+const PATTERN_CATEGORIES = readPatternCategories();
+
+/**
+ * One chunk per category for catalog thumbnails: scrolling into a topic fetches its
+ * miniatures in one request instead of one per card.
+ */
+function thumbnailChunkName(moduleId: string): string | null {
+  const folder = /catalog[\\/]([^\\/]+)[\\/][^\\/]+Thumbnail\.tsx$/.exec(moduleId)?.[1];
+  const category = folder ? PATTERN_CATEGORIES.get(folder) : undefined;
+  return category ? `thumbs-${category}` : null;
+}
+
 export default defineConfig({
   base: resolveBasePath(process.env.BASE_PATH),
   plugins: [react(), tailwindcss(), spaFallback()],
@@ -46,6 +79,7 @@ export default defineConfig({
               name: "vendor",
               test: /node_modules[\\/](?:react|react-dom|react-router|scheduler)[\\/]/,
             },
+            { name: thumbnailChunkName, debugName: "thumbnails-by-category" },
           ],
         },
       },

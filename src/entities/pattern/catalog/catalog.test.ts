@@ -64,7 +64,7 @@ describe("pattern catalog", () => {
   it.each(PATTERNS.map((pattern) => [pattern.slug, pattern] as const))(
     "%s thumbnail replays the same scenario (copy) as its demo",
     async (_slug, pattern) => {
-      const { container } = render(createElement(pattern.Thumbnail));
+      const { container } = render(createElement(await pattern.loadThumbnail()));
       const loadUsage =
         pattern.kind === "concept"
           ? pattern.loadDemoSource

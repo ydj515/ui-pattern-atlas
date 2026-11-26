@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CompletionStampThumbnail } from "@/entities/pattern/catalog/completion-stamp/CompletionStampThumbnail";
 
 export const completionStampPattern: Pattern = {
   slug: "completion-stamp",
@@ -35,7 +34,10 @@ export const completionStampPattern: Pattern = {
     import("@/entities/pattern/catalog/completion-stamp/CompletionStampDemo").then(
       (m) => m.CompletionStampDemo,
     ),
-  Thumbnail: CompletionStampThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/completion-stamp/CompletionStampThumbnail").then(
+      (m) => m.CompletionStampThumbnail,
+    ),
   sources: [
     {
       fileName: "CompletionStamp.tsx",

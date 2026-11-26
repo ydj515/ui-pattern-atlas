@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SwitchThumbnail } from "@/entities/pattern/catalog/switch/SwitchThumbnail";
 
 export const switchPattern: Pattern = {
   slug: "switch",
@@ -33,7 +32,8 @@ export const switchPattern: Pattern = {
   tags: [...BASE_TAGS, "role=switch"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/switch/SwitchDemo").then((m) => m.SwitchDemo),
-  Thumbnail: SwitchThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/switch/SwitchThumbnail").then((m) => m.SwitchThumbnail),
   sources: [
     {
       fileName: "Switch.tsx",

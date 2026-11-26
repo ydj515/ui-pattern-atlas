@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ThreeDExtrudeThumbnail } from "@/entities/pattern/catalog/three-d-extrude/ThreeDExtrudeThumbnail";
 
 export const threeDExtrudePattern: Pattern = {
   slug: "three-d-extrude",
@@ -28,7 +27,10 @@ export const threeDExtrudePattern: Pattern = {
     import("@/entities/pattern/catalog/three-d-extrude/ThreeDExtrudeDemo").then(
       (m) => m.ThreeDExtrudeDemo,
     ),
-  Thumbnail: ThreeDExtrudeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/three-d-extrude/ThreeDExtrudeThumbnail").then(
+      (m) => m.ThreeDExtrudeThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/three-d-extrude/ThreeDExtrudeDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PageIndicatorThumbnail } from "@/entities/pattern/catalog/page-indicator/PageIndicatorThumbnail";
 
 export const pageIndicatorPattern: Pattern = {
   slug: "page-indicator",
@@ -35,7 +34,10 @@ export const pageIndicatorPattern: Pattern = {
     import("@/entities/pattern/catalog/page-indicator/PageIndicatorDemo").then(
       (m) => m.PageIndicatorDemo,
     ),
-  Thumbnail: PageIndicatorThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/page-indicator/PageIndicatorThumbnail").then(
+      (m) => m.PageIndicatorThumbnail,
+    ),
   sources: [
     {
       fileName: "PageIndicator.tsx",

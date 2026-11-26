@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ResponsiveGridThumbnail } from "@/entities/pattern/catalog/responsive-grid/ResponsiveGridThumbnail";
 
 export const responsiveGridPattern: Pattern = {
   slug: "responsive-grid",
@@ -35,7 +34,10 @@ export const responsiveGridPattern: Pattern = {
     import("@/entities/pattern/catalog/responsive-grid/ResponsiveGridDemo").then(
       (m) => m.ResponsiveGridDemo,
     ),
-  Thumbnail: ResponsiveGridThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/responsive-grid/ResponsiveGridThumbnail").then(
+      (m) => m.ResponsiveGridThumbnail,
+    ),
   sources: [
     {
       fileName: "ResponsiveGrid.tsx",

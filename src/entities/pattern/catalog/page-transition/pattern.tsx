@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PageTransitionThumbnail } from "@/entities/pattern/catalog/page-transition/PageTransitionThumbnail";
 
 export const pageTransitionPattern: Pattern = {
   slug: "page-transition",
@@ -39,7 +38,10 @@ export const pageTransitionPattern: Pattern = {
     import("@/entities/pattern/catalog/page-transition/PageTransitionDemo").then(
       (m) => m.PageTransitionDemo,
     ),
-  Thumbnail: PageTransitionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/page-transition/PageTransitionThumbnail").then(
+      (m) => m.PageTransitionThumbnail,
+    ),
   sources: [
     {
       fileName: "PageTransition.tsx",

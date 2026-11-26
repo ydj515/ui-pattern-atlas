@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PaymentMethodThumbnail } from "@/entities/pattern/catalog/payment-method/PaymentMethodThumbnail";
 
 export const paymentMethodPattern: Pattern = {
   slug: "payment-method",
@@ -34,7 +33,10 @@ export const paymentMethodPattern: Pattern = {
     import("@/entities/pattern/catalog/payment-method/PaymentMethodDemo").then(
       (m) => m.PaymentMethodDemo,
     ),
-  Thumbnail: PaymentMethodThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/payment-method/PaymentMethodThumbnail").then(
+      (m) => m.PaymentMethodThumbnail,
+    ),
   sources: [
     {
       fileName: "PaymentMethod.tsx",

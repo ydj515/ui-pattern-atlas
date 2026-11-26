@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BauhausThumbnail } from "@/entities/pattern/catalog/bauhaus/BauhausThumbnail";
 
 export const bauhausPattern: Pattern = {
   slug: "bauhaus",
@@ -32,6 +31,7 @@ export const bauhausPattern: Pattern = {
   tags: ["글자 스타일", "Bauhaus"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/bauhaus/BauhausDemo").then((m) => m.BauhausDemo),
-  Thumbnail: BauhausThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bauhaus/BauhausThumbnail").then((m) => m.BauhausThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/bauhaus/BauhausDemo.tsx?raw"),
 };

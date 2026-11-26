@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CollapsiblePanelThumbnail } from "@/entities/pattern/catalog/collapsible-panel/CollapsiblePanelThumbnail";
 
 export const collapsiblePanelPattern: Pattern = {
   slug: "collapsible-panel",
@@ -35,7 +34,10 @@ export const collapsiblePanelPattern: Pattern = {
     import("@/entities/pattern/catalog/collapsible-panel/CollapsiblePanelDemo").then(
       (m) => m.CollapsiblePanelDemo,
     ),
-  Thumbnail: CollapsiblePanelThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/collapsible-panel/CollapsiblePanelThumbnail").then(
+      (m) => m.CollapsiblePanelThumbnail,
+    ),
   sources: [
     {
       fileName: "CollapsiblePanel.tsx",

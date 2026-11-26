@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TapTargetThumbnail } from "@/entities/pattern/catalog/tap/TapTargetThumbnail";
 
 export const tapPattern: Pattern = {
   slug: "tap",
@@ -33,7 +32,8 @@ export const tapPattern: Pattern = {
   tags: [...BASE_TAGS, "WCAG 2.5.8", "touch-action"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/tap/TapTargetDemo").then((m) => m.TapTargetDemo),
-  Thumbnail: TapTargetThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tap/TapTargetThumbnail").then((m) => m.TapTargetThumbnail),
   sources: [
     {
       fileName: "TapTarget.tsx",

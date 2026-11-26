@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DashboardLayoutThumbnail } from "@/entities/pattern/catalog/dashboard-layout/DashboardLayoutThumbnail";
 
 export const dashboardLayoutPattern: Pattern = {
   slug: "dashboard-layout",
@@ -37,7 +36,10 @@ export const dashboardLayoutPattern: Pattern = {
     import("@/entities/pattern/catalog/dashboard-layout/DashboardLayoutDemo").then(
       (m) => m.DashboardLayoutDemo,
     ),
-  Thumbnail: DashboardLayoutThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/dashboard-layout/DashboardLayoutThumbnail").then(
+      (m) => m.DashboardLayoutThumbnail,
+    ),
   sources: [
     {
       fileName: "DashboardLayout.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CalendarHeatmapThumbnail } from "@/entities/pattern/catalog/calendar-heatmap/CalendarHeatmapThumbnail";
 
 export const calendarHeatmapPattern: Pattern = {
   slug: "calendar-heatmap",
@@ -34,7 +33,10 @@ export const calendarHeatmapPattern: Pattern = {
     import("@/entities/pattern/catalog/calendar-heatmap/CalendarHeatmapDemo").then(
       (m) => m.CalendarHeatmapDemo,
     ),
-  Thumbnail: CalendarHeatmapThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/calendar-heatmap/CalendarHeatmapThumbnail").then(
+      (m) => m.CalendarHeatmapThumbnail,
+    ),
   sources: [
     {
       fileName: "CalendarHeatmap.tsx",

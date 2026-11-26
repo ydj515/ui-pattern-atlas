@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BentoGridThumbnail } from "@/entities/pattern/catalog/bento-grid/BentoGridThumbnail";
 
 export const bentoGridPattern: Pattern = {
   slug: "bento-grid",
@@ -35,7 +34,10 @@ export const bentoGridPattern: Pattern = {
   tags: [...BASE_TAGS, "CSS grid", "Marketing"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/bento-grid/BentoGridDemo").then((m) => m.BentoGridDemo),
-  Thumbnail: BentoGridThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bento-grid/BentoGridThumbnail").then(
+      (m) => m.BentoGridThumbnail,
+    ),
   sources: [
     {
       fileName: "BentoGrid.tsx",

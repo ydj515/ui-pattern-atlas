@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FullBleedThumbnail } from "@/entities/pattern/catalog/full-bleed/FullBleedThumbnail";
 
 export const fullBleedPattern: Pattern = {
   slug: "full-bleed",
@@ -30,7 +29,10 @@ export const fullBleedPattern: Pattern = {
   tags: [...BASE_TAGS, "CSS grid", "Typography"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/full-bleed/FullBleedDemo").then((m) => m.FullBleedDemo),
-  Thumbnail: FullBleedThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/full-bleed/FullBleedThumbnail").then(
+      (m) => m.FullBleedThumbnail,
+    ),
   sources: [
     {
       fileName: "FullBleed.tsx",

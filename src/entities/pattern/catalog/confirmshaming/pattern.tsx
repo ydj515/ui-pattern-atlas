@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ConfirmshamingThumbnail } from "@/entities/pattern/catalog/confirmshaming/ConfirmshamingThumbnail";
 
 export const confirmshamingPattern: Pattern = {
   slug: "confirmshaming",
@@ -38,7 +37,10 @@ export const confirmshamingPattern: Pattern = {
     import("@/entities/pattern/catalog/confirmshaming/ConfirmshamingDemo").then(
       (m) => m.ConfirmshamingDemo,
     ),
-  Thumbnail: ConfirmshamingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/confirmshaming/ConfirmshamingThumbnail").then(
+      (m) => m.ConfirmshamingThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/confirmshaming/ConfirmshamingDemo.tsx?raw"),
 };

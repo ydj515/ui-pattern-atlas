@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FabThumbnail } from "@/entities/pattern/catalog/fab/FabThumbnail";
 
 export const fabPattern: Pattern = {
   slug: "fab",
@@ -31,7 +30,8 @@ export const fabPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "Mobile", "Scroll"],
   loadPreview: () => import("@/entities/pattern/catalog/fab/FabDemo").then((m) => m.FabDemo),
-  Thumbnail: FabThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/fab/FabThumbnail").then((m) => m.FabThumbnail),
   sources: [
     {
       fileName: "Fab.tsx",

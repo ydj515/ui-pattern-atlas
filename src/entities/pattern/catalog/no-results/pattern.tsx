@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { NoResultsThumbnail } from "@/entities/pattern/catalog/no-results/NoResultsThumbnail";
 
 export const noResultsPattern: Pattern = {
   slug: "no-results",
@@ -33,7 +32,10 @@ export const noResultsPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-live", "Search"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/no-results/NoResultsDemo").then((m) => m.NoResultsDemo),
-  Thumbnail: NoResultsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/no-results/NoResultsThumbnail").then(
+      (m) => m.NoResultsThumbnail,
+    ),
   sources: [
     {
       fileName: "NoResults.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LowestPriceLabelThumbnail } from "@/entities/pattern/catalog/lowest-price-label/LowestPriceLabelThumbnail";
 
 export const lowestPriceLabelPattern: Pattern = {
   slug: "lowest-price-label",
@@ -34,7 +33,10 @@ export const lowestPriceLabelPattern: Pattern = {
     import("@/entities/pattern/catalog/lowest-price-label/LowestPriceLabelDemo").then(
       (m) => m.LowestPriceLabelDemo,
     ),
-  Thumbnail: LowestPriceLabelThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/lowest-price-label/LowestPriceLabelThumbnail").then(
+      (m) => m.LowestPriceLabelThumbnail,
+    ),
   sources: [
     {
       fileName: "LowestPriceLabel.tsx",

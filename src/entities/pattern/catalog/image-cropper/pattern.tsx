@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ImageCropperThumbnail } from "@/entities/pattern/catalog/image-cropper/ImageCropperThumbnail";
 
 export const imageCropperPattern: Pattern = {
   slug: "image-cropper",
@@ -32,7 +31,10 @@ export const imageCropperPattern: Pattern = {
     import("@/entities/pattern/catalog/image-cropper/ImageCropperDemo").then(
       (m) => m.ImageCropperDemo,
     ),
-  Thumbnail: ImageCropperThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/image-cropper/ImageCropperThumbnail").then(
+      (m) => m.ImageCropperThumbnail,
+    ),
   sources: [
     {
       fileName: "ImageCropper.tsx",

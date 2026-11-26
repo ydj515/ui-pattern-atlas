@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { KpiCardThumbnail } from "@/entities/pattern/catalog/kpi-card/KpiCardThumbnail";
 
 export const kpiCardPattern: Pattern = {
   slug: "kpi-card",
@@ -32,7 +31,8 @@ export const kpiCardPattern: Pattern = {
   tags: [...BASE_TAGS, "section", "tabular-nums"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/kpi-card/KpiCardDemo").then((m) => m.KpiCardDemo),
-  Thumbnail: KpiCardThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/kpi-card/KpiCardThumbnail").then((m) => m.KpiCardThumbnail),
   sources: [
     {
       fileName: "KpiCard.tsx",

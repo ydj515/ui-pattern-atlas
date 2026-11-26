@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SelectThumbnail } from "@/entities/pattern/catalog/select/SelectThumbnail";
 
 export const selectPattern: Pattern = {
   slug: "select",
@@ -33,7 +32,8 @@ export const selectPattern: Pattern = {
   tags: [...BASE_TAGS, "Native select", "Forms"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/select/SelectDemo").then((m) => m.SelectDemo),
-  Thumbnail: SelectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/select/SelectThumbnail").then((m) => m.SelectThumbnail),
   sources: [
     {
       fileName: "Select.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ReceiptSummaryThumbnail } from "@/entities/pattern/catalog/receipt-summary/ReceiptSummaryThumbnail";
 
 export const receiptSummaryPattern: Pattern = {
   slug: "receipt-summary",
@@ -35,7 +34,10 @@ export const receiptSummaryPattern: Pattern = {
     import("@/entities/pattern/catalog/receipt-summary/ReceiptSummaryDemo").then(
       (m) => m.ReceiptSummaryDemo,
     ),
-  Thumbnail: ReceiptSummaryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/receipt-summary/ReceiptSummaryThumbnail").then(
+      (m) => m.ReceiptSummaryThumbnail,
+    ),
   sources: [
     {
       fileName: "ReceiptSummary.tsx",

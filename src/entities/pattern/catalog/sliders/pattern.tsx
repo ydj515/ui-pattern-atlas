@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SlidersThumbnail } from "@/entities/pattern/catalog/sliders/SlidersThumbnail";
 
 export const slidersPattern: Pattern = {
   slug: "sliders",
@@ -34,6 +33,7 @@ export const slidersPattern: Pattern = {
   tags: ["아이콘 이름", "필터"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/sliders/SlidersDemo").then((m) => m.SlidersDemo),
-  Thumbnail: SlidersThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/sliders/SlidersThumbnail").then((m) => m.SlidersThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/sliders/SlidersDemo.tsx?raw"),
 };

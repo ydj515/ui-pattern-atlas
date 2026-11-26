@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RecurrencePickerThumbnail } from "@/entities/pattern/catalog/recurrence-picker/RecurrencePickerThumbnail";
 
 export const recurrencePickerPattern: Pattern = {
   slug: "recurrence-picker",
@@ -32,7 +31,10 @@ export const recurrencePickerPattern: Pattern = {
     import("@/entities/pattern/catalog/recurrence-picker/RecurrencePickerDemo").then(
       (m) => m.RecurrencePickerDemo,
     ),
-  Thumbnail: RecurrencePickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/recurrence-picker/RecurrencePickerThumbnail").then(
+      (m) => m.RecurrencePickerThumbnail,
+    ),
   sources: [
     {
       fileName: "RecurrencePicker.tsx",

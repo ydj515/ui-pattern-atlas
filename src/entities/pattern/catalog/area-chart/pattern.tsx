@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AreaChartThumbnail } from "@/entities/pattern/catalog/area-chart/AreaChartThumbnail";
 
 export const areaChartPattern: Pattern = {
   slug: "area-chart",
@@ -32,7 +31,10 @@ export const areaChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "aria-live", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/area-chart/AreaChartDemo").then((m) => m.AreaChartDemo),
-  Thumbnail: AreaChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/area-chart/AreaChartThumbnail").then(
+      (m) => m.AreaChartThumbnail,
+    ),
   sources: [
     {
       fileName: "AreaChart.tsx",

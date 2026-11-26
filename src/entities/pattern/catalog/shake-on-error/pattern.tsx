@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ShakeThumbnail } from "@/entities/pattern/catalog/shake-on-error/ShakeThumbnail";
 
 export const shakeOnErrorPattern: Pattern = {
   slug: "shake-on-error",
@@ -33,7 +32,10 @@ export const shakeOnErrorPattern: Pattern = {
   tags: [...BASE_TAGS, "Web Animations API", "aria-invalid", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/shake-on-error/ShakeDemo").then((m) => m.ShakeDemo),
-  Thumbnail: ShakeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/shake-on-error/ShakeThumbnail").then(
+      (m) => m.ShakeThumbnail,
+    ),
   sources: [
     {
       fileName: "Shake.tsx",

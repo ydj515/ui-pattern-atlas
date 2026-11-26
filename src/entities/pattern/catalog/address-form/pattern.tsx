@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AddressFormThumbnail } from "@/entities/pattern/catalog/address-form/AddressFormThumbnail";
 
 export const addressFormPattern: Pattern = {
   slug: "address-form",
@@ -34,7 +33,10 @@ export const addressFormPattern: Pattern = {
     import("@/entities/pattern/catalog/address-form/AddressFormDemo").then(
       (m) => m.AddressFormDemo,
     ),
-  Thumbnail: AddressFormThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/address-form/AddressFormThumbnail").then(
+      (m) => m.AddressFormThumbnail,
+    ),
   sources: [
     {
       fileName: "AddressForm.tsx",

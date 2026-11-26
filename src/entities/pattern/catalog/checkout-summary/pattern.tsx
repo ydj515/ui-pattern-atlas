@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CheckoutSummaryThumbnail } from "@/entities/pattern/catalog/checkout-summary/CheckoutSummaryThumbnail";
 
 export const checkoutSummaryPattern: Pattern = {
   slug: "checkout-summary",
@@ -30,7 +29,10 @@ export const checkoutSummaryPattern: Pattern = {
     import("@/entities/pattern/catalog/checkout-summary/CheckoutSummaryDemo").then(
       (m) => m.CheckoutSummaryDemo,
     ),
-  Thumbnail: CheckoutSummaryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/checkout-summary/CheckoutSummaryThumbnail").then(
+      (m) => m.CheckoutSummaryThumbnail,
+    ),
   sources: [
     {
       fileName: "CheckoutSummary.tsx",

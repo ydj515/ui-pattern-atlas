@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ForwardDialogThumbnail } from "@/entities/pattern/catalog/send-forward/ForwardDialogThumbnail";
 
 export const sendForwardPattern: Pattern = {
   slug: "send-forward",
@@ -35,7 +34,10 @@ export const sendForwardPattern: Pattern = {
     import("@/entities/pattern/catalog/send-forward/ForwardDialogDemo").then(
       (m) => m.ForwardDialogDemo,
     ),
-  Thumbnail: ForwardDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/send-forward/ForwardDialogThumbnail").then(
+      (m) => m.ForwardDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "ForwardDialog.tsx",

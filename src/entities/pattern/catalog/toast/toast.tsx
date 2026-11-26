@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ToastThumbnail } from "@/entities/pattern/catalog/toast/ToastThumbnail";
 
 export const toastPattern: Pattern = {
   slug: "toast",
@@ -35,7 +34,8 @@ export const toastPattern: Pattern = {
   ],
   tags: [...BASE_TAGS, "aria-live", "Context API"],
   loadPreview: () => import("@/entities/pattern/catalog/toast/ToastDemo").then((m) => m.ToastDemo),
-  Thumbnail: ToastThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/toast/ToastThumbnail").then((m) => m.ToastThumbnail),
   sources: [
     {
       fileName: "Toast.tsx",

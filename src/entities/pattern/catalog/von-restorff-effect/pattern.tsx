@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { VonRestorffThumbnail } from "@/entities/pattern/catalog/von-restorff-effect/VonRestorffThumbnail";
 
 export const vonRestorffEffectPattern: Pattern = {
   slug: "von-restorff-effect",
@@ -38,7 +37,10 @@ export const vonRestorffEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/von-restorff-effect/VonRestorffDemo").then(
       (m) => m.VonRestorffDemo,
     ),
-  Thumbnail: VonRestorffThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/von-restorff-effect/VonRestorffThumbnail").then(
+      (m) => m.VonRestorffThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/von-restorff-effect/VonRestorffDemo.tsx?raw"),
 };

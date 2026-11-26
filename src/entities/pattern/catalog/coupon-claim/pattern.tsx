@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CouponClaimThumbnail } from "@/entities/pattern/catalog/coupon-claim/CouponClaimThumbnail";
 
 export const couponClaimPattern: Pattern = {
   slug: "coupon-claim",
@@ -34,7 +33,10 @@ export const couponClaimPattern: Pattern = {
     import("@/entities/pattern/catalog/coupon-claim/CouponClaimDemo").then(
       (m) => m.CouponClaimDemo,
     ),
-  Thumbnail: CouponClaimThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/coupon-claim/CouponClaimThumbnail").then(
+      (m) => m.CouponClaimThumbnail,
+    ),
   sources: [
     {
       fileName: "CouponClaim.tsx",

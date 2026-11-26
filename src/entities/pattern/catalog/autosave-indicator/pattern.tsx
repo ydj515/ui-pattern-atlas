@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AutosaveIndicatorThumbnail } from "@/entities/pattern/catalog/autosave-indicator/AutosaveIndicatorThumbnail";
 
 export const autosaveIndicatorPattern: Pattern = {
   slug: "autosave-indicator",
@@ -38,7 +37,10 @@ export const autosaveIndicatorPattern: Pattern = {
     import("@/entities/pattern/catalog/autosave-indicator/AutosaveIndicatorDemo").then(
       (m) => m.AutosaveIndicatorDemo,
     ),
-  Thumbnail: AutosaveIndicatorThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/autosave-indicator/AutosaveIndicatorThumbnail").then(
+      (m) => m.AutosaveIndicatorThumbnail,
+    ),
   sources: [
     {
       fileName: "AutosaveIndicator.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RevealThumbnail } from "@/entities/pattern/catalog/scroll-reveal/RevealThumbnail";
 
 export const scrollRevealPattern: Pattern = {
   slug: "scroll-reveal",
@@ -33,7 +32,10 @@ export const scrollRevealPattern: Pattern = {
   tags: [...BASE_TAGS, "IntersectionObserver", "CSS transition", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/scroll-reveal/RevealDemo").then((m) => m.RevealDemo),
-  Thumbnail: RevealThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scroll-reveal/RevealThumbnail").then(
+      (m) => m.RevealThumbnail,
+    ),
   sources: [
     {
       fileName: "Reveal.tsx",

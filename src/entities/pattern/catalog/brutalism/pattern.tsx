@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BrutalismThumbnail } from "@/entities/pattern/catalog/brutalism/BrutalismThumbnail";
 
 export const brutalismPattern: Pattern = {
   slug: "brutalism",
@@ -40,6 +39,9 @@ export const brutalismPattern: Pattern = {
   tags: ["디자인 스타일", "날것"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/brutalism/BrutalismDemo").then((m) => m.BrutalismDemo),
-  Thumbnail: BrutalismThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/brutalism/BrutalismThumbnail").then(
+      (m) => m.BrutalismThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/brutalism/BrutalismDemo.tsx?raw"),
 };

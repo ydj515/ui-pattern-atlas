@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AnimatedHighlightThumbnail } from "@/entities/pattern/catalog/animated-highlight/AnimatedHighlightThumbnail";
 
 export const animatedHighlightPattern: Pattern = {
   slug: "animated-highlight",
@@ -35,7 +34,10 @@ export const animatedHighlightPattern: Pattern = {
     import("@/entities/pattern/catalog/animated-highlight/AnimatedHighlightDemo").then(
       (m) => m.AnimatedHighlightDemo,
     ),
-  Thumbnail: AnimatedHighlightThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/animated-highlight/AnimatedHighlightThumbnail").then(
+      (m) => m.AnimatedHighlightThumbnail,
+    ),
   sources: [
     {
       fileName: "AnimatedHighlight.tsx",

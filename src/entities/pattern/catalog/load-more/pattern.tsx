@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LoadMoreThumbnail } from "@/entities/pattern/catalog/load-more/LoadMoreThumbnail";
 
 export const loadMorePattern: Pattern = {
   slug: "load-more",
@@ -33,7 +32,10 @@ export const loadMorePattern: Pattern = {
   tags: [...BASE_TAGS, "Focus management", "Pagination"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/load-more/LoadMoreDemo").then((m) => m.LoadMoreDemo),
-  Thumbnail: LoadMoreThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/load-more/LoadMoreThumbnail").then(
+      (m) => m.LoadMoreThumbnail,
+    ),
   sources: [
     {
       fileName: "LoadMore.tsx",

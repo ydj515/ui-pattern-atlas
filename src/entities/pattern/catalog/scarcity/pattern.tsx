@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { ScarcityThumbnail } from "@/entities/pattern/catalog/scarcity/ScarcityThumbnail";
 
 export const scarcityPattern: Pattern = {
   slug: "scarcity",
@@ -34,6 +33,9 @@ export const scarcityPattern: Pattern = {
   tags: ["인지 편향", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/scarcity/ScarcityDemo").then((m) => m.ScarcityDemo),
-  Thumbnail: ScarcityThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/scarcity/ScarcityThumbnail").then(
+      (m) => m.ScarcityThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/scarcity/ScarcityDemo.tsx?raw"),
 };

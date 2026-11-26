@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { GroupedListThumbnail } from "@/entities/pattern/catalog/grouped-list/GroupedListThumbnail";
 
 export const groupedListPattern: Pattern = {
   slug: "grouped-list",
@@ -31,7 +30,10 @@ export const groupedListPattern: Pattern = {
     import("@/entities/pattern/catalog/grouped-list/GroupedListDemo").then(
       (m) => m.GroupedListDemo,
     ),
-  Thumbnail: GroupedListThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/grouped-list/GroupedListThumbnail").then(
+      (m) => m.GroupedListThumbnail,
+    ),
   sources: [
     {
       fileName: "GroupedList.tsx",

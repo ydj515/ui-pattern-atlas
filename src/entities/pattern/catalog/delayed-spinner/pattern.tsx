@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DelayedSpinnerThumbnail } from "@/entities/pattern/catalog/delayed-spinner/DelayedSpinnerThumbnail";
 
 export const delayedSpinnerPattern: Pattern = {
   slug: "delayed-spinner",
@@ -35,7 +34,10 @@ export const delayedSpinnerPattern: Pattern = {
     import("@/entities/pattern/catalog/delayed-spinner/DelayedSpinnerDemo").then(
       (m) => m.DelayedSpinnerDemo,
     ),
-  Thumbnail: DelayedSpinnerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/delayed-spinner/DelayedSpinnerThumbnail").then(
+      (m) => m.DelayedSpinnerThumbnail,
+    ),
   sources: [
     {
       fileName: "DelayedSpinner.tsx",

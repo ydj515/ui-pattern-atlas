@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PermissionDeniedThumbnail } from "@/entities/pattern/catalog/permission-denied/PermissionDeniedThumbnail";
 
 export const permissionDeniedPattern: Pattern = {
   slug: "permission-denied",
@@ -39,7 +38,10 @@ export const permissionDeniedPattern: Pattern = {
     import("@/entities/pattern/catalog/permission-denied/PermissionDeniedDemo").then(
       (m) => m.PermissionDeniedDemo,
     ),
-  Thumbnail: PermissionDeniedThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/permission-denied/PermissionDeniedThumbnail").then(
+      (m) => m.PermissionDeniedThumbnail,
+    ),
   sources: [
     {
       fileName: "PermissionDenied.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LineChartThumbnail } from "@/entities/pattern/catalog/line-chart/LineChartThumbnail";
 
 export const lineChartPattern: Pattern = {
   slug: "line-chart",
@@ -34,7 +33,10 @@ export const lineChartPattern: Pattern = {
   tags: [...BASE_TAGS, "SVG", "aria-live", "details"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/line-chart/LineChartDemo").then((m) => m.LineChartDemo),
-  Thumbnail: LineChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/line-chart/LineChartThumbnail").then(
+      (m) => m.LineChartThumbnail,
+    ),
   sources: [
     {
       fileName: "LineChart.tsx",

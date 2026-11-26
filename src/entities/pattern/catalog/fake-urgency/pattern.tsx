@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { FakeUrgencyThumbnail } from "@/entities/pattern/catalog/fake-urgency/FakeUrgencyThumbnail";
 
 export const fakeUrgencyPattern: Pattern = {
   slug: "fake-urgency",
@@ -36,6 +35,9 @@ export const fakeUrgencyPattern: Pattern = {
     import("@/entities/pattern/catalog/fake-urgency/FakeUrgencyDemo").then(
       (m) => m.FakeUrgencyDemo,
     ),
-  Thumbnail: FakeUrgencyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/fake-urgency/FakeUrgencyThumbnail").then(
+      (m) => m.FakeUrgencyThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/fake-urgency/FakeUrgencyDemo.tsx?raw"),
 };

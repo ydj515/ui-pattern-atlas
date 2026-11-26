@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { FilterChipThumbnail } from "@/entities/pattern/catalog/filter-chip/FilterChipThumbnail";
 
 export const filterChipPattern: Pattern = {
   slug: "filter-chip",
@@ -34,7 +33,10 @@ export const filterChipPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-pressed", "Filters"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/filter-chip/FilterChipDemo").then((m) => m.FilterChipDemo),
-  Thumbnail: FilterChipThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/filter-chip/FilterChipThumbnail").then(
+      (m) => m.FilterChipThumbnail,
+    ),
   sources: [
     {
       fileName: "FilterChips.tsx",

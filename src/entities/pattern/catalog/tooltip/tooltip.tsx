@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TooltipThumbnail } from "@/entities/pattern/catalog/tooltip/TooltipThumbnail";
 
 export const tooltipPattern: Pattern = {
   slug: "tooltip",
@@ -39,7 +38,8 @@ export const tooltipPattern: Pattern = {
   tags: [...BASE_TAGS, "WCAG 1.4.13"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/tooltip/TooltipDemo").then((m) => m.TooltipDemo),
-  Thumbnail: TooltipThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/tooltip/TooltipThumbnail").then((m) => m.TooltipThumbnail),
   sources: [
     {
       fileName: "Tooltip.tsx",

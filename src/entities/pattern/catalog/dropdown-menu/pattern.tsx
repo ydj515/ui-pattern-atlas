@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { DropdownMenuThumbnail } from "@/entities/pattern/catalog/dropdown-menu/DropdownMenuThumbnail";
 
 export const dropdownMenuPattern: Pattern = {
   slug: "dropdown-menu",
@@ -44,7 +43,10 @@ export const dropdownMenuPattern: Pattern = {
     import("@/entities/pattern/catalog/dropdown-menu/DropdownMenuDemo").then(
       (m) => m.DropdownMenuDemo,
     ),
-  Thumbnail: DropdownMenuThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/dropdown-menu/DropdownMenuThumbnail").then(
+      (m) => m.DropdownMenuThumbnail,
+    ),
   sources: [
     {
       fileName: "DropdownMenu.tsx",

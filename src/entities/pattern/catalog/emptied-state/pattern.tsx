@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EmptiedStateThumbnail } from "@/entities/pattern/catalog/emptied-state/EmptiedStateThumbnail";
 
 export const emptiedStatePattern: Pattern = {
   slug: "emptied-state",
@@ -35,7 +34,10 @@ export const emptiedStatePattern: Pattern = {
     import("@/entities/pattern/catalog/emptied-state/EmptiedStateDemo").then(
       (m) => m.EmptiedStateDemo,
     ),
-  Thumbnail: EmptiedStateThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/emptied-state/EmptiedStateThumbnail").then(
+      (m) => m.EmptiedStateThumbnail,
+    ),
   sources: [
     {
       fileName: "EmptiedState.tsx",

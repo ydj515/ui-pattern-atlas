@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ZoomTransitionThumbnail } from "@/entities/pattern/catalog/zoom-transition/ZoomTransitionThumbnail";
 
 export const zoomTransitionPattern: Pattern = {
   slug: "zoom-transition",
@@ -39,7 +38,10 @@ export const zoomTransitionPattern: Pattern = {
     import("@/entities/pattern/catalog/zoom-transition/ZoomTransitionDemo").then(
       (m) => m.ZoomTransitionDemo,
     ),
-  Thumbnail: ZoomTransitionThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/zoom-transition/ZoomTransitionThumbnail").then(
+      (m) => m.ZoomTransitionThumbnail,
+    ),
   sources: [
     {
       fileName: "ZoomTransition.tsx",

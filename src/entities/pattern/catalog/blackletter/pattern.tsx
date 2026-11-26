@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BlackletterThumbnail } from "@/entities/pattern/catalog/blackletter/BlackletterThumbnail";
 
 export const blackletterPattern: Pattern = {
   slug: "blackletter",
@@ -36,6 +35,9 @@ export const blackletterPattern: Pattern = {
   tags: ["글자 스타일", "Blackletter"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/blackletter/BlackletterDemo").then((m) => m.BlackletterDemo),
-  Thumbnail: BlackletterThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/blackletter/BlackletterThumbnail").then(
+      (m) => m.BlackletterThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/blackletter/BlackletterDemo.tsx?raw"),
 };

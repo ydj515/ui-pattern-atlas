@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { LeftDigitEffectThumbnail } from "@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectThumbnail";
 
 export const leftDigitEffectPattern: Pattern = {
   slug: "left-digit-effect",
@@ -26,7 +25,10 @@ export const leftDigitEffectPattern: Pattern = {
     import("@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectDemo").then(
       (m) => m.LeftDigitEffectDemo,
     ),
-  Thumbnail: LeftDigitEffectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectThumbnail").then(
+      (m) => m.LeftDigitEffectThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/left-digit-effect/LeftDigitEffectDemo.tsx?raw"),
 };

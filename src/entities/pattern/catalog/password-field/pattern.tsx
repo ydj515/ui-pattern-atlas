@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PasswordFieldThumbnail } from "@/entities/pattern/catalog/password-field/PasswordFieldThumbnail";
 
 export const passwordFieldPattern: Pattern = {
   slug: "password-field",
@@ -35,7 +34,10 @@ export const passwordFieldPattern: Pattern = {
     import("@/entities/pattern/catalog/password-field/PasswordFieldDemo").then(
       (m) => m.PasswordFieldDemo,
     ),
-  Thumbnail: PasswordFieldThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/password-field/PasswordFieldThumbnail").then(
+      (m) => m.PasswordFieldThumbnail,
+    ),
   sources: [
     {
       fileName: "PasswordField.tsx",

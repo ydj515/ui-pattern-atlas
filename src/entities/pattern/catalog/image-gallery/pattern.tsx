@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ImageGalleryThumbnail } from "@/entities/pattern/catalog/image-gallery/ImageGalleryThumbnail";
 
 export const imageGalleryPattern: Pattern = {
   slug: "image-gallery",
@@ -35,7 +34,10 @@ export const imageGalleryPattern: Pattern = {
     import("@/entities/pattern/catalog/image-gallery/ImageGalleryDemo").then(
       (m) => m.ImageGalleryDemo,
     ),
-  Thumbnail: ImageGalleryThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/image-gallery/ImageGalleryThumbnail").then(
+      (m) => m.ImageGalleryThumbnail,
+    ),
   sources: [
     {
       fileName: "ImageGallery.tsx",

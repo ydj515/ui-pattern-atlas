@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { PeakEndThumbnail } from "@/entities/pattern/catalog/peak-end-rule/PeakEndThumbnail";
 
 export const peakEndRulePattern: Pattern = {
   slug: "peak-end-rule",
@@ -36,6 +35,9 @@ export const peakEndRulePattern: Pattern = {
   tags: ["UX 법칙", "UX 심리"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/peak-end-rule/PeakEndDemo").then((m) => m.PeakEndDemo),
-  Thumbnail: PeakEndThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/peak-end-rule/PeakEndThumbnail").then(
+      (m) => m.PeakEndThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/peak-end-rule/PeakEndDemo.tsx?raw"),
 };

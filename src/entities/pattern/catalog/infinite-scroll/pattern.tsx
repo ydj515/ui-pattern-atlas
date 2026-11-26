@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { InfiniteScrollThumbnail } from "@/entities/pattern/catalog/infinite-scroll/InfiniteScrollThumbnail";
 
 export const infiniteScrollPattern: Pattern = {
   slug: "infinite-scroll",
@@ -37,7 +36,10 @@ export const infiniteScrollPattern: Pattern = {
     import("@/entities/pattern/catalog/infinite-scroll/InfiniteScrollDemo").then(
       (m) => m.InfiniteScrollDemo,
     ),
-  Thumbnail: InfiniteScrollThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/infinite-scroll/InfiniteScrollThumbnail").then(
+      (m) => m.InfiniteScrollThumbnail,
+    ),
   sources: [
     {
       fileName: "InfiniteScroll.tsx",

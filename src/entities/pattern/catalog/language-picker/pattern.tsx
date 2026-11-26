@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LanguagePickerThumbnail } from "@/entities/pattern/catalog/language-picker/LanguagePickerThumbnail";
 
 export const languagePickerPattern: Pattern = {
   slug: "language-picker",
@@ -34,7 +33,10 @@ export const languagePickerPattern: Pattern = {
     import("@/entities/pattern/catalog/language-picker/LanguagePickerDemo").then(
       (m) => m.LanguagePickerDemo,
     ),
-  Thumbnail: LanguagePickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/language-picker/LanguagePickerThumbnail").then(
+      (m) => m.LanguagePickerThumbnail,
+    ),
   sources: [
     {
       fileName: "LanguagePicker.tsx",

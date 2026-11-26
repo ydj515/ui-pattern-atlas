@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { EasingCompareThumbnail } from "@/entities/pattern/catalog/ease-in-out/EasingCompareThumbnail";
 
 export const easeInOutPattern: Pattern = {
   slug: "ease-in-out",
@@ -34,7 +33,10 @@ export const easeInOutPattern: Pattern = {
     import("@/entities/pattern/catalog/ease-in-out/EasingCompareDemo").then(
       (m) => m.EasingCompareDemo,
     ),
-  Thumbnail: EasingCompareThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/ease-in-out/EasingCompareThumbnail").then(
+      (m) => m.EasingCompareThumbnail,
+    ),
   sources: [
     {
       fileName: "EasingCompare.tsx",

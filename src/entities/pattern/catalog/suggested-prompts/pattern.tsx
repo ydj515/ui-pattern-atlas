@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SuggestedPromptsThumbnail } from "@/entities/pattern/catalog/suggested-prompts/SuggestedPromptsThumbnail";
 
 export const suggestedPromptsPattern: Pattern = {
   slug: "suggested-prompts",
@@ -35,7 +34,10 @@ export const suggestedPromptsPattern: Pattern = {
     import("@/entities/pattern/catalog/suggested-prompts/SuggestedPromptsDemo").then(
       (m) => m.SuggestedPromptsDemo,
     ),
-  Thumbnail: SuggestedPromptsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/suggested-prompts/SuggestedPromptsThumbnail").then(
+      (m) => m.SuggestedPromptsThumbnail,
+    ),
   sources: [
     {
       fileName: "SuggestedPrompts.tsx",

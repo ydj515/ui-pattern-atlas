@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BottomSheetThumbnail } from "@/entities/pattern/catalog/bottom-sheet/BottomSheetThumbnail";
 
 export const bottomSheetPattern: Pattern = {
   slug: "bottom-sheet",
@@ -47,7 +46,10 @@ export const bottomSheetPattern: Pattern = {
     import("@/entities/pattern/catalog/bottom-sheet/BottomSheetDemo").then(
       (m) => m.BottomSheetDemo,
     ),
-  Thumbnail: BottomSheetThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/bottom-sheet/BottomSheetThumbnail").then(
+      (m) => m.BottomSheetThumbnail,
+    ),
   sources: [
     {
       fileName: "BottomSheet.tsx",

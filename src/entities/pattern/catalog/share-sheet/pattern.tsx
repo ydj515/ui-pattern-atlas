@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ShareSheetThumbnail } from "@/entities/pattern/catalog/share-sheet/ShareSheetThumbnail";
 
 export const shareSheetPattern: Pattern = {
   slug: "share-sheet",
@@ -33,7 +32,10 @@ export const shareSheetPattern: Pattern = {
   tags: [...BASE_TAGS, "Web Share API", "role=dialog", "Fallback"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/share-sheet/ShareSheetDemo").then((m) => m.ShareSheetDemo),
-  Thumbnail: ShareSheetThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/share-sheet/ShareSheetThumbnail").then(
+      (m) => m.ShareSheetThumbnail,
+    ),
   sources: [
     {
       fileName: "ShareSheet.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { WaffleChartThumbnail } from "@/entities/pattern/catalog/waffle-chart/WaffleChartThumbnail";
 
 export const waffleChartPattern: Pattern = {
   slug: "waffle-chart",
@@ -34,7 +33,10 @@ export const waffleChartPattern: Pattern = {
     import("@/entities/pattern/catalog/waffle-chart/WaffleChartDemo").then(
       (m) => m.WaffleChartDemo,
     ),
-  Thumbnail: WaffleChartThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/waffle-chart/WaffleChartThumbnail").then(
+      (m) => m.WaffleChartThumbnail,
+    ),
   sources: [
     {
       fileName: "WaffleChart.tsx",

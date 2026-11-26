@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { HorizontalScrollThumbnail } from "@/entities/pattern/catalog/horizontal-scroll/HorizontalScrollThumbnail";
 
 export const horizontalScrollPattern: Pattern = {
   slug: "horizontal-scroll",
@@ -32,7 +31,10 @@ export const horizontalScrollPattern: Pattern = {
     import("@/entities/pattern/catalog/horizontal-scroll/HorizontalScrollDemo").then(
       (m) => m.HorizontalScrollDemo,
     ),
-  Thumbnail: HorizontalScrollThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/horizontal-scroll/HorizontalScrollThumbnail").then(
+      (m) => m.HorizontalScrollThumbnail,
+    ),
   sources: [
     {
       fileName: "HorizontalScroll.tsx",

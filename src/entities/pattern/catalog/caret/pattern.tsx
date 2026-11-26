@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { CaretThumbnail } from "@/entities/pattern/catalog/caret/CaretThumbnail";
 
 export const caretPattern: Pattern = {
   slug: "caret",
@@ -33,6 +32,7 @@ export const caretPattern: Pattern = {
   ],
   tags: ["아이콘 이름", "드롭다운"],
   loadPreview: () => import("@/entities/pattern/catalog/caret/CaretDemo").then((m) => m.CaretDemo),
-  Thumbnail: CaretThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/caret/CaretThumbnail").then((m) => m.CaretThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/caret/CaretDemo.tsx?raw"),
 };

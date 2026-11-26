@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { MeatballsThumbnail } from "@/entities/pattern/catalog/meatballs/MeatballsThumbnail";
 
 export const meatballsPattern: Pattern = {
   slug: "meatballs",
@@ -34,6 +33,9 @@ export const meatballsPattern: Pattern = {
   tags: ["아이콘 이름", "더보기"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/meatballs/MeatballsDemo").then((m) => m.MeatballsDemo),
-  Thumbnail: MeatballsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/meatballs/MeatballsThumbnail").then(
+      (m) => m.MeatballsThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/meatballs/MeatballsDemo.tsx?raw"),
 };

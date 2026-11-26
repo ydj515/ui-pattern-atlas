@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AlertDialogThumbnail } from "@/entities/pattern/catalog/alert-dialog/AlertDialogThumbnail";
 
 export const alertDialogPattern: Pattern = {
   slug: "alert-dialog",
@@ -40,7 +39,10 @@ export const alertDialogPattern: Pattern = {
     import("@/entities/pattern/catalog/alert-dialog/AlertDialogDemo").then(
       (m) => m.AlertDialogDemo,
     ),
-  Thumbnail: AlertDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/alert-dialog/AlertDialogThumbnail").then(
+      (m) => m.AlertDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "AlertDialog.tsx",

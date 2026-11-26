@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { NeonSignThumbnail } from "@/entities/pattern/catalog/neon-sign/NeonSignThumbnail";
 
 export const neonSignPattern: Pattern = {
   slug: "neon-sign",
@@ -26,6 +25,9 @@ export const neonSignPattern: Pattern = {
   tags: ["글자 스타일", "Neon Sign"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/neon-sign/NeonSignDemo").then((m) => m.NeonSignDemo),
-  Thumbnail: NeonSignThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/neon-sign/NeonSignThumbnail").then(
+      (m) => m.NeonSignThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/neon-sign/NeonSignDemo.tsx?raw"),
 };

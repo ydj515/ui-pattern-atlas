@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SwipeToDeleteThumbnail } from "@/entities/pattern/catalog/swipe-to-delete/SwipeToDeleteThumbnail";
 
 export const swipeToDeletePattern: Pattern = {
   slug: "swipe-to-delete",
@@ -35,7 +34,10 @@ export const swipeToDeletePattern: Pattern = {
     import("@/entities/pattern/catalog/swipe-to-delete/SwipeToDeleteDemo").then(
       (m) => m.SwipeToDeleteDemo,
     ),
-  Thumbnail: SwipeToDeleteThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/swipe-to-delete/SwipeToDeleteThumbnail").then(
+      (m) => m.SwipeToDeleteThumbnail,
+    ),
   sources: [
     {
       fileName: "SwipeToDelete.tsx",

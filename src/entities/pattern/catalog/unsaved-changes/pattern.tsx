@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { UnsavedChangesDialogThumbnail } from "@/entities/pattern/catalog/unsaved-changes/UnsavedChangesDialogThumbnail";
 
 export const unsavedChangesPattern: Pattern = {
   slug: "unsaved-changes",
@@ -34,7 +33,10 @@ export const unsavedChangesPattern: Pattern = {
     import("@/entities/pattern/catalog/unsaved-changes/UnsavedChangesDialogDemo").then(
       (m) => m.UnsavedChangesDialogDemo,
     ),
-  Thumbnail: UnsavedChangesDialogThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/unsaved-changes/UnsavedChangesDialogThumbnail").then(
+      (m) => m.UnsavedChangesDialogThumbnail,
+    ),
   sources: [
     {
       fileName: "UnsavedChangesDialog.tsx",

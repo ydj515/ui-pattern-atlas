@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MotionSafeThumbnail } from "@/entities/pattern/catalog/reduced-motion/MotionSafeThumbnail";
 
 export const reducedMotionPattern: Pattern = {
   slug: "reduced-motion",
@@ -35,7 +34,10 @@ export const reducedMotionPattern: Pattern = {
     import("@/entities/pattern/catalog/reduced-motion/MotionSafeDemo").then(
       (m) => m.MotionSafeDemo,
     ),
-  Thumbnail: MotionSafeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/reduced-motion/MotionSafeThumbnail").then(
+      (m) => m.MotionSafeThumbnail,
+    ),
   sources: [
     {
       fileName: "MotionSafe.tsx",

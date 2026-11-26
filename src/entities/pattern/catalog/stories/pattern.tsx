@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StoriesThumbnail } from "@/entities/pattern/catalog/stories/StoriesThumbnail";
 
 export const storiesPattern: Pattern = {
   slug: "stories",
@@ -32,7 +31,8 @@ export const storiesPattern: Pattern = {
   tags: [...BASE_TAGS, "Mobile", "WCAG 2.2.2"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/stories/StoriesDemo").then((m) => m.StoriesDemo),
-  Thumbnail: StoriesThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stories/StoriesThumbnail").then((m) => m.StoriesThumbnail),
   sources: [
     {
       fileName: "Stories.tsx",

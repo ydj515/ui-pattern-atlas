@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CitationThumbnail } from "@/entities/pattern/catalog/citation/CitationThumbnail";
 
 export const citationPattern: Pattern = {
   slug: "citation",
@@ -29,7 +28,10 @@ export const citationPattern: Pattern = {
   tags: [...BASE_TAGS, "aria-expanded", "ol", "Sources"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/citation/CitationDemo").then((m) => m.CitationDemo),
-  Thumbnail: CitationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/citation/CitationThumbnail").then(
+      (m) => m.CitationThumbnail,
+    ),
   sources: [
     {
       fileName: "Citation.tsx",

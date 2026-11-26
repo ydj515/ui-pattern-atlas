@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { OutlineTypeThumbnail } from "@/entities/pattern/catalog/outline/OutlineTypeThumbnail";
 
 export const outlinePattern: Pattern = {
   slug: "outline",
@@ -26,6 +25,9 @@ export const outlinePattern: Pattern = {
   tags: ["글자 스타일", "Outline"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/outline/OutlineTypeDemo").then((m) => m.OutlineTypeDemo),
-  Thumbnail: OutlineTypeThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/outline/OutlineTypeThumbnail").then(
+      (m) => m.OutlineTypeThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/outline/OutlineTypeDemo.tsx?raw"),
 };

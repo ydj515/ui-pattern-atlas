@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CountdownThumbnail } from "@/entities/pattern/catalog/countdown/CountdownThumbnail";
 
 export const countdownPattern: Pattern = {
   slug: "countdown",
@@ -36,7 +35,10 @@ export const countdownPattern: Pattern = {
   tags: [...BASE_TAGS, "setInterval", "Date", "role=status"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/countdown/CountdownDemo").then((m) => m.CountdownDemo),
-  Thumbnail: CountdownThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/countdown/CountdownThumbnail").then(
+      (m) => m.CountdownThumbnail,
+    ),
   sources: [
     {
       fileName: "Countdown.tsx",

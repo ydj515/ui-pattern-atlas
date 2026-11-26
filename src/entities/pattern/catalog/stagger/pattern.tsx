@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { StaggerThumbnail } from "@/entities/pattern/catalog/stagger/StaggerThumbnail";
 
 export const staggerPattern: Pattern = {
   slug: "stagger",
@@ -33,7 +32,8 @@ export const staggerPattern: Pattern = {
   tags: [...BASE_TAGS, "@starting-style", "transition-delay", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/stagger/StaggerDemo").then((m) => m.StaggerDemo),
-  Thumbnail: StaggerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/stagger/StaggerThumbnail").then((m) => m.StaggerThumbnail),
   sources: [
     {
       fileName: "Stagger.tsx",

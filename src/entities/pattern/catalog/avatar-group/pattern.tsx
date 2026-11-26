@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AvatarGroupThumbnail } from "@/entities/pattern/catalog/avatar-group/AvatarGroupThumbnail";
 
 export const avatarGroupPattern: Pattern = {
   slug: "avatar-group",
@@ -35,7 +34,10 @@ export const avatarGroupPattern: Pattern = {
     import("@/entities/pattern/catalog/avatar-group/AvatarGroupDemo").then(
       (m) => m.AvatarGroupDemo,
     ),
-  Thumbnail: AvatarGroupThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/avatar-group/AvatarGroupThumbnail").then(
+      (m) => m.AvatarGroupThumbnail,
+    ),
   sources: [
     {
       fileName: "AvatarGroup.tsx",

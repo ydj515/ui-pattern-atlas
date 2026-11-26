@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PinchToZoomThumbnail } from "@/entities/pattern/catalog/pinch-to-zoom/PinchToZoomThumbnail";
 
 export const pinchToZoomPattern: Pattern = {
   slug: "pinch-to-zoom",
@@ -35,7 +34,10 @@ export const pinchToZoomPattern: Pattern = {
     import("@/entities/pattern/catalog/pinch-to-zoom/PinchToZoomDemo").then(
       (m) => m.PinchToZoomDemo,
     ),
-  Thumbnail: PinchToZoomThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/pinch-to-zoom/PinchToZoomThumbnail").then(
+      (m) => m.PinchToZoomThumbnail,
+    ),
   sources: [
     {
       fileName: "PinchToZoom.tsx",

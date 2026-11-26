@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { BrutalistTypographyThumbnail } from "@/entities/pattern/catalog/brutalist-typography/BrutalistTypographyThumbnail";
 
 export const brutalistTypographyPattern: Pattern = {
   slug: "brutalist-typography",
@@ -32,7 +31,10 @@ export const brutalistTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/brutalist-typography/BrutalistTypographyDemo").then(
       (m) => m.BrutalistTypographyDemo,
     ),
-  Thumbnail: BrutalistTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/brutalist-typography/BrutalistTypographyThumbnail").then(
+      (m) => m.BrutalistTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/brutalist-typography/BrutalistTypographyDemo.tsx?raw"),
 };

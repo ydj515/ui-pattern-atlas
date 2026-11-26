@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LongPressThumbnail } from "@/entities/pattern/catalog/long-press/LongPressThumbnail";
 
 export const longPressPattern: Pattern = {
   slug: "long-press",
@@ -33,7 +32,10 @@ export const longPressPattern: Pattern = {
   tags: [...BASE_TAGS, "Pointer Events", "aria-haspopup"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/long-press/LongPressDemo").then((m) => m.LongPressDemo),
-  Thumbnail: LongPressThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/long-press/LongPressThumbnail").then(
+      (m) => m.LongPressThumbnail,
+    ),
   sources: [
     {
       fileName: "LongPress.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { TimePickerThumbnail } from "@/entities/pattern/catalog/time-picker/TimePickerThumbnail";
 
 export const timePickerPattern: Pattern = {
   slug: "time-picker",
@@ -33,7 +32,10 @@ export const timePickerPattern: Pattern = {
   tags: [...BASE_TAGS, "Native select", "fieldset"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/time-picker/TimePickerDemo").then((m) => m.TimePickerDemo),
-  Thumbnail: TimePickerThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/time-picker/TimePickerThumbnail").then(
+      (m) => m.TimePickerThumbnail,
+    ),
   sources: [
     {
       fileName: "TimePicker.tsx",

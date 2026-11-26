@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { MultiSelectThumbnail } from "@/entities/pattern/catalog/multi-select/MultiSelectThumbnail";
 
 export const multiSelectPattern: Pattern = {
   slug: "multi-select",
@@ -35,7 +34,10 @@ export const multiSelectPattern: Pattern = {
     import("@/entities/pattern/catalog/multi-select/MultiSelectDemo").then(
       (m) => m.MultiSelectDemo,
     ),
-  Thumbnail: MultiSelectThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/multi-select/MultiSelectThumbnail").then(
+      (m) => m.MultiSelectThumbnail,
+    ),
   sources: [
     {
       fileName: "MultiSelect.tsx",

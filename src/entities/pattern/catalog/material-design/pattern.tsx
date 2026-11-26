@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { MaterialDesignThumbnail } from "@/entities/pattern/catalog/material-design/MaterialDesignThumbnail";
 
 export const materialDesignPattern: Pattern = {
   slug: "material-design",
@@ -38,7 +37,10 @@ export const materialDesignPattern: Pattern = {
     import("@/entities/pattern/catalog/material-design/MaterialDesignDemo").then(
       (m) => m.MaterialDesignDemo,
     ),
-  Thumbnail: MaterialDesignThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/material-design/MaterialDesignThumbnail").then(
+      (m) => m.MaterialDesignThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/material-design/MaterialDesignDemo.tsx?raw"),
 };

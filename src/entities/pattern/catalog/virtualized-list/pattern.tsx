@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { VirtualizedListThumbnail } from "@/entities/pattern/catalog/virtualized-list/VirtualizedListThumbnail";
 
 export const virtualizedListPattern: Pattern = {
   slug: "virtualized-list",
@@ -35,7 +34,10 @@ export const virtualizedListPattern: Pattern = {
     import("@/entities/pattern/catalog/virtualized-list/VirtualizedListDemo").then(
       (m) => m.VirtualizedListDemo,
     ),
-  Thumbnail: VirtualizedListThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/virtualized-list/VirtualizedListThumbnail").then(
+      (m) => m.VirtualizedListThumbnail,
+    ),
   sources: [
     {
       fileName: "VirtualizedList.tsx",

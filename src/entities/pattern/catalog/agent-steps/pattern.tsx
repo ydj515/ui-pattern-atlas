@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { AgentStepsThumbnail } from "@/entities/pattern/catalog/agent-steps/AgentStepsThumbnail";
 
 export const agentStepsPattern: Pattern = {
   slug: "agent-steps",
@@ -33,7 +32,10 @@ export const agentStepsPattern: Pattern = {
   tags: [...BASE_TAGS, "ol", "aria-live", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/agent-steps/AgentStepsDemo").then((m) => m.AgentStepsDemo),
-  Thumbnail: AgentStepsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/agent-steps/AgentStepsThumbnail").then(
+      (m) => m.AgentStepsThumbnail,
+    ),
   sources: [
     {
       fileName: "AgentSteps.tsx",

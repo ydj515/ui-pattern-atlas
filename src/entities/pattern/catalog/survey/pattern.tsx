@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { SurveyThumbnail } from "@/entities/pattern/catalog/survey/SurveyThumbnail";
 
 export const surveyPattern: Pattern = {
   slug: "survey",
@@ -33,6 +32,7 @@ export const surveyPattern: Pattern = {
   tags: ["UX 리서치", "정량 조사"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/survey/SurveyDemo").then((m) => m.SurveyDemo),
-  Thumbnail: SurveyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/survey/SurveyThumbnail").then((m) => m.SurveyThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/survey/SurveyDemo.tsx?raw"),
 };

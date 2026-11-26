@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { RetroGroovyThumbnail } from "@/entities/pattern/catalog/retro-groovy/RetroGroovyThumbnail";
 
 export const retroGroovyPattern: Pattern = {
   slug: "retro-groovy",
@@ -32,6 +31,9 @@ export const retroGroovyPattern: Pattern = {
     import("@/entities/pattern/catalog/retro-groovy/RetroGroovyDemo").then(
       (m) => m.RetroGroovyDemo,
     ),
-  Thumbnail: RetroGroovyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/retro-groovy/RetroGroovyThumbnail").then(
+      (m) => m.RetroGroovyThumbnail,
+    ),
   loadDemoSource: () => import("@/entities/pattern/catalog/retro-groovy/RetroGroovyDemo.tsx?raw"),
 };

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ListboxThumbnail } from "@/entities/pattern/catalog/listbox/ListboxThumbnail";
 
 export const listboxPattern: Pattern = {
   slug: "listbox",
@@ -33,7 +32,8 @@ export const listboxPattern: Pattern = {
   tags: [...BASE_TAGS, "WAI-ARIA APG", "Keyboard"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/listbox/ListboxDemo").then((m) => m.ListboxDemo),
-  Thumbnail: ListboxThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/listbox/ListboxThumbnail").then((m) => m.ListboxThumbnail),
   sources: [
     {
       fileName: "Listbox.tsx",

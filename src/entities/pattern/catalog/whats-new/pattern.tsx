@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { WhatsNewThumbnail } from "@/entities/pattern/catalog/whats-new/WhatsNewThumbnail";
 
 export const whatsNewPattern: Pattern = {
   slug: "whats-new",
@@ -29,7 +28,10 @@ export const whatsNewPattern: Pattern = {
   tags: [...BASE_TAGS, "role=dialog", "Release notes", "ul"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/whats-new/WhatsNewDemo").then((m) => m.WhatsNewDemo),
-  Thumbnail: WhatsNewThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/whats-new/WhatsNewThumbnail").then(
+      (m) => m.WhatsNewThumbnail,
+    ),
   sources: [
     {
       fileName: "WhatsNew.tsx",

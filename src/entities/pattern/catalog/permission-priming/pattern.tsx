@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { PermissionPrimingThumbnail } from "@/entities/pattern/catalog/permission-priming/PermissionPrimingThumbnail";
 
 export const permissionPrimingPattern: Pattern = {
   slug: "permission-priming",
@@ -39,7 +38,10 @@ export const permissionPrimingPattern: Pattern = {
     import("@/entities/pattern/catalog/permission-priming/PermissionPrimingDemo").then(
       (m) => m.PermissionPrimingDemo,
     ),
-  Thumbnail: PermissionPrimingThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/permission-priming/PermissionPrimingThumbnail").then(
+      (m) => m.PermissionPrimingThumbnail,
+    ),
   sources: [
     {
       fileName: "PermissionPriming.tsx",

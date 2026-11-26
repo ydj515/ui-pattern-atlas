@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { BackToTopThumbnail } from "@/entities/pattern/catalog/back-to-top/BackToTopThumbnail";
 
 export const backToTopPattern: Pattern = {
   slug: "back-to-top",
@@ -26,7 +25,10 @@ export const backToTopPattern: Pattern = {
   tags: [...BASE_TAGS, "Focus management", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/back-to-top/BackToTopDemo").then((m) => m.BackToTopDemo),
-  Thumbnail: BackToTopThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/back-to-top/BackToTopThumbnail").then(
+      (m) => m.BackToTopThumbnail,
+    ),
   sources: [
     {
       fileName: "BackToTop.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { LimitedAccessThumbnail } from "@/entities/pattern/catalog/limited-access/LimitedAccessThumbnail";
 
 export const limitedAccessPattern: Pattern = {
   slug: "limited-access",
@@ -35,7 +34,10 @@ export const limitedAccessPattern: Pattern = {
     import("@/entities/pattern/catalog/limited-access/LimitedAccessDemo").then(
       (m) => m.LimitedAccessDemo,
     ),
-  Thumbnail: LimitedAccessThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/limited-access/LimitedAccessThumbnail").then(
+      (m) => m.LimitedAccessThumbnail,
+    ),
   sources: [
     {
       fileName: "LimitedAccess.tsx",

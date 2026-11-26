@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { GradientTypographyThumbnail } from "@/entities/pattern/catalog/gradient-typography/GradientTypographyThumbnail";
 
 export const gradientTypographyPattern: Pattern = {
   slug: "gradient-typography",
@@ -28,7 +27,10 @@ export const gradientTypographyPattern: Pattern = {
     import("@/entities/pattern/catalog/gradient-typography/GradientTypographyDemo").then(
       (m) => m.GradientTypographyDemo,
     ),
-  Thumbnail: GradientTypographyThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/gradient-typography/GradientTypographyThumbnail").then(
+      (m) => m.GradientTypographyThumbnail,
+    ),
   loadDemoSource: () =>
     import("@/entities/pattern/catalog/gradient-typography/GradientTypographyDemo.tsx?raw"),
 };

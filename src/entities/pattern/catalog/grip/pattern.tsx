@@ -1,5 +1,4 @@
 import { type Pattern } from "@/entities/pattern/model/pattern";
-import { GripThumbnail } from "@/entities/pattern/catalog/grip/GripThumbnail";
 
 export const gripPattern: Pattern = {
   slug: "grip",
@@ -33,6 +32,7 @@ export const gripPattern: Pattern = {
   ],
   tags: ["아이콘 이름", "끌기"],
   loadPreview: () => import("@/entities/pattern/catalog/grip/GripDemo").then((m) => m.GripDemo),
-  Thumbnail: GripThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/grip/GripThumbnail").then((m) => m.GripThumbnail),
   loadDemoSource: () => import("@/entities/pattern/catalog/grip/GripDemo.tsx?raw"),
 };

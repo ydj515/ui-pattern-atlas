@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { CountUpThumbnail } from "@/entities/pattern/catalog/count-up/CountUpThumbnail";
 
 export const countUpPattern: Pattern = {
   slug: "count-up",
@@ -37,7 +36,8 @@ export const countUpPattern: Pattern = {
   tags: [...BASE_TAGS, "requestAnimationFrame", "tabular-nums", "Reduced motion"],
   loadPreview: () =>
     import("@/entities/pattern/catalog/count-up/CountUpDemo").then((m) => m.CountUpDemo),
-  Thumbnail: CountUpThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/count-up/CountUpThumbnail").then((m) => m.CountUpThumbnail),
   sources: [
     {
       fileName: "CountUp.tsx",

@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { SubscriptionCancellationThumbnail } from "@/entities/pattern/catalog/subscription-cancellation/SubscriptionCancellationThumbnail";
 
 export const subscriptionCancellationPattern: Pattern = {
   slug: "subscription-cancellation",
@@ -35,7 +34,10 @@ export const subscriptionCancellationPattern: Pattern = {
     import("@/entities/pattern/catalog/subscription-cancellation/SubscriptionCancellationDemo").then(
       (m) => m.SubscriptionCancellationDemo,
     ),
-  Thumbnail: SubscriptionCancellationThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/subscription-cancellation/SubscriptionCancellationThumbnail").then(
+      (m) => m.SubscriptionCancellationThumbnail,
+    ),
   sources: [
     {
       fileName: "SubscriptionCancellation.tsx",

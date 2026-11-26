@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { RotatingWordsThumbnail } from "@/entities/pattern/catalog/rotating-words/RotatingWordsThumbnail";
 
 export const rotatingWordsPattern: Pattern = {
   slug: "rotating-words",
@@ -35,7 +34,10 @@ export const rotatingWordsPattern: Pattern = {
     import("@/entities/pattern/catalog/rotating-words/RotatingWordsDemo").then(
       (m) => m.RotatingWordsDemo,
     ),
-  Thumbnail: RotatingWordsThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/rotating-words/RotatingWordsThumbnail").then(
+      (m) => m.RotatingWordsThumbnail,
+    ),
   sources: [
     {
       fileName: "RotatingWords.tsx",

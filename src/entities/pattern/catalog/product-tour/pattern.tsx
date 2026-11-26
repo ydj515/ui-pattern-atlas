@@ -1,5 +1,4 @@
 import { BASE_TAGS, type Pattern } from "@/entities/pattern/model/pattern";
-import { ProductTourThumbnail } from "@/entities/pattern/catalog/product-tour/ProductTourThumbnail";
 
 export const productTourPattern: Pattern = {
   slug: "product-tour",
@@ -35,7 +34,10 @@ export const productTourPattern: Pattern = {
     import("@/entities/pattern/catalog/product-tour/ProductTourDemo").then(
       (m) => m.ProductTourDemo,
     ),
-  Thumbnail: ProductTourThumbnail,
+  loadThumbnail: () =>
+    import("@/entities/pattern/catalog/product-tour/ProductTourThumbnail").then(
+      (m) => m.ProductTourThumbnail,
+    ),
   sources: [
     {
       fileName: "ProductTour.tsx",
