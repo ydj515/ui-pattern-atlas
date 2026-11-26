@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { loadPatternMarkdown } from "@/features/copy-page/model/patternMarkdown";
+import { useLocale } from "@/shared/i18n/locale";
 import { useMessages, type Messages } from "@/shared/i18n/messages";
 
 type CopyStatus = "idle" | "loading" | "copied" | "failed";
@@ -65,6 +66,7 @@ export interface CopyPageButtonProps {
  * menu with the same copy action and a plain-text view of the Markdown.
  */
 export function CopyPageButton({ pattern }: CopyPageButtonProps) {
+  const locale = useLocale();
   const messages = useMessages();
   const statusLabel: Record<CopyStatus, string> = {
     idle: messages.copyPage.idle,
@@ -98,7 +100,7 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
   /** One fetch per page visit; a failed attempt is dropped so the next click retries. */
   function markdown(): Promise<string> {
     if (!markdownRef.current) {
-      const attempt = loadPatternMarkdown(pattern, window.location.href);
+      const attempt = loadPatternMarkdown(pattern, window.location.href, locale);
       markdownRef.current = attempt;
       attempt.catch(() => {
         if (markdownRef.current === attempt) markdownRef.current = undefined;

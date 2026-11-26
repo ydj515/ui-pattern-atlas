@@ -1,0 +1,31 @@
+{
+  "origin": "\"Combo\" means combination: it combines a box for typing (a text box) with a list for choosing (a list box).",
+  "whenToUse": [
+    "Lists with many options, such as cities, companies, or people.",
+    "People know part of the name they're looking for.",
+    "People need to choose quickly with the keyboard."
+  ],
+  "whenNotToUse": [
+    "There are only a few options (use a select or a radio group).",
+    "People must freely enter values not in the list (add suggestions to a text field).",
+    "People choose several (use a multi-select or a tag input)."
+  ],
+  "alternatives": [
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "Short lists."
+    },
+    {
+      "name": "Search Field",
+      "slug": "search-field",
+      "reason": "Filtering a list rather than choosing from it."
+    }
+  ],
+  "accessibility": [
+    "Follow the WAI-ARIA combobox pattern with role=\"combobox\", aria-expanded, and aria-controls.",
+    "Options moved through with ↑/↓ are announced with aria-activedescendant while focus stays in the input.",
+    "Enter chooses, Esc closes the list, and pressing Esc again clears the input.",
+    "Skip key handling during Korean input composition so characters aren't cut off."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "People choose a nearby date for a visit, booking, or delivery.",
+    "The day of the week matters.",
+    "You need to show dates that can't be chosen (past days, holidays)."
+  ],
+  "whenNotToUse": [
+    "Distant dates such as a birthday (use a date input).",
+    "A few options such as today or tomorrow are enough (use quick date chips).",
+    "People choose a period (use a date range picker)."
+  ],
+  "alternatives": [
+    {
+      "name": "Date Input",
+      "slug": "date-input",
+      "reason": "Typing a distant date quickly."
+    },
+    {
+      "name": "Quick Date Chips",
+      "slug": "quick-date-chips",
+      "reason": "A few commonly used dates."
+    },
+    {
+      "name": "Date Range Picker",
+      "slug": "date-range-picker",
+      "reason": "Choosing a start and end date together."
+    }
+  ],
+  "accessibility": [
+    "The button opens the calendar with aria-haspopup=\"dialog\", and focus returns to it on close.",
+    "The calendar is role=\"grid\": the arrows move by a day or a week, and Page Up/Down by a month.",
+    "Date button names are full dates such as \"Wed, November 25\", and today has aria-current=\"date\".",
+    "Unavailable days are announced with aria-disabled, and Esc closes the calendar."
+  ]
+}

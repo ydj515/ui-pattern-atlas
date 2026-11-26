@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "States fall into a few kinds, as for servers, integrations, or deployments.",
+    "People need to scan states at a glance in a list.",
+    "Space is tight."
+  ],
+  "whenNotToUse": [
+    "A problem that needs a detailed explanation (use an alert banner).",
+    "Whether people are online (use presence).",
+    "Color would be the only distinction."
+  ],
+  "alternatives": [
+    {
+      "name": "Tag",
+      "slug": "tag",
+      "reason": "Marking a category."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Explaining a problem in detail."
+    }
+  ],
+  "accessibility": [
+    "The dot is decorative, so it's aria-hidden, and the state is shown in a word (OK, Delayed, Down).",
+    "The down state adds an outer ring, distinguishing it by shape, not color.",
+    "On a dashboard where states change, announce changed items in a live region.",
+    "Keep the contrast of the dot and text."
+  ]
+}

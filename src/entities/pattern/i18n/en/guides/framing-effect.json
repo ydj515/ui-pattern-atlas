@@ -1,0 +1,31 @@
+{
+  "origin": "The idea that the frame a fact is put in changes the choice, known from Amos Tversky and Daniel Kahneman's 1981 research.",
+  "whenToUse": [
+    "You report figures, probabilities, or ingredients.",
+    "You decide how to phrase the same information.",
+    "Guidance where judgment matters, such as medical or financial."
+  ],
+  "whenNotToUse": [
+    "You'd hide an unfavorable fact behind only a favorable frame.",
+    "You'd switch comparison bases to look better.",
+    "You'd leave only an impression, with no numbers."
+  ],
+  "alternatives": [
+    {
+      "name": "Loss Aversion",
+      "slug": "loss-aversion",
+      "reason": "The weight of talking about losing."
+    },
+    {
+      "name": "Anchoring",
+      "slug": "anchoring",
+      "reason": "The influence of the first number seen."
+    }
+  ],
+  "accessibility": [
+    "Write numbers and units clearly.",
+    "Don't convey good or bad through color and badge shape alone.",
+    "Show both phrasings together when needed.",
+    "Link to the full information, such as a nutrition label."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Right before asking for a permission with a clear reason, such as delivery notifications.",
+    "Permissions that are hard to ask for again after one refusal.",
+    "Features that also work without the permission."
+  ],
+  "whenNotToUse": [
+    "You'd ask for several permissions at once as soon as the app opens.",
+    "Permissions whose reason you can't explain.",
+    "You'd make Later impossible to choose."
+  ],
+  "alternatives": [
+    {
+      "name": "System Permission Dialog",
+      "slug": "system-permission-dialog",
+      "reason": "The step after, where the device asks."
+    },
+    {
+      "name": "Permission Recovery",
+      "slug": "permission-recovery",
+      "reason": "Guidance after a refusal."
+    }
+  ],
+  "accessibility": [
+    "Name the whole screen with its title.",
+    "The reasons are split into a list, read one line at a time.",
+    "The Allow and Later buttons differ in weight, but both are easy to press.",
+    "Icons are decorative, so they're aria-hidden."
+  ]
+}

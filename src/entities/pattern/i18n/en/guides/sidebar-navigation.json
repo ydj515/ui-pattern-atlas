@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Apps or admin tools with many menu items.",
+    "People move between sections often.",
+    "Sub-menus need to be grouped."
+  ],
+  "whenNotToUse": [
+    "A website with only a few menu items (use top navigation).",
+    "Small screens (use a hamburger menu or bottom tab bar).",
+    "Reading-focused content pages."
+  ],
+  "alternatives": [
+    {
+      "name": "Navbar",
+      "slug": "navbar",
+      "reason": "When there are few menu items."
+    },
+    {
+      "name": "Tree View",
+      "slug": "tree-view",
+      "reason": "Deeply nested structures, like files."
+    }
+  ],
+  "accessibility": [
+    "Group titles are buttons with aria-expanded, so sub-menus open and close.",
+    "The group containing the current page starts open.",
+    "Mark the current page with aria-current=\"page\" and a filled background.",
+    "Name the nav to tell it apart from other navigation."
+  ]
+}

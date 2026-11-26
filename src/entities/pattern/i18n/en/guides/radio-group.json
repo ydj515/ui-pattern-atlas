@@ -1,0 +1,36 @@
+{
+  "origin": "From the preset buttons on old car radios: pressing one popped out the one already pressed, so only one was ever down. That behavior became the name.",
+  "whenToUse": [
+    "There are two to five options that need comparing.",
+    "Each option needs a note, such as a price or period.",
+    "One option must be chosen (a default can be preselected)."
+  ],
+  "whenNotToUse": [
+    "There are many options (use a select or a combobox).",
+    "A single setting that turns on and off (use a switch).",
+    "People can choose several (use checkboxes)."
+  ],
+  "alternatives": [
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "Many options or little space."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Two to four short options that change the view."
+    },
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "Choosing several."
+    }
+  ],
+  "accessibility": [
+    "Group it with fieldset and legend so the question is read along with the options.",
+    "Native radio inputs let the arrow keys move between options while Tab passes the group in one step.",
+    "The whole card is the label, so the pressable area is large.",
+    "The selected state shows with a filled radio mark, not only a border color."
+  ]
+}

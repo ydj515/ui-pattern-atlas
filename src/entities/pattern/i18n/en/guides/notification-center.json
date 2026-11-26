@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "News piles up while people are away, such as comments, deliveries, and approval requests.",
+    "People need to see notifications again that a toast showed once.",
+    "You need to tell read from unread."
+  ],
+  "whenNotToUse": [
+    "The service rarely has notifications (an empty bell is just noise).",
+    "The notification is urgent and needs action now (use a banner or dialog).",
+    "It's the result of something just done (use a toast)."
+  ],
+  "alternatives": [
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Briefly reporting what just happened."
+    },
+    {
+      "name": "Popover",
+      "slug": "popover",
+      "reason": "Showing general information or settings that aren't notifications."
+    }
+  ],
+  "accessibility": [
+    "Put the unread count in the button name (\"Notifications, 3 unread\") instead of relying on a red badge.",
+    "Connect the button to the panel with aria-expanded and aria-controls.",
+    "The panel opens as a non-modal dialog that takes focus; when Esc or an outside click closes it, focus returns to the bell.",
+    "Add visually hidden \"(unread)\" text to unread items so the blue dot's meaning comes across."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "origin": "Borrowed from brutalist architecture, named after the French béton brut (raw concrete). On the web, it refers to raw, undecorated screens.",
+  "whenToUse": [
+    "Portfolios or cultural event sites that show personality.",
+    "Archives where the content itself is the star.",
+    "An impression that breaks conventions is needed."
+  ],
+  "whenNotToUse": [
+    "Shopping or financial services with many first-time users.",
+    "Pressable and non-pressable things can't be told apart.",
+    "A rough layout would harm the reading order."
+  ],
+  "alternatives": [
+    {
+      "name": "Neo-brutalism",
+      "slug": "neo-brutalism",
+      "reason": "A version with thick lines on a tidy grid."
+    },
+    {
+      "name": "Minimalism",
+      "slug": "minimalism",
+      "reason": "Pared back but tidy."
+    }
+  ],
+  "accessibility": [
+    "Since it uses default elements as they are, meaningful HTML structure becomes a strength.",
+    "Check text contrast in primary color combinations.",
+    "Make sure underlined text that isn't a link doesn't look like one.",
+    "Don't remove the focus ring."
+  ]
+}

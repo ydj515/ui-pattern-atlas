@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Screens with few elements, such as the first screen of a landing page.",
+    "You want the eye to end on the main action.",
+    "Ads and banners."
+  ],
+  "whenNotToUse": [
+    "Text-heavy screens (they're read in an F pattern).",
+    "Lists and tables.",
+    "So many elements that the path blurs."
+  ],
+  "alternatives": [
+    {
+      "name": "Hero Section",
+      "slug": "hero-section",
+      "reason": "A first screen built around a title and an action."
+    }
+  ],
+  "accessibility": [
+    "Keep the DOM in the same order as the Z path so the reading and visual order match.",
+    "The eye path marks are decorative, so they're aria-hidden.",
+    "The main action is a real button and comes last.",
+    "Use only grid placement, avoiding absolute positioning, so nothing overlaps when zoomed."
+  ]
+}

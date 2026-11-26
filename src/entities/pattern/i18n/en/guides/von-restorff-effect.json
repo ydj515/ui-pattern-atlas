@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the memory experiments of the German psychologist Hedwig von Restorff in 1933. It's also called the isolation effect.",
+  "whenToUse": [
+    "You mark the recommended plan or option.",
+    "You make an important warning or new feature stand out in a list.",
+    "You set the main button apart from secondary ones."
+  ],
+  "whenNotToUse": [
+    "You'd emphasize several at once (nothing stands out).",
+    "You'd make the option that's bad for people stand out.",
+    "You'd distinguish it by color alone."
+  ],
+  "alternatives": [
+    {
+      "name": "Anchoring",
+      "slug": "anchoring",
+      "reason": "The effect of the first number becoming the reference."
+    },
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "Marking a recommendation with a short tag."
+    }
+  ],
+  "accessibility": [
+    "Emphasize with words (Recommended) and a border, not color alone.",
+    "The emphasized item reads with the same structure as the others.",
+    "Keep enough contrast.",
+    "Say in words why it's emphasized."
+  ]
+}

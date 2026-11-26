@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Notices rising from the bottom or panels coming from the side.",
+    "Where it appears is tied to an edge of the screen.",
+    "Closing hides it back in that direction."
+  ],
+  "whenNotToUse": [
+    "Small elements in the middle of the screen (use a fade).",
+    "It would enter and leave in different directions.",
+    "Moving slowly over a long distance."
+  ],
+  "alternatives": [
+    {
+      "name": "Fade",
+      "slug": "fade",
+      "reason": "Appearing in place."
+    },
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "The full pattern for a menu coming from the side."
+    }
+  ],
+  "accessibility": [
+    "The hide button announces the shown state with aria-pressed.",
+    "While disappearing, it's marked aria-hidden.",
+    "With reduced motion, it's added and removed without moving.",
+    "The card sits against its entering edge so no part of it shows from the start."
+  ]
+}

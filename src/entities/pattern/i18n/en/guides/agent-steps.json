@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "AI work that goes through several steps, such as finding, organizing, and writing.",
+    "Jobs that take tens of seconds or more.",
+    "Showing intermediate results builds trust."
+  ],
+  "whenNotToUse": [
+    "Short answers done in one go (use a thinking indicator).",
+    "Dozens of steps would make the list long (summarize them).",
+    "There's no need to expose the internal process."
+  ],
+  "alternatives": [
+    {
+      "name": "Thinking Indicator",
+      "slug": "thinking-indicator",
+      "reason": "Waiting without steps."
+    },
+    {
+      "name": "Stepper / Step Indicator",
+      "slug": "stepper",
+      "reason": "Steps people move through themselves."
+    }
+  ],
+  "accessibility": [
+    "The ol list is aria-live, so step changes are announced.",
+    "Each step adds Done, In progress, or Waiting in words.",
+    "Icons and connecting lines are decorative, so they're aria-hidden.",
+    "The spinner stops with reduced motion."
+  ]
+}

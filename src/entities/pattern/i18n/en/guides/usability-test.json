@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You check whether a mockup or finished screen is easy to use.",
+    "You check main flows before launch.",
+    "You see whether a fix really made things better."
+  ],
+  "whenNotToUse": [
+    "You don't know what to build yet (use user interviews).",
+    "You choose whichever of two designs performs better on a metric (use an A/B test).",
+    "You only check the menu structure (use tree testing)."
+  ],
+  "alternatives": [
+    {
+      "name": "Tree Testing",
+      "slug": "tree-testing",
+      "reason": "Checking only the menu structure without screens."
+    },
+    {
+      "name": "Behavioral Heatmap",
+      "slug": "behavioral-heatmap",
+      "reason": "Seeing where many people actually act."
+    }
+  ],
+  "accessibility": [
+    "Check separately whether keyboard and screen reader users can finish the same tasks.",
+    "Task wording doesn't reuse the words on screen, so it doesn't give the answer away.",
+    "Tell participants first that you're testing the screen, not them."
+  ]
+}

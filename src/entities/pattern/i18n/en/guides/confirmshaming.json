@@ -1,0 +1,31 @@
+{
+  "origin": "A blend of confirm and shaming. The name spread from a blog that collected cases of decline buttons worded to embarrass people.",
+  "whenToUse": [
+    "You review the decline wording of popups and banners.",
+    "You explain to a team where the line against dark patterns lies.",
+    "You compare it with the honest wording on the same screen."
+  ],
+  "whenNotToUse": [
+    "You want to put emotional words on a real decline button (don't).",
+    "You'd justify a metric target that doesn't respect people's choices.",
+    "You'd hide or shrink the decline option."
+  ],
+  "alternatives": [
+    {
+      "name": "Pre-checked Opt-in",
+      "slug": "pre-checked-opt-in",
+      "reason": "Steering consent through defaults."
+    },
+    {
+      "name": "Nagging",
+      "slug": "nagging",
+      "reason": "Asking again after people decline."
+    }
+  ],
+  "accessibility": [
+    "Make the decline option a real button too, reachable with the keyboard.",
+    "Keep the size and contrast of both options similar.",
+    "Don't hide declining in underlined text alone.",
+    "The result sounds the same to screen readers."
+  ]
+}

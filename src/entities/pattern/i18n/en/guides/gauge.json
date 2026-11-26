@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "A single value with a fixed minimum and maximum.",
+    "You compare it with a target or standard.",
+    "People scan states quickly on a dashboard."
+  ],
+  "whenNotToUse": [
+    "Task progress (use a progress bar).",
+    "Several values are compared (use a bar chart).",
+    "The range has no end."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing how much of a task is done."
+    },
+    {
+      "name": "Progress Ring",
+      "slug": "progress-ring",
+      "reason": "Fitting progress into a tight spot."
+    }
+  ],
+  "accessibility": [
+    "Announce the value with role=\"meter\" and aria-valuemin, max, now, and valuetext.",
+    "Show the value, range, and target in text too.",
+    "With reduced motion, the bar transition turns off."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "A large photo, map, or quote background in the middle of an article.",
+    "You give a visual pause while keeping the text narrow.",
+    "Section backgrounds on a landing page."
+  ],
+  "whenNotToUse": [
+    "The photo is small and would blur when stretched.",
+    "The text already spans the full screen.",
+    "Content that's hard to read when wide, such as tables or code."
+  ],
+  "alternatives": [
+    {
+      "name": "Hero Section",
+      "slug": "hero-section",
+      "reason": "A large visual on the first screen."
+    }
+  ],
+  "accessibility": [
+    "Text keeps a comfortable measure (about 60 characters) so lines don't get too long.",
+    "It doesn't use 100vw, so no horizontal scrollbar appears.",
+    "Decorative images are aria-hidden, and informative ones have alt text.",
+    "The DOM order is unchanged, so the reading flow isn't broken."
+  ]
+}

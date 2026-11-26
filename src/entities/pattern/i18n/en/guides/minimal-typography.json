@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Luxury brands, galleries, or portfolios.",
+    "Focusing attention on a single sentence.",
+    "Covers used with photos."
+  ],
+  "whenNotToUse": [
+    "Thin type lacks contrast.",
+    "Information-dense screens.",
+    "Only empty space would remain on small screens."
+  ],
+  "alternatives": [
+    {
+      "name": "Editorial Typography",
+      "slug": "editorial-typography",
+      "reason": "The hierarchy of title and body."
+    },
+    {
+      "name": "Swiss Style",
+      "slug": "swiss-style",
+      "reason": "An orderly grid."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

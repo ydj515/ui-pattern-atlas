@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Logos or banners for cute, friendly brands.",
+    "Screens about children, snacks, or toys.",
+    "Short headings."
+  ],
+  "whenNotToUse": [
+    "Serious information screens.",
+    "Small sizes (the thickness turns to mush).",
+    "Paragraphs with lots of text."
+  ],
+  "alternatives": [
+    {
+      "name": "Chunky",
+      "slug": "chunky",
+      "reason": "Mass through thick strokes."
+    },
+    {
+      "name": "3D Extrude",
+      "slug": "three-d-extrude",
+      "reason": "Volume with drawn side faces."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

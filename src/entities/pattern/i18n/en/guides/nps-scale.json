@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You check likelihood to recommend the whole service periodically.",
+    "You want to ask once why after the score.",
+    "You compare trends with the same question."
+  ],
+  "whenNotToUse": [
+    "Satisfaction with one feature (use was this helpful or a star rating).",
+    "Before people have tried it, such as right after sign-up.",
+    "Popups that ask again and again."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Slider",
+      "slug": "rating-slider",
+      "reason": "Choosing by dragging along a range."
+    },
+    {
+      "name": "Thumbs Feedback",
+      "slug": "thumbs-feedback",
+      "reason": "Two answers are enough."
+    }
+  ],
+  "accessibility": [
+    "Build it from a fieldset and radio buttons so the arrow keys change the score.",
+    "The meanings of both ends (Not at all, Very likely) are written as text.",
+    "The chosen score shows with both color and fill.",
+    "The follow-up question connects to its input with a label."
+  ]
+}

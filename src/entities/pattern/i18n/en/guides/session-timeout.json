@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Services that must sign people out after inactivity, such as finance or government.",
+    "A sign-in may end during long input.",
+    "Screens used on shared devices."
+  ],
+  "whenNotToUse": [
+    "Services where staying signed in for a long time is fine.",
+    "You'd sign people out suddenly without showing the time left.",
+    "You'd discard work in progress on sign-out."
+  ],
+  "alternatives": [
+    {
+      "name": "Countdown",
+      "slug": "countdown",
+      "reason": "Showing only the time left."
+    },
+    {
+      "name": "Alert Dialog",
+      "slug": "alert-dialog",
+      "reason": "An ordinary warning window."
+    }
+  ],
+  "accessibility": [
+    "role=\"alertdialog\" reads the title together with the time left.",
+    "Following WCAG 2.2.1, offer a way to extend the time limit.",
+    "After sign-out, move focus to the Sign in again button."
+  ]
+}

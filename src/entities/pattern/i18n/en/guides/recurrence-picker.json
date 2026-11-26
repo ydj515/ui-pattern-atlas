@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Recurring events, subscriptions, or reminder intervals.",
+    "Several weekdays need to be chosen.",
+    "An end condition is needed."
+  ],
+  "whenNotToUse": [
+    "A few choices such as daily or weekly are enough (one select will do).",
+    "The rules are very complex (keep them in advanced settings).",
+    "One-time events."
+  ],
+  "alternatives": [
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "A few fixed intervals."
+    }
+  ],
+  "accessibility": [
+    "Weekdays are a set of aria-pressed buttons, shown only for weekly repeats.",
+    "The end condition is a fieldset of radios, with a separate name for the count input.",
+    "State the rule as a sentence and announce it with aria-live whenever it changes.",
+    "The interval is chosen with a native select."
+  ]
+}

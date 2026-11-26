@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "People want to ask again with the question slightly changed.",
+    "Fixing a typo or a missing condition.",
+    "Changing an earlier part of the conversation to go in another direction."
+  ],
+  "whenNotToUse": [
+    "Keeping the question and only getting a new answer (use regenerate response).",
+    "Messages written by other people.",
+    "Work conversations where edit history must be kept."
+  ],
+  "alternatives": [
+    {
+      "name": "Regenerate Response",
+      "slug": "regenerate-response",
+      "reason": "Getting a new answer to the same question."
+    },
+    {
+      "name": "Chat Interface",
+      "slug": "chat-interface",
+      "reason": "The whole conversation where questions and answers pile up."
+    }
+  ],
+  "accessibility": [
+    "Pressing edit moves focus to the input with the original text selected.",
+    "Cancel or Esc returns to the original state and the edit button.",
+    "That it answered again is announced with role=status.",
+    "The input is named Edit question."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "origin": "The icon itself is credited to Norm Cox, who drew it for the Xerox Star computer in 1981. The nickname hamburger came in the 2010s, when it spread widely as the menu button in mobile apps.",
+  "whenToUse": [
+    "The screen is narrow and the main menu must be hidden.",
+    "There are more than five menu items.",
+    "Apps whose users know where the menu is."
+  ],
+  "whenNotToUse": [
+    "There are only four or five menus people visit often (use a bottom tab bar).",
+    "There's plenty of room on desktop.",
+    "Audiences for whom the icon alone doesn't convey meaning (add the word Menu)."
+  ],
+  "alternatives": [
+    {
+      "name": "Veggie Burger",
+      "slug": "veggie-burger",
+      "reason": "A menu icon made of two horizontal lines."
+    },
+    {
+      "name": "Kebab ⋮",
+      "slug": "kebab",
+      "reason": "Extra actions for a single item."
+    }
+  ],
+  "accessibility": [
+    "Name the icon button Open menu.",
+    "Announce whether the menu is open with aria-expanded.",
+    "The open menu closes with Esc or a click outside.",
+    "Mark the current page with aria-current."
+  ]
+}

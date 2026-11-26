@@ -1,0 +1,26 @@
+{
+  "whenToUse": [
+    "Banners with a bar, concert, or night mood.",
+    "Large headings in a dark theme.",
+    "Short phrases."
+  ],
+  "whenNotToUse": ["Light backgrounds.", "Body text.", "The glow would lower the contrast."],
+  "alternatives": [
+    {
+      "name": "Y2K Chrome",
+      "slug": "chrome-typography",
+      "reason": "Metallic shine."
+    },
+    {
+      "name": "Outline",
+      "slug": "outline",
+      "reason": "Emphasis with outlines."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

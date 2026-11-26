@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Distant dates such as a birth date or issue date.",
+    "People already know the date.",
+    "Desktop forms where typing is fast."
+  ],
+  "whenNotToUse": [
+    "Nearby dates where the weekday matters (use a date picker).",
+    "A few options such as today or tomorrow are enough (use quick date chips).",
+    "International services where date order varies by country (show the format clearly)."
+  ],
+  "alternatives": [
+    {
+      "name": "Date Picker",
+      "slug": "date-picker",
+      "reason": "Picking a nearby date on a calendar."
+    },
+    {
+      "name": "Input Mask",
+      "slug": "input-mask",
+      "reason": "Number formats other than dates."
+    }
+  ],
+  "accessibility": [
+    "Always show the format (YYYY.MM.DD) in a hint, not only in the placeholder.",
+    "Check when focus leaves and report errors such as \"That date doesn't exist\" with aria-invalid.",
+    "Use inputmode=\"numeric\" and autocomplete=\"bday\" for the number pad and autofill.",
+    "After an error appears, re-check while people type."
+  ]
+}

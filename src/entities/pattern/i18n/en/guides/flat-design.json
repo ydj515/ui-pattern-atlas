@@ -1,0 +1,31 @@
+{
+  "origin": "It means drawing things flat, without depth. It spread widely through Microsoft's Metro design for Windows Phone in 2010 and Apple's iOS 7 in 2013.",
+  "whenToUse": [
+    "Simple screens read quickly on small displays.",
+    "Icons and color can carry the information hierarchy.",
+    "It must look the same across many devices."
+  ],
+  "whenNotToUse": [
+    "You'd flatten things until pressable and non-pressable can't be told apart.",
+    "Layered screens that must show hierarchy through depth.",
+    "You'd rely on color alone to tell states apart."
+  ],
+  "alternatives": [
+    {
+      "name": "Material Design",
+      "slug": "material-design",
+      "reason": "Adding hierarchy with shadows."
+    },
+    {
+      "name": "Minimalism",
+      "slug": "minimalism",
+      "reason": "Reducing the elements themselves."
+    }
+  ],
+  "accessibility": [
+    "Give buttons enough contrast that a colored plane alone looks pressable.",
+    "State changes show with both color and words (Play, Pause).",
+    "Switches announce their on state with role=switch.",
+    "Show a separate focus ring."
+  ]
+}

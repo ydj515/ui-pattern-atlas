@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You review stock or view count displays.",
+    "You check the data source behind scarcity indicators.",
+    "You draw the line for purchase-pressure wording."
+  ],
+  "whenNotToUse": [
+    "You'd show random or fixed numbers as stock.",
+    "You'd put the same warning on every product.",
+    "You'd heighten anxiety with red exclamation marks."
+  ],
+  "alternatives": [
+    {
+      "name": "Scarcity",
+      "slug": "scarcity",
+      "reason": "Stating a real limit honestly."
+    },
+    {
+      "name": "Fake Urgency",
+      "slug": "fake-urgency",
+      "reason": "Fake deadline timers."
+    }
+  ],
+  "accessibility": [
+    "Write stock calmly in numbers and words.",
+    "Don't pressure with color and exclamation marks.",
+    "Don't let changing numbers be read continuously via aria-live.",
+    "Show when the real data was last updated."
+  ]
+}

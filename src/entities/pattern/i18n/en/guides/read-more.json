@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Texts of varying length, such as property introductions, product descriptions, or reviews.",
+    "Heights need to line up in cards or lists.",
+    "Reading the beginning is enough for most people."
+  ],
+  "whenNotToUse": [
+    "Terms or warnings that must be read (show them in full from the start).",
+    "Texts of only a few lines.",
+    "A long answer under a single title (use a disclosure or an accordion)."
+  ],
+  "alternatives": [
+    {
+      "name": "Disclosure",
+      "slug": "disclosure",
+      "reason": "Opening content by pressing a title."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding several questions and answers."
+    }
+  ],
+  "accessibility": [
+    "The button appears only when the text actually overflows, and connects to it with aria-expanded and aria-controls.",
+    "The button comes right after the text, so focus continues from the same place after expanding.",
+    "The shortened text is all in the DOM, so screen readers can read the whole thing.",
+    "When the screen size changes, measure again to show or hide the button."
+  ]
+}

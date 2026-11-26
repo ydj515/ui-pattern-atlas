@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The core flow of a work tool used for the first time.",
+    "Three or four features are used together.",
+    "A tour people start themselves."
+  ],
+  "whenNotToUse": [
+    "Only one button needs pointing out (use a coach mark).",
+    "Long explanations of more than five steps.",
+    "You'd force it to start as soon as people arrive."
+  ],
+  "alternatives": [
+    {
+      "name": "Coach Mark",
+      "slug": "coach-mark",
+      "reason": "Pointing at just one button."
+    },
+    {
+      "name": "Setup Checklist",
+      "slug": "setup-checklist",
+      "reason": "Learning by doing."
+    }
+  ],
+  "accessibility": [
+    "Each step is role=dialog, named by its title.",
+    "When the step changes, focus moves to the Next button.",
+    "Esc or Skip ends it at once.",
+    "Show progress in text, such as 1 / 3."
+  ]
+}

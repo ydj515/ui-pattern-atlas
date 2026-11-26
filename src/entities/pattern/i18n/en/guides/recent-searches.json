@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Services where people repeat the same searches often.",
+    "People pressed the search box but haven't typed yet.",
+    "Retyping queries is a hassle."
+  ],
+  "whenNotToUse": [
+    "Several people share the device (offer a way to turn off history).",
+    "Queries may be sensitive.",
+    "Services where search is rare."
+  ],
+  "alternatives": [
+    {
+      "name": "Trending Searches",
+      "slug": "trending-searches",
+      "reason": "Showing popular queries instead of your history."
+    },
+    {
+      "name": "Search Suggestions",
+      "slug": "search-suggestions",
+      "reason": "Suggesting after typing starts."
+    }
+  ],
+  "accessibility": [
+    "The list is a section connected to its heading, so it can be found by region name.",
+    "Remove buttons have names that include the query, such as \"Remove canvas bag\".",
+    "With no history, show a message instead of an empty list."
+  ]
+}

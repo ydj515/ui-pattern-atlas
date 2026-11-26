@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Each option needs a description, which is hard to fit in a dropdown.",
+    "Places where the list can always be visible, such as settings.",
+    "People scan quickly with the keyboard to choose."
+  ],
+  "whenNotToUse": [
+    "There are two to five options inside a form (a radio group is more familiar).",
+    "Space is tight (use a select).",
+    "The list is so long people need to search it (use a combobox)."
+  ],
+  "alternatives": [
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "Short choices within a form."
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "When space is tight."
+    }
+  ],
+  "accessibility": [
+    "As a WAI-ARIA listbox, the whole list is one Tab stop, and aria-activedescendant announces the current option.",
+    "Moving with ↑/↓ and Home/End carries the selection along.",
+    "Pressing a letter jumps to the option starting with it.",
+    "The selected option shows with both a background color and a check mark."
+  ]
+}

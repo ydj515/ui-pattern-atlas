@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "You report an urgent, time-bound situation, such as an imminent sign-out or work about to be lost.",
+    "You must get a response before people continue.",
+    "The system has to raise a warning without anyone clicking."
+  ],
+  "whenNotToUse": [
+    "You're asking whether to run the button people just pressed (use a confirmation dialog).",
+    "It's a light notice that's fine to miss.",
+    "It's status information that can stay on screen without a response (use an alert banner)."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Asking whether to continue something people started."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A warning that stays visible without a response."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "A result that can show briefly and disappear."
+    }
+  ],
+  "accessibility": [
+    "role=\"alertdialog\" with aria-labelledby and aria-describedby reads the title and description as soon as it opens.",
+    "showModal() blocks the background, and clicking the backdrop doesn't close it. Esc counts as the cancel response (sign out).",
+    "On open, focus goes to the button that resolves the situation (Stay signed in).",
+    "Give the countdown role=\"timer\" so it isn't read every second, and say in the description what happens when time runs out."
+  ]
+}

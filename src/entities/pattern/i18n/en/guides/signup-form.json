@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Creating a new account with an email.",
+    "There are password rules.",
+    "You want to prevent duplicate sign-ups early."
+  ],
+  "whenNotToUse": [
+    "There are so many fields they should be split into steps (use a multi-step form).",
+    "A social account is enough (use social sign-in).",
+    "People could look around before signing up."
+  ],
+  "alternatives": [
+    {
+      "name": "Multi-step Form",
+      "slug": "multi-step-form",
+      "reason": "Splitting many fields into steps."
+    },
+    {
+      "name": "Password Strength Meter",
+      "slug": "password-strength-meter",
+      "reason": "Showing password strength as a bar."
+    },
+    {
+      "name": "Terms Agreement",
+      "slug": "terms-agreement",
+      "reason": "Getting consent to terms before sign-up."
+    }
+  ],
+  "accessibility": [
+    "Tie the rules list to the password field with aria-describedby so it's read.",
+    "Each rule says whether it's met in words, not color.",
+    "The duplicate email notice is read via aria-live."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Weighty large headings, such as a campaign or collection launch.",
+    "Two or three short lines on a dark background.",
+    "Lines with an order, such as release dates."
+  ],
+  "whenNotToUse": [
+    "Small text (the motion is hard to see).",
+    "Long sentences whose line breaks differ by screen.",
+    "Reading-focused body text."
+  ],
+  "alternatives": [
+    {
+      "name": "Staggered Text Reveal",
+      "slug": "staggered-text-reveal",
+      "reason": "Appearing through opacity without a mask."
+    },
+    {
+      "name": "Blur In",
+      "slug": "blur-in",
+      "reason": "Blurry text coming into focus."
+    }
+  ],
+  "accessibility": [
+    "Screen readers get every line at once via sr-only text.",
+    "The moving lines are aria-hidden.",
+    "With reduced motion, they show at once.",
+    "Padding below each line box keeps descenders and final consonants from being cut off."
+  ]
+}

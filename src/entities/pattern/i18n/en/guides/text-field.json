@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "You take short text such as a name, nickname, or address.",
+    "The input format should be explained in advance.",
+    "You validate on submit and show errors next to the field."
+  ],
+  "whenNotToUse": [
+    "Multi-line text (use a textarea).",
+    "Choosing among fixed options (use a selection control).",
+    "Numbers with a fixed format (use an input mask)."
+  ],
+  "alternatives": [
+    {
+      "name": "Textarea",
+      "slug": "textarea",
+      "reason": "Multi-line text."
+    },
+    {
+      "name": "Floating Label",
+      "slug": "floating-label",
+      "reason": "Space is tight and the label must sit inside the field."
+    },
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "Validating right away while people type."
+    }
+  ],
+  "accessibility": [
+    "The label is always visible as a label element, not a placeholder.",
+    "The hint and the error connect to the input with aria-describedby, and aria-invalid turns on when there's an error.",
+    "Say whether it's required with the word \"(required)\", not an asterisk alone.",
+    "Once an error appears, re-check while people type so it disappears as soon as it's fixed."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "whenToUse": [
+    "People need to remember a position in a list and come back to it, such as search results or order history.",
+    "People should know the total amount.",
+    "People need to reach the footer or content below the list."
+  ],
+  "whenNotToUse": [
+    "Content is browsed without breaks, like a feed (consider infinite scroll).",
+    "There are only one or two pages of items.",
+    "People would have to press small number buttons repeatedly on mobile (consider a load more button)."
+  ],
+  "alternatives": [
+    {
+      "name": "Load More",
+      "reason": "Continuing on mobile."
+    },
+    {
+      "name": "Infinite Scroll",
+      "reason": "Exploratory feeds."
+    }
+  ],
+  "accessibility": [
+    "Wrap it in <nav aria-label> so it's announced as page navigation.",
+    "Set aria-current=\"page\" on the current page button.",
+    "Give icon-only previous and next buttons an aria-label, and disable them at the ends.",
+    "Hide the ellipsis (…) with aria-hidden to avoid needless reading."
+  ]
+}

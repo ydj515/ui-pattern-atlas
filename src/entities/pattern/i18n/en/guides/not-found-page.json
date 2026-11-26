@@ -1,0 +1,31 @@
+{
+  "origin": "404 is the HTTP status code a web server returns when it can't find a page at the requested address, which is why this screen is commonly called a 404 page.",
+  "whenToUse": [
+    "People arrive at a page whose address changed or that was deleted.",
+    "Many people come from outside links or old bookmarks.",
+    "There's a way to find it again within the site."
+  ],
+  "whenNotToUse": [
+    "The page can't be viewed for lack of permission (use permission denied).",
+    "The service is under maintenance (use a maintenance page).",
+    "You know the new address (redirect straight to it)."
+  ],
+  "alternatives": [
+    {
+      "name": "Permission Denied",
+      "slug": "permission-denied",
+      "reason": "The page exists but can't be viewed."
+    },
+    {
+      "name": "Error State",
+      "slug": "error-state",
+      "reason": "Only part of a page failed to load."
+    }
+  ],
+  "accessibility": [
+    "The title (\"Page not found\") is read first, with the number 404 as supporting information.",
+    "The search form uses role=\"search\" and a hidden label so people can search right away.",
+    "Keep the site header and footer so there are ways to go elsewhere.",
+    "The server really returns a 404 status code so search engines and assistive technology can tell."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Structures of unknown depth, such as files and folders.",
+    "People need to move across several levels to choose items.",
+    "You show the position within the whole structure too."
+  ],
+  "whenNotToUse": [
+    "Menus with only one or two levels (use a sidebar or an accordion).",
+    "Mobile screens (a list that moves screen by screen is easier).",
+    "Lists where order matters."
+  ],
+  "alternatives": [
+    {
+      "name": "Sidebar Navigation",
+      "slug": "sidebar-navigation",
+      "reason": "Shallow structures such as app menus."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding a single level."
+    }
+  ],
+  "accessibility": [
+    "Use a WAI-ARIA tree: role=\"tree\", treeitem, and group with aria-level.",
+    "The whole tree is one Tab stop; ↑/↓ move, → expands or enters, and ← collapses or goes to the parent.",
+    "Folders announce their state with aria-expanded and files with aria-selected.",
+    "Home and End move to the first and last items."
+  ]
+}

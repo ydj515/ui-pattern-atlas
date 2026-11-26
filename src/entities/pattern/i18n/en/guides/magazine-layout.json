@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The front page of a magazine, news site, or blog.",
+    "There's a clear lead story.",
+    "Content with images."
+  ],
+  "whenNotToUse": [
+    "All articles are equally important (use a card grid).",
+    "Chronological order matters (use a list).",
+    "Articles without images."
+  ],
+  "alternatives": [
+    {
+      "name": "Card Grid",
+      "slug": "card-grid",
+      "reason": "Articles of equal importance."
+    },
+    {
+      "name": "Bento Grid",
+      "slug": "bento-grid",
+      "reason": "Introducing features."
+    }
+  ],
+  "accessibility": [
+    "The DOM order is lead story then supporting stories, matching the visual order.",
+    "Titles are links, and each story is wrapped in an article.",
+    "Images are decorative, so they're aria-hidden, and the titles carry the content.",
+    "On narrow screens it stacks in one column, readable when zoomed."
+  ]
+}

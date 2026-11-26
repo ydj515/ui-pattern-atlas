@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Content that can be partly previewed, such as paid articles, courses, or reports.",
+    "Content visible after signing in or joining.",
+    "The price or terms fit in one line."
+  ],
+  "whenNotToUse": [
+    "Someone else must grant access (use permission denied).",
+    "Content that can't be understood when locked without a preview.",
+    "You'd show the full content to search engines and hide it only from people."
+  ],
+  "alternatives": [
+    {
+      "name": "Permission Denied",
+      "slug": "permission-denied",
+      "reason": "Access must be requested from the owner."
+    },
+    {
+      "name": "Pricing Plan Comparison",
+      "slug": "pricing-plan-comparison",
+      "reason": "Choosing among several plans."
+    }
+  ],
+  "accessibility": [
+    "The locked part isn't real text blurred out; it isn't rendered at all, so it can't be read by screen readers or in the page source.",
+    "The fading gradient is decorative, so it's aria-hidden.",
+    "State the terms (price, eligibility) in text near the button first.",
+    "The button name states the result (\"Start membership\")."
+  ]
+}

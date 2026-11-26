@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A dragged and dropped element returns to its place.",
+    "Elements handled by hand, such as switches or sheets.",
+    "It may be operated again mid-motion."
+  ],
+  "whenNotToUse": [
+    "Transitions that must finish within a set time.",
+    "Elements showing serious information (errors, payments).",
+    "It bounces so much it's distracting (raise the damping)."
+  ],
+  "alternatives": [
+    {
+      "name": "Ease In / Ease Out",
+      "slug": "ease-in-out",
+      "reason": "Moving with a fixed duration and curve."
+    },
+    {
+      "name": "Bounce",
+      "slug": "bounce",
+      "reason": "Movement that hits the ground and bounces."
+    }
+  ],
+  "accessibility": [
+    "With reduced motion, it goes straight to the target without bouncing.",
+    "The button text tells the next action (Left, Right).",
+    "The ball is decorative, and the state comes through the button text.",
+    "The animation frame request is canceled, so calculation stops when it leaves the screen."
+  ]
+}

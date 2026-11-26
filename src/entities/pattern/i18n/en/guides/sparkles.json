@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Buttons where AI produces text or images.",
+    "Marking results that were generated automatically.",
+    "Telling AI features apart from existing ones."
+  ],
+  "whenNotToUse": [
+    "Highlighting new features unrelated to AI.",
+    "Putting it on every button until its meaning blurs.",
+    "Changing results with no way to undo."
+  ],
+  "alternatives": [
+    {
+      "name": "Streaming Text",
+      "slug": "streaming-text",
+      "reason": "An AI answer being written out."
+    },
+    {
+      "name": "Response Feedback",
+      "slug": "response-feedback",
+      "reason": "Rating AI results."
+    }
+  ],
+  "accessibility": [
+    "Write the action in words next to the icon, such as Polish with AI.",
+    "After the change, offer undo too.",
+    "Announce the result with role=status.",
+    "The sparkle graphic is aria-hidden."
+  ]
+}

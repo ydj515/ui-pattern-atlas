@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Passing a link to people in the same place, such as a meetup or event.",
+    "The screen being shown is a desktop.",
+    "Addresses that are long to type."
+  ],
+  "whenNotToUse": [
+    "Sending to people far away (use a share sheet).",
+    "Addresses longer than 42 bytes (use a library or shorten the address).",
+    "Showing only the code and hiding the address."
+  ],
+  "alternatives": [
+    {
+      "name": "Share Sheet",
+      "slug": "share-sheet",
+      "reason": "Sending to apps on the device."
+    },
+    {
+      "name": "Nearby Share",
+      "slug": "nearby-share",
+      "reason": "Sending straight to a nearby device."
+    }
+  ],
+  "accessibility": [
+    "The QR code has role=img and a name (Meetup invite QR code).",
+    "The same address is shown as text too.",
+    "A white background and a 4-module quiet zone keep it readable.",
+    "The code is at least 144px."
+  ]
+}

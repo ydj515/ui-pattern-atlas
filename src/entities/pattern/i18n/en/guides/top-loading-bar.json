@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "A single-page app is loading data for the next screen.",
+    "People wait without the current screen being cleared.",
+    "Most transitions finish within one or two seconds."
+  ],
+  "whenNotToUse": [
+    "Only part of the screen reloads (use a skeleton or spinner).",
+    "Progress is known exactly (use a progress bar).",
+    "Tasks taking more than a few seconds (use a progress toast)."
+  ],
+  "alternatives": [
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "Drawing the new screen's space first."
+    },
+    {
+      "name": "Delayed Spinner",
+      "slug": "delayed-spinner",
+      "reason": "Waiting within an area."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "When progress is known."
+    }
+  ],
+  "accessibility": [
+    "The bar is a named progressbar, and aria-hidden when not visible.",
+    "Put aria-busy on the loading area to say it's changing.",
+    "It appears only after a short delay, so fast transitions don't flicker.",
+    "Motion uses only transform, and transitions turn off with reduced motion."
+  ]
+}

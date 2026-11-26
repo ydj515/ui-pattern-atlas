@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Project members, people something was shared with, or people who liked it.",
+    "Space is tight and only a few people can show.",
+    "The number of people is important information."
+  ],
+  "whenNotToUse": [
+    "Everyone must be checked (use a list).",
+    "Only one person shows (use an avatar).",
+    "Each person must be opened (a list is easier)."
+  ],
+  "alternatives": [
+    {
+      "name": "Avatar",
+      "slug": "avatar",
+      "reason": "Showing one person."
+    },
+    {
+      "name": "List",
+      "slug": "list",
+      "reason": "Showing everyone."
+    }
+  ],
+  "accessibility": [
+    "The whole group is one image with one name (\"Kim Haneul, Lee Doyun, Park Seojun, and 2 others\"), so faces aren't read one by one.",
+    "The \"+N\" number is included in the name.",
+    "White borders separate the overlapping faces.",
+    "The add button is named \"Add member\"."
+  ]
+}

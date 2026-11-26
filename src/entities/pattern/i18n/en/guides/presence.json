@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Team member lists in messengers or collaboration tools.",
+    "You show whether someone can answer right away.",
+    "People let others know their own status."
+  ],
+  "whenNotToUse": [
+    "Services where privacy matters (let people choose to share their status).",
+    "The state of services or devices (use a status dot).",
+    "It can't be updated in real time."
+  ],
+  "alternatives": [
+    {
+      "name": "Status Dot",
+      "slug": "status-dot",
+      "reason": "The state of something other than a person."
+    },
+    {
+      "name": "Avatar",
+      "slug": "avatar",
+      "reason": "Showing just the person, without status."
+    }
+  ],
+  "accessibility": [
+    "The status is included in the avatar's name, read as \"Kim Haneul, away\".",
+    "Away is a half circle and offline an empty circle, so the shape differs, not color alone.",
+    "Lists also show the status in words.",
+    "Your own status changes with a native select."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "People compare several photos, as for products or places to stay.",
+    "There are a few to about ten photos.",
+    "You show which photo people are looking at."
+  ],
+  "whenNotToUse": [
+    "Photos need to fill the screen (use a lightbox).",
+    "There are very many photos (use a grid with a lightbox).",
+    "There's only one photo."
+  ],
+  "alternatives": [
+    {
+      "name": "Lightbox",
+      "slug": "lightbox",
+      "reason": "Opening large and paging through."
+    },
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "reason": "Moving one at a time."
+    }
+  ],
+  "accessibility": [
+    "Thumbnails are buttons with names such as \"2 of 4, mug side and handle\".",
+    "The chosen thumbnail is marked with aria-current and a border.",
+    "The large photo acts as an image with alt text.",
+    "Thumbnail buttons connect to the large photo with aria-controls."
+  ]
+}

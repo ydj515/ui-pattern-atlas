@@ -12,6 +12,7 @@ import {
 import { findPatternByTerm } from "@/entities/pattern/catalog/roadmapLinks";
 import {
   comparisonGroupName,
+  comparisonScenario,
   comparisonTitle,
   roadmapEntryText,
 } from "@/entities/pattern/i18n/catalogText";
@@ -145,7 +146,9 @@ function ComparisonDetail({ slug }: { readonly slug: string }) {
           <h2 id="comparison-preview" className="sr-only">
             {messages.comparison.preview}
           </h2>
-          <p className="mb-3 text-body text-graphite">{demo.scenario}</p>
+          <p className="mb-3 text-body text-graphite">
+            {comparisonScenario(slug, demo.scenario, locale)}
+          </p>
           <PatternPreview key={slug} loadPreview={demo.loadPreview} />
         </section>
       ) : null}

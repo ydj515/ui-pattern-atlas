@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Consent must legally be obtained at sign-up.",
+    "Required and optional terms are mixed.",
+    "The full terms can be opened right away."
+  ],
+  "whenNotToUse": [
+    "You'd pre-check optional terms.",
+    "There's only one set of terms (a one-line consent sentence).",
+    "You'd mix required and optional terms in the same style."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "A single consent item."
+    },
+    {
+      "name": "Social Sign-in",
+      "slug": "social-sign-in",
+      "reason": "Choosing how to sign up before consenting."
+    }
+  ],
+  "accessibility": [
+    "When only some are checked, Agree to all shows the mixed state as indeterminate.",
+    "Required and optional are labeled in words, not left to color.",
+    "View buttons include the name of the terms.",
+    "The next button stays disabled until all required terms are chosen."
+  ]
+}

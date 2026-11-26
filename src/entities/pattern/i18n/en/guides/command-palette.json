@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "There are so many features and screens that menus alone make them hard to find.",
+    "Experienced keyboard users need a shortcut.",
+    "You let people find actions across areas such as documents, settings, and team management in one place."
+  ],
+  "whenNotToUse": [
+    "There are only a few features, which can be shown on screen.",
+    "Main actions would be hidden only in the palette, where newcomers won't find them.",
+    "Mobile is the main way people use it."
+  ],
+  "alternatives": [
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "A few actions on one object."
+    },
+    {
+      "name": "Search box",
+      "reason": "Finding content rather than commands."
+    }
+  ],
+  "accessibility": [
+    "Make the input role=\"combobox\" and the list role=\"listbox\" with groups (role=\"group\"), announcing the active item with aria-activedescendant.",
+    "Focus stays in the input while ↑↓ move and Enter runs; Esc or a click on the backdrop closes it.",
+    "Enter during Korean input composition only confirms the character and doesn't run a command.",
+    "Add a button on screen that opens it too, so people who don't know the shortcut can open it."
+  ]
+}

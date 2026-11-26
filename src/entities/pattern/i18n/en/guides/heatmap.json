@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "The distribution across two dimensions, such as weekday × hour.",
+    "You look for patterns of high and low.",
+    "There are too many cells to write every number."
+  ],
+  "whenNotToUse": [
+    "Exact values must be compared (use a table or a bar chart).",
+    "There are only a few cells.",
+    "Positive and negative values mix (it needs a two-color diverging scale)."
+  ],
+  "alternatives": [
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing exact numbers."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Splitting by only one dimension."
+    }
+  ],
+  "accessibility": [
+    "With focus on the grid, moving between cells with the arrows reads the value via aria-live.",
+    "Size is shown only by the lightness of one color, so the order is visible even with color vision deficiency.",
+    "Opening the table view shows every value as a table."
+  ]
+}

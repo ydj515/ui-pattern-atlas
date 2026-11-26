@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Toggles pressed often, such as save or like.",
+    "People need to know at once that the press registered.",
+    "The result doesn't show anywhere else on screen."
+  ],
+  "whenNotToUse": [
+    "The same reaction would happen several times at once on one screen.",
+    "Requests that must wait for a result (use a loading state).",
+    "Long decorative animations that drag on to show off the brand."
+  ],
+  "alternatives": [
+    {
+      "name": "Toggle Button",
+      "slug": "toggle-button",
+      "reason": "The button itself that keeps its pressed state."
+    },
+    {
+      "name": "Bounce",
+      "slug": "bounce",
+      "reason": "Drawing the eye to a change somewhere else."
+    }
+  ],
+  "accessibility": [
+    "Announce the on state with aria-pressed, and the text changes from Save to Saved too.",
+    "The icon is decorative, so it's aria-hidden, and the button's name comes from the text.",
+    "The pop effect is skipped with reduced motion.",
+    "The effect finishes within 320ms, so it doesn't block the next input."
+  ]
+}

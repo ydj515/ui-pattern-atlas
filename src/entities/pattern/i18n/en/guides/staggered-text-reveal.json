@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Large headings of two or three lines.",
+    "The first screen of an introduction page.",
+    "Copy where the rhythm of the sentence matters."
+  ],
+  "whenNotToUse": [
+    "Long paragraphs (the last word appears too late).",
+    "Headings on screens people see often.",
+    "Korean split letter by letter (final consonants and shapes look awkward)."
+  ],
+  "alternatives": [
+    {
+      "name": "Mask Reveal",
+      "slug": "mask-reveal",
+      "reason": "Lines rising from behind a mask."
+    },
+    {
+      "name": "Stagger",
+      "slug": "stagger",
+      "reason": "Showing cards or list items in turn."
+    }
+  ],
+  "accessibility": [
+    "Screen readers get the whole sentence at once via sr-only text.",
+    "The split lines and words are aria-hidden so they aren't read in pieces.",
+    "With reduced motion, everything shows at once.",
+    "The unit choice is a set of radio buttons, changeable with the keyboard."
+  ]
+}

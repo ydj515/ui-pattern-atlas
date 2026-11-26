@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Detail screens with many reviews, such as products or apps.",
+    "The average alone is hard to judge by.",
+    "People want to see low-score reviews first."
+  ],
+  "whenNotToUse": [
+    "There are only a few reviews (a rating badge is enough).",
+    "Tight spots such as cards (use a rating badge).",
+    "Places where the text matters more than the score."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Badge",
+      "slug": "rating-badge",
+      "reason": "Showing it briefly on a card."
+    },
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Filtering by conditions other than score."
+    }
+  ],
+  "accessibility": [
+    "Bar buttons are aria-pressed, and their names include the score and count.",
+    "The bar graphics are aria-hidden.",
+    "The filtered state is announced in a role=status message.",
+    "Counts use tabular-nums to line up the digits."
+  ]
+}

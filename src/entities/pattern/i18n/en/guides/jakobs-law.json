@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the usability expert Jakob Nielsen, who stated it in 2000.",
+  "whenToUse": [
+    "You place the header, cart, or search.",
+    "You question whether a new layout is really needed.",
+    "You decide whether to follow platform conventions."
+  ],
+  "whenNotToUse": [
+    "There's clear evidence a convention is inconvenient enough to change (even then, change gradually).",
+    "You'd copy every screen exactly from other services.",
+    "You'd mistake it for giving up the brand's personality."
+  ],
+  "alternatives": [
+    {
+      "name": "Fitts's Law",
+      "slug": "fitts-law",
+      "reason": "Button size and distance."
+    },
+    {
+      "name": "Sticky Header",
+      "slug": "sticky-header",
+      "reason": "Keeping the header always visible."
+    }
+  ],
+  "accessibility": [
+    "Follow the familiar landmark structure (header, nav, main).",
+    "Give icons text names too.",
+    "Give the search field a label.",
+    "When moving things, explain the change."
+  ]
+}

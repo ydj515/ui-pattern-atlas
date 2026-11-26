@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Feed-based services with followers.",
+    "Showing someone else's post to your own followers.",
+    "Reposting with your own comment added."
+  ],
+  "whenNotToUse": [
+    "Sending only to specific people (use send/forward).",
+    "Services without a feed.",
+    "Designs that post in one tap, inviting mistakes."
+  ],
+  "alternatives": [
+    {
+      "name": "Send / Forward",
+      "slug": "send-forward",
+      "reason": "Sending to specific people."
+    },
+    {
+      "name": "Share Sheet",
+      "slug": "share-sheet",
+      "reason": "Sending outside the app."
+    }
+  ],
+  "accessibility": [
+    "The button has aria-haspopup=menu and aria-expanded.",
+    "When the menu opens, focus goes to the first item, and Esc closes it.",
+    "The button name includes Repost and the count.",
+    "The result is announced with role=status."
+  ]
+}

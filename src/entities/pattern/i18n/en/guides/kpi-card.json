@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Key metrics at the top of a dashboard.",
+    "You compare with last week or last month.",
+    "One number is enough without a chart."
+  ],
+  "whenNotToUse": [
+    "The shape of the trend matters (use a line chart or sparkline).",
+    "You can't state the basis of comparison.",
+    "There are ten or more metrics and a table would be better."
+  ],
+  "alternatives": [
+    {
+      "name": "Sparkline",
+      "slug": "sparkline",
+      "reason": "Adding the trend next to the number."
+    },
+    {
+      "name": "Description List",
+      "slug": "description-list",
+      "reason": "Listing several values with their names."
+    }
+  ],
+  "accessibility": [
+    "The card is a section named after the metric.",
+    "Changes are read as words, such as \"Up 12% from last week\", instead of arrows.",
+    "Good and bad are stated in words along with color, not color alone."
+  ]
+}

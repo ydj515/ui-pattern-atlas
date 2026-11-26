@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists acted on several at a time, such as orders, emails, or files.",
+    "The same action must be repeated.",
+    "Select all is needed."
+  ],
+  "whenNotToUse": [
+    "Only one item is handled at a time (put a button on each row).",
+    "Very many rows on mobile (use a long-press selection mode).",
+    "Irreversible bulk deletion (use with a confirmation dialog)."
+  ],
+  "alternatives": [
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Only viewing and sorting."
+    },
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Asking once more before a bulk delete."
+    }
+  ],
+  "accessibility": [
+    "Checkbox names point to the row, such as \"Select A-1021\".",
+    "Select all becomes indeterminate when only some rows are chosen.",
+    "The selection bar is aria-live, so it announces changes in the count.",
+    "Selected rows are marked with aria-selected and a background color."
+  ]
+}

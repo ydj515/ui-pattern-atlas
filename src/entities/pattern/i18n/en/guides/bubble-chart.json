@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You look at three values together, such as price, sales, and review count.",
+    "There are about 4 to 12 items.",
+    "You see which area the large items cluster in."
+  ],
+  "whenNotToUse": [
+    "Small differences in circle size must be compared.",
+    "There are so many items the circles overlap badly (use a scatter plot).",
+    "There are only two values (use a scatter plot)."
+  ],
+  "alternatives": [
+    {
+      "name": "Scatter Plot",
+      "slug": "scatter-plot",
+      "reason": "Seeing only the relationship between two values."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing one value precisely."
+    }
+  ],
+  "accessibility": [
+    "Circle size is proportional to area, not radius, so it doesn't exaggerate.",
+    "Item names are written inside the circles, not left to color.",
+    "Opening the table view shows every value as a table."
+  ]
+}

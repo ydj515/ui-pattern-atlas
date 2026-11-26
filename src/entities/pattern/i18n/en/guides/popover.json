@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "You need a longer explanation, links, or buttons than a tooltip allows.",
+    "People change a simple setting without leaving the screen.",
+    "You show details about an element only when they're wanted."
+  ],
+  "whenNotToUse": [
+    "It's a decision that must be answered.",
+    "You'd put a long form or scrolling content inside.",
+    "It's a short label that should open on hover alone."
+  ],
+  "alternatives": [
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "A one-line, non-interactive explanation."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "When a decision is required."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "An explanation that should always sit in the page flow."
+    }
+  ],
+  "accessibility": [
+    "Set aria-expanded and aria-controls on the trigger to announce whether it's open.",
+    "Move focus into the panel when it opens, and back to the trigger when Esc closes it.",
+    "Clicking outside closes it, but the rest of the page stays usable.",
+    "Give the panel role=\"dialog\" and an accessible name tied to its title."
+  ]
+}

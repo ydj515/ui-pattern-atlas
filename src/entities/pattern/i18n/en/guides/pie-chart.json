@@ -1,0 +1,30 @@
+{
+  "origin": "Credited to William Playfair, who first drew one in 1801. It means slicing a circle like a pie.",
+  "whenToUse": [
+    "There are two to four items that add up to 100%.",
+    "You show a big difference, such as whether one item is more than half.",
+    "There's no need for a number in the middle."
+  ],
+  "whenNotToUse": [
+    "There are more than five items (use a bar chart).",
+    "Comparing slices of similar size.",
+    "Showing the total in the middle (use a donut chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Donut Chart",
+      "slug": "donut-chart",
+      "reason": "Showing the total in the middle."
+    },
+    {
+      "name": "Stacked Bar Chart",
+      "slug": "stacked-bar-chart",
+      "reason": "Viewing the composition of several periods side by side."
+    }
+  ],
+  "accessibility": [
+    "Legend items are buttons, so Tab moves through them and highlights each slice.",
+    "The legend writes values and percentages, so it reads without the slices.",
+    "A 2px white line between slices keeps edges visible even with similar colors."
+  ]
+}

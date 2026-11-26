@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Passing an item along inside a messenger or collaboration tool.",
+    "Sending to several people at once.",
+    "The recipients are inside the app."
+  ],
+  "whenNotToUse": [
+    "Sending outside the app (use a share sheet).",
+    "Posting again to your own feed (use a repost).",
+    "Hundreds of recipients."
+  ],
+  "alternatives": [
+    {
+      "name": "Share Sheet",
+      "slug": "share-sheet",
+      "reason": "Sending to apps on the device."
+    },
+    {
+      "name": "Repost",
+      "slug": "repost",
+      "reason": "Posting again to your own feed."
+    }
+  ],
+  "accessibility": [
+    "The recipient list is a fieldset of checkboxes.",
+    "The search and message fields have names.",
+    "When there's no one to send to, the button is disabled.",
+    "The result is announced with role=status."
+  ]
+}

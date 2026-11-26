@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "There are criteria to compare, such as price or review count.",
+    "Results run past one screen.",
+    "The default order, such as recommended, has an unclear basis."
+  ],
+  "whenNotToUse": [
+    "Results need narrowing (use search filters).",
+    "People must set the order themselves (use a sortable list).",
+    "There are only two criteria and a toggle is enough."
+  ],
+  "alternatives": [
+    {
+      "name": "Search Filters",
+      "slug": "search-filters",
+      "reason": "Reducing the number of results rather than their order."
+    },
+    {
+      "name": "Sortable List",
+      "slug": "sortable-list",
+      "reason": "People set the order themselves."
+    }
+  ],
+  "accessibility": [
+    "The button announces the menu with aria-haspopup=\"menu\" and aria-expanded.",
+    "Items are menuitemradio, with aria-checked on the current order.",
+    "Opening it focuses the current order; ↑/↓ move, and Esc returns to the button."
+  ]
+}

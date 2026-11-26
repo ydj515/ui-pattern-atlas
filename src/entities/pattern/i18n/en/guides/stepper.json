@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Flows with fixed steps, such as checkout, sign-up, or applications.",
+    "There are three to five steps.",
+    "You want to tell people up front how many steps are left."
+  ],
+  "whenNotToUse": [
+    "There are many steps or they change (use a progress bar).",
+    "Settings people move between in any order (use tabs).",
+    "A form that fits on one screen."
+  ],
+  "alternatives": [
+    {
+      "name": "Multi-step Form",
+      "slug": "multi-step-form",
+      "reason": "Handling input and progress together."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing a share instead of steps."
+    }
+  ],
+  "accessibility": [
+    "Convey the order with an ol list, and mark the current step with aria-current=\"step\".",
+    "Finished steps show a check and read visually hidden \"(done)\" text.",
+    "Numbers and connecting lines are decorative, so they're aria-hidden.",
+    "Always show the step names as text."
+  ]
+}

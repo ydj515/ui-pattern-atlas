@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Bookings by the hour, such as a hair salon, clinic, or consultation.",
+    "Availability differs by time.",
+    "There are about ten slots a day."
+  ],
+  "whenNotToUse": [
+    "Any time can be set (use a time picker).",
+    "There are a great many slots (split them into morning and afternoon).",
+    "People need to choose several consecutive times."
+  ],
+  "alternatives": [
+    {
+      "name": "Time Picker",
+      "slug": "time-picker",
+      "reason": "Setting a time regardless of availability."
+    }
+  ],
+  "accessibility": [
+    "Each time is a native radio, moved with the arrow keys, and the fieldset legend gives the date.",
+    "Full times are disabled and show \"Full\" in words.",
+    "Put the chosen time in the booking button's name (\"Book 11:00\").",
+    "Announce the booking result with role=\"status\"."
+  ]
+}

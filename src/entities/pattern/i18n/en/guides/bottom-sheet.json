@@ -1,0 +1,36 @@
+{
+  "origin": "Named for a sheet of paper rising from the bottom of the screen. Google's Material Design defined the term.",
+  "whenToUse": [
+    "People choose one of a few options, such as a sort order or who to share with.",
+    "You gather actions for an item (edit, delete, share) while keeping the current screen.",
+    "You want choices within easier reach than the top of a mobile screen."
+  ],
+  "whenNotToUse": [
+    "It needs a long multi-step input or long text.",
+    "You must get confirmation for something that can't be undone.",
+    "It's a menu used with a mouse on a wide screen (a dropdown menu opens closer)."
+  ],
+  "alternatives": [
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "When people should focus on an important decision and its effect."
+    },
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "Long filters or details from the side of the screen."
+    },
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "A list of actions right under a button on desktop."
+    }
+  ],
+  "accessibility": [
+    "Open it with the native <dialog> showModal() to trap focus in the panel and make the background inert.",
+    "Connect the title with aria-labelledby so screen readers announce the panel's purpose first.",
+    "Esc, a tap on the backdrop, or a visible close button all close it, so swiping isn't the only way.",
+    "The rising animation turns off with prefers-reduced-motion."
+  ]
+}

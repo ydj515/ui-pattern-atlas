@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Each item needs several actions, such as rename, duplicate, and delete.",
+    "There's no room to lay out every action as a button.",
+    "You hide rarely used secondary actions so the main ones stand out."
+  ],
+  "whenNotToUse": [
+    "It's an input that picks one value (use a select or a radio group).",
+    "Even the most frequent action would be hidden in the menu.",
+    "There are only two actions, which can be shown as buttons."
+  ],
+  "alternatives": [
+    {
+      "name": "Context Menu",
+      "slug": "context-menu",
+      "reason": "The same list of actions, opened by right-click or long press."
+    },
+    {
+      "name": "Bottom Sheet",
+      "slug": "bottom-sheet",
+      "reason": "Gathering actions at the bottom, within easy reach on mobile."
+    },
+    {
+      "name": "Select",
+      "reason": "Choosing a value rather than an action."
+    }
+  ],
+  "accessibility": [
+    "Give the trigger aria-haspopup=\"menu\" and aria-expanded, the menu role=\"menu\", and items role=\"menuitem\".",
+    "Opening with Enter, Space, or ↓ focuses the first item and ↑ the last; ↑↓, Home, and End move between items.",
+    "Typing a letter moves to the next item starting with it, skipping disabled items.",
+    "Esc closes it and returns focus to the trigger; icon-only triggers get an aria-label."
+  ]
+}

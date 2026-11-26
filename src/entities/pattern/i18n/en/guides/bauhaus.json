@@ -1,0 +1,31 @@
+{
+  "origin": "From the Bauhaus, the art and architecture school that opened in Weimar, Germany, in 1919. The German name means building a house, and it put function and basic shapes before ornament.",
+  "whenToUse": [
+    "Posters for exhibitions or cultural events.",
+    "Geometric, orderly brands.",
+    "Covers that combine shapes and letters."
+  ],
+  "whenNotToUse": [
+    "Shapes would cover the letters and make them hard to read.",
+    "Body text.",
+    "Primary colors don't fit the brand."
+  ],
+  "alternatives": [
+    {
+      "name": "Swiss Style",
+      "slug": "swiss-style",
+      "reason": "Information ordered by a grid."
+    },
+    {
+      "name": "Art Deco",
+      "slug": "art-deco",
+      "reason": "Decorative geometric lines."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

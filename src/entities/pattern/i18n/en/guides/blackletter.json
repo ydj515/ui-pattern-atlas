@@ -1,0 +1,31 @@
+{
+  "origin": "The bold, angular letters of medieval European manuscripts, called blackletter because the strokes are so dense the page looks black. The Gutenberg Bible of the 1450s was printed in it.",
+  "whenToUse": [
+    "Classic logos such as tradition, beer, or newspaper mastheads.",
+    "Music (metal) album covers.",
+    "One or two words of Latin text."
+  ],
+  "whenNotToUse": [
+    "Body text or Korean sentences.",
+    "Using Unicode decorative characters as real text (problems with search and screen reading).",
+    "Small sizes."
+  ],
+  "alternatives": [
+    {
+      "name": "Art Deco",
+      "slug": "art-deco",
+      "reason": "A decorative classic mood."
+    },
+    {
+      "name": "Editorial Typography",
+      "slug": "editorial-typography",
+      "reason": "Serif headings."
+    }
+  ],
+  "accessibility": [
+    "Screen readers read Unicode decorative characters one by one, so add role=img and an aria-label (Weekend Market).",
+    "Write the Korean phrase alongside to convey the meaning.",
+    "Don't use decorative characters for text that must be searched or copied.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

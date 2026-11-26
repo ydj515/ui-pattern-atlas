@@ -1,0 +1,31 @@
+{
+  "origin": "From the Japanese kanban (看板, signboard). Toyota's production system managed the flow of work with cards, and the method moved over to managing software work.",
+  "whenToUse": [
+    "Managing work that flows through states such as to do, in progress, and done.",
+    "A team follows progress together.",
+    "There aren't many cards."
+  ],
+  "whenNotToUse": [
+    "There are only two states (use a checklist).",
+    "Small screens (use a list split into status tabs).",
+    "There are hundreds of cards (use a table or a filtered list)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sortable List",
+      "slug": "sortable-list",
+      "reason": "Only reordering within one list."
+    },
+    {
+      "name": "Selectable Table",
+      "slug": "selectable-table",
+      "reason": "Changing the status of many items at once."
+    }
+  ],
+  "accessibility": [
+    "Each card has \"Move to …\" buttons that do the same as dragging.",
+    "Announce the result of a move with role=\"status\".",
+    "Columns are sections with a name and a card count.",
+    "The column to drop into is marked with a border and background."
+  ]
+}

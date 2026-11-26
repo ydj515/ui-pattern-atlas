@@ -1,0 +1,12 @@
+{
+  "whenToUse": ["You show the state of an upload or process whose total amount is known."],
+  "whenNotToUse": ["Requests whose current progress can't be measured."],
+  "alternatives": [
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "Short tasks whose progress can't be calculated."
+    }
+  ],
+  "accessibility": ["Give the native progress element a name, and announce completion in text too."]
+}

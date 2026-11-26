@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "People choose colors to tell things apart, such as tags, calendars, or labels.",
+    "The usable colors are fixed, as with brand colors.",
+    "The result can be previewed right away."
+  ],
+  "whenNotToUse": [
+    "Color is the only way meaning is conveyed (add a name or icon too).",
+    "Precise color adjustment, as in design tools (use a dedicated picker).",
+    "There are only two or three options and names matter more (use a radio group)."
+  ],
+  "alternatives": [
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "When choosing by name is clearer."
+    }
+  ],
+  "accessibility": [
+    "Swatches are native radios with names (blue, green), chosen with the arrow keys.",
+    "The chosen swatch shows a thick border as well as its color.",
+    "The chosen color code is shown as text, so it can be checked without seeing the color.",
+    "Custom picking uses the browser's input type=color as is."
+  ]
+}

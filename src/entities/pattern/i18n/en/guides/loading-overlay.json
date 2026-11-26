@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Forms where changing values while saving would tangle the result.",
+    "Several controls in one area must be blocked at once.",
+    "The task finishes within a few seconds."
+  ],
+  "whenNotToUse": [
+    "You'd block the whole page (cover only the area that needs it).",
+    "Long tasks (use a progress notice and let people do other things).",
+    "Only one button needs blocking (disabling it and a status message are enough)."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Toast",
+      "slug": "progress-toast",
+      "reason": "People can do other things during the task."
+    },
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "Showing the state of only a button or small area."
+    }
+  ],
+  "accessibility": [
+    "Put inert on the covered content to block clicks, focus, and assistive technology.",
+    "Give the area aria-busy, and put the \"Saving\" message in a role=\"status\" outside the inert part.",
+    "When it's done, announce the result (\"Saved\") as status.",
+    "Transitions and rotation turn off with reduced motion."
+  ]
+}

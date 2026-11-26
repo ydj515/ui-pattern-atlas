@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Extra actions in the header of a post or card.",
+    "Showing more on iOS or the web.",
+    "Spots with more horizontal than vertical room."
+  ],
+  "whenNotToUse": [
+    "You'd hide main actions.",
+    "You'd mix it with three vertical dots.",
+    "Spots where it could be confused with an ellipsis (…) for truncated text."
+  ],
+  "alternatives": [
+    {
+      "name": "Kebab ⋮",
+      "slug": "kebab",
+      "reason": "More, as three vertical dots."
+    },
+    {
+      "name": "Long Press",
+      "slug": "long-press",
+      "reason": "Opening extra actions with a gesture."
+    }
+  ],
+  "accessibility": [
+    "Give the icon button a name such as More for post.",
+    "Add aria-haspopup=menu and aria-expanded.",
+    "Announce the result with role=status.",
+    "The three dots are decorative, so they're aria-hidden."
+  ]
+}

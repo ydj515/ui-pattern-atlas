@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Actions that wait for a response, such as saving or paying.",
+    "The same request must not be sent twice.",
+    "You want to show the result right by the button."
+  ],
+  "whenNotToUse": [
+    "Work that takes more than a few seconds (use a progress toast).",
+    "The result changes the whole screen (report it on the new screen).",
+    "Light actions that needn't wait for a response (use an optimistic update)."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Toast",
+      "slug": "progress-toast",
+      "reason": "Long-running work."
+    },
+    {
+      "name": "Optimistic UI",
+      "slug": "optimistic-ui",
+      "reason": "When the result can be shown first."
+    }
+  ],
+  "accessibility": [
+    "While working, use aria-disabled and aria-busy instead of disabled so focus stays on the button.",
+    "Announce the status (Saving, Saved) with role=\"status\".",
+    "Change the state in words along with the icon, not color alone.",
+    "Set a minimum width so the button doesn't resize when its state changes."
+  ]
+}

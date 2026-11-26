@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Mobile apps with a drawer menu, such as email or messaging.",
+    "It's offered as a shortcut alongside a menu button.",
+    "There are no sideways gestures in the middle of the screen."
+  ],
+  "whenNotToUse": [
+    "Where it overlaps the operating system's back gesture (the left edge on iOS).",
+    "There's only the gesture and no menu button.",
+    "Desktop."
+  ],
+  "alternatives": [
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "A drawer opened with a menu button."
+    },
+    {
+      "name": "Swipe Navigation",
+      "slug": "swipe-navigation",
+      "reason": "Flicking through screens of the same kind."
+    }
+  ],
+  "accessibility": [
+    "The menu button announces whether it's open with aria-expanded.",
+    "The open menu closes with Esc or a tap outside.",
+    "When closed, the menu is hidden, so Tab doesn't enter it.",
+    "The current mailbox is marked with aria-current."
+  ]
+}

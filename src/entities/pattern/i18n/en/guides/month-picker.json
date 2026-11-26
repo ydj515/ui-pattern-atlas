@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Monthly billing, statements, or reports.",
+    "Only a year and month are needed, as with card expiry dates.",
+    "Months that haven't come yet can't be chosen."
+  ],
+  "whenNotToUse": [
+    "A day is needed too (use a date picker).",
+    "Only the last few months matter (use a select or chips).",
+    "The range of years is very wide."
+  ],
+  "alternatives": [
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "Choosing only among the last few months."
+    },
+    {
+      "name": "Date Picker",
+      "slug": "date-picker",
+      "reason": "Choosing down to the day."
+    }
+  ],
+  "accessibility": [
+    "Include the year in month button names (\"October 2026\") and announce the selection with aria-pressed.",
+    "Months that haven't come yet and the next-year button are disabled.",
+    "The year display reads the changed year with aria-live.",
+    "Put the target year in the previous and next year button names."
+  ]
+}

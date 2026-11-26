@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Forms with few fields on narrow screens, such as login or payment.",
+    "Fields with short labels.",
+    "The design requires all fields to share one height."
+  ],
+  "whenNotToUse": [
+    "Fields with long labels or that need a hint (use a text field).",
+    "Values are often prefilled by autofill (the label only shows small).",
+    "Inputs with a built-in browser display, such as dates."
+  ],
+  "alternatives": [
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "The basic form with the label above the field."
+    }
+  ],
+  "accessibility": [
+    "It's a real label element, not a placeholder, so the name stays after a value is entered.",
+    "CSS :placeholder-shown tells the states apart, so it works without JavaScript.",
+    "The raised label still keeps a text contrast of 4.5:1.",
+    "The motion turns off with reduced motion."
+  ]
+}

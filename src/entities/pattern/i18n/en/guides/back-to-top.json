@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Pages with very long lists or texts.",
+    "People need to get back to the top menu on mobile.",
+    "Infinite scroll lists."
+  ],
+  "whenNotToUse": [
+    "Short pages.",
+    "There's no reason to go back to the top.",
+    "It would overlap other floating buttons."
+  ],
+  "alternatives": [
+    {
+      "name": "Table of Contents",
+      "slug": "table-of-contents",
+      "reason": "Jumping straight to the section you want."
+    }
+  ],
+  "accessibility": [
+    "The button says \"Back to top\" in words.",
+    "Along with scrolling, move focus to the top heading.",
+    "With reduced motion, jump without smooth scrolling.",
+    "It appears only after scrolling far enough, so it doesn't cover the screen."
+  ]
+}

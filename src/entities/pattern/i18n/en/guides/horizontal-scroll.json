@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Preview lists, such as recommended products or recently viewed items.",
+    "Vertical space is tight.",
+    "People don't need to see every item."
+  ],
+  "whenNotToUse": [
+    "People need to compare every item (use a grid).",
+    "Important content would be cut off and hidden.",
+    "It would advance on its own (the accessibility problems of carousels)."
+  ],
+  "alternatives": [
+    {
+      "name": "Scrollable Tabs",
+      "slug": "scrollable-tabs",
+      "reason": "When tabs overflow."
+    }
+  ],
+  "accessibility": [
+    "The row is a named region that takes focus and scrolls with the arrow keys.",
+    "Previous and next buttons are named and turn off at the ends.",
+    "With scroll-snap, cards stop aligned to their slots.",
+    "Smooth scrolling turns off with reduced motion."
+  ]
+}

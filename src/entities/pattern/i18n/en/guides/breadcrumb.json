@@ -1,0 +1,29 @@
+{
+  "origin": "From the fairy tale Hansel and Gretel, where the siblings drop breadcrumbs so they won't get lost. It means you can retrace the path you came by.",
+  "whenToUse": [
+    "The hierarchy has three or more levels, such as categories or folders.",
+    "People often land on deep pages straight from search or outside links.",
+    "People often need to go back up to a parent list."
+  ],
+  "whenNotToUse": [
+    "The site is simple, with only one or two levels.",
+    "You're showing progress through steps, such as checkout.",
+    "You'd use it in place of browser history (Back)."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Moving between screens at the same level."
+    },
+    {
+      "name": "Stepper",
+      "reason": "Showing ordered progress steps."
+    }
+  ],
+  "accessibility": [
+    "Make a landmark with <nav aria-label> and express the path as an ordered <ol>.",
+    "Keep the current page as text, not a link, and mark it with aria-current=\"page\".",
+    "The separator (›) is decorative, so hide it with aria-hidden."
+  ]
+}

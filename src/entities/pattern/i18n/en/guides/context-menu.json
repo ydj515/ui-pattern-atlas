@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The same actions repeat for every object, such as files, messages, or table rows.",
+    "You add fast shortcuts for experienced users.",
+    "The screen is a canvas or editor where buttons are hard to lay out."
+  ],
+  "whenNotToUse": [
+    "It's the only way to do that action (right-click is easy to miss).",
+    "It sits over links or body text, where the browser's own right-click menu is more useful.",
+    "It's a main action that newcomers must know about."
+  ],
+  "alternatives": [
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "Offering the same actions from a visible button."
+    },
+    {
+      "name": "Bottom Sheet",
+      "slug": "bottom-sheet",
+      "reason": "Showing large choices after a long press on mobile."
+    }
+  ],
+  "accessibility": [
+    "With the object focused, Shift+F10 or the menu key also opens it, so it works without a mouse.",
+    "On touch, a half-second long press opens it, and the first item gets focus.",
+    "Use role=\"menu\" and role=\"menuitem\" with ↑↓, Home, and End; closing with Esc or Tab returns focus to the object.",
+    "Offer the same actions through another button or menu on screen, so people who don't know about right-click can use them."
+  ]
+}

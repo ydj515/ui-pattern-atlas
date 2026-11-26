@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Places that need a signature, such as contracts, consent forms, or delivery receipts.",
+    "People sign directly on a tablet or phone.",
+    "The signature image must be attached to a document."
+  ],
+  "whenNotToUse": [
+    "Signatures that need legal force (use certified e-signatures or identity verification).",
+    "A consent checkbox is enough.",
+    "You'd take only a signature with no alternative input."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "When consent alone is enough."
+    },
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "Typing a name instead."
+    }
+  ],
+  "accessibility": [
+    "The canvas has role=\"img\" and announces its state: \"Signature, empty\" or \"Signature, signed\".",
+    "Offer a typed-name alternative on the same screen for people who can't draw.",
+    "Pointer capture keeps the line from breaking outside the box, and touch-action is turned off so it doesn't clash with touch scrolling.",
+    "Keep the done button off until there's a signature."
+  ]
+}

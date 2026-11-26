@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Screens where people repeatedly open an item from a list and come back.",
+    "The list is long and it's easy to lose your place.",
+    "A single-page app redraws screens."
+  ],
+  "whenNotToUse": [
+    "There are several places to go back to, which are hard to name (leave it to the browser's Back).",
+    "The list changes a lot in the meantime (suggest refreshing).",
+    "One-screen flows."
+  ],
+  "alternatives": [
+    {
+      "name": "Breadcrumb",
+      "slug": "breadcrumb",
+      "reason": "Going up a level."
+    }
+  ],
+  "accessibility": [
+    "Name the back button for where it goes, such as \"Back to list\".",
+    "On return, restore the scroll position and move focus to the item that was opened.",
+    "Use it together with the address history so the result matches the browser's Back.",
+    "Focus with preventScroll so the screen doesn't jump while restoring the position."
+  ]
+}

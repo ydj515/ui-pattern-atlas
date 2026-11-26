@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Showing an address and letting people copy it, such as an invite link or share URL.",
+    "People should check the address before copying.",
+    "A fallback for the share sheet."
+  ],
+  "whenNotToUse": [
+    "Values that aren't addresses, such as codes or numbers (use a copy button).",
+    "There's no room to show the address.",
+    "Opening it directly is enough, with no need to copy."
+  ],
+  "alternatives": [
+    {
+      "name": "Copy Button",
+      "slug": "copy-button",
+      "reason": "Copying a code or number."
+    },
+    {
+      "name": "Share Sheet",
+      "slug": "share-sheet",
+      "reason": "Sending to apps on the device."
+    }
+  ],
+  "accessibility": [
+    "The address field is a read-only input connected to a label.",
+    "On focus, the whole address is selected.",
+    "The result is announced with role=status, and if it fails, people are guided to copy by hand.",
+    "The button says Copy in words."
+  ]
+}

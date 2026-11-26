@@ -1,0 +1,26 @@
+{
+  "whenToUse": ["Games, retro, or movie posters.", "Giving weight to a large heading.", "Logos."],
+  "whenNotToUse": [
+    "Small text.",
+    "Line height is so tight the shadow overlaps the next line.",
+    "Body text."
+  ],
+  "alternatives": [
+    {
+      "name": "Inflated 3D",
+      "slug": "inflated-three-d",
+      "reason": "Round, puffed-up volume."
+    },
+    {
+      "name": "Emboss",
+      "slug": "emboss",
+      "reason": "A sense of rising from the surface."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

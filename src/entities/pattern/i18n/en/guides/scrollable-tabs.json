@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "There are many tabs with short names, such as product categories.",
+    "Tabs are wider than the screen on mobile.",
+    "The most-used tabs come first."
+  ],
+  "whenNotToUse": [
+    "There are only three or four tabs (use ordinary tabs).",
+    "People need to compare every option at a glance (use filter chips or a select).",
+    "Tab names are long."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "When there are only a few tabs."
+    },
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Turning on several at once."
+    },
+    {
+      "name": "Horizontal Scroll",
+      "slug": "horizontal-scroll",
+      "reason": "Swiping through cards."
+    }
+  ],
+  "accessibility": [
+    "Follow the WAI-ARIA tabs pattern, connecting tablist, tab, and tabpanel; ←/→ and Home/End move between tabs.",
+    "Keep the selected tab in view with scrollIntoView.",
+    "The arrow buttons are a mouse aid, so they're left out of the Tab order.",
+    "Mark the selected tab with weight and an underline."
+  ]
+}

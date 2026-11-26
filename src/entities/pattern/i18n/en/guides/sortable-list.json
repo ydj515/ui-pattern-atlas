@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Task priorities, menu order, or playlists.",
+    "People need to set the order themselves.",
+    "There are a few dozen items or fewer."
+  ],
+  "whenNotToUse": [
+    "The sort order is fixed by a criterion (use data table sorting).",
+    "There are very many items (use buttons such as Move to top).",
+    "Moving to another list (use a kanban board)."
+  ],
+  "alternatives": [
+    {
+      "name": "Kanban Board",
+      "slug": "kanban-board",
+      "reason": "Moving to a list with a different status."
+    },
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Sorting automatically by a criterion."
+    }
+  ],
+  "accessibility": [
+    "The handle is a named button and moves one place with ↑/↓.",
+    "After a move, announce the new position with role=\"status\", such as \"1st of 4\".",
+    "Focus stays on the moved item's handle.",
+    "It's an ol list, so the order is read along with it."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "There are several payment methods.",
+    "Each method has different extra options.",
+    "A frequently used method is the default."
+  ],
+  "whenNotToUse": [
+    "There's only one method.",
+    "Screens that take card numbers directly (use the payment provider's screen).",
+    "Prices differ by method and that isn't stated."
+  ],
+  "alternatives": [
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "The basic form for choosing one option."
+    },
+    {
+      "name": "Checkout Summary",
+      "slug": "checkout-summary",
+      "reason": "Checking the amount right before payment."
+    }
+  ],
+  "accessibility": [
+    "Radio buttons grouped with fieldset and legend let the arrow keys move between them.",
+    "The installment choice appears only when card is chosen, so there's less to read.",
+    "The chosen card is marked with both a border and a background."
+  ]
+}

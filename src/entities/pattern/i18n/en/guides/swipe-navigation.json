@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "People view same-format screens in turn, such as weather by day or photos.",
+    "There are few screens and they have an order.",
+    "People flick through with one hand on mobile."
+  ],
+  "whenNotToUse": [
+    "Moving between screens of different kinds (use tabs or a bottom tab bar).",
+    "Other elements on the screen also slide sideways.",
+    "There are so many screens that reaching the right one takes long."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Moving between screens of different kinds."
+    },
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "reason": "Flicking through several cards in a row."
+    }
+  ],
+  "accessibility": [
+    "Previous and next buttons do the same moves.",
+    "The current screen's title changes with aria-live to announce the position.",
+    "Screens out of view are inert, so Tab doesn't wander into them.",
+    "scroll-snap is a browser feature, so keyboard scrolling also stops screen by screen."
+  ]
+}

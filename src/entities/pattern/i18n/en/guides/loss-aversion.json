@@ -1,0 +1,31 @@
+{
+  "origin": "A concept from prospect theory, published by Daniel Kahneman and Amos Tversky in 1979.",
+  "whenToUse": [
+    "You set the tone of benefit wording.",
+    "You report real losses, such as a warning that unsaved work will be lost.",
+    "You compare the same information told two ways."
+  ],
+  "whenNotToUse": [
+    "You'd say a benefit that won't disappear is disappearing.",
+    "You'd push sign-ups with the pressure that declining is a loss.",
+    "You'd use warning colors when nothing is really lost."
+  ],
+  "alternatives": [
+    {
+      "name": "Framing Effect",
+      "slug": "framing-effect",
+      "reason": "How phrasing changes judgment."
+    },
+    {
+      "name": "Confirmshaming",
+      "slug": "confirmshaming",
+      "reason": "Putting guilt on declining."
+    }
+  ],
+  "accessibility": [
+    "Use warning-like colors and icons only when there's real risk.",
+    "State the benefit's conditions (period, amount) clearly in words.",
+    "Show the options at the same size and weight.",
+    "Give time limits as dates."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There are five or more options and people choose several.",
+    "It must take little room in a form.",
+    "People need to remove chosen items one by one."
+  ],
+  "whenNotToUse": [
+    "There are only a few options (lay them out as checkboxes or filter chips).",
+    "People need to add values not in the list (use a tag input).",
+    "Only one is chosen (use a select)."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "Few enough options to lay out."
+    },
+    {
+      "name": "Tag Input",
+      "slug": "tag-input",
+      "reason": "Stacking values people type themselves."
+    }
+  ],
+  "accessibility": [
+    "The button connects to the list with aria-haspopup=\"listbox\" and aria-expanded, and its name includes the number chosen.",
+    "The list is an aria-multiselectable listbox, and each option has aria-selected.",
+    "↑/↓ move, Space or Enter chooses, and closing with Esc or Tab returns focus to the button.",
+    "Each chip has a remove button with a name such as \"Remove development\"."
+  ]
+}

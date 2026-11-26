@@ -1,0 +1,31 @@
+{
+  "origin": "From the Sanskrit avatāra, the form a god takes on descending to earth. Through the 1985 game Ultima IV and the 1992 novel Snow Crash, it came to mean the picture that stands for you online.",
+  "whenToUse": [
+    "Places where people appear, such as comments, assignees, or chat partners.",
+    "People without photos still need to be told apart.",
+    "It's used at several sizes."
+  ],
+  "whenNotToUse": [
+    "Things that aren't people (use an icon).",
+    "The name must be visible (use it with the name in text).",
+    "The photo is used to verify identity (show it larger)."
+  ],
+  "alternatives": [
+    {
+      "name": "Avatar Group",
+      "slug": "avatar-group",
+      "reason": "Showing several people together."
+    },
+    {
+      "name": "Presence",
+      "slug": "presence",
+      "reason": "Also showing whether someone is online."
+    }
+  ],
+  "accessibility": [
+    "Both the photo's alt and the initials' aria-label use the name.",
+    "If the photo fails to load, onError switches to initials so no broken image remains.",
+    "The initials are aria-hidden so the name isn't read twice.",
+    "The color comes from the name, so the same person always gets the same color."
+  ]
+}

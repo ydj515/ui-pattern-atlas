@@ -1,0 +1,31 @@
+{
+  "origin": "Originally the board at the front of a carriage that stopped mud from dashing up. Through car instrument panels, it came to mean a screen for seeing many states at a glance.",
+  "whenToUse": [
+    "Screens for regularly checking metrics such as sales or visits.",
+    "It should read in the order summary, trend, details.",
+    "People change the period to compare."
+  ],
+  "whenNotToUse": [
+    "There are only one or two metrics (one card is enough).",
+    "Task-focused screens.",
+    "You'd line up every chart at the same size (importance is lost)."
+  ],
+  "alternatives": [
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing detailed numbers."
+    },
+    {
+      "name": "Bento Grid",
+      "slug": "bento-grid",
+      "reason": "Grouping cells of different importance."
+    }
+  ],
+  "accessibility": [
+    "Metric cards are a list, so their count is read along with them, and changes are written as \"up\" or \"down\".",
+    "Arrows and colors are supporting cues, so they're aria-hidden.",
+    "Charts say what they show in a figcaption.",
+    "Period buttons announce their state with aria-pressed."
+  ]
+}

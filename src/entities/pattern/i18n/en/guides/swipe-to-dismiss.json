@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Mobile sheets shown briefly, such as share or options.",
+    "Closing must be easy with one hand.",
+    "Nothing is lost by closing."
+  ],
+  "whenNotToUse": [
+    "Sheets with work in progress (confirm before closing).",
+    "The sheet holds a long vertically scrolling list (put the gesture on the handle only).",
+    "Desktop dialogs."
+  ],
+  "alternatives": [
+    {
+      "name": "Bottom Sheet",
+      "slug": "bottom-sheet",
+      "reason": "The structure and height of the sheet itself."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "On desktop, or when confirmation is needed."
+    }
+  ],
+  "accessibility": [
+    "The close button and Esc also close it, so dragging isn't the only way.",
+    "When it closes, focus returns to the button that opened the sheet.",
+    "The drag area is limited to the handle so scrolling inside the sheet isn't blocked.",
+    "The spring-back animation turns off with reduced motion."
+  ]
+}

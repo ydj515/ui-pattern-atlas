@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services where your name is visible to others.",
+    "Only a nickname and photo are needed.",
+    "People can use it even if they skip."
+  ],
+  "whenNotToUse": [
+    "Services that don't need names.",
+    "You'd also ask for information not needed now, such as a birthday or address.",
+    "You'd block skipping."
+  ],
+  "alternatives": [
+    {
+      "name": "Avatar",
+      "slug": "avatar",
+      "reason": "Showing the profile photo."
+    },
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "Reporting input rules right away."
+    }
+  ],
+  "accessibility": [
+    "Connect the nickname field to its label, and tie the rules and character count with aria-describedby.",
+    "When it breaks the rules, announce it with aria-invalid.",
+    "Photo selection is a file input wrapped in a label, so it opens with the keyboard.",
+    "The avatar preview is decorative, so it's aria-hidden."
+  ]
+}

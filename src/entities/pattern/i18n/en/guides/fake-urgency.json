@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You review the time display on sale or event banners.",
+    "You check that a timer matches the real deadline.",
+    "You decide how to express urgency honestly."
+  ],
+  "whenNotToUse": [
+    "You'd show a timer with no deadline.",
+    "You'd restart a timer that ended.",
+    "You'd show each person a different fake deadline."
+  ],
+  "alternatives": [
+    {
+      "name": "Scarcity",
+      "slug": "scarcity",
+      "reason": "Stating a real limit honestly."
+    },
+    {
+      "name": "Fake Scarcity",
+      "slug": "fake-scarcity",
+      "reason": "Pressuring with fake stock."
+    }
+  ],
+  "accessibility": [
+    "Write the date and time in words alongside the timer.",
+    "Don't let a timer that changes every second be read continuously via aria-live.",
+    "Don't heighten anxiety with flashing red.",
+    "With reduced motion, the movement stops."
+  ]
+}

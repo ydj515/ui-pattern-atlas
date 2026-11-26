@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Numbers with a fixed format, such as phone, card, or business registration numbers.",
+    "Long numbers are less error-prone when split into groups.",
+    "Pasted numbers come in all sorts of formats."
+  ],
+  "whenNotToUse": [
+    "International phone numbers whose format varies by country (use with a country picker).",
+    "Free text without a format, such as names or addresses.",
+    "Long text where a jumping cursor would get in the way."
+  ],
+  "alternatives": [
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "Input without a fixed format."
+    },
+    {
+      "name": "OTP Input",
+      "slug": "otp-input",
+      "reason": "Short codes taken box by box."
+    }
+  ],
+  "accessibility": [
+    "Say in the label what to enter, and show a format example in the placeholder and hint.",
+    "Match the keypad and autofill with inputmode=\"numeric\" and autocomplete (tel, cc-number).",
+    "Even when separators are inserted, the cursor stays after the digit just typed so people can keep going.",
+    "Deleting a separator recalculates from the digits, so Backspace never gets stuck."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Moving between screens with depth, such as a list and its details.",
+    "Switching tabs or sections (fade through).",
+    "Briefly opening a task screen (modal)."
+  ],
+  "whenNotToUse": [
+    "Small changes within the same screen (move only that element).",
+    "Screens people move between quickly and often (the transition becomes a wait).",
+    "Long transitions over 300ms."
+  ],
+  "alternatives": [
+    {
+      "name": "Shared Element Transition",
+      "slug": "shared-element-transition",
+      "reason": "The pressed element continues into the next screen."
+    },
+    {
+      "name": "Zoom Transition",
+      "slug": "zoom-transition",
+      "reason": "A screen grows out of an icon or card."
+    }
+  ],
+  "accessibility": [
+    "When the screen changes, move focus to the new screen so keyboard and screen reader users don't lose their place.",
+    "Going back moves the opposite way, consistently showing which screen comes first.",
+    "With reduced motion, every transition becomes a short fade.",
+    "The content changes immediately even during the transition, so no one waits for the animation."
+  ]
+}

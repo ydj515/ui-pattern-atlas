@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You set the default selection for settings, amounts, or plans.",
+    "You review privacy defaults.",
+    "You point people to the value most choose."
+  ],
+  "whenNotToUse": [
+    "You'd make the value that benefits only the company the default.",
+    "You'd turn data sharing on by default.",
+    "You'd make defaults hard to change."
+  ],
+  "alternatives": [
+    {
+      "name": "Pre-checked Opt-in",
+      "slug": "pre-checked-opt-in",
+      "reason": "Turning consent on by default."
+    },
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "An input for choosing one."
+    }
+  ],
+  "accessibility": [
+    "The default is the radio button's checked state, so screen readers announce it too.",
+    "Write why it's the default.",
+    "Make it easy to change to another value.",
+    "Show the selected state with both color and a border."
+  ]
+}

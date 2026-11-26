@@ -1,0 +1,31 @@
+{
+  "origin": "Named after a Japanese bento box divided into compartments: cells of different sizes packed into one tray. It became widely known through Apple's product pages.",
+  "whenToUse": [
+    "A set of features on a product page.",
+    "You gather information of different importance on one screen.",
+    "Wide screens."
+  ],
+  "whenNotToUse": [
+    "All items are equally important (use a responsive grid).",
+    "Explanations whose reading order matters (use a list).",
+    "Cells get too small on narrow screens (stack them in one column)."
+  ],
+  "alternatives": [
+    {
+      "name": "Responsive Grid",
+      "slug": "responsive-grid",
+      "reason": "Same-size cells."
+    },
+    {
+      "name": "Magazine Layout",
+      "slug": "magazine-layout",
+      "reason": "Lead and supporting content."
+    }
+  ],
+  "accessibility": [
+    "Keep the DOM in reading order and change cell sizes only with grid spans.",
+    "Put the most important content in the largest cell, which is also the first.",
+    "Keep the contrast between text and background inside tiles.",
+    "On narrow screens, stack in one column so it stays readable when zoomed."
+  ]
+}

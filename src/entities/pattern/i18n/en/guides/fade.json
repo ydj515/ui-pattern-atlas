@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Short notices such as Saved.",
+    "The position stays and only the content changes.",
+    "In place of other movement under reduced motion."
+  ],
+  "whenNotToUse": [
+    "Showing where something came from matters (use a slide).",
+    "A long fade would delay the content.",
+    "Fades that repeat like blinking."
+  ],
+  "alternatives": [
+    {
+      "name": "Slide",
+      "slug": "slide",
+      "reason": "The direction of appearance carries meaning."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "The full pattern for result notices."
+    }
+  ],
+  "accessibility": [
+    "The notice sits in a role=status region, so screen readers hear it too.",
+    "While disappearing, it's marked aria-hidden.",
+    "With reduced motion, it's added and removed without a transition.",
+    "Notices that disappear on their own stay for at least 2 seconds."
+  ]
+}

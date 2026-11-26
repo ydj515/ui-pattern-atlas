@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There's a clear default action with a few variations.",
+    "Space is tight, as at the end of a toolbar or form.",
+    "Most people use only the default action."
+  ],
+  "whenNotToUse": [
+    "The actions differ in kind (keep separate buttons).",
+    "There's no default action (use a dropdown menu).",
+    "There are many options."
+  ],
+  "alternatives": [
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "Just a menu with no default action."
+    },
+    {
+      "name": "Button",
+      "slug": "button",
+      "reason": "One action with no options."
+    }
+  ],
+  "accessibility": [
+    "Each button has its own name, and the arrow button has aria-haspopup=\"menu\" and aria-expanded.",
+    "The menu is role=\"menu\"; ↑/↓ move and Enter runs.",
+    "Closing with Esc or Tab returns focus to the arrow button.",
+    "Clicking outside closes the menu."
+  ]
+}

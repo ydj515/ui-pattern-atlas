@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Switching apps in a service that bundles several apps.",
+    "A set spot, such as the top left.",
+    "Showing app names together with their icons."
+  ],
+  "whenNotToUse": [
+    "Menus within one app.",
+    "Mixing it with the bento.",
+    "There are only two or three apps."
+  ],
+  "alternatives": [
+    {
+      "name": "Bento",
+      "slug": "bento",
+      "reason": "An app list made of nine squares."
+    },
+    {
+      "name": "Hamburger ☰",
+      "slug": "hamburger",
+      "reason": "The menu within one app."
+    }
+  ],
+  "accessibility": [
+    "Name the icon button Switch apps.",
+    "The list is role=dialog and closes with Esc.",
+    "Each app has a text name.",
+    "When it opens, focus goes to the first app."
+  ]
+}

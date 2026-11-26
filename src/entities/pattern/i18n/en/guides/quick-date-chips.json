@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Most choices are nearby dates, such as a delivery date or deadline.",
+    "Mobile screens where opening a calendar is a hassle.",
+    "People think of dates in words (this weekend)."
+  ],
+  "whenNotToUse": [
+    "Dates are spread evenly (use a date picker).",
+    "Distant dates (use a date input).",
+    "It would be unclear which date a chip means (show the real date too)."
+  ],
+  "alternatives": [
+    {
+      "name": "Date Picker",
+      "slug": "date-picker",
+      "reason": "Choosing any day on a calendar."
+    }
+  ],
+  "accessibility": [
+    "Chips are aria-pressed buttons, so the chosen chip is read out.",
+    "Show the result again as a real date, such as \"Arrives Sat, November 28\", so people can check what \"this weekend\" means.",
+    "Other dates are chosen with a native date input.",
+    "Group the chips with role=\"group\" and a name."
+  ]
+}

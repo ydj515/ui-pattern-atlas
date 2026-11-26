@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "People stack several short conditions, such as Wi-Fi or parking.",
+    "Above a list whose results update right away.",
+    "You quickly show a few frequently used conditions."
+  ],
+  "whenNotToUse": [
+    "There are many conditions or ranges to set (use a filter panel).",
+    "Only one can be chosen (use a segmented control).",
+    "Form input values (use checkboxes)."
+  ],
+  "alternatives": [
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Switching views where only one is chosen."
+    },
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "Choosing several within a form."
+    },
+    {
+      "name": "No Filter Results",
+      "slug": "no-filter-results",
+      "reason": "When stacked conditions leave no results."
+    }
+  ],
+  "accessibility": [
+    "Chips are toggle buttons with aria-pressed, so their on state is read out.",
+    "Chips that are on show a check mark as well as color.",
+    "Group the chips with role=\"group\" and a name that says what they filter.",
+    "Announce the result count with aria-live."
+  ]
+}

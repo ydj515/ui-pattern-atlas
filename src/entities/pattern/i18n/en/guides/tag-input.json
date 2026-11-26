@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You take several values, such as interests, tech stack, or recipients.",
+    "The options aren't fixed, so people must type them.",
+    "People need to see the values they added and remove them one by one."
+  ],
+  "whenNotToUse": [
+    "The options are fixed (use checkboxes or a multi-select).",
+    "There's only one value (use a text field).",
+    "There are a great many values (use a list editing screen)."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "Choosing several from fixed options."
+    },
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "A single value."
+    }
+  ],
+  "accessibility": [
+    "Each chip has a remove button whose name says what it removes, such as \"Remove design\".",
+    "Announce additions and removals (\"Added the development tag\") with role=\"status\".",
+    "Ignore Enter during Korean input composition so the last character isn't cut off.",
+    "Backspace in an empty field removes the last tag, and focus stays in the input afterward."
+  ]
+}

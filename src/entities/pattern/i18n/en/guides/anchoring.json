@@ -1,0 +1,31 @@
+{
+  "origin": "Like a ship that stays near where it drops anchor, people judge near the first number they see. Amos Tversky and Daniel Kahneman introduced it in 1974.",
+  "whenToUse": [
+    "You show the price before discount or a comparison price.",
+    "You set the order of plans.",
+    "You review the honesty of price displays."
+  ],
+  "whenNotToUse": [
+    "You'd show an inflated list price the product never sold at.",
+    "You'd hide the source of the reference price.",
+    "The comparison is with a different product."
+  ],
+  "alternatives": [
+    {
+      "name": "Strikethrough Price",
+      "slug": "strikethrough-price",
+      "reason": "Showing prices before and after a discount."
+    },
+    {
+      "name": "Decoy Effect",
+      "slug": "decoy-effect",
+      "reason": "When the lineup of options changes judgment."
+    }
+  ],
+  "accessibility": [
+    "Label the struck-through price as the list price so its meaning comes through to screen readers too.",
+    "Write the discount amount in words.",
+    "Don't convey meaning with color and strikethrough alone.",
+    "Align prices with tabular-nums."
+  ]
+}

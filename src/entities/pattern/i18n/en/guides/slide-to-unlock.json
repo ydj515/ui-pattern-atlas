@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Confirmations where an accidental press would be costly, such as paying or departing.",
+    "Situations with frequent unintended touches, such as in a pocket.",
+    "A clearer statement of intent than one tap is needed."
+  ],
+  "whenNotToUse": [
+    "Frequent, ordinary actions (it only adds hassle).",
+    "Without an alternative, when you must consider people who find precise dragging hard.",
+    "Submitting desktop forms."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Asking once more before running."
+    },
+    {
+      "name": "Hold to Confirm",
+      "slug": "hold-to-confirm",
+      "reason": "Running only while held."
+    }
+  ],
+  "accessibility": [
+    "A native range input underneath lets the arrow keys and End unlock it too.",
+    "A label names what's being unlocked.",
+    "The track shows an outline when it has focus.",
+    "The return animation turns off with reduced motion."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "There are two to four items that add up to 100%.",
+    "You stress how much of the whole one item takes.",
+    "You show the total and the composition together."
+  ],
+  "whenNotToUse": [
+    "There are more than five items (use a bar chart).",
+    "Comparing segments of similar size.",
+    "Composition changing over time (use a stacked bar chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Stacked Bar Chart",
+      "slug": "stacked-bar-chart",
+      "reason": "Viewing the composition of several periods side by side."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing similar sizes precisely."
+    }
+  ],
+  "accessibility": [
+    "Legend items are buttons, so Tab moves through them and highlights each segment.",
+    "The legend writes values and percentages, so it reads without the ring.",
+    "A 2px gap between segments keeps edges visible even with similar colors."
+  ]
+}

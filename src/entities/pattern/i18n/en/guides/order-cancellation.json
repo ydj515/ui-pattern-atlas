@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Canceling part or all of an order.",
+    "Coupons or points affect the refund amount.",
+    "The refund method and timing must be stated."
+  ],
+  "whenNotToUse": [
+    "Shipping has started and it becomes a return.",
+    "You'd hide the cancel button so it's hard to find (see the roach motel).",
+    "Irreversible actions processed without confirmation."
+  ],
+  "alternatives": [
+    {
+      "name": "Roach Motel",
+      "slug": "roach-motel",
+      "reason": "The dark pattern of making cancellation hard."
+    },
+    {
+      "name": "Receipt Summary",
+      "slug": "receipt-summary",
+      "reason": "Showing the details after cancellation."
+    }
+  ],
+  "accessibility": [
+    "The items to cancel are checkboxes grouped in a fieldset.",
+    "The expected refund is read via aria-live when it changes.",
+    "The button stays disabled until items and a reason are chosen."
+  ]
+}

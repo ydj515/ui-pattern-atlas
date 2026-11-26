@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Screens where questions and answers continue, such as AI assistants or support.",
+    "People reread earlier messages and ask follow-ups.",
+    "Answers are mostly short paragraphs."
+  ],
+  "whenNotToUse": [
+    "Searches asked once and done (use a search results screen).",
+    "Producing long documents (use an editor screen).",
+    "Replacing every feature of a messenger used by many people at once."
+  ],
+  "alternatives": [
+    {
+      "name": "Prompt Input",
+      "slug": "prompt-input",
+      "reason": "The input below the conversation."
+    },
+    {
+      "name": "Comment Thread",
+      "slug": "comment-thread",
+      "reason": "Asynchronous conversations with replies."
+    }
+  ],
+  "accessibility": [
+    "The conversation list announces new messages with role=log and aria-live.",
+    "Each bubble has screen reader text saying who spoke, you or the assistant.",
+    "Scrolling isn't hijacked while people read further up.",
+    "The conversation area has a tabIndex so it scrolls with the keyboard."
+  ]
+}

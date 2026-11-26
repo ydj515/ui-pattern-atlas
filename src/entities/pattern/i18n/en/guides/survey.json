@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You check how common something heard in interviews is.",
+    "You measure satisfaction steadily on the same scale.",
+    "You compare answers across groups."
+  ],
+  "whenNotToUse": [
+    "You need to understand reasons deeply (use user interviews).",
+    "You need to know actual behavior (analyze behavior logs).",
+    "You'd ask two things in one question."
+  ],
+  "alternatives": [
+    {
+      "name": "User Interview",
+      "slug": "user-interview",
+      "reason": "Hearing the reasons behind answers."
+    },
+    {
+      "name": "NPS Scale",
+      "slug": "nps-scale",
+      "reason": "Measuring just likelihood to recommend."
+    }
+  ],
+  "accessibility": [
+    "Use a survey tool built from radio buttons and fieldsets.",
+    "Write the meanings of both ends of a scale in words.",
+    "Keep required questions few and say how many are left."
+  ]
+}

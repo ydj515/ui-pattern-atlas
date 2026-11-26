@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There's movement across the screen, zooming, rotation, or parallax.",
+    "Animations play on their own.",
+    "As the default for every motion component."
+  ],
+  "whenNotToUse": [
+    "Progress indicators where the motion is the information (keep them, perhaps slower).",
+    "Very small changes in color or shadow (already calm enough).",
+    "You'd ignore the setting and offer only a site toggle."
+  ],
+  "alternatives": [
+    {
+      "name": "Fade",
+      "slug": "fade",
+      "reason": "Appearing and disappearing without movement."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Reporting a result in words."
+    }
+  ],
+  "accessibility": [
+    "Subscribe to the prefers-reduced-motion media query with useSyncExternalStore so a changed setting applies at once.",
+    "With reduced motion, use only a 160ms fade instead of movement or zooming (WCAG 2.3.3).",
+    "Even when the motion changes, the content and order stay the same.",
+    "The preview checkbox only imitates the setting and doesn't change the system setting."
+  ]
+}

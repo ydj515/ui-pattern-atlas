@@ -1,0 +1,19 @@
+{
+  "origin": "Adding one more decoy option makes another option stand out. It's known from research by Joel Huber and others in 1982, and is also called the asymmetric dominance effect.",
+  "whenToUse": [
+    "You explain how adding an option changes the relative appeal of the existing ones."
+  ],
+  "whenNotToUse": [
+    "You'd show false options buyers can't use, or mislead people into a particular plan."
+  ],
+  "alternatives": [
+    {
+      "name": "Compromise Effect",
+      "slug": "compromise-effect",
+      "reason": "Focusing on where the middle option appears."
+    }
+  ],
+  "accessibility": [
+    "Show each option's price and included benefits as text with the same structure."
+  ]
+}

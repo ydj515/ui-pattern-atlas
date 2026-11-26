@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Success after a short wait, as with a transfer or payment.",
+    "The first thing seen on a result screen.",
+    "Once per screen."
+  ],
+  "whenNotToUse": [
+    "It would repeat for every item in a list.",
+    "You'd hide the chance of failure and make it look like success.",
+    "Long, flashy staging."
+  ],
+  "alternatives": [
+    {
+      "name": "Success Screen",
+      "slug": "success-screen",
+      "reason": "Showing the result and next steps together."
+    },
+    {
+      "name": "Confetti",
+      "slug": "confetti",
+      "reason": "Big achievements such as reaching a goal."
+    }
+  ],
+  "accessibility": [
+    "The check mark has role=img and a name (Sent).",
+    "The result message is also announced with role=status.",
+    "With reduced motion, the finished mark shows at once without drawing.",
+    "The button stays disabled while sending so nothing is sent twice."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "origin": "Like a desk drawer, it slides out from the side of the screen and back in. It spread when Google's Material Design named it the navigation drawer.",
+  "whenToUse": [
+    "People adjust several items, such as filters or settings, and apply them at once.",
+    "You want to show the details of a selected item while keeping the list.",
+    "The form is too long for a modal."
+  ],
+  "whenNotToUse": [
+    "You only need a simple yes or no.",
+    "People need to keep using the panel and the page at the same time.",
+    "You'd hide the main navigation even outside mobile."
+  ],
+  "alternatives": [
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "A short, important decision."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Settings opened within the page."
+    },
+    {
+      "name": "Bottom Sheet",
+      "reason": "Choices handled with one hand on mobile."
+    }
+  ],
+  "accessibility": [
+    "Open it as a modal <dialog> to trap focus in the panel and make the background inert.",
+    "It closes with a clear close button (with aria-label), Esc, or a click on the backdrop.",
+    "Connect the title with aria-labelledby so screen readers announce the panel's purpose.",
+    "Use draft values until Apply, making it clear that closing discards the changes."
+  ]
+}

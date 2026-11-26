@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Tool buttons that turn on and off, such as text formatting or view options.",
+    "Several can be on at once.",
+    "State is shown with icons inside a toolbar."
+  ],
+  "whenNotToUse": [
+    "An on/off that saves a setting (use a switch).",
+    "Only one of several can be chosen (use a segmented control).",
+    "An action that runs immediately (use a button)."
+  ],
+  "alternatives": [
+    {
+      "name": "Switch",
+      "slug": "switch",
+      "reason": "Turning settings on and off."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Choosing only one."
+    }
+  ],
+  "accessibility": [
+    "Announce the pressed state with aria-pressed, and don't change the name (\"Bold\") with the state.",
+    "Group related buttons with role=\"toolbar\" and a name.",
+    "The pressed state is clearly visible through background contrast.",
+    "Even single-letter buttons convey their meaning with aria-label."
+  ]
+}

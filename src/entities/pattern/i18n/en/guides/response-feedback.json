@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Under every AI answer.",
+    "You collect answer quality to improve it.",
+    "Answers are often moved elsewhere."
+  ],
+  "whenNotToUse": [
+    "Messages written by people (use emoji reactions).",
+    "So many tools that the row overflows (group them under More).",
+    "Popups that force a rating."
+  ],
+  "alternatives": [
+    {
+      "name": "Thumbs Feedback",
+      "slug": "thumbs-feedback",
+      "reason": "Asking at the end of an article whether it helped."
+    },
+    {
+      "name": "Regenerate Response",
+      "slug": "regenerate-response",
+      "reason": "Comparing a new answer with the previous one."
+    }
+  ],
+  "accessibility": [
+    "Each icon button has a name and a title.",
+    "Good and poor are aria-pressed toggles.",
+    "The copy result is announced in a hidden role=status.",
+    "The group is named Answer tools."
+  ]
+}

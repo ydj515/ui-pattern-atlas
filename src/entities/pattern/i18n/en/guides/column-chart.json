@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Comparing ordered items such as months or quarters.",
+    "Item names are short.",
+    "You compare on the same scale while changing the period."
+  ],
+  "whenNotToUse": [
+    "Item names are long (use a bar chart).",
+    "Trends with many points (use a line chart).",
+    "Showing composition (use a stacked bar chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Long or many item names."
+    },
+    {
+      "name": "Histogram",
+      "slug": "histogram",
+      "reason": "Seeing the distribution of values in bins."
+    }
+  ],
+  "accessibility": [
+    "Opening the table view shows every value as a table.",
+    "Scale values are written out, so heights don't have to be guessed.",
+    "With reduced motion, the height transition turns off."
+  ]
+}

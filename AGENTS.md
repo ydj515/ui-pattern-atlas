@@ -62,10 +62,12 @@ language-neutral; switching languages is a full page load.
   both languages; the type makes English fill every Korean key, and
   `src/shared/i18n/locale.test.ts` fails on Korean left in the English copy.
 - Catalog text for English (pattern summary, description and aliases; topic names and
-  descriptions; comparison groups and descriptions) lives in
-  `src/entities/pattern/i18n/en/*.json` and loads only on English pages. Adding a pattern,
-  topic or comparison means adding its English text too; `catalogText.test.ts` fails on
-  anything missing, extra, empty or still in Korean. Read it through `localizePattern`,
+  descriptions; comparison groups, descriptions and scenarios) lives in
+  `src/entities/pattern/i18n/en/*.json` and loads only on English pages. Each pattern's English
+  detail guidance is `src/entities/pattern/i18n/en/guides/<slug>.json`, loaded with its page.
+  Adding a pattern, topic or comparison, or changing a Korean guide, means updating the English
+  text too; `catalogText.test.ts` fails on anything missing, extra, empty, still in Korean, or
+  out of step with the Korean guide item for item. Read it through `localizePattern`,
   `topicName` and the other helpers in `catalogText.ts`.
 - Pattern thumbnails, demos and their source stay in Korean on English pages, with a note
   saying so. Do not translate them as part of site copy.

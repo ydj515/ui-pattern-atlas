@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Small whole numbers, such as a cart quantity or the number of people.",
+    "Values most people change only once or twice.",
+    "Values with a fixed minimum and maximum."
+  ],
+  "whenNotToUse": [
+    "Numbers with a wide range, such as amounts or heights: type them in a text field.",
+    "Choosing a rough value (use a slider).",
+    "Values with decimals."
+  ],
+  "alternatives": [
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "Typing large numbers directly."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Choosing one of a few options."
+    }
+  ],
+  "accessibility": [
+    "The middle box has role=\"spinbutton\" and announces aria-valuenow, valuemin, and valuemax.",
+    "The up and down arrows change it one step at a time, and a typed value is clamped to the range when focus leaves.",
+    "Button names say what changes, such as \"Decrease quantity\" and \"Increase quantity\".",
+    "At the maximum, the button turns off and the reason is written out (\"You can buy up to 5\")."
+  ]
+}

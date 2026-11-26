@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Same-size items repeat, such as products, photos, or cards.",
+    "Screen widths vary.",
+    "You don't want to manage breakpoints separately."
+  ],
+  "whenNotToUse": [
+    "Items must differ in size (use a bento grid or masonry).",
+    "The column count is fixed by design.",
+    "Rows and columns are compared, like a table."
+  ],
+  "alternatives": [
+    {
+      "name": "Card Grid",
+      "slug": "card-grid",
+      "reason": "Aligning rows inside cards."
+    },
+    {
+      "name": "Masonry Grid",
+      "slug": "masonry-grid",
+      "reason": "Items of different heights."
+    }
+  ],
+  "accessibility": [
+    "The DOM order is the visual order, so the reading order never drifts.",
+    "Name the list so the number of items is read along with it.",
+    "Zooming only reduces the columns; content isn't cut off (WCAG 1.4.10).",
+    "It uses only repeat(auto-fill, minmax()) and needs no JavaScript."
+  ]
+}

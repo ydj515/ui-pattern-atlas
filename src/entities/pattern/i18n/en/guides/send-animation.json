@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Inputs where sending is frequent, such as chat or comments.",
+    "You want to give an immediate sense of having sent.",
+    "The sent result appears on the same screen."
+  ],
+  "whenNotToUse": [
+    "Sending is likely to fail but it would look like success.",
+    "People leave the screen after sending, as with email.",
+    "A long flight that blocks the next input."
+  ],
+  "alternatives": [
+    {
+      "name": "Loading Button",
+      "slug": "loading-button",
+      "reason": "Sending takes a while."
+    },
+    {
+      "name": "Success Checkmark",
+      "slug": "success-checkmark",
+      "reason": "Announcing that sending is done in a big way."
+    }
+  ],
+  "accessibility": [
+    "The send button has only an icon, so it gets a name with aria-label.",
+    "When the input is empty, the button is disabled.",
+    "Sent messages are added to the conversation list (ol), so screen readers can check them.",
+    "With reduced motion, the plane and bubble movements are skipped."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Dropdown buttons that pick one value, such as sort or filter.",
+    "The chosen value shows as the button text.",
+    "The sort direction in a table header."
+  ],
+  "whenNotToUse": [
+    "Rows that lead into the next screen (use a chevron).",
+    "Accordion expansion (a rotating chevron is more common).",
+    "There's only the icon and no current value."
+  ],
+  "alternatives": [
+    {
+      "name": "Chevron ›",
+      "slug": "chevron",
+      "reason": "Marking the next screen or expansion."
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "The full pattern for a choice input."
+    }
+  ],
+  "accessibility": [
+    "Give the button aria-haspopup and aria-expanded.",
+    "The caret is decorative, so it's aria-hidden.",
+    "Show the chosen value as the button text.",
+    "Announce the result with role=status."
+  ]
+}

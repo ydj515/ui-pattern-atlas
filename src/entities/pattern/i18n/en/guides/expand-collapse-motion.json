@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Cards with details below a summary, such as orders or notifications.",
+    "Showing more within a list without changing screens.",
+    "The expanded content differs in height from item to item."
+  ],
+  "whenNotToUse": [
+    "The details are long enough to cover the screen (move to a detail screen).",
+    "Several must be compared at once (use a table).",
+    "The surrounding layout shakes a lot while expanding."
+  ],
+  "alternatives": [
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding and unfolding several sections."
+    },
+    {
+      "name": "Page Transition",
+      "slug": "page-transition",
+      "reason": "The content is long enough to need a new screen."
+    }
+  ],
+  "accessibility": [
+    "Put aria-expanded and aria-controls on the button to announce the expanded state.",
+    "Folded content is inert, so it's skipped by Tab and screen readers.",
+    "The expand arrow is decorative, so it's aria-hidden.",
+    "With reduced motion, height changes apply instantly."
+  ]
+}

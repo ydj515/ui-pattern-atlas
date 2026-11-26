@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You show a short profile for a name, such as a mention in a comment.",
+    "Previewing a link before opening it would help.",
+    "The information is nice to know but not necessary."
+  ],
+  "whenNotToUse": [
+    "The card needs controls such as buttons or inputs (use a popover).",
+    "Touch is the main way people use it (there's no hover).",
+    "The information is essential to the task."
+  ],
+  "alternatives": [
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "A one-line explanation."
+    },
+    {
+      "name": "Popover",
+      "slug": "popover",
+      "reason": "Opened by a click and used from inside."
+    }
+  ],
+  "accessibility": [
+    "It also opens right away on keyboard focus, and Esc closes it.",
+    "An opening delay (0.5 seconds) keeps the card from flashing when the pointer only passes over the link, and a closing delay lets the pointer move onto the card.",
+    "The card only repeats what the link points to, so it's aria-hidden and contains nothing focusable.",
+    "The link itself leads to the full information, so people who never see the card can still reach it."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You show where the result of an action elsewhere landed.",
+    "Icons whose number went up, such as a cart or notifications.",
+    "Services with a light, playful mood."
+  ],
+  "whenNotToUse": [
+    "Errors or warnings (use a shake or a message).",
+    "Attention-grabbing that keeps repeating.",
+    "The reaction of the pressed button itself (use a micro-interaction)."
+  ],
+  "alternatives": [
+    {
+      "name": "Spring",
+      "slug": "spring",
+      "reason": "Movement that overshoots the target and comes back."
+    },
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "When the number changing is enough."
+    }
+  ],
+  "accessibility": [
+    "The new count is announced with role=status, so people who miss the motion still know.",
+    "With reduced motion, it doesn't bounce.",
+    "It plays once and never repeats on its own.",
+    "The bounce height is kept small at 14px."
+  ]
+}

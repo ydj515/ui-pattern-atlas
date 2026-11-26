@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Taking a delivery address.",
+    "An exact address without typos is needed.",
+    "The same address will be used again."
+  ],
+  "whenNotToUse": [
+    "Only choosing among saved addresses (use a list selection).",
+    "Formats differ, as with overseas addresses.",
+    "A location must be pinned on a map."
+  ],
+  "alternatives": [
+    {
+      "name": "Combobox",
+      "slug": "combobox",
+      "reason": "An input for choosing one item from a list."
+    },
+    {
+      "name": "Checkout Summary",
+      "slug": "checkout-summary",
+      "reason": "The payment step after the address."
+    }
+  ],
+  "accessibility": [
+    "The search area is a form with role=\"search\".",
+    "Search results are a list of buttons, chosen with the keyboard.",
+    "Choosing an address moves focus to the unit details field."
+  ]
+}

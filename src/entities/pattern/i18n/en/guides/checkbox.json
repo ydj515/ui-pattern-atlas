@@ -1,0 +1,15 @@
+{
+  "whenToUse": ["People can choose several items, as in a mail list or terms."],
+  "whenNotToUse": ["A setting turns on or off the moment it's pressed."],
+  "alternatives": [
+    {
+      "name": "Switch",
+      "slug": "switch",
+      "reason": "Turning a setting on and off immediately."
+    }
+  ],
+  "accessibility": [
+    "Use native checkboxes with connected labels.",
+    "Convey the partly selected state with the indeterminate property."
+  ]
+}

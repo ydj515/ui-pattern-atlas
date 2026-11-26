@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Rare moments of reaching a long-held goal.",
+    "Meaningful firsts, such as a first payment or first sale.",
+    "Services with a playful mood."
+  ],
+  "whenNotToUse": [
+    "Things that happen often (the celebration turns into noise).",
+    "An ordinary save in a work tool.",
+    "Screens with failures or warnings."
+  ],
+  "alternatives": [
+    {
+      "name": "Success Checkmark",
+      "slug": "success-checkmark",
+      "reason": "Quietly reporting success."
+    },
+    {
+      "name": "Achievement Badge",
+      "slug": "achievement-badge",
+      "reason": "Recording an achievement."
+    }
+  ],
+  "accessibility": [
+    "The effect is aria-hidden, and the achievement is announced with a role=status message.",
+    "With reduced motion, it doesn't burst.",
+    "It plays once and is gone within 1.2 seconds.",
+    "It has pointer-events: none, so it doesn't block buttons underneath."
+  ]
+}

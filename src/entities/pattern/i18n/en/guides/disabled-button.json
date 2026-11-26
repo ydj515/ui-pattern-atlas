@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "It can be pressed only after conditions are met, such as accepting terms or filling required fields.",
+    "It's hard to guess why it's blocked.",
+    "Keyboard and screen reader users also need the reason."
+  ],
+  "whenNotToUse": [
+    "Showing errors after a press would work better (use an error summary).",
+    "It can never be pressed for lack of permission (hide it or explain the permission).",
+    "The reason is already clear on screen."
+  ],
+  "alternatives": [
+    {
+      "name": "Error Summary",
+      "slug": "error-summary",
+      "reason": "Gathering fields to fix after a press."
+    },
+    {
+      "name": "Button",
+      "slug": "button",
+      "reason": "The basic button, always pressable."
+    }
+  ],
+  "accessibility": [
+    "Use aria-disabled instead of disabled so it can take focus, with the reason read through aria-describedby.",
+    "Pressing it announces the reason again with role=\"alert\" and highlights it with color and weight.",
+    "Once the conditions are met, the reason disappears and the button works right away.",
+    "The faded button keeps its text contrast."
+  ]
+}

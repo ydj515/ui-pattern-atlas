@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services where people compare and choose later, such as shopping or places to stay.",
+    "Content that's hard to find again.",
+    "The list can be viewed separately."
+  ],
+  "whenNotToUse": [
+    "Agreement visible to others (use a like).",
+    "There's nowhere to see what was saved.",
+    "A different buying step, such as the cart."
+  ],
+  "alternatives": [
+    {
+      "name": "Like Button",
+      "slug": "like-button",
+      "reason": "Agreeing publicly."
+    },
+    {
+      "name": "Micro-interaction",
+      "slug": "micro-interaction",
+      "reason": "The small reaction of the save button."
+    }
+  ],
+  "accessibility": [
+    "Along with aria-pressed, put the product name and Save or Remove in the name.",
+    "The result is announced with role=status.",
+    "The heart is aria-hidden.",
+    "The button has a white background so it shows over photos too."
+  ]
+}

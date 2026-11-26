@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You show the category or topic of a post, task, or file.",
+    "Several categories apply at once.",
+    "People need to remove them one by one while editing."
+  ],
+  "whenNotToUse": [
+    "Pressing should filter (use filter chips).",
+    "You're showing a state (use a status dot).",
+    "People create tags by typing (use a tag input)."
+  ],
+  "alternatives": [
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Conditions pressed on and off."
+    },
+    {
+      "name": "Tag Input",
+      "slug": "tag-input",
+      "reason": "Creating tags while typing."
+    }
+  ],
+  "accessibility": [
+    "Put the tag name in the remove button's name (\"Remove accessibility tag\") to tell the buttons apart.",
+    "Color only helps sort; the words carry the meaning.",
+    "Keep the background and text contrast at 4.5:1 or more.",
+    "The × symbol is decorative, so it's aria-hidden."
+  ]
+}

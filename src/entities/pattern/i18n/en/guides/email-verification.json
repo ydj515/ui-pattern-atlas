@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Verification is needed after sign-up or an email change.",
+    "Emails may arrive late.",
+    "The address may have been mistyped."
+  ],
+  "whenNotToUse": [
+    "It can be used right away without verification.",
+    "Text message verification is enough (use an OTP input).",
+    "The code is entered right on the same screen."
+  ],
+  "alternatives": [
+    {
+      "name": "OTP Input",
+      "slug": "otp-input",
+      "reason": "Receiving a text code instead of an email."
+    },
+    {
+      "name": "Signup Form",
+      "slug": "signup-form",
+      "reason": "The earlier step of entering sign-up details."
+    }
+  ],
+  "accessibility": [
+    "Resend is disabled during the wait, with the seconds left in the button name.",
+    "The resend result is read with role=\"status\".",
+    "The title and body are connected as the section's name."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Long pages people skim downward, such as introductions or product lists.",
+    "You lightly signal that the section changed.",
+    "Effects that play once and are done."
+  ],
+  "whenNotToUse": [
+    "App screens used often (people wait every time).",
+    "Content that must be read right away, such as search results.",
+    "Large effects that keep changing with the scroll position."
+  ],
+  "alternatives": [
+    {
+      "name": "Stagger",
+      "slug": "stagger",
+      "reason": "Showing several items in turn at once."
+    },
+    {
+      "name": "Parallax",
+      "slug": "parallax",
+      "reason": "Adding depth with scrolling."
+    }
+  ],
+  "accessibility": [
+    "Without the observer, content shows from the start so nothing stays hidden.",
+    "Once shown, it doesn't hide again.",
+    "With reduced motion, only opacity changes, without movement or zooming.",
+    "The scroll area has a tabIndex and a name, so it can be scrolled with the keyboard."
+  ]
+}

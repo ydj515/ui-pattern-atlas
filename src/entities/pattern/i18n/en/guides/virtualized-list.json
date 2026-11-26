@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists with thousands of rows or more, such as logs or order history.",
+    "All rows have the same height.",
+    "Scrolling performance is a problem."
+  ],
+  "whenNotToUse": [
+    "There are a few hundred rows or fewer (just rendering them is simpler).",
+    "People need find in page (Ctrl+F) to search the content.",
+    "Row heights vary (it gets complicated, since heights must be measured)."
+  ],
+  "alternatives": [
+    {
+      "name": "Load More",
+      "slug": "load-more",
+      "reason": "Loading only as much as needed."
+    },
+    {
+      "name": "Pagination",
+      "slug": "pagination",
+      "reason": "Splitting into pages."
+    }
+  ],
+  "accessibility": [
+    "Many rows aren't in the DOM, so each row announces its position in the whole with aria-setsize and aria-posinset.",
+    "The scroll area is a named region that takes focus and scrolls with the keyboard.",
+    "A few extra rows are drawn above and below so fast scrolling shows fewer blank rows.",
+    "The browser's find can't reach off-screen rows, so provide a search feature too."
+  ]
+}

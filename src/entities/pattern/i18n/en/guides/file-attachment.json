@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "AI that reads documents or photos and answers.",
+    "Sending several files at once.",
+    "There are size or type limits."
+  ],
+  "whenNotToUse": [
+    "Screens whose main job is file management (use a file upload).",
+    "Conversations that don't need attachments.",
+    "Telling people about limits only after sending."
+  ],
+  "alternatives": [
+    {
+      "name": "File Upload",
+      "slug": "file-upload",
+      "reason": "A drag-and-drop upload area."
+    },
+    {
+      "name": "Prompt Input",
+      "slug": "prompt-input",
+      "reason": "An input with an attach button."
+    }
+  ],
+  "accessibility": [
+    "The chip list is named Attachments.",
+    "Remove button names include the file name.",
+    "Progress and errors are shown in text, and the bar is decorative.",
+    "While uploading or when there's an error, send is disabled and the reason is given."
+  ]
+}

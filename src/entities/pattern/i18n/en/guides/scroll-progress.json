@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Long texts read to the end, such as articles or guides.",
+    "Mobile, where the scrollbar is hard to see.",
+    "Knowing how much is left helps reading."
+  ],
+  "whenNotToUse": [
+    "Short texts.",
+    "Screens with no fixed end, such as lists or feeds.",
+    "Places where it could be confused with page loading (keep it apart from a top loading bar)."
+  ],
+  "alternatives": [
+    {
+      "name": "Table of Contents",
+      "slug": "table-of-contents",
+      "reason": "Also showing which section."
+    },
+    {
+      "name": "Top Loading Bar",
+      "slug": "top-loading-bar",
+      "reason": "Showing that something is loading."
+    }
+  ],
+  "accessibility": [
+    "The bar is a visual aid, so it's aria-hidden; the scrollbar and document structure already give the position.",
+    "Only transform changes, so it stays light while scrolling.",
+    "Register the scroll listener as passive.",
+    "The text area takes focus and can be scrolled with the keyboard."
+  ]
+}

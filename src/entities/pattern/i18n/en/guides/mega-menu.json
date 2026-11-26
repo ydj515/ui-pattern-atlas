@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Company or shopping sites with many sub-pages.",
+    "Sub-links can be grouped into columns by topic.",
+    "A short description for each link would help."
+  ],
+  "whenNotToUse": [
+    "There are only a few sub-pages (a dropdown menu is enough).",
+    "Small screens (use a hamburger menu).",
+    "You'd open it on hover alone (it opens by accident and gets in the way)."
+  ],
+  "alternatives": [
+    {
+      "name": "Navbar",
+      "slug": "navbar",
+      "reason": "When there are no sub-menus."
+    },
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "When there are only a few choices."
+    }
+  ],
+  "accessibility": [
+    "Menu items are disclosure buttons with aria-expanded, without the ARIA menu role, so Tab moves through the links inside.",
+    "Group columns as named sections.",
+    "Esc closes it and returns focus to the item button.",
+    "Clicking outside closes it."
+  ]
+}

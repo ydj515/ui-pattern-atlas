@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Profiles or posts can be seen by others.",
+    "People must be given choices about how their data is handled.",
+    "People must be able to download their data."
+  ],
+  "whenNotToUse": [
+    "Personal services with no visibility settings.",
+    "You'd list option names without saying what they mean.",
+    "You'd pre-check the public options (see pre-checked opt-in)."
+  ],
+  "alternatives": [
+    {
+      "name": "Pre-checked Opt-in",
+      "slug": "pre-checked-opt-in",
+      "reason": "The dark pattern of pre-checking consent."
+    },
+    {
+      "name": "Settings List",
+      "slug": "settings-list",
+      "reason": "A few switches are enough."
+    }
+  ],
+  "accessibility": [
+    "Visibility choices are radio buttons whose descriptions are read through aria-describedby.",
+    "Detailed settings use role=\"switch\".",
+    "The request result is read with role=\"status\"."
+  ]
+}

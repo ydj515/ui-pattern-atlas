@@ -1,0 +1,30 @@
+{
+  "origin": "Famous as the chart Florence Nightingale drew in 1858 to show the causes of soldiers' deaths in the Crimean War, so it's also called a Nightingale rose.",
+  "whenToUse": [
+    "Cyclical data, such as by month or hour.",
+    "You show seasonality or a daily rhythm.",
+    "There are 6 to 24 items."
+  ],
+  "whenNotToUse": [
+    "Precise value comparison (use a column chart).",
+    "Items that don't cycle.",
+    "Showing shares (use a pie chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Column Chart",
+      "slug": "column-chart",
+      "reason": "Comparing the same values precisely."
+    },
+    {
+      "name": "Radar Chart",
+      "slug": "radar-chart",
+      "reason": "Comparing several scores as a shape."
+    }
+  ],
+  "accessibility": [
+    "Pointing at a slice shows its name and value in text.",
+    "White borders between slices separate their edges.",
+    "The table view lists every value."
+  ]
+}

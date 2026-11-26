@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Places where a count prompts action, such as a cart or notifications.",
+    "A short signal on top of an icon button.",
+    "The count changes often."
+  ],
+  "whenNotToUse": [
+    "The count doesn't matter, only that something is new (use a feature dot).",
+    "You're showing a state (use a status dot).",
+    "You'd put one on every menu item until none stands out."
+  ],
+  "alternatives": [
+    {
+      "name": "Feature Dot",
+      "slug": "feature-dot",
+      "reason": "Marking something new without a count."
+    },
+    {
+      "name": "Unread Indicator",
+      "slug": "unread-indicator",
+      "reason": "Marking new items in a list one by one."
+    }
+  ],
+  "accessibility": [
+    "The badge is decorative, so it's aria-hidden, and the count goes in the button name (\"Cart, 3 items\").",
+    "Don't render it at zero.",
+    "Large numbers shorten to \"99+\" so they don't cover the button.",
+    "A white border keeps it distinct where it overlaps the icon."
+  ]
+}

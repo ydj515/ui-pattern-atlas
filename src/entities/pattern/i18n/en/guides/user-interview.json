@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You don't understand the problem well yet.",
+    "You want to know why behind behavior seen in numbers.",
+    "You hear about real situations before building a new feature."
+  ],
+  "whenNotToUse": [
+    "You need to know how many people it applies to (use a survey).",
+    "You're looking for where people get stuck on a screen (use a usability test).",
+    "You'd decide by asking whether people would use something in the future."
+  ],
+  "alternatives": [
+    {
+      "name": "Usability Test",
+      "slug": "usability-test",
+      "reason": "Watching actual behavior rather than words."
+    },
+    {
+      "name": "Diary Study",
+      "slug": "diary-study",
+      "reason": "Looking at experiences over several days."
+    }
+  ],
+  "accessibility": [
+    "Recruit participants who use screen readers or magnifiers too.",
+    "When remote, let participants use tools and devices they're familiar with.",
+    "Send the questions in writing in advance so people can prepare."
+  ]
+}

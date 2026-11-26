@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There's one action at the end of a long description, as for a product or booking.",
+    "Mobile screens.",
+    "A summary such as the price shows alongside."
+  ],
+  "whenNotToUse": [
+    "There are several actions.",
+    "The keyboard comes up during form input (hide it so it doesn't cover anything).",
+    "Wide desktop screens (use a summary box beside the content)."
+  ],
+  "alternatives": [
+    {
+      "name": "FAB",
+      "slug": "fab",
+      "reason": "The main action on a list screen."
+    },
+    {
+      "name": "Sticky Header",
+      "slug": "sticky-header",
+      "reason": "Fixing things at the top."
+    }
+  ],
+  "accessibility": [
+    "Add safe-area-inset-bottom padding to clear the home indicator.",
+    "Leave padding of the same height at the end of the page so the last content isn't covered.",
+    "Change the button's result into words (\"Added\").",
+    "The bar comes after the content in document order, so the reading order is natural."
+  ]
+}

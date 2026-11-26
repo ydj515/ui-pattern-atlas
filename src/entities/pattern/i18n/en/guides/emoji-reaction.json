@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Messages in chat or collaboration tools.",
+    "Reacting lightly without a reply.",
+    "You want to tell a few feelings apart."
+  ],
+  "whenNotToUse": [
+    "Only one of two answers is needed (use was this helpful).",
+    "Ratings that need a score.",
+    "There are so many emoji that choosing gets hard."
+  ],
+  "alternatives": [
+    {
+      "name": "Like Button",
+      "slug": "like-button",
+      "reason": "A single expression of agreement is enough."
+    },
+    {
+      "name": "Long Press",
+      "slug": "long-press",
+      "reason": "Keeping the reaction menu hidden."
+    }
+  ],
+  "accessibility": [
+    "Chips are aria-pressed toggles whose names include the feeling and the count.",
+    "The emoji themselves are aria-hidden, so only the names are read.",
+    "The add button announces the picker's state with aria-expanded.",
+    "The picker closes with Esc."
+  ]
+}

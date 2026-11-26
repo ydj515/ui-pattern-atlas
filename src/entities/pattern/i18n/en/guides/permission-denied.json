@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Permissions differ by person, as with shared documents, folders, or team spaces.",
+    "Problems from being signed in with another account are common.",
+    "Access can be requested within the app."
+  ],
+  "whenNotToUse": [
+    "Content whose very existence must be hidden (respond with a 404).",
+    "Paid features that are locked (use locked content).",
+    "People aren't signed in (send them to sign-in)."
+  ],
+  "alternatives": [
+    {
+      "name": "Locked Content",
+      "slug": "locked-content",
+      "reason": "It can be unlocked with payment or membership."
+    },
+    {
+      "name": "404 Page",
+      "slug": "not-found-page",
+      "reason": "Even its existence mustn't be revealed."
+    }
+  ],
+  "accessibility": [
+    "After a request, announce the result (\"We'll email you when it's approved.\") with role=\"status\".",
+    "The request button turns disabled and its name changes to \"Requested\", stating the state in words.",
+    "The lock icon is decorative, so it's aria-hidden.",
+    "Show the signed-in account so people can notice for themselves if they chose the wrong one."
+  ]
+}

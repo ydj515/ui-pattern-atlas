@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You list items of the same shape, such as files, contacts, or settings.",
+    "Each item has a short piece of extra information.",
+    "Lists that open details when pressed."
+  ],
+  "whenNotToUse": [
+    "Several values are compared by column (use a data table).",
+    "Images are the focus (use cards or a gallery).",
+    "Each item has several controls (put separate buttons in the row)."
+  ],
+  "alternatives": [
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing by column."
+    },
+    {
+      "name": "Grouped List",
+      "slug": "grouped-list",
+      "reason": "When group headers are needed."
+    }
+  ],
+  "accessibility": [
+    "It's a ul list, so the number of items is read along with it.",
+    "The whole row is one button, and its name is read starting with the title.",
+    "Icons and arrows are decorative, so they're aria-hidden.",
+    "Long titles are truncated, but the full text stays in the DOM."
+  ]
+}

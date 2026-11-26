@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Sorting search results or product lists.",
+    "A button that opens a filter sheet.",
+    "A single icon in a tight header."
+  ],
+  "whenNotToUse": [
+    "Opening a menu (it's confused with the hamburger).",
+    "Mixing sort and filter into one icon when both exist.",
+    "Hiding the current sort order."
+  ],
+  "alternatives": [
+    {
+      "name": "Sliders",
+      "slug": "sliders",
+      "reason": "A filter icon made of adjustment knobs."
+    },
+    {
+      "name": "Caret ▾",
+      "slug": "caret",
+      "reason": "A dropdown that shows the current sort in text."
+    }
+  ],
+  "accessibility": [
+    "Name the icon button Sort.",
+    "The choices are a group of radio buttons.",
+    "Show the current sort order in text.",
+    "The sheet can be closed by clicking outside."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "People book a period, such as a stay or a rental car.",
+    "The length of the period (how many nights) matters.",
+    "Unavailable days need to show as well."
+  ],
+  "whenNotToUse": [
+    "Only one day is chosen (use a date picker).",
+    "Fixed periods such as this month or the last 7 days (use chips or a select).",
+    "Long periods spanning years (use two date inputs)."
+  ],
+  "alternatives": [
+    {
+      "name": "Date Picker",
+      "slug": "date-picker",
+      "reason": "Choosing a single day."
+    }
+  ],
+  "accessibility": [
+    "Add roles such as \"check-in\", \"check-out\", and \"night\" to date button names so the period is stated in words.",
+    "The start and end dates announce their selection with aria-pressed.",
+    "A summary below announces, with aria-live, the next date to choose and the result.",
+    "Past dates are disabled."
+  ]
+}

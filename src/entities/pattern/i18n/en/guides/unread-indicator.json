@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists where read status matters, such as email, messages, or notifications.",
+    "People need to scan new items quickly.",
+    "Items are marked read automatically."
+  ],
+  "whenNotToUse": [
+    "Only a count is needed (use a badge).",
+    "A newly added menu item (use a feature dot).",
+    "Lists where read status means nothing."
+  ],
+  "alternatives": [
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "Showing a count."
+    },
+    {
+      "name": "Notification Center",
+      "slug": "notification-center",
+      "reason": "Viewing notifications together."
+    }
+  ],
+  "accessibility": [
+    "The dot is decorative, and visually hidden \"unread\" text is read with the title.",
+    "Unread is shown two ways, with bold text and a dot, not color alone.",
+    "The whole row is a button that opens the item and marks it read.",
+    "Name the list so the number of items is read along with it."
+  ]
+}

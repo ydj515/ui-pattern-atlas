@@ -1,0 +1,15 @@
+{
+  "whenToUse": ["A refresh or a single request is being processed."],
+  "whenNotToUse": ["Uploads or downloads whose share of completion can be calculated."],
+  "alternatives": [
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "The structure of the content being loaded is already known."
+    }
+  ],
+  "accessibility": [
+    "Apart from the icon's rotation, read a real waiting message as status.",
+    "With reduced motion, the icon doesn't spin."
+  ]
+}

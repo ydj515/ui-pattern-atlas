@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The start screen of a service that wants fewer sign-up steps.",
+    "The accounts your audience uses are well known.",
+    "Email sign-up can sit alongside."
+  ],
+  "whenNotToUse": [
+    "You'd request many permissions without needing the outside account's data.",
+    "There are more than five buttons.",
+    "Work tools that use company accounts only (use a single SSO button)."
+  ],
+  "alternatives": [
+    {
+      "name": "Terms Agreement",
+      "slug": "terms-agreement",
+      "reason": "The step after sign-up."
+    },
+    {
+      "name": "Loading Button",
+      "slug": "loading-button",
+      "reason": "The in-progress state of a single button."
+    }
+  ],
+  "accessibility": [
+    "Put the account name in text in each button name so they aren't told apart by logo alone.",
+    "The connecting button is marked aria-busy and the rest disabled.",
+    "The logo placeholders are decorative, so they're aria-hidden.",
+    "Buttons are 44px tall so they're easy to press."
+  ]
+}

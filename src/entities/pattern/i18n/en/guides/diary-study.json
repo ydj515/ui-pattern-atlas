@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "When and where people use it differs day to day.",
+    "You want to understand habits or repeated behavior.",
+    "You look at experiences over a long period (moving house, planning a trip)."
+  ],
+  "whenNotToUse": [
+    "You need answers right away.",
+    "Participants don't have time to record every day.",
+    "You're looking for problems on one screen (use a usability test)."
+  ],
+  "alternatives": [
+    {
+      "name": "User Interview",
+      "slug": "user-interview",
+      "reason": "Asking why, based on the entries."
+    },
+    {
+      "name": "Behavioral Heatmap",
+      "slug": "behavioral-heatmap",
+      "reason": "Looking only at behavior within a screen."
+    }
+  ],
+  "accessibility": [
+    "Let people record in whatever way is comfortable: text, photos, or voice.",
+    "Let participants set the reminder times.",
+    "Check that the recording tool works with screen readers and magnification."
+  ]
+}

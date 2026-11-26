@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You compare the same items by several measures, such as sales by branch.",
+    "People need to sort to see rankings.",
+    "Admin tools on wide screens."
+  ],
+  "whenNotToUse": [
+    "There are only one or two columns (use a list).",
+    "Many columns on small screens (switch to a card list).",
+    "Tables used for layout (use CSS grid)."
+  ],
+  "alternatives": [
+    {
+      "name": "List",
+      "slug": "list",
+      "reason": "Few values, only scanned."
+    },
+    {
+      "name": "Selectable Table",
+      "slug": "selectable-table",
+      "reason": "Choosing and acting on several rows."
+    }
+  ],
+  "accessibility": [
+    "Use a real table, caption, and th scope so each cell is read with its header.",
+    "Sort buttons sit inside the headers, and the sorted column announces its direction with aria-sort.",
+    "The first cell of each row is th scope=\"row\", which becomes the row's name.",
+    "Numbers use tabular-nums so the digits line up."
+  ]
+}

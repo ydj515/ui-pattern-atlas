@@ -1,0 +1,14 @@
+{
+  "whenToUse": ["You explain how the displayed digits affect how a price feels."],
+  "whenNotToUse": ["The display would make the real price or the difference hard to check."],
+  "alternatives": [
+    {
+      "name": "Strikethrough Price",
+      "slug": "strikethrough-price",
+      "reason": "Conveying the reference price and the applied price of a real discount accurately."
+    }
+  ],
+  "accessibility": [
+    "Emphasize the first digit with weight and an explanation, not color alone, and keep the difference readable."
+  ]
+}

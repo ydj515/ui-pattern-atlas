@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lightly agreeing with a post or comment.",
+    "The number of people who pressed it matters.",
+    "It turns on and off in one press."
+  ],
+  "whenNotToUse": [
+    "Saving just for yourself (use a wishlist or bookmark).",
+    "Several feelings must be told apart (use emoji reactions).",
+    "A rating score is needed (use a star rating)."
+  ],
+  "alternatives": [
+    {
+      "name": "Wishlist / Bookmark",
+      "slug": "wishlist-bookmark",
+      "reason": "Saving to your own list to see later."
+    },
+    {
+      "name": "Emoji Reaction",
+      "slug": "emoji-reaction",
+      "reason": "Reacting with several feelings."
+    }
+  ],
+  "accessibility": [
+    "Announce the pressed state with aria-pressed.",
+    "The button name includes Like and the count.",
+    "The heart graphic is aria-hidden.",
+    "The pop effect is skipped with reduced motion."
+  ]
+}

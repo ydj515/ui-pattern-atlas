@@ -145,4 +145,32 @@ describe("English pages", () => {
       screen.getByText("Applying a setting at once versus collecting consent or list choices."),
     ).toBeInTheDocument();
   });
+
+  it("gives the guidance sections in English, with English alternatives", async () => {
+    renderIn("en", "/patterns/modal-dialog");
+    const whenToUse = await screen.findByRole("region", { name: "When to use" });
+    expect(whenToUse).toHaveTextContent(
+      "You need confirmation for something hard to undo, such as deleting or paying.",
+    );
+    const alternatives = within(screen.getByRole("region", { name: "Alternatives" }));
+    expect(alternatives.getByRole("link", { name: "Toast" })).toHaveAttribute(
+      "href",
+      "/en/patterns/toast",
+    );
+    expect(
+      screen.getByText("Word origin", { selector: "dt" }).nextElementSibling,
+    ).toHaveTextContent(/^From "mode"/);
+    // Everything but the demo stage and the source code is English.
+    const article = screen.getByRole("article").cloneNode(true) as HTMLElement;
+    article.querySelector('[aria-label="Preview"]')?.remove();
+    article.querySelector("#implementation")?.remove();
+    expect(article.textContent).not.toMatch(HANGUL);
+  });
+
+  it("tells what to try in a comparison in English", () => {
+    renderIn("en", "/compare/switch-checkbox");
+    expect(
+      screen.getByText("Turn on event news and check whether it needs saving."),
+    ).toBeInTheDocument();
+  });
 });

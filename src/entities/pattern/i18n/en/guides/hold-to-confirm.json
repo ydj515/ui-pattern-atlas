@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Irreversible deletions or resets.",
+    "A confirmation dialog would break the flow.",
+    "Mobile screens where accidental presses are easy."
+  ],
+  "whenNotToUse": [
+    "Actions that can be undone (use undo).",
+    "Many people find holding difficult (use a confirmation dialog).",
+    "Frequent actions (people would wait every time)."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "The usual way to ask once more."
+    },
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Running first and giving a moment to take it back."
+    }
+  ],
+  "accessibility": [
+    "Holding Space or Enter works as well as the pointer.",
+    "Explain how to use it (\"Hold for 1.5 seconds to delete\") with aria-describedby.",
+    "Letting go cancels at once, and the fill indicator still shows the state with reduced motion.",
+    "Announce the result with role=\"status\"."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "The price has really dropped below the recent selling price.",
+    "Discounts stack, as with coupons, and change the final rate.",
+    "People need to spot discounted items quickly in a list."
+  ],
+  "whenNotToUse": [
+    "You'd base it on a list price the product never sold at (see anchoring).",
+    "The amount saved matters more (use a strikethrough price).",
+    "Every product is always on sale."
+  ],
+  "alternatives": [
+    {
+      "name": "Strikethrough Price",
+      "slug": "strikethrough-price",
+      "reason": "Showing the reference price and the applied price together."
+    },
+    {
+      "name": "Anchoring",
+      "slug": "anchoring",
+      "reason": "Looking at how the first number shapes judgment."
+    }
+  ],
+  "accessibility": [
+    "The percentage and basis stay visual, while screen readers hear one sentence.",
+    "Show the rate in words, not color alone.",
+    "Without a reference price, don't render the badge, so no empty number is read."
+  ]
+}

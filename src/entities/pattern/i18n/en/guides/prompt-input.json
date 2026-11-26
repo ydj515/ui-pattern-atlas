@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The bottom of a chat-style AI screen.",
+    "Files can be sent along.",
+    "Answer generation must be stoppable midway."
+  ],
+  "whenNotToUse": [
+    "One-line search queries (use a search field).",
+    "Writing long text (use a multi-line input or an editor).",
+    "You'd put send and stop in different places."
+  ],
+  "alternatives": [
+    {
+      "name": "Search Field",
+      "slug": "search-field",
+      "reason": "Taking a one-line query."
+    },
+    {
+      "name": "Textarea",
+      "slug": "textarea",
+      "reason": "Writing long text."
+    }
+  ],
+  "accessibility": [
+    "The input gets a name from a hidden label.",
+    "Each icon button has a name, such as Send or Stop.",
+    "Enter during Korean input composition doesn't send.",
+    "The send button is disabled while the input is empty."
+  ]
+}

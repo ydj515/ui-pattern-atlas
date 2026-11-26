@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services for children, games, or light use.",
+    "Giving a friendly, soft impression.",
+    "Cards used with illustrations."
+  ],
+  "whenNotToUse": [
+    "Serious financial or medical screens.",
+    "Dense tables and lists.",
+    "Volume on every element would erase the hierarchy."
+  ],
+  "alternatives": [
+    {
+      "name": "Neumorphism",
+      "slug": "neumorphism",
+      "reason": "Soft volume in the background's own color."
+    },
+    {
+      "name": "Neo-brutalism",
+      "slug": "neo-brutalism",
+      "reason": "Thick lines and hard shadows."
+    }
+  ],
+  "accessibility": [
+    "Check the contrast of text on colored surfaces.",
+    "Announce the pressed state with words and aria-pressed too.",
+    "Large rounded corners keep touch areas generous.",
+    "Show the focus ring."
+  ]
+}

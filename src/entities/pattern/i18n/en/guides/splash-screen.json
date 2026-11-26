@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Data must be prepared when the app first opens.",
+    "The brand can be shown briefly.",
+    "Preparation takes around a second."
+  ],
+  "whenNotToUse": [
+    "You'd keep showing it like an ad after everything is ready.",
+    "Every web page transition (use a skeleton).",
+    "Long tasks (show progress)."
+  ],
+  "alternatives": [
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "Showing the screen's shape first."
+    },
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "Waiting on only part of the screen."
+    }
+  ],
+  "accessibility": [
+    "While preparing, announce it to screen readers with aria-busy and role=status.",
+    "The logo and spinner are decorative, so they're aria-hidden.",
+    "With reduced motion, the spin and fade stop.",
+    "A minimum display time of 600ms prevents flicker."
+  ]
+}

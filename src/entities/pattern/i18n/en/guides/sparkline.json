@@ -1,0 +1,30 @@
+{
+  "origin": "A name given by Edward Tufte, a researcher of statistical graphics, who defined it as a word-sized graphic.",
+  "whenToUse": [
+    "You add a trend to each row of a table.",
+    "Next to the number on a KPI card.",
+    "You scan the trend of many items at a glance."
+  ],
+  "whenNotToUse": [
+    "Exact values must be read (use a line chart).",
+    "Each row has a different scale, which could mislead.",
+    "There are three points or fewer."
+  ],
+  "alternatives": [
+    {
+      "name": "Line Chart",
+      "slug": "line-chart",
+      "reason": "Showing axes and values together."
+    },
+    {
+      "name": "KPI Card",
+      "slug": "kpi-card",
+      "reason": "The current value and change matter more than the trend."
+    }
+  ],
+  "accessibility": [
+    "The SVG has role=\"img\" with a description that includes the first and last values.",
+    "The exact latest value sits as text in the next cell.",
+    "Make clear through the layout that each row has its own scale, so only the shapes should be compared."
+  ]
+}

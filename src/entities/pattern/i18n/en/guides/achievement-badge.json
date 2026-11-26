@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You give goals to accumulating activity, such as reviews or orders.",
+    "A badge shelf on the profile screen.",
+    "The conditions can be stated as numbers."
+  ],
+  "whenNotToUse": [
+    "It would encourage meaningless behavior.",
+    "There are only surprise badges with hidden conditions.",
+    "So many badges that the shelf gets cluttered."
+  ],
+  "alternatives": [
+    {
+      "name": "Streak",
+      "slug": "streak",
+      "reason": "Habits kept up daily."
+    },
+    {
+      "name": "Confetti",
+      "slug": "confetti",
+      "reason": "Celebrating the moment of earning in a big way."
+    }
+  ],
+  "accessibility": [
+    "Progress shows in text, such as 4/5, and locked badges are announced to screen readers.",
+    "Icons and rings are decorative, so they're aria-hidden.",
+    "News of an earned badge is announced with a role=status message.",
+    "Each badge is named with figure and figcaption."
+  ]
+}

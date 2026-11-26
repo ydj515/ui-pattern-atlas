@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The first display of a newly loaded list or search results.",
+    "Showing a few cards at once.",
+    "Lightly guiding the reading order."
+  ],
+  "whenNotToUse": [
+    "There are so many items that the last ones appear late.",
+    "Every time the same list re-renders (only the first time).",
+    "Long gaps that deliberately delay content."
+  ],
+  "alternatives": [
+    {
+      "name": "Scroll Reveal",
+      "slug": "scroll-reveal",
+      "reason": "Appearing as people scroll."
+    },
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "Showing placeholders while loading."
+    }
+  ],
+  "accessibility": [
+    "Every item is in the document from the start, so screen readers don't wait.",
+    "With reduced motion, everything appears at once.",
+    "The interval choice is a set of radio buttons, changeable with the keyboard.",
+    "The list gets a name with aria-label."
+  ]
+}

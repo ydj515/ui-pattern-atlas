@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Editing screens without autosave.",
+    "There's enough input that losing it would hurt.",
+    "People can easily leave with Back."
+  ],
+  "whenNotToUse": [
+    "Screens with autosave (use an autosave indicator).",
+    "You'd ask every time even when nothing changed.",
+    "Buttons such as Yes and No that don't reveal the result."
+  ],
+  "alternatives": [
+    {
+      "name": "Autosave Indicator",
+      "slug": "autosave-indicator",
+      "reason": "Saving is handled automatically."
+    },
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "An ordinary confirmation window."
+    }
+  ],
+  "accessibility": [
+    "It opens with role=\"alertdialog\" and aria-modal, tying in the title and body.",
+    "Initial focus goes to the safest option, Keep editing.",
+    "Esc closes it as Keep editing."
+  ]
+}

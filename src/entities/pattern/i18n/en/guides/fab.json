@@ -1,0 +1,26 @@
+{
+  "origin": "Short for floating action button, a name Google gave it when it announced Material Design in 2014. It means the main action button floating above the screen.",
+  "whenToUse": [
+    "The screen has one main action, such as composing an email or a post.",
+    "People need to press it right away even while browsing a long list.",
+    "Mobile screens."
+  ],
+  "whenNotToUse": [
+    "There are several actions (use a toolbar or menu).",
+    "It would cover important content.",
+    "Wide desktop screens (a header button is enough)."
+  ],
+  "alternatives": [
+    {
+      "name": "Button",
+      "slug": "button",
+      "reason": "A main button fixed within the screen."
+    }
+  ],
+  "accessibility": [
+    "Keep the same name with aria-label even when only the icon remains.",
+    "Add bottom padding so the last list item isn't hidden under the button.",
+    "The keyboard focus ring stays visible over the shadow.",
+    "The shrinking transition responds only to scroll direction, so it doesn't flicker."
+  ]
+}

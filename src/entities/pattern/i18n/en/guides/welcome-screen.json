@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The first screen right after sign-up or on a first visit.",
+    "A single start button can decide the next action.",
+    "It can be shown just once."
+  ],
+  "whenNotToUse": [
+    "You'd show it again on every visit.",
+    "There are several screens to introduce (use an onboarding carousel).",
+    "You'd slip in ads or promotions."
+  ],
+  "alternatives": [
+    {
+      "name": "Onboarding Carousel",
+      "slug": "onboarding-carousel",
+      "reason": "Introducing across several screens."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "An ordinary confirmation window."
+    }
+  ],
+  "accessibility": [
+    "Open the native dialog element with showModal so focus stays inside.",
+    "On open, focus goes to the Get started button.",
+    "Closing with Esc counts as Look around first.",
+    "Connect the title with aria-labelledby."
+  ]
+}

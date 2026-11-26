@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Comments or messages in collaboration tools.",
+    "A specific person must be notified.",
+    "Spaces with a set group of participants."
+  ],
+  "whenNotToUse": [
+    "Forms for choosing recipients (use send/forward).",
+    "Places where letting anyone call anyone would be a problem, such as public boards.",
+    "So many people that names collide."
+  ],
+  "alternatives": [
+    {
+      "name": "Combobox",
+      "slug": "combobox",
+      "reason": "Choosing a value from a list while typing."
+    },
+    {
+      "name": "Tag Input",
+      "slug": "tag-input",
+      "reason": "Collecting values as chips."
+    }
+  ],
+  "accessibility": [
+    "The input is a combobox and the list a listbox.",
+    "Arrow keys move, Enter or Tab inserts, and Esc closes.",
+    "The current option is announced with aria-activedescendant.",
+    "When no one matches, it says so in words."
+  ]
+}

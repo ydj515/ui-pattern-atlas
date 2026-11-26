@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Checking delivery status after an order.",
+    "Processes with fixed steps.",
+    "An outside tracking number is shown too."
+  ],
+  "whenNotToUse": [
+    "Work where a progress percentage matters (use a progress bar).",
+    "A single status line without steps (use a status badge).",
+    "Showing the live location on a map."
+  ],
+  "alternatives": [
+    {
+      "name": "Stepper / Step Indicator",
+      "slug": "stepper",
+      "reason": "Showing input steps."
+    },
+    {
+      "name": "Timeline",
+      "slug": "timeline",
+      "reason": "Showing records in time order."
+    }
+  ],
+  "accessibility": [
+    "The steps are an ol, with aria-current=\"step\" on the current one.",
+    "Screen reader text adds that it's the current step.",
+    "Copying the tracking number is a button."
+  ]
+}

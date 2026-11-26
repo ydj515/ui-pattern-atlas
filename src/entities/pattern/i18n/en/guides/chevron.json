@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Rows that lead into a sub-screen when pressed, as in settings lists.",
+    "Back buttons.",
+    "The expand indicator of an accordion."
+  ],
+  "whenNotToUse": [
+    "Dropdown indicators (a caret is more common).",
+    "External links (use an outward arrow icon).",
+    "Purely decorative use without direction."
+  ],
+  "alternatives": [
+    {
+      "name": "Caret ▾",
+      "slug": "caret",
+      "reason": "Marking a dropdown with a small triangle."
+    },
+    {
+      "name": "Back Navigation",
+      "slug": "back-navigation",
+      "reason": "The full pattern for going back."
+    }
+  ],
+  "accessibility": [
+    "The chevron is decorative, so it's aria-hidden, and the whole row is the button.",
+    "Back buttons name the screen they return to in text.",
+    "When the screen changes, move focus to the new screen's first button.",
+    "When rotating the icon shows expansion, use aria-expanded too."
+  ]
+}

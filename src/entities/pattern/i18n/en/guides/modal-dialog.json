@@ -1,0 +1,36 @@
+{
+  "origin": "From \"mode\": while the window is open, the screen switches to a separate mode that responds only to it, so the page behind can't be used until it closes.",
+  "whenToUse": [
+    "You need confirmation for something hard to undo, such as deleting or paying.",
+    "You need an explicit decision before moving to the next step.",
+    "You need a short input, such as a new name, in the current context."
+  ],
+  "whenNotToUse": [
+    "You're only reporting a simple change of state.",
+    "It would interrupt the task for no good reason.",
+    "You need a long form or several steps of input."
+  ],
+  "alternatives": [
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "A short message about a result."
+    },
+    {
+      "name": "Popover",
+      "slug": "popover",
+      "reason": "Extra information that keeps the current context."
+    },
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "Relatively complex input."
+    }
+  ],
+  "accessibility": [
+    "Use the native <dialog> with showModal(), which traps focus inside and makes the background inert.",
+    "Connect the title and description with aria-labelledby and aria-describedby.",
+    "Esc closes it, and focus returns to the button that opened it.",
+    "For destructive actions, put initial focus on the safe button (Cancel)."
+  ]
+}

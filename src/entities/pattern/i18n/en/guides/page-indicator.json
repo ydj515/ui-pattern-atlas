@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Short sequences such as onboarding or carousels.",
+    "You show the total and the current position together.",
+    "Dots can be pressed to jump straight to a page."
+  ],
+  "whenNotToUse": [
+    "There are many pages (use numbers such as \"3 / 12\").",
+    "Steps have names (use a stepper).",
+    "Moving between pages of a list (use pagination)."
+  ],
+  "alternatives": [
+    {
+      "name": "Stepper / Step Indicator",
+      "slug": "stepper",
+      "reason": "Steps with names."
+    },
+    {
+      "name": "Pagination",
+      "slug": "pagination",
+      "reason": "Moving between pages of a list."
+    }
+  ],
+  "accessibility": [
+    "When pressable, dots are buttons named \"2 of 4\" and the current one has aria-current.",
+    "When not pressable, the position is given in visually hidden text.",
+    "The current dot also differs in length, not color alone.",
+    "The pressable area is larger than the dot."
+  ]
+}

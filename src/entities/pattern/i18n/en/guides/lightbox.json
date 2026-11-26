@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the box lit from below that photographers laid film slides on. Lokesh Dhakar's 2005 JavaScript library Lightbox spread the name on the web.",
+  "whenToUse": [
+    "People look closely at one photo from a list.",
+    "People page through several photos large.",
+    "Photos need enlarging on small screens."
+  ],
+  "whenNotToUse": [
+    "The photos are already large enough.",
+    "Lots of information must be seen alongside the photo (use a detail page).",
+    "People only choose one photo (use an image gallery)."
+  ],
+  "alternatives": [
+    {
+      "name": "Image Gallery",
+      "slug": "image-gallery",
+      "reason": "Switching photos within the page."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "Content other than photos."
+    }
+  ],
+  "accessibility": [
+    "Open a native dialog with showModal to block the page behind and trap focus.",
+    "←/→ page through photos, and closing with Esc returns focus to the thumbnail that was pressed.",
+    "Announce the position (\"2 of 4\") with aria-live and show the caption in a figcaption.",
+    "Thumbnail button names say what they open, such as \"View Seoul Forest path large\"."
+  ]
+}

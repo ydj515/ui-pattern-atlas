@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Filters that adjust ranges, such as price or distance.",
+    "The filter button in a search results header.",
+    "Opening detailed settings."
+  ],
+  "whenNotToUse": [
+    "Only changing the sort (use a döner or a caret).",
+    "App-wide settings (use a gear icon).",
+    "Hiding which filters are applied."
+  ],
+  "alternatives": [
+    {
+      "name": "Döner",
+      "slug": "doner",
+      "reason": "The sort icon."
+    },
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Choosing filters directly as chips."
+    }
+  ],
+  "accessibility": [
+    "Name the icon button Filter.",
+    "Show the applied filters in text.",
+    "Range inputs in the sheet have labels that include the current value.",
+    "Announce the applied result with role=status."
+  ]
+}

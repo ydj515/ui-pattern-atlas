@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Text of no fixed length, such as reviews, inquiries, or notes.",
+    "There's a character limit.",
+    "People need to see and edit the whole text at a glance."
+  ],
+  "whenNotToUse": [
+    "Single-line input (use a text field).",
+    "Long text that needs formatting (use a rich text editor).",
+    "It must not grow endlessly where the screen height is fixed (set a maximum height)."
+  ],
+  "alternatives": [
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "Short, single-line input."
+    }
+  ],
+  "accessibility": [
+    "The character count connects with aria-describedby, so it's read along with the field on entry.",
+    "Don't make the count a live region, so it isn't read on every keystroke.",
+    "maxLength keeps input within the limit, and past 90% the count signals it with color and numbers.",
+    "Fit the height to the content but hide the resize handle so the layout doesn't break."
+  ]
+}

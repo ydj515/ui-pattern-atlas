@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Satisfaction with a single experience, such as a delivery or support chat.",
+    "A light, quick response is needed.",
+    "Five levels are enough."
+  ],
+  "whenNotToUse": [
+    "A precise score is needed (use NPS or a rating slider).",
+    "Serious medical or financial consultations.",
+    "Without words, where facial expressions may read differently across cultures."
+  ],
+  "alternatives": [
+    {
+      "name": "Star Rating",
+      "slug": "star-rating",
+      "reason": "Used as a public rating."
+    },
+    {
+      "name": "Thumbs Feedback",
+      "slug": "thumbs-feedback",
+      "reason": "Two options are enough."
+    }
+  ],
+  "accessibility": [
+    "They're radio buttons chosen with the arrow keys, named from Very dissatisfied to Very satisfied.",
+    "The face graphics are aria-hidden.",
+    "The chosen face shows with both color and size.",
+    "The chosen result is shown in text too."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Forms with many fields, such as orders, sign-up, or applications.",
+    "The next step depends on earlier answers.",
+    "People must review everything once before submitting."
+  ],
+  "whenNotToUse": [
+    "Forms with only a few fields (one screen is faster).",
+    "Settings screens edited in any order (use tabs or sections).",
+    "People often need to skip steps."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Settings people move between in any order."
+    },
+    {
+      "name": "Error Summary",
+      "slug": "error-summary",
+      "reason": "Gathering errors on a one-screen form."
+    }
+  ],
+  "accessibility": [
+    "The progress list marks the current step with aria-current=\"step\" and also shows \"Step 2 of 3\" in words.",
+    "When the step changes, move focus to the new step's heading so people hear where they are.",
+    "Going back keeps the values people entered.",
+    "The next button submits a form, so Enter also advances, and only after the step passes validation."
+  ]
+}

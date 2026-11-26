@@ -1,0 +1,36 @@
+{
+  "origin": "Named for the way it pops up from the edge of the screen and disappears, like bread popping out of a toaster. It's known as the name for MSN Messenger's notification windows in the early 2000s, and spread widely when Android released a Toast API of the same name in 2008.",
+  "whenToUse": [
+    "You confirm an action with a clear result, such as saving, copying, or adding to a wishlist.",
+    "You briefly offer a chance to undo what was just done.",
+    "It's a light notice and people can keep doing other things."
+  ],
+  "whenNotToUse": [
+    "It's an error or warning that must not be missed.",
+    "The situation needs a decision.",
+    "The message is long or needs several actions."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Important information that must not disappear."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "When a decision is needed."
+    },
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "An error in a specific field."
+    }
+  ],
+  "accessibility": [
+    "Add messages to an always-mounted aria-live=\"polite\" region so screen readers read them.",
+    "Hovering or focusing it pauses the auto-dismiss timer (WCAG 2.2.1).",
+    "The undo action must also be possible another way (for example, pressing the wishlist button again).",
+    "Don't tell success from failure by color alone; state the result in words."
+  ]
+}

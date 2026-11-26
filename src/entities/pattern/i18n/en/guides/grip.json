@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists you reorder, such as tasks or playlists.",
+    "Rearranging cards or widgets.",
+    "Clearly showing where to drag."
+  ],
+  "whenNotToUse": [
+    "Lists where order means nothing.",
+    "Dragging is the only way, with no keyboard alternative.",
+    "The whole row drags and the handle is merely decorative."
+  ],
+  "alternatives": [
+    {
+      "name": "Drag and Drop",
+      "slug": "drag-and-drop",
+      "reason": "Moving to another area."
+    },
+    {
+      "name": "Sortable List",
+      "slug": "sortable-list",
+      "reason": "The full pattern for reordering a list."
+    }
+  ],
+  "accessibility": [
+    "The handle is a button, and the up and down arrows change the order.",
+    "The button name includes the item and how to operate it.",
+    "Announce the result of a move with role=status.",
+    "The row being dragged is marked by a border color."
+  ]
+}

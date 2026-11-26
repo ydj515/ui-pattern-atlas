@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "The difference is the point, as with photo editing, remodeling, or filters.",
+    "The two images have the same composition.",
+    "You want people to check the difference themselves."
+  ],
+  "whenNotToUse": [
+    "The compositions differ (place them side by side).",
+    "Three or more are compared.",
+    "The difference is too small to see."
+  ],
+  "alternatives": [
+    {
+      "name": "Image Gallery",
+      "slug": "image-gallery",
+      "reason": "Switching between several photos."
+    }
+  ],
+  "accessibility": [
+    "The handle is a native range input laid over the image, so dragging, clicking, and the arrow keys all work.",
+    "aria-valuetext reads both sides, such as \"Before 50%, after 50%\".",
+    "The two images are decorative, so they're aria-hidden, and the label says what's compared.",
+    "Focus shows as an outline."
+  ]
+}

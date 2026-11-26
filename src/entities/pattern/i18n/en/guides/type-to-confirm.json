@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Irreversible deletion.",
+    "Deletion that affects other people too.",
+    "Targets with similar names that could be confused."
+  ],
+  "whenNotToUse": [
+    "Reversible deletion such as moving to trash (use trash).",
+    "Light actions done often.",
+    "The name to type is too long or hard to remember."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "One light confirmation is enough."
+    },
+    {
+      "name": "Hold to Confirm",
+      "slug": "hold-to-confirm",
+      "reason": "Confirming by holding the button."
+    },
+    {
+      "name": "Account Deletion",
+      "slug": "account-deletion",
+      "reason": "Deleting a whole account."
+    }
+  ],
+  "accessibility": [
+    "role=\"alertdialog\" ties the title and the list of what disappears as its name and description.",
+    "The button stays disabled until the input matches.",
+    "Autocomplete and spell check are turned off so the input isn't altered."
+  ]
+}

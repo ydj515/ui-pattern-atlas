@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You mark the end of a scroll area that looks like a mobile app.",
+    "Scrolling inside a modal or panel shouldn't leak to the page.",
+    "Used together with pull to refresh."
+  ],
+  "whenNotToUse": [
+    "iOS default scrolling, where the browser already bounces.",
+    "Whole pages of long documents.",
+    "People who turned on reduced motion."
+  ],
+  "alternatives": [
+    {
+      "name": "Pull to Refresh",
+      "slug": "pull-to-refresh",
+      "reason": "Pulling at the end to load new content."
+    },
+    {
+      "name": "Momentum Scrolling",
+      "slug": "momentum-scrolling",
+      "reason": "Scrolling that continues after release."
+    }
+  ],
+  "accessibility": [
+    "overscroll-behavior: contain prevents scroll chaining.",
+    "The scroll area has a tabIndex and a name, so it can be scrolled with the keyboard.",
+    "The stretch is decorative and isn't used to convey information.",
+    "The bounce animation turns off with reduced motion."
+  ]
+}

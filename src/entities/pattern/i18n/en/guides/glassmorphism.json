@@ -1,0 +1,31 @@
+{
+  "origin": "A blend of glass and \"-morphism\". The name is credited to the designer Michał Malewicz around 2020.",
+  "whenToUse": [
+    "Cards or menus floating over a colorful background.",
+    "Overlapping while showing a hint of the context behind.",
+    "Landing pages or widgets where atmosphere matters."
+  ],
+  "whenNotToUse": [
+    "The background is too plain for the glass effect to show.",
+    "Text-heavy screens (contrast shifts with the background).",
+    "Services used on many low-end devices (blur is costly)."
+  ],
+  "alternatives": [
+    {
+      "name": "Liquid Glass",
+      "slug": "liquid-glass",
+      "reason": "Glass with reflections and refraction added."
+    },
+    {
+      "name": "Flat Design",
+      "slug": "flat-design",
+      "reason": "Planes with constant contrast regardless of background."
+    }
+  ],
+  "accessibility": [
+    "Check text contrast at the brightest part of the background so it holds when the background changes.",
+    "For people with prefers-reduced-transparency, an opaque surface is recommended.",
+    "A border shows the card's edge.",
+    "States are also announced in words."
+  ]
+}

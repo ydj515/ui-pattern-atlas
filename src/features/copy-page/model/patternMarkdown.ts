@@ -1,5 +1,6 @@
 import { findPatternBySlug } from "@/entities/pattern/catalog";
 import type { Pattern, PatternGuide } from "@/entities/pattern/model/pattern";
+import type { Locale } from "@/shared/i18n/locale";
 
 export interface LoadedSource {
   readonly fileName: string;
@@ -45,9 +46,10 @@ export function buildPatternMarkdown(
   guide: PatternGuide,
   sources: readonly LoadedSource[],
   pageUrl: string,
+  locale: Locale = "ko",
 ): string {
   const parts: string[] = [
-    `# ${pattern.nameKo} (${pattern.name})`,
+    locale === "en" ? `# ${pattern.name}` : `# ${pattern.nameKo} (${pattern.name})`,
     `Source: ${canonicalUrl(pageUrl)}`,
     `> ${pattern.description}`,
   ];
@@ -97,7 +99,11 @@ export function buildPatternMarkdown(
 }
 
 /** Loads the guidance and every implementation file of a pattern, then renders it as Markdown. */
-export async function loadPatternMarkdown(pattern: Pattern, pageUrl: string): Promise<string> {
+export async function loadPatternMarkdown(
+  pattern: Pattern,
+  pageUrl: string,
+  locale: Locale = "ko",
+): Promise<string> {
   const [guide, sources] = await Promise.all([
     pattern.loadGuide(),
     pattern.kind === "concept"
@@ -110,5 +116,5 @@ export async function loadPatternMarkdown(pattern: Pattern, pageUrl: string): Pr
           })),
         ),
   ]);
-  return buildPatternMarkdown(pattern, guide, sources, pageUrl);
+  return buildPatternMarkdown(pattern, guide, sources, pageUrl, locale);
 }

@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "The task takes more than a few seconds, such as an upload or export.",
+    "People may use other screens until it finishes.",
+    "It must be possible to cancel while in progress."
+  ],
+  "whenNotToUse": [
+    "The task finishes within a second (a spinner or button state is enough).",
+    "Other actions must be blocked until it finishes.",
+    "The progress can't be known (use a spinner)."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing progress within the task's own screen."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Only briefly reporting the finished result."
+    },
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "When progress can't be known."
+    }
+  ],
+  "accessibility": [
+    "The message sits in role=\"status\", so start, completion, and cancellation are read politely.",
+    "The bar has role=\"progressbar\" and announces its current value with aria-valuenow.",
+    "The cancel button shows only while in progress and turns into the result message when done.",
+    "With reduced motion, the bar changes instantly without a transition."
+  ]
+}

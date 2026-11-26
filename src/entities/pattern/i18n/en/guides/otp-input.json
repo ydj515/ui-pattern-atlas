@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Codes with a fixed number of digits, such as phone or two-factor verification.",
+    "You let people fill in a code from a text message with autofill.",
+    "Showing how many digits are left would help."
+  ],
+  "whenNotToUse": [
+    "Codes without a fixed length (use a text field).",
+    "Long keys that mix in letters (paste into a text field).",
+    "Passwords (use a password field)."
+  ],
+  "alternatives": [
+    {
+      "name": "Text Field",
+      "slug": "text-field",
+      "reason": "Taking the code in one field with inputmode=numeric."
+    },
+    {
+      "name": "Input Mask",
+      "slug": "input-mask",
+      "reason": "Long numbers with separators."
+    }
+  ],
+  "accessibility": [
+    "Group the boxes with role=\"group\", and give each a name such as \"Verification code digit 1 of 6\".",
+    "Put autocomplete=\"one-time-code\" on the first box so SMS autofill works.",
+    "inputmode=\"numeric\" opens the number pad, and anything other than digits is ignored.",
+    "Backspace moves to the previous box, the arrows move between boxes, and the result is announced with role=\"status\"."
+  ]
+}

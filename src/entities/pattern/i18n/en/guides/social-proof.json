@@ -1,0 +1,31 @@
+{
+  "origin": "A term introduced by Robert Cialdini in his 1984 book Influence: The Psychology of Persuasion.",
+  "whenToUse": [
+    "Helping people choose products or plans.",
+    "Showing reviews and ratings.",
+    "Telling new users which features many people use."
+  ],
+  "whenNotToUse": [
+    "You'd inflate or invent numbers.",
+    "You'd show reviews of unknown origin.",
+    "You'd make a few opinions look like most."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Badge",
+      "slug": "rating-badge",
+      "reason": "Showing the rating with the review count."
+    },
+    {
+      "name": "Fake Scarcity",
+      "slug": "fake-scarcity",
+      "reason": "Pressuring with invented numbers."
+    }
+  ],
+  "accessibility": [
+    "Write the number with its period (this week) in words.",
+    "Review counts are read together with the rating.",
+    "Align numbers with tabular-nums.",
+    "Link to the reviews so the source can be checked."
+  ]
+}

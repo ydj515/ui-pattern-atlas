@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Events tied to dates, such as team schedules, classes, or bookings.",
+    "People need to see at a glance which days of the month are busy.",
+    "People press a date to check its events."
+  ],
+  "whenNotToUse": [
+    "You only take a single date (use a date picker).",
+    "Days are packed and times matter (use a week or day view).",
+    "Events are sparse (a list is easier to read)."
+  ],
+  "alternatives": [
+    {
+      "name": "Date Picker",
+      "slug": "date-picker",
+      "reason": "Taking a date as input."
+    }
+  ],
+  "accessibility": [
+    "Put the count in date button names, such as \"2 events\", instead of relying on dots.",
+    "Today is aria-current=\"date\" and the chosen day aria-pressed.",
+    "The month name and the event list below announce changes with aria-live.",
+    "Previous and next month buttons have names."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Long texts with many sections, such as documentation and guides.",
+    "There's spare room beside the text on wide screens.",
+    "Showing the reading position would help."
+  ],
+  "whenNotToUse": [
+    "Short texts with only two or three sections.",
+    "Small screens (use a collapsible contents or a list at the top).",
+    "App screens rather than texts."
+  ],
+  "alternatives": [
+    {
+      "name": "Back to Top",
+      "slug": "back-to-top",
+      "reason": "Returning to the start of a long page."
+    },
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Showing one section at a time."
+    }
+  ],
+  "accessibility": [
+    "Mark the current section with aria-current=\"location\" and a bold line.",
+    "Links are real anchors, so pressing one moves to that section.",
+    "Even if the last section is too short to reach the top, it's marked when scrolled to the end.",
+    "Name the nav \"Contents\"."
+  ]
+}

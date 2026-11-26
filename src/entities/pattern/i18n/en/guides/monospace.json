@@ -1,0 +1,31 @@
+{
+  "origin": "Every letter takes the same (mono) width (space). It started with typewriters and is still used in code editors.",
+  "whenToUse": [
+    "Developer tools or tech blogs.",
+    "Numbers and code that must line up.",
+    "Staging a typewriter feel."
+  ],
+  "whenNotToUse": [
+    "Long Korean body text (the spacing looks sparse).",
+    "Brands with a soft mood.",
+    "The cells would stand out more than the content."
+  ],
+  "alternatives": [
+    {
+      "name": "Pixel Typography",
+      "slug": "pixel-typography",
+      "reason": "Strokes fitted to a grid."
+    },
+    {
+      "name": "Swiss Style",
+      "slug": "swiss-style",
+      "reason": "Grid alignment."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

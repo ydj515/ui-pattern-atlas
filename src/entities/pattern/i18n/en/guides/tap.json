@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Small icon-only buttons, such as close or more.",
+    "Pressing a whole list row opens it.",
+    "Every screen used with fingers."
+  ],
+  "whenNotToUse": [
+    "Touch areas are so dense they overlap (make room first).",
+    "A single press would cause an irreversible result (add a confirmation step).",
+    "Actions visible only on mouse hover."
+  ],
+  "alternatives": [
+    {
+      "name": "Icon Button",
+      "slug": "icon-button",
+      "reason": "The name and look of icon-only buttons."
+    },
+    {
+      "name": "Long Press",
+      "slug": "long-press",
+      "reason": "Keeping extra actions separate."
+    }
+  ],
+  "accessibility": [
+    "Touch areas are at least 44×44px, beyond WCAG 2.5.8 (24px) and platform guidelines.",
+    "Icon-only buttons get a name with aria-label.",
+    "touch-manipulation removes the delay after a tap.",
+    "The pressed state shows immediately with color."
+  ]
+}

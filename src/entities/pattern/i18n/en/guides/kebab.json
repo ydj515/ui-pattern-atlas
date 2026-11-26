@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Each list item or card has extra actions.",
+    "You hide rarely used actions.",
+    "Toolbars in Android apps."
+  ],
+  "whenNotToUse": [
+    "Main actions (keep them as visible buttons).",
+    "There's only one action (make it a button directly).",
+    "You'd mix it with three horizontal dots (use one throughout a service)."
+  ],
+  "alternatives": [
+    {
+      "name": "Meatballs ⋯",
+      "slug": "meatballs",
+      "reason": "More, as three horizontal dots."
+    },
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "The structure of the menu itself."
+    }
+  ],
+  "accessibility": [
+    "Put the item name in the button name (More for meeting-notes.pdf) so it's clear which row's menu it is.",
+    "Add aria-haspopup=menu and aria-expanded.",
+    "When the menu opens, focus goes to the first item.",
+    "The touch area is at least 32px."
+  ]
+}

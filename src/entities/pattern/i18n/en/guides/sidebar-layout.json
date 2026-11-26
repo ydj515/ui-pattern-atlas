@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Screens with many menu items, such as settings, admin tools, or documentation.",
+    "The menu must always be visible.",
+    "Services mainly used on wide screens."
+  ],
+  "whenNotToUse": [
+    "There are only a few menu items (use top navigation).",
+    "Reading-focused content.",
+    "Mobile-first services (use a bottom tab bar)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sidebar Navigation",
+      "slug": "sidebar-navigation",
+      "reason": "How the menu itself is built."
+    },
+    {
+      "name": "Split View",
+      "slug": "split-view",
+      "reason": "Separating a list and its details."
+    }
+  ],
+  "accessibility": [
+    "The menu is a named nav and the content a main landmark.",
+    "Even when narrow, the DOM order stays menu then content, so the reading order is the same.",
+    "The current menu item is marked with aria-current=\"page\".",
+    "A container query adapts it to the width of the area it sits in."
+  ]
+}

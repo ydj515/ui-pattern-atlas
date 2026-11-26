@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services that must introduce unfamiliar concepts up front.",
+    "There are about three key points to introduce.",
+    "You show what people get before they sign up."
+  ],
+  "whenNotToUse": [
+    "Simple apps people can use just by looking (let them start right away).",
+    "Long content like a feature manual.",
+    "You'd block skipping."
+  ],
+  "alternatives": [
+    {
+      "name": "Coach Mark",
+      "slug": "coach-mark",
+      "reason": "Pointing at one button on the real screen."
+    },
+    {
+      "name": "Welcome Screen / Modal",
+      "slug": "welcome-screen",
+      "reason": "Just a greeting on one screen."
+    }
+  ],
+  "accessibility": [
+    "Skip, the dots, and Next are all real buttons, usable with the keyboard.",
+    "The arrow keys also move between screens.",
+    "The title is read via aria-live when it changes.",
+    "Dot buttons are named for which introduction they are, and the current dot is marked with aria-current."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Results come in different kinds, such as products, brands, or posts.",
+    "Each kind looks different and is hard to mix.",
+    "Narrowing the scope of a unified search."
+  ],
+  "whenNotToUse": [
+    "Applying conditions within one kind (use search filters).",
+    "There are six or more scopes.",
+    "There are few results and one list is enough."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Switching content groups unrelated to search."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Only changing how results are shown."
+    }
+  ],
+  "accessibility": [
+    "Use the tablist, tab, and tabpanel roles with aria-selected and aria-controls.",
+    "Moving tabs with ←/→, Home, and End changes the results at once.",
+    "Only the selected tab is in the Tab order, so the tab list is passed in one step.",
+    "Tab names include the result count, read along with them."
+  ]
+}

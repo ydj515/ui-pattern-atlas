@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Bringing people into a team or project.",
+    "Inviting several people at once.",
+    "Email invites sit alongside an invite link."
+  ],
+  "whenNotToUse": [
+    "Handing out a link is enough (use copy link).",
+    "Importing a whole contact list to send in bulk.",
+    "Adding people directly without their consent."
+  ],
+  "alternatives": [
+    {
+      "name": "Copy Link",
+      "slug": "copy-link",
+      "reason": "Handing out an invite link."
+    },
+    {
+      "name": "Tag Input",
+      "slug": "tag-input",
+      "reason": "An input that collects several values as chips."
+    }
+  ],
+  "accessibility": [
+    "The input connects to a label, and errors are tied with aria-describedby.",
+    "Each chip has a remove button that includes the email address.",
+    "Backspace removes the last chip.",
+    "When there's no one to send to, the button is disabled."
+  ]
+}

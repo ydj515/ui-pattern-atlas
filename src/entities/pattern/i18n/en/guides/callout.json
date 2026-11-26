@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You stress a condition or limit in documentation or help that must not be missed.",
+    "You show a tip apart from the flow of the text.",
+    "You warn people before an action that's hard to undo."
+  ],
+  "whenNotToUse": [
+    "You're reporting the result of something just done (use a toast or alert banner).",
+    "You'd stack several on one screen until everything looks emphasized.",
+    "The content works fine as body text."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A state or announcement for the whole page."
+    },
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "A short explanation opened only when needed."
+    }
+  ],
+  "accessibility": [
+    "Use an aside with role=\"note\" to mark supporting content within the reading flow. It's not a live notification, so don't use a live region.",
+    "Always show a title such as Note, Tip, or Warning so the kind isn't conveyed by color alone.",
+    "The icon is decorative, so it's aria-hidden.",
+    "Keep a contrast of at least 4.5:1 between background and text."
+  ]
+}

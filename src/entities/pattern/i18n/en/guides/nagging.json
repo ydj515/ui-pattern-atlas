@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You decide how often to ask for permissions, ratings, or upgrades.",
+    "You decide how long to remember a refusal.",
+    "You review the choices in request popups."
+  ],
+  "whenNotToUse": [
+    "There's only Later and no way to decline.",
+    "You'd show it again on another screen every time it's closed.",
+    "You'd clear the refusal record with every app update."
+  ],
+  "alternatives": [
+    {
+      "name": "Permission Priming",
+      "slug": "permission-priming",
+      "reason": "Asking once at the moment it's needed."
+    },
+    {
+      "name": "Confirmshaming",
+      "slug": "confirmshaming",
+      "reason": "Pressuring with decline wording."
+    }
+  ],
+  "accessibility": [
+    "Open requests as dialogs that close with Esc.",
+    "Make Don't ask again a real button.",
+    "Return focus to where it was after closing.",
+    "Don't interrupt work with sudden popups."
+  ]
+}

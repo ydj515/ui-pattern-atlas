@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You review the consent items on sign-up or checkout forms.",
+    "You set the standard for telling required from optional consent.",
+    "You explain the effect of defaults."
+  ],
+  "whenNotToUse": [
+    "You want optional consent turned on in advance.",
+    "You'd mix required and optional consent in the same style.",
+    "You'd make the consent terms impossible to read."
+  ],
+  "alternatives": [
+    {
+      "name": "Terms Agreement",
+      "slug": "terms-agreement",
+      "reason": "A consent screen that separates required and optional."
+    },
+    {
+      "name": "Default Effect",
+      "slug": "default-effect",
+      "reason": "How defaults influence choices."
+    }
+  ],
+  "accessibility": [
+    "Mark each checkbox [Required] or [Optional] in text.",
+    "Optional consent starts unchecked.",
+    "A label makes the whole sentence clickable.",
+    "The consent terms can be opened and read."
+  ]
+}

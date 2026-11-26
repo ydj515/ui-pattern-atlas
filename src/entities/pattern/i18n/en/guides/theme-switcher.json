@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Services that support dark mode.",
+    "The default follows the device setting.",
+    "You want to show how it looks before people choose."
+  ],
+  "whenNotToUse": [
+    "A single icon button switching light and dark is enough.",
+    "There's only one theme.",
+    "Settings other than color, such as text size."
+  ],
+  "alternatives": [
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Choosing among short options in one row."
+    },
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "The basic form for choosing one option."
+    }
+  ],
+  "accessibility": [
+    "Radio buttons grouped with fieldset and legend let the arrow keys move between them.",
+    "The previews are decorative, so they're aria-hidden.",
+    "The system setting's current state is read in words along with it."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Headings with a gaming, tech, or cyber mood.",
+    "Staging about errors or hacking.",
+    "Short words."
+  ],
+  "whenNotToUse": [
+    "Real error messages (they'd be mistaken for actual problems).",
+    "Long sentences.",
+    "Animated glitches that keep repeating."
+  ],
+  "alternatives": [
+    {
+      "name": "Acid Graphic",
+      "slug": "acid-graphic",
+      "reason": "Intense neon colors."
+    },
+    {
+      "name": "Kinetic Typography",
+      "slug": "kinetic-typography",
+      "reason": "Emphasis through motion."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

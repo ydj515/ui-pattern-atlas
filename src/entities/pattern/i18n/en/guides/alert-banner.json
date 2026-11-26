@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "You report a state that needs action, such as a failed payment or an account problem.",
+    "You announce something with a deadline, such as a closing date or upcoming maintenance.",
+    "You keep showing a state that affects the whole page."
+  ],
+  "whenNotToUse": [
+    "You're reporting a light result of something just done.",
+    "You'd stack several marketing messages.",
+    "The error belongs to a specific field."
+  ],
+  "alternatives": [
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "A result that only needs to show briefly."
+    },
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "A field-level error."
+    },
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "When an immediate decision is needed."
+    }
+  ],
+  "accessibility": [
+    "Match the severity: role=\"alert\" for errors, role=\"status\" for the rest.",
+    "Convey severity with an icon and a title, not color alone.",
+    "The close button is icon-only, so give it an aria-label.",
+    "Keep a contrast of at least 4.5:1 between text and background."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "At the bottom of the order form, before the pay button.",
+    "Discounts and shipping are added.",
+    "Payment consent is needed."
+  ],
+  "whenNotToUse": [
+    "Receipts after payment (use a receipt summary).",
+    "You'd add costs for the first time at the last step (see hidden costs).",
+    "Simple purchases with a single amount."
+  ],
+  "alternatives": [
+    {
+      "name": "Receipt Summary",
+      "slug": "receipt-summary",
+      "reason": "Showing the details after payment is done."
+    },
+    {
+      "name": "Hidden Costs",
+      "slug": "hidden-costs",
+      "reason": "The dark pattern of hiding costs until the end."
+    }
+  ],
+  "accessibility": [
+    "The amount list is a dl, read as pairs of names and values.",
+    "The final amount is read via aria-live when it changes.",
+    "The pay button is disabled until consent is given."
+  ]
+}

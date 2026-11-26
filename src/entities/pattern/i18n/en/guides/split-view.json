@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Screens where people pick from a list and look closer, such as email, messaging, or settings.",
+    "People move quickly from item to item.",
+    "Tablets and desktops."
+  ],
+  "whenNotToUse": [
+    "The details are very long and need focus (use a separate screen).",
+    "There are only a few items in the list.",
+    "Services used only on mobile (move from list to detail)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sidebar Layout",
+      "slug": "sidebar-layout",
+      "reason": "Separating a menu from the content."
+    },
+    {
+      "name": "Back Navigation",
+      "slug": "back-navigation",
+      "reason": "Returning to the list on narrow screens."
+    }
+  ],
+  "accessibility": [
+    "On narrow screens, the hidden side uses display: none, so it's also skipped by the keyboard and assistive technology.",
+    "The detail has a button back to the list.",
+    "The chosen item is marked with aria-current.",
+    "Because it uses a container query, it follows the same rules when placed inside a panel."
+  ]
+}

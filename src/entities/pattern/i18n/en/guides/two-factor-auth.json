@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Accounts where protection matters, such as payments or personal data.",
+    "Signing in on a new device.",
+    "Changing security settings."
+  ],
+  "whenNotToUse": [
+    "Low-risk actions where asking every time is too much.",
+    "You'd rely on a single phone with no backup method.",
+    "You wouldn't say the code's length and format."
+  ],
+  "alternatives": [
+    {
+      "name": "OTP Input",
+      "slug": "otp-input",
+      "reason": "Using just the code fields."
+    },
+    {
+      "name": "Login Form",
+      "slug": "login-form",
+      "reason": "The password step before."
+    }
+  ],
+  "accessibility": [
+    "Set autocomplete=\"one-time-code\" and inputmode=\"numeric\".",
+    "Errors and remaining attempts are read with role=\"alert\".",
+    "Switching to a backup code changes the guidance text and the field's name together."
+  ]
+}

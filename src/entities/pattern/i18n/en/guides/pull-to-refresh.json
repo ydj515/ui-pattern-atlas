@@ -1,0 +1,20 @@
+{
+  "origin": "Exactly what it says: pull to refresh. It's credited to Loren Brichter, who first put it in the Twitter app Tweetie 2 in 2009.",
+  "whenToUse": [
+    "People update manually a news or notification list where the latest items stack at the top."
+  ],
+  "whenNotToUse": [
+    "A scrolled-down position must be kept, or the refresh gesture clashes with other gestures."
+  ],
+  "alternatives": [
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "Only showing that a request is waiting, without a gesture."
+    }
+  ],
+  "accessibility": [
+    "A refresh button runs the same action without the touch gesture.",
+    "Announce progress and failure in a live region."
+  ]
+}

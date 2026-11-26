@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Consumables discounted from two or three units.",
+    "The unit price changes with quantity.",
+    "You show the total before adding to the cart."
+  ],
+  "whenNotToUse": [
+    "The unit price is the same regardless of bundling (use a quantity stepper).",
+    "You'd push people to add quantities they don't want.",
+    "Sets that bundle different products."
+  ],
+  "alternatives": [
+    {
+      "name": "Number Stepper",
+      "slug": "number-stepper",
+      "reason": "Choosing a quantity without a discount."
+    },
+    {
+      "name": "Free Shipping Progress",
+      "slug": "free-shipping-progress",
+      "reason": "When the order amount, not quantity, is the threshold."
+    }
+  ],
+  "accessibility": [
+    "The minus and plus buttons have names and become disabled at their limits.",
+    "The total is read via aria-live whenever it changes.",
+    "Whether the discount applies is stated in words, not color."
+  ]
+}

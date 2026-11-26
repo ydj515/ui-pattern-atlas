@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You validate a structure built from card sorting.",
+    "You compare menu names before and after a change.",
+    "You check the structure on its own before design."
+  ],
+  "whenNotToUse": [
+    "You're looking for visual problems on screen (use a usability test).",
+    "You're setting the classification for the first time (use card sorting).",
+    "Most people find things through search."
+  ],
+  "alternatives": [
+    {
+      "name": "Card Sorting",
+      "slug": "card-sorting",
+      "reason": "Building a structure for the first time."
+    },
+    {
+      "name": "Usability Test",
+      "slug": "usability-test",
+      "reason": "Checking on real screens."
+    }
+  ],
+  "accessibility": [
+    "It uses only text lists, so screen reader users can do the same tasks.",
+    "Task wording doesn't reuse menu names.",
+    "Record failed paths too, to see where people got confused."
+  ]
+}

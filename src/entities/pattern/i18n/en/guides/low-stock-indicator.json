@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Stock differs by size or color.",
+    "The remaining quantity affects the decision.",
+    "People must know before choosing a sold-out option."
+  ],
+  "whenNotToUse": [
+    "It would always look low regardless of stock (see fake scarcity).",
+    "There's no stock, as with digital goods.",
+    "The exact stock isn't known."
+  ],
+  "alternatives": [
+    {
+      "name": "Fake Scarcity",
+      "slug": "fake-scarcity",
+      "reason": "Seeing why false stock indicators are a problem."
+    },
+    {
+      "name": "Scarcity",
+      "slug": "scarcity",
+      "reason": "Seeing how to state real limits."
+    }
+  ],
+  "accessibility": [
+    "Each state uses a differently shaped icon along with words, not relying on color.",
+    "Changing the option reads the new stock state via aria-live.",
+    "Sold-out options can still be chosen, with the next action named on the button."
+  ]
+}

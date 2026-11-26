@@ -1,0 +1,31 @@
+{
+  "origin": "Named after experiments by the British psychologist William Edmund Hick and the American psychologist Ray Hyman in 1952, so it's also called the Hick-Hyman law.",
+  "whenToUse": [
+    "People make a first choice, as on a menu or a help center's front page.",
+    "You decide whether to group options or lay them out.",
+    "You put frequently used items first."
+  ],
+  "whenNotToUse": [
+    "Tools where experts scan many items quickly (laying them out may be faster).",
+    "Vague group names would leave people lost.",
+    "You'd hide the items people need."
+  ],
+  "alternatives": [
+    {
+      "name": "Choice Overload",
+      "slug": "choice-overload",
+      "reason": "The tendency to put off deciding."
+    },
+    {
+      "name": "Fitts's Law",
+      "slug": "fitts-law",
+      "reason": "Sizes and distances that are easy to press."
+    }
+  ],
+  "accessibility": [
+    "Name groups so people can guess what's inside.",
+    "Make options real buttons, chosen with the keyboard.",
+    "Give buttons generous sizes so they're easy to press.",
+    "Let items inside groups be found by search too."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Fields that must be retyped when wrong, such as passwords or verification codes.",
+    "Errors must be reported right after submitting.",
+    "The error is close to where people are looking."
+  ],
+  "whenNotToUse": [
+    "Reporting errors in several fields at once (use an error summary).",
+    "Checking in real time while typing (use inline validation).",
+    "There's only a shake and no error message."
+  ],
+  "alternatives": [
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "Showing errors on each field right away."
+    },
+    {
+      "name": "Error Summary",
+      "slug": "error-summary",
+      "reason": "Gathering several errors in one place."
+    }
+  ],
+  "accessibility": [
+    "Connect the error message to the field with aria-invalid and aria-describedby.",
+    "The error message has role=status, so screen readers hear it too.",
+    "With reduced motion, it doesn't shake; only the color and message change.",
+    "The error is stated in words, not only color, so people who can't tell colors apart still know."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "origin": "Named after the English logician John Venn, who introduced it in 1880.",
+  "whenToUse": [
+    "You show how much two or three groups overlap.",
+    "The intersection matters, as with overlapping consents or repeat purchases.",
+    "You show the exact count in each region too."
+  ],
+  "whenNotToUse": [
+    "There are four or more sets.",
+    "Overlap ratios must be compared precisely by area.",
+    "Comparing groups that don't overlap (use a bar chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Stacked Bar Chart",
+      "slug": "stacked-bar-chart",
+      "reason": "Comparing composition without overlap."
+    },
+    {
+      "name": "Bubble Chart",
+      "slug": "bubble-chart",
+      "reason": "Comparing amounts by circle size."
+    }
+  ],
+  "accessibility": [
+    "Legend buttons announce the selected state with aria-pressed.",
+    "The total of the chosen set is read via aria-live.",
+    "Every region's count is also kept as a list for screen readers."
+  ]
+}

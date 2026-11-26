@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Below help articles, FAQs, or AI answers.",
+    "You want to know whether an article solved the problem.",
+    "You look for articles to improve."
+  ],
+  "whenNotToUse": [
+    "Satisfaction surveys that need a score (use a star rating or NPS).",
+    "At the end of every screen.",
+    "A reason must always be collected."
+  ],
+  "alternatives": [
+    {
+      "name": "NPS Scale",
+      "slug": "nps-scale",
+      "reason": "Collecting likelihood to recommend as a score."
+    },
+    {
+      "name": "Rating Tags",
+      "slug": "rating-tags",
+      "reason": "Letting people choose reasons as chips."
+    }
+  ],
+  "accessibility": [
+    "The question is a heading connected as the region's name.",
+    "Reason chips are aria-pressed toggles.",
+    "The thank-you message is announced with role=status.",
+    "Yes and No are written next to the icons."
+  ]
+}

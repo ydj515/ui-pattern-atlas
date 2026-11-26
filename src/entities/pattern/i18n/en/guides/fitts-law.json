@@ -1,0 +1,31 @@
+{
+  "origin": "Named after research published in 1954 by the American psychologist Paul Fitts, an aviation psychologist who studied cockpit controls for the US Air Force.",
+  "whenToUse": [
+    "You set the size and position of main buttons, such as pay or send.",
+    "You consider the area the thumb reaches on mobile.",
+    "You enlarge the touch area of small icon buttons."
+  ],
+  "whenNotToUse": [
+    "You'd make risky buttons such as delete large and close.",
+    "You'd make every button large until the hierarchy disappears.",
+    "You'd push them against the screen edge where they clash with other gestures."
+  ],
+  "alternatives": [
+    {
+      "name": "Tap",
+      "slug": "tap",
+      "reason": "44px touch areas."
+    },
+    {
+      "name": "Sticky Action Bar",
+      "slug": "sticky-action-bar",
+      "reason": "Fixing the main action at the bottom."
+    }
+  ],
+  "accessibility": [
+    "Touch areas are at least 24px, with 44px or more recommended (WCAG 2.5.8).",
+    "Make main buttons real buttons.",
+    "Don't use small text links for main actions.",
+    "Leave space between buttons to prevent mis-taps."
+  ]
+}

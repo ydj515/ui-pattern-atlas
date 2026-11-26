@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You review the layout of a page with many visitors.",
+    "You look for buttons that aren't pressed or elements pressed by mistake.",
+    "You set the order of content on a long page."
+  ],
+  "whenNotToUse": [
+    "You need to know why people clicked there (use a usability test).",
+    "There are few visitors.",
+    "Layouts differ so much by screen size that mixing them misleads."
+  ],
+  "alternatives": [
+    {
+      "name": "Funnel Analysis",
+      "slug": "funnel-analysis",
+      "reason": "Seeing how many drop off at each step."
+    },
+    {
+      "name": "Usability Test",
+      "slug": "usability-test",
+      "reason": "Seeing the reasons behind behavior."
+    }
+  ],
+  "accessibility": [
+    "Keep in mind that keyboard and screen reader use doesn't show up as click positions.",
+    "Look at the data split by device and screen width.",
+    "Mask personal information so typed input isn't recorded."
+  ]
+}

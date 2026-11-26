@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Images must be cut to a fixed ratio, such as profile photos or thumbnails.",
+    "Faces sit in different places in uploaded photos.",
+    "The result shows small, so it needs checking first."
+  ],
+  "whenNotToUse": [
+    "Photo editing is the main feature (use a dedicated editor).",
+    "The original must be shown as is.",
+    "Automatic face detection is enough."
+  ],
+  "alternatives": [
+    {
+      "name": "File Upload",
+      "slug": "file-upload",
+      "reason": "The step before, choosing a photo."
+    }
+  ],
+  "accessibility": [
+    "The crop area takes focus and the arrow keys move the photo, so it works without a pointer.",
+    "Zoom is a named range input.",
+    "Movement is limited so the photo always fills the area.",
+    "The darkened outside area is decorative, so it's aria-hidden."
+  ]
+}

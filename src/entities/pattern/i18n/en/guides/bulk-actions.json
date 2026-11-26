@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "The same action applies to many items, such as emails or files.",
+    "The number chosen decides the result.",
+    "The action can be undone afterward."
+  ],
+  "whenNotToUse": [
+    "Lists handled one item at a time.",
+    "Irreversible bulk deletion without confirmation.",
+    "The selection scrolls off screen and can't be seen."
+  ],
+  "alternatives": [
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Undoing right after the action."
+    },
+    {
+      "name": "Swipe to Delete",
+      "slug": "swipe-to-delete",
+      "reason": "Swiping one item to delete it."
+    },
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "The basic form of the selection boxes."
+    }
+  ],
+  "accessibility": [
+    "The action bar is role=\"toolbar\" and reads the number chosen via aria-live.",
+    "With nothing chosen, the bar is hidden so no unusable buttons remain.",
+    "The result and undo button sit inside role=\"status\"."
+  ]
+}

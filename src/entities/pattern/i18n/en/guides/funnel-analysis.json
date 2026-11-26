@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Flows with a fixed order, such as sign-up or checkout.",
+    "Deciding where to start fixing.",
+    "Seeing differences by device or traffic source."
+  ],
+  "whenNotToUse": [
+    "Exploratory flows without fixed steps.",
+    "You need to know why people leave (use a usability test).",
+    "Teams define the steps differently."
+  ],
+  "alternatives": [
+    {
+      "name": "A/B Test",
+      "slug": "ab-test",
+      "reason": "Measuring the effect of fixing where people drop off."
+    },
+    {
+      "name": "Behavioral Heatmap",
+      "slug": "behavioral-heatmap",
+      "reason": "Looking at behavior within one page."
+    }
+  ],
+  "accessibility": [
+    "If you can't split by assistive technology use, check separately with a usability test.",
+    "Record drop-offs blocked by errors separately from people who chose to leave.",
+    "Name steps the same way as the words on screen."
+  ]
+}

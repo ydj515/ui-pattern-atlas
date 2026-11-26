@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Offers with a fixed end time, such as a flash sale.",
+    "Booking or application deadlines are close.",
+    "Time is really limited, as with a payment hold."
+  ],
+  "whenNotToUse": [
+    "Fake deadlines that restart on refresh (see fake urgency).",
+    "There are days left until the deadline (show the date only).",
+    "Screens with no reason to pressure people."
+  ],
+  "alternatives": [
+    {
+      "name": "Fake Urgency",
+      "slug": "fake-urgency",
+      "reason": "Seeing why a restarting timer is a problem."
+    },
+    {
+      "name": "Low Stock Indicator",
+      "slug": "low-stock-indicator",
+      "reason": "When quantity, not time, is limited."
+    }
+  ],
+  "accessibility": [
+    "The numbers changing every second are aria-hidden, and the end time is read as text.",
+    "When it ends, announce it once with role=\"status\".",
+    "Show the time left in words and numbers, not relying on color."
+  ]
+}

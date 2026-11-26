@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The title, filters, and search are needed all the time on a long list.",
+    "You keep telling people which screen they're on.",
+    "The header is short, a single line."
+  ],
+  "whenNotToUse": [
+    "The header is tall and covers much of the screen (hide it depending on scroll direction).",
+    "Long reading-focused texts (use the screen fully).",
+    "Multi-line headers on small screens."
+  ],
+  "alternatives": [
+    {
+      "name": "Sticky Action Bar",
+      "slug": "sticky-action-bar",
+      "reason": "Fixing the main action at the bottom."
+    },
+    {
+      "name": "Back to Top",
+      "slug": "back-to-top",
+      "reason": "A button back to the start instead of a header."
+    }
+  ],
+  "accessibility": [
+    "It uses position: sticky, so the document flow and reading order stay the same.",
+    "Add scroll-margin-top so the fixed header doesn't cover headings when jumping to anchors.",
+    "The shadow appears only after scrolling, to mark the edge.",
+    "The title inside the header is the screen's name, so it's an h element."
+  ]
+}

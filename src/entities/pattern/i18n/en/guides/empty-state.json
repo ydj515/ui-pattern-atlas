@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "You prompt first-time users toward their first action.",
+    "A search or filter finds nothing and people should change the conditions.",
+    "Being empty is good news, as when every task is done."
+  ],
+  "whenNotToUse": [
+    "The data is still loading (use a skeleton).",
+    "It's empty because of an error and you'd hide the reason.",
+    "Several buttons compete to prompt an action."
+  ],
+  "alternatives": [
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "The loading state."
+    },
+    {
+      "name": "Error State",
+      "slug": "error-state",
+      "reason": "An error keeps the content from showing."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A partial failure where the rest of the content can still be browsed."
+    }
+  ],
+  "accessibility": [
+    "Illustrations and icons are decorative, so hide them with aria-hidden.",
+    "Keep the title and description as plain text so screen readers read them in order.",
+    "Offer the main action as a real <button> or <a> so it's keyboard accessible."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The moment a result comes out, such as connected or verified.",
+    "Brands with a technical or security feel.",
+    "A single short heading."
+  ],
+  "whenNotToUse": [
+    "Long sentences or body text.",
+    "Dragging it out to hide the real processing time.",
+    "Status messages that repeat often."
+  ],
+  "alternatives": [
+    {
+      "name": "Typewriter",
+      "slug": "typewriter",
+      "reason": "Calmly typing out one letter at a time."
+    },
+    {
+      "name": "Fade",
+      "slug": "fade",
+      "reason": "Quietly changing the result."
+    }
+  ],
+  "accessibility": [
+    "Screen readers get only the real sentence via sr-only text.",
+    "The scrambling symbols are aria-hidden.",
+    "The result message sits in a role=status region, so changes are announced.",
+    "With reduced motion, it shows the result without scrambling."
+  ]
+}

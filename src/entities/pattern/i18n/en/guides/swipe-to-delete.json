@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Mobile lists people tidy often, such as email or tasks.",
+    "There's no room to show a delete button on every row.",
+    "Undo can be offered alongside."
+  ],
+  "whenNotToUse": [
+    "Irreversible deletion (use a confirmation dialog).",
+    "Mouse-driven desktop tables (use a button at the end of the row, or select and delete in bulk).",
+    "A row contains content that scrolls sideways."
+  ],
+  "alternatives": [
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Offering a chance to take it back right after deleting."
+    },
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Irreversible deletion."
+    }
+  ],
+  "accessibility": [
+    "The delete button is a real button, so tabbing to it slides the row and reveals it, allowing deletion without the gesture.",
+    "Put the item name in the button name (Delete meeting notes cleanup) so screen reader users know what's being deleted.",
+    "Announce the result and undo with role=status.",
+    "touch-action: pan-y leaves vertical scrolling untouched."
+  ]
+}

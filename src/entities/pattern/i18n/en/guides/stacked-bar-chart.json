@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "The total and its makeup both change from period to period.",
+    "There are two or three parts.",
+    "You compare composition side by side across several bars."
+  ],
+  "whenNotToUse": [
+    "There are more than four parts (group them as other).",
+    "The sizes of middle segments must be compared precisely (split them into a bar chart).",
+    "Only one whole's composition is shown (use a donut chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing items one by one."
+    },
+    {
+      "name": "Donut Chart",
+      "slug": "donut-chart",
+      "reason": "Showing the composition of a single whole."
+    }
+  ],
+  "accessibility": [
+    "The legend lists every series name, stacked in the same order.",
+    "Opening the table view shows every value as a table.",
+    "A 2px gap between segments keeps edges visible even with similar colors."
+  ]
+}

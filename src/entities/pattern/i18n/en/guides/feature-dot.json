@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You announce a newly added menu item or feature.",
+    "You draw attention lightly without explanation.",
+    "Seeing it once is enough."
+  ],
+  "whenNotToUse": [
+    "You'd put it on several menu items at once (people won't know where to look first).",
+    "A count is needed (use a badge).",
+    "A detailed explanation is needed (use a feature introduction or a coach mark)."
+  ],
+  "alternatives": [
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "Showing a count."
+    },
+    {
+      "name": "Unread Indicator",
+      "slug": "unread-indicator",
+      "reason": "New items in a list."
+    }
+  ],
+  "accessibility": [
+    "The dot is decorative, and visually hidden \"new\" text is read after the menu name.",
+    "It disappears once the menu is opened, and that fact is saved so it doesn't come back.",
+    "However small the dot, the whole menu item is the pressable area.",
+    "The current menu item is marked separately with aria-current."
+  ]
+}

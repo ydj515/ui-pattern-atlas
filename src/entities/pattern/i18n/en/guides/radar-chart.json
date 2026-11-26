@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You look at several ratings of one subject, such as a product or player.",
+    "There are 3 to 8 measures on the same scale (out of 5, for example).",
+    "You compare the shape of two subjects' strengths and weaknesses."
+  ],
+  "whenNotToUse": [
+    "The measures have different units.",
+    "Three or more subjects would overlap (use a bar chart).",
+    "Precise value comparison matters (use a table)."
+  ],
+  "alternatives": [
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing values per measure precisely."
+    },
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing several subjects in numbers."
+    }
+  ],
+  "accessibility": [
+    "The two series are told apart by the legend and different colors, with overlapping areas semi-transparent.",
+    "Axis names are written as text.",
+    "The table view lists every score with the maximum."
+  ]
+}

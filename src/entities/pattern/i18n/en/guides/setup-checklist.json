@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Settings worth doing once at the start, such as a profile or team invites.",
+    "Tools learned fastest by doing.",
+    "It can sit on one side of the home screen."
+  ],
+  "whenNotToUse": [
+    "Sign-up procedures that must follow an order (use a step indicator).",
+    "There are more than ten tasks.",
+    "You'd keep it after everything is done."
+  ],
+  "alternatives": [
+    {
+      "name": "Stepper / Step Indicator",
+      "slug": "stepper",
+      "reason": "Procedures with a fixed order."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing progress only."
+    }
+  ],
+  "accessibility": [
+    "Show progress both with a progress element and as numbers (2 / 4).",
+    "Finished items are struck through and announced as done to screen readers.",
+    "The check circles are decorative, so they're aria-hidden.",
+    "When everything is done, announce it with role=status."
+  ]
+}

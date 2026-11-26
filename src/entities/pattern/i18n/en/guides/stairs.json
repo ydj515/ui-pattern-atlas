@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Opening the contents or outline of a long text.",
+    "A text label can sit beside it.",
+    "Lists with an indented structure."
+  ],
+  "whenNotToUse": [
+    "The icon alone must convey the meaning.",
+    "Opening a menu (the hamburger is more familiar).",
+    "Sort or filter (use a döner or sliders)."
+  ],
+  "alternatives": [
+    {
+      "name": "Döner",
+      "slug": "doner",
+      "reason": "A sort icon of lines of different lengths."
+    },
+    {
+      "name": "Hamburger ☰",
+      "slug": "hamburger",
+      "reason": "Opening a menu."
+    }
+  ],
+  "accessibility": [
+    "The word Contents beside the icon becomes the button's name.",
+    "Announce whether the contents are open with aria-expanded.",
+    "Name the contents with a nav.",
+    "Announce the result of moving with role=status."
+  ]
+}

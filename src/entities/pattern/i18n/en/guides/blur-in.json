@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Short texts where mood matters, such as a quote of the day.",
+    "Large headings over photos.",
+    "Once, when a screen first opens."
+  ],
+  "whenNotToUse": [
+    "Large areas or long body text (it's costly).",
+    "Services used on many low-end devices.",
+    "Notices that must be read quickly."
+  ],
+  "alternatives": [
+    {
+      "name": "Fade Up",
+      "slug": "fade-up",
+      "reason": "Appearing more lightly."
+    },
+    {
+      "name": "Mask Reveal",
+      "slug": "mask-reveal",
+      "reason": "Lines rising from behind a mask."
+    }
+  ],
+  "accessibility": [
+    "Text is in the document from the start, so screen readers don't wait.",
+    "With reduced motion, it shows at once without blur.",
+    "The blur finishes within 700ms, so it doesn't hold up reading for long.",
+    "Text contrast against the background is at least 4.5:1 in the final state."
+  ]
+}

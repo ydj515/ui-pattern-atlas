@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A lighter-looking menu icon is needed.",
+    "The word Menu can sit beside it.",
+    "Opening a full-screen menu."
+  ],
+  "whenNotToUse": [
+    "The icon alone must signal a menu (the hamburger is more familiar).",
+    "You'd mix it with the hamburger in the same service.",
+    "The animation turning it into close (×) looks awkward."
+  ],
+  "alternatives": [
+    {
+      "name": "Hamburger ☰",
+      "slug": "hamburger",
+      "reason": "A menu made of three horizontal lines."
+    },
+    {
+      "name": "Stairs",
+      "slug": "stairs",
+      "reason": "An icon of staggered horizontal lines."
+    }
+  ],
+  "accessibility": [
+    "The word Menu beside the icon becomes the button's name.",
+    "Announce opening with aria-expanded.",
+    "The open menu closes with a close button and Esc.",
+    "Mark the current page with aria-current."
+  ]
+}

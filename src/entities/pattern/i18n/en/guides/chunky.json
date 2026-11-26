@@ -1,0 +1,26 @@
+{
+  "whenToUse": ["Food, sports, or sale banners.", "Short, strong phrases.", "Logos."],
+  "whenNotToUse": [
+    "Long sentences.",
+    "Tightened so much the strokes touch and become hard to read.",
+    "Delicate moods."
+  ],
+  "alternatives": [
+    {
+      "name": "Inflated 3D",
+      "slug": "inflated-three-d",
+      "reason": "Puffed-up volume."
+    },
+    {
+      "name": "Brutalist Typography",
+      "slug": "brutalist-typography",
+      "reason": "Overlaps and cuts."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

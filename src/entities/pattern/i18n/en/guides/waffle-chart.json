@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You convey a single share simply, such as a survey result.",
+    "You want a share to feel like a number of people.",
+    "There are one to three items."
+  ],
+  "whenNotToUse": [
+    "Shares precise to decimals (show the number).",
+    "There are four or more items (use a bar chart).",
+    "Comparing the shares of several groups (use a stacked bar chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Pie Chart",
+      "slug": "pie-chart",
+      "reason": "Showing a share as slices."
+    },
+    {
+      "name": "Stacked Bar Chart",
+      "slug": "stacked-bar-chart",
+      "reason": "Comparing several groups side by side."
+    }
+  ],
+  "accessibility": [
+    "The grid is aria-hidden, and the legend lists every share in text.",
+    "Cells fill in the same order as the legend.",
+    "It says in words what one cell is worth."
+  ]
+}

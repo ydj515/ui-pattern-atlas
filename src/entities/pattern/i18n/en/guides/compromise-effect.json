@@ -1,0 +1,20 @@
+{
+  "origin": "A concept known from Itamar Simonson's 1989 research: the middle option between two extremes feels like a safe compromise.",
+  "whenToUse": ["You check how the same plan looks depending on what it's compared with."],
+  "whenNotToUse": [
+    "You'd conclude the actual share of people choosing a plan from a single recommended label."
+  ],
+  "alternatives": [
+    {
+      "name": "Decoy Effect",
+      "slug": "decoy-effect",
+      "reason": "Comparing after adding an alternative clearly worse than one option."
+    },
+    {
+      "name": "Pricing Plan Comparison",
+      "slug": "pricing-plan-comparison",
+      "reason": "Showing billing cycle and included benefits on the same basis."
+    }
+  ],
+  "accessibility": ["Show the recommendation in text, and don't choose a plan on people's behalf."]
+}

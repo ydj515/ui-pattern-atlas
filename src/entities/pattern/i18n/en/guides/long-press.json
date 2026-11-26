@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A tap opens, and extra actions live elsewhere, as with messages or photos.",
+    "You hide rarely used actions from the screen.",
+    "You need the equivalent of a desktop right-click menu."
+  ],
+  "whenNotToUse": [
+    "Main actions (keep them as visible buttons).",
+    "There's no way to tell people a long press is possible.",
+    "It sits where other press-and-hold gestures live."
+  ],
+  "alternatives": [
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "Opening hidden actions from a button."
+    },
+    {
+      "name": "Context Menu",
+      "slug": "context-menu",
+      "reason": "Used together with right-click."
+    }
+  ],
+  "accessibility": [
+    "Right-click, Shift+F10, and the menu key open the same menu.",
+    "Add \"long press for more\" to the button name to signal hidden actions.",
+    "When the menu opens, focus goes to the first item, and Esc closes it.",
+    "Moving more than 8px cancels it, so it doesn't open by mistake while scrolling."
+  ]
+}

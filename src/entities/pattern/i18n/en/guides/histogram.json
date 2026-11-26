@@ -1,0 +1,30 @@
+{
+  "origin": "The term is credited to the statistician Karl Pearson, who first used it in the 1890s.",
+  "whenToUse": [
+    "You look at how values spread, such as order amounts or response times.",
+    "There are dozens of values or more.",
+    "You check whether it's skewed or how many peaks it has."
+  ],
+  "whenNotToUse": [
+    "Comparing categories (use a column chart).",
+    "There are only a few values.",
+    "The relationship between two values (use a scatter plot)."
+  ],
+  "alternatives": [
+    {
+      "name": "Column Chart",
+      "slug": "column-chart",
+      "reason": "Comparing fixed categories."
+    },
+    {
+      "name": "Scatter Plot",
+      "slug": "scatter-plot",
+      "reason": "Seeing the relationship between two values."
+    }
+  ],
+  "accessibility": [
+    "Pointing at a bar shows its bin and count in text.",
+    "The table view lists every bin and count.",
+    "Values at both ends of the axis are written out."
+  ]
+}

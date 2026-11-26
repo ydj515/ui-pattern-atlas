@@ -1,0 +1,16 @@
+{
+  "whenToUse": ["You present several subscription or membership options billed in the same unit."],
+  "whenNotToUse": [
+    "You'd lock in one option automatically before explaining the differences in benefits."
+  ],
+  "alternatives": [
+    {
+      "name": "Compromise Effect",
+      "slug": "compromise-effect",
+      "reason": "Checking how a middle option and a recommended label change how plans look."
+    }
+  ],
+  "accessibility": [
+    "Let people choose one plan in a radio group, and state the billing cycle and what's included in words too."
+  ]
+}

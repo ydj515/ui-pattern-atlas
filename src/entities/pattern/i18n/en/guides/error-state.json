@@ -1,0 +1,23 @@
+{
+  "whenToUse": ["A temporary failure keeps the main content from showing."],
+  "whenNotToUse": [
+    "The request succeeded but there's really no data.",
+    "Only a specific field needs fixing."
+  ],
+  "alternatives": [
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "The request succeeded and there's nothing to show."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A partial failure where the rest of the content can still be browsed."
+    }
+  ],
+  "accessibility": [
+    "Show the error title and guidance as text, and announce retrying in a live region.",
+    "Keep focus on the button while retrying, and block duplicate requests."
+  ]
+}

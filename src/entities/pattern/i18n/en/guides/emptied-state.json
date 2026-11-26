@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The last item was removed from a cart, folder, or playlist.",
+    "It may have been removed by mistake.",
+    "There's a natural next action after emptying (continue shopping)."
+  ],
+  "whenNotToUse": [
+    "Screens empty from the start (use an empty state).",
+    "It's empty because every task is done (use all caught up).",
+    "Irreversible deletion (ask first with a confirmation dialog)."
+  ],
+  "alternatives": [
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Undoing a deletion while the list still has items."
+    },
+    {
+      "name": "All Caught Up",
+      "slug": "all-caught-up",
+      "reason": "It's empty because everything was handled."
+    }
+  ],
+  "accessibility": [
+    "The removed item and its button disappear, so move focus to the empty state's heading.",
+    "Put the removed item's name in the description to say what's gone.",
+    "Undoing returns focus to the item's remove button.",
+    "The next action is a real link, so default behavior such as opening in a new tab works."
+  ]
+}

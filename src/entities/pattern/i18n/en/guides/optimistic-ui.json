@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Light actions that almost always succeed, such as likes, bookmarks, or checks.",
+    "Waiting for the response makes it feel slow.",
+    "Actions that are easy to revert if they fail."
+  ],
+  "whenNotToUse": [
+    "Actions that only mean something once confirmed, such as payments or transfers.",
+    "Actions whose values come back changed from the server (issuing an order number, for example).",
+    "Actions that fail often (constant reverting is more confusing)."
+  ],
+  "alternatives": [
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "People must wait until the result is confirmed."
+    },
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Applying first but giving people a chance to cancel themselves."
+    }
+  ],
+  "accessibility": [
+    "The button's aria-pressed changes immediately, so screen readers read the new state at once.",
+    "If it fails, a role=\"status\" message (\"Couldn't save your like\") explains why it reverted.",
+    "Don't convey failure only by the number going back.",
+    "With React 19's useOptimistic, the value settles naturally on the confirmed one when the request ends."
+  ]
+}

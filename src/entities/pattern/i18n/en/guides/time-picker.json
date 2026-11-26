@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Times at fixed intervals, such as pickup or visits.",
+    "The range is fixed, as with opening hours.",
+    "It must look like the other inputs in a form."
+  ],
+  "whenNotToUse": [
+    "Availability differs by time (use time slots).",
+    "A screen for rolling to a value on a phone, like an alarm (use a wheel picker).",
+    "Any minute can be entered freely (use input type=time)."
+  ],
+  "alternatives": [
+    {
+      "name": "Time Slots",
+      "slug": "time-slots",
+      "reason": "Choosing only bookable times."
+    },
+    {
+      "name": "Wheel Picker",
+      "slug": "wheel-picker",
+      "reason": "Rolling to a value on mobile."
+    }
+  ],
+  "accessibility": [
+    "Group it with fieldset and legend, with a hidden label on each of the hour and minute selects.",
+    "They're native selects, so phones open the operating system's picker.",
+    "Only valid values are offered, so no error message is needed.",
+    "Show the chosen time again as a sentence."
+  ]
+}

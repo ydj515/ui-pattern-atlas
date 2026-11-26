@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Short staging in videos, ads, or a first screen.",
+    "Phrases where rhythm matters.",
+    "Drawing attention once."
+  ],
+  "whenNotToUse": [
+    "It keeps repeating and disrupts other content.",
+    "Long sentences.",
+    "There's no way to stop it."
+  ],
+  "alternatives": [
+    {
+      "name": "Rotating Words",
+      "slug": "rotating-words",
+      "reason": "Swapping one word at a time."
+    },
+    {
+      "name": "Staggered Text Reveal",
+      "slug": "staggered-text-reveal",
+      "reason": "Appearing only once."
+    }
+  ],
+  "accessibility": [
+    "Motion plays only under motion-safe, so it stops with reduced motion.",
+    "Even when letters are split one by one, screen readers get the whole phrase through aria-label.",
+    "Use continuously repeating motion only for short staging.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

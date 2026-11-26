@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The single most important condition in pricing or benefit details.",
+    "A phrase that must be remembered within a long sentence.",
+    "A section seen for the first time after scrolling down."
+  ],
+  "whenNotToUse": [
+    "Several places in one paragraph (the emphasis fades).",
+    "Colors that could look like links.",
+    "Emphasizing only favorable terms while hiding unfavorable ones."
+  ],
+  "alternatives": [
+    {
+      "name": "Fade Up",
+      "slug": "fade-up",
+      "reason": "Calmly showing the whole sentence."
+    },
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "Emphasizing with a short tag."
+    }
+  ],
+  "accessibility": [
+    "It's a mark element, so the emphasis carries meaning too.",
+    "Without the observer, or with reduced motion, it appears already painted.",
+    "The text color stays the same and only the background is painted, so contrast holds.",
+    "Once painted, it isn't erased again."
+  ]
+}

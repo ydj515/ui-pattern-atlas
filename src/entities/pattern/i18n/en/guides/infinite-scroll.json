@@ -1,0 +1,31 @@
+{
+  "origin": "Exactly what it says: loading on and on, without end. It's credited to Aza Raskin, who devised it in 2006.",
+  "whenToUse": [
+    "Content that's browsed continuously, such as social feeds or photos.",
+    "Lists where discovery matters more than order.",
+    "Page buttons are a hassle on mobile."
+  ],
+  "whenNotToUse": [
+    "People need to find specific items again (use pagination).",
+    "There's a footer below the list people must see (use a load more button).",
+    "Search results where sorting and comparing matter."
+  ],
+  "alternatives": [
+    {
+      "name": "Load More",
+      "slug": "load-more",
+      "reason": "Loading only when people ask for it."
+    },
+    {
+      "name": "Pagination",
+      "slug": "pagination",
+      "reason": "When people need to remember a position."
+    }
+  ],
+  "accessibility": [
+    "Announce loading and the last item with role=\"status\".",
+    "Keep a Load more button that does the same, for keyboard users and for when automatic detection fails.",
+    "The scroll area is a named region, so it can be scrolled with the keyboard.",
+    "If the first batch doesn't fill the area, load the next one right away."
+  ]
+}

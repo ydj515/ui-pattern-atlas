@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Added features that change how things are used.",
+    "Improvements people will welcome.",
+    "Once per version."
+  ],
+  "whenNotToUse": [
+    "Changes that mean nothing to people, such as a list of bug fixes.",
+    "Only one feature needs announcing (use a coach mark).",
+    "Every time the app opens."
+  ],
+  "alternatives": [
+    {
+      "name": "Coach Mark",
+      "slug": "coach-mark",
+      "reason": "Pointing at one changed button."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A short notice at the top of the screen."
+    }
+  ],
+  "accessibility": [
+    "Name it with role=dialog and its title.",
+    "On open, focus goes to the OK button.",
+    "Group the items as a list so their number comes across.",
+    "The version is shown in text too."
+  ]
+}

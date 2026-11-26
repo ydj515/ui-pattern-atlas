@@ -1,0 +1,33 @@
+{
+  "origin": "It means drawing only the skeleton of the content first, like a building's frame. The name spread when Luke Wroblewski introduced \"skeleton screens\" in 2013 as an alternative to spinners while building the mobile app Polar.",
+  "whenToUse": [
+    "You load content with a predictable shape, such as cards, lists, or profiles.",
+    "Loading takes roughly 0.3 to 3 seconds.",
+    "You want less layout shift on first page entry."
+  ],
+  "whenNotToUse": [
+    "The progress can be known, as with file uploads (use a progress bar).",
+    "A wait in a small area, such as a short process after a button press (use a spinner).",
+    "The placeholder looks nothing like the real layout."
+  ],
+  "alternatives": [
+    {
+      "name": "Spinner",
+      "reason": "Small areas or short processes."
+    },
+    {
+      "name": "Progress Bar",
+      "reason": "Long tasks whose progress is known."
+    },
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "When the loaded result is empty."
+    }
+  ],
+  "accessibility": [
+    "Hide the gray blocks with aria-hidden, and read a loading message once with role=\"status\" instead.",
+    "Set aria-busy on the loading area.",
+    "The pulse animation stops with prefers-reduced-motion."
+  ]
+}

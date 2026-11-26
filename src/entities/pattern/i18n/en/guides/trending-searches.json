@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Giving a starting point to people who haven't decided what to look for.",
+    "Interests change quickly, as with seasons or events.",
+    "The search box is empty."
+  ],
+  "whenNotToUse": [
+    "You can't state the counting period or criteria.",
+    "Search volume is too low for the ranking to mean anything.",
+    "You'd mix ads in as popular queries (disguised ads)."
+  ],
+  "alternatives": [
+    {
+      "name": "Recent Searches",
+      "slug": "recent-searches",
+      "reason": "Reusing queries you searched before."
+    },
+    {
+      "name": "Disguised Ads",
+      "slug": "disguised-ads",
+      "reason": "Seeing the problem with dressing ads up as popular items."
+    }
+  ],
+  "accessibility": [
+    "The ranking is an ol list, so the position is read along with it.",
+    "The ▲▼ marks are aria-hidden, and words such as up and down are read separately.",
+    "The counting basis is always visible as text beside the heading."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Ending a recurring payment.",
+    "There's time left in the period.",
+    "A pause is offered alongside cancellation."
+  ],
+  "whenNotToUse": [
+    "You'd hide cancellation behind several screens (see the roach motel).",
+    "You'd block it by making a reason mandatory.",
+    "You'd fade the cancel button and stress only the pause."
+  ],
+  "alternatives": [
+    {
+      "name": "Roach Motel",
+      "slug": "roach-motel",
+      "reason": "The dark pattern of making cancellation hard."
+    },
+    {
+      "name": "Forced Continuity",
+      "slug": "forced-continuity",
+      "reason": "The dark pattern of charging quietly after a free trial."
+    },
+    {
+      "name": "Account Deletion",
+      "slug": "account-deletion",
+      "reason": "Deleting the account too."
+    }
+  ],
+  "accessibility": [
+    "The reasons are radio buttons, with the legend saying they're optional.",
+    "The cancel and pause buttons sit side by side at the same size.",
+    "The result is read with role=\"status\"."
+  ]
+}

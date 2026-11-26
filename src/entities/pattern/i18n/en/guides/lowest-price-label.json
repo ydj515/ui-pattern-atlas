@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "It's the lowest selling price within a recent period.",
+    "The comparison scope differs between sellers.",
+    "Shoppers want to check the basis."
+  ],
+  "whenNotToUse": [
+    "You can't state the comparison period or scope.",
+    "It only means on sale (use a discount badge).",
+    "It would be on every product and mean nothing."
+  ],
+  "alternatives": [
+    {
+      "name": "Discount Badge",
+      "slug": "discount-badge",
+      "reason": "Showing the discount against a reference price."
+    },
+    {
+      "name": "Strikethrough Price",
+      "slug": "strikethrough-price",
+      "reason": "Showing it with the previous price."
+    }
+  ],
+  "accessibility": [
+    "See basis is a button with aria-expanded and aria-controls.",
+    "The closed basis list is hidden, so it isn't read.",
+    "The badge text keeps enough contrast with its background."
+  ]
+}

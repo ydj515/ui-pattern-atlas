@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You stress the flow of an amount, such as visitors or revenue.",
+    "There's one series.",
+    "The size from zero is meaningful."
+  ],
+  "whenNotToUse": [
+    "Several series are compared (use a line chart).",
+    "Small changes in a range far from zero (use a line chart).",
+    "A small trend inside a card (use a sparkline)."
+  ],
+  "alternatives": [
+    {
+      "name": "Line Chart",
+      "slug": "line-chart",
+      "reason": "Comparing several series."
+    },
+    {
+      "name": "Sparkline",
+      "slug": "sparkline",
+      "reason": "Showing just a trend in a small spot."
+    }
+  ],
+  "accessibility": [
+    "With focus on the chart area, moving the date with ←/→ reads the value via aria-live.",
+    "The area is lightly filled and drawn with a line for a clear edge.",
+    "Opening the table view shows every value as a table."
+  ]
+}

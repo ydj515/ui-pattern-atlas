@@ -1,0 +1,31 @@
+{
+  "origin": "Made famous by Sheena Iyengar and Mark Lepper's 2000 jam tasting experiment: more people bought when 6 jams were offered than when 24 were.",
+  "whenToUse": [
+    "Product displays, plans, or template choosers.",
+    "Giving newcomers a starting point.",
+    "Lists with many criteria to compare."
+  ],
+  "whenNotToUse": [
+    "You'd hide options from people who know exactly what they want.",
+    "You'd fill recommendations only with what benefits the company.",
+    "You'd block the way to the full list."
+  ],
+  "alternatives": [
+    {
+      "name": "Hick's Law",
+      "slug": "hicks-law",
+      "reason": "The number of options and decision time."
+    },
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Narrowing a list."
+    }
+  ],
+  "accessibility": [
+    "Each color swatch has the flavor name in text.",
+    "Write the reason for a recommendation.",
+    "Keep a link to the full list.",
+    "Options can be chosen with the keyboard."
+  ]
+}

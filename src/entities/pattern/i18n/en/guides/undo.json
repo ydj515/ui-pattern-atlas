@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You delete items that are often removed and restored, such as emails, tasks, or files.",
+    "Asking for confirmation every time would slow down repeated work.",
+    "It's fine to delay applying the change on the server by a few seconds."
+  ],
+  "whenNotToUse": [
+    "The action can't be undone, such as a payment or deleting an account (use a confirmation dialog).",
+    "The action notifies someone else right away (it can't be taken back once sent).",
+    "Several steps are tangled together, making it hard to restore the exact state."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Asking once more before something irreversible."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Briefly reporting a result that doesn't need undoing."
+    }
+  ],
+  "accessibility": [
+    "The snackbar has role=\"status\", so it reads the result without moving focus.",
+    "Hovering or focusing it stops the timer, so it doesn't disappear before people reach the undo button (WCAG 2.2.1).",
+    "The time-left line is decorative, so it's aria-hidden and hidden with reduced motion.",
+    "Allow undoing only one action at a time; a new action commits the previous one at once."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Key buttons that are easy to miss at first, such as new note or share.",
+    "Buttons that moved in an update.",
+    "Once per screen, for one thing only."
+  ],
+  "whenNotToUse": [
+    "Explaining several buttons in turn (use a product tour).",
+    "The button name alone is clear enough.",
+    "You'd show it again on every visit."
+  ],
+  "alternatives": [
+    {
+      "name": "Product Tour",
+      "slug": "product-tour",
+      "reason": "Pointing at several places in order."
+    },
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "A short explanation only on hover."
+    }
+  ],
+  "accessibility": [
+    "The bubble is role=dialog, named by its text.",
+    "On open, focus goes to the OK button, and Esc closes it.",
+    "The dimmed area is decorative, so it's aria-hidden, and the highlighted button can still be pressed.",
+    "Keep the bubble's text to one short sentence."
+  ]
+}

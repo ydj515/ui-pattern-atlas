@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Content worth sending to others, such as posts, products, or places.",
+    "Many users are on mobile.",
+    "You want to leave the choice of apps to the device."
+  ],
+  "whenNotToUse": [
+    "Sending to specific people (use send/forward).",
+    "Copying the address is enough (use copy link).",
+    "Screens with no address to share."
+  ],
+  "alternatives": [
+    {
+      "name": "Copy Link",
+      "slug": "copy-link",
+      "reason": "Copying just the address."
+    },
+    {
+      "name": "QR Sharing",
+      "slug": "qr-sharing",
+      "reason": "Passing it by camera to someone nearby."
+    }
+  ],
+  "accessibility": [
+    "The share button uses text together with its icon.",
+    "The fallback sheet is role=dialog and closes with Esc.",
+    "On open, focus goes to the first target.",
+    "If people cancel the device share, don't open the fallback sheet."
+  ]
+}

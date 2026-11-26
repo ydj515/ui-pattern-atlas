@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Content that needs the network, such as live lists or feeds.",
+    "Mobile settings where connections drop often, such as subways or elevators.",
+    "Some saved content stays viewable, and you say so."
+  ],
+  "whenNotToUse": [
+    "Server errors (the connection is fine, so use an error state).",
+    "Brief drops that reconnect at once (retry quietly).",
+    "It would clear a form in progress (keep the input and report it in a banner above)."
+  ],
+  "alternatives": [
+    {
+      "name": "Error State",
+      "slug": "error-state",
+      "reason": "The server or the request itself failed."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Reporting only the connection while leaving the screen as is."
+    }
+  ],
+  "accessibility": [
+    "Announce the lost connection with role=\"status\" without moving focus.",
+    "Subscribe to the online and offline events with useSyncExternalStore so content returns as soon as the connection does.",
+    "The icon is decorative, so it's aria-hidden, and the message describes the situation.",
+    "The result of retrying (\"Still not connected\") is stated in words too."
+  ]
+}

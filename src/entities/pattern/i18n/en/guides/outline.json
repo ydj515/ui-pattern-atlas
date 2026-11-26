@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Adding contrast within a large heading.",
+    "Laying text lightly over a photo.",
+    "Pairing with filled letters."
+  ],
+  "whenNotToUse": [
+    "Small sizes (the lines are too thin to read).",
+    "Body text.",
+    "Over busy backgrounds."
+  ],
+  "alternatives": [
+    {
+      "name": "Gradient Typography",
+      "slug": "gradient-typography",
+      "reason": "Filling the inside with color."
+    },
+    {
+      "name": "Neon Sign",
+      "slug": "neon-sign",
+      "reason": "A glowing outline."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

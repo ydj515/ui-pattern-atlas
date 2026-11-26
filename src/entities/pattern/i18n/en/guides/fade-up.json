@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Short groups of text, such as new feature introductions or empty state notices.",
+    "Key phrases when a screen first opens.",
+    "As the default when other effects look excessive."
+  ],
+  "whenNotToUse": [
+    "Text people are already reading changes (change it in place).",
+    "Large movements that rise a long way.",
+    "Applying it to every element across the board."
+  ],
+  "alternatives": [
+    {
+      "name": "Blur In",
+      "slug": "blur-in",
+      "reason": "Giving a feeling of coming into focus."
+    },
+    {
+      "name": "Scroll Reveal",
+      "slug": "scroll-reveal",
+      "reason": "Appearing as people scroll."
+    }
+  ],
+  "accessibility": [
+    "Text is in the document from the start, so screen readers don't wait.",
+    "With reduced motion, only opacity changes, without movement.",
+    "The distance is set with a CSS variable, 12px by default.",
+    "Each element starts 120ms after the last, keeping it short."
+  ]
+}

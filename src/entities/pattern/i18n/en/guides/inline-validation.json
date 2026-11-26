@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The value has a fixed format, such as an email or phone number.",
+    "You flag missing required fields before submitting.",
+    "You explain input rules up front, such as password rules."
+  ],
+  "whenNotToUse": [
+    "You'd show an error on every keystroke before people finish typing.",
+    "The error has nothing to do with a specific field, such as a server outage.",
+    "The message gives no fix, such as \"Invalid input\"."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "An error for the whole form or the system."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "A result such as a successful submission."
+    }
+  ],
+  "accessibility": [
+    "Connect a <label> to the field and don't use the placeholder in place of a label.",
+    "On error, set aria-invalid and connect the hint and the error message with aria-describedby.",
+    "Make the error area aria-live so new errors are read out.",
+    "Show errors with an icon and words, not color alone, and say how to fix them."
+  ]
+}

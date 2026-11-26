@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Text to be used as is, such as an invite link, coupon code, or install command.",
+    "Long text that's hard to select.",
+    "Long-press copying is a hassle on phones."
+  ],
+  "whenNotToUse": [
+    "Text people will edit (show it in an input field).",
+    "The goal is sharing (use a share sheet).",
+    "Sensitive values (consider the risk of what's left on the clipboard)."
+  ],
+  "alternatives": [
+    {
+      "name": "Icon Button",
+      "slug": "icon-button",
+      "reason": "Just a copy icon when space is tight."
+    }
+  ],
+  "accessibility": [
+    "Announce the result with role=\"status\" and change the button text to \"Copied\".",
+    "If copying is blocked, say \"Couldn't copy\" so people can select it themselves.",
+    "The read-only input selects everything on focus, so it can be copied by hand.",
+    "After a moment it returns to its original state and can be pressed again."
+  ]
+}

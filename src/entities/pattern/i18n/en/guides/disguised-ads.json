@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Ad slots and feature buttons share a screen.",
+    "You set the rules for labeling ads.",
+    "You check whether main buttons get lost among ads."
+  ],
+  "whenNotToUse": [
+    "You'd make ads look the same as real buttons.",
+    "You'd hide the ad label in tiny print.",
+    "You'd mix ads into content lists without telling them apart."
+  ],
+  "alternatives": [
+    {
+      "name": "Button",
+      "slug": "button",
+      "reason": "A button hierarchy that makes the main action clear."
+    },
+    {
+      "name": "Card Grid",
+      "slug": "card-grid",
+      "reason": "Laying out content and ads separately."
+    }
+  ],
+  "accessibility": [
+    "Put the word Ad on the ad area.",
+    "Put specific information, such as the file size, in the real feature button's name.",
+    "Keep ad links and feature buttons distinguishable for screen readers too.",
+    "Keep ads away from feature buttons."
+  ]
+}

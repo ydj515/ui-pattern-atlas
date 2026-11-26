@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Places with little horizontal room, such as cards, icons, or thumbnails.",
+    "Tasks whose progress is known exactly, such as backups or syncing.",
+    "You show the progress of several items side by side."
+  ],
+  "whenNotToUse": [
+    "The progress can't be known (use a spinner).",
+    "Precise comparison is needed in a wide area (a progress bar is easier to read).",
+    "Figures that aren't progress, such as achievement against a goal (use a donut chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "There's enough horizontal room."
+    },
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "How much is left can't be known."
+    }
+  ],
+  "accessibility": [
+    "Announce the current value with role=\"progressbar\" and aria-valuenow, and say what's in progress with aria-label.",
+    "The percentage in the middle repeats the value, so it's aria-hidden.",
+    "Show \"Backup complete\" in words so completion isn't conveyed only by the green color.",
+    "Changes in arc length happen without a transition under reduced motion."
+  ]
+}

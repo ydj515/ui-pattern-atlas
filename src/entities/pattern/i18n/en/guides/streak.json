@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Daily habits such as exercise, study, or drinking water.",
+    "The once-a-day task is clear.",
+    "You want to help people keep it going."
+  ],
+  "whenNotToUse": [
+    "Things that don't need doing every day.",
+    "You'd use it as pressure that punishes a break.",
+    "Designs that wipe the whole record after one missed day."
+  ],
+  "alternatives": [
+    {
+      "name": "Achievement Badge",
+      "slug": "achievement-badge",
+      "reason": "Recording cumulative goals."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Progress toward a set goal."
+    }
+  ],
+  "accessibility": [
+    "Each day is labeled recorded or not recorded in text, not left to color.",
+    "The streak count is read via aria-live when it changes.",
+    "The number's pop is skipped with reduced motion.",
+    "After recording, the record today button announces its state by turning disabled and changing its text."
+  ]
+}

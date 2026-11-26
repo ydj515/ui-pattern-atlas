@@ -1,0 +1,26 @@
+{
+  "whenToUse": ["Vintage or music festivals.", "Warm, upbeat brands.", "Short headings."],
+  "whenNotToUse": [
+    "Reading-focused screens.",
+    "Splitting letters one by one would break up screen reading (provide the whole phrase too).",
+    "Serious information."
+  ],
+  "alternatives": [
+    {
+      "name": "Hand Lettering",
+      "slug": "hand-lettering",
+      "reason": "A handwritten feel."
+    },
+    {
+      "name": "Kinetic Typography",
+      "slug": "kinetic-typography",
+      "reason": "Moving letters."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

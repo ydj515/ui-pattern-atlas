@@ -4,7 +4,7 @@ import { PATTERNS } from "@/entities/pattern/catalog";
 import type { RoadmapEntry, RoadmapTopic } from "@/entities/pattern/catalog/roadmap";
 import { patternForRoadmapEntry } from "@/entities/pattern/catalog/roadmapLinks";
 import { getCategory, type PatternCategoryId } from "@/entities/pattern/model/category";
-import type { Pattern } from "@/entities/pattern/model/pattern";
+import type { GuideLoader, Pattern } from "@/entities/pattern/model/pattern";
 
 /** What cards and search show for a pattern, in one language. */
 export interface PatternText {
@@ -30,10 +30,23 @@ export interface CatalogText {
     readonly groups: Readonly<Record<string, string>>;
     /** Comparison pair descriptions, keyed by the pair's English name. */
     readonly descriptions: Readonly<Record<string, string>>;
+    /** What each comparison demo asks the reader to try, keyed by comparison slug. */
+    readonly scenarios: Readonly<Record<string, string>>;
   };
+  /** Detail guidance loaders, keyed by pattern slug; each guide is its own chunk. */
+  readonly guides: Readonly<Record<string, GuideLoader>>;
 }
 
 let english: CatalogText | undefined;
+
+/**
+ * Loads a pattern's English guidance, or undefined when it has none or the English catalog
+ * text has not loaded. The list of guide files ships with the English text, not the main
+ * bundle.
+ */
+export function englishGuideLoader(slug: string): GuideLoader | undefined {
+  return english?.guides[slug];
+}
 
 /** Loads a language's catalog text. English pages await this before their first render. */
 export async function loadCatalogText(locale: Locale): Promise<void> {
@@ -48,9 +61,9 @@ function catalogText(locale: Locale): CatalogText | undefined {
 const localizedCopies = new Map<Pattern, Pattern>();
 
 /**
- * The pattern with its summary, description and aliases in the page language. Loaders and
- * every other field are shared with the Korean entry. Falls back to Korean when the text has
- * not loaded.
+ * The pattern with its summary, description, aliases and detail guidance in the page
+ * language. Every other field and loader is shared with the Korean entry. Falls back to
+ * Korean when the text has not loaded.
  */
 export function localizePattern(pattern: Pattern, locale: Locale): Pattern {
   const text = catalogText(locale)?.patterns[pattern.slug];
@@ -62,6 +75,7 @@ export function localizePattern(pattern: Pattern, locale: Locale): Pattern {
       summary: text.summary,
       description: text.description,
       aliases: text.aliases,
+      loadGuide: englishGuideLoader(pattern.slug) ?? pattern.loadGuide,
     };
     localizedCopies.set(pattern, copy);
   }
@@ -98,6 +112,11 @@ export function categoryName(category: PatternCategoryId, locale: Locale): strin
 
 export function comparisonGroupName(group: string, locale: Locale): string {
   return catalogText(locale)?.comparisons.groups[group] ?? group;
+}
+
+/** What a comparison demo asks the reader to try, in the page language. */
+export function comparisonScenario(slug: string, scenario: string, locale: Locale): string {
+  return catalogText(locale)?.comparisons.scenarios[slug] ?? scenario;
 }
 
 /** A comparison pair's title, "A · B", in the page language. */

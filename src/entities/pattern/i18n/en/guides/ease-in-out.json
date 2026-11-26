@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Elements appearing on screen (ease-out).",
+    "Elements leaving the screen (ease-in).",
+    "Elements moving from one point to another (ease-in-out)."
+  ],
+  "whenNotToUse": [
+    "A constant speed carries meaning, as with progress or spinning loaders (linear).",
+    "Very short changes of 100ms or less (the difference is hard to feel).",
+    "Each screen would pick its own curve (unify them with tokens)."
+  ],
+  "alternatives": [
+    {
+      "name": "Spring",
+      "slug": "spring",
+      "reason": "Movement that overshoots the target and comes back."
+    },
+    {
+      "name": "Bounce",
+      "slug": "bounce",
+      "reason": "Movement that hits the ground and bounces."
+    }
+  ],
+  "accessibility": [
+    "The dot is decorative, and the curve's name and values are shown in text.",
+    "With reduced motion, playing moves straight to the end position.",
+    "It moves only with the play button and never repeats on its own."
+  ]
+}

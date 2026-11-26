@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "The earning rate differs by payment method or tier.",
+    "You tell people their benefit before ordering.",
+    "There are payout timing and usage conditions."
+  ],
+  "whenNotToUse": [
+    "You'd present points not yet confirmed as if they were.",
+    "The earning conditions are too complex for one line.",
+    "Screens unrelated to payment."
+  ],
+  "alternatives": [
+    {
+      "name": "Discount Badge",
+      "slug": "discount-badge",
+      "reason": "A benefit taken off right now."
+    },
+    {
+      "name": "Free Shipping Progress",
+      "slug": "free-shipping-progress",
+      "reason": "A benefit for reaching an amount threshold."
+    }
+  ],
+  "accessibility": [
+    "The expected points are read via aria-live whenever they change.",
+    "The payout conditions sit in text right below the amount.",
+    "Show both the percentage and the amount so the calculation is clear."
+  ]
+}

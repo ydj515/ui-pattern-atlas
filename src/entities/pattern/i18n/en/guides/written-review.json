@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Reviews after a purchase or visit.",
+    "Collecting experiences that help others.",
+    "A star rating alone doesn't say why."
+  ],
+  "whenNotToUse": [
+    "Quick satisfaction surveys (use an emoji rating).",
+    "Designs that block the button until people write.",
+    "Making a review mandatory to move on."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Tags",
+      "slug": "rating-tags",
+      "reason": "Collecting reasons as chips instead of text."
+    },
+    {
+      "name": "Star Rating",
+      "slug": "star-rating",
+      "reason": "Collecting only a score."
+    }
+  ],
+  "accessibility": [
+    "The rating is a group of radio buttons, and a missing rating's error is connected to the fieldset.",
+    "The text field ties its rules and character count with aria-describedby.",
+    "On submit, focus moves to the first problem.",
+    "The button can always be pressed, so it tells people what's missing."
+  ]
+}

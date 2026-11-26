@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You show consistency in habit or activity records.",
+    "You look for weekly rhythms.",
+    "There are daily values for a month or more."
+  ],
+  "whenNotToUse": [
+    "Exact values are compared (use a bar chart).",
+    "The distribution across two non-date dimensions (use a heatmap).",
+    "There are values for only a few days."
+  ],
+  "alternatives": [
+    {
+      "name": "Heatmap",
+      "slug": "heatmap",
+      "reason": "The distribution across two dimensions, such as weekday and hour."
+    },
+    {
+      "name": "Column Chart",
+      "slug": "column-chart",
+      "reason": "Comparing daily values precisely."
+    }
+  ],
+  "accessibility": [
+    "With focus on the calendar, moving between dates with the arrows reads the value via aria-live.",
+    "Days without a value are also stated in words, as rest days.",
+    "Size is shown only by the lightness of one color, so the order is visible even with color vision deficiency."
+  ]
+}

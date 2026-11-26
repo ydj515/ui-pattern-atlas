@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You want to delete immediately without asking.",
+    "People should be able to find things they deleted by mistake later.",
+    "Data with a fixed retention period."
+  ],
+  "whenNotToUse": [
+    "Data that must be erased right away, such as personal information.",
+    "Items never restored, such as temporary files.",
+    "You'd empty it quietly without saying how long is left."
+  ],
+  "alternatives": [
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Undoing only right after deleting."
+    },
+    {
+      "name": "Type to Confirm",
+      "slug": "type-to-confirm",
+      "reason": "Confirming irreversible deletion."
+    }
+  ],
+  "accessibility": [
+    "Restore button names include the item name, so it's clear which row they belong to.",
+    "The days left are written out along with the color.",
+    "The restore result is read with role=\"status\"."
+  ]
+}

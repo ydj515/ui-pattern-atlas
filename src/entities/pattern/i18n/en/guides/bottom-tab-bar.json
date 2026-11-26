@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A mobile app has three to five top-level screens.",
+    "People move between those screens often.",
+    "You need to show counts of new items too."
+  ],
+  "whenNotToUse": [
+    "There are six or more screens (put the rest under More).",
+    "On desktop screens (use top navigation or a sidebar).",
+    "You're switching views within one screen (use tabs or a segmented control)."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Switching views within one screen."
+    },
+    {
+      "name": "Mobile Menu",
+      "slug": "mobile-menu",
+      "reason": "When there are many menu items."
+    }
+  ],
+  "accessibility": [
+    "Always show a name under each icon.",
+    "The current screen has aria-current=\"page\" and is marked with both color and weight.",
+    "Put the badge number in the aria-label, such as \"3 new notifications\", so it's read out.",
+    "Add safe-area padding to clear the home indicator."
+  ]
+}

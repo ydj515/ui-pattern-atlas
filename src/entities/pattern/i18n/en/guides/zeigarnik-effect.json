@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the 1927 research of the psychologist Bluma Zeigarnik. It's said to have started from the observation that waiters remembered unpaid orders well but forgot them once paid.",
+  "whenToUse": [
+    "Work with steps, such as profile or settings checklists.",
+    "You show what's left to do.",
+    "You help people resume work they stopped midway."
+  ],
+  "whenNotToUse": [
+    "You'd show progress to get people to fill in unnecessary information.",
+    "You'd deliberately delay reaching 100%.",
+    "You'd keep adding new tasks without end."
+  ],
+  "alternatives": [
+    {
+      "name": "Setup Checklist",
+      "slug": "setup-checklist",
+      "reason": "A first to-do list."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing progress."
+    }
+  ],
+  "accessibility": [
+    "Show progress with both numbers and words.",
+    "Build the bar with a progress element or role=progressbar.",
+    "Remaining tasks are links people can act on right away.",
+    "Don't convey progress by color alone."
+  ]
+}

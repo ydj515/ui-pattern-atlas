@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Permissions that can be granted in part, such as photos or contacts.",
+    "The feature works with only part.",
+    "The system screen for changing the scope can be opened."
+  ],
+  "whenNotToUse": [
+    "You'd keep pestering for full access.",
+    "You'd block the feature because only part was allowed.",
+    "You'd hide the way to change the scope."
+  ],
+  "alternatives": [
+    {
+      "name": "System Permission Dialog",
+      "slug": "system-permission-dialog",
+      "reason": "Getting the permission for the first time."
+    },
+    {
+      "name": "File Upload",
+      "slug": "file-upload",
+      "reason": "Letting people choose files without the permission."
+    }
+  ],
+  "accessibility": [
+    "Say how many photos are viewable in one role=status line.",
+    "Each photo button is named for its position.",
+    "The checkboxes in the selection screen are grouped with fieldset and legend.",
+    "Selected photos show two cues: a border and a check mark."
+  ]
+}

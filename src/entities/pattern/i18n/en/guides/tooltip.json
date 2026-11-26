@@ -1,0 +1,31 @@
+{
+  "origin": "A short tip attached to a tool, the icons of a toolbar. It began as the name that appeared when hovering toolbar buttons whose pictures alone didn't explain them.",
+  "whenToUse": [
+    "You briefly explain what an icon button means.",
+    "You explain a technical term or how something is calculated in one sentence.",
+    "The information is nice to know but not needed to finish the task."
+  ],
+  "whenNotToUse": [
+    "The information is essential to the task (show it all the time).",
+    "You need interactive elements such as links or buttons.",
+    "Touch is the main way people use it."
+  ],
+  "alternatives": [
+    {
+      "name": "Popover",
+      "slug": "popover",
+      "reason": "An explanation with links or buttons."
+    },
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "A hint that's always visible under a field."
+    }
+  ],
+  "accessibility": [
+    "Give the tooltip role=\"tooltip\" and connect it to the trigger with aria-describedby.",
+    "It appears at once on keyboard focus and after a short delay on hover.",
+    "Esc closes it, and it doesn't disappear when the pointer moves onto it (WCAG 1.4.13).",
+    "Give icon-only triggers their own aria-label. A tooltip is a description, not a name."
+  ]
+}

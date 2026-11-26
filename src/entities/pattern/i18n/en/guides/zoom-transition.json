@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A full screen opens from an icon or card.",
+    "You show it returning to its original place after closing.",
+    "The same kind of screen opens from several entry points."
+  ],
+  "whenNotToUse": [
+    "The opened screen has no relation to the pressed element.",
+    "Wide desktop screens where a big zoom can cause motion sickness.",
+    "The pressed element itself should grow (use a shared element transition)."
+  ],
+  "alternatives": [
+    {
+      "name": "Shared Element Transition",
+      "slug": "shared-element-transition",
+      "reason": "The same object is on both screens."
+    },
+    {
+      "name": "Page Transition",
+      "slug": "page-transition",
+      "reason": "Going deeper from a list into details."
+    }
+  ],
+  "accessibility": [
+    "On open, focus goes to the Home button; on close, it returns to the icon that was pressed.",
+    "While open, the icons behind are inert, so Tab doesn't enter them.",
+    "With reduced motion, it opens and closes without zooming.",
+    "The opened screen gets a name with aria-label."
+  ]
+}

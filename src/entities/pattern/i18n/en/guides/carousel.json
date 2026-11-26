@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the merry-go-round (carousel): items rotate and come to the front in turn.",
+  "whenToUse": [
+    "Content that takes turns in one spot, such as event banners.",
+    "You show a few photos one after another.",
+    "Space is tight and only one item can show at a time."
+  ],
+  "whenNotToUse": [
+    "Information people must see (later slides are rarely seen).",
+    "Several items are compared (use horizontal scroll or a grid).",
+    "There are very many slides."
+  ],
+  "alternatives": [
+    {
+      "name": "Horizontal Scroll",
+      "slug": "horizontal-scroll",
+      "reason": "Showing several at once."
+    },
+    {
+      "name": "Image Gallery",
+      "slug": "image-gallery",
+      "reason": "Choosing a photo to view large."
+    }
+  ],
+  "accessibility": [
+    "Follow the WAI-ARIA carousel with aria-roledescription and slide names such as \"1 of 3, Winter sale\".",
+    "Auto-advance has a pause button and stops during hover and focus (WCAG 2.2.2).",
+    "With reduced motion, it doesn't advance on its own.",
+    "Only the current slide stays in the accessibility tree, and the dot buttons announce the position with aria-current."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The same structure repeats, as with products, plans, or articles.",
+    "Buttons at the bottom of cards should line up.",
+    "The column count changes with the width."
+  ],
+  "whenNotToUse": [
+    "Card heights differ a lot (use masonry).",
+    "There are many values to compare (use a table).",
+    "There are only one or two cards."
+  ],
+  "alternatives": [
+    {
+      "name": "Responsive Grid",
+      "slug": "responsive-grid",
+      "reason": "Simple cell layout."
+    },
+    {
+      "name": "Card",
+      "slug": "card",
+      "reason": "How a single card is built."
+    }
+  ],
+  "accessibility": [
+    "The card list is a named ul, so the number of items is read along with it.",
+    "Lay cards out as vertical flex and give the button mt-auto so the rows line up.",
+    "The column count follows the container width, and the DOM order is kept.",
+    "When buttons share a name, add the product with aria-label."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Images whose details matter, such as maps, photos, or plans.",
+    "People move between the whole and parts on small screens.",
+    "Trackpad and Ctrl+wheel zoom are supported too."
+  ],
+  "whenNotToUse": [
+    "Zooming the whole page (don't block browser zoom).",
+    "Body text (use the text size setting).",
+    "Small images with nothing more to see when zoomed."
+  ],
+  "alternatives": [
+    {
+      "name": "Lightbox",
+      "slug": "lightbox",
+      "reason": "Viewing a photo large."
+    },
+    {
+      "name": "Image Gallery",
+      "slug": "image-gallery",
+      "reason": "Paging through several photos."
+    }
+  ],
+  "accessibility": [
+    "Zoom in, zoom out, and reset buttons make it usable without two fingers (WCAG 2.5.1).",
+    "Announce the zoom level with aria-live and include it in the image's name.",
+    "Don't block page zoom with things like user-scalable=no.",
+    "Put touch-action: none only on the image area."
+  ]
+}

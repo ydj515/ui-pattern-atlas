@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You recommend an update while announcing new features.",
+    "Older versions must be blocked for security reasons.",
+    "The server changed and older versions no longer work."
+  ],
+  "whenNotToUse": [
+    "You'd show it for every minor fix.",
+    "You'd remove the close option when it isn't required.",
+    "You'd block the app for no reason."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Announcing without blocking the screen."
+    },
+    {
+      "name": "Alert Dialog",
+      "slug": "alert-dialog",
+      "reason": "An ordinary warning window."
+    }
+  ],
+  "accessibility": [
+    "Required updates use role=\"alertdialog\" and optional ones role=\"dialog\".",
+    "The title is connected as the window's name.",
+    "When required, the reason is written out instead of a close option."
+  ]
+}

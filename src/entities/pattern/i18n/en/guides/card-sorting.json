@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You build a new menu or set of categories.",
+    "There are so many items it's hard to decide where they go.",
+    "The team disagrees on how to classify things."
+  ],
+  "whenNotToUse": [
+    "You check whether people can find things in an existing structure (use tree testing).",
+    "There are fewer than ten items.",
+    "You're looking for problems in screen design."
+  ],
+  "alternatives": [
+    {
+      "name": "Tree Testing",
+      "slug": "tree-testing",
+      "reason": "Validating a structure you built."
+    },
+    {
+      "name": "User Interview",
+      "slug": "user-interview",
+      "reason": "Hearing why people sorted as they did."
+    }
+  ],
+  "accessibility": [
+    "Use a tool that also allows sorting with selection lists instead of drag and drop.",
+    "Write card text short and unambiguous.",
+    "Check in advance that the remote tool works with screen readers."
+  ]
+}

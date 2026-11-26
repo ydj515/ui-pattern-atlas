@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Order complete screens or order detail pages.",
+    "There are several items and the total comes first.",
+    "Discounts and shipping affect the amount."
+  ],
+  "whenNotToUse": [
+    "There's only one item (just show the total).",
+    "The cart before payment (use an editable list).",
+    "Documents with a fixed format, such as tax invoices."
+  ],
+  "alternatives": [
+    {
+      "name": "Success Screen",
+      "slug": "success-screen",
+      "reason": "Showing the result and next steps together."
+    },
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing many orders."
+    }
+  ],
+  "accessibility": [
+    "The expand items button has aria-expanded and aria-controls.",
+    "Total rows pair names and amounts in a dl.",
+    "Discounts have a minus sign, so they're clear without color.",
+    "tabular-nums lines up the digits of amounts."
+  ]
+}

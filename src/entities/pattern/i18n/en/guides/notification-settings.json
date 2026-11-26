@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "There are several notification topics and channels.",
+    "Consent to promotional notifications is collected per channel.",
+    "Some notifications must always be sent."
+  ],
+  "whenNotToUse": [
+    "There's only one notification (use a switch).",
+    "Only turning everything off at once is needed.",
+    "You'd lock non-essential notifications on."
+  ],
+  "alternatives": [
+    {
+      "name": "Settings List",
+      "slug": "settings-list",
+      "reason": "A few switches by topic are enough."
+    },
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "The basic form of a single checkbox."
+    }
+  ],
+  "accessibility": [
+    "A table and caption read the topic and channel headers for each cell.",
+    "Each checkbox's name combines the topic and channel.",
+    "Required notifications are disabled, with the reason tied through aria-describedby."
+  ]
+}

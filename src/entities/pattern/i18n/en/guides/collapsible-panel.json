@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A properties panel in an editor, or a filter panel beside a list.",
+    "People often need the main content wide.",
+    "People open and close the side area often."
+  ],
+  "whenNotToUse": [
+    "Small screens (open it as a drawer or bottom sheet).",
+    "Main navigation (use a sidebar).",
+    "Information people glance at and close (use a popover)."
+  ],
+  "alternatives": [
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "A panel opened over the screen."
+    },
+    {
+      "name": "Sidebar Navigation",
+      "slug": "sidebar-navigation",
+      "reason": "The main menu."
+    }
+  ],
+  "accessibility": [
+    "The toggle button has aria-expanded and aria-controls, and its name changes between \"Collapse properties panel\" and \"Expand properties panel\".",
+    "Collapsed content is hidden, so it's skipped by Tab and screen readers.",
+    "The panel is a named aside landmark.",
+    "The width transition turns off with reduced motion."
+  ]
+}

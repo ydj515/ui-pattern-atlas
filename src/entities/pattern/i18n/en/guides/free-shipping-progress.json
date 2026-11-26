@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Shipping is free above a certain amount.",
+    "Next to the cart and product recommendations.",
+    "The remaining amount is small enough to be worth filling."
+  ],
+  "whenNotToUse": [
+    "Every order ships free.",
+    "The threshold is so high the bar is nearly empty.",
+    "Shipping costs differ greatly by region."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing task progress."
+    },
+    {
+      "name": "Bundle Deal",
+      "slug": "bundle-deal",
+      "reason": "When quantity, not amount, is the threshold."
+    }
+  ],
+  "accessibility": [
+    "The bar is a progress element with a name.",
+    "The remaining amount is also shown in words and announced via aria-live.",
+    "Past the threshold, it says free shipping in words along with the color change."
+  ]
+}

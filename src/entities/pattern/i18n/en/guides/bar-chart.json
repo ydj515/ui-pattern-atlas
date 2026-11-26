@@ -1,0 +1,30 @@
+{
+  "origin": "Credited to William Playfair of Scotland, who first used it in his 1786 book The Commercial and Political Atlas. The line chart debuted in the same book.",
+  "whenToUse": [
+    "You compare the sizes of items with each other.",
+    "There are about 3 to 12 items.",
+    "You compare on the same scale while changing the period."
+  ],
+  "whenNotToUse": [
+    "Change over time (use a line chart).",
+    "Shares of a whole (use a donut chart or a stacked bar chart).",
+    "Emphasizing a single number (use a KPI card)."
+  ],
+  "alternatives": [
+    {
+      "name": "Stacked Bar Chart",
+      "slug": "stacked-bar-chart",
+      "reason": "Also showing the makeup inside each bar."
+    },
+    {
+      "name": "Line Chart",
+      "slug": "line-chart",
+      "reason": "Seeing change along an ordered axis."
+    }
+  ],
+  "accessibility": [
+    "Each item is a list entry with a name and value, so the numbers are read as they are.",
+    "The bars are aria-hidden decoration, and color carries no meaning.",
+    "With reduced motion, the length transition turns off."
+  ]
+}

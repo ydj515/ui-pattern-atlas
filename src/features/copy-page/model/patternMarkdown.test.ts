@@ -1,6 +1,7 @@
-import { describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 
 import { findPatternBySlug } from "@/entities/pattern/catalog";
+import { loadCatalogText, localizePattern } from "@/entities/pattern/i18n/catalogText";
 import {
   buildPatternMarkdown,
   loadPatternMarkdown,
@@ -73,5 +74,25 @@ describe("loadPatternMarkdown", () => {
 
     expect(markdown).not.toContain("## Implementation");
     expect(markdown).toContain("## Accessibility");
+  });
+});
+
+describe("English page copy", () => {
+  beforeAll(() => loadCatalogText("en"));
+
+  it("titles the page once in English and writes the guidance in English", async () => {
+    const tabs = localizePattern(requirePattern("tabs"), "en");
+    const markdown = await loadPatternMarkdown(
+      tabs,
+      "https://atlas.example/en/patterns/tabs",
+      "en",
+    );
+    expect(markdown.startsWith("# Tabs\n")).toBe(true);
+    expect(markdown).toContain(
+      "## When to use\n\n- You split different aspects of the same thing, such as details, reviews, and shipping.",
+    );
+    expect(markdown).toContain(
+      "[Segmented Control](https://atlas.example/en/patterns/segmented-control)",
+    );
   });
 });

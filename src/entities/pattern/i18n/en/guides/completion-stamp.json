@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Screens where a paper metaphor fits, such as missions, coupons, or stamp cards.",
+    "Finished cards stay in the list as they are.",
+    "Moments of light reward."
+  ],
+  "whenNotToUse": [
+    "Approval marks on serious work documents.",
+    "It would cover text and make it hard to read.",
+    "It would stamp several cards at once."
+  ],
+  "alternatives": [
+    {
+      "name": "Success Checkmark",
+      "slug": "success-checkmark",
+      "reason": "Reporting with a check instead of a stamp."
+    },
+    {
+      "name": "Achievement Badge",
+      "slug": "achievement-badge",
+      "reason": "Displaying achievements."
+    }
+  ],
+  "accessibility": [
+    "The stamp is aria-hidden, and completion is announced with a role=status message.",
+    "It has pointer-events: none, so it doesn't block the card's buttons.",
+    "With reduced motion, it appears at once without coming down.",
+    "Keep enough contrast between the stamp color and the background."
+  ]
+}

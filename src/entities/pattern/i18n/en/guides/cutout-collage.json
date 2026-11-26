@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Zines, posters, or experimental brands.",
+    "Staging a handmade feel.",
+    "Short words."
+  ],
+  "whenNotToUse": [
+    "Long sentences.",
+    "Contexts where it could read unpleasantly, like a ransom note.",
+    "Screens where conveying information matters."
+  ],
+  "alternatives": [
+    {
+      "name": "Neo-brutalist Typography",
+      "slug": "neo-brutalist-typography",
+      "reason": "Boxed labels."
+    },
+    {
+      "name": "Hand Lettering",
+      "slug": "hand-lettering",
+      "reason": "A handwritten feel."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

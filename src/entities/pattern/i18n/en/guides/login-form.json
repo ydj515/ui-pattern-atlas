@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "People sign in to an account with an email or username.",
+    "Password managers should be able to fill it.",
+    "Returning users should get in quickly."
+  ],
+  "whenNotToUse": [
+    "Services that sign up only with social accounts (use social sign-in).",
+    "You'd block features that work without signing in.",
+    "You'd push newcomers to sign in before signing up."
+  ],
+  "alternatives": [
+    {
+      "name": "Social Sign-in",
+      "slug": "social-sign-in",
+      "reason": "Getting in directly with an outside account."
+    },
+    {
+      "name": "Password Field",
+      "slug": "password-field",
+      "reason": "Using just the password field."
+    }
+  ],
+  "accessibility": [
+    "Set autocomplete to username and current-password so password managers can fill them.",
+    "Errors are read with role=\"alert\", and both fields are tied to them with aria-invalid and aria-describedby.",
+    "Show password is a button with aria-pressed."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "AI answers that take a few seconds to complete.",
+    "You want to show the first characters fast to shorten the wait.",
+    "It must be possible to stop midway."
+  ],
+  "whenNotToUse": [
+    "Short answers that come out at once.",
+    "Formats best viewed when complete, such as tables or code.",
+    "Deliberately slow staging."
+  ],
+  "alternatives": [
+    {
+      "name": "Typewriter",
+      "slug": "typewriter",
+      "reason": "Typing out a fixed sentence for effect."
+    },
+    {
+      "name": "Thinking Indicator",
+      "slug": "thinking-indicator",
+      "reason": "The wait before the first character."
+    }
+  ],
+  "accessibility": [
+    "Keep aria-busy on while writing so the finished answer is read at once.",
+    "The cursor is decorative, so it's aria-hidden, and it doesn't blink with reduced motion.",
+    "The stop button sits in the same spot as the send button.",
+    "Use white-space: pre-wrap to keep line breaks."
+  ]
+}

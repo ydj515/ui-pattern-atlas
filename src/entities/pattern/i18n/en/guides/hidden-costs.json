@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You align price display across product lists, details, and checkout.",
+    "You decide when to show fees and shipping.",
+    "You find where the final amount changes."
+  ],
+  "whenNotToUse": [
+    "You'd leave out mandatory costs so the first price looks low.",
+    "You'd add costs at the last step.",
+    "You'd give costs vague names."
+  ],
+  "alternatives": [
+    {
+      "name": "Receipt Summary",
+      "slug": "receipt-summary",
+      "reason": "Showing the breakdown of the amount paid."
+    },
+    {
+      "name": "Sneak into Basket",
+      "slug": "sneak-into-basket",
+      "reason": "When unwanted items are added."
+    }
+  ],
+  "accessibility": [
+    "Write which costs are included next to the price.",
+    "Align totals with tabular-nums.",
+    "Don't highlight extra costs with color alone.",
+    "Show the final amount once more before payment."
+  ]
+}

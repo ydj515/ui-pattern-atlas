@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The service stops at a time set in advance.",
+    "The end time is known.",
+    "There's a way to notify people when maintenance ends."
+  ],
+  "whenNotToUse": [
+    "Unexpected outages (use a status page and an error state).",
+    "Only some features stop (announce it with an alert banner).",
+    "Deployments that finish in seconds."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Announcing maintenance in advance, or when only some features stop."
+    },
+    {
+      "name": "Error State",
+      "slug": "error-state",
+      "reason": "Unexpected outages."
+    }
+  ],
+  "accessibility": [
+    "Show times with a time element and a dateTime value, converted to the viewer's time zone.",
+    "The progress bar has role=\"progressbar\" and aria-valuenow, and the time left is also shown in words.",
+    "After signing up for a notice, the button text changes to the result (\"We'll email you when it's over\").",
+    "The server sends a 503 status code with a Retry-After header."
+  ]
+}

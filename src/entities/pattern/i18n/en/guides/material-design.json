@@ -1,0 +1,31 @@
+{
+  "origin": "The design system Google announced at Google I/O in June 2014. It was named for the idea that screen elements have layers and shadows like real materials such as paper and ink, and it continued as Material You (Material 3) in 2021.",
+  "whenToUse": [
+    "Screens where hierarchy matters, such as stacked cards or floating buttons.",
+    "Giving an experience close to Android apps.",
+    "Showing the pressed state through a change in shadow."
+  ],
+  "whenNotToUse": [
+    "Shadows on every element would blur the hierarchy.",
+    "You'd apply the uppercase rule as is to Korean buttons.",
+    "Services where a unique brand impression matters more."
+  ],
+  "alternatives": [
+    {
+      "name": "Flat Design",
+      "slug": "flat-design",
+      "reason": "Planes only, without shadows."
+    },
+    {
+      "name": "Neumorphism",
+      "slug": "neumorphism",
+      "reason": "Soft bulges and dents."
+    }
+  ],
+  "accessibility": [
+    "Announce the pressed state with color and words, not shadow alone.",
+    "Convey the play state with aria-pressed.",
+    "Keep text-to-background contrast at 4.5:1 or more.",
+    "Keep shadow changes short to reduce motion load."
+  ]
+}

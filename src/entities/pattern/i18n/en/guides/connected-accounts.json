@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Several social sign-ins are supported.",
+    "People add or remove sign-in methods after joining.",
+    "Some accounts were created without a password."
+  ],
+  "whenNotToUse": [
+    "Services with only one sign-in method.",
+    "Handling device permissions (use permission priming).",
+    "You wouldn't say what disconnecting changes."
+  ],
+  "alternatives": [
+    {
+      "name": "Social Sign-in",
+      "slug": "social-sign-in",
+      "reason": "Choosing an outside account at first sign-in."
+    },
+    {
+      "name": "Permission Priming",
+      "slug": "permission-priming",
+      "reason": "Asking for permissions a feature needs."
+    }
+  ],
+  "accessibility": [
+    "Button names include the account name, so it's clear which row they belong to.",
+    "A locked disconnect button is disabled, with the reason tied through aria-describedby.",
+    "The connection state is also written out, not left to color."
+  ]
+}

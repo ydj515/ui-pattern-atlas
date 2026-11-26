@@ -1,0 +1,30 @@
+{
+  "origin": "Devised by Ben Shneiderman in the early 1990s to see which folders took up space on a hard disk. It means laying out a tree structure like a map.",
+  "whenToUse": [
+    "Many items make up a whole, such as storage or a budget.",
+    "You show which items take up most of it.",
+    "There are more than five items, too many for a pie chart."
+  ],
+  "whenNotToUse": [
+    "Similar sizes must be compared precisely (use a bar chart).",
+    "Change over time (use an area chart).",
+    "There are only two or three items (use a pie chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Pie Chart",
+      "slug": "pie-chart",
+      "reason": "There are only a few items."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Precise size comparison matters."
+    }
+  ],
+  "accessibility": [
+    "Items are told apart by the names and values in the cells, not color.",
+    "Small cells read their name and share when pointed at.",
+    "The table view lists every item and share."
+  ]
+}

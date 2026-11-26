@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services where queries are fairly predictable, such as products or places.",
+    "Names whose spelling or spacing is confusing.",
+    "You want people to type less of a long query."
+  ],
+  "whenNotToUse": [
+    "People must choose only from a fixed list (use a combobox).",
+    "There isn't enough data to suggest from.",
+    "The input is sensitive and suggestions shouldn't show."
+  ],
+  "alternatives": [
+    {
+      "name": "Combobox",
+      "slug": "combobox",
+      "reason": "Choosing only values in a list."
+    },
+    {
+      "name": "Search Field",
+      "slug": "search-field",
+      "reason": "Searching right away without suggestions."
+    }
+  ],
+  "accessibility": [
+    "The input is role=\"combobox\" and the suggestion list a listbox.",
+    "Moving through suggestions with ↑/↓ is announced with aria-activedescendant while focus stays in the input.",
+    "Esc closes the list, and keystrokes aren't intercepted during Korean input composition.",
+    "The form has role=\"search\" so it can be found as a search region."
+  ]
+}

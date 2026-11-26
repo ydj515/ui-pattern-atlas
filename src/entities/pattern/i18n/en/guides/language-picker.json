@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Several languages are supported.",
+    "People must find their way back from a language switched by mistake.",
+    "There are so many languages that search is needed."
+  ],
+  "whenNotToUse": [
+    "There are only two languages (use a toggle link).",
+    "You'd show languages as flags.",
+    "You'd force a language based on location alone."
+  ],
+  "alternatives": [
+    {
+      "name": "Combobox",
+      "slug": "combobox",
+      "reason": "Choosing from a list while typing."
+    },
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "When there are few options."
+    }
+  ],
+  "accessibility": [
+    "Each language name has a lang attribute, so it's pronounced in that language.",
+    "The search field is type=\"search\", and a message is read when nothing matches.",
+    "Options are radio buttons, moved through with the arrow keys."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Settings span several topics.",
+    "On/off settings mix with settings you choose from.",
+    "The settings tab of a mobile app."
+  ],
+  "whenNotToUse": [
+    "Long forms that apply only after pressing save.",
+    "There are only two or three items.",
+    "You'd bury frequently changed settings deep."
+  ],
+  "alternatives": [
+    {
+      "name": "Switch",
+      "slug": "switch",
+      "reason": "A single on/off row."
+    },
+    {
+      "name": "List",
+      "slug": "list",
+      "reason": "Ordinary lists that aren't settings."
+    },
+    {
+      "name": "Notification Settings",
+      "slug": "notification-settings",
+      "reason": "Choosing notifications in detail by channel."
+    }
+  ],
+  "accessibility": [
+    "Switches are checkboxes with role=\"switch\", so their on state is read.",
+    "Rows with values are buttons whose names include the current value.",
+    "Each topic is grouped under a heading, so people can move by heading."
+  ]
+}

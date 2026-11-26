@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "You need files such as proof documents, a résumé, or photos.",
+    "People upload several files at once.",
+    "There are type and size limits."
+  ],
+  "whenNotToUse": [
+    "A single photo must be cropped or adjusted right away (use with an image cropper).",
+    "Very large files (they need progress notices and resumable uploads).",
+    "Taking a photo with the camera is the main use on phones (consider the capture attribute)."
+  ],
+  "alternatives": [
+    {
+      "name": "Progress Toast",
+      "slug": "progress-toast",
+      "reason": "Showing progress when uploading takes a while."
+    }
+  ],
+  "accessibility": [
+    "The drop area is a label wrapping a real file input, so keyboard and screen reader users use it like a button.",
+    "While dragging, the border and background change to show where to drop.",
+    "Rejected files are explained with role=\"status\".",
+    "Remove buttons in the list include the file name, such as \"Remove receipt.jpg\"."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Content people look at only when needed, such as extra explanations or detailed conditions.",
+    "Content that comes in pairs, such as one question and its answer.",
+    "You hide advanced settings."
+  ],
+  "whenNotToUse": [
+    "There are several of the same kind (use an accordion).",
+    "Most people must see the content.",
+    "The content is too short to need folding."
+  ],
+  "alternatives": [
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding several together."
+    },
+    {
+      "name": "Read More",
+      "slug": "read-more",
+      "reason": "Shortening the end of a long text."
+    }
+  ],
+  "accessibility": [
+    "The title is a button inside an h3 with aria-expanded and aria-controls.",
+    "Folded content is hidden, so it's skipped by Tab and screen readers.",
+    "The arrow icon is decorative, so it's aria-hidden.",
+    "With plain HTML, details and summary do the same job."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Questions with several possible answers, such as naming or writing copy.",
+    "Letting people try again when they don't like an answer.",
+    "Versions need comparing."
+  ],
+  "whenNotToUse": [
+    "Encouraging different answers to factual questions.",
+    "Too many versions pile up (keep only the latest few).",
+    "The question itself needs changing (use edit prompt)."
+  ],
+  "alternatives": [
+    {
+      "name": "Edit Prompt",
+      "slug": "edit-prompt",
+      "reason": "Asking again with a changed question."
+    },
+    {
+      "name": "Response Feedback",
+      "slug": "response-feedback",
+      "reason": "Putting the regenerate button in the tool row."
+    }
+  ],
+  "accessibility": [
+    "The previous and next answer buttons have names and turn off at the ends.",
+    "Which answer is showing is written out.",
+    "The answer area announces the changed answer with aria-live.",
+    "The button is disabled while generating."
+  ]
+}

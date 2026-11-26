@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Right after finishing something hard to undo, such as a payment, order, sign-up, or booking.",
+    "People want to recheck a number or amount.",
+    "The next thing to do is set."
+  ],
+  "whenNotToUse": [
+    "Light results such as saving (use a toast).",
+    "People keep working on the same screen (use an inline confirmation message).",
+    "You'd bury the result under ads and recommendations."
+  ],
+  "alternatives": [
+    {
+      "name": "Confirmation Message",
+      "slug": "confirmation-message",
+      "reason": "Reporting a result without changing screens."
+    },
+    {
+      "name": "Receipt Summary",
+      "slug": "receipt-summary",
+      "reason": "Showing amount details closely."
+    }
+  ],
+  "accessibility": [
+    "When the screen opens, move focus to the heading so the result is read first.",
+    "Information to check is a dl list pairing names and values.",
+    "The check icon is decorative, so it's aria-hidden.",
+    "Next action buttons are told apart as primary and secondary by their look."
+  ]
+}

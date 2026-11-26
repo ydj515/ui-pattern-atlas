@@ -1,0 +1,26 @@
+{
+  "origin": "A format Snapchat introduced in 2013 and Instagram adopted under the same name in 2016, which made it widespread.",
+  "whenToUse": [
+    "Light content to flick through, such as short news or today's menu.",
+    "Mobile apps.",
+    "There are only a few pieces of content."
+  ],
+  "whenNotToUse": [
+    "Text that takes time to read (auto-advance gets in the way).",
+    "Information people need to find again.",
+    "Desktop screens."
+  ],
+  "alternatives": [
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "reason": "Moving through slides within a page."
+    }
+  ],
+  "accessibility": [
+    "Previous, next, pause, and close are all named buttons.",
+    "The pause button and a long press stop auto-advance (WCAG 2.2.2).",
+    "With reduced motion, it doesn't advance on its own.",
+    "The story title is read with aria-live when it changes."
+  ]
+}

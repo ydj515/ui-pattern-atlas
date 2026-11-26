@@ -1,0 +1,31 @@
+{
+  "origin": "Named as a movement that brought brutalism back (neo), refined with thick borders, heavy shadows, and primary colors.",
+  "whenToUse": [
+    "Distinctive startups or creator tools.",
+    "A young, playful impression.",
+    "Controls must stand out clearly."
+  ],
+  "whenNotToUse": [
+    "Medical or public services that must feel calm.",
+    "So much information that there are too many lines.",
+    "Primary color combinations don't fit the brand."
+  ],
+  "alternatives": [
+    {
+      "name": "Brutalism",
+      "slug": "brutalism",
+      "reason": "The original, with even less decoration."
+    },
+    {
+      "name": "Claymorphism",
+      "slug": "claymorphism",
+      "reason": "Soft volume."
+    }
+  ],
+  "accessibility": [
+    "Strong outlines and contrast make edges clear.",
+    "The press movement is skipped with reduced motion.",
+    "Check the contrast of black text on primary colors.",
+    "Announce states with words and aria-pressed together."
+  ]
+}

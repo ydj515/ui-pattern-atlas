@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Editors that save as people type.",
+    "You want to remove the save button.",
+    "The connection may drop often."
+  ],
+  "whenNotToUse": [
+    "Forms that apply only on submit.",
+    "Saving takes long enough to need progress (use a progress bar).",
+    "You'd report a failed save only with this one line."
+  ],
+  "alternatives": [
+    {
+      "name": "Unsaved Changes Warning",
+      "slug": "unsaved-changes",
+      "reason": "No autosave, so people must be asked before leaving."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Briefly reporting the save result."
+    }
+  ],
+  "accessibility": [
+    "It's role=\"status\", so state changes are read quietly.",
+    "The state is written out along with the dot's color.",
+    "The blinking stops with reduced motion."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There are many results to narrow by conditions.",
+    "There are fixed attributes such as price, size, or color.",
+    "Several conditions apply together."
+  ],
+  "whenNotToUse": [
+    "There are only a few results.",
+    "There's one condition and tabs or sorting are enough (use search scope tabs).",
+    "There are dozens of conditions that need their own screen."
+  ],
+  "alternatives": [
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Choosing a few conditions in one row."
+    },
+    {
+      "name": "No Filter Results",
+      "slug": "no-filter-results",
+      "reason": "Conditions leave zero results."
+    }
+  ],
+  "accessibility": [
+    "Condition groups are named with fieldset and legend.",
+    "Conditions are checkboxes, toggled with Space.",
+    "The changed result count is read via aria-live.",
+    "Summary chip names say what they remove, such as \"Remove white filter\"."
+  ]
+}

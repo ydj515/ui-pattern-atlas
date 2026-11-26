@@ -1,0 +1,31 @@
+{
+  "origin": "Named in research published by Daniel Kahneman and colleagues in the 1990s: the most intense moment (peak) and the end of an experience shape how it's remembered.",
+  "whenToUse": [
+    "You design completion screens or delivery-complete notices.",
+    "You polish the final step of a long flow.",
+    "You set priorities for reducing painful moments."
+  ],
+  "whenNotToUse": [
+    "You'd try to cover a big pain in the middle with staging at the end.",
+    "You'd fill the final screen with ads.",
+    "Excessive celebration would hide the next action."
+  ],
+  "alternatives": [
+    {
+      "name": "Success Screen",
+      "slug": "success-screen",
+      "reason": "The result and next steps."
+    },
+    {
+      "name": "Confetti",
+      "slug": "confetti",
+      "reason": "The moment a goal is reached."
+    }
+  ],
+  "accessibility": [
+    "State the completion result clearly in a heading and words.",
+    "Decorative photos get an empty alt or a description.",
+    "Put the next action button alongside.",
+    "Celebration effects respect reduced motion."
+  ]
+}

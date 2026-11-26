@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Coupons with a minimum order, period, or scope.",
+    "Letting people claim one in advance on a product or event page.",
+    "Claimed coupons are used at checkout."
+  ],
+  "whenNotToUse": [
+    "Discounts applied automatically with no conditions.",
+    "The conditions are too long to fit on the card (link to details).",
+    "A code must be typed in (use an input field)."
+  ],
+  "alternatives": [
+    {
+      "name": "Discount Badge",
+      "slug": "discount-badge",
+      "reason": "Showing the result of applying a coupon."
+    },
+    {
+      "name": "Hidden Costs",
+      "slug": "hidden-costs",
+      "reason": "Seeing the problem with revealing conditions later."
+    }
+  ],
+  "accessibility": [
+    "The card is a section named after the coupon, read as a group.",
+    "After claiming, the button becomes disabled and its name changes to Claimed.",
+    "The conditions are a list, read one by one."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You explain increases and decreases step by step, such as from revenue to net profit.",
+    "You look at amounts coming in and going out, such as stock or headcount.",
+    "You find what changed the result the most."
+  ],
+  "whenNotToUse": [
+    "The items have no order or cumulative relation (use a bar chart).",
+    "Changes in the value itself over time (use a line chart).",
+    "There are more than ten steps."
+  ],
+  "alternatives": [
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Only comparing the size of each item."
+    },
+    {
+      "name": "Funnel Analysis",
+      "slug": "funnel-analysis",
+      "reason": "Seeing the number of people shrink at each step."
+    }
+  ],
+  "accessibility": [
+    "Increases and decreases are written with + and − signs along with color.",
+    "Each bar has its value in text, and pointing at it reads the running total.",
+    "The table view lists the change and the running total together."
+  ]
+}

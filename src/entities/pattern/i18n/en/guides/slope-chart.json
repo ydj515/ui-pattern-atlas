@@ -1,0 +1,30 @@
+{
+  "origin": "A form Edward Tufte introduced in his 1983 book The Visual Display of Quantitative Information.",
+  "whenToUse": [
+    "You compare only two points in time, such as last year and this year.",
+    "You highlight items whose rank changed.",
+    "There are 3 to 8 items."
+  ],
+  "whenNotToUse": [
+    "There are three or more points in time (use a line chart).",
+    "There are so many items that the lines tangle.",
+    "Only sizes at one point are compared (use a bar chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Line Chart",
+      "slug": "line-chart",
+      "reason": "Many points in time."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing sizes at one point."
+    }
+  ],
+  "accessibility": [
+    "Values are written at both ends, so the slope doesn't have to be read.",
+    "Rises and falls show by line direction along with color.",
+    "Both values of every item are kept as a list for screen readers."
+  ]
+}

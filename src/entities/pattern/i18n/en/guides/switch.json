@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Settings that apply at once, such as notifications or dark mode.",
+    "There are only two states: on and off.",
+    "People change several items independently in a settings list."
+  ],
+  "whenNotToUse": [
+    "A choice inside a form that applies only after submitting (use a checkbox).",
+    "There are three or more options.",
+    "Consent must be explicitly marked as agreed, as with terms (use a checkbox)."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "reason": "A choice applied along with a form submission."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Two or more named states."
+    }
+  ],
+  "accessibility": [
+    "Give a native <button> role=\"switch\" and aria-checked to announce its state.",
+    "Connect the text label with <label htmlFor> so pressing the label also toggles it.",
+    "Connect a supporting description with aria-describedby.",
+    "Show the on state with the knob position as well as color."
+  ]
+}

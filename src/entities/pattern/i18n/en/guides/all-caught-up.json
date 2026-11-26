@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists whose goal is to be emptied, such as notifications, inboxes, or to-do lists.",
+    "People emptied it by handling items themselves.",
+    "You can say when new items will appear."
+  ],
+  "whenNotToUse": [
+    "New users' screens with no items from the start (use an empty state).",
+    "The last item was just deleted and needs a chance to undo (use an emptied state).",
+    "Loading failed and it only looks empty (use an error state)."
+  ],
+  "alternatives": [
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "A screen used for the first time."
+    },
+    {
+      "name": "Emptied State",
+      "slug": "emptied-state",
+      "reason": "It's empty because the last item was deleted."
+    }
+  ],
+  "accessibility": [
+    "Announce that the list is all clear with role=\"status\".",
+    "The check mark is decorative, so it's aria-hidden, and the title carries the meaning.",
+    "Put the item title in each dismiss button's name (\"Dismiss Your order has shipped\") to tell the buttons apart.",
+    "View past notifications lets people go back to items they handled."
+  ]
+}

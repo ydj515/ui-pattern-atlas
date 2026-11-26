@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Requests that are usually fast but sometimes slow.",
+    "A spinner flashing on and off is distracting.",
+    "Frequently repeated loading, such as switching filters or tabs."
+  ],
+  "whenNotToUse": [
+    "Tasks that always take long (show progress from the start).",
+    "Places where no immediate reaction makes people press again (change the button state right away).",
+    "Lists whose layout should be reserved in advance (use a skeleton)."
+  ],
+  "alternatives": [
+    {
+      "name": "Spinner",
+      "slug": "spinner",
+      "reason": "The wait is always long enough to notice."
+    },
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "Showing the space for incoming content first."
+    }
+  ],
+  "accessibility": [
+    "The spinner is read only when it appears, with role=\"status\" and a \"Loading\" message.",
+    "Short requests announce nothing, so screen reader users don't hear needless messages either.",
+    "A minimum display time prevents a rapidly flickering screen.",
+    "The rotation stops with reduced motion."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists where several filters stack, such as places to stay, products, or jobs.",
+    "The filter panel is collapsed, so the applied conditions are hard to see.",
+    "Removing just one condition would likely bring results."
+  ],
+  "whenNotToUse": [
+    "The query caused the empty result (use no results).",
+    "There's no data even without filters (use an empty state).",
+    "There's only one filter (a clear button is enough)."
+  ],
+  "alternatives": [
+    {
+      "name": "No Results",
+      "slug": "no-results",
+      "reason": "The query is the cause."
+    },
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "There's no data at all."
+    }
+  ],
+  "accessibility": [
+    "Filter chips are buttons whose names say what pressing does, such as \"Remove pool filter\".",
+    "The × symbol is aria-hidden, and the action is stated in words.",
+    "Make the results area aria-live=\"polite\" so the result of removing a filter is read out.",
+    "Clear all filters returns to the starting state in one step."
+  ]
+}

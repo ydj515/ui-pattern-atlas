@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists with a known total, such as products or reviews.",
+    "There's a footer or other content below the list.",
+    "You let people decide themselves whether to see more."
+  ],
+  "whenNotToUse": [
+    "A feed browsed endlessly (use infinite scroll).",
+    "People need to jump to a specific page (use pagination).",
+    "There are only a few items (show them all)."
+  ],
+  "alternatives": [
+    {
+      "name": "Infinite Scroll",
+      "slug": "infinite-scroll",
+      "reason": "Feeds browsed continuously."
+    },
+    {
+      "name": "Pagination",
+      "slug": "pagination",
+      "reason": "Remembering a position by page number."
+    }
+  ],
+  "accessibility": [
+    "Put the shown and total counts in the button name, such as \"(6/24)\".",
+    "After loading, move focus to the first new item so keyboard users don't start over from the top.",
+    "While loading, the button changes to \"Loading\" and turns off.",
+    "Remove the button once everything is shown."
+  ]
+}

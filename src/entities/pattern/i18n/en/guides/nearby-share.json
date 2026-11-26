@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Sending photos or files to the device of someone nearby.",
+    "Sending at close range without the internet.",
+    "The recipient must accept."
+  ],
+  "whenNotToUse": [
+    "People far away (use send/forward).",
+    "Merely imitating it on the web, where the app can't know the device list.",
+    "Designs that send without acceptance."
+  ],
+  "alternatives": [
+    {
+      "name": "QR Sharing",
+      "slug": "qr-sharing",
+      "reason": "Passing a link by camera."
+    },
+    {
+      "name": "Share Sheet",
+      "slug": "share-sheet",
+      "reason": "Using the device's own share feature."
+    }
+  ],
+  "accessibility": [
+    "The searching notice is announced with aria-live.",
+    "Each device button has a name, with its state connected through aria-describedby.",
+    "Other device buttons are disabled while waiting.",
+    "The appearing effect is skipped with reduced motion."
+  ]
+}

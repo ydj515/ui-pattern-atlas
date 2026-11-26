@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Cafés, workshops, or personal brands.",
+    "Invitations or thank-you cards.",
+    "Short phrases."
+  ],
+  "whenNotToUse": [
+    "Long notices.",
+    "Screens where precise information matters.",
+    "Devices without the font, where the fallback looks awkward."
+  ],
+  "alternatives": [
+    {
+      "name": "Graffiti",
+      "slug": "graffiti",
+      "reason": "The free strokes of street murals."
+    },
+    {
+      "name": "Retro Groovy",
+      "slug": "retro-groovy",
+      "reason": "Wavy, decorative letters."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

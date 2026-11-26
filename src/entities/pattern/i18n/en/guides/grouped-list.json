@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Long lists that can be grouped by a criterion, such as contacts or records by date.",
+    "People check their position while scrolling.",
+    "Groups contain different numbers of items."
+  ],
+  "whenNotToUse": [
+    "There's only one group.",
+    "Short lists.",
+    "Groups need folding (use an accordion)."
+  ],
+  "alternatives": [
+    {
+      "name": "List",
+      "slug": "list",
+      "reason": "When no grouping is needed."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding and unfolding groups."
+    }
+  ],
+  "accessibility": [
+    "Each group is a section with a heading, so people can move by heading.",
+    "Each group's list is named by its heading, so its size is read along with it.",
+    "The scroll area is a named region that takes focus and scrolls with the keyboard.",
+    "Sticky headers use only CSS position: sticky."
+  ]
+}

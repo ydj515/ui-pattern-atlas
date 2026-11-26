@@ -1,0 +1,31 @@
+{
+  "origin": "From the Greek skeuos (vessel, tool) and morphē (shape): imitating the shape and texture of a real object. The leather and wood textures of Apple's apps before iOS 7 in 2013 are classic examples.",
+  "whenToUse": [
+    "Screens that carry over how a real object is used (calculators, recorders).",
+    "Explaining new digital concepts through familiar objects.",
+    "Brand expression that evokes nostalgia."
+  ],
+  "whenNotToUse": [
+    "Information-dense work screens (decoration covers the content).",
+    "Responsive services across many screen sizes.",
+    "Texture images would make loading heavy."
+  ],
+  "alternatives": [
+    {
+      "name": "Flat Design",
+      "slug": "flat-design",
+      "reason": "Planes with every texture removed."
+    },
+    {
+      "name": "3D Icon",
+      "slug": "three-d-icon",
+      "reason": "Giving volume only to icons."
+    }
+  ],
+  "accessibility": [
+    "Check the contrast of text on textures separately, even after adding shadows.",
+    "Announce states in words beyond gloss and pressed looks.",
+    "Decorative images are aria-hidden.",
+    "Show the focus ring."
+  ]
+}

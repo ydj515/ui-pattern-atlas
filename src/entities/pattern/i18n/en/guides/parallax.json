@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The top of an introduction page where mood matters, such as travel or campaigns.",
+    "Short text sits over a large picture.",
+    "In only one or two places on a page."
+  ],
+  "whenNotToUse": [
+    "Screens centered on reading or tasks.",
+    "Several layers move far in different directions (it causes motion sickness).",
+    "Services used on many low-end devices."
+  ],
+  "alternatives": [
+    {
+      "name": "Scroll Reveal",
+      "slug": "scroll-reveal",
+      "reason": "Moving content only once as it appears."
+    },
+    {
+      "name": "Hero Section",
+      "slug": "hero-section",
+      "reason": "Emphasizing the first screen without motion."
+    }
+  ],
+  "accessibility": [
+    "The background is decorative, so it's aria-hidden.",
+    "With reduced motion, the background scrolls along at the same speed (WCAG 2.3.3).",
+    "The scroll area has a tabIndex and a name, so it can be scrolled with the keyboard.",
+    "Text sits in a white area that doesn't overlap the background, so contrast holds."
+  ]
+}

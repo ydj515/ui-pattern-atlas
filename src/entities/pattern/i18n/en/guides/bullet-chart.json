@@ -1,0 +1,30 @@
+{
+  "origin": "Devised in 2005 by the data visualization expert Stephen Few to replace gauges on dashboards. Its thin, long bar is shaped like a bullet.",
+  "whenToUse": [
+    "A dashboard holds several metrics with targets.",
+    "There's no room for gauges.",
+    "You show which rating band a value falls in."
+  ],
+  "whenNotToUse": [
+    "There's no target or standard (use a bar chart).",
+    "There's only one metric to show large (use a gauge).",
+    "Change over time (use a line chart)."
+  ],
+  "alternatives": [
+    {
+      "name": "Gauge",
+      "slug": "gauge",
+      "reason": "Showing one metric large."
+    },
+    {
+      "name": "KPI Card",
+      "slug": "kpi-card",
+      "reason": "Showing only the number and its change."
+    }
+  ],
+  "accessibility": [
+    "Announce the value and target together with role=\"meter\" and aria-valuetext.",
+    "Rating bands are split only by shades of gray, so color doesn't carry a second meaning.",
+    "The band thresholds are written out separately."
+  ]
+}

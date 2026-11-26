@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Setting a time on mobile, as for alarms or timers.",
+    "Two or three columns are chosen together.",
+    "The values run in order."
+  ],
+  "whenNotToUse": [
+    "Desktop forms (a select or time picker is faster).",
+    "There are a great many options (rolling takes long).",
+    "The values have no order."
+  ],
+  "alternatives": [
+    {
+      "name": "Time Picker",
+      "slug": "time-picker",
+      "reason": "On desktop or within a form."
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "reason": "When there's only one column."
+    }
+  ],
+  "accessibility": [
+    "Each column is a named listbox whose value changes with ↑/↓.",
+    "The middle value is announced with aria-selected and aria-activedescendant.",
+    "CSS scroll snap stops on a row when released.",
+    "Show the result as a sentence (\"Your alarm rings at 7:30 AM\")."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Filters by range, such as a price band, area, or period.",
+    "People quickly try rough ranges and watch the results.",
+    "Both ends of the range are fixed."
+  ],
+  "whenNotToUse": [
+    "An exact range must be entered (use two number fields).",
+    "Only one end needs setting (use a slider).",
+    "The range is so wide that handles are hard to adjust."
+  ],
+  "alternatives": [
+    {
+      "name": "Slider",
+      "slug": "slider",
+      "reason": "Setting only one value."
+    }
+  ],
+  "accessibility": [
+    "Each handle is its own range input, so each can be moved with the keyboard.",
+    "Names distinguish \"Minimum price\" from \"Maximum price\", and aria-valuetext reads the unit.",
+    "The handles can't pass each other, so the range never flips.",
+    "The current range is also shown in words."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists, products, or documents searched by keyword.",
+    "People search for proper nouns or loanwords that are often misspelled.",
+    "Similar results can be suggested."
+  ],
+  "whenNotToUse": [
+    "Filters caused the empty result (use no filter results).",
+    "The screen has no data from the start (use an empty state).",
+    "A search server error (use an error state)."
+  ],
+  "alternatives": [
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "A first screen where nothing has been created yet."
+    },
+    {
+      "name": "No Filter Results",
+      "slug": "no-filter-results",
+      "reason": "The filter conditions are too narrow."
+    }
+  ],
+  "accessibility": [
+    "Make the results area aria-live=\"polite\" so the lack of results is read out.",
+    "Put the query in the title as typed so people can check what they searched.",
+    "Suggested queries are buttons that search again right away.",
+    "Clearing the query returns to the original list."
+  ]
+}

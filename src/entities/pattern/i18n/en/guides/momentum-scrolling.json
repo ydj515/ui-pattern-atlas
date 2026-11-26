@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "People skim a long list quickly, such as a playlist.",
+    "Kiosks or preview screens scrolled by dragging with a mouse.",
+    "It must feel the same as the browser's own scrolling."
+  ],
+  "whenNotToUse": [
+    "The browser's default scrolling is enough (don't build your own).",
+    "Lists that must stop at exact positions (use scroll snap).",
+    "People who turned on reduced motion."
+  ],
+  "alternatives": [
+    {
+      "name": "Infinite Scroll",
+      "slug": "infinite-scroll",
+      "reason": "Loading more at the end."
+    },
+    {
+      "name": "Scroll Bounce",
+      "slug": "scroll-bounce",
+      "reason": "Showing that the end was reached."
+    }
+  ],
+  "accessibility": [
+    "The scroll area has a tabIndex and a name, so it can be scrolled with the keyboard.",
+    "With reduced motion, it doesn't glide after release.",
+    "Touch and wheel use the browser's default behavior.",
+    "overscroll-behavior: contain keeps the page from moving along at the end."
+  ]
+}

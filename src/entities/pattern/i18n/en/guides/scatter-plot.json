@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You look at the relationship between two values (distance and time, price and sales).",
+    "You look for outliers.",
+    "There are dozens of points or more."
+  ],
+  "whenNotToUse": [
+    "Change along an ordered axis (use a line chart).",
+    "You'd show a third value too (use a bubble chart).",
+    "There are only a few points (use a table)."
+  ],
+  "alternatives": [
+    {
+      "name": "Bubble Chart",
+      "slug": "bubble-chart",
+      "reason": "Adding a third value as circle size."
+    },
+    {
+      "name": "Line Chart",
+      "slug": "line-chart",
+      "reason": "Seeing change in time order."
+    }
+  ],
+  "accessibility": [
+    "It finds the nearest point, so people don't have to hit a small dot exactly.",
+    "Points have white outlines so each shows even when overlapping.",
+    "Opening the table view shows every point as a table."
+  ]
+}

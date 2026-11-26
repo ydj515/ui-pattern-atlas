@@ -1,0 +1,31 @@
+{
+  "origin": "A blend of \"new\" and \"skeuomorphism\". It's credited with starting to spread in design communities in late 2019.",
+  "whenToUse": [
+    "Screens with few controls, such as widgets or a remote control.",
+    "You want to express the feel of pressing and releasing.",
+    "Visual experiments or portfolios."
+  ],
+  "whenNotToUse": [
+    "Ordinary services where buttons must stand apart from the background (contrast is low).",
+    "Forms with many states.",
+    "Services with many low-vision users."
+  ],
+  "alternatives": [
+    {
+      "name": "Claymorphism",
+      "slug": "claymorphism",
+      "reason": "Colored, clay-like volume."
+    },
+    {
+      "name": "Material Design",
+      "slug": "material-design",
+      "reason": "Showing hierarchy with shadows."
+    }
+  ],
+  "accessibility": [
+    "Contrast between surface and background is low, making button edges hard to find; raise the contrast of icons and text.",
+    "Don't show the pressed state with shadow alone; use aria-pressed and words too.",
+    "Show the focus ring clearly.",
+    "Announce a switch's on state through its position and role=switch."
+  ]
+}

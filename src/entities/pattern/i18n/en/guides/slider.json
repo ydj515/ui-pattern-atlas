@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Values within a fixed range, such as a price cap, brightness, or volume.",
+    "People change a value and check the result right away.",
+    "The exact number doesn't matter."
+  ],
+  "whenNotToUse": [
+    "An exact value must be entered (use a number input).",
+    "The range is so wide that one step is too large.",
+    "Setting a minimum and a maximum together (use a range slider)."
+  ],
+  "alternatives": [
+    {
+      "name": "Range Slider",
+      "slug": "range-slider",
+      "reason": "Setting a minimum and a maximum together."
+    },
+    {
+      "name": "Number Stepper",
+      "slug": "number-stepper",
+      "reason": "Choosing an exact whole number."
+    }
+  ],
+  "accessibility": [
+    "It's a native range input, so the arrows, Page Up/Down, Home/End, and touch all work.",
+    "aria-valuetext reads the value with its unit, such as \"35,000 won\".",
+    "The current value also shows on screen in an output element.",
+    "The handle is enlarged to 20px so it's easy to grab with a finger."
+  ]
+}

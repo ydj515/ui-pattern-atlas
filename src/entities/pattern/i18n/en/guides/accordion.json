@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the musical instrument whose bellows fold and unfold: sections fold and unfold to shrink and expand the content.",
+  "whenToUse": [
+    "Content where people read only the items they need, such as an FAQ.",
+    "You organize long settings or information into sections on mobile.",
+    "The titles alone are enough to predict the content."
+  ],
+  "whenNotToUse": [
+    "Most people need to read everything.",
+    "People need to compare the content of different sections.",
+    "The content is only a line or two, so there's no reason to fold it."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Content at the same level, split sideways."
+    },
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "Details kept apart from the main content."
+    }
+  ],
+  "accessibility": [
+    "Make each title a <button> inside a heading to support both document structure and keyboard use.",
+    "aria-expanded announces whether it's open, and aria-controls the panel it opens.",
+    "Connect each panel to its title with role=\"region\" and aria-labelledby.",
+    "The arrow's rotation animation turns off with prefers-reduced-motion."
+  ]
+}

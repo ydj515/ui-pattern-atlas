@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You choose whichever of two designs performs better on a metric.",
+    "There are plenty of visitors.",
+    "Only one thing changed, so the cause can be pinned down."
+  ],
+  "whenNotToUse": [
+    "There are too few visitors to fill the sample.",
+    "You want to know why (use user interviews).",
+    "You'd test a design that deceives or disadvantages people."
+  ],
+  "alternatives": [
+    {
+      "name": "Funnel Analysis",
+      "slug": "funnel-analysis",
+      "reason": "First finding the step where people drop off."
+    },
+    {
+      "name": "Usability Test",
+      "slug": "usability-test",
+      "reason": "Finding problems with a few people."
+    }
+  ],
+  "accessibility": [
+    "Compare only designs that both meet accessibility standards.",
+    "Check that neither design disadvantages assistive technology users.",
+    "Even with a better metric, don't adopt a design that can't be used with a keyboard or screen reader."
+  ]
+}

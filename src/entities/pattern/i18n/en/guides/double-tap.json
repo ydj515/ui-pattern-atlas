@@ -1,0 +1,28 @@
+{
+  "whenToUse": [
+    "People react quickly in a photo-focused feed.",
+    "A button doing the same is visible on screen.",
+    "A light reaction where an accidental tap does no harm."
+  ],
+  "whenNotToUse": [
+    "Screens where a double tap zooms (the gestures overlap).",
+    "Actions with big consequences, such as buying or deleting.",
+    "There's only the gesture and no button."
+  ],
+  "alternatives": [
+    {
+      "name": "Like button",
+      "reason": "Reacting with a visible button."
+    },
+    {
+      "name": "Reaction picker",
+      "reason": "Choosing among several feelings."
+    }
+  ],
+  "accessibility": [
+    "The like button announces its state with aria-pressed and can be toggled with the keyboard.",
+    "The heart effect is decorative, so it's aria-hidden.",
+    "touch-manipulation prevents the browser's double-tap zoom and removes the delay.",
+    "The growing heart turns off with reduced motion."
+  ]
+}

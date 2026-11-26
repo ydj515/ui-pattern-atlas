@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "AI that answers from searched material.",
+    "Topics where fact-checking matters.",
+    "Answers that mix several sources."
+  ],
+  "whenNotToUse": [
+    "Creative writing or summaries without sources.",
+    "So many numbers that they break up the sentences.",
+    "Only internal material whose links can't be opened."
+  ],
+  "alternatives": [
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "Showing a short explanation."
+    },
+    {
+      "name": "Popover",
+      "slug": "popover",
+      "reason": "A small card opened by pressing."
+    }
+  ],
+  "accessibility": [
+    "Number buttons are read with names such as Source 1: title.",
+    "The card connects with aria-expanded and aria-controls and closes with Esc.",
+    "The source list is an ol, conveying the numbers and order.",
+    "External links open in a new tab."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists of content with images, such as articles, products, or places.",
+    "People scan many at a glance and choose.",
+    "A card has one small action inside, such as save."
+  ],
+  "whenNotToUse": [
+    "Items are compared in detail (use a table).",
+    "There's only a title and no image (use a list).",
+    "A card holds many links and buttons."
+  ],
+  "alternatives": [
+    {
+      "name": "List",
+      "slug": "list",
+      "reason": "Scanning without images."
+    },
+    {
+      "name": "Masonry Grid",
+      "slug": "masonry-grid",
+      "reason": "Packing cards of different heights tightly."
+    }
+  ],
+  "accessibility": [
+    "The only link is the title, and a pseudo-element stretches it over the whole card, so pressing anywhere opens it.",
+    "The save button sits above the link and works on its own, announcing its state with aria-pressed.",
+    "The image area is decorative, so it's aria-hidden.",
+    "Keyboard focus shows as an outline around the whole card."
+  ]
+}

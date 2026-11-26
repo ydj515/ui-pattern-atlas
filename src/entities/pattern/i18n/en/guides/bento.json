@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Work tools or account services used across several apps.",
+    "A dedicated menu for moving between apps.",
+    "A set spot, such as the top right."
+  ],
+  "whenNotToUse": [
+    "Menus within one app (use a hamburger or tabs).",
+    "A button that switches to grid view (the meanings overlap and confuse).",
+    "There are only two or three apps."
+  ],
+  "alternatives": [
+    {
+      "name": "Waffle",
+      "slug": "waffle",
+      "reason": "An app list made of nine round dots."
+    },
+    {
+      "name": "Hamburger ☰",
+      "slug": "hamburger",
+      "reason": "The menu within one app."
+    }
+  ],
+  "accessibility": [
+    "Name the icon button App list.",
+    "The open list is role=dialog and closes with Esc.",
+    "Each app has a text name.",
+    "When it opens, focus goes to the first app."
+  ]
+}

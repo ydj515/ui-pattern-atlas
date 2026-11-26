@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "People pressed a feature that needs the permission themselves.",
+    "After they saw the app's explanation of the permission.",
+    "You can handle every outcome: allowed, partly allowed, and denied."
+  ],
+  "whenNotToUse": [
+    "As soon as the app opens, for no reason.",
+    "In features that work without the permission.",
+    "You'd block the app if people refuse."
+  ],
+  "alternatives": [
+    {
+      "name": "Permission Priming",
+      "slug": "permission-priming",
+      "reason": "Explaining the reason before the device asks."
+    },
+    {
+      "name": "Limited Access",
+      "slug": "limited-access",
+      "reason": "Only selected photos were allowed."
+    }
+  ],
+  "accessibility": [
+    "The example connects role=alertdialog with its title and description.",
+    "The real device window's accessibility is handled by the operating system.",
+    "Announce the result on screen with role=status.",
+    "Write the description to say specifically what it's used for."
+  ]
+}

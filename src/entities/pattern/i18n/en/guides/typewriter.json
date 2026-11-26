@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The first sentence of an assistant or chatbot.",
+    "A short one-sentence introduction.",
+    "It can be replayed once more."
+  ],
+  "whenNotToUse": [
+    "Long paragraphs or several sentences (people wait to read).",
+    "Text that must be read right away, such as buttons or notices.",
+    "Endless loops of deleting and rewriting."
+  ],
+  "alternatives": [
+    {
+      "name": "Staggered Text Reveal",
+      "slug": "staggered-text-reveal",
+      "reason": "Showing several lines in turn."
+    },
+    {
+      "name": "Rotating Words",
+      "slug": "rotating-words",
+      "reason": "Changing just one word at a time."
+    }
+  ],
+  "accessibility": [
+    "Screen readers get the whole sentence from the start via sr-only text.",
+    "The typed letters and the cursor are aria-hidden.",
+    "With reduced motion, the whole sentence shows at once and the cursor doesn't blink.",
+    "At 70ms per character, a short sentence finishes in about a second."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "You change the measure of the same data, such as daily, weekly, or monthly.",
+    "You switch the display, such as list view or card view.",
+    "There are two to five options with short labels."
+  ],
+  "whenNotToUse": [
+    "There are many options or long labels (consider a dropdown).",
+    "It moves to an entirely different content area.",
+    "People need to choose several at once."
+  ],
+  "alternatives": [
+    {
+      "name": "Tabs",
+      "slug": "tabs",
+      "reason": "Switching between different content panels."
+    },
+    {
+      "name": "Switch",
+      "slug": "switch",
+      "reason": "Two states, on and off."
+    },
+    {
+      "name": "Select",
+      "reason": "Six or more options."
+    }
+  ],
+  "accessibility": [
+    "Use native radio inputs so the browser handles arrow-key movement and selection.",
+    "Name the group with <fieldset> and <legend> (it can be visually hidden).",
+    "The selected state changes background, shadow, and weight together, not color alone.",
+    "Draw the focus ring on the visible label with peer-focus-visible instead of on the hidden input."
+  ]
+}

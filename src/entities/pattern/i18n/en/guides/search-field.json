@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Long lists people need to search, such as documents, settings, or menus.",
+    "Tool-like screens where search is used often.",
+    "Results can narrow as people type."
+  ],
+  "whenNotToUse": [
+    "A separate results page is needed, as with site-wide search (move there by submitting a form).",
+    "There are only a few options (use filters or a segmented control).",
+    "The page already uses the / shortcut for something else."
+  ],
+  "alternatives": [
+    {
+      "name": "Command Palette",
+      "slug": "command-palette",
+      "reason": "Finding commands and pages in one place."
+    },
+    {
+      "name": "No Results",
+      "slug": "no-results",
+      "reason": "The screen to show when nothing matches."
+    }
+  ],
+  "accessibility": [
+    "Put it inside a role=\"search\" region so people can jump to it as a landmark.",
+    "Announce the shortcut with aria-keyshortcuts, and don't react while people are typing in another field.",
+    "The clear button has a name (\"Clear search\") and returns focus to the input after it's pressed.",
+    "Esc also clears the query, and the results list announces changes with aria-live."
+  ]
+}

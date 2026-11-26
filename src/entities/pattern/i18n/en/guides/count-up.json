@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Key numbers whose size you want to stress, such as user counts or revenue.",
+    "The first screen of an introduction page or result summary.",
+    "Three numbers or fewer on one screen."
+  ],
+  "whenNotToUse": [
+    "Numbers in a table that people must read and compare right away.",
+    "Values that keep changing in real time.",
+    "Small numbers (the difference isn't felt)."
+  ],
+  "alternatives": [
+    {
+      "name": "Dashboard Layout",
+      "slug": "dashboard-layout",
+      "reason": "Gathering several numbers on one screen without motion."
+    },
+    {
+      "name": "Fade Up",
+      "slug": "fade-up",
+      "reason": "Calmly showing numbers together with their descriptions."
+    }
+  ],
+  "accessibility": [
+    "The moving number is aria-hidden, and only the final number is read via sr-only text.",
+    "With reduced motion, the final number shows at once.",
+    "tabular-nums fixes the digit width so the number doesn't jitter.",
+    "Show the unit (people, cases, %) with the number."
+  ]
+}

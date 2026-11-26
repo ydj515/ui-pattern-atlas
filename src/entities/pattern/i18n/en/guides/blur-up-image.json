@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Photos are the focus, as in galleries, products, or article images.",
+    "The layout and mood should come first even on slow networks.",
+    "The server can deliver a small preview alongside."
+  ],
+  "whenNotToUse": [
+    "Small images such as icons or logos.",
+    "Right after a user upload, when no preview can be made.",
+    "Images where exact content matters (they might be misread while blurred)."
+  ],
+  "alternatives": [
+    {
+      "name": "Skeleton",
+      "slug": "skeleton",
+      "reason": "Reserving space for content beyond images too."
+    }
+  ],
+  "accessibility": [
+    "The blurred preview is decorative, so it's alt=\"\" and aria-hidden; only the original image has alt text.",
+    "Reserve the final ratio from the start so the layout doesn't shift when the image arrives (CLS).",
+    "The sharpening transition happens instantly under reduced motion.",
+    "Cached images may finish before onLoad, so check the complete value too."
+  ]
+}

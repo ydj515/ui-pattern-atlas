@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Features with another way after a refusal, such as location or camera.",
+    "The moment people press that feature again.",
+    "People must be sent to the device settings."
+  ],
+  "whenNotToUse": [
+    "You'd keep asking again after a refusal.",
+    "You'd only block, with no alternative.",
+    "Full-screen walls that block the whole app."
+  ],
+  "alternatives": [
+    {
+      "name": "Permission Denied",
+      "slug": "permission-denied",
+      "reason": "The whole screen depends on the permission."
+    },
+    {
+      "name": "Permission Priming",
+      "slug": "permission-priming",
+      "reason": "Before the first request."
+    }
+  ],
+  "accessibility": [
+    "The guidance area is role=status, so it's read when it appears.",
+    "The button names state the actual action: Allow again and Open settings.",
+    "The alternative button announces with aria-expanded whether its input opened.",
+    "The address field gets a name with aria-label."
+  ]
+}

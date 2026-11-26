@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You split different aspects of the same thing, such as details, reviews, and shipping.",
+    "People only need to see one group of information at a time.",
+    "There are about two to six tabs with short labels."
+  ],
+  "whenNotToUse": [
+    "People need to compare the contents of several panels at once.",
+    "The steps must be done in order.",
+    "There are so many tabs that the sideways scroll gets long."
+  ],
+  "alternatives": [
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Switching how the same data is shown."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Several sections stacked vertically on mobile."
+    }
+  ],
+  "accessibility": [
+    "Connect the parts with role=\"tablist\", \"tab\", and \"tabpanel\" plus aria-selected and aria-controls.",
+    "With a roving tabIndex, one Tab enters the tab list and the left and right arrows move between tabs.",
+    "Home and End move to the first and last tab.",
+    "Give the panel tabIndex=0 so keyboard users can reach its content directly."
+  ]
+}

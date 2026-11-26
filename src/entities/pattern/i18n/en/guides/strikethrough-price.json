@@ -1,0 +1,16 @@
+{
+  "whenToUse": ["You show a verified comparison price together with the price that applies now."],
+  "whenNotToUse": [
+    "Products whose reference price is hard to verify, or benefits already included in the sale price."
+  ],
+  "alternatives": [
+    {
+      "name": "Pricing Plan Comparison",
+      "slug": "pricing-plan-comparison",
+      "reason": "Comparing the prices of different plans rather than a discount on one product."
+    }
+  ],
+  "accessibility": [
+    "Tell the reference price and sale price apart with text labels, and don't convey meaning with strikethrough or color alone."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You announce things that are really limited, such as seats or stock.",
+    "Applications with a deadline.",
+    "Information that would hurt to miss."
+  ],
+  "whenNotToUse": [
+    "You'd call something limited when it isn't.",
+    "You'd change the numbers to apply pressure.",
+    "You'd put the same label on every product."
+  ],
+  "alternatives": [
+    {
+      "name": "Fake Scarcity",
+      "slug": "fake-scarcity",
+      "reason": "Invented stock indicators."
+    },
+    {
+      "name": "Fake Urgency",
+      "slug": "fake-urgency",
+      "reason": "Fake deadlines."
+    }
+  ],
+  "accessibility": [
+    "Write the remaining count in words with its unit.",
+    "Use red warning colors only when it's really urgent.",
+    "Don't let frequently changing numbers be read continuously via aria-live.",
+    "Write dates and times in words."
+  ]
+}

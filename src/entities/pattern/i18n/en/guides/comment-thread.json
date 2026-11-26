@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Comments on posts or documents.",
+    "People need to know who replied to whom.",
+    "There are enough comments that some should be folded."
+  ],
+  "whenNotToUse": [
+    "Real-time conversation (use chat).",
+    "Discussions where replies to replies run deep (use a flat list with quotes).",
+    "Screens with hardly any comments."
+  ],
+  "alternatives": [
+    {
+      "name": "Mention",
+      "slug": "mention",
+      "reason": "Calling someone instead of replying."
+    },
+    {
+      "name": "Accordion",
+      "slug": "accordion",
+      "reason": "Folding and unfolding content."
+    }
+  ],
+  "accessibility": [
+    "Each comment is an article named after its author.",
+    "The view replies and reply buttons have aria-expanded.",
+    "When the reply input opens, it takes focus.",
+    "Replies are set apart with a line as well as indentation."
+  ]
+}

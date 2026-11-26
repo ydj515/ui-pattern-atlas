@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You design free trials or auto-renewing subscriptions.",
+    "You decide when to send the pre-charge reminder.",
+    "You review the wording on the trial start screen."
+  ],
+  "whenNotToUse": [
+    "You'd put the billing terms only in small gray text.",
+    "You'd charge right away with no reminder.",
+    "You'd make canceling hard."
+  ],
+  "alternatives": [
+    {
+      "name": "Roach Motel",
+      "slug": "roach-motel",
+      "reason": "Making cancellation hard."
+    },
+    {
+      "name": "Hidden Costs",
+      "slug": "hidden-costs",
+      "reason": "Charges revealed later."
+    }
+  ],
+  "accessibility": [
+    "Put the billing date and amount near the button, in text of the same size.",
+    "Don't hide the terms in faint small print.",
+    "Show the reminder setting's state in words.",
+    "Explain how to cancel on the same screen."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "origin": "Introduced in the 1970s by the statistician John Tukey for exploratory data analysis. Its box and whiskers give it the name box-and-whisker plot.",
+  "whenToUse": [
+    "You compare the spread of groups such as regions or weekdays.",
+    "You check for values far from the rest.",
+    "Data an average alone could misrepresent."
+  ],
+  "whenNotToUse": [
+    "Showing it to people unfamiliar with box plots (use a histogram).",
+    "There are only a few values (show them all as dots).",
+    "The distribution has two or more peaks (use a histogram)."
+  ],
+  "alternatives": [
+    {
+      "name": "Histogram",
+      "slug": "histogram",
+      "reason": "Looking closely at the shape of one group's distribution."
+    },
+    {
+      "name": "Scatter Plot",
+      "slug": "scatter-plot",
+      "reason": "Showing every single value."
+    }
+  ],
+  "accessibility": [
+    "Pointing at it shows the median and the middle 50% range in text.",
+    "The table view lists each group's five numbers and its outliers.",
+    "Boxes and outliers are drawn with different shapes and colors."
+  ]
+}

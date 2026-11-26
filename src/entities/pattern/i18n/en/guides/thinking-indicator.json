@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There's a wait before the first character appears.",
+    "You want to reserve the bubble's place in advance.",
+    "Steps that take time, such as running tools."
+  ],
+  "whenNotToUse": [
+    "Answers that come out at once.",
+    "Work with several steps (use agent steps).",
+    "Work whose progress is known (use a progress bar)."
+  ],
+  "alternatives": [
+    {
+      "name": "Streaming Text",
+      "slug": "streaming-text",
+      "reason": "After the answer starts arriving."
+    },
+    {
+      "name": "Agent Steps",
+      "slug": "agent-steps",
+      "reason": "Telling what's being done step by step."
+    }
+  ],
+  "accessibility": [
+    "Announce the thinking message with role=status.",
+    "The dots are decorative, so they're aria-hidden and stop with reduced motion.",
+    "If it takes long, the elapsed time is added in words.",
+    "The ask button is disabled while waiting."
+  ]
+}

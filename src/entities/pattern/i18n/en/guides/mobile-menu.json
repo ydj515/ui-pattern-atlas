@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The top menu overflows on small screens.",
+    "There are many secondary pages people rarely use.",
+    "The mobile version of a website."
+  ],
+  "whenNotToUse": [
+    "Main screens people visit often (keep them visible in a bottom tab bar).",
+    "There are only two or three menu items (just show them).",
+    "Wide screens."
+  ],
+  "alternatives": [
+    {
+      "name": "Bottom Tab Bar",
+      "slug": "bottom-tab-bar",
+      "reason": "Keeping main screens always visible."
+    },
+    {
+      "name": "Drawer",
+      "slug": "drawer",
+      "reason": "Sliding the menu in from the side."
+    }
+  ],
+  "accessibility": [
+    "The button's name changes between \"Open menu\" and \"Close menu\", with aria-expanded and aria-controls.",
+    "Opening moves focus to the first link; closing with Esc or by choosing a link returns it to the button.",
+    "The menu is a named nav landmark.",
+    "The current page is announced with aria-current=\"page\"."
+  ]
+}

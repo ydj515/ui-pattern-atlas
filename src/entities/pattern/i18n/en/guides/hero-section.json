@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The first screen of a landing or product page.",
+    "You want to lead to one action.",
+    "The key message is clear."
+  ],
+  "whenNotToUse": [
+    "Work screens for signed-in users (show what to do right away).",
+    "The actions split several ways.",
+    "Only a large decorative image with no information."
+  ],
+  "alternatives": [
+    {
+      "name": "Z-pattern",
+      "slug": "z-pattern",
+      "reason": "Designing the eye path on a simple screen."
+    },
+    {
+      "name": "Bento Grid",
+      "slug": "bento-grid",
+      "reason": "Introducing features in several cells."
+    }
+  ],
+  "accessibility": [
+    "The title is the page's h1.",
+    "Keep only one primary button and de-emphasize secondary actions.",
+    "The visual is decorative, so it's aria-hidden.",
+    "text-balance evens out the title's line breaks."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Military, industrial, or outdoor brands.",
+    "Staging like boxes or signs.",
+    "Short headings."
+  ],
+  "whenNotToUse": [
+    "Small sizes (the breaks make it hard to read).",
+    "Body text.",
+    "The breaks would change a letter's meaning."
+  ],
+  "alternatives": [
+    {
+      "name": "Graffiti",
+      "slug": "graffiti",
+      "reason": "A spray-painted street feel."
+    },
+    {
+      "name": "Chunky",
+      "slug": "chunky",
+      "reason": "Thick strokes."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

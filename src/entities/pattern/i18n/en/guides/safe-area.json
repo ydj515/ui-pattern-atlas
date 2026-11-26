@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Mobile web and PWAs that use the full screen.",
+    "There are fixed headers and inputs at the top and bottom.",
+    "The side notch must be avoided in landscape."
+  ],
+  "whenNotToUse": [
+    "Desktop-only screens.",
+    "Ordinary pages where the browser bar is always visible (they're already safe).",
+    "You'd apply it to every element regardless (only to the edges that need it)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sticky Action Bar",
+      "slug": "sticky-action-bar",
+      "reason": "A button bar that handles the bottom padding too."
+    }
+  ],
+  "accessibility": [
+    "The viewport meta needs viewport-fit=cover for the values to be filled in.",
+    "max() sets a minimum padding so it doesn't feel cramped on devices without a notch.",
+    "Pad only the edges that need it to save room for content.",
+    "In landscape, check the left and right padding too."
+  ]
+}

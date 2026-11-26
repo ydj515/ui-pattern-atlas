@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Services where reasons fall into a few kinds, such as taxis or delivery.",
+    "You want reasons quickly, in one go.",
+    "You collect reasons for statistics."
+  ],
+  "whenNotToUse": [
+    "Reasons are too varied to fit in chips (use reviews).",
+    "You'd show the same chips regardless of score.",
+    "Choosing a chip would be required to move on."
+  ],
+  "alternatives": [
+    {
+      "name": "Written Review",
+      "slug": "written-review",
+      "reason": "Collecting details in writing."
+    },
+    {
+      "name": "Filter Chip",
+      "slug": "filter-chip",
+      "reason": "Chips that filter a list."
+    }
+  ],
+  "accessibility": [
+    "Chips are aria-pressed toggles that also show a check when chosen.",
+    "The chip group is named, such as What went well.",
+    "The rating is radio buttons, chosen with the keyboard.",
+    "When the score crosses between good and bad, the chosen chips are cleared."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "origin": "The name of the design language Apple introduced across its operating systems, including iOS 26, in 2025.",
+  "whenToUse": [
+    "Control bars floating over photos or video.",
+    "Layering controls without covering the content.",
+    "Matching the look of the latest platforms."
+  ],
+  "whenNotToUse": [
+    "Long text over bright, busy backgrounds.",
+    "Overusing heavy filters to imitate refraction on the web.",
+    "Screens where contrast can't be guaranteed."
+  ],
+  "alternatives": [
+    {
+      "name": "Glassmorphism",
+      "slug": "glassmorphism",
+      "reason": "Simple frosted glass."
+    },
+    {
+      "name": "Material Design",
+      "slug": "material-design",
+      "reason": "Opaque surfaces and shadows."
+    }
+  ],
+  "accessibility": [
+    "Check text shadow and contrast together so text stays readable when the background changes.",
+    "With prefers-reduced-transparency, switching to opaque surfaces is recommended.",
+    "The reflection layer is pointer-events: none decoration.",
+    "States are announced in words."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Lists you cross off one by one, such as tasks or shopping.",
+    "Finished items stay in the list for a while.",
+    "The progress count shows alongside."
+  ],
+  "whenNotToUse": [
+    "Finished items must leave the list at once.",
+    "Places where deleting and completing could be confused.",
+    "It would fade content that must be read."
+  ],
+  "alternatives": [
+    {
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "reason": "Selecting without a completion mark."
+    },
+    {
+      "name": "Setup Checklist",
+      "slug": "setup-checklist",
+      "reason": "First tasks with progress."
+    }
+  ],
+  "accessibility": [
+    "The checkbox itself conveys the completed state to screen readers.",
+    "The line is decorative, so it's aria-hidden.",
+    "Gray text still keeps contrast with the background.",
+    "With reduced motion, the line draws instantly."
+  ]
+}

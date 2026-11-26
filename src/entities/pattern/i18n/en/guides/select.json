@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "There are six or more options that would take a lot of room laid out.",
+    "Lists people already know, such as regions, countries, or years.",
+    "It must match the height of other inputs in a form."
+  ],
+  "whenNotToUse": [
+    "There are two to five options to compare (use a radio group).",
+    "The list is so long people need to search it (use a combobox).",
+    "People choose several (use a multi-select)."
+  ],
+  "alternatives": [
+    {
+      "name": "Radio Group",
+      "slug": "radio-group",
+      "reason": "Few enough options to lay out."
+    },
+    {
+      "name": "Combobox",
+      "slug": "combobox",
+      "reason": "Long enough that people need to type to find one."
+    }
+  ],
+  "accessibility": [
+    "It's a native select, so keyboard use, first-letter jumping, and screen reader support come from the browser.",
+    "Before a choice, show an unselectable placeholder option.",
+    "The hint connects with aria-describedby.",
+    "The arrow icon is decorative, so it's aria-hidden and doesn't block clicks."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The empty screen of a new conversation.",
+    "The assistant's strengths are well defined.",
+    "Many people are using it for the first time."
+  ],
+  "whenNotToUse": [
+    "Always showing them while a conversation is underway.",
+    "Disguising ads or sales as questions.",
+    "So many examples that choosing gets hard."
+  ],
+  "alternatives": [
+    {
+      "name": "Empty State",
+      "slug": "empty-state",
+      "reason": "An empty state that suggests the next action."
+    },
+    {
+      "name": "Prompt Input",
+      "slug": "prompt-input",
+      "reason": "Letting people write their own question."
+    }
+  ],
+  "accessibility": [
+    "The examples are real buttons, chosen with the keyboard.",
+    "The group is named Suggested questions.",
+    "The question text becomes the button name.",
+    "Pressing one announces the result with role=status."
+  ]
+}

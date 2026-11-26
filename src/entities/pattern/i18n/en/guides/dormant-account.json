@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Services that store information of long-unused accounts separately.",
+    "People sign in to a dormant account.",
+    "Remaining points or history must be reported."
+  ],
+  "whenNotToUse": [
+    "Services that leave accounts as they are, with no dormancy.",
+    "You'd string out long identity checks.",
+    "You wouldn't say what was kept."
+  ],
+  "alternatives": [
+    {
+      "name": "Resume Prompt",
+      "slug": "resume-prompt",
+      "reason": "Welcoming people back without dormancy."
+    },
+    {
+      "name": "Login Form",
+      "slug": "login-form",
+      "reason": "The sign-in step before."
+    }
+  ],
+  "accessibility": [
+    "The stored information is read as a list.",
+    "The check marks are decorative, so they're aria-hidden.",
+    "The result is read with role=\"status\"."
+  ]
+}

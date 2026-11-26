@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Processing continues after sending, as with inquiries, applications, and orders.",
+    "There's information people will need later, such as a reference number or expected time.",
+    "You need to say what to do after sending."
+  ],
+  "whenNotToUse": [
+    "A short result is enough, as when saving settings (use a toast).",
+    "People need to keep working on the same screen.",
+    "Sending failed (use an error summary or alert banner)."
+  ],
+  "alternatives": [
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Briefly reporting a result without changing the screen."
+    },
+    {
+      "name": "Error Summary",
+      "slug": "error-summary",
+      "reason": "Sending failed and there are fields to fix."
+    }
+  ],
+  "accessibility": [
+    "When the form disappears, move focus to the result heading so keyboard and screen reader users don't lose their place.",
+    "Write the heading as a sentence about what happened (\"Your inquiry was sent\").",
+    "The check icon is decorative, so it's aria-hidden.",
+    "Pressing the next action (write another inquiry) returns focus to the input."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Content consumed in parts, such as courses, videos, or long articles.",
+    "There's an unfinished post or order.",
+    "People reopen the app after a while."
+  ],
+  "whenNotToUse": [
+    "First-time visitors (use a welcome screen).",
+    "There's nothing to resume.",
+    "You'd show it again every time after it's closed."
+  ],
+  "alternatives": [
+    {
+      "name": "Welcome Screen / Modal",
+      "slug": "welcome-screen",
+      "reason": "Greeting first-time visitors."
+    },
+    {
+      "name": "Progress Bar",
+      "slug": "progress-bar",
+      "reason": "Showing progress only."
+    }
+  ],
+  "accessibility": [
+    "The progress element is named with the title and percentage.",
+    "The close button has a text name.",
+    "The whole card is a named section."
+  ]
+}

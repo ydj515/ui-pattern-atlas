@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "One sentence fits several uses, such as design, documents, and presentations.",
+    "Large headings on an introduction page.",
+    "The words are of similar length."
+  ],
+  "whenNotToUse": [
+    "Information people must read in the changing word.",
+    "Text inside buttons or links.",
+    "It moves for more than 5 seconds with no way to stop it."
+  ],
+  "alternatives": [
+    {
+      "name": "Typewriter",
+      "slug": "typewriter",
+      "reason": "Typing out one sentence once."
+    },
+    {
+      "name": "Marquee",
+      "slug": "marquee",
+      "reason": "Streaming several items continuously."
+    }
+  ],
+  "accessibility": [
+    "Screen readers hear all the words at once and aren't told about each change.",
+    "A pause button stops the motion (WCAG 2.2.2).",
+    "With reduced motion, it stays on the first word and the button is hidden.",
+    "The pause button announces its state with aria-pressed."
+  ]
+}

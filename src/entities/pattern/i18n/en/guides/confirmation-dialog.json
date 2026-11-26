@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "People leave and discard unsaved changes.",
+    "Right before something irreversible, such as deleting or resetting.",
+    "A mistake would be costly, as with paying or sending."
+  ],
+  "whenNotToUse": [
+    "The action can be undone (a toast with undo interrupts less).",
+    "You'd ask so often that people press confirm out of habit.",
+    "The system raises an urgent situation first (use an alert dialog)."
+  ],
+  "alternatives": [
+    {
+      "name": "Modal Dialog",
+      "slug": "modal-dialog",
+      "reason": "A window that needs input or explanation beyond confirming."
+    },
+    {
+      "name": "Alert Dialog",
+      "slug": "alert-dialog",
+      "reason": "A warning raised by the system, not by people."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Running first and offering undo."
+    }
+  ],
+  "accessibility": [
+    "Open it with the native <dialog> showModal() to trap focus and make the background inert.",
+    "Put the cancel button first with initial focus, so pressing Enter out of habit doesn't run the action.",
+    "Esc and a click on the backdrop count as cancel (false).",
+    "Name the buttons for what will actually happen, such as Leave, instead of OK."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "You show right away why a result came up.",
+    "Titles are long and the query is hard to spot.",
+    "You show which words matched a multi-word query."
+  ],
+  "whenNotToUse": [
+    "The letters don't match, as with spelling corrections or synonyms.",
+    "So much is highlighted that sentences are hard to read.",
+    "Emphasis unrelated to the search."
+  ],
+  "alternatives": [
+    {
+      "name": "Search Suggestions",
+      "slug": "search-suggestions",
+      "reason": "Bolding the part being added while typing."
+    },
+    {
+      "name": "Search Filters",
+      "slug": "search-filters",
+      "reason": "When results need narrowing."
+    }
+  ],
+  "accessibility": [
+    "Matches are mark elements, so the meaning comes across too.",
+    "Weight changes along with the background color, so it isn't color alone.",
+    "Regular expression special characters are escaped so any query is handled safely."
+  ]
+}

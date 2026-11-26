@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "News people should know even outside the app, such as a shipment leaving or a booking time.",
+    "People chose the topics they want to receive.",
+    "Timing matters and email would be too late."
+  ],
+  "whenNotToUse": [
+    "You'd ask for permission as soon as the page opens (most people refuse, and you can't ask again).",
+    "The news isn't wanted, such as ads or nudges to come back.",
+    "It's feedback while people are looking at the app (use a toast or notification center)."
+  ],
+  "alternatives": [
+    {
+      "name": "Notification Center",
+      "slug": "notification-center",
+      "reason": "Keeping news inside the app to show on the next visit."
+    },
+    {
+      "name": "Toast",
+      "slug": "toast",
+      "reason": "Telling people who are looking at the screen right now."
+    }
+  ],
+  "accessibility": [
+    "Request permission only when people press a button that explains what they'll receive.",
+    "If permission is denied or the browser doesn't support it, a role=\"status\" message gives the reason and the fix.",
+    "The on-screen preview is a decorative imitation of a real notification, so it's aria-hidden.",
+    "System notifications follow the operating system's accessibility settings (voice, vibration, do not disturb)."
+  ]
+}

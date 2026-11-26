@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "States are shown as columns, as on a kanban board.",
+    "Files are moved into folders or an upload area.",
+    "Spatial position carries meaning."
+  ],
+  "whenNotToUse": [
+    "Only the order changes (use a sortable list).",
+    "There are many destinations and dragging distances are long (use a move menu).",
+    "It often clashes with scrolling on touch screens."
+  ],
+  "alternatives": [
+    {
+      "name": "Sortable List",
+      "slug": "sortable-list",
+      "reason": "Only reordering within the same list."
+    },
+    {
+      "name": "File Upload",
+      "slug": "file-upload",
+      "reason": "Dragging and dropping files."
+    }
+  ],
+  "accessibility": [
+    "Each card has a move button, so keyboard and switch users can do the same (WCAG 2.5.7).",
+    "Read the result of a move (Design review → Done) with role=status.",
+    "Drop columns are named sections, so their positions can be told apart.",
+    "Highlights use two cues: color and a dashed border."
+  ]
+}

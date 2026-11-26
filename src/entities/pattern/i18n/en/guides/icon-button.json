@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Actions with widely known icons, such as share, save, or delete.",
+    "Space is tight, as in cards or toolbars.",
+    "The same action repeats in every list item."
+  ],
+  "whenNotToUse": [
+    "The icon alone doesn't make the meaning clear (use a text button).",
+    "The most important action on the screen (use a primary button with text).",
+    "It turns a state on and off (use a toggle button)."
+  ],
+  "alternatives": [
+    {
+      "name": "Button",
+      "slug": "button",
+      "reason": "The meaning must be clear in words."
+    },
+    {
+      "name": "Tooltip",
+      "slug": "tooltip",
+      "reason": "Explaining an element that isn't a button."
+    }
+  ],
+  "accessibility": [
+    "Give it a name with aria-label, and connect the same text as role=\"tooltip\" through aria-describedby.",
+    "The tooltip appears on both hover and keyboard focus.",
+    "The icon is aria-hidden, and the pressable area stays 40×40px.",
+    "Results are announced in a separate status message."
+  ]
+}

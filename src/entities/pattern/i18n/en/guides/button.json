@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The most important action on the screen, such as Save or Send.",
+    "Alternative actions (Later, Cancel) appear alongside.",
+    "It must be obvious that something can be pressed."
+  ],
+  "whenNotToUse": [
+    "It moves to another page (use a link).",
+    "A state that turns on and off (use a toggle button or a switch).",
+    "One area needs several primary buttons (sort out the hierarchy first)."
+  ],
+  "alternatives": [
+    {
+      "name": "Icon Button",
+      "slug": "icon-button",
+      "reason": "Space is tight and an icon conveys the meaning."
+    },
+    {
+      "name": "Toggle Button",
+      "slug": "toggle-button",
+      "reason": "The pressed state must persist."
+    }
+  ],
+  "accessibility": [
+    "Set type on native button elements so they don't submit a form by accident.",
+    "The keyboard focus ring shows only with :focus-visible, so it doesn't bother mouse users.",
+    "The slight shrink on press turns off with reduced motion.",
+    "Keep text contrast at 4.5:1 or more and heights of 32–40px so they're easy to press."
+  ]
+}

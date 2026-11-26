@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Overall satisfaction with a product, place, or content.",
+    "Five levels are enough.",
+    "It will be compared with others' ratings."
+  ],
+  "whenNotToUse": [
+    "Rating several aspects in detail (use rating tags or reviews).",
+    "Finer scales such as 0 to 10 (use a rating slider).",
+    "Only displaying a rating (use a rating badge)."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Slider",
+      "slug": "rating-slider",
+      "reason": "Choosing finely, such as 0 to 10."
+    },
+    {
+      "name": "Emoji Rating",
+      "slug": "emoji-rating",
+      "reason": "Choosing satisfaction by facial expression."
+    }
+  ],
+  "accessibility": [
+    "Build it from a fieldset and radio buttons so the arrow keys change the score.",
+    "Each option has a name such as 4 stars or 4.5 stars.",
+    "The star graphics are aria-hidden, and the score is also shown in text.",
+    "The focused star shows an outline."
+  ]
+}

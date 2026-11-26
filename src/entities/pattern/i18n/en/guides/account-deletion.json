@@ -1,0 +1,34 @@
+{
+  "whenToUse": [
+    "Deleting an account and its data.",
+    "Something is lost, such as reward points.",
+    "It can be undone within a set period."
+  ],
+  "whenNotToUse": [
+    "You'd make canceling deliberately hard (see the roach motel dark pattern).",
+    "You'd block it by making the reason required.",
+    "Offering only deletion to people who just want a break."
+  ],
+  "alternatives": [
+    {
+      "name": "Roach Motel",
+      "slug": "roach-motel",
+      "reason": "The dark pattern of making cancellation hard."
+    },
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "A light confirmation that can be undone."
+    },
+    {
+      "name": "Hold to Confirm",
+      "slug": "hold-to-confirm",
+      "reason": "Confirming by holding the button."
+    }
+  ],
+  "accessibility": [
+    "The button stays disabled until the confirmation text is typed.",
+    "What disappears is read as a list.",
+    "The request result is read with role=\"status\"."
+  ]
+}

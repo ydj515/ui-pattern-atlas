@@ -1,0 +1,30 @@
+{
+  "origin": "William Playfair is known to have first drawn one in his 1786 book The Commercial and Political Atlas, showing changes in imports and exports.",
+  "whenToUse": [
+    "You look at trends over time.",
+    "You compare two or three series on the same axis, such as this year and last year.",
+    "There are so many points that bars would be crowded."
+  ],
+  "whenNotToUse": [
+    "Comparing unordered items (use a bar chart).",
+    "Two values with different units in one chart (split the chart).",
+    "A small trend inside a card (use a sparkline)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sparkline",
+      "slug": "sparkline",
+      "reason": "Showing just a small trend without axes."
+    },
+    {
+      "name": "Bar Chart",
+      "slug": "bar-chart",
+      "reason": "Comparing items by size."
+    }
+  ],
+  "accessibility": [
+    "With focus on the chart area, moving the point with ←/→ reads the values via aria-live.",
+    "Series are told apart by the legend and names at the line ends, not color alone.",
+    "Opening the table view shows every value as a table."
+  ]
+}

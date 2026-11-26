@@ -1,0 +1,25 @@
+{
+  "whenToUse": [
+    "Order details, profiles, or product specs.",
+    "You organize read-only information.",
+    "Small actions such as copy sit next to values."
+  ],
+  "whenNotToUse": [
+    "Several items are compared (use a data table).",
+    "Values must be edited in place (use a form).",
+    "Ordinary lists that aren't pairs."
+  ],
+  "alternatives": [
+    {
+      "name": "Data Table",
+      "slug": "data-table",
+      "reason": "Comparing the same values across several items."
+    }
+  ],
+  "accessibility": [
+    "Use dl, dt, and dd so values are read with their names.",
+    "Name the section with a heading.",
+    "The copy button next to a value shows the result in words.",
+    "The reading order stays the same on narrow screens."
+  ]
+}

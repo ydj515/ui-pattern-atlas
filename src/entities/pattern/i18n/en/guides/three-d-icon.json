@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "App icons, empty states, or the key image of a feature introduction.",
+    "A flat screen needs one eye-catching point.",
+    "Friendly brand expression."
+  ],
+  "whenNotToUse": [
+    "Small toolbar icons (details turn to mush).",
+    "Lists with many icons.",
+    "It would mix styles with other icons."
+  ],
+  "alternatives": [
+    {
+      "name": "Skeuomorphism",
+      "slug": "skeuomorphism",
+      "reason": "Giving the whole screen real-object textures."
+    },
+    {
+      "name": "Flat Design",
+      "slug": "flat-design",
+      "reason": "Flat icons too."
+    }
+  ],
+  "accessibility": [
+    "Decorative icons are aria-hidden, and meaning is conveyed in words.",
+    "Add shadows to symbols on icons to raise contrast.",
+    "Use highlight blur only as decoration.",
+    "Button states are announced in words."
+  ]
+}

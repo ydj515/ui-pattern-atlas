@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "You review extra items in the cart or checkout.",
+    "You set the standard for recommending add-ons.",
+    "You find items that change the total."
+  ],
+  "whenNotToUse": [
+    "You'd add extra items in advance.",
+    "You'd announce automatic additions only in small print.",
+    "You'd make removing them hard."
+  ],
+  "alternatives": [
+    {
+      "name": "Hidden Costs",
+      "slug": "hidden-costs",
+      "reason": "Charges added at the end."
+    },
+    {
+      "name": "Pre-checked Opt-in",
+      "slug": "pre-checked-opt-in",
+      "reason": "Turning on optional consent in advance."
+    }
+  ],
+  "accessibility": [
+    "Extra items start as unchecked checkboxes.",
+    "Update the total in words whenever it changes.",
+    "Don't hide automatic additions in small gray text.",
+    "A label makes the whole sentence clickable."
+  ]
+}

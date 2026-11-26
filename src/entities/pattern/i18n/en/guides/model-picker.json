@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Models with different speed and quality can be chosen.",
+    "A setting chosen before a conversation starts.",
+    "There are three or four models."
+  ],
+  "whenNotToUse": [
+    "Internal choices people needn't know about (choose automatically).",
+    "There's only one model.",
+    "Models are priced differently and that isn't shown."
+  ],
+  "alternatives": [
+    {
+      "name": "Dropdown Menu",
+      "slug": "dropdown-menu",
+      "reason": "An ordinary selection menu."
+    },
+    {
+      "name": "Segmented Control",
+      "slug": "segmented-control",
+      "reason": "Always showing two or three choices."
+    }
+  ],
+  "accessibility": [
+    "The button is aria-haspopup=menu, and its name includes the current model.",
+    "Items announce the selection with menuitemradio and aria-checked.",
+    "The arrow keys move, and closing with Esc returns focus to the button.",
+    "The selection is marked with a check."
+  ]
+}

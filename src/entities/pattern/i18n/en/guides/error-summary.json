@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "A long form where errors may be off screen.",
+    "A form validated all at once after pressing submit.",
+    "Screen reader users need to hear the number and location of errors at once."
+  ],
+  "whenNotToUse": [
+    "A short form with one or two fields (inline errors beside the fields are enough).",
+    "You validate in real time while people type.",
+    "It's a server error unrelated to the form (use an alert banner)."
+  ],
+  "alternatives": [
+    {
+      "name": "Inline Validation",
+      "slug": "inline-validation",
+      "reason": "Reporting errors one by one right under each field. Using it together with an error summary is the default."
+    },
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "A page-level problem unrelated to specific fields."
+    }
+  ],
+  "accessibility": [
+    "When the summary appears, move focus to it and read the number of errors at once with role=\"alert\".",
+    "Put the count in the title (\"Check 2 fields\") so people learn first what to do.",
+    "Each item links to its field and moves focus into the input, not just the scroll position.",
+    "Connect inline errors to the fields with aria-invalid and aria-describedby, using the same words as the summary."
+  ]
+}

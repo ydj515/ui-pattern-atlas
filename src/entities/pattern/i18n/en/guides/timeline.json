@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Delivery tracking or order status.",
+    "Change history or activity logs.",
+    "You also show the steps still ahead."
+  ],
+  "whenNotToUse": [
+    "Lists where content matters more than order (use a list).",
+    "People move through the steps themselves (use a stepper).",
+    "There are very many records (use a list grouped by date)."
+  ],
+  "alternatives": [
+    {
+      "name": "Stepper / Step Indicator",
+      "slug": "stepper",
+      "reason": "People advance through steps themselves."
+    },
+    {
+      "name": "Grouped List",
+      "slug": "grouped-list",
+      "reason": "Grouping by date."
+    }
+  ],
+  "accessibility": [
+    "Convey the order with an ol list; the latest step has aria-current=\"step\".",
+    "Steps that haven't happened yet show \"Upcoming\" in words.",
+    "Dots and lines are decorative, so they're aria-hidden.",
+    "Times are shown in words too."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Making the content itself stand out, such as products or photos.",
+    "A refined brand impression.",
+    "There's only one thing to do on the screen."
+  ],
+  "whenNotToUse": [
+    "You'd erase even the signals that things can be pressed.",
+    "Complex screens for comparing information.",
+    "Thin type drops the contrast."
+  ],
+  "alternatives": [
+    {
+      "name": "Flat Design",
+      "slug": "flat-design",
+      "reason": "Making controls clear with colored planes."
+    },
+    {
+      "name": "Brutalism",
+      "slug": "brutalism",
+      "reason": "Pared back, but rough."
+    }
+  ],
+  "accessibility": [
+    "Keep the contrast of thin and gray text at 4.5:1 or more.",
+    "Even underlined buttons get a touch area close to 44px.",
+    "Show states in words too.",
+    "Even with wide spacing, lay things out so the reading order is clear."
+  ]
+}

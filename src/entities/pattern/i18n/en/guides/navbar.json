@@ -1,0 +1,35 @@
+{
+  "whenToUse": [
+    "The website has about five main pages.",
+    "People need to jump to another section from any page.",
+    "A key action such as Sign in or Get started should always be visible."
+  ],
+  "whenNotToUse": [
+    "There are many menu items and deep levels (use a sidebar or a mega menu).",
+    "On small screens (fold it into a hamburger menu).",
+    "You're switching between an app's main screens (use a bottom tab bar)."
+  ],
+  "alternatives": [
+    {
+      "name": "Sidebar Navigation",
+      "slug": "sidebar-navigation",
+      "reason": "Apps with many menu items."
+    },
+    {
+      "name": "Mobile Menu",
+      "slug": "mobile-menu",
+      "reason": "Small screens."
+    },
+    {
+      "name": "Mega Menu",
+      "slug": "mega-menu",
+      "reason": "Many sub-pages."
+    }
+  ],
+  "accessibility": [
+    "Name the nav landmark (\"Main menu\") to tell it apart from other navigation.",
+    "Mark the current page with aria-current=\"page\" and an underline, not color alone.",
+    "Links are real a elements, so default behavior such as opening in a new tab works.",
+    "The keyboard focus ring is visible."
+  ]
+}

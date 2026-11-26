@@ -1,0 +1,26 @@
+{
+  "whenToUse": ["Games or retro events.", "Staging like an LED sign or clock.", "Short headings."],
+  "whenNotToUse": [
+    "Long Korean sentences (the strokes turn to mush).",
+    "Small sizes.",
+    "Notices where readability matters."
+  ],
+  "alternatives": [
+    {
+      "name": "Monospace",
+      "slug": "monospace",
+      "reason": "Equal-width cells."
+    },
+    {
+      "name": "Glitch",
+      "slug": "glitch",
+      "reason": "A digital error feel."
+    }
+  ],
+  "accessibility": [
+    "Letters drawn in SVG are read through role=img and an aria-label (Weekend Market).",
+    "Pixel letters are hard to read small, so use them large.",
+    "Allow the same phrase to appear as text too.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

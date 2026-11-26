@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Product or shop cards and search results.",
+    "You show the rating as a basis for sorting or comparison.",
+    "The rating must fit in a tight spot."
+  ],
+  "whenNotToUse": [
+    "The score distribution matters (use a rating summary).",
+    "You'd show the rating without the review count.",
+    "Collecting ratings (use a star rating)."
+  ],
+  "alternatives": [
+    {
+      "name": "Rating Summary",
+      "slug": "rating-summary",
+      "reason": "Also showing the distribution."
+    },
+    {
+      "name": "Badge",
+      "slug": "badge",
+      "reason": "Showing a state or count."
+    }
+  ],
+  "accessibility": [
+    "Screen readers hear one sentence, such as Rated 4.6 out of 5, 1,284 reviews.",
+    "The star symbol and numbers are aria-hidden.",
+    "Numbers line up with tabular-nums.",
+    "Sort buttons announce the current order with aria-pressed."
+  ]
+}

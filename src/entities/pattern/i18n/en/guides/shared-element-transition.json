@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "The same object appears in both the list and the details, such as photos or product cards.",
+    "You visually connect which item was opened.",
+    "Going back shows the original position again."
+  ],
+  "whenNotToUse": [
+    "The two screens don't share an object (use a page transition).",
+    "Several elements with the same name would exist on one screen.",
+    "Work screens with frequent transitions."
+  ],
+  "alternatives": [
+    {
+      "name": "Zoom Transition",
+      "slug": "zoom-transition",
+      "reason": "The whole screen grows out of an icon."
+    },
+    {
+      "name": "Lightbox",
+      "slug": "lightbox",
+      "reason": "Viewing a photo large."
+    }
+  ],
+  "accessibility": [
+    "When the details open, focus goes to the close button; when they close, it returns to the photo that was pressed.",
+    "Without the API, or with reduced motion, the screen just switches without a transition.",
+    "Each photo comes with a name and a text description.",
+    "Give view-transition-name to only one element at a time."
+  ]
+}

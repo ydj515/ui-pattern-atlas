@@ -1,0 +1,31 @@
+{
+  "origin": "Named after masonry, where bricks are laid in staggered rows: cards of different heights are stacked without gaps. David DeSandro's JavaScript library Masonry made the name known, and Pinterest is the best-known example.",
+  "whenToUse": [
+    "Collections of ideas or recipes whose photos have different proportions.",
+    "Screens for browsing and picking what you like.",
+    "Card order isn't very important."
+  ],
+  "whenNotToUse": [
+    "Order matters (the top-to-bottom reading order gets confusing).",
+    "Cards have similar heights (use an ordinary grid).",
+    "Items are compared in aligned rows, like a table."
+  ],
+  "alternatives": [
+    {
+      "name": "Card",
+      "slug": "card",
+      "reason": "Same-size cards in aligned rows."
+    },
+    {
+      "name": "Image Gallery",
+      "slug": "image-gallery",
+      "reason": "Looking closely at photos one by one."
+    }
+  ],
+  "accessibility": [
+    "CSS columns flow top to bottom within each column, so place the DOM in reading order.",
+    "Name the list so the number of items is read along with it.",
+    "Use break-inside: avoid so cards aren't split between columns.",
+    "Column count buttons announce their state with aria-pressed."
+  ]
+}

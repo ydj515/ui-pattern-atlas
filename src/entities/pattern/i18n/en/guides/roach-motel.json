@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the ad line for the Roach Motel bug trap: roaches check in, but they don't check out. It's one of the types Harry Brignull described when he coined the term dark pattern in 2010.",
+  "whenToUse": [
+    "You review subscription cancellation or account deletion flows.",
+    "You compare the number of steps to sign up and to cancel.",
+    "You draw the line for retention screens."
+  ],
+  "whenNotToUse": [
+    "You'd accept cancellations only by phone or chat.",
+    "You'd hide the cancel button behind several steps.",
+    "You'd push offers again and again before letting people cancel."
+  ],
+  "alternatives": [
+    {
+      "name": "Forced Continuity",
+      "slug": "forced-continuity",
+      "reason": "Flows where a trial turns into a paid plan."
+    },
+    {
+      "name": "Confirmation Dialog",
+      "slug": "confirmation-dialog",
+      "reason": "Confirming once before canceling."
+    }
+  ],
+  "accessibility": [
+    "Make the cancel button findable the same way as other buttons.",
+    "Don't hide guidance in small, faint gray text.",
+    "State the remaining service period in words.",
+    "Report the cancellation result right away."
+  ]
+}

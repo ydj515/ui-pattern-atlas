@@ -1,0 +1,29 @@
+{
+  "whenToUse": [
+    "Documents edited by several people.",
+    "Content deleted by mistake must be recovered.",
+    "People need to know who changed what and when."
+  ],
+  "whenNotToUse": [
+    "Undoing only the last action is enough (use undo).",
+    "Restoring would delete the later versions.",
+    "You wouldn't say what changed in each version."
+  ],
+  "alternatives": [
+    {
+      "name": "Undo",
+      "slug": "undo",
+      "reason": "Undoing only the last action."
+    },
+    {
+      "name": "Timeline",
+      "slug": "timeline",
+      "reason": "Showing records in time order."
+    }
+  ],
+  "accessibility": [
+    "The version list is radio buttons grouped with fieldset and legend.",
+    "The current version is marked with a badge in text.",
+    "The restore result is read with role=\"status\"."
+  ]
+}

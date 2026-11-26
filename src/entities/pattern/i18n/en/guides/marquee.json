@@ -1,0 +1,31 @@
+{
+  "origin": "Named after the marquee above a theater entrance, where show names scrolled across. Early HTML even had a tag of the same name, <marquee>.",
+  "whenToUse": [
+    "Several short, less important phrases, such as shipping or perks.",
+    "Listing logos or client names.",
+    "A thin strip at the very top of the page."
+  ],
+  "whenNotToUse": [
+    "Announcements people must read (use a banner).",
+    "Lists with many pressable links.",
+    "Between paragraphs of body text, where it disrupts reading."
+  ],
+  "alternatives": [
+    {
+      "name": "Alert Banner",
+      "slug": "alert-banner",
+      "reason": "Announcements people must read."
+    },
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "reason": "Content people flick through themselves."
+    }
+  ],
+  "accessibility": [
+    "The second copy of the list is aria-hidden, so screen readers hear it once.",
+    "It stops on hover or when focus enters, and there's a pause button (WCAG 2.2.2).",
+    "With reduced motion, it doesn't scroll and wraps to show everything.",
+    "Name the whole strip with aria-label."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "whenToUse": [
+    "Startup landing pages or product labels.",
+    "Tags or short headings.",
+    "Playful brands."
+  ],
+  "whenNotToUse": ["Long sentences.", "Calm services.", "Putting every piece of text in a box."],
+  "alternatives": [
+    {
+      "name": "Brutalist Typography",
+      "slug": "brutalist-typography",
+      "reason": "The rougher original."
+    },
+    {
+      "name": "Cutout Collage",
+      "slug": "cutout-collage",
+      "reason": "Letters made of pasted pieces."
+    }
+  ],
+  "accessibility": [
+    "Check that large styled text still contrasts with its background.",
+    "Screen readers should hear the same phrase as is, not the decorated letters.",
+    "The phrase keeps its meaning even with the decorative effect removed.",
+    "A toggle to compare with plain text shows the difference the effect makes."
+  ]
+}

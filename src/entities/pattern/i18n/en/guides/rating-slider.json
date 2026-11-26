@@ -1,0 +1,30 @@
+{
+  "whenToUse": [
+    "Fine-grained satisfaction, such as for a class or consultation.",
+    "People quickly pick an approximate position.",
+    "The meanings of both ends are clear."
+  ],
+  "whenNotToUse": [
+    "An exact number must be chosen (use buttons, as with NPS).",
+    "Five levels are enough (use a star rating).",
+    "Precision on small touch screens."
+  ],
+  "alternatives": [
+    {
+      "name": "NPS Scale",
+      "slug": "nps-scale",
+      "reason": "Choosing with number buttons."
+    },
+    {
+      "name": "Range Slider",
+      "slug": "range-slider",
+      "reason": "Choosing two values, a minimum and a maximum."
+    }
+  ],
+  "accessibility": [
+    "It's a native range input, so the arrow keys move it one point at a time.",
+    "aria-valuetext reads it as, for example, 8 points.",
+    "The score bubble is aria-hidden, since the same value is read out.",
+    "The meanings of both ends are written as text."
+  ]
+}
