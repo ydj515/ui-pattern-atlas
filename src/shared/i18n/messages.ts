@@ -69,7 +69,11 @@ const ko = {
     tryOtherWords: "다른 이름이나 생김새로 찾아보세요.",
     showAll: "전체 패턴 보기",
     comparisonIndex: "비교 가이드 목차",
-    topicCount: (value: number) => `${value}개`,
+    /** Count beside a topic heading; comparison topics count guides rather than patterns. */
+    topicCount: ((value: number) => `${value}개`) as (
+      value: number,
+      comparisons: boolean,
+    ) => string,
     topicDemos: (topic: string) => `${topic} 데모`,
     searchResults: "검색 결과",
     patternDemos: "패턴 데모",
@@ -154,7 +158,7 @@ const en: Messages = {
     name: "UI pattern dictionary",
     skipToContent: "Skip to content",
     footer: {
-      before: "UI Pattern Atlas is open source. Report a missing pattern or a fix on ",
+      before: "UI Pattern Atlas is open source. Report a missing pattern or suggest a fix on ",
       after: ".",
     },
     language: "Language",
@@ -181,8 +185,8 @@ const en: Messages = {
   theme: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },
   error: {
     unknown: "Unknown error",
-    title: "Something went wrong while drawing this page",
-    home: "Back to the start",
+    title: "Something went wrong while showing this page",
+    home: "Go to the home page",
   },
   notFound: {
     title: "Page not found",
@@ -210,7 +214,8 @@ const en: Messages = {
     tryOtherWords: "Try another name or describe how it looks.",
     showAll: "Show all patterns",
     comparisonIndex: "Comparison index",
-    topicCount: (value: number) => count(value, "pattern", "patterns"),
+    topicCount: (value: number, comparisons: boolean) =>
+      comparisons ? count(value, "comparison", "comparisons") : count(value, "pattern", "patterns"),
     topicDemos: (topic: string) => `${topic} demos`,
     searchResults: "Search results",
     patternDemos: "Pattern demos",

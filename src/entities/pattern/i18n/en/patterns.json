@@ -159,7 +159,7 @@
   },
   "load-more": {
     "summary": "Press to see more.",
-    "description": "Load more appends the next batch only when people press the button at the end of the list. It says how many have been seen out of how many, and moves focus to the first new item so reading continues.",
+    "description": "Load more appends the next batch only when people press the button at the end of the list. It shows how many items they've seen out of the total, and moves focus to the first new item so reading continues.",
     "aliases": ["show more", "load more button", "see more"]
   },
   "mega-menu": {
@@ -504,7 +504,7 @@
   },
   "lightbox": {
     "summary": "Showing an image large and paging through.",
-    "description": "A lightbox opens a small photo large over the screen and lets people page through left and right. It shows which photo of how many and its caption, and closing it returns to the photo that was pressed.",
+    "description": "A lightbox opens a small photo large over the screen and lets people page through left and right. It shows the photo's position, such as 2 of 4, with its caption, and closing it returns to the photo that was pressed.",
     "aliases": ["image viewer", "photo modal", "full-size image"]
   },
   "masonry-grid": {
@@ -519,7 +519,7 @@
   },
   "stories": {
     "summary": "Full-screen content you tap through.",
-    "description": "Stories show short pieces of content full screen, one at a time, moving on after a while or when people tap the side. Bars at the top show which one of how many is playing.",
+    "description": "Stories show short pieces of content full screen, one at a time, moving on after a while or when people tap the side. Bars at the top show the current story's position among the rest.",
     "aliases": ["story viewer", "tap through", "full-screen stories", "Instagram stories"]
   },
   "badge": {
@@ -549,7 +549,7 @@
   },
   "page-indicator": {
     "summary": "Dots showing the current slide of a carousel.",
-    "description": "A page indicator uses dots to show which screen of several people are on. The current dot differs in length as well as color.",
+    "description": "A page indicator uses dots to show which of a few screens people are on. The current dot differs in length as well as color.",
     "aliases": ["dots", "pagination dots", "carousel dots"]
   },
   "unread-indicator": {
@@ -1143,7 +1143,7 @@
     "aliases": ["order summary", "receipt", "payment details"]
   },
   "streak": {
-    "summary": "A record of how many days in a row.",
+    "summary": "A count of how many days in a row.",
     "description": "A streak shows how many days in a row something has continued and marks this week's recorded days. Recording today makes the number hop once to show it went up.",
     "aliases": ["daily streak", "habit tracker", "consecutive days"]
   },
@@ -1269,7 +1269,7 @@
   },
   "nearby-share": {
     "summary": "Sending straight to a nearby device.",
-    "description": "Nearby share lists devices one by one as they're found, waits for the other person to accept once one is chosen, and then says sent or declined. The operating system does the discovery; this component is the screen that shows its results.",
+    "description": "Nearby share lists devices one by one as they're found, waits for the other person to accept once one is chosen, and then reports whether it was sent or declined. The operating system does the discovery; this component is the screen that shows its results.",
     "aliases": ["nearby devices", "local share", "AirDrop"]
   },
   "chat-interface": {

@@ -338,7 +338,9 @@ export function CatalogPage() {
                       {messages.catalog.comparisonIndex}
                     </Link>
                   )}
-                  <span className="tabular-nums">{messages.catalog.topicCount(count)}</span>
+                  <span className="tabular-nums">
+                    {messages.catalog.topicCount(count, topic.kind === "비교")}
+                  </span>
                 </div>
               </div>
               <div className="space-y-8">
