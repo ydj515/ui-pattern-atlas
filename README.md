@@ -12,11 +12,11 @@
 
 **Discover, explore, and implement modern UI patterns.**
 
+Website: <https://ui-pattern-atlas.pages.dev/> · English: <https://ui-pattern-atlas.pages.dev/en/>
+
 UI Pattern Atlas is an open-source catalog of UI patterns and components, featuring interactive previews, usage guidelines, and reusable implementations built with React, TypeScript, and Tailwind CSS.
 
 From basic components to complex interaction patterns, it helps developers discover the right UI solutions, understand their behavior, and integrate them into real-world applications.
-
-**[Open the atlas](https://ui-pattern-atlas.pages.dev/)** · [English](https://ui-pattern-atlas.pages.dev/en/)
 
 ## Features
 
