@@ -10,24 +10,23 @@ export type Locale = (typeof LOCALES)[number];
 /** How each language names itself in the language menu. */
 export const LOCALE_NAMES: Readonly<Record<Locale, string>> = { ko: "한국어", en: "English" };
 
-/** Language of a browser path. `base` is the deploy base path, e.g. `/` or `/ui-pattern-atlas/`. */
-export function localeFromPathname(pathname: string, base: string): Locale {
-  const rest = pathname.startsWith(base) ? pathname.slice(base.length) : pathname.slice(1);
-  return rest === "en" || rest.startsWith("en/") ? "en" : "ko";
+/** Language of a browser path. The site is served from the root. */
+export function localeFromPathname(pathname: string): Locale {
+  return pathname === "/en" || pathname.startsWith("/en/") ? "en" : "ko";
 }
 
-/** Router basename for a language: the deploy base, plus `en` for English. */
-export function routerBasename(base: string, locale: Locale): string {
-  return locale === "en" ? `${base}en` : base;
+/** Router basename for a language: `/en` for English, the root for Korean. */
+export function routerBasename(locale: Locale): string {
+  return locale === "en" ? "/en" : "/";
 }
 
 /**
  * Full address of a router path (`/patterns/toast?q=a#x`) in a language. Switching languages
  * loads this address, so each language keeps its own router basename.
  */
-export function localizedHref(base: string, locale: Locale, path: string): string {
+export function localizedHref(locale: Locale, path: string): string {
   const rest = path.replace(/^\//, "");
-  return locale === "en" ? `${base}en/${rest}` : `${base}${rest}`;
+  return locale === "en" ? `/en/${rest}` : `/${rest}`;
 }
 
 const LocaleContext = createContext<Locale>("ko");

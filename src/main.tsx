@@ -17,12 +17,11 @@ const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Root element #root is missing in index.html");
 const container: HTMLElement = rootElement;
 
-// English pages live under `<base>en/`; each language gets its own router basename, so every
-// route and link stays language-neutral. Matches Vite's `base`, which is `/` on Cloudflare Pages.
-const base = import.meta.env.BASE_URL;
-const locale = localeFromPathname(window.location.pathname, base);
+// English pages live under `/en/`; each language gets its own router basename, so every route
+// and link stays language-neutral.
+const locale = localeFromPathname(window.location.pathname);
 document.documentElement.lang = locale;
-const router = createBrowserRouter(routes, { basename: routerBasename(base, locale) });
+const router = createBrowserRouter(routes, { basename: routerBasename(locale) });
 
 function render() {
   createRoot(container).render(

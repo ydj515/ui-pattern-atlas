@@ -5,30 +5,27 @@ import { MESSAGES, type Messages } from "@/shared/i18n/messages";
 
 describe("locale paths", () => {
   it.each([
-    ["/", "/", "ko"],
-    ["/patterns/toast", "/", "ko"],
-    ["/en", "/", "en"],
-    ["/en/patterns/toast", "/", "en"],
-    ["/english-tips", "/", "ko"],
-    ["/ui-pattern-atlas/", "/ui-pattern-atlas/", "ko"],
-    ["/ui-pattern-atlas/en/", "/ui-pattern-atlas/", "en"],
-    ["/ui-pattern-atlas/en/roadmap", "/ui-pattern-atlas/", "en"],
-  ] as const)("reads %s under base %s as %s", (pathname, base, locale) => {
-    expect(localeFromPathname(pathname, base)).toBe(locale);
+    ["/", "ko"],
+    ["/patterns/toast", "ko"],
+    ["/en", "en"],
+    ["/en/", "en"],
+    ["/en/patterns/toast", "en"],
+    ["/english-tips", "ko"],
+  ] as const)("reads %s as %s", (pathname, locale) => {
+    expect(localeFromPathname(pathname)).toBe(locale);
   });
 
   it("gives English its own router basename", () => {
-    expect(routerBasename("/", "ko")).toBe("/");
-    expect(routerBasename("/", "en")).toBe("/en");
-    expect(routerBasename("/ui-pattern-atlas/", "en")).toBe("/ui-pattern-atlas/en");
+    expect(routerBasename("ko")).toBe("/");
+    expect(routerBasename("en")).toBe("/en");
   });
 
   it("builds the same page's address in each language", () => {
     const path = "/patterns/toast?q=a#accessibility";
-    expect(localizedHref("/", "en", path)).toBe("/en/patterns/toast?q=a#accessibility");
-    expect(localizedHref("/", "ko", path)).toBe("/patterns/toast?q=a#accessibility");
-    expect(localizedHref("/ui-pattern-atlas/", "en", "/")).toBe("/ui-pattern-atlas/en/");
-    expect(localizedHref("/ui-pattern-atlas/", "ko", "/roadmap")).toBe("/ui-pattern-atlas/roadmap");
+    expect(localizedHref("en", path)).toBe("/en/patterns/toast?q=a#accessibility");
+    expect(localizedHref("ko", path)).toBe("/patterns/toast?q=a#accessibility");
+    expect(localizedHref("en", "/")).toBe("/en/");
+    expect(localizedHref("ko", "/roadmap")).toBe("/roadmap");
   });
 });
 

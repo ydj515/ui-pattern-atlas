@@ -17,14 +17,7 @@ const linkClassName = `flex min-h-11 items-center justify-between rounded-contro
 // The marker highlight is for the selected category only; the current language is just bolder.
 const languageLinkClassName = `flex min-h-11 items-center rounded-control px-3 text-body-sm hover:bg-field aria-[current]:font-medium aria-[current]:text-ink ${navLinkClassName}`;
 
-export function MobileNavigation({
-  repositoryUrl,
-  base = import.meta.env.BASE_URL,
-}: {
-  readonly repositoryUrl: string;
-  /** Deploy base path for the language links; tests pass their own. */
-  readonly base?: string;
-}) {
+export function MobileNavigation({ repositoryUrl }: { readonly repositoryUrl: string }) {
   const locale = useLocale();
   const messages = useMessages();
   const [open, setOpen] = useState(false);
@@ -158,7 +151,7 @@ export function MobileNavigation({
           {LOCALES.map((target) => (
             <li key={target}>
               <a
-                href={localizedHref(base, target, `${pathname}${search}${hash}`)}
+                href={localizedHref(target, `${pathname}${search}${hash}`)}
                 lang={target}
                 hrefLang={target}
                 aria-current={target === locale ? "true" : undefined}

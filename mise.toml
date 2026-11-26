@@ -51,7 +51,7 @@ depends = ["install"]
 run = "pnpm run test:coverage"
 
 [tasks.build]
-description = "Build into dist/ for the site root (Cloudflare Pages). BASE_PATH sets a sub-path if ever needed"
+description = "Build into dist/ for the site root (Cloudflare Pages)"
 depends = ["install"]
 run = "pnpm run build"
 

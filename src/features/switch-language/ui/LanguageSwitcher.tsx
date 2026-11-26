@@ -9,12 +9,7 @@ import { buttonClassName } from "@/shared/ui/primitives/Button";
  * Language menu: the current language, and links to the same page in each language. A
  * language switch is a full page load, because each language has its own router basename.
  */
-export function LanguageSwitcher({
-  base = import.meta.env.BASE_URL,
-}: {
-  /** Deploy base path; tests pass their own. */
-  readonly base?: string;
-}) {
+export function LanguageSwitcher() {
   const locale = useLocale();
   const messages = useMessages();
   const { pathname, search, hash } = useLocation();
@@ -34,7 +29,7 @@ export function LanguageSwitcher({
     return () => document.removeEventListener("pointerdown", closeOnOutsidePress);
   }, [open]);
 
-  const hrefFor = (target: Locale) => localizedHref(base, target, `${pathname}${search}${hash}`);
+  const hrefFor = (target: Locale) => localizedHref(target, `${pathname}${search}${hash}`);
 
   return (
     <div

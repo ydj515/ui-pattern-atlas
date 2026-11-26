@@ -7,16 +7,6 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
 /**
- * Public path the app is served from. Cloudflare Pages serves the site at the root, so this
- * stays `/`; set BASE_PATH only to try a sub-path deploy.
- */
-function resolveBasePath(value: string | undefined): string {
-  const trimmed = value?.trim() ?? "";
-  if (trimmed === "" || trimmed === "/") return "/";
-  return `/${trimmed.replace(/^\/+|\/+$/g, "")}/`;
-}
-
-/**
  * Maps each catalog folder to its pattern category by reading the entry file, so thumbnails
  * can be bundled per category.
  */
@@ -48,7 +38,6 @@ function thumbnailChunkName(moduleId: string): string | null {
 }
 
 export default defineConfig({
-  base: resolveBasePath(process.env.BASE_PATH),
   plugins: [react(), tailwindcss()],
   build: {
     rolldownOptions: {

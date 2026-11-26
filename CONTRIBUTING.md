@@ -122,7 +122,7 @@ One-time setup:
 3. Add the repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
    (**Settings → Secrets and variables → Actions**).
 
-The site is served from the root, so builds need no `BASE_PATH`. The build writes no
-`404.html`: without one, Cloudflare Pages treats the site as a single-page app and serves
+The site is served from the root of its domain; sub-path deploys are not supported. The
+build writes no `404.html`: without one, Cloudflare Pages treats the site as a single-page app and serves
 `index.html` with status 200 for every path, so deep links such as `/en/patterns/toast` load
 the app. To check a production build locally, run `mise run preview`.
