@@ -4,36 +4,16 @@ import { fileURLToPath, URL } from "node:url";
 
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import type { Plugin } from "vite";
 import { defineConfig } from "vitest/config";
 
 /**
- * Public path the app is served from. GitHub Pages project sites live under
- * `/<repo>/`, so CI passes it in; local dev and custom domains use `/`.
+ * Public path the app is served from. Cloudflare Pages serves the site at the root, so this
+ * stays `/`; set BASE_PATH only to try a sub-path deploy.
  */
 function resolveBasePath(value: string | undefined): string {
   const trimmed = value?.trim() ?? "";
   if (trimmed === "" || trimmed === "/") return "/";
   return `/${trimmed.replace(/^\/+|\/+$/g, "")}/`;
-}
-
-/**
- * Static hosts such as GitHub Pages have no SPA rewrites. Serving the app shell as
- * `404.html` lets deep links like `/patterns/toast` boot the router instead of a 404 page.
- */
-function spaFallback(): Plugin {
-  return {
-    name: "spa-fallback-404",
-    apply: "build",
-    enforce: "post",
-    generateBundle(_options, bundle) {
-      const indexHtml = bundle["index.html"];
-      if (indexHtml?.type !== "asset") {
-        this.error("index.html was not emitted; cannot create the 404.html SPA fallback");
-      }
-      this.emitFile({ type: "asset", fileName: "404.html", source: indexHtml.source });
-    },
-  };
 }
 
 /**
@@ -69,7 +49,7 @@ function thumbnailChunkName(moduleId: string): string | null {
 
 export default defineConfig({
   base: resolveBasePath(process.env.BASE_PATH),
-  plugins: [react(), tailwindcss(), spaFallback()],
+  plugins: [react(), tailwindcss()],
   build: {
     rolldownOptions: {
       output: {

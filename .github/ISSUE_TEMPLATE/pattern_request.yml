@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Suggest a pattern or comparison guide to add to UI Pattern Atlas (you may write in English or Korean).
-        Check the [topic index](https://ydj515.github.io/ui-pattern-atlas/roadmap) first to see what is already planned or completed.
+        Check the [topic index](https://ui-pattern-atlas.pages.dev/roadmap) first to see what is already planned or completed.
 
   - type: dropdown
     id: category

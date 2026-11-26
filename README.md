@@ -1,7 +1,7 @@
 # UI Pattern Atlas
 
 [![CI](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/ci.yml)
-[![Deploy to GitHub Pages](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/deploy-pages.yml)
+[![Deploy to Cloudflare Pages](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/deploy-cloudflare.yml/badge.svg?branch=main)](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/deploy-cloudflare.yml)
 [![Sync Development Standards](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/sync-dev-standards.yml/badge.svg)](https://github.com/ydj515/ui-pattern-atlas/actions/workflows/sync-dev-standards.yml)
 ![Node.js](https://img.shields.io/badge/Node.js-24.22-339933?logo=nodedotjs&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-11.28-F69220?logo=pnpm&logoColor=white)
@@ -16,7 +16,7 @@ UI Pattern Atlas is an open-source catalog of UI patterns and components, featur
 
 From basic components to complex interaction patterns, it helps developers discover the right UI solutions, understand their behavior, and integrate them into real-world applications.
 
-**[Open the atlas](https://ydj515.github.io/ui-pattern-atlas/)**
+**[Open the atlas](https://ui-pattern-atlas.pages.dev/)** · [English](https://ui-pattern-atlas.pages.dev/en/)
 
 ## Features
 
