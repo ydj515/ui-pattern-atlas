@@ -1,9 +1,10 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import { describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 
 import { routes } from "@/app/router/routes";
+import { loadCatalogText } from "@/entities/pattern/i18n/catalogText";
 import { LocaleProvider, type Locale } from "@/shared/i18n/locale";
 
 /** Renders the app as a language serves it: English under its own `/en` basename. */
@@ -24,6 +25,8 @@ function renderIn(locale: Locale, path: string) {
 const HANGUL = /[가-힣]/;
 
 describe("English pages", () => {
+  beforeAll(() => loadCatalogText("en"));
+
   it("shows the site chrome in English and notes that demos use Korean copy", () => {
     renderIn("en", "/");
     expect(screen.getByRole("searchbox", { name: "Search UI patterns" })).toHaveAttribute(
@@ -90,5 +93,56 @@ describe("English pages", () => {
     renderIn("en", "/no-such-page");
     expect(screen.getByRole("heading", { level: 1, name: "Page not found" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Back to patterns" })).toHaveAttribute("href", "/en");
+  });
+
+  it("shows topics, cards and search results in English", async () => {
+    renderIn("en", "/");
+    expect(screen.getByRole("heading", { level: 2, name: "Overlays" })).toBeInTheDocument();
+    expect(
+      screen.getByText("Dialogs, panels, and hints that appear over the current screen."),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("A dialog that pauses the current task for a decision."),
+    ).toBeInTheDocument();
+    await userEvent.type(screen.getByRole("searchbox", { name: "Search UI patterns" }), "snackbar");
+    const results = within(await screen.findByRole("list", { name: "Pattern demos" }));
+    expect(results.getByRole("link", { name: /^Toast/ })).toHaveAttribute(
+      "href",
+      "/en/patterns/toast",
+    );
+  });
+
+  it("describes a pattern in English on its page", async () => {
+    renderIn("en", "/patterns/modal-dialog");
+    expect(
+      screen.getByText(
+        "A modal dialog asks for a decision or a short input. While it's open, the rest of the page is unavailable.",
+      ),
+    ).toBeInTheDocument();
+    const aliases = screen.getByText("Also called", { selector: "dt" }).nextElementSibling;
+    expect(aliases?.textContent).toContain("confirmation dialog");
+    expect(aliases?.textContent).not.toMatch(HANGUL);
+    const breadcrumb = within(screen.getByRole("navigation", { name: "Breadcrumb" }));
+    expect(breadcrumb.getByRole("link", { name: "Overlays" })).toBeInTheDocument();
+  });
+
+  it("lists roadmap topics and comparisons in English", () => {
+    renderIn("en", "/roadmap?category=overlay");
+    expect(screen.getByRole("heading", { level: 2, name: "Overlays" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Modal Dialog" })).toHaveAttribute(
+      "href",
+      "/en/patterns/modal-dialog",
+    );
+  });
+
+  it("titles a comparison in English", () => {
+    renderIn("en", "/compare/switch-checkbox");
+    expect(
+      screen.getByRole("heading", { level: 1, name: "Switch · Checkbox" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Selection and components")).toBeInTheDocument();
+    expect(
+      screen.getByText("Applying a setting at once versus collecting consent or list choices."),
+    ).toBeInTheDocument();
   });
 });

@@ -1,0 +1,154 @@
+{
+  "overlay": {
+    "name": "Overlays",
+    "description": "Dialogs, panels, and hints that appear over the current screen."
+  },
+  "feedback": {
+    "name": "Notifications and feedback",
+    "description": "Messages that report results and errors."
+  },
+  "navigation": {
+    "name": "Navigation",
+    "description": "Paths that show where you are and lead to other pages."
+  },
+  "disclosure": {
+    "name": "Disclosure",
+    "description": "Long content split up so people open only what they need."
+  },
+  "text-input": {
+    "name": "Text input",
+    "description": "Fields where people type letters and numbers."
+  },
+  "selection": {
+    "name": "Selection controls",
+    "description": "Controls that turn things on and off or pick one option."
+  },
+  "special-input": {
+    "name": "Special input",
+    "description": "Inputs with a fixed format, such as dates, files, and colors."
+  },
+  "button": {
+    "name": "Buttons and states",
+    "description": "Things you can press, and the states they go through."
+  },
+  "list-table": {
+    "name": "Lists and tables",
+    "description": "Screens that line up many items and compare them."
+  },
+  "card-gallery": {
+    "name": "Cards and galleries",
+    "description": "Screens that show images and summaries as cards."
+  },
+  "indicator": {
+    "name": "Indicators",
+    "description": "Small marks that show a state or a count."
+  },
+  "layout": {
+    "name": "Layout",
+    "description": "Ways to divide the screen and keep parts of it in place."
+  },
+  "loading": {
+    "name": "Loading",
+    "description": "What to show while people wait."
+  },
+  "gesture": {
+    "name": "Gestures",
+    "description": "Swipes, presses, and other finger movements."
+  },
+  "motion": {
+    "name": "Transitions and motion",
+    "description": "Movement that shows what changed."
+  },
+  "text-motion": {
+    "name": "Text motion",
+    "description": "Numbers and letters that move."
+  },
+  "data-viz": {
+    "name": "Data visualization",
+    "description": "UI that shows differences, changes, and shares in numbers."
+  },
+  "empty-error": {
+    "name": "Empty states and errors",
+    "description": "What to show when there is nothing to show or loading failed."
+  },
+  "onboarding": {
+    "name": "First run",
+    "description": "Screens that help newcomers find their way."
+  },
+  "completion": {
+    "name": "Completion and rewards",
+    "description": "Screens that give a sense of having finished."
+  },
+  "reaction-share": {
+    "name": "Reactions and sharing",
+    "description": "Screens for rating, spreading, and working together."
+  },
+  "ai": {
+    "name": "AI screens",
+    "description": "Screens for talking with AI and handling what it returns."
+  },
+  "pricing-display": {
+    "name": "Prices and discounts",
+    "description": "UI that helps people understand and compare prices, benefits, and terms."
+  },
+  "search-discovery": {
+    "name": "Search and discovery",
+    "description": "Flows that start a search and narrow down to the right result."
+  },
+  "auth": {
+    "name": "Sign-up and sign-in",
+    "description": "Screens for creating an account, signing in, and leaving."
+  },
+  "checkout": {
+    "name": "Orders and payment",
+    "description": "Screens for adding to a cart, paying, receiving, and returning."
+  },
+  "settings": {
+    "name": "Settings and permissions",
+    "description": "Screens for making an account your own: notifications, display, and privacy."
+  },
+  "risky-actions": {
+    "name": "Risky actions and undo",
+    "description": "Screens that protect people before deleting, leaving, or overwriting, and let them undo."
+  },
+  "leave-return": {
+    "name": "Leaving and returning",
+    "description": "Screens for stepping away, canceling, and coming back after a while."
+  },
+  "design-style": {
+    "name": "Design styles",
+    "description": "The same screen drawn in different styles."
+  },
+  "typography-style": {
+    "name": "Type styles",
+    "description": "The same words set in different letterforms and textures."
+  },
+  "dark-patterns": {
+    "name": "Dark patterns",
+    "description": "Screens that trick people into choices they did not want."
+  },
+  "ux-laws": {
+    "name": "UX laws",
+    "description": "Principles of how people look at, choose from, and remember screens."
+  },
+  "cognitive-bias": {
+    "name": "Cognitive biases",
+    "description": "How the same information leads to different judgments depending on how it is shown."
+  },
+  "pricing-psychology": {
+    "name": "Pricing psychology",
+    "description": "How presenting the same prices and plans changes what people choose."
+  },
+  "icon-names": {
+    "name": "Icon names",
+    "description": "Icons whose shape you know but whose name you forget."
+  },
+  "ux-research": {
+    "name": "UX research",
+    "description": "Observation and evidence for answering questions about a product."
+  },
+  "ui-comparison": {
+    "name": "UI comparisons",
+    "description": "Look-alike UI side by side in the same situation, compared by purpose and behavior."
+  }
+}

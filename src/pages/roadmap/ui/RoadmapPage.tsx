@@ -10,8 +10,10 @@ import {
   roadmapEntryDestination,
   roadmapEntryAnchor,
 } from "@/entities/pattern/catalog/roadmapLinks";
+import { roadmapEntryText, topicDescription, topicName } from "@/entities/pattern/i18n/catalogText";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
+import { useLocale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
@@ -28,6 +30,7 @@ export function RoadmapPage() {
 }
 
 function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
+  const locale = useLocale();
   const messages = useMessages();
   const [params, setParams] = useSearchParams();
   const selectedTopic = ROADMAP_TOPICS.find((topic) => topic.id === params.get("category"));
@@ -38,7 +41,14 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
     .map((topic) => ({
       ...topic,
       entries: topic.entries.filter((entry) =>
-        matches(entry.nameKo, entry.name, entry.description, topic.nameKo),
+        matches(
+          entry.nameKo,
+          entry.name,
+          entry.description,
+          topic.nameKo,
+          roadmapEntryText(topic, entry, locale).description,
+          topicName(topic, locale),
+        ),
       ),
     }))
     .filter((topic) => topic.entries.length > 0);
@@ -48,7 +58,7 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
       <title>{`${messages.roadmap.title} · UI Pattern Atlas`}</title>
       <CatalogBreadcrumb
         parents={selectedTopic ? [{ label: messages.roadmap.title, to: "/roadmap" }] : []}
-        current={selectedTopic?.nameKo ?? messages.roadmap.title}
+        current={selectedTopic ? topicName(selectedTopic, locale) : messages.roadmap.title}
       />
       <h1 className="mt-8 font-serif text-display font-bold">{messages.roadmap.title}</h1>
       <p className="mt-3 text-lead text-graphite">{messages.roadmap.lead}</p>
@@ -70,7 +80,7 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
               <optgroup key={section.id} label={messages.sections[section.id]}>
                 {section.topics.map((topic) => (
                   <option key={topic.id} value={topic.id}>
-                    {topic.nameKo}
+                    {topicName(topic, locale)}
                   </option>
                 ))}
               </optgroup>
@@ -100,12 +110,13 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
           className="mt-10 border-t border-rule pt-6"
         >
           <h2 id={`roadmap-${topic.id}`} className="font-serif text-title font-bold">
-            {topic.nameKo}
+            {topicName(topic, locale)}
           </h2>
-          <p className="mt-1 text-body-sm text-graphite">{topic.description}</p>
+          <p className="mt-1 text-body-sm text-graphite">{topicDescription(topic, locale)}</p>
           <ul className="mt-4 divide-y divide-rule">
             {topic.entries.map((entry) => {
               const { href, status } = roadmapEntryDestination(topic, entry);
+              const text = roadmapEntryText(topic, entry, locale);
               return (
                 <li
                   key={entry.name}
@@ -115,14 +126,16 @@ function TopicIndex({ initialQuery }: { readonly initialQuery: string }) {
                   <div>
                     {href ? (
                       <Link to={href} className={textLinkClassName}>
-                        {entry.nameKo}
+                        {text.title}
                       </Link>
                     ) : (
-                      <span className="font-medium">{entry.nameKo}</span>
+                      <span className="font-medium">{text.title}</span>
                     )}
-                    <span className="ml-2 text-caption text-graphite">{entry.name}</span>
+                    {text.secondaryName ? (
+                      <span className="ml-2 text-caption text-graphite">{text.secondaryName}</span>
+                    ) : null}
                   </div>
-                  <p className="text-body-sm text-graphite">{entry.description}</p>
+                  <p className="text-body-sm text-graphite">{text.description}</p>
                   <span className="text-caption text-graphite">
                     {href
                       ? messages.entryStatus[status]

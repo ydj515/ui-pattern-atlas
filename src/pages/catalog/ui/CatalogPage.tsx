@@ -1,14 +1,20 @@
 import { useRef, useState } from "react";
 import { Link, useLocation, useNavigationType, useSearchParams } from "react-router";
 
-import { PATTERNS } from "@/entities/pattern/catalog";
 import {
   resolveCatalogCategory,
   ROADMAP_TOPICS,
   catalogSectionFor,
   comparisonSlug,
   type RoadmapEntry,
+  type RoadmapTopic,
 } from "@/entities/pattern/catalog/roadmap";
+import {
+  localizedPatterns,
+  roadmapEntryText,
+  topicDescription,
+  topicName,
+} from "@/entities/pattern/i18n/catalogText";
 import { comparisonThumbnailLoader } from "@/entities/pattern/catalog/comparisons/comparisonThumbnailLoader";
 import {
   roadmapEntryDestination,
@@ -22,6 +28,7 @@ import { searchPatterns } from "@/features/search-patterns/model/searchPatterns"
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CategoryFilter } from "@/features/search-patterns/ui/CategoryFilter";
 import { SearchField } from "@/features/search-patterns/ui/SearchField";
+import { useLocale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { Highlight } from "@/shared/ui/Highlight";
 import { Button } from "@/shared/ui/primitives/Button";
@@ -33,6 +40,7 @@ const QUERY_PARAM = "q";
 const CATEGORY_PARAM = "category";
 
 interface CatalogReference {
+  readonly topic: RoadmapTopic;
   readonly entry: RoadmapEntry;
   readonly href: string;
   readonly status: RoadmapEntryStatus;
@@ -45,7 +53,7 @@ const TOPICS = ROADMAP_TOPICS.map((topic) => ({
   references: topic.entries.flatMap((entry) => {
     const { href, status, hasDemo } = roadmapEntryDestination(topic, entry);
     if (topic.kind !== "비교" && hasDemo) return [];
-    return [{ entry, href: href ?? roadmapEntryHref(topic, entry), status, hasDemo }];
+    return [{ topic, entry, href: href ?? roadmapEntryHref(topic, entry), status, hasDemo }];
   }),
 }));
 
@@ -80,30 +88,39 @@ function ReferenceList({
   readonly returnSearch: string;
   readonly query: string;
 }) {
+  const locale = useLocale();
   const messages = useMessages();
   return (
     <ul
       aria-label={messages.catalog.references}
       className="grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3"
     >
-      {references.map(({ entry, href, status }) => (
-        <li key={href} className="border-t border-rule">
-          <Link to={href} state={{ returnSearch }} className="group block py-4">
-            <h3 className="flex flex-wrap items-baseline gap-x-2">
-              <span className="font-serif text-headword font-semibold underline-offset-4 group-hover:underline">
-                <Highlight text={entry.nameKo} query={query} />
-              </span>{" "}
-              <span className="text-caption text-graphite">
-                <Highlight text={entry.name} query={query} />
-              </span>
-            </h3>
-            <p className="mt-1 text-body-sm text-ink/80">
-              <Highlight text={entry.description} query={query} />
-            </p>
-            <p className="mt-1 text-micro text-graphite">{messages.entryStatus[status]}</p>
-          </Link>
-        </li>
-      ))}
+      {references.map(({ topic, entry, href, status }) => {
+        const text = roadmapEntryText(topic, entry, locale);
+        return (
+          <li key={href} className="border-t border-rule">
+            <Link to={href} state={{ returnSearch }} className="group block py-4">
+              <h3 className="flex flex-wrap items-baseline gap-x-2">
+                <span className="font-serif text-headword font-semibold underline-offset-4 group-hover:underline">
+                  <Highlight text={text.title} query={query} />
+                </span>
+                {text.secondaryName ? (
+                  <>
+                    {" "}
+                    <span className="text-caption text-graphite">
+                      <Highlight text={text.secondaryName} query={query} />
+                    </span>
+                  </>
+                ) : null}
+              </h3>
+              <p className="mt-1 text-body-sm text-ink/80">
+                <Highlight text={text.description} query={query} />
+              </p>
+              <p className="mt-1 text-micro text-graphite">{messages.entryStatus[status]}</p>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -116,27 +133,34 @@ function ComparisonGrid({
   readonly references: readonly CatalogReference[];
   readonly returnSearch: string;
 }) {
+  const locale = useLocale();
   const messages = useMessages();
   return (
     <ul
       aria-label={messages.catalog.comparisonGuides}
       className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
     >
-      {references.map(({ entry, href, status }) => {
+      {references.map(({ topic, entry, href, status }) => {
         const loadThumbnail = comparisonThumbnailLoader(comparisonSlug(entry));
+        const text = roadmapEntryText(topic, entry, locale);
         return (
           <li key={href}>
             <Link to={href} state={{ returnSearch }} className="group block">
               <ThumbnailFrame load={loadThumbnail} />
               <h3 className="mt-3.5">
                 <span className="font-serif text-headword font-semibold decoration-1 underline-offset-4 group-hover:underline">
-                  {entry.nameKo}
-                </span>{" "}
-                <span className="mt-0.5 block text-caption font-normal text-graphite">
-                  {entry.name}
+                  {text.title}
                 </span>
+                {text.secondaryName ? (
+                  <>
+                    {" "}
+                    <span className="mt-0.5 block text-caption font-normal text-graphite">
+                      {text.secondaryName}
+                    </span>
+                  </>
+                ) : null}
               </h3>
-              <p className="mt-1 text-body-sm text-ink/80">{entry.description}</p>
+              <p className="mt-1 text-body-sm text-ink/80">{text.description}</p>
               <p className="mt-1 text-micro text-graphite">{messages.entryStatus[status]}</p>
             </Link>
           </li>
@@ -147,6 +171,7 @@ function ComparisonGrid({
 }
 
 export function CatalogPage() {
+  const locale = useLocale();
   const messages = useMessages();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -177,12 +202,20 @@ export function CatalogPage() {
     return category === "all" || topic.id === category;
   });
   const returnSearch = searchParams.toString() ? `?${searchParams.toString()}` : "";
-  const patternMatches = searchPatterns(PATTERNS, { text, category: "all" });
+  const patternMatches = searchPatterns(localizedPatterns(locale), { text, category: "all" });
   const matchesReference = roadmapMatcher(text);
   const groups = visibleTopics.map((topic) => {
     const patterns = patternMatches.filter((pattern) => pattern.category === topic.id);
     const references = topic.references.filter(({ entry }) =>
-      matchesReference(entry.nameKo, entry.name, entry.description, topic.nameKo, entry.group),
+      matchesReference(
+        entry.nameKo,
+        entry.name,
+        entry.description,
+        topic.nameKo,
+        entry.group,
+        roadmapEntryText(topic, entry, locale).description,
+        topicName(topic, locale),
+      ),
     );
     return { topic, patterns, references, count: patterns.length + references.length };
   });
@@ -211,6 +244,7 @@ export function CatalogPage() {
 
   return (
     <div className="mx-auto max-w-page px-4 pb-24 sm:px-6">
+      <title>{`UI Pattern Atlas · ${messages.site.name}`}</title>
       <section className="pt-8 pb-6 sm:pt-12 sm:pb-9">
         {/* The search box is the page's first visible element; the title stays for screen
             readers and search engines. */}
@@ -292,9 +326,11 @@ export function CatalogPage() {
               <div className="mb-5 flex items-baseline justify-between gap-4">
                 <div>
                   <h2 id={`category-${topic.id}`} className="font-serif text-title font-bold">
-                    {topic.nameKo}
+                    {topicName(topic, locale)}
                   </h2>
-                  <p className="mt-1.5 text-body-sm text-graphite">{topic.description}</p>
+                  <p className="mt-1.5 text-body-sm text-graphite">
+                    {topicDescription(topic, locale)}
+                  </p>
                 </div>
                 <div className="flex shrink-0 flex-wrap items-center gap-3 text-caption text-graphite">
                   {topic.kind === "비교" && (
@@ -308,7 +344,7 @@ export function CatalogPage() {
               <div className="space-y-8">
                 {patterns.length > 0 ? (
                   <PatternGrid
-                    label={messages.catalog.topicDemos(topic.nameKo)}
+                    label={messages.catalog.topicDemos(topicName(topic, locale))}
                     patterns={patterns}
                     query=""
                     returnSearch={returnSearch}

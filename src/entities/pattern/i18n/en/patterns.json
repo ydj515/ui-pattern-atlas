@@ -1,0 +1,1995 @@
+{
+  "modal-dialog": {
+    "summary": "A dialog that pauses the current task for a decision.",
+    "description": "A modal dialog asks for a decision or a short input. While it's open, the rest of the page is unavailable.",
+    "aliases": ["modal", "dialog", "popup", "confirmation dialog", "confirm", "alert dialog"]
+  },
+  "drawer": {
+    "summary": "A panel that slides in from the edge of the screen.",
+    "description": "A drawer opens a panel from the edge of the screen for filters, details, or longer input while the current screen stays in place.",
+    "aliases": ["side panel", "slide-out panel", "side sheet", "off-canvas", "filter panel"]
+  },
+  "popover": {
+    "summary": "A small panel with more information or actions next to a control.",
+    "description": "A popover opens a small panel near its trigger with extra explanation, links, or simple controls, without leaving the current context. Unlike a modal, the page behind it stays usable.",
+    "aliases": ["floating panel", "info box", "callout bubble", "flyout"]
+  },
+  "tooltip": {
+    "summary": "A short hint shown on hover or keyboard focus.",
+    "description": "A tooltip shows a short supporting explanation when people hover over or focus an icon or term. Its content must be plain text that can't be clicked.",
+    "aliases": ["hint", "help text", "info icon", "speech bubble"]
+  },
+  "bottom-sheet": {
+    "summary": "A task panel that slides up from the bottom of the screen.",
+    "description": "A bottom sheet raises a panel from the bottom edge with a few choices or next actions. The options sit within thumb reach, so people can pick quickly on mobile and return to the screen they were on.",
+    "aliases": ["action sheet", "modal sheet", "sheet", "slide-up panel"]
+  },
+  "dropdown-menu": {
+    "summary": "A list of actions that opens from a button.",
+    "description": "A dropdown menu lists related actions right below a button. Actions people use less often are kept in one place and come out only when needed, which keeps the screen tidy.",
+    "aliases": [
+      "dropdown",
+      "more menu",
+      "kebab menu",
+      "action menu",
+      "menu button",
+      "overflow menu"
+    ]
+  },
+  "alert-dialog": {
+    "summary": "An urgent message that needs a response.",
+    "description": "An alert dialog reports something people must know and answer now, such as an expiring session or a failed payment. The system usually opens it, not a click, and clicking the backdrop does not close it.",
+    "aliases": ["alert", "warning dialog", "urgent alert", "session timeout warning", "alertdialog"]
+  },
+  "context-menu": {
+    "summary": "A menu opened by right-clicking or long-pressing an item.",
+    "description": "A context menu appears where people right-click or long-press an object such as a file or message, listing what they can do with it. It's a fast shortcut for people who know it's there.",
+    "aliases": ["right-click menu", "long-press menu", "popup menu", "shortcut menu"]
+  },
+  "command-palette": {
+    "summary": "A command box opened with ⌘K to search and run actions.",
+    "description": "A command palette opens with a keyboard shortcut; people type what they want to do and run the matching command right away. Features buried deep in menus are a few keystrokes away, which speeds up experienced users.",
+    "aliases": ["command menu", "⌘K", "Cmd K", "quick actions", "quick open", "launcher"]
+  },
+  "hover-card": {
+    "summary": "A preview card that appears when hovering a link.",
+    "description": "A hover card shows a summary of a person or link when the pointer rests on it for a moment, so people can see who or what it is without leaving the page.",
+    "aliases": ["preview card", "profile card", "link preview", "hover preview"]
+  },
+  "confirmation-dialog": {
+    "summary": "A dialog that asks once more before continuing.",
+    "description": "A confirmation dialog asks whether to continue or cancel right before something hard to undo. Wrapped in a Promise, it reads as one line, await confirm(), so each screen doesn't have to manage its own modal state.",
+    "aliases": [
+      "confirm",
+      "confirm dialog",
+      "leave confirmation",
+      "discard changes",
+      "delete confirmation"
+    ]
+  },
+  "toast": {
+    "summary": "A short result message that appears and then disappears.",
+    "description": "A toast briefly shows the result of an action at the top or bottom of the screen and disappears on its own. It confirms the result without interrupting the task, and can carry a short action such as undo (a snackbar).",
+    "aliases": ["snackbar", "notification", "status message", "success message"]
+  },
+  "alert-banner": {
+    "summary": "A message at the top of the page that stays until dismissed.",
+    "description": "An alert banner stays at the top of a page or section until people read it or act on it. Its tone follows the severity: information, success, warning, or error.",
+    "aliases": ["banner", "notice", "announcement", "callout", "alert"]
+  },
+  "inline-validation": {
+    "summary": "A message right below a field that says what's wrong.",
+    "description": "Inline validation shows why an input is wrong and how to fix it right below that field, so people know at once where to make the change.",
+    "aliases": ["form validation", "field error", "error message", "input error", "text field"]
+  },
+  "error-summary": {
+    "summary": "A list of errors above the form, with links to each field.",
+    "description": "An error summary gathers everything to fix above a form that failed to submit. People see how many things went wrong, and each item jumps to its field.",
+    "aliases": ["validation summary", "form error summary", "error list"]
+  },
+  "undo": {
+    "summary": "A snackbar that reverses an action such as delete.",
+    "description": "Undo applies an easy-to-regret action such as delete on screen first and gives a short window to take it back; only then is it final. It interrupts the flow less than asking for confirmation every time.",
+    "aliases": ["undo snackbar", "undo toast", "revert"]
+  },
+  "callout": {
+    "summary": "A note or warning box inside body text.",
+    "description": "A callout sets apart something worth noticing in help or documentation with a colored box and a title. Kinds such as note, tip, and warning tell readers how important it is.",
+    "aliases": ["admonition", "note box", "tip box", "warning box", "info box"]
+  },
+  "notification-center": {
+    "summary": "A panel that collects past notifications.",
+    "description": "A notification center shows the unread count on a bell icon and opens a panel of recent notifications when pressed, so people can catch up on toasts they missed.",
+    "aliases": ["inbox", "activity feed", "notifications panel", "bell menu"]
+  },
+  "progress-toast": {
+    "summary": "A progress notice for a long-running task.",
+    "description": "A progress toast shows a long task such as an upload or export in a corner of the screen. People can follow the progress, keep working, and cancel if needed.",
+    "aliases": ["upload progress", "upload toast", "download notification", "progress notification"]
+  },
+  "confirmation-message": {
+    "summary": "What happens next, shown after a form is sent.",
+    "description": "A confirmation message replaces a sent form with the result and the next steps: what was received, when and how people will hear back, and what they can do now.",
+    "aliases": ["success page", "thank you page", "submission received", "done screen"]
+  },
+  "push-notification": {
+    "summary": "A system notification that reaches people outside the app.",
+    "description": "Push notifications use the browser or operating system to deliver news when people aren't looking at the app. Show what they will receive first, and ask for permission only when they want it.",
+    "aliases": ["system notification", "web push", "browser notification", "Notification API"]
+  },
+  "breadcrumb": {
+    "summary": "A row of links showing where the page sits in the site.",
+    "description": "A breadcrumb shows the parent path to the current page on one line, so people can tell where they are and jump up a level in one step.",
+    "aliases": ["breadcrumbs", "trail", "location", "you are here"]
+  },
+  "pagination": {
+    "summary": "Numbered buttons that split a long list into pages.",
+    "description": "Pagination splits many results into pages of a fixed size, moved through with page numbers and previous and next buttons. People can remember a position and find it again.",
+    "aliases": ["pager", "paging", "page numbers"]
+  },
+  "navbar": {
+    "summary": "The menu for the whole site.",
+    "description": "A navbar is the site menu in the same place at the top of every page: a logo, a few main links, and a key action on the right. It marks the page people are on.",
+    "aliases": ["navigation bar", "header nav", "top menu", "global navigation", "GNB"]
+  },
+  "sidebar-navigation": {
+    "summary": "A menu fixed to the left side.",
+    "description": "Sidebar navigation keeps a vertical menu fixed on the left. Many items stay visible at once, and related items fold into groups. It's common in admin tools and work apps.",
+    "aliases": ["side nav", "side menu", "left menu", "app sidebar", "LNB"]
+  },
+  "bottom-tab-bar": {
+    "summary": "Switching between the main screens on mobile.",
+    "description": "A bottom tab bar lines up three to five main screens with icons and names at the bottom of a mobile screen. It sits within thumb reach, so people can move between screens with one hand.",
+    "aliases": ["tab bar", "bottom navigation", "bottom nav"]
+  },
+  "stepper": {
+    "summary": "Shows the current step and finished steps in a multi-step flow.",
+    "description": "A stepper shows all the steps of an ordered flow such as sign-up or checkout, where people are, and what they've finished. Knowing how many steps are left makes it easier to see it through.",
+    "aliases": ["step indicator", "progress steps", "wizard steps"]
+  },
+  "mobile-menu": {
+    "summary": "A menu folded away on small screens.",
+    "description": "A mobile menu folds the site menu into one button on small screens and opens it when pressed. The screen stays roomy while every menu item stays reachable.",
+    "aliases": ["hamburger menu", "hamburger button", "nav drawer"]
+  },
+  "infinite-scroll": {
+    "summary": "Loading more when the end is reached.",
+    "description": "Infinite scroll loads and appends the next batch automatically as people near the end of a list. In feeds made for browsing, it removes the work of turning pages.",
+    "aliases": ["endless scroll", "auto load", "lazy list"]
+  },
+  "load-more": {
+    "summary": "Press to see more.",
+    "description": "Load more appends the next batch only when people press the button at the end of the list. It says how many have been seen out of how many, and moves focus to the first new item so reading continues.",
+    "aliases": ["show more", "load more button", "see more"]
+  },
+  "mega-menu": {
+    "summary": "A menu that opens into several columns.",
+    "description": "A mega menu opens a wide panel of sub-links in several columns from a top menu item. For sites with many pages, such as products and solutions, it shows the structure at once.",
+    "aliases": ["mega dropdown", "flyout menu", "dropdown navigation"]
+  },
+  "table-of-contents": {
+    "summary": "A table of contents that follows the scroll position.",
+    "description": "A table of contents lists the sections of a long document alongside it and marks the one being read, so people can check where they are and jump to any section.",
+    "aliases": ["TOC", "scrollspy", "on this page", "page contents"]
+  },
+  "back-to-top": {
+    "summary": "A way back to the start of a long page.",
+    "description": "A back-to-top button appears only after people scroll well down a long page and takes them back to the top. It then moves focus to the top heading so keyboard users continue from the start.",
+    "aliases": ["scroll to top", "back to top button", "top button"]
+  },
+  "back-navigation": {
+    "summary": "Going back to where you were, with the list's scroll restored.",
+    "description": "Back navigation restores the scroll position and opened item when people return from a detail screen to a list, so they continue instead of searching again from the top.",
+    "aliases": ["back button", "scroll restoration", "back to list"]
+  },
+  "horizontal-scroll": {
+    "summary": "Browsing wide content sideways.",
+    "description": "Horizontal scroll lays several cards in a row that people browse sideways: swiped by hand, or moved one screen at a time with previous and next buttons on wide screens.",
+    "aliases": ["horizontal list", "card row", "carousel row", "slider row"]
+  },
+  "tabs": {
+    "summary": "A menu that switches between related content on the same screen.",
+    "description": "Tabs split related content into panels and show one panel at a time, so people can switch quickly between information at the same level without leaving the page.",
+    "aliases": ["tab menu", "tab bar", "tablist"]
+  },
+  "accordion": {
+    "summary": "A vertical list whose titles open and close their content.",
+    "description": "An accordion shows only the titles of several sections at first, and people press the ones they want to open. It fits long information into a short screen.",
+    "aliases": ["collapse", "expander", "FAQ", "disclosure", "collapsible list"]
+  },
+  "read-more": {
+    "summary": "Shortened text that expands.",
+    "description": "Read more shows a few lines of a long description and expands the full text in place when people press it. Lists and cards stay short, and anyone who wants to can read to the end.",
+    "aliases": ["show more text", "truncate text", "expand text", "see more"]
+  },
+  "disclosure": {
+    "summary": "Opening and closing a single block.",
+    "description": "A disclosure is the simplest way to open and close content: press one title to show or hide what's under it. Folding away information people rarely need keeps the screen light.",
+    "aliases": ["show hide", "details summary", "toggle section", "expand collapse"]
+  },
+  "tree-view": {
+    "summary": "A nested list, like folders.",
+    "description": "A tree view shows folders within folders as an indented list, and people open only the branches they need. It handles deep data such as file explorers and org charts.",
+    "aliases": ["tree", "file tree", "folder tree", "nested list", "file explorer"]
+  },
+  "collapsible-panel": {
+    "summary": "A side area that folds to the side.",
+    "description": "A collapsible panel folds a side area such as properties, filters, or comments into a narrow bar so the main content gets more room. A button on the bar opens it again any time.",
+    "aliases": ["collapsible sidebar", "side panel", "inspector", "collapsible pane"]
+  },
+  "scrollable-tabs": {
+    "summary": "Scrolling tabs sideways when they overflow.",
+    "description": "Scrollable tabs let people scroll sideways when there are too many tabs for one row. Arrows at both ends scroll them, and the selected tab always moves into view.",
+    "aliases": ["overflow tabs", "category tabs", "horizontal tabs", "scrolling tabs"]
+  },
+  "text-field": {
+    "summary": "A basic input with a label, a hint, an error, and a required mark.",
+    "description": "A text field takes a single line of text. It bundles an always-visible label, a format hint, an error message for wrong input, and whether it's required, so every form uses it the same way.",
+    "aliases": ["input", "text input", "form field", "input field"]
+  },
+  "password-field": {
+    "summary": "Show and hide, with rule checks.",
+    "description": "A password field hides what's typed but lets people check it with an eye icon, and ticks off each rule as they type. People find problems before they submit, not after.",
+    "aliases": ["password input", "show password", "password rules", "password requirements"]
+  },
+  "search-field": {
+    "summary": "A search input with a clear button and a shortcut.",
+    "description": "A search field adds a clear button and a jump-to shortcut (/) to the search input. The list narrows as people type, and the query can be cleared and retyped in one step.",
+    "aliases": ["search input", "search box", "search bar"]
+  },
+  "otp-input": {
+    "summary": "A code input split into boxes.",
+    "description": "An OTP input takes a short numeric code from a text message or email, one digit per box. Typing moves to the next box, and pasting or SMS autofill fills them all at once.",
+    "aliases": ["one-time code", "verification code", "PIN input", "OTP"]
+  },
+  "textarea": {
+    "summary": "Grows with its content and shows a character count.",
+    "description": "A textarea takes several lines of text, grows to fit what's written, and shows how many characters are left. People can see and edit the whole text without it being trapped in a scroll box.",
+    "aliases": ["multi-line input", "auto-resize", "character count", "text area"]
+  },
+  "number-stepper": {
+    "summary": "Adjusting a quantity with − and + buttons.",
+    "description": "A number stepper changes a small whole number such as a quantity one step at a time with − and + buttons, and accepts typing in the middle box. At the minimum or maximum, the button turns off and says why.",
+    "aliases": ["quantity input", "stepper", "counter", "spin button"]
+  },
+  "input-mask": {
+    "summary": "Automatic dashes for phone and card numbers.",
+    "description": "An input mask adds dashes or spaces in the right places while people type only digits. They don't have to think about the format, and the stored value keeps only the digits, which is easier for the server.",
+    "aliases": ["masked input", "formatter", "phone number format", "card number input"]
+  },
+  "tag-input": {
+    "summary": "A field where typed words stack up as chips.",
+    "description": "A tag input turns a word into a chip when people press Enter or a comma. Several keywords go into one field, and each chip can be removed on its own.",
+    "aliases": ["tags", "chips input", "token field", "keyword input"]
+  },
+  "multi-step-form": {
+    "summary": "Splitting a long form into steps.",
+    "description": "A multi-step form splits a long form into steps by topic, with a progress indicator and previous and next buttons. People see less at once, and they review their answers before submitting at the end.",
+    "aliases": ["wizard", "stepper form", "step form", "checkout steps"]
+  },
+  "floating-label": {
+    "summary": "A label that moves up once you type.",
+    "description": "A floating label sits inside the field and moves up, smaller, when the field gets focus or a value. It saves vertical space, and the label stays visible after input.",
+    "aliases": ["float label", "material input", "animated label"]
+  },
+  "switch": {
+    "summary": "A setting that turns on or off as soon as it's pressed.",
+    "description": "A switch shows two states, on and off, and applies the change the moment it's pressed. Like a light switch, there's no save button.",
+    "aliases": ["toggle", "toggle switch", "on off"]
+  },
+  "segmented-control": {
+    "summary": "Joined buttons for choosing one of two to five options.",
+    "description": "A segmented control lines up a few mutually exclusive options as joined buttons and lets people pick one. It's often used to view the same data by a different measure or layout.",
+    "aliases": ["segmented button", "button group", "toggle group", "view switcher"]
+  },
+  "checkbox": {
+    "summary": "Choosing items independently, including a partly selected state.",
+    "description": "Checked values are used when submitting a form or acting on several items at once. When only some items are picked, the select-all checkbox shows an in-between state.",
+    "aliases": ["indeterminate", "select all", "check box", "tick box"]
+  },
+  "radio-group": {
+    "summary": "Choosing one of several.",
+    "description": "A radio group lays out all the options and lets people choose exactly one. Because the options can be compared at a glance, it works well for choices that differ in price or terms.",
+    "aliases": ["radio buttons", "single choice", "option cards"]
+  },
+  "select": {
+    "summary": "A dropdown for choosing one item from a list.",
+    "description": "A select is a dropdown for choosing one item from a fixed list. Styling the native select element keeps the operating system's picker on phones and its keyboard and assistive technology support.",
+    "aliases": ["dropdown", "select box", "picker", "native select"]
+  },
+  "combobox": {
+    "summary": "Autocomplete that narrows choices as you type.",
+    "description": "A combobox keeps only the options that match what people type and lets them pick one. A long list can be searched with a few letters instead of scrolling.",
+    "aliases": ["autocomplete", "typeahead", "searchable select", "autosuggest"]
+  },
+  "filter-chip": {
+    "summary": "Filters you press to turn on and off.",
+    "description": "Filter chips line up short conditions above a list and turn them on and off when pressed. Results update right away, so people can add and remove conditions one at a time until they find what they want.",
+    "aliases": ["chips", "toggle chips", "filter buttons"]
+  },
+  "multi-select": {
+    "summary": "Picking several items and showing them as chips.",
+    "description": "A multi-select opens a list from a button where people check several items, and shows the chosen ones as chips. It takes several values without taking much room.",
+    "aliases": ["multiselect", "multiple select", "checkbox dropdown"]
+  },
+  "slider": {
+    "summary": "Dragging to choose a value.",
+    "description": "A slider picks a value in a range by dragging a handle along a bar. It works well for quickly trying rough values and watching the result, rather than entering an exact number.",
+    "aliases": ["range", "range input", "slider control"]
+  },
+  "range-slider": {
+    "summary": "Choosing a minimum and a maximum together.",
+    "description": "A range slider sets a minimum and a maximum with two handles on one bar. It's for filters by range, such as a price band or a period.",
+    "aliases": ["dual slider", "min max slider", "price range"]
+  },
+  "listbox": {
+    "summary": "Choosing from a list that stays open.",
+    "description": "A listbox keeps its options open and lets people choose one. Each option can carry a description, and people move up and down with the keyboard to choose right away.",
+    "aliases": ["option list", "select list", "list selection"]
+  },
+  "date-picker": {
+    "summary": "Choosing a day on a calendar.",
+    "description": "A date picker opens a calendar from a button and lets people choose a day while seeing the whole month. Weekdays and weeks are visible together, which makes nearby dates easy to pick.",
+    "aliases": ["calendar input", "datepicker", "date chooser"]
+  },
+  "file-upload": {
+    "summary": "An area for dragging and dropping files.",
+    "description": "A file upload takes files dropped in or chosen with a button. It states the allowed types and sizes up front, rejects files that don't fit with the reason, and lets people remove uploaded files from the list.",
+    "aliases": ["dropzone", "drag and drop", "file input", "attachment"]
+  },
+  "date-range-picker": {
+    "summary": "Choosing a start date and an end date.",
+    "description": "A date range picker selects a period by pressing a start date and then an end date on the calendar. Like a hotel check-in and check-out, it shows both dates and the days between.",
+    "aliases": ["date range", "booking calendar", "check-in check-out"]
+  },
+  "time-picker": {
+    "summary": "Choosing hours and minutes.",
+    "description": "A time picker sets a time by choosing the hour and the minute separately. Showing only the allowed range, such as opening hours, and fixed steps, such as every 10 minutes, keeps wrong times out.",
+    "aliases": ["time input", "time select", "hour minute picker"]
+  },
+  "calendar": {
+    "summary": "A monthly view of events.",
+    "description": "A calendar shows a month with dots on days that have events, and lists a day's events when it's pressed. People see the shape of the month and the details of a day together.",
+    "aliases": ["month view", "schedule calendar", "event calendar"]
+  },
+  "image-cropper": {
+    "summary": "Framing a profile photo.",
+    "description": "An image cropper lets people drag a photo and zoom it with a slider to choose what fits in a round frame. A small preview shows how it will actually look.",
+    "aliases": ["crop", "avatar editor", "photo crop", "profile photo crop"]
+  },
+  "color-picker": {
+    "summary": "Choosing a color from a palette or a spectrum.",
+    "description": "A color picker offers a few preset colors as round swatches, and the browser's color chooser for any other color. The chosen color shows in a preview and as a color code.",
+    "aliases": ["swatches", "color input", "palette", "color chooser"]
+  },
+  "signature-pad": {
+    "summary": "A signature drawn by hand.",
+    "description": "A signature pad takes a signature drawn with a finger or mouse inside a box and keeps it as an image. People can clear and redraw it, and those who find drawing hard can type their name instead.",
+    "aliases": ["signature", "e-signature", "handwritten signature"]
+  },
+  "date-input": {
+    "summary": "Typing a date in a set format and checking it.",
+    "description": "A date input adds the dots as people type only digits in YYYY.MM.DD format, and checks that the date exists once it's complete. For distant dates such as a birthday, it's much faster than paging through a calendar.",
+    "aliases": ["date field", "typed date", "birth date input"]
+  },
+  "quick-date-chips": {
+    "summary": "Choosing common dates such as today, tomorrow, or this weekend in one tap.",
+    "description": "Quick date chips show the dates people choose most, such as today, tomorrow, and this weekend, as chips they can pick in one tap. Any other date can be chosen right below.",
+    "aliases": ["date shortcuts", "relative dates", "today tomorrow chips"]
+  },
+  "time-slots": {
+    "summary": "Choosing one of the times open for booking.",
+    "description": "Time slots show bookable times as a grid of buttons and mark the taken ones as full. Once a time is chosen, the booking button names it, which prevents mistakes.",
+    "aliases": ["booking slots", "appointment times", "time slot picker"]
+  },
+  "month-picker": {
+    "summary": "Choosing only a year and a month, without a day.",
+    "description": "A month picker lets people page through years and press one of twelve months to choose a year and month only. It's for places that don't need a day, such as billing, statements, and monthly reports.",
+    "aliases": ["month select", "year month", "month chooser"]
+  },
+  "wheel-picker": {
+    "summary": "Rolling a vertical wheel to choose a date or time.",
+    "description": "A wheel picker lets people flick vertical columns with a finger and choose the value in the middle row. It's familiar on mobile screens that set several columns together, such as an alarm time.",
+    "aliases": ["picker wheel", "scroll picker", "drum picker"]
+  },
+  "recurrence-picker": {
+    "summary": "Setting how often, on which days, and until when something repeats.",
+    "description": "A recurrence picker splits how often, on which weekdays, and until when an event repeats into separate choices, and states the resulting rule as one sentence so even complex rules can be read and checked.",
+    "aliases": ["recurring event", "repeat rule", "recurrence rule"]
+  },
+  "button": {
+    "summary": "The hierarchy and states of primary, secondary, and text buttons.",
+    "description": "Buttons with three levels of emphasis put the actions on a screen in order. Only the most important action gets the primary button, and each button looks different on hover, on press, and on keyboard focus.",
+    "aliases": ["primary button", "secondary button", "text button", "CTA"]
+  },
+  "icon-button": {
+    "summary": "A button with an icon and no text.",
+    "description": "An icon button is a small button that shows its action with an icon instead of words. Its name is given to assistive technology, and the same name appears as a tooltip on hover or keyboard focus.",
+    "aliases": ["icon-only button", "toolbar button", "ghost button"]
+  },
+  "loading-button": {
+    "summary": "Shows work in progress after a press, then success or failure.",
+    "description": "A loading button shows that work is in progress right where it was pressed, then changes to success or failure when it's done. People see the result in the button, and it can't be pressed twice while working.",
+    "aliases": ["async button", "spinner button", "submitting button", "progress button"]
+  },
+  "disabled-button": {
+    "summary": "A button that says why it can't be pressed.",
+    "description": "A disabled button doesn't just look faded: it says right below why it can't be pressed yet. Pressing it anyway highlights the reason so people know what to do.",
+    "aliases": ["aria-disabled", "disabled state", "inactive button"]
+  },
+  "toggle-button": {
+    "summary": "Keeps its on or off state after it's pressed.",
+    "description": "A toggle button turns on when pressed and off when pressed again. It's used in formatting tools such as bold and italic, where several can be on together, and its on state stays visible.",
+    "aliases": ["pressed button", "aria-pressed", "format button"]
+  },
+  "fab": {
+    "summary": "The main action, floating above the screen.",
+    "description": "A floating action button stays in a corner of the screen while people scroll. Scrolling down shrinks it to an icon so it covers less content, and scrolling up shows its name again.",
+    "aliases": ["floating action button", "FAB", "compose button"]
+  },
+  "copy-button": {
+    "summary": "Press to copy, then see the result.",
+    "description": "A copy button puts a link or code on the clipboard and briefly changes to \"Copied\" in place to confirm it. If copying is blocked, it says so too.",
+    "aliases": ["copy to clipboard", "clipboard", "copy link"]
+  },
+  "split-button": {
+    "summary": "A default action together with other options.",
+    "description": "A split button runs the common action in one press and offers similar actions behind the arrow beside it. It's for a family of actions, such as save and save as.",
+    "aliases": ["button with menu", "dropdown button", "menu button"]
+  },
+  "hold-to-confirm": {
+    "summary": "Press and hold to prevent mistakes.",
+    "description": "Hold to confirm runs an action that can't be undone, such as delete, only after the button is held for a moment. The button fills while held, and letting go early cancels it.",
+    "aliases": ["press and hold", "long press confirm", "hold to delete"]
+  },
+  "list": {
+    "summary": "Rows with an icon, a title, and extra details.",
+    "description": "A list gathers an icon, a title, a second line, and a value on the right into one row so people can scan many items. The whole row is one button, so pressing anywhere opens it.",
+    "aliases": ["list item", "row list", "list rows"]
+  },
+  "data-table": {
+    "summary": "Comparing and sorting data by column.",
+    "description": "A data table compares values in rows and columns and sorts them when a column header is pressed. Numbers align right with fixed-width digits, and the header stays in place on scroll.",
+    "aliases": ["table", "sortable table", "data grid"]
+  },
+  "selectable-table": {
+    "summary": "Choosing several rows and acting on them at once.",
+    "description": "A selectable table puts a checkbox on each row so people can choose several and archive or delete them at once. Once rows are chosen, the count and the action buttons appear above.",
+    "aliases": ["bulk actions", "row selection", "checkbox table"]
+  },
+  "description-list": {
+    "summary": "Pairs of labels and values.",
+    "description": "A description list lays out information that comes in label and value pairs, such as an order number or payment method. Wide screens show two columns; narrow screens put the value under its label.",
+    "aliases": ["key value list", "dl", "details list"]
+  },
+  "timeline": {
+    "summary": "A record in time order.",
+    "description": "A timeline lines up events in time order along a vertical line. It shows what happened, where things stand now, and the steps still ahead in one column.",
+    "aliases": ["activity log", "history", "order tracking", "event timeline"]
+  },
+  "kanban-board": {
+    "summary": "Cards in columns by status.",
+    "description": "A kanban board places tasks as cards in columns by status and moves them to the next status by dragging. For people who can't drag, each card also has buttons to move it to the previous or next column.",
+    "aliases": ["task board", "status columns", "kanban"]
+  },
+  "sortable-list": {
+    "summary": "Dragging to reorder.",
+    "description": "A sortable list changes the order of items by dragging a handle. With a keyboard, people focus the handle and move it with the up and down arrows, and the new position is announced.",
+    "aliases": ["reorder list", "drag to reorder", "drag and drop list"]
+  },
+  "grouped-list": {
+    "summary": "A grouped list whose headers stick as you scroll.",
+    "description": "A grouped list splits a long list by initial letter or date and keeps the current group's header stuck at the top while scrolling, so people always know where they are.",
+    "aliases": ["sectioned list", "sticky header list", "section headers"]
+  },
+  "virtualized-list": {
+    "summary": "Drawing thousands of items lightly.",
+    "description": "A virtualized list draws only the few rows visible on screen out of thousands, so even very long lists stay fast. The full height is kept, so the scrollbar shows the real position.",
+    "aliases": ["virtual scroll", "windowing", "virtual list"]
+  },
+  "card": {
+    "summary": "One tile with an image, a title, and a summary.",
+    "description": "A card bundles an image, a title, and a short summary into one box so many pieces of content can sit side by side. Pressing anywhere opens it, but the only link is the title, which keeps screen readers concise.",
+    "aliases": ["content card", "article card", "tile"]
+  },
+  "carousel": {
+    "summary": "A set of cards that slide sideways.",
+    "description": "A carousel shows banners or photos one at a time and moves through them with previous and next buttons and dots. When it advances on its own, it pauses on hover or focus and has a pause button.",
+    "aliases": ["slider", "slideshow", "banner carousel", "rotating banner"]
+  },
+  "image-gallery": {
+    "summary": "A grid of thumbnails.",
+    "description": "An image gallery lines up small thumbnails under a large photo, and pressing a thumbnail swaps the large one. It's for looking at a product from several angles in turn.",
+    "aliases": ["product gallery", "thumbnail grid", "photo gallery"]
+  },
+  "lightbox": {
+    "summary": "Showing an image large and paging through.",
+    "description": "A lightbox opens a small photo large over the screen and lets people page through left and right. It shows which photo of how many and its caption, and closing it returns to the photo that was pressed.",
+    "aliases": ["image viewer", "photo modal", "full-size image"]
+  },
+  "masonry-grid": {
+    "summary": "Cards of different heights stacked like bricks.",
+    "description": "A masonry grid stacks cards of different heights without gaps, like a brick wall. Photos with different proportions aren't cropped, and the number of columns follows the screen width.",
+    "aliases": ["masonry", "waterfall layout", "Pinterest grid"]
+  },
+  "before-after-slider": {
+    "summary": "Dragging the middle to compare two images.",
+    "description": "A before/after slider layers two images of the same scene and shows more of one as people drag the handle in the middle. It shows the difference before and after editing or renovation at a glance.",
+    "aliases": ["comparison slider", "image compare", "before and after"]
+  },
+  "stories": {
+    "summary": "Full-screen content you tap through.",
+    "description": "Stories show short pieces of content full screen, one at a time, moving on after a while or when people tap the side. Bars at the top show which one of how many is playing.",
+    "aliases": ["story viewer", "tap through", "full-screen stories", "Instagram stories"]
+  },
+  "badge": {
+    "summary": "A count of new notifications.",
+    "description": "A badge puts a small number on an icon to show new notifications or items in a cart. Large numbers shorten to \"99+\", and the badge disappears when there's nothing to count.",
+    "aliases": ["count badge", "notification badge", "number badge"]
+  },
+  "status-dot": {
+    "summary": "Success, warning, and error as colored dots.",
+    "description": "A status dot shows the state of a service or task with a green, yellow, or red dot and a short word. It never relies on color alone; the word is always there.",
+    "aliases": ["status indicator", "health dot", "traffic light"]
+  },
+  "tag": {
+    "summary": "A small label for a category.",
+    "description": "A tag attaches the category or topic of a post or item as a small label. In edit views, each tag can have a remove button.",
+    "aliases": ["label", "chip", "pill"]
+  },
+  "avatar": {
+    "summary": "A photo or initials that stand for a person.",
+    "description": "An avatar shows a person as a photo in a small circle, and falls back to the first letter of their name when there's no photo or it fails to load. The same person always gets the same color.",
+    "aliases": ["profile picture", "user image", "initials", "profile photo"]
+  },
+  "avatar-group": {
+    "summary": "Several people, overlapping.",
+    "description": "An avatar group overlaps several people's avatars and shortens the rest to a number such as \"+3\". It shows who's involved even in a tight space.",
+    "aliases": ["avatar stack", "facepile", "participants"]
+  },
+  "page-indicator": {
+    "summary": "Dots showing the current slide of a carousel.",
+    "description": "A page indicator uses dots to show which screen of several people are on. The current dot differs in length as well as color.",
+    "aliases": ["dots", "pagination dots", "carousel dots"]
+  },
+  "unread-indicator": {
+    "summary": "Marking items that just arrived.",
+    "description": "An unread indicator puts a blue dot before items in a list that haven't been opened and sets their titles in bold. Opening an item removes both.",
+    "aliases": ["unread dot", "new item marker", "unread state"]
+  },
+  "presence": {
+    "summary": "Showing online and away.",
+    "description": "Presence puts a small dot on the corner of an avatar to show whether the person is online or away. People can change their own status.",
+    "aliases": ["online status", "availability", "away status"]
+  },
+  "feature-dot": {
+    "summary": "A dot on a newly added menu item.",
+    "description": "A feature dot draws attention to a new menu item and disappears once it's opened. A dot that stays after it's been seen means nothing, so whether it was opened is remembered.",
+    "aliases": ["new badge", "discovery dot", "new feature dot"]
+  },
+  "scroll-progress": {
+    "summary": "A bar at the top showing how far you've read.",
+    "description": "Scroll progress fills a thin bar at the very top as people read a long article, so they can tell at a glance how much is left.",
+    "aliases": ["reading progress", "scroll indicator", "progress bar"]
+  },
+  "password-strength-meter": {
+    "summary": "Shows the strength of a password with levels and words.",
+    "description": "A password strength meter shows strength with a four-part bar and words such as weak, fair, and strong while people type, plus one line on how to make it stronger.",
+    "aliases": ["password meter", "strength indicator", "password strength"]
+  },
+  "sticky-header": {
+    "summary": "A top bar that stays while you scroll.",
+    "description": "A sticky header keeps the title and main actions at the top of the screen as people scroll down a list. A shadow appears only once content starts passing underneath, so it looks light the rest of the time.",
+    "aliases": ["fixed header", "sticky top bar", "pinned header"]
+  },
+  "sticky-action-bar": {
+    "summary": "A main button that's always visible on mobile.",
+    "description": "A sticky action bar keeps the price and the buy button at the bottom of the screen while people read the product details. It sits within thumb reach, so they can act right away.",
+    "aliases": ["bottom bar", "sticky CTA", "buy bar"]
+  },
+  "split-view": {
+    "summary": "A list and its details side by side.",
+    "description": "A split view puts a list and its details side by side on wide screens and shows one at a time on narrow ones. It responds to the width of its own area (a container query), not the window.",
+    "aliases": ["master-detail", "two pane", "list detail"]
+  },
+  "sidebar-layout": {
+    "summary": "Two columns: a menu and the content.",
+    "description": "A sidebar layout puts the menu on the left and the content on the right. When space runs short, the menu moves to a row above the content.",
+    "aliases": ["two column", "app shell", "menu and content"]
+  },
+  "responsive-grid": {
+    "summary": "A grid whose column count changes with the width.",
+    "description": "A responsive grid only sets the minimum width of a cell and creates as many columns as fit. Without breakpoints, cells fill evenly at any width.",
+    "aliases": ["auto-fill grid", "fluid grid", "responsive columns"]
+  },
+  "bento-grid": {
+    "summary": "Fitting cells of different sizes together.",
+    "description": "A bento grid fills tiles of different sizes without gaps, like a lunch box, to introduce features. The largest tile carries the main point and the smaller ones support it.",
+    "aliases": ["bento layout", "feature tiles", "tile grid"]
+  },
+  "safe-area": {
+    "summary": "Padding that avoids the notch and home bar.",
+    "description": "Safe area padding adds env(safe-area-inset-*) so a phone's notch, rounded corners, and home indicator never cover content.",
+    "aliases": ["safe area insets", "viewport-fit", "notch padding"]
+  },
+  "hero-section": {
+    "summary": "The key headline and main action in the first area of the page.",
+    "description": "A hero section uses the first area visitors see to say what the service does: a one-line headline, a one-sentence description, and a single main button.",
+    "aliases": ["hero", "above the fold", "landing hero", "main visual"]
+  },
+  "card-grid": {
+    "summary": "Repeating cards in an even grid.",
+    "description": "A card grid places cards of the same shape in an even grid and aligns each card's content vertically so the button rows line up even when titles differ in length.",
+    "aliases": ["card list", "product grid", "grid of cards"]
+  },
+  "dashboard-layout": {
+    "summary": "Metric cards and charts in reading order.",
+    "description": "A dashboard layout puts the most important numbers in cards at the top, a chart of their trend in the middle, and a detailed table at the bottom. Changing the period updates everything together.",
+    "aliases": ["dashboard", "KPI layout", "admin dashboard", "metrics screen"]
+  },
+  "magazine-layout": {
+    "summary": "Lead and supporting content told apart by size and position.",
+    "description": "A magazine layout shows one lead story large and stacks the rest small beside it, using size and position to show importance. On narrow screens, everything stacks in one column starting with the lead.",
+    "aliases": ["editorial layout", "lead story", "news layout"]
+  },
+  "z-pattern": {
+    "summary": "Placing information so the eye moves side to side on a simple screen.",
+    "description": "A Z-pattern places elements along the Z-shaped path the eye follows on a sparse screen: top left, top right, bottom left, bottom right. The main action goes at the end of the path.",
+    "aliases": ["z layout", "scanning pattern", "eye path"]
+  },
+  "full-bleed": {
+    "summary": "Extending an image or background to the edges of the screen.",
+    "description": "Full bleed keeps text at a comfortable reading width while letting photos and backgrounds stretch to the edges of the screen. Named grid lines do it without negative margins.",
+    "aliases": ["edge to edge", "breakout", "wide image"]
+  },
+  "skeleton": {
+    "summary": "A loading state with gray shapes where the content will be.",
+    "description": "A skeleton shows gray blocks shaped like the real content while data loads. Showing the structure early makes the wait feel shorter and keeps the layout from jumping when content arrives.",
+    "aliases": ["skeleton loading", "placeholder", "shimmer", "loading placeholder"]
+  },
+  "spinner": {
+    "summary": "Waiting for a short task whose end can't be predicted.",
+    "description": "A spinner shows, in a small area, that work is in progress when it's hard to tell how much is left. In the reload example, it changes to a result message when the work is done.",
+    "aliases": ["loading icon", "activity indicator", "loader"]
+  },
+  "progress-bar": {
+    "summary": "Showing progress when the total amount is known.",
+    "description": "A progress bar shows the progress of a task such as a file upload as a continuous bar. When it's done, it shows 100% together with the result.",
+    "aliases": ["progress", "progress indicator", "determinate progress"]
+  },
+  "progress-ring": {
+    "summary": "Progress when space is tight.",
+    "description": "A progress ring shows progress around the edge of a circle. On a card corner or over a thumbnail, where a bar won't fit, it still shows at a glance how far along something is.",
+    "aliases": ["circular progress", "progress circle", "donut progress"]
+  },
+  "optimistic-ui": {
+    "summary": "Showing the result before the response.",
+    "description": "Optimistic UI assumes success and shows the result before the server responds. If the request fails, it reverts to the original state and says so briefly. Actions that rarely fail, such as a like, feel instant.",
+    "aliases": ["optimistic update", "useOptimistic", "instant update"]
+  },
+  "delayed-spinner": {
+    "summary": "A loader that doesn't appear for short waits at all.",
+    "description": "A delayed spinner appears only when a wait passes a set time. Fast requests don't flash a spinner, and once one appears it stays for a minimum time so it doesn't flicker.",
+    "aliases": ["spinner delay", "deferred loading", "flicker-free loader"]
+  },
+  "loading-overlay": {
+    "summary": "Loading that blocks a whole area.",
+    "description": "A loading overlay covers an area with a translucent layer while it saves and blocks input. It prevents values from changing midway and buttons from being pressed twice, and says what's in progress.",
+    "aliases": ["busy overlay", "blocking loader", "saving overlay"]
+  },
+  "blur-up-image": {
+    "summary": "An image that sharpens from a blurred preview.",
+    "description": "A blur-up image shows a tiny blurred preview first and fades to the original when it arrives. Instead of an empty gray box, people see the photo's colors and composition early, so the wait feels shorter.",
+    "aliases": ["LQIP", "progressive image", "image placeholder", "blurhash"]
+  },
+  "top-loading-bar": {
+    "summary": "A thin bar at the top that shows loading between pages.",
+    "description": "A top loading bar fills a thin bar at the very top while a page or screen loads. The current screen stays in place, so nothing flickers, and quick transitions never show it at all.",
+    "aliases": ["page loading bar", "route progress", "nprogress", "loading bar"]
+  },
+  "pull-to-refresh": {
+    "summary": "Pulling the top of a list down to fetch the latest items.",
+    "description": "Pull to refresh reloads the data when people pull down and release while the scroll area is at the top. A refresh button runs the same request.",
+    "aliases": ["refresh", "pull down", "swipe to refresh"]
+  },
+  "swipe-to-delete": {
+    "summary": "Swiping a row sideways to delete it.",
+    "description": "Swipe to delete reveals a delete button behind a row when people swipe it left, and deletes right away on a long swipe to the end. An undo appears right after, so an accidental swipe can be fixed.",
+    "aliases": ["swipe action", "swipe to remove", "swipe left"]
+  },
+  "drag-and-drop": {
+    "summary": "Dragging an item and dropping it somewhere else.",
+    "description": "Drag and drop changes a card's state by dropping it in another column. Valid drop targets are highlighted during the drag, and each card has a move button that does the same, so dragging is never the only way.",
+    "aliases": ["DnD", "drag", "kanban", "move cards"]
+  },
+  "long-press": {
+    "summary": "Pressing and holding to open a hidden menu.",
+    "description": "A long press opens hidden actions such as reply and copy when an item is held for about half a second. The item shrinks slightly while held to show it's responding, and moving the finger cancels it so it isn't confused with scrolling.",
+    "aliases": ["press and hold", "context menu", "tap and hold"]
+  },
+  "swipe-to-dismiss": {
+    "summary": "Dragging a sheet down to close it.",
+    "description": "Swipe to dismiss lets a bottom sheet follow the finger down from its handle and close once it passes a set distance. Released short of that, it springs back, so it doesn't close by accident.",
+    "aliases": ["drag to dismiss", "pull down to close", "swipe down"]
+  },
+  "pinch-to-zoom": {
+    "summary": "Zooming with two fingers.",
+    "description": "Pinch to zoom enlarges a map or photo when two fingers spread and shrinks it when they pinch. The zoom level is shown as text, along with zoom in, zoom out, and reset buttons that do the same.",
+    "aliases": ["zoom", "pinch", "two-finger zoom"]
+  },
+  "swipe-navigation": {
+    "summary": "Swiping sideways to the next screen.",
+    "description": "Swipe navigation moves between screens of the same kind by swiping sideways. CSS scroll snap stops exactly one screen at a time, and the current screen's title and previous and next buttons sit on top.",
+    "aliases": ["swipe pages", "paging", "swipe between screens"]
+  },
+  "double-tap": {
+    "summary": "Double-tapping a photo to like it.",
+    "description": "A double tap on a photo likes it, with a heart that grows briefly and fades. A double tap only likes and never unlikes; the like button beside it turns the like on and off.",
+    "aliases": ["double tap to like", "heart", "tap twice"]
+  },
+  "tap": {
+    "summary": "Pressing once to open or choose.",
+    "description": "A tap, pressing once, is the most basic gesture. Even when the visible icon is small, the touch area is at least 44×44px, and the background changes the moment it's pressed so people know it registered.",
+    "aliases": ["touch", "tap target", "hit area", "press"]
+  },
+  "edge-swipe": {
+    "summary": "Swiping from the edge to open a menu.",
+    "description": "An edge swipe brings a menu out with the finger when people swipe right starting at the left edge of the screen. Only drags that start within 24px of the edge count, so it doesn't clash with other sideways scrolling on the page.",
+    "aliases": ["edge gesture", "drawer swipe", "swipe back"]
+  },
+  "momentum-scrolling": {
+    "summary": "Scrolling that keeps going after release and slows to a stop.",
+    "description": "Momentum scrolling keeps gliding at the release speed after a fast swipe and gradually slows to a stop. Browsers already do this for touch and wheels, so the effect is added only for dragging with a mouse.",
+    "aliases": ["inertia scrolling", "fling", "kinetic scrolling"]
+  },
+  "scroll-bounce": {
+    "summary": "Scrolling that stretches at the end and springs back.",
+    "description": "Scroll bounce stretches a list by a third of the finger's distance when people pull past its start or end, and springs back on release. It lets people feel that there's no more content and keeps the page behind from scrolling.",
+    "aliases": ["overscroll", "rubber band", "bounce scroll"]
+  },
+  "slide-to-unlock": {
+    "summary": "Confirming by sliding all the way to the end.",
+    "description": "Slide to unlock runs only after the handle is slid to the end of its track. Early phone lock screens used it to prevent accidental taps in a pocket. Released before the end, the handle returns to the start.",
+    "aliases": ["swipe to confirm", "slide to pay", "slide to confirm"]
+  },
+  "reduced-motion": {
+    "summary": "An alternative for people who reduce motion.",
+    "description": "For people who turned on reduced motion on their device, the same change is shown with a short fade instead of a large movement. Motion isn't removed but made gentler, and the message stays the same.",
+    "aliases": ["prefers-reduced-motion", "reduce motion", "motion sensitivity"]
+  },
+  "page-transition": {
+    "summary": "A transition that shows where the new screen came from.",
+    "description": "A page transition slides in from the side when going from a list to its details and moves the opposite way going back, showing which screen comes first. Unrelated screens fade through, and temporary screens rise from the bottom as a modal.",
+    "aliases": ["screen transition", "navigation transition", "push transition", "fade through"]
+  },
+  "expand-collapse-motion": {
+    "summary": "A card that grows in place to reveal more.",
+    "description": "Expand/collapse motion grows a folded card downward in place to show its details when pressed. Changing grid-template-rows from 0fr to 1fr opens it to the real content height without measuring it.",
+    "aliases": ["expand animation", "height animation", "grid-template-rows"]
+  },
+  "micro-interaction": {
+    "summary": "A small, quick response at the moment of a press.",
+    "description": "A micro-interaction is a small response to a single action, such as a save icon that dips, pops, and fills when pressed. It finishes within 300ms, and the result also stays as an icon and words, so missing the motion loses nothing.",
+    "aliases": ["micro interaction", "tap feedback", "button feedback"]
+  },
+  "shake-on-error": {
+    "summary": "Shaking a wrong input side to side.",
+    "description": "Shake on error wiggles a field briefly side to side, like shaking a head, when a password is wrong. The shake is only emphasis, so a red border and an error message appear with it.",
+    "aliases": ["shake animation", "error shake", "head shake"]
+  },
+  "shared-element-transition": {
+    "summary": "A thumbnail that grows into the detail screen.",
+    "description": "A shared element transition grows a photo from a list into the large photo on the detail screen. The View Transitions API links elements with the same name on both screens; browsers without it simply switch screens.",
+    "aliases": ["View Transitions", "hero animation", "morph", "hero transition"]
+  },
+  "scroll-reveal": {
+    "summary": "Appearing as it scrolls into view.",
+    "description": "Scroll reveal makes content rise slightly or grow into place the moment it enters the screen. IntersectionObserver plays it once on first view, and content is shown from the start where observing isn't supported.",
+    "aliases": ["reveal on scroll", "scroll animation", "fade up on scroll"]
+  },
+  "parallax": {
+    "summary": "A background that moves at a different speed.",
+    "description": "Parallax moves the picture behind more slowly than the text in front while scrolling, adding depth. Writing the scroll position straight into the style, instead of re-rendering state, keeps it smooth; with reduced motion, everything scrolls together.",
+    "aliases": ["parallax scrolling", "depth scroll"]
+  },
+  "ease-in-out": {
+    "summary": "Easing that shapes the speed at the start and end.",
+    "description": "Easing curves keep the same distance and time but move slowly at the start, at the end, or at both. Entering elements look natural with ease-out, leaving ones with ease-in, and ones moving between places with ease-in-out.",
+    "aliases": ["easing", "timing function", "cubic-bezier", "acceleration"]
+  },
+  "fade": {
+    "summary": "Appearing and disappearing with opacity.",
+    "description": "A fade is the calmest transition: only opacity changes as an element appears or disappears. Appearing uses CSS @starting-style, and the element is removed only after the exit transition ends.",
+    "aliases": ["fade in", "fade out", "opacity transition"]
+  },
+  "slide": {
+    "summary": "Sliding in from one edge.",
+    "description": "A slide brings an element in from one edge and takes it out the same way. Because it comes and goes in the same direction, people know where it's tucked away.",
+    "aliases": ["slide in", "slide out", "slide transition"]
+  },
+  "spring": {
+    "summary": "Overshooting the target, coming back, and settling.",
+    "description": "A spring overshoots its target a little, comes back, and settles, like a weight on a spring. It's defined by stiffness and friction instead of duration, so if the target changes mid-motion, it keeps its speed and turns naturally.",
+    "aliases": ["spring animation", "spring physics", "damping", "elastic"]
+  },
+  "bounce": {
+    "summary": "Hitting the ground and bouncing back up.",
+    "description": "A bounce moves like a ball dropped on the floor, bouncing lower each time until it stops. When a product goes into the cart, the cart hops once and draws the eye to where the number changed.",
+    "aliases": ["bounce animation", "hop"]
+  },
+  "stagger": {
+    "summary": "Showing several elements one after another at short intervals.",
+    "description": "Stagger brings list items up one after another from the top instead of all at once. Keep the gap to tens of milliseconds per item and finish the whole sequence within 400ms.",
+    "aliases": ["staggered animation", "cascade", "sequential animation"]
+  },
+  "zoom-transition": {
+    "summary": "A screen growing out of its icon.",
+    "description": "A zoom transition grows a screen out of the app icon that was pressed and shrinks it back into the icon on close. Setting transform-origin to the pressed position shows where the screen came from.",
+    "aliases": ["zoom in transition", "scale transition", "app launch animation"]
+  },
+  "count-up": {
+    "summary": "A number that counts up and settles.",
+    "description": "Count up raises a key figure quickly from zero and slows to a stop at the end. It draws the eye to a big number, while screen readers hear only the final number from the start.",
+    "aliases": ["animated counter", "number ticker", "counter animation"]
+  },
+  "typewriter": {
+    "summary": "A sentence typed out one letter at a time.",
+    "description": "A typewriter effect writes a sentence one letter at a time with a blinking cursor at the end. It suggests someone speaking right now, as in a chat assistant's greeting.",
+    "aliases": ["typing effect", "typewriter text", "typing animation"]
+  },
+  "rotating-words": {
+    "summary": "Words taking turns in one spot.",
+    "description": "Rotating words lift the last word of a sentence out at a fixed interval and bring the next one up. One sentence shows several uses, and a pause button stops it at any time.",
+    "aliases": ["word rotator", "text rotate", "changing words"]
+  },
+  "marquee": {
+    "summary": "A strip that scrolls sideways without end.",
+    "description": "A marquee scrolls short phrases such as free shipping or ships today endlessly sideways in a strip. The list is repeated twice for a seamless loop, and it pauses on hover or with a pause button.",
+    "aliases": ["ticker", "scrolling text", "news ticker"]
+  },
+  "text-scramble": {
+    "summary": "Letters that scramble and then settle.",
+    "description": "Text scramble cycles quickly through symbols and settles into the real letters one by one from the left. It stages the moment something is processed and a result appears, as in connecting or decoding.",
+    "aliases": ["decode effect", "glitch text", "scramble"]
+  },
+  "staggered-text-reveal": {
+    "summary": "Lines or words appearing at intervals.",
+    "description": "A staggered text reveal brings the lines or words of a heading up from below at short intervals. Appearing in reading order brings out the rhythm of the sentence.",
+    "aliases": ["split text", "line reveal", "word reveal"]
+  },
+  "fade-up": {
+    "summary": "Text that rises as it comes into focus.",
+    "description": "Fade up is the safest entrance: text rises about 10px from below as it goes from transparent to solid. Showing the heading, body, and button slightly later each guides the reading order.",
+    "aliases": ["fade in up", "slide up fade", "rise in"]
+  },
+  "animated-highlight": {
+    "summary": "A highlighter stroke across the key phrase.",
+    "description": "An animated highlight paints a highlighter behind the key phrase of a sentence from left to right. It paints once on first view, and because it's a real mark element, the emphasis stays even without motion.",
+    "aliases": ["marker highlight", "text highlight", "highlighter effect"]
+  },
+  "mask-reveal": {
+    "summary": "Text rising out from behind a mask.",
+    "description": "A mask reveal hides each line below an invisible edge and slides it up into view. Each line starts one line-height down inside an overflow-hidden box.",
+    "aliases": ["text mask", "clip reveal", "line reveal"]
+  },
+  "blur-in": {
+    "summary": "Blurry text coming into focus.",
+    "description": "Blur in brings faint, blurry text into focus. It gives a short sentence a calm, refined feel; the blur filter is expensive, so use it on a single heading line.",
+    "aliases": ["focus in", "blur reveal", "blur effect"]
+  },
+  "bar-chart": {
+    "summary": "Comparing sizes across categories by length.",
+    "description": "A bar chart compares split categories such as weekdays or regions by bar length starting at zero. Names and values are written as text so it reads without the bars, and bars ease to their new length when the data changes.",
+    "aliases": ["bar graph", "horizontal bar", "bar chart"]
+  },
+  "line-chart": {
+    "summary": "Following how a value changes along an ordered axis.",
+    "description": "A line chart shows with a 2px line how values change along an ordered axis such as months or weeks. Moving the guide line with the pointer or the left and right arrows reads every series at that point in one line, and series names sit at the line ends and in the legend.",
+    "aliases": ["line graph", "time series", "trend chart"]
+  },
+  "donut-chart": {
+    "summary": "The share of each part of a whole.",
+    "description": "A donut chart shows the share of a few parts of a whole as ring segments. The total sits in the middle and changes to a part's share when its segment or legend entry is pointed at. The legend lists values and percentages, and \"other\" stays gray.",
+    "aliases": ["donut", "pie chart", "composition chart"]
+  },
+  "sparkline": {
+    "summary": "A small trend line inside a card or table.",
+    "description": "A sparkline shows a trend as a line the size of text, with no axes or ticks. It fits in a table cell or card next to a number, with a dot on the last value; exact values sit beside it as text.",
+    "aliases": ["micro chart", "inline chart", "mini chart"]
+  },
+  "gauge": {
+    "summary": "The current value in a range, with a target.",
+    "description": "A gauge shows where the current value sits in a fixed range as a half-circle bar. A target, if any, is marked on the scale, and the value and range are also written as text. The bar grows smoothly when the value changes.",
+    "aliases": ["meter", "half-circle gauge", "achievement rate"]
+  },
+  "heatmap": {
+    "summary": "Showing where values cluster by color depth in a grid.",
+    "description": "A heatmap shades cells where two dimensions meet, such as weekday and hour, in depths of one color to show where values cluster. Pointing at a cell or moving with the arrows outlines it and reads the exact value, with a color scale legend below.",
+    "aliases": ["heat map", "calendar heatmap", "density grid"]
+  },
+  "kpi-card": {
+    "summary": "A key metric and its change against a comparison period.",
+    "description": "A KPI card shows one key number large on a dashboard together with its change and what it's compared with. An arrow, a sign, and the words up or down show the direction, and the color depends on whether the change is good or bad for that metric.",
+    "aliases": ["stat card", "metric card", "number card"]
+  },
+  "stacked-bar-chart": {
+    "summary": "Comparing totals and their makeup within bars.",
+    "description": "A stacked bar chart splits each bar into parts in the same order to show the total and its makeup together. As counts, bar length compares totals; as percentages, equal-length bars compare composition. Parts are separated by 2px gaps and show their values on hover.",
+    "aliases": ["stacked bar", "100% stacked bar", "composition bar"]
+  },
+  "column-chart": {
+    "summary": "Comparing ordered categories by vertical bar height.",
+    "description": "A column chart compares ordered categories such as months or quarters by vertical bar height from zero. The scale stays the same when the period changes, so heights stay comparable, and pointing at a bar shows its value.",
+    "aliases": ["vertical bar chart", "column graph", "monthly bars"]
+  },
+  "pie-chart": {
+    "summary": "The share of a few parts of a whole.",
+    "description": "A pie chart divides a circle into slices by each part's share. Large slices carry their percentage directly, and the legend lists values and percentages. Pointing at a slice or legend entry leaves only that part at full strength.",
+    "aliases": ["pie graph", "circle chart", "proportion chart"]
+  },
+  "venn-diagram": {
+    "summary": "Where two or three sets overlap, and the count in each region.",
+    "description": "A Venn diagram overlaps two or three circles and writes the count in each region the overlaps create. The circles stay the same size so the numbers tell the size; choosing a set in the legend highlights its circle and reads its total.",
+    "aliases": ["set overlap", "overlapping circles", "intersection chart"]
+  },
+  "bubble-chart": {
+    "summary": "Comparing three values by position and circle size.",
+    "description": "A bubble chart places circles by two values and sizes their area by a third, comparing many items at once. Circles overlap semi-transparently with white outlines, and the one pointed at comes to the front and reads its values.",
+    "aliases": ["bubble plot", "three-variable scatter"]
+  },
+  "radar-chart": {
+    "summary": "Comparing strengths across several measures around a circle.",
+    "description": "A radar chart places several measures on the same scale as axes around a circle and joins the values into a shape. The shape shows strengths and weaknesses at a glance, and two shapes overlaid show where two subjects differ.",
+    "aliases": ["spider chart", "web chart", "star chart"]
+  },
+  "scatter-plot": {
+    "summary": "The relationship between two values, and outliers.",
+    "description": "A scatter plot places dots by two values, one across and one up, to see whether they grow together and which dots stand apart. Pointing anywhere reads the nearest dot, and turning on the average lines splits the plot into four quadrants.",
+    "aliases": ["scatter chart", "dot plot", "correlation chart"]
+  },
+  "area-chart": {
+    "summary": "Amounts over time as the area under a line.",
+    "description": "An area chart fills under a line lightly to stress how much there is over time. It's drawn on an axis starting at zero, and moving the guide line with the pointer or the left and right arrows reads that day's value.",
+    "aliases": ["area graph", "stacked area"]
+  },
+  "histogram": {
+    "summary": "The shape of a distribution in equal-width bins.",
+    "description": "A histogram splits many values into bins of equal width and shows how many fall in each as bars. The bins are continuous, so the bars touch, and changing the bin width shows how the same data can take different shapes.",
+    "aliases": ["frequency distribution", "distribution chart", "binned bars"]
+  },
+  "treemap": {
+    "summary": "Comparing sizes by dividing a rectangle by area.",
+    "description": "A treemap divides a rectangle into smaller rectangles by each item's value. Laying out large items first, close to square, makes areas easy to compare, and roomy cells carry their name and value directly.",
+    "aliases": ["squarified treemap", "area chart", "rectangle chart"]
+  },
+  "waterfall-chart": {
+    "summary": "Stacking increases and decreases in order up to the result.",
+    "description": "A waterfall chart starts from an opening value, stacks increases and decreases in turn as floating bars, and ends with the result. From revenue to net profit, it shows at a glance how much each item moved the result.",
+    "aliases": ["bridge chart", "variance chart"]
+  },
+  "box-plot": {
+    "summary": "Summarizing a distribution with the median, the middle 50%, and the range.",
+    "description": "A box plot draws each group's middle half as a box, its median as a line, its usual range as whiskers, and anything far outside as dots. It compares spread and skew across groups side by side, which an average alone can't show.",
+    "aliases": ["box and whisker", "quartile chart", "boxplot"]
+  },
+  "bullet-chart": {
+    "summary": "One metric against a target line and rating bands.",
+    "description": "A bullet chart overlays the current value, a target line, and poor, fair, and good bands on a single bar. It takes less room than a gauge, so many metrics stack well, and the value and target are also written as text.",
+    "aliases": ["bullet graph", "target bar", "KPI bar"]
+  },
+  "waffle-chart": {
+    "summary": "Showing a share as counts in a 100-cell grid.",
+    "description": "A waffle chart fills cells of a 10×10 grid, each worth 1%. It reads as counts, such as 68 out of 100 people, which works for people who find percentages unfamiliar, and the legend lists every share as text.",
+    "aliases": ["square pie", "100-cell chart", "icon array"]
+  },
+  "calendar-heatmap": {
+    "summary": "Daily values as shading in calendar cells.",
+    "description": "A calendar heatmap lays a month or a year out in cells by weekday and week and shades each day's value in depths of one color. Consistency and weekly rhythms in things like exercise or journaling stand out, and pointing at a cell or moving with the arrows reads that day's value.",
+    "aliases": ["contribution graph", "activity calendar", "streak calendar"]
+  },
+  "slope-chart": {
+    "summary": "Increases, decreases, and rank changes between two points in time.",
+    "description": "A slope chart plots each item's values at two points in time on two vertical lines and joins them. Rising, falling, and crossing lines show changes and rank shifts at once, and pointing at an item fades the rest.",
+    "aliases": ["slopegraph", "before and after chart", "two-point comparison"]
+  },
+  "polar-area-chart": {
+    "summary": "Cyclical values as slice lengths at equal angles.",
+    "description": "A polar area chart divides a circle into equal angles and extends each slice outward by its value. For data that cycles, such as months or hours, it shows when values cluster; the radius grows with the square root so slice area matches the value.",
+    "aliases": ["rose chart", "Nightingale chart", "radial bar"]
+  },
+  "empty-state": {
+    "summary": "Explaining why there's nothing to show and what to do next.",
+    "description": "An empty state doesn't leave a blank space when a list or search has no results; it explains why it's empty and what people can do next.",
+    "aliases": ["zero state", "no results", "no data", "blank state"]
+  },
+  "error-state": {
+    "summary": "Explaining a failed load and how to recover.",
+    "description": "When the request for a list or detail screen fails, an error state says which task ran into a problem and lets people try again on the same screen.",
+    "aliases": ["error page", "load error", "try again", "failed to load"]
+  },
+  "no-results": {
+    "summary": "An empty result that helps people change their query.",
+    "description": "When a search finds nothing, no results shows what was searched and suggests similar terms and fixes, so people search again instead of leaving a blank screen.",
+    "aliases": ["zero results", "empty search", "nothing found"]
+  },
+  "offline-state": {
+    "summary": "What to show when the connection drops.",
+    "description": "An offline state explains what's wrong when the network connection drops and says the content will reload on its own once connected. A button lets people retry themselves.",
+    "aliases": ["offline", "no connection", "network error"]
+  },
+  "not-found-page": {
+    "summary": "A way back when the address is wrong.",
+    "description": "A 404 page explains in plain words what happened when people land on an address that doesn't exist, and offers a way on through search or the home page. The next step comes before the error code.",
+    "aliases": ["404", "not found", "page not found"]
+  },
+  "permission-denied": {
+    "summary": "Why something can't be viewed and how to ask for access.",
+    "description": "Permission denied explains why people can't see what they opened and how to get access. It shows who can grant it and which account they're signed in with, and leads straight to a request.",
+    "aliases": ["access denied", "403", "forbidden", "request access"]
+  },
+  "maintenance-page": {
+    "summary": "The schedule for planned maintenance.",
+    "description": "A maintenance page says when planned maintenance started, when it ends, and how long is left while the service is unavailable. People can ask to be notified when it's over, so they don't have to keep refreshing.",
+    "aliases": ["maintenance", "scheduled downtime", "service maintenance"]
+  },
+  "no-filter-results": {
+    "summary": "An empty result that shows the filters in use and suggests loosening them.",
+    "description": "When too many filters leave no results, this shows the filters in use and lets people remove them one by one or clear them all in place, so they can fix whichever condition emptied the list.",
+    "aliases": ["empty filter", "no matches", "zero filter results"]
+  },
+  "all-caught-up": {
+    "summary": "Saying there's nothing left to do and no new notifications.",
+    "description": "When every notification or task is handled and the list is empty, all caught up says the work is done instead of feeling like something is missing. It also says when and where new items will appear.",
+    "aliases": ["inbox zero", "you're all set", "nothing left", "all done"]
+  },
+  "emptied-state": {
+    "summary": "What happens after the last item is removed, and what to do next.",
+    "description": "When removing the last item empties a list, an emptied state says what was just removed and offers undo and a next action. Unlike a list that started empty, it makes clear this is the result of what people just did.",
+    "aliases": ["emptied list", "last item removed", "empty cart"]
+  },
+  "locked-content": {
+    "summary": "The terms for access and how to unlock it.",
+    "description": "Locked content shows only the beginning of something that needs a membership or payment and says what's needed to see the rest. Previewing what people will get helps them decide.",
+    "aliases": ["paywall", "gated content", "premium content", "members only"]
+  },
+  "onboarding-carousel": {
+    "summary": "A service introduction to swipe through.",
+    "description": "An onboarding carousel introduces the core of a service in three or four screens, one at a time, to people opening the app for the first time. Skip is always visible, it never advances on its own, and the last screen's button becomes Get started.",
+    "aliases": ["intro slides", "walkthrough", "tutorial slides", "onboarding"]
+  },
+  "coach-mark": {
+    "summary": "A one-time hint pointing at a button.",
+    "description": "A coach mark dims the rest of the screen, lights up one button, and explains its use in a short bubble. It shows only the first time and disappears once acknowledged.",
+    "aliases": ["spotlight", "feature tip", "tooltip tour"]
+  },
+  "product-tour": {
+    "summary": "Pointing out parts of the screen in several steps.",
+    "description": "A product tour lights up and explains the main features of a screen, such as search, filters, and export, one at a time. It shows which step people are on, and they can stop at any time with previous, next, or skip.",
+    "aliases": ["guided tour", "walkthrough", "feature tour"]
+  },
+  "setup-checklist": {
+    "summary": "A first to-do list with progress.",
+    "description": "A setup checklist shows the first things to do as a list of about four items with a progress bar. Each item has a button to start it, and finished items are checked in place so the list doesn't shift.",
+    "aliases": ["getting started", "onboarding checklist", "to-do list"]
+  },
+  "permission-priming": {
+    "summary": "Explaining why a permission is needed before the system asks.",
+    "description": "Permission priming is the app's own screen explaining why it needs notifications, location, or the camera before the device asks. It appears at the moment of need, such as right after an order, and choosing Later skips the system prompt to save that one chance.",
+    "aliases": ["pre-permission", "soft ask", "permission explainer"]
+  },
+  "welcome-screen": {
+    "summary": "A first-visit greeting and a start button.",
+    "description": "A welcome modal greets first-time visitors with one sentence about what the service does and a start button. People can choose to look around first, and closing it with Esc counts as looking around.",
+    "aliases": ["welcome modal", "first-run", "first visit greeting"]
+  },
+  "whats-new": {
+    "summary": "What changed after an update.",
+    "description": "What's new shows up to three changes in plain words, once, right after an update. After it's closed, a news button shows it again.",
+    "aliases": ["release notes", "changelog modal", "update notes"]
+  },
+  "splash-screen": {
+    "summary": "The screen shown while an app gets ready.",
+    "description": "A splash screen shows the logo while the app opens and moves straight to home when it's ready. It stays a minimum time so it doesn't flash, but never holds people once everything is ready.",
+    "aliases": ["launch screen", "splash", "loading screen"]
+  },
+  "social-sign-in": {
+    "summary": "Signing up and signing in with an outside account.",
+    "description": "Social sign-in is a set of buttons for signing up and signing in at once with an account people already have. Each button names its account in words, and only the pressed one shows it's connecting while the rest wait, so nothing starts twice.",
+    "aliases": ["SSO", "continue with", "social login", "sign in with"]
+  },
+  "terms-agreement": {
+    "summary": "A consent screen that separates required and optional terms.",
+    "description": "A terms agreement lists required and optional terms under Agree to all, and people can continue only after checking every required one. Checking some shows Agree to all in an in-between state, and each term can be opened to read.",
+    "aliases": ["agree to all", "consent checkboxes", "terms of service"]
+  },
+  "profile-setup": {
+    "summary": "Choosing a nickname and photo for the first time.",
+    "description": "Profile setup is the step right after sign-up for choosing a nickname and photo. Before a photo is picked, it shows the nickname's first letter; it states the length rule before typing, and people can skip with Later.",
+    "aliases": ["onboarding profile", "avatar setup", "nickname setup"]
+  },
+  "system-permission-dialog": {
+    "summary": "The step where the device takes the permission decision.",
+    "description": "A system permission dialog is the window the device itself shows after the app explains why. The app can't change its look, only its message, so write one exact sentence about what the permission is for, and prepare the next screen for each outcome.",
+    "aliases": ["permission prompt", "runtime permission", "OS permission dialog"]
+  },
+  "permission-recovery": {
+    "summary": "A way to turn it back on after a refusal, and an alternative.",
+    "description": "Permission recovery says what won't work after a refusal and offers Allow again if the device can still ask, or Open settings if it can't. A way to continue without the permission, such as typing an address, sits beside it.",
+    "aliases": ["open settings", "permission denied recovery", "ask again"]
+  },
+  "limited-access": {
+    "summary": "Using only the allowed scope and changing it when needed.",
+    "description": "When people allow only part of something, such as a few photos, limited access draws the screen from that scope and says so in one line. If more is needed, they can change the selection right there.",
+    "aliases": ["limited photo access", "partial permission", "selected photos only"]
+  },
+  "success-screen": {
+    "summary": "The result and next steps after payment or sign-up.",
+    "description": "A success screen announces the result with a clear heading right after payment or sign-up, along with the details people want to check at once, such as the order number and amount, and the next actions. Focus moves to the heading so screen reader users hear the result right away.",
+    "aliases": ["confirmation page", "thank you page", "order complete", "payment complete"]
+  },
+  "success-checkmark": {
+    "summary": "A checkmark that draws itself.",
+    "description": "A success checkmark fills a circle and then draws a check in one stroke. Use it briefly for a success people waited for, such as a money transfer, and state the result in words too.",
+    "aliases": ["animated check", "success tick", "done check"]
+  },
+  "confetti": {
+    "summary": "Paper pieces at the moment a goal is reached.",
+    "description": "Confetti bursts once and scatters at the moment a long goal is reached, such as walking for 30 days. It's decoration only, so screen readers skip it, and a message about the achievement appears with it.",
+    "aliases": ["celebration", "party popper", "confetti burst"]
+  },
+  "receipt-summary": {
+    "summary": "An order at a glance.",
+    "description": "A receipt summary puts the amount paid and the payment method at the top and lets people expand the items with one press. Amounts align right with fixed-width digits, and discounts show a minus sign along with color.",
+    "aliases": ["order summary", "receipt", "payment details"]
+  },
+  "streak": {
+    "summary": "A record of how many days in a row.",
+    "description": "A streak shows how many days in a row something has continued and marks this week's recorded days. Recording today makes the number hop once to show it went up.",
+    "aliases": ["daily streak", "habit tracker", "consecutive days"]
+  },
+  "achievement-badge": {
+    "summary": "Locked before earning, the moment of earning, and a shelf of badges.",
+    "description": "A locked achievement badge shows the remaining progress (4/5) with a ring, and fills with color and shows the date when earned. Locked goals aren't hidden, so people know what to do next.",
+    "aliases": ["badges", "achievements", "badge collection"]
+  },
+  "completed-task-strikethrough": {
+    "summary": "Striking through a checked task.",
+    "description": "When a task is checked, a line draws across its text from the left and it turns gray. The checkbox holds the real state; the line is a visual that adds the feeling of being done.",
+    "aliases": ["strikethrough", "check off", "todo done"]
+  },
+  "completion-stamp": {
+    "summary": "Stamping a finished card.",
+    "description": "A completion stamp presses down on a finished mission card or coupon at a slight angle. It comes down slightly large and settles in place like ink on paper, and completion is also stated in words.",
+    "aliases": ["stamp", "done stamp", "mission complete"]
+  },
+  "send-animation": {
+    "summary": "Marking the moment of sending with a short motion.",
+    "description": "A send animation flies a paper plane up to the right when Send is pressed, brings a new one back, and raises the sent message at the bottom of the conversation. The motion is only a signal; the result stays as a message in the conversation.",
+    "aliases": ["message sent", "paper plane", "send button"]
+  },
+  "star-rating": {
+    "summary": "Rating with whole or half stars.",
+    "description": "A star rating takes a score with five stars. Underneath it's a native radio group, so the arrow keys move the score, and when half steps are needed, each star's left and right halves can be pressed separately.",
+    "aliases": ["rating stars", "5 star rating", "rating input"]
+  },
+  "like-button": {
+    "summary": "Pressing to leave a reaction.",
+    "description": "A like button leaves a public reaction with a heart and updates the count at once. It applies the change before the server responds and reverts if it fails, and the heart pops only when turned on.",
+    "aliases": ["heart button", "favorite", "heart"]
+  },
+  "share-sheet": {
+    "summary": "Opening the device's share window.",
+    "description": "A share sheet opens the device's share window (navigator.share) when the share button is pressed, and a small sheet with copy link, message, and email in browsers without it. The icon follows the platform: a box and arrow on iOS, three dots on Android.",
+    "aliases": ["Web Share", "navigator.share", "share button", "share"]
+  },
+  "emoji-reaction": {
+    "summary": "Reacting with one of several feelings.",
+    "description": "Emoji reactions place chips with an emoji and a count under a message, and pressing one adds or removes your reaction. A plus button opens a small picker for a new reaction.",
+    "aliases": ["reactions", "emoji reactions", "reaction chips"]
+  },
+  "thumbs-feedback": {
+    "summary": "Rating whether it helped with yes or no.",
+    "description": "Thumbs feedback asks at the end of a help article whether it helped. Yes ends with a thank-you, and only No shows reason chips, so most people answer in one tap.",
+    "aliases": ["was this helpful", "thumbs up down", "helpful feedback"]
+  },
+  "rating-summary": {
+    "summary": "An average and distribution bars by score.",
+    "description": "A rating summary shows the average score, the total number of reviews, and distribution bars by score. Pressing a bar filters reviews to that score, and each bar has its count in text so it reads without the graphic.",
+    "aliases": ["rating histogram", "review breakdown", "review summary"]
+  },
+  "copy-link": {
+    "summary": "Copying an address and confirming it.",
+    "description": "Copy link places a read-only address field beside a copy button. Copying also selects the address, so people can copy it by hand if the clipboard is blocked, and the result is announced for two seconds.",
+    "aliases": ["copy URL", "share link", "invite link"]
+  },
+  "nps-scale": {
+    "summary": "Asking how likely people are to recommend, from 0 to 10.",
+    "description": "An NPS scale asks how likely people are to recommend something to a friend on a scale of 0 to 10. All scores look the same before a choice so none is nudged, and only one follow-up question matching the score is asked.",
+    "aliases": ["net promoter score", "0-10 scale", "likelihood to recommend"]
+  },
+  "invite-dialog": {
+    "summary": "Inviting people to work together by email.",
+    "description": "An invite dialog turns an email address into a removable chip when people press Enter or a comma. Malformed addresses don't become chips and show an error, and the send button says how many people are being invited.",
+    "aliases": ["invite members", "email invite", "team invite"]
+  },
+  "mention": {
+    "summary": "Calling someone with @.",
+    "description": "A mention input lists matching people when @ is typed in a comment and inserts @name for the one chosen. Focus stays in the field while the list is open, so typing can continue.",
+    "aliases": ["at mention", "user mention", "@mention", "tag people"]
+  },
+  "comment-thread": {
+    "summary": "A conversation with replies.",
+    "description": "A comment thread indents replies one level under each comment. Replies fold behind \"View 2 replies\", and pressing Reply opens a field right under that comment.",
+    "aliases": ["replies", "threaded comments", "nested comments"]
+  },
+  "emoji-rating": {
+    "summary": "Rating satisfaction with ordered faces.",
+    "description": "An emoji rating takes satisfaction with five faces in order, from frowning to smiling. Each face has a word name from very dissatisfied to very satisfied, so its meaning is clear without reading the face.",
+    "aliases": ["smiley rating", "CSAT faces", "face rating"]
+  },
+  "written-review": {
+    "summary": "Writing about an experience along with a star rating.",
+    "description": "A written review form takes a star rating and a review together. It shows the length rule and current character count while people type, and on submit it checks the form and moves focus to the first problem.",
+    "aliases": ["write a review", "review form", "leave a review"]
+  },
+  "rating-slider": {
+    "summary": "Entering a satisfaction score within a range.",
+    "description": "A rating slider picks a score by dragging along a range from 0 to 10. The current score floats above the handle, and words under both ends show which way the numbers go.",
+    "aliases": ["rating range", "score slider", "satisfaction slider"]
+  },
+  "rating-tags": {
+    "summary": "Choosing reasons along with a star rating.",
+    "description": "Rating tags let people press reason chips such as Friendly or Fast after choosing a star rating. High scores show what went well and low scores what fell short, and writing stays optional.",
+    "aliases": ["feedback chips", "review tags", "praise tags"]
+  },
+  "rating-badge": {
+    "summary": "A rating and review count summed up on a card.",
+    "description": "A rating badge adds one star, the rating, and the review count to a card or list. Showing the count tells a 4.9 from 7 reviews apart from a 4.6 from 1,284.",
+    "aliases": ["rating label", "review count", "star summary"]
+  },
+  "wishlist-bookmark": {
+    "summary": "Saving items to your own list to see later.",
+    "description": "A wishlist or bookmark toggle saves a product or post to a list only you see. Unlike a public like, it goes into your list, so it shows the list count and a short confirmation.",
+    "aliases": ["wishlist", "bookmark", "save for later", "save"]
+  },
+  "qr-sharing": {
+    "summary": "Passing a link through a code read by a camera.",
+    "description": "QR sharing shows a code that opens a link when someone nearby scans it with a camera. A small encoder for short links lives inside the component, with no library, and the address is also shown as text for people who can't scan.",
+    "aliases": ["QR code", "QR code share", "scan to join"]
+  },
+  "send-forward": {
+    "summary": "Passing an existing item to someone else.",
+    "description": "Send/forward is a picker for sending a photo or message to other people in the app. People search by name, check several, add a note, and send with a button that says how many will receive it.",
+    "aliases": ["forward message", "send to", "forward"]
+  },
+  "repost": {
+    "summary": "Sharing an existing post again in your feed.",
+    "description": "Pressing repost opens a menu with two choices: repost as is, or quote it with your own words. If it's already reposted, the same menu undoes it.",
+    "aliases": ["retweet", "quote post", "reshare"]
+  },
+  "nearby-share": {
+    "summary": "Sending straight to a nearby device.",
+    "description": "Nearby share lists devices one by one as they're found, waits for the other person to accept once one is chosen, and then says sent or declined. The operating system does the discovery; this component is the screen that shows its results.",
+    "aliases": ["nearby devices", "local share", "AirDrop"]
+  },
+  "chat-interface": {
+    "summary": "A conversation in speech bubbles.",
+    "description": "A chat interface stacks your messages in bubbles on the right and replies on the left. It follows new messages only when people are at the bottom; if they scrolled up to read, it holds its place and shows a new messages button.",
+    "aliases": ["chatbot", "conversation UI", "AI chat", "messaging"]
+  },
+  "streaming-text": {
+    "summary": "An answer that arrives as if being written.",
+    "description": "Streaming text shows an answer a few characters at a time as it's generated, with a cursor at the end. While writing, it stays aria-busy so screen readers don't read every fragment, and stopping keeps what was written so far.",
+    "aliases": ["streaming response", "token streaming", "live answer"]
+  },
+  "prompt-input": {
+    "summary": "An input with attachments and send or stop.",
+    "description": "A prompt input is where people write a question, growing up to a few lines as the text gets longer. Enter sends and Shift+Enter adds a line, and while an answer is being generated, the send button turns into a stop button in the same spot.",
+    "aliases": ["composer", "chat input", "message input"]
+  },
+  "suggested-prompts": {
+    "summary": "Examples you press to ask right away.",
+    "description": "Suggested prompts show a few example questions about what the assistant does well while the conversation is empty. Pressing one sends it at once, so people who don't know what to ask can learn by trying.",
+    "aliases": ["prompt starters", "conversation starters", "example questions"]
+  },
+  "thinking-indicator": {
+    "summary": "Showing that an answer is being prepared.",
+    "description": "A thinking indicator moves three dots up and down where the reply bubble will be, saying the assistant is thinking. After three seconds, it also shows the elapsed time so it doesn't look stuck.",
+    "aliases": ["typing indicator", "loading dots", "thinking"]
+  },
+  "response-feedback": {
+    "summary": "Copy, like, dislike, and regenerate.",
+    "description": "Response feedback is a row of icons under an answer: copy, good answer, poor answer, and regenerate. Good and poor are mutually exclusive toggles, so pressing one again undoes it.",
+    "aliases": ["answer actions", "rate response", "thumbs up down"]
+  },
+  "citation": {
+    "summary": "Links to the sources behind an answer.",
+    "description": "Citations put numbers after sentences in an answer and show the source title, site, and a link to the original when pressed. The numbers match the source list under the answer, so either side leads to the evidence.",
+    "aliases": ["sources", "footnote", "references"]
+  },
+  "model-picker": {
+    "summary": "Choosing which model answers.",
+    "description": "A model picker shows the current model's name on a small button that opens a menu with a one-line note on when to use each model. Saying what each is for, rather than listing names, makes the choice easier.",
+    "aliases": ["model switcher", "model selector", "AI model choice"]
+  },
+  "regenerate-response": {
+    "summary": "Generating a new answer and comparing it with the previous one.",
+    "description": "Regenerate response creates a new answer to the same question without discarding the previous one, and people move between them with ‹ 1 / 2 ›. Since the earlier answer they liked isn't lost, they can try again freely.",
+    "aliases": ["regenerate", "response versions", "try again"]
+  },
+  "edit-prompt": {
+    "summary": "Fixing a sent question and asking again from that point.",
+    "description": "Edit prompt lets people fix a question they already sent, in place. Pressing edit turns the bubble into an input; sending answers again from that question onward, and a line says so.",
+    "aliases": ["edit message", "rewrite prompt", "edit question"]
+  },
+  "file-attachment": {
+    "summary": "Attaching material to send, checking it, or removing it.",
+    "description": "File attachments show files to send with a question as chips above the input. Each shows its name, size, and upload progress, can be removed before sending, and explains right on the chip why a file can't be sent.",
+    "aliases": ["attachments", "upload chips", "attach files"]
+  },
+  "agent-steps": {
+    "summary": "Work in progress and finished steps, in order.",
+    "description": "Agent steps show what an agent is doing as ordered steps. Finished steps have a check and a one-line result, the current step a spinner, and the rest are dimmed, so people can see how far it has come.",
+    "aliases": ["agent progress", "task steps", "progress steps"]
+  },
+  "pricing-plan-comparison": {
+    "summary": "Plans side by side with total price, billing cycle, and benefits.",
+    "description": "A pricing plan comparison uses the same rows and price units for every plan so cost and benefits can be compared quickly. It keeps the recommended mark separate from the actual selected state.",
+    "aliases": ["pricing table", "plan comparison", "price comparison"]
+  },
+  "strikethrough-price": {
+    "summary": "Showing the reference price next to the price you'll pay.",
+    "description": "A strikethrough price shows the amount to pay next to the reference price with a line through it. The conditions of the discount can be checked right beside the price.",
+    "aliases": ["sale price", "reference price", "list price", "original price"]
+  },
+  "discount-badge": {
+    "summary": "A discount rate calculated from a verified reference price.",
+    "description": "A discount badge calculates the rate from a reference price the product actually sold at and the current price. It says which price the percentage is based on, and isn't shown at all without a reference price.",
+    "aliases": ["sale badge", "percent off", "discount rate"]
+  },
+  "countdown": {
+    "summary": "Time left until the real end time.",
+    "description": "A countdown shows the time left until a fixed end time, by the second. It states the end date and time along with what's left, and when time runs out it says the offer has ended instead of starting over.",
+    "aliases": ["countdown timer", "deal timer", "time left"]
+  },
+  "coupon-claim": {
+    "summary": "A card for claiming a coupon after seeing its terms.",
+    "description": "A coupon claim card writes the discount and its conditions right on the coupon and lets people claim it with one button. Afterward, the button changes to Claimed and can't be pressed again, and it says where to use it.",
+    "aliases": ["claim coupon", "coupon download", "discount coupon"]
+  },
+  "bundle-deal": {
+    "summary": "Showing from how many items, and by how much, the price drops.",
+    "description": "A bundle deal is a quantity picker that calculates right away when the bundle discount starts and what the price becomes. Below the threshold, it says how many more to add; once it applies, the original total is shown struck through.",
+    "aliases": ["multi-buy", "quantity discount", "buy one get one"]
+  },
+  "low-stock-indicator": {
+    "summary": "Stating the real remaining stock and sold-out status.",
+    "description": "A low stock indicator shows in stock, the number left, or sold out based on the real stock of the chosen option. It shows a number only when few are left, and when sold out, it offers what people can do next, such as a restock alert, instead of buying.",
+    "aliases": ["low stock", "sold out", "items left", "stock status"]
+  },
+  "lowest-price-label": {
+    "summary": "A lowest price that states its comparison period and scope.",
+    "description": "A lowest price label lets people check which period and scope the comparison covers. The badge stays short, and pressing See basis expands the comparison period and conditions.",
+    "aliases": ["lowest price", "price history", "best price"]
+  },
+  "reward-points": {
+    "summary": "Points to be earned and when they're paid.",
+    "description": "Reward points show the points to be earned, calculated from the amount and the earning rate. Choices that change the rate, such as the payment method, update the amount at once, and it states when points are paid and where they can't be used.",
+    "aliases": ["cashback", "points earned", "loyalty points"]
+  },
+  "free-shipping-progress": {
+    "summary": "How much more until free shipping.",
+    "description": "A free shipping progress bar shows how much the cart is short of the free shipping threshold, as an amount and a bar. The amount shrinks with each item added, and past the threshold it changes to free shipping.",
+    "aliases": ["free shipping bar", "shipping threshold", "cart progress"]
+  },
+  "search-suggestions": {
+    "summary": "Suggesting completions for the query being typed.",
+    "description": "Search suggestions list possible completions while people type in the search box. The typed part stays as is and only the added part is bold, and nothing is preselected, so Enter always searches exactly what was typed.",
+    "aliases": ["autocomplete", "search autocomplete", "typeahead", "query suggestions"]
+  },
+  "recent-searches": {
+    "summary": "Running or deleting past searches.",
+    "description": "Recent searches list past queries, newest first, when the search box opens. Pressing one runs it again, and each has a remove button alongside Clear all, so people manage their own history.",
+    "aliases": ["search history", "recent queries", "clear history"]
+  },
+  "trending-searches": {
+    "summary": "Popular searches, with the period they cover.",
+    "description": "Trending searches rank queries that are popular or rising. They state when and over what period they were counted, and rank changes are shown with a symbol and also as text for screen readers.",
+    "aliases": ["trending", "popular searches", "top searches"]
+  },
+  "search-filters": {
+    "summary": "Narrowing results with conditions and summing up the ones applied.",
+    "description": "Search filters narrow results by conditions such as price and color. The result count updates as soon as something is chosen, and applied conditions gather as chips above the results to remove one by one or all at once.",
+    "aliases": ["filters", "faceted search", "advanced search"]
+  },
+  "search-sort": {
+    "summary": "Reordering results by relevance or price.",
+    "description": "Search sort is a menu button that changes the order of search results. The button shows the current order, and the menu lists the choices with a check on the current one. Choosing one closes the menu and re-sorts the list.",
+    "aliases": ["sort by", "sort menu", "sort order"]
+  },
+  "search-term-highlight": {
+    "summary": "Marking the parts of a result that match the query.",
+    "description": "Search term highlight marks the parts of a result that match the query. Each space-separated word is matched separately and case doesn't matter, and the text itself isn't changed, so it reads the same.",
+    "aliases": ["highlight matches", "keyword highlight", "mark"]
+  },
+  "search-scope-tabs": {
+    "summary": "Switching the search scope between all, products, and brands.",
+    "description": "Search scope tabs change where the same query looks. Each tab shows its result count so people know where results are, and the query stays the same when they switch.",
+    "aliases": ["search scope", "search tabs", "search categories"]
+  },
+  "login-form": {
+    "summary": "Signing in with an email and password.",
+    "description": "A login form signs people in with an email and password. A wrong attempt gets a single message that doesn't reveal which field was wrong, and show password, stay signed in, and forgot password sit together.",
+    "aliases": ["sign in", "login", "sign-in form"]
+  },
+  "signup-form": {
+    "summary": "Sign-up that flags taken emails and password rules early.",
+    "description": "A signup form creates an account with a name, email, and password. An email that's already registered is flagged as soon as people leave the field, password rules show before typing and tick off as they're met, and entered values stay if submitting fails.",
+    "aliases": ["sign up", "registration form", "create account"]
+  },
+  "email-verification": {
+    "summary": "A waiting screen that says where the email went and how to resend it.",
+    "description": "Email verification is the screen for waiting on the verification email after sign-up. It says which address it went to and what to check if it doesn't arrive, and lets people resend after a short wait or fix a mistyped address.",
+    "aliases": ["verify email", "confirmation email", "check your inbox"]
+  },
+  "password-reset": {
+    "summary": "A reset request that doesn't reveal who has an account.",
+    "description": "Password reset sends a reset link to the registered email. An unregistered address gets the same reply, so this screen can't be used to find out who's a member. It also says how long the link is valid.",
+    "aliases": ["forgot password", "reset password", "password recovery"]
+  },
+  "two-factor-auth": {
+    "summary": "Checking once more with a one-time code after the password.",
+    "description": "Two-factor authentication asks for a code sent to the phone after the password. A code from a text message fills itself in, a wrong code shows the attempts left, and a backup code gets people in if they lose their phone.",
+    "aliases": ["2FA", "MFA", "two-step verification", "one-time code"]
+  },
+  "account-deletion": {
+    "summary": "Deletion that shows what's lost and confirms by typing.",
+    "description": "Account deletion shows what goes away with the account, asks optionally why people are leaving, and enables the button only after a set word is typed. Once requested, it says until when it can be undone.",
+    "aliases": ["delete account", "close account", "cancel account"]
+  },
+  "cart": {
+    "summary": "A cart that totals only the products you selected.",
+    "description": "A cart lists saved products where people choose what to buy this time, change quantities, and remove items. The total and the order button count only the selected products, so the amount to pay is always visible.",
+    "aliases": ["shopping cart", "basket", "bag"]
+  },
+  "checkout-summary": {
+    "summary": "The amounts that make up the total and the required consent, in one place.",
+    "description": "A checkout summary shows the item total, shipping, and discounts line by line right before payment, with the final amount large. Discounts show as subtracted amounts, the pay button repeats the final amount, and it turns on only after required consent.",
+    "aliases": ["order summary", "payment summary", "order total"]
+  },
+  "address-form": {
+    "summary": "Searching and choosing an address, then typing only the details.",
+    "description": "An address form lets people search by street or building name, choose from the list, and type only the unit details. Choosing an address moves focus straight to the details field, and it can be saved as the default address.",
+    "aliases": ["shipping address", "address lookup", "postcode search"]
+  },
+  "payment-method": {
+    "summary": "Payment methods that expand only the options the chosen one needs.",
+    "description": "Payment method lets people choose card, wallet, or bank transfer as large radio cards. Options only one method needs, such as installments, expand inside its card only when that method is chosen.",
+    "aliases": ["payment options", "pay with", "payment method selector"]
+  },
+  "order-tracking": {
+    "summary": "Delivery status with times for past steps and the current step.",
+    "description": "Order tracking shows the steps from payment to delivery as an ordered list. Past steps keep their times and the current step is marked, with the expected delivery date and tracking number at the top to read and copy right away.",
+    "aliases": ["delivery tracking", "shipment status", "order status"]
+  },
+  "order-cancellation": {
+    "summary": "Cancellation that calculates the refund in advance.",
+    "description": "Order cancellation lets people choose the items to cancel and a reason, then calculates the expected refund before they submit. It also lists discounts taken back because coupon conditions no longer hold, and how the refund is paid.",
+    "aliases": ["cancel order", "refund", "partial cancellation"]
+  },
+  "settings-list": {
+    "summary": "Settings that combine instant switches and rows that lead to another screen.",
+    "description": "A settings list groups settings by topic, such as notifications, display, and account. Switches apply the moment they're pressed, rows with values show the current value and lead to a chooser, and risky rows such as delete account sit at the bottom in a different color.",
+    "aliases": ["settings page", "preferences", "grouped list"]
+  },
+  "notification-settings": {
+    "summary": "A table for choosing notifications by topic and channel.",
+    "description": "Notification settings put topics such as orders, events, and comments in rows and app push, email, and text in columns, so people pick only the combinations they want. Required notifications are checked and locked with the reason, and quiet hours sit alongside.",
+    "aliases": ["notification preferences", "channel matrix", "email preferences"]
+  },
+  "theme-switcher": {
+    "summary": "Three choices that say what the system setting is right now.",
+    "description": "A theme switcher offers system, light, and dark as preview cards. When system is chosen, it also says which one is showing now, so people see the result of their choice at once.",
+    "aliases": ["dark mode toggle", "appearance", "color scheme", "theme selector"]
+  },
+  "language-picker": {
+    "summary": "A list that writes each language in itself and finds it in any language.",
+    "description": "A language picker writes each language's name in that language, with its name in the current language beside it. Searching works with either name, so people can find their way back even after switching to a language they can't read.",
+    "aliases": ["language switcher", "locale picker", "language settings"]
+  },
+  "privacy-settings": {
+    "summary": "Settings that say who sees what at each level and let you get your data.",
+    "description": "Privacy settings describe in one line who can actually see a profile for each visibility choice. Detailed switches such as appearing in search sit alongside a button to request a copy of your data.",
+    "aliases": ["privacy controls", "visibility settings", "data download"]
+  },
+  "connected-accounts": {
+    "summary": "Account links that won't let you remove the last sign-in method.",
+    "description": "Connected accounts list outside accounts used for sign-in, such as Kakao and Google, to connect and disconnect. When an account has no password and only one connection, the disconnect button is locked with the reason, so people can't lose every way into their account by mistake.",
+    "aliases": ["linked accounts", "sign-in methods", "social accounts"]
+  },
+  "type-to-confirm": {
+    "summary": "A delete button that turns on only after typing the name.",
+    "description": "Type to confirm shows what goes away before an irreversible delete and turns the button on only after the exact name of the target is typed. It makes people read and think once more than a confirm button pressed out of habit.",
+    "aliases": ["type to delete", "confirm by typing", "delete confirmation"]
+  },
+  "trash": {
+    "summary": "A place where deleted items can be restored for a set time.",
+    "description": "Trash holds deleted items for a set period instead of removing them at once. Each item shows the days until permanent deletion, items about to go are also marked with color, and Restore puts an item back where it was in one step.",
+    "aliases": ["recycle bin", "recently deleted", "soft delete"]
+  },
+  "autosave-indicator": {
+    "summary": "Saying the save status in one line instead of a save button.",
+    "description": "An autosave indicator shows in one line beside the editor whether the content is saved. It says saving while people type and just saved when done, and if the connection drops it says the work is saved on this device only, so people don't have to wonder whether they can leave.",
+    "aliases": ["autosave status", "saving indicator", "saved status"]
+  },
+  "unsaved-changes": {
+    "summary": "Asking before leaving only when something changed.",
+    "description": "An unsaved changes warning asks only when people try to leave without saving changes. Save and leave, Leave without saving, and Keep editing are named by their result, and when nothing changed it leaves without asking.",
+    "aliases": ["unsaved changes dialog", "leave page warning", "discard changes"]
+  },
+  "bulk-actions": {
+    "summary": "Acting on several items at once while showing how many are selected.",
+    "description": "Bulk actions show an action bar with the number selected once items in a list are chosen. Even large actions such as delete report how many were handled, with undo right beside, so they can run without asking first.",
+    "aliases": ["batch actions", "multi-select toolbar", "select multiple"]
+  },
+  "version-history": {
+    "summary": "Previewing an old version and restoring it as a new one.",
+    "description": "Version history lists saved versions, newest first, with who changed what. Choosing an older version previews it, and restoring stacks that content on top as a new version, so the current content stays in the record too.",
+    "aliases": ["revision history", "restore version", "change history"]
+  },
+  "session-timeout": {
+    "summary": "A warning that shows the time left and extends it in one step.",
+    "description": "A session timeout warning shows the time left and an extend button before a sign-in ends from inactivity. After a sign-out, it says whether the work in progress was saved, and signing in again lets people pick up where they left off.",
+    "aliases": ["session expiry", "idle timeout", "keep me signed in"]
+  },
+  "resume-prompt": {
+    "summary": "Showing where you stopped and your progress, and continuing at once.",
+    "description": "A resume prompt is a card that tells returning people what they were doing and how far they got, and continues with one button. It shows the progress, and keeps the choices to start over or close.",
+    "aliases": ["continue watching", "pick up where you left off", "welcome back"]
+  },
+  "subscription-cancellation": {
+    "summary": "Cancellation that states the end date first and finishes on one screen.",
+    "description": "Subscription cancellation first shows until when the service keeps working and what changes after that, and then finishes the cancellation on one screen. Giving a reason is optional, and pausing is offered only as a choice side by side with canceling.",
+    "aliases": ["cancel subscription", "cancellation flow", "cancel membership"]
+  },
+  "dormant-account": {
+    "summary": "A notice saying which account went dormant, when, and what was kept.",
+    "description": "A dormant account notice appears when people sign in to an account that went dormant after long disuse. It says which account, when it went dormant, and which points and order history were kept aside, and reactivates it in one step.",
+    "aliases": ["inactive account", "reactivate account", "dormant account"]
+  },
+  "update-prompt": {
+    "summary": "Telling updates that can wait apart from ones that can't.",
+    "description": "An update prompt briefly shows what's new in a version. An optional update offers Later; a required update replaces the close button with why it's needed, so people know what's blocking them.",
+    "aliases": ["force update", "app update prompt", "new version"]
+  },
+  "flat-design": {
+    "summary": "Planes and color, without shadows.",
+    "description": "Flat design drops shadows, textures, and depth effects and builds the screen from solid planes and clear color contrast. It spread on mobile screens in the early 2010s; every design style entry draws the same playlist card so the differences can be compared.",
+    "aliases": ["flat UI", "flat style"]
+  },
+  "material-design": {
+    "summary": "Layers of paper and shadows.",
+    "description": "Material Design treats screen elements as sheets of paper at different heights and uses shadow size to show which is above which. A pressed button grows its shadow as if lifting slightly, and buttons use uppercase letters with wide spacing.",
+    "aliases": ["elevation", "paper layers", "Material"]
+  },
+  "glassmorphism": {
+    "summary": "A blurred glass texture.",
+    "description": "Glassmorphism makes a translucent surface look like frosted glass by blurring the background behind it. backdrop-filter blurs what's behind, and a thin white border draws the edge of the glass.",
+    "aliases": ["frosted glass", "glass effect", "glass UI"]
+  },
+  "neumorphism": {
+    "summary": "Soft surfaces that bulge out or sink in.",
+    "description": "Neumorphism gives a surface the same color as the background both a light and a dark shadow, so it seems to bulge softly or press in. A pressed button switches to an inner shadow and looks sunken.",
+    "aliases": ["soft UI", "neo-skeuomorphism"]
+  },
+  "skeuomorphism": {
+    "summary": "Textures that imitate real objects.",
+    "description": "Skeuomorphism imitates the materials and light of real objects such as leather, metal, and vinyl records. Glossy, raised buttons and shadows that sink when pressed make it feel like handling a real thing.",
+    "aliases": ["skeuomorphic", "realistic design"]
+  },
+  "claymorphism": {
+    "summary": "Rounded volumes like clay.",
+    "description": "Claymorphism makes elements look like soft clay toys with large rounded corners, a bright inner light, and colored outer shadows. Unlike neumorphism, surfaces are colored, so their edges are easy to see.",
+    "aliases": ["clay UI", "clay design"]
+  },
+  "brutalism": {
+    "summary": "A rough, raw layout.",
+    "description": "Brutalism strips away decoration and shows the web in its raw state: default fonts, thin lines, sharp corners, and plain underlined text. Deliberately awkward placement and primary colors make a strong impression.",
+    "aliases": ["brutalist web design", "raw design"]
+  },
+  "minimalism": {
+    "summary": "A screen with only what's needed.",
+    "description": "Minimalism keeps only what's essential and tidies it with generous white space, thin type, and fine lines. Even buttons shrink to an underline instead of a border, so the content comes first.",
+    "aliases": ["minimal UI", "minimal design", "white space"]
+  },
+  "neo-brutalism": {
+    "summary": "Thick outlines, strong contrast, and hard shadows.",
+    "description": "Neo-brutalism uses thick black outlines, hard shadows offset to the side without blur, and bright primary colors. A pressed button drops into its shadow's place, as if really pushed down.",
+    "aliases": ["neubrutalism", "new brutalism"]
+  },
+  "three-d-icon": {
+    "summary": "Icons that show material through volume and light.",
+    "description": "3D icons keep the screen flat but give the icons volume, light, and reflections so they look like something you could hold. Inner shadows, highlights, and a tinted shadow underneath create the depth.",
+    "aliases": ["3D icons", "3D illustration icons"]
+  },
+  "liquid-glass": {
+    "summary": "A glass surface that light and color shine and bend through.",
+    "description": "Liquid glass is a style in which the light and color of the background show through a clear glass surface and light seems to reflect at its edges. This example approximates it with a saturated blur, a top reflection, and inner highlights; true refraction depends on platform features.",
+    "aliases": ["liquid glass UI", "refractive glass"]
+  },
+  "acid-graphic": {
+    "summary": "Near-neon colors and roughly distorted forms.",
+    "description": "Acid graphics use near-neon lime and magenta with stretched and slanted forms for the intensity of a 1990s rave poster. This example adds a bleeding glow and an offset colored shadow to letters stretched tall and slanted.",
+    "aliases": ["acid design", "acid type"]
+  },
+  "glitch": {
+    "summary": "Shifted channels and broken strokes that suggest a digital error.",
+    "description": "Glitch stages a screen error by shifting the red and cyan channels and cutting away parts of the letters. The same text is layered twice more with different positions and clipped areas.",
+    "aliases": ["glitch text", "RGB split", "glitch effect"]
+  },
+  "bauhaus": {
+    "summary": "Lettering built from geometric forms such as circles and straight lines.",
+    "description": "Bauhaus style places basic shapes such as circles, squares, and triangles and the primary colors red, blue, and yellow together with letters. It comes from the design principles of the Bauhaus, a German design school of the 1920s.",
+    "aliases": ["Bauhaus type", "geometric type"]
+  },
+  "art-deco": {
+    "summary": "Symmetry and decorative geometric lines.",
+    "description": "Art Deco expresses the glamour of the 1920s with tall, thin letters, wide spacing, and gold and double-line ornaments. Symmetry and repeated lines define it.",
+    "aliases": ["Art Deco type", "deco lettering"]
+  },
+  "outline": {
+    "summary": "Shapes defined by letter outlines rather than fill.",
+    "description": "Outline type leaves the inside of letters empty and draws only the outline to show their shape. It's made with -webkit-text-stroke on bold letters and mixed with filled letters for contrast.",
+    "aliases": ["outline text", "stroke text", "hollow letters"]
+  },
+  "monospace": {
+    "summary": "Letters set at an equal width.",
+    "description": "Monospace sets every letter in a cell of the same width. It feels like code, a typewriter, or a table; this example draws the cells as lines to show the fixed width.",
+    "aliases": ["monospace type", "fixed-width", "mono"]
+  },
+  "hand-lettering": {
+    "summary": "Hand-drawn strokes and lettering.",
+    "description": "Hand lettering gives a warm, personal feel with handwritten strokes, slants, and underlines. This example uses a script-like font, slanted text, and a hand-drawn underline.",
+    "aliases": ["handwritten", "lettering", "script"]
+  },
+  "minimal-typography": {
+    "summary": "Bringing out the key phrase with space and type contrast.",
+    "description": "Minimal typography removes ornament and shows a phrase with only very thin, large letters and wide space. Small supporting text with wide letter spacing creates the size contrast.",
+    "aliases": ["minimal type", "white space type"]
+  },
+  "brutalist-typography": {
+    "summary": "Huge, rough letters with hard cuts and overlaps.",
+    "description": "Brutalist typography blows letters up too large and tightens the line height until they overlap, or cuts them with color bands for a strong impression. Rules are broken on purpose to create tension.",
+    "aliases": ["brutalist type", "rough type"]
+  },
+  "neo-brutalist-typography": {
+    "summary": "Thick borders and strong contrast on headings and labels.",
+    "description": "Neo-brutalist typography puts letters in boxes with thick black borders and unblurred shadows so they look like sticker labels. The boxes tilt slightly to feel stuck on by hand.",
+    "aliases": ["neo-brutalist type", "label type"]
+  },
+  "swiss-style": {
+    "summary": "Hierarchy built with a regular grid and alignment.",
+    "description": "Swiss style sets sans-serif type flush left on a strict grid and builds hierarchy with minimal elements such as color bands. It's the International Typographic Style defined in Switzerland in the 1950s.",
+    "aliases": ["International Typographic Style", "Swiss type", "grid type"]
+  },
+  "editorial-typography": {
+    "summary": "Reading order built from title and body contrast and white space.",
+    "description": "Editorial typography leads the reading order like a magazine with serif titles, italic subheads, rules, and space. The contrast in size and weight between title and body is the key.",
+    "aliases": ["editorial type", "magazine type", "editorial design"]
+  },
+  "chunky": {
+    "summary": "Heavy, thick strokes that read as a single mass.",
+    "description": "Chunky type uses the heaviest weight, tight spacing, and slightly widened forms so the letters read as one block. It stands out even from far away.",
+    "aliases": ["chunky type", "block type", "heavy type"]
+  },
+  "retro-groovy": {
+    "summary": "Thick, wavy strokes and soft curves.",
+    "description": "Retro groovy varies each letter's height and angle like a wave, as on a 1970s poster, and layers orange and yellow shadows.",
+    "aliases": ["groovy type", "70s type", "retro type"]
+  },
+  "pixel-typography": {
+    "summary": "Stepped strokes aligned to a pixel grid.",
+    "description": "Pixel typography builds letters by turning on dots in a small grid, recalling old games and LED signs. This example draws the phrase as a bitmap and scales it up with SVG rectangles.",
+    "aliases": ["pixel font", "8-bit type", "bitmap type"]
+  },
+  "kinetic-typography": {
+    "summary": "Stressing a sentence's meaning or rhythm with motion and speed.",
+    "description": "Kinetic typography makes letters pop up in turn or move to stress a sentence's rhythm and meaning. Motion stops with reduced motion, and screen readers get the whole phrase at once.",
+    "aliases": ["kinetic type", "animated type", "motion type"]
+  },
+  "neon-sign": {
+    "summary": "Glowing tube outlines and spreading light.",
+    "description": "Neon sign type spreads several layers of light around letters on a dark background so they look like neon tubes. A white core is layered with a pink glow.",
+    "aliases": ["neon text", "glow text", "neon"]
+  },
+  "graffiti": {
+    "summary": "The free strokes of handwriting and spray-painted murals.",
+    "description": "Graffiti type slants and twists letters with thick outlines and neon gradients so they look like a street mural. A brick pattern background adds context.",
+    "aliases": ["graffiti type", "street type"]
+  },
+  "blackletter": {
+    "summary": "A typeface with angular, ornamented strokes.",
+    "description": "Blackletter is the angular, ornamental type of medieval European manuscripts. Hangul has no such form, so it's used with Latin text; this example uses Unicode mathematical Fraktur characters with a separate name for screen readers.",
+    "aliases": ["Fraktur", "gothic script", "old English"]
+  },
+  "stencil": {
+    "summary": "Strokes broken in places as if sprayed through a plate.",
+    "description": "Stencil type breaks strokes at regular points, as if paint were sprayed through a plate. This example cuts the strokes with a horizontal mask to create the bridges.",
+    "aliases": ["stencil type", "military type"]
+  },
+  "comic-pop-art": {
+    "summary": "Bold outlines, halftone dots, and comic action lines.",
+    "description": "Comic pop art feels like a comic-book sound effect with thick black outlines, offset colored shadows, and a halftone dot background.",
+    "aliases": ["comic type", "pop art", "comic lettering"]
+  },
+  "cutout-collage": {
+    "summary": "Mismatched letter pieces and paper textures in one phrase.",
+    "description": "Cutout collage mixes typefaces, colored paper, and angles for each letter so it looks clipped from magazines. Since letters are split one by one, screen readers get the whole phrase separately.",
+    "aliases": ["ransom note", "cutout type", "collage letters"]
+  },
+  "three-d-extrude": {
+    "summary": "Letters extended backward to show depth and sides.",
+    "description": "3D extrude stacks several layers of side faces so letters look pushed back at an angle. Shadows in the same direction, each slightly darker, are layered together.",
+    "aliases": ["extruded text", "3D text", "3D extrude"]
+  },
+  "gradient-typography": {
+    "summary": "Color or brightness that shifts gradually within the letters.",
+    "description": "Gradient typography fills letters with a gradient of several colors. It's made with background-clip: text, which cuts the background to the shape of the letters.",
+    "aliases": ["gradient text", "gradient type"]
+  },
+  "emboss": {
+    "summary": "Letters raised from the surface with light and shadow.",
+    "description": "Emboss gives letters the same color as the background a bright light on one side and a dark shadow on the other, so they seem raised from the surface.",
+    "aliases": ["embossed text", "raised letters"]
+  },
+  "inflated-three-d": {
+    "summary": "Puffy, rounded 3D letters, as if filled with air.",
+    "description": "Inflated 3D gives letters a round, plump volume, as if pumped with air. White outlines and shadows stacked downward express the puffed-up thickness.",
+    "aliases": ["puffy letters", "inflated type", "balloon letters"]
+  },
+  "chrome-typography": {
+    "summary": "Letters with metallic reflections and shine.",
+    "description": "Y2K chrome makes letters shine like metal with silver gradients and light flares. It grew popular with the Y2K aesthetic of digital optimism around the year 2000.",
+    "aliases": ["Y2K", "metallic type", "chrome text"]
+  },
+  "confirmshaming": {
+    "summary": "Putting guilt on the decline button.",
+    "description": "Confirmshaming writes the decline option as a jab, such as \"No thanks, I'd rather pay full price\", so people feel ashamed for saying no. The right way is to write both choices in the same tone and weight.",
+    "aliases": ["manipulink", "guilt-tripping", "shame button"]
+  },
+  "pre-checked-opt-in": {
+    "summary": "Turning on marketing consent by default.",
+    "description": "A pre-checked opt-in checks optional consent such as marketing messages in advance, so people who don't notice are treated as having agreed. Privacy laws often require people to turn optional consent on themselves.",
+    "aliases": ["pre-ticked box", "opt-out by default", "default consent"]
+  },
+  "roach-motel": {
+    "summary": "Easy to sign up, hard to cancel.",
+    "description": "A roach motel lets people sign up with one button but makes canceling go through phone calls, many steps, and hidden menus. The right way is to let people cancel where they signed up, with the same effort, and tell them how much time they have left.",
+    "aliases": ["hard to cancel", "subscription trap", "cancellation maze"]
+  },
+  "hidden-costs": {
+    "summary": "Charges that appear at the last step.",
+    "description": "Hidden costs show only a low price on the product page and add fees and shipping at the last step of checkout, so people pay a different amount than they first saw. The right way is to include every unavoidable cost in the first price shown.",
+    "aliases": ["drip pricing", "junk fees", "hidden fees"]
+  },
+  "fake-urgency": {
+    "summary": "A fake deadline that resets after it ends.",
+    "description": "Fake urgency shows a countdown with no real deadline, or restarts it when time runs out, to rush people. The right way is to state the real end date and time as they are.",
+    "aliases": ["fake countdown", "false urgency", "fake timer"]
+  },
+  "disguised-ads": {
+    "summary": "Ads that look like content.",
+    "description": "Disguised ads dress up as a download button or an article so people press them, mistaking them for a real feature. The right way is to label ads as ads and clearly separate them from real features in look and position.",
+    "aliases": ["disguised advertising", "bait ad", "fake download button"]
+  },
+  "nagging": {
+    "summary": "Requests that keep coming back after you close them.",
+    "description": "Nagging shows requests to turn on notifications, rate the app, or sign up again on every screen after people decline, until they give in. The right way is to ask once, offer Don't ask again, and remember that choice.",
+    "aliases": ["nag screen", "persistent prompts", "repeated popups"]
+  },
+  "sneak-into-basket": {
+    "summary": "Adding products or options to the cart without consent.",
+    "description": "Sneak into basket puts insurance, donations, or paid options people didn't choose into the cart in advance, so they're paid for unless noticed. The right way is to show extras as unchecked choices.",
+    "aliases": ["pre-added items", "sneaked items", "auto-added options"]
+  },
+  "fake-scarcity": {
+    "summary": "Pressure to buy with stock and viewer counts that aren't real.",
+    "description": "Fake scarcity rushes people with made-up numbers such as \"1 left\" or \"37 people viewing\", regardless of real stock or viewers. The right way is to show only real data, without pressuring language.",
+    "aliases": ["false scarcity", "fake stock counter", "fake low stock"]
+  },
+  "forced-continuity": {
+    "summary": "Turning a trial into a paid plan while hiding the terms.",
+    "description": "Forced continuity hides the payment terms in small print when a free trial starts and switches to a paid plan without notice when it ends. The right way is to state the billing date and amount clearly, remind people before charging, and make canceling easy.",
+    "aliases": ["silent auto-renewal", "free trial trap", "auto-renew trap"]
+  },
+  "hicks-law": {
+    "summary": "More choices make decisions slower.",
+    "description": "Hick's law says that the more options there are, the longer it takes to choose one. Grouping the most-used items first and showing fewer options at once helps people choose quickly.",
+    "aliases": ["Hick-Hyman law", "choice reaction time"]
+  },
+  "fitts-law": {
+    "summary": "Large, near buttons are easy to press.",
+    "description": "Fitts's law says the larger and closer a target is, the faster and more accurately it can be pressed. Make frequently used main buttons large and place them where a finger or cursor reaches easily.",
+    "aliases": ["Fitts law", "target size", "target distance"]
+  },
+  "jakobs-law": {
+    "summary": "People expect things to work the way they're used to.",
+    "description": "Jakob's law says people spend most of their time on other services, so they expect yours to work the same way. Keeping familiar places for things like the logo, search, and cart lets people use it without learning.",
+    "aliases": ["Jakob's law of internet UX", "conventions", "familiarity"]
+  },
+  "von-restorff-effect": {
+    "summary": "The one that stands out is remembered.",
+    "description": "The Von Restorff effect says that among similar things, the one that looks different stands out and is remembered. Set apart only the one thing people must notice with color, size, or a border, and keep the rest the same.",
+    "aliases": ["isolation effect", "von Restorff"]
+  },
+  "peak-end-rule": {
+    "summary": "The most intense moment and the end shape the memory.",
+    "description": "The peak-end rule says people remember an experience by its most intense moment and its end rather than the average of the whole. Taking care of ending screens, such as payment and delivery complete, makes the whole thing remembered well.",
+    "aliases": ["peak-end", "memory bias"]
+  },
+  "zeigarnik-effect": {
+    "summary": "Unfinished tasks keep coming to mind.",
+    "description": "The Zeigarnik effect says unfinished tasks stay in memory longer than finished ones and make people want to wrap them up. Showing progress and what's left helps people complete settings or a profile.",
+    "aliases": ["open loops", "unfinished task effect", "Zeigarnik"]
+  },
+  "choice-overload": {
+    "summary": "With many hard-to-compare options, people put off deciding.",
+    "description": "Choice overload is the tendency to put off deciding when there are too many options that are hard to compare. Showing fewer options first and narrowing them with recommendations or filters makes deciding easier.",
+    "aliases": ["paradox of choice", "choice paralysis"]
+  },
+  "loss-aversion": {
+    "summary": "Losses weigh more than gains of the same size.",
+    "description": "Loss aversion is the tendency to feel a loss more strongly than a gain of the same size. Talk of losing works strongly, so use it to inform, not to stir up anxiety and push a decision.",
+    "aliases": ["prospect theory", "loss avoidance"]
+  },
+  "default-effect": {
+    "summary": "The tendency to keep the preset option.",
+    "description": "People tend to keep preset values instead of changing them. A default is a decision made on their behalf, so make it the value that benefits them and is easy to undo.",
+    "aliases": ["status quo bias", "default bias", "defaults"]
+  },
+  "social-proof": {
+    "summary": "Using what others do or think as a basis for judgment.",
+    "description": "Social proof is the tendency to decide by looking at what others chose when unsure. Real data such as purchase or review counts helps people decide; made-up numbers turn it into a dark pattern.",
+    "aliases": ["bandwagon effect", "herd behavior"]
+  },
+  "scarcity": {
+    "summary": "Limits on quantity or time affect choices.",
+    "description": "Scarcity is the tendency to value things more and decide faster when quantity or time is limited. Calmly stating a real limit helps people not miss out; a made-up limit becomes fake scarcity.",
+    "aliases": ["scarcity principle", "limited availability"]
+  },
+  "framing-effect": {
+    "summary": "The same information is judged differently depending on how it's put.",
+    "description": "The framing effect says the same fact is received differently in a positive frame (80% fat-free) and a negative one (20% fat). For important decisions, show both frames or state the numbers plainly.",
+    "aliases": ["framing", "positive vs negative framing"]
+  },
+  "compromise-effect": {
+    "summary": "The middle option feels reasonable depending on the lineup.",
+    "description": "When the top and bottom of price and benefits change, the same plan can look like the middle option. Adding a higher plan or turning on the recommended mark lets you see separately what the lineup implies and what the label stresses.",
+    "aliases": ["middle option", "middle plan", "extremeness aversion"]
+  },
+  "decoy-effect": {
+    "summary": "Adding an inferior alternative can change relative preference.",
+    "description": "An option can look better when it beats an alternative with the same price and fewer benefits. In a subscription, add the comparison option and check the effect of the lineup yourself.",
+    "aliases": ["attraction effect", "asymmetric dominance"]
+  },
+  "left-digit-effect": {
+    "summary": "The same difference feels larger when the leading digit changes.",
+    "description": "Going from 5,800 to 5,900 won and from 5,900 to 6,000 won are both a 100 won difference. Compare price pairs where only the first digit changes.",
+    "aliases": ["charm pricing", "left-digit bias", "price ending"]
+  },
+  "anchoring": {
+    "summary": "The first number seen becomes the reference for later judgments.",
+    "description": "Anchoring says the first number presented acts like an anchor and shapes later judgments. Showing the list price first makes the sale price feel cheaper, so use only a price that something actually sold at as the reference.",
+    "aliases": ["anchoring bias", "reference price", "anchor"]
+  },
+  "hamburger": {
+    "summary": "Three horizontal lines that open a menu.",
+    "description": "The hamburger icon stacks three horizontal lines and opens the hidden full menu when pressed. It's named for looking like a burger's buns and patty, and usually sits at the top left on mobile.",
+    "aliases": ["hamburger menu", "menu icon", "three lines"]
+  },
+  "kebab": {
+    "summary": "Three vertical dots for more actions on an item.",
+    "description": "The kebab icon is three dots in a column, named for looking like a kebab on a skewer. It sits at the end of each row in a list and gathers actions for that item only, such as rename and delete.",
+    "aliases": ["kebab menu", "vertical ellipsis", "more icon"]
+  },
+  "meatballs": {
+    "summary": "Three horizontal dots for more.",
+    "description": "The meatballs icon is three dots in a row, named for looking like meatballs on a plate. It sits in a corner of a post or card and opens extra actions such as copy link and report.",
+    "aliases": ["meatballs menu", "horizontal ellipsis", "more icon"]
+  },
+  "bento": {
+    "summary": "A grid of nine squares for a list of apps.",
+    "description": "The bento icon places nine small squares in a 3×3 grid, named for looking like a divided lunch box. It opens a list for moving to the same company's other apps and services.",
+    "aliases": ["bento menu", "app grid", "grid icon"]
+  },
+  "chevron": {
+    "summary": "An angle bracket for next or expand.",
+    "description": "The chevron is a V turned on its side, named after the rank insignia on military uniforms. Pointing right means going into the next screen, left means going back, and down means expanding.",
+    "aliases": ["chevron right", "disclosure indicator", "angle bracket"]
+  },
+  "caret": {
+    "summary": "A small triangle for a dropdown.",
+    "description": "The caret is a small filled triangle, named after the proofreading mark (^) for inserting text. Next to a button label, it says pressing opens a list to choose from.",
+    "aliases": ["caret down", "dropdown arrow", "small triangle"]
+  },
+  "grip": {
+    "summary": "Six dots for dragging to move.",
+    "description": "The grip is a handle of six dots in two rows that means the item can be grabbed and dragged to reorder. It sits at the left of a row, keeping the grab area to the handle so the rest of the row can be pressed as usual.",
+    "aliases": ["drag handle", "gripper", "handle icon"]
+  },
+  "sparkles": {
+    "summary": "Marking an AI feature.",
+    "description": "Sparkles show large and small four-pointed stars twinkling, now widely used to mark features where AI does the work. Placed before buttons that polish or summarize text, it says the result is generated automatically.",
+    "aliases": ["sparkle icon", "magic icon", "AI icon"]
+  },
+  "doner": {
+    "summary": "Horizontal lines of different lengths for filter and sort.",
+    "description": "The döner icon is three horizontal lines that get shorter from top to bottom, named after meat shaved off a döner kebab spit. It opens sorting and filtering that shrink a list or change its order.",
+    "aliases": ["doner menu", "filter lines", "filter icon", "sort icon"]
+  },
+  "waffle": {
+    "summary": "A grid of nine round dots for a list of apps.",
+    "description": "The waffle icon places nine round dots in a 3×3 grid, named for looking like the hollows of a waffle. Like the bento, it opens a list for moving between apps; each service uses one or the other.",
+    "aliases": ["waffle menu", "app launcher", "dot grid icon"]
+  },
+  "veggie-burger": {
+    "summary": "A menu made of two horizontal lines.",
+    "description": "The veggie burger icon is the hamburger with its middle line removed, named after the joke about a burger without the meat patty. It means the same as the hamburger and opens a menu, but it's less familiar, so a Menu label goes with it.",
+    "aliases": ["two-line menu", "veggie burger menu"]
+  },
+  "stairs": {
+    "summary": "Staggered horizontal lines that look like stairs.",
+    "description": "The stairs icon places three horizontal lines shifted a little to the right each, like steps. It marks indented contents or menus, but its meaning is less known, so a label such as Contents goes with it.",
+    "aliases": ["staggered lines", "outline icon", "contents icon"]
+  },
+  "sliders": {
+    "summary": "Settings and filters drawn as adjustment knobs.",
+    "description": "The sliders icon draws round knobs staggered on horizontal lines, a shape taken from the faders on audio equipment. It opens filters or detailed settings for adjusting values.",
+    "aliases": ["filter sliders", "adjust icon", "settings sliders"]
+  },
+  "user-interview": {
+    "summary": "Asking why people act as they do to understand the context.",
+    "description": "A user interview is a conversation with one participant about what they went through and why. Instead of questions that contain the hoped-for answer, ask them to tell a past action from the start, and the sticking points and real reasons come out.",
+    "aliases": ["in-depth interview", "1:1 interview", "customer interview"]
+  },
+  "usability-test": {
+    "summary": "Watching people do tasks to find where they get stuck.",
+    "description": "A usability test gives participants real tasks and observes them using the screen. Noting what they pressed and where they paused, with times, makes clear what needs fixing. Watching about five people reveals most major problems.",
+    "aliases": ["usability testing", "user testing", "task-based testing"]
+  },
+  "ab-test": {
+    "summary": "Comparing a chosen metric across randomly split groups.",
+    "description": "An A/B test randomly splits visitors, shows them different designs, and compares a metric chosen in advance. Decide the duration and sample size before starting and judge only after collecting that much; stopping early on a peek makes it easy to mistake chance for an effect.",
+    "aliases": ["split test", "controlled experiment", "AB test"]
+  },
+  "card-sorting": {
+    "summary": "Observing how people group items.",
+    "description": "Card sorting writes menu items on cards and has participants group and name them. The share of people who put cards in the same group shows the menu structure people expect.",
+    "aliases": ["card sort", "open card sorting", "information architecture research"]
+  },
+  "tree-testing": {
+    "summary": "Checking whether people can find items in a text-only structure.",
+    "description": "Tree testing shows only the menu structure as text, without screen design, and asks people to find the answer to a task. Success rates and the first path people took reveal where names or locations are confusing.",
+    "aliases": ["tree test", "reverse card sorting", "navigation testing"]
+  },
+  "survey": {
+    "summary": "Seeing the distribution of many answers to the same questions.",
+    "description": "A survey asks many people the same questions to see how answers are distributed. Ask one thing per question in words that don't lead, so it's clear what the results mean.",
+    "aliases": ["questionnaire", "Likert scale", "satisfaction survey"]
+  },
+  "diary-study": {
+    "summary": "Participants recording real experiences over a period.",
+    "description": "In a diary study, participants record what happens to them as it happens over days or weeks. Times of day, repetitions, and habits that a single interview misses show up between the entries.",
+    "aliases": ["experience sampling", "longitudinal study", "diary research"]
+  },
+  "behavioral-heatmap": {
+    "summary": "Comparing where people click and how far they scroll.",
+    "description": "A behavioral heatmap overlays in color where many visitors clicked on a page and how far they scrolled. It finds clicks piling up on things that can't be clicked and scrolling that stops before important content.",
+    "aliases": ["click heatmap", "scroll map", "click map"]
+  },
+  "funnel-analysis": {
+    "summary": "Checking progress through each step and where people drop off.",
+    "description": "Funnel analysis counts how many people remain at each defined step, such as from viewing a product to completing payment. Comparing the rates of moving to the next step shows where most people leave, and splitting by device or source can move that point.",
+    "aliases": ["conversion funnel", "drop-off analysis", "funnel"]
+  }
+}

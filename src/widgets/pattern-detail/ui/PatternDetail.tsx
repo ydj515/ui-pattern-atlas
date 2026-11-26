@@ -256,7 +256,8 @@ function usePatternGuide(load: GuideLoader): GuideState & { readonly retry: () =
 
 /** Full guidance page for a single pattern, laid out like a dictionary entry. */
 export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
-  const index = PATTERNS.indexOf(pattern);
+  // The page may pass a translated copy of the entry, so find it by slug.
+  const index = PATTERNS.findIndex((candidate) => candidate.slug === pattern.slug);
   const locale = useLocale();
   const messages = useMessages();
   const secondaryName = patternSecondaryName(pattern, locale);

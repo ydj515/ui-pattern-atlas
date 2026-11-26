@@ -6,6 +6,7 @@ import {
   catalogSectionFor,
   ROADMAP_PATTERN_TOPICS,
 } from "@/entities/pattern/catalog/roadmap";
+import { localizePattern, topicName } from "@/entities/pattern/i18n/catalogText";
 import { getCategory } from "@/entities/pattern/model/category";
 import { patternHeadword, patternPath } from "@/entities/pattern/model/pattern";
 import { useLocale } from "@/shared/i18n/locale";
@@ -18,9 +19,10 @@ export function PatternDetailPage() {
   const { slug = "" } = useParams();
   const locale = useLocale();
   const messages = useMessages();
-  const pattern = findPatternBySlug(slug);
+  const entry = findPatternBySlug(slug);
   const { pathname, search, hash } = useLocation();
-  if (!pattern) return <NotFoundView />;
+  if (!entry) return <NotFoundView />;
+  const pattern = localizePattern(entry, locale);
   // A concept opened under /patterns (or the reverse) moves to its one canonical address.
   const canonical = patternPath(pattern);
   if (pathname !== canonical)
@@ -42,7 +44,7 @@ export function PatternDetailPage() {
             ? [{ label: messages.sections[section.id], to: catalogCategoryHref(section.id) }]
             : []),
           {
-            label: topic?.nameKo ?? getCategory(pattern.category).labelKo,
+            label: topic ? topicName(topic, locale) : getCategory(pattern.category).labelKo,
             to: catalogCategoryHref(pattern.category),
           },
         ]}

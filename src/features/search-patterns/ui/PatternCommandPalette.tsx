@@ -6,8 +6,7 @@ import {
 } from "@/entities/pattern/model/pattern";
 import { useNavigate } from "react-router";
 
-import { PATTERNS } from "@/entities/pattern/catalog";
-import { getCategory } from "@/entities/pattern/model/category";
+import { categoryName, localizedPatterns } from "@/entities/pattern/i18n/catalogText";
 import type { Pattern } from "@/entities/pattern/model/pattern";
 import { useLocale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
@@ -95,7 +94,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
   const listboxId = useId();
-  const results = searchPatterns(PATTERNS, { text: query, category: "all" });
+  const results = searchPatterns(localizedPatterns(locale), { text: query, category: "all" });
   const active = Math.min(activeIndex, results.length - 1);
   const optionId = (pattern: Pattern) => `${listboxId}-${pattern.slug}`;
   const activePattern = results[active];
@@ -186,7 +185,7 @@ function PaletteContent({ onClose }: { readonly onClose: () => void }) {
                 </span>
               ) : null}
               <span className="ml-auto shrink-0 text-micro text-graphite">
-                {getCategory(pattern.category).labelKo}
+                {categoryName(pattern.category, locale)}
               </span>
             </li>
           ))}

@@ -10,14 +10,27 @@ import {
   type RoadmapEntry,
 } from "@/entities/pattern/catalog/roadmap";
 import { findPatternByTerm } from "@/entities/pattern/catalog/roadmapLinks";
+import {
+  comparisonGroupName,
+  comparisonTitle,
+  roadmapEntryText,
+} from "@/entities/pattern/i18n/catalogText";
+import { patternHeadword } from "@/entities/pattern/model/pattern";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { NotFoundView } from "@/shared/ui/feedback/NotFoundView";
 import { CatalogBreadcrumb } from "@/entities/pattern/ui/CatalogBreadcrumb";
+import { useLocale, type Locale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 import { PatternPreview } from "@/widgets/pattern-detail/ui/PatternPreview";
 
 const comparisons = COMPARISON_TOPIC?.entries ?? [];
+
+function pairDescription(pair: RoadmapEntry, locale: Locale) {
+  return COMPARISON_TOPIC
+    ? roadmapEntryText(COMPARISON_TOPIC, pair, locale).description
+    : pair.description;
+}
 const groupNames = [...new Set(comparisons.map((pair) => pair.group))];
 
 export function ComparisonPage() {
@@ -26,10 +39,13 @@ export function ComparisonPage() {
 }
 
 function ComparisonIndex() {
+  const locale = useLocale();
   const messages = useMessages();
   const [query, setQuery] = useState("");
   const matches = roadmapMatcher(query);
-  const matching = comparisons.filter((pair) => matches(pair.nameKo, pair.name, pair.description));
+  const matching = comparisons.filter((pair) =>
+    matches(pair.nameKo, pair.name, pair.description, pairDescription(pair, locale)),
+  );
 
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
@@ -54,7 +70,9 @@ function ComparisonIndex() {
         if (pairs.length === 0) return null;
         return (
           <section key={group} className="mt-10 border-t border-rule pt-6">
-            <h2 className="font-serif text-title font-bold">{group}</h2>
+            <h2 className="font-serif text-title font-bold">
+              {comparisonGroupName(group, locale)}
+            </h2>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {pairs.map((pair) => (
                 <li key={pair.name}>
@@ -63,9 +81,11 @@ function ComparisonIndex() {
                     className="group block h-full rounded-surface bg-field p-4 hover:bg-field-hover"
                   >
                     <h3 className="font-serif text-headword font-semibold underline-offset-4 group-hover:underline">
-                      {pair.nameKo.replace(" / ", " · ")}
+                      {comparisonTitle(pair, locale)}
                     </h3>
-                    <p className="mt-1 text-caption text-graphite">{pair.name}</p>
+                    {locale === "en" ? null : (
+                      <p className="mt-1 text-caption text-graphite">{pair.name}</p>
+                    )}
                   </Link>
                 </li>
               ))}
@@ -83,6 +103,7 @@ function ComparisonIndex() {
 }
 
 function RelatedPatterns({ pair }: { readonly pair: RoadmapEntry }) {
+  const locale = useLocale();
   const messages = useMessages();
   const patterns = new Set(pair.name.split(" / ").map(findPatternByTerm));
   return (
@@ -91,7 +112,7 @@ function RelatedPatterns({ pair }: { readonly pair: RoadmapEntry }) {
         pattern ? (
           <li key={pattern.slug}>
             <Link to={patternPath(pattern)} className={textLinkClassName}>
-              {messages.comparison.pattern(pattern.nameKo)}
+              {messages.comparison.pattern(patternHeadword(pattern, locale))}
             </Link>
           </li>
         ) : null,
@@ -101,22 +122,23 @@ function RelatedPatterns({ pair }: { readonly pair: RoadmapEntry }) {
 }
 
 function ComparisonDetail({ slug }: { readonly slug: string }) {
+  const locale = useLocale();
   const messages = useMessages();
   const pair = comparisons.find((entry) => comparisonSlug(entry) === slug);
   if (!pair) return <NotFoundView />;
   const demo = COMPARISON_GUIDES[slug];
-  const title = pair.nameKo.replace(" / ", " · ");
+  const title = comparisonTitle(pair, locale);
   return (
     <div className="mx-auto max-w-page px-4 pt-8 pb-24 sm:px-6">
-      <title>{`${pair.nameKo} · UI Pattern Atlas`}</title>
+      <title>{`${title} · UI Pattern Atlas`}</title>
       <CatalogBreadcrumb
         parents={[{ label: messages.comparison.title, to: catalogCategoryHref("ui-comparison") }]}
         current={title}
       />
       <header className="mt-8">
-        <p className="text-caption text-graphite">{pair.group}</p>
+        <p className="text-caption text-graphite">{comparisonGroupName(pair.group, locale)}</p>
         <h1 className="mt-2 font-serif text-display font-bold">{title}</h1>
-        <p className="mt-2 text-headword text-graphite">{pair.name}</p>
+        {locale === "en" ? null : <p className="mt-2 text-headword text-graphite">{pair.name}</p>}
       </header>
       {demo ? (
         <section aria-labelledby="comparison-preview" className="mt-8">
@@ -131,7 +153,7 @@ function ComparisonDetail({ slug }: { readonly slug: string }) {
         <h2 id="selection-guide" className="font-serif text-title font-bold">
           {messages.comparison.criteria}
         </h2>
-        <p className="mt-3 text-lead">{pair.description}</p>
+        <p className="mt-3 text-lead">{pairDescription(pair, locale)}</p>
         <RelatedPatterns pair={pair} />
       </section>
     </div>

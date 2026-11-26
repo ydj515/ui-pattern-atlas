@@ -10,10 +10,12 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import { routes } from "@/app/router/routes";
+import { loadCatalogText } from "@/entities/pattern/i18n/catalogText";
 import { LocaleProvider, localeFromPathname, routerBasename } from "@/shared/i18n/locale";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Root element #root is missing in index.html");
+const container: HTMLElement = rootElement;
 
 // English pages live under `<base>en/`; each language gets its own router basename, so every
 // route and link stays language-neutral. Matches Vite's `base` for sub-path deploys (GitHub Pages).
@@ -22,10 +24,16 @@ const locale = localeFromPathname(window.location.pathname, base);
 document.documentElement.lang = locale;
 const router = createBrowserRouter(routes, { basename: routerBasename(base, locale) });
 
-createRoot(rootElement).render(
-  <StrictMode>
-    <LocaleProvider locale={locale}>
-      <RouterProvider router={router} />
-    </LocaleProvider>
-  </StrictMode>,
-);
+function render() {
+  createRoot(container).render(
+    <StrictMode>
+      <LocaleProvider locale={locale}>
+        <RouterProvider router={router} />
+      </LocaleProvider>
+    </StrictMode>,
+  );
+}
+
+// English pages need their catalog text first. If it cannot load, the page still renders with
+// the Korean catalog text rather than not at all.
+loadCatalogText(locale).then(render, render);
