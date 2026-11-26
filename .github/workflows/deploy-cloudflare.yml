@@ -43,9 +43,10 @@ jobs:
       - name: Verify
         run: mise run verify
 
+      # Run a pinned Wrangler through npx instead of wrangler-action: the action adds Wrangler to
+      # the project with pnpm, which refuses its workerd build script under pnpm 11.
       - name: Deploy
-        uses: cloudflare/wrangler-action@v4.1.3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=ui-pattern-atlas --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@4.168.0 pages deploy dist --project-name=ui-pattern-atlas --branch=main

@@ -104,13 +104,17 @@ describe("English pages", () => {
     expect(
       screen.getByText("A dialog that pauses the current task for a decision."),
     ).toBeInTheDocument();
-    await userEvent.type(screen.getByRole("searchbox", { name: "Search UI patterns" }), "snackbar");
+    // Paste the query in one go: typing it re-filters the whole catalog on every key, which
+    // took longer than the test timeout on CI runners.
+    await userEvent.click(screen.getByRole("searchbox", { name: "Search UI patterns" }));
+    await userEvent.paste("snackbar");
     const results = within(await screen.findByRole("list", { name: "Pattern demos" }));
     expect(results.getByRole("link", { name: /^Toast/ })).toHaveAttribute(
       "href",
       "/en/patterns/toast",
     );
-  });
+    // Renders the whole catalog twice; CI runners are several times slower than a laptop.
+  }, 15_000);
 
   it("describes a pattern in English on its page", async () => {
     renderIn("en", "/patterns/modal-dialog");
