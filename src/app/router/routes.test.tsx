@@ -678,7 +678,7 @@ describe("pattern detail page", () => {
     Element.prototype.scrollIntoView = scrollIntoView;
     try {
       await renderDetailAt("/patterns/pagination#accessibility");
-      expect(scrollIntoView).toHaveBeenCalledTimes(1);
+      await waitFor(() => expect(scrollIntoView).toHaveBeenCalledTimes(1));
       expect(scrollIntoView.mock.contexts[0]).toBe(
         screen.getByRole("region", { name: "Accessibility" }),
       );
