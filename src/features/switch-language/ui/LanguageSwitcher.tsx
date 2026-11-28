@@ -1,15 +1,23 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { useLocation } from "react-router";
 
-import { LOCALE_NAMES, LOCALES, localizedHref, useLocale, type Locale } from "@/shared/i18n/locale";
+import {
+  LOCALE_CODES,
+  LOCALE_NAMES,
+  LOCALES,
+  localizedHref,
+  useLocale,
+  type Locale,
+} from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { buttonClassName } from "@/shared/ui/primitives/Button";
 
 /**
  * Language menu: the current language, and links to the same page in each language. A
  * language switch is a full page load, because each language has its own router basename.
+ * `compact` shows the language code (KO, EN) in a small outlined button for narrow headers.
  */
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ compact = false }: { readonly compact?: boolean }) {
   const locale = useLocale();
   const messages = useMessages();
   const { pathname, search, hash } = useLocation();
@@ -50,14 +58,21 @@ export function LanguageSwitcher() {
         type="button"
         aria-expanded={open}
         aria-controls={listId}
-        aria-label={`${messages.site.language}: ${LOCALE_NAMES[locale]}`}
+        // The compact button shows only the code, so its name carries the code too.
+        aria-label={`${messages.site.language}: ${LOCALE_NAMES[locale]}${compact ? ` (${LOCALE_CODES[locale]})` : ""}`}
         onClick={() => setOpen((current) => !current)}
-        className={`${buttonClassName("quiet")} min-h-9 whitespace-nowrap`}
+        className={
+          compact
+            ? `${buttonClassName("quiet")} min-h-9 min-w-11 justify-center border border-rule font-medium text-ink aria-expanded:bg-field`
+            : `${buttonClassName("quiet")} min-h-9 whitespace-nowrap`
+        }
       >
-        {LOCALE_NAMES[locale]}
-        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-3.5">
-          <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" />
-        </svg>
+        {compact ? LOCALE_CODES[locale] : LOCALE_NAMES[locale]}
+        {compact ? null : (
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-3.5">
+            <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" />
+          </svg>
+        )}
       </button>
       <ul
         id={listId}

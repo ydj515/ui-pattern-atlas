@@ -182,7 +182,7 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
   }
 
   const segment =
-    "inline-flex items-center gap-2 border border-rule-strong py-1.5 text-caption font-medium text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
+    "inline-flex items-center justify-center gap-2 border border-rule-strong py-1.5 max-sm:min-h-11 max-sm:min-w-11 text-caption font-medium text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
 
   return (
     <div ref={rootRef} className="relative shrink-0">
@@ -216,7 +216,7 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
           role="menu"
           aria-label={messages.copyPage.actions}
           onKeyDown={onMenuKeyDown}
-          className="absolute top-full right-0 z-20 mt-2 w-64 rounded-surface border border-rule bg-paper p-1 shadow-overlay"
+          className="absolute top-full left-0 z-20 mt-2 w-64 max-w-[calc(100vw-2rem)] sm:right-0 sm:left-auto rounded-surface border border-rule bg-paper p-1 shadow-overlay"
         >
           {menuItems(messages.copyPage).map((item, index) => (
             <button

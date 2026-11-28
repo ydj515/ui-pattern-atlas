@@ -28,6 +28,7 @@ const ko = {
     breadcrumb: "현재 위치",
     backToResults: "탐색 결과로 돌아가기",
     backToTop: "맨 위로",
+    back: "뒤로",
   },
   sections: {
     all: "전체",
@@ -63,12 +64,15 @@ const ko = {
   },
   catalog: {
     suggestionsLabel: "예:",
-    suggestions: ["확인 창", "알림", "로딩", "토글"] as readonly string[],
+    suggestions: ["확인 창", "알림", "로딩", "토글", "바텀시트"] as readonly string[],
     status: (total: number, demos: number) => `${total}개 항목 · 데모 ${demos}개`,
     emptyCategory: "이 카테고리에는 아직 패턴이 없어요",
     tryOtherWords: "다른 이름이나 생김새로 찾아보세요.",
     showAll: "전체 패턴 보기",
     comparisonIndex: "비교 가이드 목차",
+    topicIndex: "주제 목차",
+    topicTotal: (value: number) => `${value}개`,
+    chooseTopic: "주제 선택",
     /** Count beside a topic heading; comparison topics count guides rather than patterns. */
     topicCount: ((value: number) => `${value}개`) as (
       value: number,
@@ -92,6 +96,8 @@ const ko = {
   detail: {
     sections: "이 페이지의 섹션",
     preview: "미리보기",
+    code: "코드",
+    similar: "비슷한 패턴",
     aliases: "다른 이름",
     origin: "이름의 유래",
     planned: "(준비 중)",
@@ -172,6 +178,7 @@ const en: Messages = {
     breadcrumb: "Breadcrumb",
     backToResults: "Back to results",
     backToTop: "Back to top",
+    back: "Back",
   },
   sections: {
     all: "All",
@@ -207,13 +214,16 @@ const en: Messages = {
   },
   catalog: {
     suggestionsLabel: "Try",
-    suggestions: ["confirmation", "notification", "loading", "toggle"],
+    suggestions: ["confirmation", "notification", "loading", "toggle", "bottom sheet"],
     status: (total: number, demos: number) =>
       `${count(total, "item", "items")} · ${count(demos, "demo", "demos")}`,
     emptyCategory: "No patterns in this category yet",
     tryOtherWords: "Try another name or describe how it looks.",
     showAll: "Show all patterns",
     comparisonIndex: "Comparison index",
+    topicIndex: "Topics",
+    topicTotal: (value: number) => count(value, "topic", "topics"),
+    chooseTopic: "Choose a topic",
     topicCount: (value: number, comparisons: boolean) =>
       comparisons ? count(value, "comparison", "comparisons") : count(value, "pattern", "patterns"),
     topicDemos: (topic: string) => `${topic} demos`,
@@ -233,6 +243,8 @@ const en: Messages = {
   detail: {
     sections: "On this page",
     preview: "Preview",
+    code: "Code",
+    similar: "Similar patterns",
     aliases: "Also called",
     origin: "Word origin",
     planned: "(planned)",
