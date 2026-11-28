@@ -90,8 +90,8 @@ describe("English pages", () => {
     expect(screen.getByRole("button", { name: "처음부터" })).toBeInTheDocument();
     expect(screen.queryByText("The demo uses Korean UI copy.")).toBeNull();
     const englishLinks = screen.getAllByRole("link", { name: "English", hidden: true });
-    // The header language menu. On small screens a pattern page's header shows copy instead.
-    expect(englishLinks).toHaveLength(1);
+    // One in the header language menu, one in the mobile menu.
+    expect(englishLinks).toHaveLength(2);
     for (const link of englishLinks) expect(link).toHaveAttribute("href", "/en/patterns/toast");
   });
 

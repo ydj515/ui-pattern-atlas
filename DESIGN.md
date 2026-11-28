@@ -139,10 +139,11 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   every copy-paste pattern component.
 - **Theme toggle**: one `icon` button in the header. The icon shows the current theme (sun or
   moon); the label says what pressing it does.
-- **Small-screen header**: the logo, the theme toggle and a compact language button (the
-  language code, KO or EN, in a `rule` outline). A pattern page swaps these for a back button
-  (to the results it came from, or its topic), the short name "Atlas", search and a copy-only
-  page button.
+- **Small-screen header**: the logo, the theme toggle, a compact language button (the
+  language code, KO or EN, in a `rule` outline) and the menu button. A pattern page swaps the
+  theme and language for a back button (to the results it came from, or its topic), the short
+  name "Atlas", search and a copy-only page button, which drops to its icon below 360px. The
+  menu repeats the six categories, then the topic index, GitHub and the languages.
 - **Language menu**: the last item in the desktop header, after a thin `rule` divider: the
   current language name and a chevron as a `quiet` button. It opens a small list (`rounded-surface`,
   `shadow-overlay`) linking the same page in each language, each name written in its own

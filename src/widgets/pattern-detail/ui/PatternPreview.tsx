@@ -39,16 +39,24 @@ function usePreviewComponent(
   return loaded && loaded.loadPreview === loadPreview ? loaded.Component : null;
 }
 
-const ICON_RESET =
-  "M10 4a6 6 0 1 0 5.7 7.9 1 1 0 1 1 1.9.6A8 8 0 1 1 15 5.1V3a1 1 0 1 1 2 0v5a1 1 0 0 1-1 1h-5a1 1 0 1 1 0-2h2.6A6 6 0 0 0 10 4Z";
-
 /** "Start over" for a demo stage, for pages that place it outside the stage. */
 export function ResetDemoButton({ onReset }: { readonly onReset: () => void }) {
   const messages = useMessages();
   return (
     <Button onClick={onReset}>
-      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-4">
-        <path d={ICON_RESET} />
+      {/* A circular arrow: a 315° arc ending at the top right, with its head at the end. */}
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-4"
+      >
+        <path d="M16.25 10a6.25 6.25 0 1 1-1.83-4.42" />
+        <path d="M14.42 2.33v3.25h-3.25" />
       </svg>
       {messages.detail.resetDemo}
     </Button>

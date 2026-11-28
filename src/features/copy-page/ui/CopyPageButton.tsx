@@ -184,7 +184,7 @@ export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps
   }
 
   const segment =
-    "inline-flex items-center gap-2 border border-rule-strong py-1.5 text-caption font-medium text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
+    "inline-flex items-center gap-2 border border-rule-strong py-1.5 text-caption font-medium whitespace-nowrap text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
 
   return (
     <div ref={rootRef} className="relative shrink-0">
@@ -196,7 +196,11 @@ export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps
           className={`${segment} px-3 ${compact ? "rounded-control" : "rounded-l-control"}`}
         >
           <Icon path={status === "copied" ? ICON_CHECK : ICON_COPY} />
-          <span aria-live="polite">{statusLabel[status]}</span>
+          {/* The compact button drops to its icon on the narrowest phones; the label stays for
+              screen readers. */}
+          <span aria-live="polite" className={compact ? "max-[359px]:sr-only" : undefined}>
+            {statusLabel[status]}
+          </span>
         </button>
         {compact ? null : (
           <button

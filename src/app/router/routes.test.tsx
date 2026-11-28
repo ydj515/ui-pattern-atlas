@@ -302,6 +302,87 @@ describe("small-screen header", () => {
   });
 });
 
+describe("mobile header navigation", () => {
+  it("opens and closes with Escape or an outside click and navigates to the selected page", async () => {
+    const router = renderAt("/");
+    const user = userEvent.setup();
+    const menuButton = screen.getByRole("button", { name: "메뉴" });
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+    expect(screen.queryByRole("navigation", { name: "모바일 메뉴" })).not.toBeInTheDocument();
+
+    await user.click(menuButton);
+    const navigation = screen.getByRole("navigation", { name: "모바일 메뉴" });
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
+    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    expect(
+      within(navigation)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual([
+      "전체",
+      "컴포넌트",
+      "상황별 화면",
+      "디자인 스타일",
+      "UX 심리",
+      "헷갈리는 UI",
+      "전체 주제 보기",
+      "GitHub",
+      "한국어",
+      "English",
+    ]);
+    expect(
+      within(navigation)
+        .getByRole("link", { name: "GitHub" })
+        .querySelectorAll('svg[aria-hidden="true"]'),
+    ).toHaveLength(2);
+    await user.tab();
+    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveFocus();
+    await user.keyboard("{Escape}");
+    expect(menuButton).toHaveFocus();
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+
+    await user.click(menuButton);
+    fireEvent.pointerDown(screen.getByRole("main"));
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+
+    await user.click(menuButton);
+    await user.click(
+      within(screen.getByRole("navigation", { name: "모바일 메뉴" })).getByRole("link", {
+        name: "헷갈리는 UI",
+      }),
+    );
+    expect(router.state.location.search).toBe("?category=ui-comparison");
+    expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
+    const headerGithubLink = siteHeader().getByRole("link", { name: "GitHub" });
+    expect(headerGithubLink).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas");
+    expect(headerGithubLink.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
+    expect(
+      within(screen.getByRole("contentinfo")).getByRole("link", { name: "GitHub" }),
+    ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
+  });
+  it("marks the detail's parent section and keeps a catalog query when switching sections", async () => {
+    const router = renderAt("/patterns/compromise-effect");
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("button", { name: "메뉴" }));
+    const menu = () => within(screen.getByRole("navigation", { name: "모바일 메뉴" }));
+    expect(menu().getByRole("link", { name: "UX 심리" })).toHaveAttribute(
+      "aria-current",
+      "location",
+    );
+    await act(() => router.navigate("/?category=input&q=toggle"));
+    await user.click(screen.getByRole("button", { name: "메뉴" }));
+    expect(menu().getByRole("link", { name: "컴포넌트" })).toHaveAttribute(
+      "aria-current",
+      "location",
+    );
+    await user.click(menu().getByRole("link", { name: "전체" }));
+    expect(router.state.location.search).toBe("?q=toggle");
+  });
+});
+
 describe("header search (⌘K)", () => {
   it("is hidden on the catalog, where ⌘K focuses the main search box", async () => {
     renderAt("/");

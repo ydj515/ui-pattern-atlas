@@ -13,6 +13,8 @@ import { useMessages } from "@/shared/i18n/messages";
 import { buttonClassName } from "@/shared/ui/primitives/Button";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
 
+import { MobileNavigation } from "@/app/layout/MobileNavigation";
+
 const REPOSITORY_URL = "https://github.com/ydj515/ui-pattern-atlas";
 const ISSUES_URL = `${REPOSITORY_URL}/issues`;
 
@@ -122,6 +124,7 @@ export function RootLayout() {
                 <LanguageSwitcher key={pathname} compact />
               )}
             </div>
+            <MobileNavigation key={pathname} repositoryUrl={REPOSITORY_URL} />
           </div>
         </div>
       </header>
