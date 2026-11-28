@@ -130,7 +130,7 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   implementation files; concept entries have no code tab. The section list on the right starts
   with the preview, and "similar patterns" (up to three from the same topic) sit under it; on
   narrow screens they close the page as one line.
-- **Copy page**: split button right of the detail page headword (`rule-strong` border,
+- **Copy page**: split button below the definition on phones and right of the headword on wider screens (`rule-strong` border,
   `rounded-control`, graphite text with a `field` hover). The main half copies the page as
   Markdown for LLMs; the chevron opens a menu (`rounded-surface`, `shadow-overlay`) with the same
   copy action and a plain-text Markdown view. Arrow keys move, Escape closes.
@@ -139,18 +139,19 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   every copy-paste pattern component.
 - **Theme toggle**: one `icon` button in the header. The icon shows the current theme (sun or
   moon); the label says what pressing it does.
-- **Small-screen header**: the logo, the theme toggle, a compact language button (the
-  language code, KO or EN, in a `rule` outline) and the menu button. A pattern page swaps the
-  theme and language for a back button (to the results it came from, or its topic), the short
-  name "Atlas", search and a copy-only page button, which drops to its icon below 360px. The
-  menu repeats the six categories, then the topic index, GitHub and the languages.
+- **Small-screen header**: the logo, the compact language button (KO or EN) and the site menu.
+  A pattern page adds a back button for the previous results or parent topic and shortens the
+  site name to "Atlas". Pages outside the catalog include the search palette button.
+  The site menu contains the full topic index, GitHub and the theme switch.
 - **Language menu**: the last item in the desktop header, after a thin `rule` divider: the
   current language name and a chevron as a `quiet` button. It opens a small list (`rounded-surface`,
   `shadow-overlay`) linking the same page in each language, each name written in its own
   language. English pages add one `caption` line under the catalog suggestions and on the demo
   stage saying the demos use Korean UI copy.
 - **Search**: the catalog opens with a centred search box and no visible title (the `h1` is
-  screen-reader only). Other pages put a search button in the header that opens a command
+  screen-reader only). The box scrolls with the page. Once it scrolls out of view, a search
+  button in the sticky category row returns to the box and focuses it, keeping the query and
+  category. Back to top returns to the heading. Other pages put a search button in the header that opens a command
   palette with ⌘K / Ctrl+K: type, ↑/↓, Enter to open.
 - **Focus**: 2px `ink` outline with 2px offset on every focusable element.
 

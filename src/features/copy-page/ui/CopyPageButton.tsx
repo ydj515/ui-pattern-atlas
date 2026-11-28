@@ -59,15 +59,13 @@ async function writeToClipboard(text: Promise<string>): Promise<void> {
 
 export interface CopyPageButtonProps {
   readonly pattern: Pattern;
-  /** Copy only, without the menu: the small-screen header has room for one button. */
-  readonly compact?: boolean;
 }
 
 /**
  * Split button that copies the whole pattern page as Markdown for LLMs. The chevron opens a
  * menu with the same copy action and a plain-text view of the Markdown.
  */
-export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps) {
+export function CopyPageButton({ pattern }: CopyPageButtonProps) {
   const locale = useLocale();
   const messages = useMessages();
   const statusLabel: Record<CopyStatus, string> = {
@@ -184,7 +182,7 @@ export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps
   }
 
   const segment =
-    "inline-flex items-center gap-2 border border-rule-strong py-1.5 text-caption font-medium whitespace-nowrap text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
+    "inline-flex items-center justify-center gap-2 border border-rule-strong py-1.5 max-sm:min-h-11 max-sm:min-w-11 text-caption font-medium text-graphite hover:bg-field hover:text-ink disabled:pointer-events-none disabled:opacity-50";
 
   return (
     <div ref={rootRef} className="relative shrink-0">
@@ -193,29 +191,23 @@ export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps
           type="button"
           onClick={() => void copy()}
           disabled={status === "loading"}
-          className={`${segment} px-3 ${compact ? "rounded-control" : "rounded-l-control"}`}
+          className={`${segment} rounded-l-control px-3`}
         >
           <Icon path={status === "copied" ? ICON_CHECK : ICON_COPY} />
-          {/* The compact button drops to its icon on the narrowest phones; the label stays for
-              screen readers. */}
-          <span aria-live="polite" className={compact ? "max-[359px]:sr-only" : undefined}>
-            {statusLabel[status]}
-          </span>
+          <span aria-live="polite">{statusLabel[status]}</span>
         </button>
-        {compact ? null : (
-          <button
-            ref={triggerRef}
-            type="button"
-            aria-label={messages.copyPage.more}
-            aria-haspopup="menu"
-            aria-expanded={menuOpen}
-            aria-controls={menuOpen ? menuId : undefined}
-            onClick={() => setMenuOpen((open) => !open)}
-            className={`${segment} -ml-px rounded-r-control px-2`}
-          >
-            <Icon path={ICON_CHEVRON} />
-          </button>
-        )}
+        <button
+          ref={triggerRef}
+          type="button"
+          aria-label={messages.copyPage.more}
+          aria-haspopup="menu"
+          aria-expanded={menuOpen}
+          aria-controls={menuOpen ? menuId : undefined}
+          onClick={() => setMenuOpen((open) => !open)}
+          className={`${segment} -ml-px rounded-r-control px-2`}
+        >
+          <Icon path={ICON_CHEVRON} />
+        </button>
       </div>
 
       {menuOpen ? (
@@ -224,7 +216,7 @@ export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps
           role="menu"
           aria-label={messages.copyPage.actions}
           onKeyDown={onMenuKeyDown}
-          className="absolute top-full right-0 z-20 mt-2 w-64 rounded-surface border border-rule bg-paper p-1 shadow-overlay"
+          className="absolute top-full left-0 z-20 mt-2 w-64 max-w-[calc(100vw-2rem)] sm:right-0 sm:left-auto rounded-surface border border-rule bg-paper p-1 shadow-overlay"
         >
           {menuItems(messages.copyPage).map((item, index) => (
             <button

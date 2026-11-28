@@ -34,7 +34,7 @@ import { ThumbnailFrame } from "@/entities/pattern/ui/ThumbnailFrame";
 import { searchPatterns } from "@/features/search-patterns/model/searchPatterns";
 import { roadmapMatcher } from "@/features/search-patterns/model/searchRoadmap";
 import { CategoryFilter } from "@/features/search-patterns/ui/CategoryFilter";
-import { SearchField } from "@/features/search-patterns/ui/SearchField";
+import { SearchField, SearchJumpButton } from "@/features/search-patterns/ui/SearchField";
 import { useLocale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { useCurrentSection } from "@/shared/lib/useCurrentSection";
@@ -199,6 +199,7 @@ export function CatalogPage() {
   const locale = useLocale();
   const messages = useMessages();
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
   const navigationType = useNavigationType();
@@ -290,7 +291,11 @@ export function CatalogPage() {
           {messages.site.name}
         </h1>
         <div className="mx-auto max-w-search">
-          <SearchField value={text} onValueChange={(value) => updateParams({ text: value })} />
+          <SearchField
+            inputRef={searchInputRef}
+            value={text}
+            onValueChange={(value) => updateParams({ text: value })}
+          />
           <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-caption text-graphite">
             <span>{messages.catalog.suggestionsLabel}</span>
             {messages.catalog.suggestions.map((suggestion) => (
@@ -326,11 +331,14 @@ export function CatalogPage() {
             className="sticky top-0 z-10 border-b border-rule bg-paper/95 py-2 backdrop-blur"
           >
             <div className="flex flex-wrap items-center justify-between gap-x-3">
-              <CategoryFilter
-                value={activeTab}
-                counts={TAB_COUNTS}
-                onValueChange={(value) => updateParams({ category: value })}
-              />
+              <div className="flex min-w-0 max-w-full flex-1 items-center justify-between gap-1">
+                <CategoryFilter
+                  value={activeTab}
+                  counts={TAB_COUNTS}
+                  onValueChange={(value) => updateParams({ category: value })}
+                />
+                <SearchJumpButton inputRef={searchInputRef} />
+              </div>
               {showTopics ? null : (
                 <Link
                   to="/roadmap"

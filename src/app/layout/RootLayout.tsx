@@ -2,13 +2,10 @@ import { Link, Outlet, ScrollRestoration, useLocation, useMatch } from "react-ro
 
 import { findPatternBySlug } from "@/entities/pattern/catalog";
 import { catalogCategoryHref } from "@/entities/pattern/catalog/roadmap";
-import { localizePattern } from "@/entities/pattern/i18n/catalogText";
-import { CopyPageButton } from "@/features/copy-page/ui/CopyPageButton";
 import { useTheme } from "@/features/switch-theme/model/useTheme";
 import { PatternCommandPalette } from "@/features/search-patterns/ui/PatternCommandPalette";
 import { LanguageSwitcher } from "@/features/switch-language/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/features/switch-theme/ui/ThemeToggle";
-import { useLocale } from "@/shared/i18n/locale";
 import { useMessages } from "@/shared/i18n/messages";
 import { buttonClassName } from "@/shared/ui/primitives/Button";
 import { textLinkClassName } from "@/shared/ui/primitives/textLink";
@@ -29,16 +26,14 @@ function backHref(state: unknown, category: string): string {
 
 export function RootLayout() {
   const theme = useTheme();
-  const locale = useLocale();
   const messages = useMessages();
   // The catalog has its own large search box; elsewhere the header offers ⌘K search.
   const { pathname, state } = useLocation();
   const isCatalog = pathname === "/";
-  // On small screens a pattern page swaps the full header for back, search and copy.
+  // On small screens a pattern page adds a back button and shortens the name to fit.
   const patternMatch = useMatch("/patterns/:slug");
   const conceptMatch = useMatch("/concepts/:slug");
-  const entry = findPatternBySlug((patternMatch ?? conceptMatch)?.params.slug ?? "");
-  const detail = entry ? localizePattern(entry, locale) : undefined;
+  const detail = findPatternBySlug((patternMatch ?? conceptMatch)?.params.slug ?? "");
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -81,7 +76,6 @@ export function RootLayout() {
                   d="M30.4 11H34.2L44.8 37.2H48V40H36.6V37.2H39.4L36.9 30.8H26.1L23.6 37.2H26.8V40H16V37.2H19.4L30.4 11ZM31.5 17.8L27.3 28H35.7L31.5 17.8Z"
                 />
               </svg>
-              {/* A pattern page shortens the name on small screens to fit back, search and copy. */}
               {detail ? (
                 <>
                   <span className="max-sm:hidden">UI Pattern Atlas</span>
@@ -110,7 +104,8 @@ export function RootLayout() {
                 />
               </svg>
             </a>
-            <div className={detail ? "max-sm:hidden" : undefined}>
+            {/* Small screens switch the theme from the menu. */}
+            <div className="max-sm:hidden">
               <ThemeToggle theme={theme.resolved} onToggle={theme.toggle} />
             </div>
             <span aria-hidden="true" className="h-5 w-px bg-rule max-sm:hidden" />
@@ -118,13 +113,14 @@ export function RootLayout() {
               <LanguageSwitcher />
             </div>
             <div className="sm:hidden">
-              {detail ? (
-                <CopyPageButton key={detail.slug} pattern={detail} compact />
-              ) : (
-                <LanguageSwitcher key={pathname} compact />
-              )}
+              <LanguageSwitcher key={pathname} compact />
             </div>
-            <MobileNavigation key={pathname} repositoryUrl={REPOSITORY_URL} />
+            <MobileNavigation
+              key={pathname}
+              repositoryUrl={REPOSITORY_URL}
+              theme={theme.resolved}
+              onToggleTheme={theme.toggle}
+            />
           </div>
         </div>
       </header>

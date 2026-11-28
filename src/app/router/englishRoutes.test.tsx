@@ -76,8 +76,9 @@ describe("English pages", () => {
     expect(screen.getByText("Also called", { selector: "dt" })).toBeInTheDocument();
     expect(await screen.findByText("Word origin", { selector: "dt" })).toBeInTheDocument();
     expect(screen.getByRole("navigation", { name: "On this page" })).toBeInTheDocument();
-    // Beside the headword, and in the header for small screens.
-    expect(screen.getAllByRole("button", { name: "Copy page" })).toHaveLength(2);
+    expect(
+      within(screen.getByRole("article")).getByRole("button", { name: "Copy page" }),
+    ).toBeInTheDocument();
     const breadcrumb = within(screen.getByRole("navigation", { name: "Breadcrumb" }));
     expect(breadcrumb.getByRole("link", { name: "All" })).toHaveAttribute("href", "/en");
     expect(breadcrumb.getByRole("link", { name: "Components" })).toBeInTheDocument();
@@ -90,7 +91,7 @@ describe("English pages", () => {
     expect(screen.getByRole("button", { name: "처음부터" })).toBeInTheDocument();
     expect(screen.queryByText("The demo uses Korean UI copy.")).toBeNull();
     const englishLinks = screen.getAllByRole("link", { name: "English", hidden: true });
-    // One in the header language menu, one in the mobile menu.
+    // The full and compact header language switchers both preserve the current page.
     expect(englishLinks).toHaveLength(2);
     for (const link of englishLinks) expect(link).toHaveAttribute("href", "/en/patterns/toast");
   });

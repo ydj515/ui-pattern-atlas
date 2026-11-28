@@ -1,19 +1,21 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState, type RefObject } from "react";
 
 import { useMessages } from "@/shared/i18n/messages";
 import { isCommandK, isEditableTarget } from "@/shared/lib/keyboard";
 
+import { Button } from "@/shared/ui/primitives/Button";
+
 const SLASH_KEY = "/";
 
 export interface SearchFieldProps {
+  readonly inputRef: RefObject<HTMLInputElement | null>;
   readonly value: string;
   readonly onValueChange: (value: string) => void;
 }
 
 /** Search box for the catalog. Press "/" or ⌘K (Ctrl+K) anywhere on the page to focus it. */
-export function SearchField({ value, onValueChange }: SearchFieldProps) {
+export function SearchField({ inputRef, value, onValueChange }: SearchFieldProps) {
   const messages = useMessages();
-  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -25,25 +27,14 @@ export function SearchField({ value, onValueChange }: SearchFieldProps) {
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [inputRef]);
 
   return (
     <form role="search" onSubmit={(event) => event.preventDefault()} className="relative">
       <label htmlFor="pattern-search" className="sr-only">
         {messages.search.label}
       </label>
-      <svg
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2 text-graphite"
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.45 4.39l3.08 3.08a.75.75 0 1 1-1.06 1.06l-3.08-3.08A7 7 0 0 1 2 9Z"
-        />
-      </svg>
+      <SearchIcon className="pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2 text-graphite" />
       <input
         ref={inputRef}
         id="pattern-search"
@@ -84,5 +75,50 @@ export function SearchField({ value, onValueChange }: SearchFieldProps) {
         </kbd>
       )}
     </form>
+  );
+}
+
+function SearchIcon({ className }: { readonly className: string }) {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className={className}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.45 4.39l3.08 3.08a.75.75 0 1 1-1.06 1.06l-3.08-3.08A7 7 0 0 1 2 9Z"
+      />
+    </svg>
+  );
+}
+
+/** Gives the sticky catalog bar a direct route to the input after it scrolls above the viewport. */
+export function SearchJumpButton({ inputRef }: Pick<SearchFieldProps, "inputRef">) {
+  const messages = useMessages();
+  const [aboveViewport, setAboveViewport] = useState(false);
+
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry) setAboveViewport(!entry.isIntersecting && entry.boundingClientRect.bottom <= 0);
+    });
+    observer.observe(input);
+    return () => observer.disconnect();
+  }, [inputRef]);
+
+  if (!aboveViewport) return null;
+  return (
+    <Button
+      variant="icon"
+      className="min-h-11 min-w-11 shrink-0 border border-rule"
+      aria-label={messages.search.label}
+      title={messages.search.label}
+      onClick={() => {
+        inputRef.current?.focus({ preventScroll: true });
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "instant" : "smooth" });
+      }}
+    >
+      <SearchIcon className="size-5" />
+    </Button>
   );
 }

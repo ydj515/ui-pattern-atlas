@@ -134,6 +134,50 @@ describe("catalog page", () => {
     expect(screen.getByRole("searchbox")).toHaveValue("modal");
   });
 
+  it("offers a search jump once the field scrolls away and keeps the active filters", async () => {
+    let reportVisibility: ((visible: boolean) => void) | undefined;
+    const scrollTo = vi.spyOn(window, "scrollTo");
+    vi.stubGlobal(
+      "IntersectionObserver",
+      class {
+        private readonly callback: (entries: object[]) => void;
+        constructor(callback: (entries: object[]) => void) {
+          this.callback = callback;
+        }
+        observe(element: Element) {
+          if (element instanceof HTMLInputElement) {
+            reportVisibility = (visible) =>
+              this.callback([
+                {
+                  target: element,
+                  isIntersecting: visible,
+                  boundingClientRect: { bottom: visible ? 80 : -1 },
+                },
+              ]);
+          }
+        }
+        unobserve() {}
+        disconnect() {}
+      },
+    );
+    try {
+      const search = "?category=components&q=modal";
+      const router = renderAt(`/${search}`);
+      const jump = () => screen.queryByRole("button", { name: "UI 패턴 검색" });
+      expect(jump()).not.toBeInTheDocument();
+      act(() => reportVisibility?.(false));
+      await userEvent.click(screen.getByRole("button", { name: "UI 패턴 검색" }));
+      expect(screen.getByRole("searchbox")).toHaveFocus();
+      expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
+      expect(router.state.location.search).toBe(search);
+      act(() => reportVisibility?.(true));
+      expect(jump()).not.toBeInTheDocument();
+    } finally {
+      scrollTo.mockRestore();
+      vi.unstubAllGlobals();
+    }
+  });
+
   it("focuses the search box with the / shortcut", async () => {
     renderAt("/");
     await userEvent.keyboard("/");
@@ -282,13 +326,16 @@ describe("small-screen header", () => {
     ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
   });
 
-  it("puts back, search and copy in a pattern page's header", async () => {
+  it("keeps navigation in the header and page copy with the pattern definition", async () => {
     const router = renderAt("/patterns/compromise-effect");
     const banner = siteHeader();
     expect(banner.getByRole("button", { name: /^패턴 검색/ })).toBeInTheDocument();
-    expect(banner.getByRole("button", { name: "페이지 복사" })).toBeInTheDocument();
+    expect(banner.queryByRole("button", { name: "페이지 복사" })).not.toBeInTheDocument();
+    expect(
+      within(screen.getByRole("article")).getByRole("button", { name: "페이지 복사" }),
+    ).toBeInTheDocument();
     expect(banner.queryByRole("button", { name: "더 보기" })).not.toBeInTheDocument();
-    expect(banner.queryByRole("button", { name: /^언어: .* \(KO\)$/ })).not.toBeInTheDocument();
+    expect(banner.getByRole("button", { name: "언어: 한국어 (KO)" })).toBeInTheDocument();
     await userEvent.click(banner.getByRole("link", { name: "뒤로" }));
     expect(router.state.location.search).toBe("?category=pricing-psychology");
   });
@@ -313,33 +360,13 @@ describe("mobile header navigation", () => {
     await user.click(menuButton);
     const navigation = screen.getByRole("navigation", { name: "모바일 메뉴" });
     expect(menuButton).toHaveAttribute("aria-expanded", "true");
-    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveAttribute(
-      "aria-current",
-      "page",
-    );
-    expect(
-      within(navigation)
-        .getAllByRole("link")
-        .map((link) => link.textContent),
-    ).toEqual([
-      "전체",
-      "컴포넌트",
-      "상황별 화면",
-      "디자인 스타일",
-      "UX 심리",
-      "헷갈리는 UI",
-      "전체 주제 보기",
-      "GitHub",
-      "한국어",
-      "English",
+    const menu = within(navigation);
+    expect(menu.getAllByRole("link")).toEqual([
+      menu.getByRole("link", { name: "전체 주제 보기" }),
+      menu.getByRole("link", { name: "GitHub" }),
     ]);
-    expect(
-      within(navigation)
-        .getByRole("link", { name: "GitHub" })
-        .querySelectorAll('svg[aria-hidden="true"]'),
-    ).toHaveLength(2);
     await user.tab();
-    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveFocus();
+    expect(menu.getByRole("link", { name: "전체 주제 보기" })).toHaveFocus();
     await user.keyboard("{Escape}");
     expect(menuButton).toHaveFocus();
     expect(menuButton).toHaveAttribute("aria-expanded", "false");
@@ -349,36 +376,22 @@ describe("mobile header navigation", () => {
     expect(menuButton).toHaveAttribute("aria-expanded", "false");
 
     await user.click(menuButton);
-    await user.click(
-      within(screen.getByRole("navigation", { name: "모바일 메뉴" })).getByRole("link", {
-        name: "헷갈리는 UI",
-      }),
-    );
-    expect(router.state.location.search).toBe("?category=ui-comparison");
+    await user.click(menu.getByRole("button", { name: "다크 모드로 전환" }));
+    expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+    await user.click(menu.getByRole("button", { name: "라이트 모드로 전환" }));
+    await user.click(menu.getByRole("link", { name: "전체 주제 보기" }));
+    expect(router.state.location.pathname).toBe("/roadmap");
     expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
-    const headerGithubLink = siteHeader().getByRole("link", { name: "GitHub" });
-    expect(headerGithubLink).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas");
-    expect(headerGithubLink.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
-    expect(
-      within(screen.getByRole("contentinfo")).getByRole("link", { name: "GitHub" }),
-    ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
   });
-  it("marks the detail's parent section and keeps a catalog query when switching sections", async () => {
-    const router = renderAt("/patterns/compromise-effect");
-    const user = userEvent.setup();
-    await user.click(screen.getByRole("button", { name: "메뉴" }));
-    const menu = () => within(screen.getByRole("navigation", { name: "모바일 메뉴" }));
-    expect(menu().getByRole("link", { name: "UX 심리" })).toHaveAttribute(
-      "aria-current",
-      "location",
+
+  it("keeps the search query when switching categories in the catalog bar", async () => {
+    const router = renderAt("/?category=input&q=toggle");
+    const categories = within(screen.getByRole("group", { name: "카테고리" }));
+    expect(categories.getByRole("button", { name: "컴포넌트" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
     );
-    await act(() => router.navigate("/?category=input&q=toggle"));
-    await user.click(screen.getByRole("button", { name: "메뉴" }));
-    expect(menu().getByRole("link", { name: "컴포넌트" })).toHaveAttribute(
-      "aria-current",
-      "location",
-    );
-    await user.click(menu().getByRole("link", { name: "전체" }));
+    await userEvent.click(categories.getByRole("button", { name: "전체" }));
     expect(router.state.location.search).toBe("?q=toggle");
   });
 });

@@ -318,7 +318,7 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
     <div className="grid grid-cols-1 gap-x-16 lg:grid-cols-[minmax(0,1fr)_11rem]">
       <article className="min-w-0">
         <header className="pb-10">
-          <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
+          <div className="grid gap-y-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start sm:gap-x-6 sm:gap-y-6">
             <h1
               ref={headingRef}
               tabIndex={-1}
@@ -334,12 +334,11 @@ export function PatternDetail({ pattern }: { readonly pattern: Pattern }) {
                 </>
               ) : null}
             </h1>
-            {/* Small screens copy from the header instead. */}
-            <div className="max-sm:hidden">
+            <p className="text-lead sm:col-span-2 sm:row-start-2">{pattern.description}</p>
+            <div className="justify-self-start sm:col-start-2 sm:row-start-1 sm:justify-self-end">
               <CopyPageButton pattern={pattern} />
             </div>
           </div>
-          <p className="mt-6 text-lead">{pattern.description}</p>
           {/* The live demo sits with the definition, so it needs no heading of its own. */}
           <section
             id={PREVIEW_ID}
