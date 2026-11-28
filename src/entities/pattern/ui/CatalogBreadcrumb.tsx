@@ -25,6 +25,7 @@ export function CatalogBreadcrumb({
         label={messages.nav.breadcrumb}
         parents={[{ label: messages.sections.all, to: "/" }, ...parents]}
         current={current}
+        hideFirstOnSmallScreens
       />
       {typeof returnSearch === "string" && returnSearch.startsWith("?") && (
         <Link

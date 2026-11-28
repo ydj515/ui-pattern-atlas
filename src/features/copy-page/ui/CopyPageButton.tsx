@@ -59,13 +59,15 @@ async function writeToClipboard(text: Promise<string>): Promise<void> {
 
 export interface CopyPageButtonProps {
   readonly pattern: Pattern;
+  /** Copy only, without the menu: the small-screen header has room for one button. */
+  readonly compact?: boolean;
 }
 
 /**
  * Split button that copies the whole pattern page as Markdown for LLMs. The chevron opens a
  * menu with the same copy action and a plain-text view of the Markdown.
  */
-export function CopyPageButton({ pattern }: CopyPageButtonProps) {
+export function CopyPageButton({ pattern, compact = false }: CopyPageButtonProps) {
   const locale = useLocale();
   const messages = useMessages();
   const statusLabel: Record<CopyStatus, string> = {
@@ -191,23 +193,25 @@ export function CopyPageButton({ pattern }: CopyPageButtonProps) {
           type="button"
           onClick={() => void copy()}
           disabled={status === "loading"}
-          className={`${segment} rounded-l-control px-3`}
+          className={`${segment} px-3 ${compact ? "rounded-control" : "rounded-l-control"}`}
         >
           <Icon path={status === "copied" ? ICON_CHECK : ICON_COPY} />
           <span aria-live="polite">{statusLabel[status]}</span>
         </button>
-        <button
-          ref={triggerRef}
-          type="button"
-          aria-label={messages.copyPage.more}
-          aria-haspopup="menu"
-          aria-expanded={menuOpen}
-          aria-controls={menuOpen ? menuId : undefined}
-          onClick={() => setMenuOpen((open) => !open)}
-          className={`${segment} -ml-px rounded-r-control px-2`}
-        >
-          <Icon path={ICON_CHEVRON} />
-        </button>
+        {compact ? null : (
+          <button
+            ref={triggerRef}
+            type="button"
+            aria-label={messages.copyPage.more}
+            aria-haspopup="menu"
+            aria-expanded={menuOpen}
+            aria-controls={menuOpen ? menuId : undefined}
+            onClick={() => setMenuOpen((open) => !open)}
+            className={`${segment} -ml-px rounded-r-control px-2`}
+          >
+            <Icon path={ICON_CHEVRON} />
+          </button>
+        )}
       </div>
 
       {menuOpen ? (

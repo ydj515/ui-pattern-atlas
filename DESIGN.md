@@ -20,29 +20,29 @@ sun/moon toggle in the header; the choice is stored per browser and applied to `
 paint (inline script in `index.html`). Only colour values change between themes, never class
 names. Use the `dark:` variant only when a role genuinely needs a different utility.
 
-| Token           | Light                   | Dark      | Role                                                   |
-| --------------- | ----------------------- | --------- | ------------------------------------------------------ |
-| `paper`         | `#ffffff`               | `#141517` | Page background, text on `ink`                         |
-| `ink`           | `#1d1f23`               | `#e8e9eb` | Primary text, primary button, focus outline            |
-| `graphite`      | `#5f6670`               | `#a2a8b1` | Secondary text, meta, inactive navigation (≥ 5.9:1)    |
-| `subtle`        | `#8b919a`               | `#6f757e` | Placeholders and disabled text only                    |
-| `rule`          | `#e3e5e8`               | `#2a2d31` | Dividers and section rules                             |
-| `rule-strong`   | `#c4c9d0`               | `#43474e` | Input borders, resting link underline                  |
-| `field`         | `#f1f2f4`               | `#1d1f22` | Card thumbnail surfaces, selected tabs                 |
-| `field-hover`   | `#e8eaed`               | `#25282c` | `field` under the pointer                              |
-| `marker`        | `#ffe45c`               | same      | Highlighter: selected category, search matches only    |
-| `marker-ink`    | `#1d1f23`               | same      | Text on `marker`                                       |
-| `positive`      | `#047857`               | `#34d399` | "When to use" marks                                    |
-| `negative`      | `#be123c`               | `#fb7185` | "When not to use" marks                                |
-| `canvas`        | `#f1f2f4`               | `#dfe2e6` | Live demo stage. Stays light: demos are light-only UIs |
-| `canvas-raised` | `#ffffff`               | `#f5f6f7` | Hover on `canvas`                                      |
-| `canvas-ink`    | `#1d1f23`               | same      | Text on `canvas`                                       |
-| `canvas-muted`  | `#5f6670`               | same      | Secondary text on `canvas`                             |
-| `scrim`         | `rgb(0 0 0 / .45)`      | same      | Backdrop behind modal UI (search palette)              |
-| `code-bg`       | `#1e1e1e`               | same      | Code block surface (VS Code Dark+)                     |
-| `code-fg`       | `#d4d4d4`               | same      | Plain code and code toolbar text                       |
-| `code-muted`    | `#8b8b8b`               | same      | Secondary code toolbar text                            |
-| `code-rule`     | `rgb(255 255 255 / .1)` | same      | Dividers and borders on `code-bg`                      |
+| Token           | Light                   | Dark      | Role                                                              |
+| --------------- | ----------------------- | --------- | ----------------------------------------------------------------- |
+| `paper`         | `#ffffff`               | `#141517` | Page background, text on `ink`                                    |
+| `ink`           | `#1d1f23`               | `#e8e9eb` | Primary text, primary button, focus outline                       |
+| `graphite`      | `#5f6670`               | `#a2a8b1` | Secondary text, meta, inactive navigation (≥ 5.9:1)               |
+| `subtle`        | `#8b919a`               | `#6f757e` | Placeholders and disabled text only                               |
+| `rule`          | `#e3e5e8`               | `#2a2d31` | Dividers and section rules                                        |
+| `rule-strong`   | `#c4c9d0`               | `#43474e` | Input borders, resting link underline                             |
+| `field`         | `#f1f2f4`               | `#1d1f22` | Card thumbnail surfaces, selected tabs                            |
+| `field-hover`   | `#e8eaed`               | `#25282c` | `field` under the pointer                                         |
+| `marker`        | `#ffe45c`               | same      | Highlighter: selected category, search matches, current topic dot |
+| `marker-ink`    | `#1d1f23`               | same      | Text on `marker`                                                  |
+| `positive`      | `#047857`               | `#34d399` | "When to use" marks                                               |
+| `negative`      | `#be123c`               | `#fb7185` | "When not to use" marks                                           |
+| `canvas`        | `#f1f2f4`               | `#dfe2e6` | Live demo stage. Stays light: demos are light-only UIs            |
+| `canvas-raised` | `#ffffff`               | `#f5f6f7` | Hover on `canvas`                                                 |
+| `canvas-ink`    | `#1d1f23`               | same      | Text on `canvas`                                                  |
+| `canvas-muted`  | `#5f6670`               | same      | Secondary text on `canvas`                                        |
+| `scrim`         | `rgb(0 0 0 / .45)`      | same      | Backdrop behind modal UI (search palette)                         |
+| `code-bg`       | `#1e1e1e`               | same      | Code block surface (VS Code Dark+)                                |
+| `code-fg`       | `#d4d4d4`               | same      | Plain code and code toolbar text                                  |
+| `code-muted`    | `#8b8b8b`               | same      | Secondary code toolbar text                                       |
+| `code-rule`     | `rgb(255 255 255 / .1)` | same      | Dividers and borders on `code-bg`                                 |
 
 Syntax colours come from the shiki Dark+ theme and are not tokens. The copy-paste
 components and thumbnails are light-only samples; they keep their own palette in both themes.
@@ -96,7 +96,8 @@ text lines up with the preview and code blocks beside it.
 | `rounded-surface` | 12px  | Preview fields, code blocks       |
 | `shadow-overlay`  | soft  | Floating UI only (skip link)      |
 
-No shadows on cards or sections; hierarchy comes from rules, surfaces and type.
+No shadows on cards or sections; hierarchy comes from rules, surfaces and type. Cards are
+outlined with `rule` instead.
 
 ## Components
 
@@ -109,17 +110,26 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   `buttonClassName`.
 - **Links** (`textLinkClassName`): ink text, `rule-strong` underline that turns ink on hover.
   **Navigation links** (`navLinkClassName`): graphite, ink on hover, no underline.
-- **Catalog navigation**: a left-aligned row under the centred search field shows All,
-  Components, Design styles, UX psychology, and UI comparisons. Only the selected filter
-  has a `marker` background. The full topic index sits at the right and remains reachable
-  on narrow screens. Detail breadcrumbs link to both the parent category and the specific
-  topic. A separate return link restores the catalog query and filters. The mobile header
-  menu repeats the five categories in the same order, followed by the topic index, GitHub and
-  the languages.
-- **Search input**: `rounded-input`, `rule-strong` border, ink border and ring on focus.
-- **Pattern card**: a `field` surface with the looping thumbnail, a serif headword, the English
-  term in `graphite`, and a one-line definition. No border, no shadow; hover underlines the
-  headword and darkens the field.
+- **Catalog navigation**: a sticky row of category tabs (All, Components, Screen patterns,
+  Design styles, UX psychology, UI comparisons), each with its entry count in `micro` after the
+  name. Only the selected tab has a `marker` background. While browsing, a topic index sits in
+  a left column on wide screens: every topic on the page with its count, the current one on a
+  `field` background with a `marker` dot, and the full topic index at the end. Narrower
+  screens show the current topic and a "choose a topic" select under the tabs instead. Search
+  results take the full width. Detail breadcrumbs link to both the parent category and the
+  specific topic (small screens drop the first step); a separate return link restores the
+  catalog query and filters.
+- **Search input**: `rounded-input`, `rule-strong` border, ink border and ring on focus. The
+  suggestions under it are pills: `rule` border on `field`.
+- **Pattern card**: outlined with `rule` in `rounded-surface`, darkening to `rule-strong` on
+  hover. The looping thumbnail fills the top on `field`; under a rule, a serif headword with the
+  English term beside it in `graphite`, and a one-line definition. No shadow; hover underlines
+  the headword and darkens the field.
+- **Demo area**: on a detail page, "Preview" and "Code" tabs (ink underline on the selected
+  one) over the demo stage, with "start over" at the right of the row. The code tab holds the
+  implementation files; concept entries have no code tab. The section list on the right starts
+  with the preview, and "similar patterns" (up to three from the same topic) sit under it; on
+  narrow screens they close the page as one line.
 - **Copy page**: split button right of the detail page headword (`rule-strong` border,
   `rounded-control`, graphite text with a `field` hover). The main half copies the page as
   Markdown for LLMs; the chevron opens a menu (`rounded-surface`, `shadow-overlay`) with the same
@@ -129,9 +139,12 @@ Shared chrome primitives live in `src/shared/ui/primitives/`.
   every copy-paste pattern component.
 - **Theme toggle**: one `icon` button in the header. The icon shows the current theme (sun or
   moon); the label says what pressing it does.
-- **Language menu**: the last item in the desktop header, after a thin `rule` divider (on
-  small screens the languages sit at the end of the header menu instead): the current
-  language name and a chevron as a `quiet` button. It opens a small list (`rounded-surface`,
+- **Small-screen header**: the logo, the theme toggle and a compact language button (the
+  language code, KO or EN, in a `rule` outline). A pattern page swaps these for a back button
+  (to the results it came from, or its topic), the short name "Atlas", search and a copy-only
+  page button.
+- **Language menu**: the last item in the desktop header, after a thin `rule` divider: the
+  current language name and a chevron as a `quiet` button. It opens a small list (`rounded-surface`,
   `shadow-overlay`) linking the same page in each language, each name written in its own
   language. English pages add one `caption` line under the catalog suggestions and on the demo
   stage saying the demos use Korean UI copy.

@@ -53,6 +53,38 @@ describe("catalog page", () => {
     expect(new Set(itemLinks).size).toBe(447);
   });
 
+  it("shows each category's entry count and indexes the topics on the page", async () => {
+    renderAt("/");
+    const tabs = within(screen.getByRole("group", { name: "카테고리" }));
+    const count = (name: string) => tabs.getByRole("button", { name }).lastChild?.textContent;
+    expect(count("전체")).toBe("447");
+    const topicIndex = within(screen.getByRole("navigation", { name: "주제 목차" }));
+    const topics = topicIndex.getAllByRole("link").slice(0, -1);
+    expect(topics.map((link) => link.getAttribute("href"))).toEqual(
+      screen
+        .getAllByRole("heading", { level: 2 })
+        .map((heading) => `#${heading.closest("section")?.id}`),
+    );
+    expect(topics[0]).toHaveTextContent("오버레이11");
+    expect(topicIndex.getByRole("link", { name: /전체 주제 보기/ })).toHaveAttribute(
+      "href",
+      "/roadmap",
+    );
+    // The narrow-screen picker lists the same topics, then the full index.
+    const picker = screen.getByRole("combobox");
+    expect(within(picker).getAllByRole("option")).toHaveLength(topics.length + 1);
+
+    await userEvent.click(tabs.getByRole("button", { name: "UX 심리" }));
+    expect(count("UX 심리")).toBe(
+      String(
+        within(screen.getByRole("navigation", { name: "주제 목차" }))
+          .getAllByRole("link")
+          .slice(0, -1)
+          .reduce((sum, link) => sum + Number(link.lastChild?.textContent), 0),
+      ),
+    );
+  });
+
   it("serves concepts under /concepts and moves a concept opened under /patterns", () => {
     const pattern = renderAt("/patterns/hicks-law");
     expect(pattern.state.location.pathname).toBe("/concepts/hicks-law");
@@ -169,14 +201,9 @@ describe("catalog page", () => {
   it("shows six category controls and switches between their topic groups", async () => {
     const router = renderAt("/");
     const categories = within(screen.getByRole("group", { name: "카테고리" }));
-    expect(categories.getAllByRole("button").map((button) => button.textContent)).toEqual([
-      "전체",
-      "컴포넌트",
-      "상황별 화면",
-      "디자인 스타일",
-      "UX 심리",
-      "헷갈리는 UI",
-    ]);
+    expect(
+      categories.getAllByRole("button").map((button) => button.firstChild?.textContent),
+    ).toEqual(["전체", "컴포넌트", "상황별 화면", "디자인 스타일", "UX 심리", "헷갈리는 UI"]);
     await userEvent.click(categories.getByRole("button", { name: "상황별 화면" }));
     expect(router.state.location.search).toBe("?category=situations");
     expect(
@@ -228,86 +255,50 @@ describe("catalog page", () => {
   });
 });
 
-describe("mobile header navigation", () => {
-  it("opens and closes with Escape or an outside click and navigates to the selected page", async () => {
-    const router = renderAt("/");
+/** The site header; the detail page's own `<header>` also reads as a banner in jsdom. */
+const siteHeader = () => within(screen.getAllByRole("banner")[0]!);
+
+describe("small-screen header", () => {
+  it("offers the theme and a compact language menu on the catalog", async () => {
+    renderAt("/");
     const user = userEvent.setup();
-    const menuButton = screen.getByRole("button", { name: "메뉴" });
-    expect(menuButton).toHaveAttribute("aria-expanded", "false");
-    expect(screen.queryByRole("navigation", { name: "모바일 메뉴" })).not.toBeInTheDocument();
-
-    await user.click(menuButton);
-    const navigation = screen.getByRole("navigation", { name: "모바일 메뉴" });
-    expect(menuButton).toHaveAttribute("aria-expanded", "true");
-    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveAttribute(
-      "aria-current",
-      "page",
+    const banner = within(screen.getByRole("banner"));
+    expect(banner.queryByRole("link", { name: "뒤로" })).not.toBeInTheDocument();
+    const language = banner.getByRole("button", { name: "언어: 한국어 (KO)" });
+    expect(language).toHaveTextContent("KO");
+    await user.click(language);
+    expect(language).toHaveAttribute("aria-expanded", "true");
+    const menus = banner.getAllByRole("list", { name: "언어" });
+    expect(within(menus.at(-1)!).getByRole("link", { name: "English" })).toHaveAttribute(
+      "href",
+      "/en/",
     );
-    expect(
-      within(navigation)
-        .getAllByRole("link")
-        .map((link) => link.textContent),
-    ).toEqual([
-      "전체",
-      "컴포넌트",
-      "상황별 화면",
-      "디자인 스타일",
-      "UX 심리",
-      "헷갈리는 UI",
-      "전체 주제 보기",
-      "GitHub",
-      "한국어",
-      "English",
-    ]);
-    expect(
-      within(navigation)
-        .getByRole("link", { name: "GitHub" })
-        .querySelectorAll('svg[aria-hidden="true"]'),
-    ).toHaveLength(2);
-    await user.tab();
-    expect(within(navigation).getByRole("link", { name: "전체" })).toHaveFocus();
     await user.keyboard("{Escape}");
-    expect(menuButton).toHaveFocus();
-    expect(menuButton).toHaveAttribute("aria-expanded", "false");
-
-    await user.click(menuButton);
-    fireEvent.pointerDown(screen.getByRole("main"));
-    expect(menuButton).toHaveAttribute("aria-expanded", "false");
-
-    await user.click(menuButton);
-    await user.click(
-      within(screen.getByRole("navigation", { name: "모바일 메뉴" })).getByRole("link", {
-        name: "헷갈리는 UI",
-      }),
-    );
-    expect(router.state.location.search).toBe("?category=ui-comparison");
-    expect(screen.getByRole("button", { name: "메뉴" })).toHaveAttribute("aria-expanded", "false");
-    const headerGithubLink = within(screen.getByRole("banner")).getByRole("link", {
-      name: "GitHub",
-    });
+    expect(language).toHaveAttribute("aria-expanded", "false");
+    const headerGithubLink = banner.getByRole("link", { name: "GitHub" });
     expect(headerGithubLink).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas");
-    expect(headerGithubLink.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
     expect(
       within(screen.getByRole("contentinfo")).getByRole("link", { name: "GitHub" }),
     ).toHaveAttribute("href", "https://github.com/ydj515/ui-pattern-atlas/issues");
   });
-  it("marks the detail's parent section and keeps a catalog query when switching sections", async () => {
+
+  it("puts back, search and copy in a pattern page's header", async () => {
     const router = renderAt("/patterns/compromise-effect");
-    const user = userEvent.setup();
-    await user.click(screen.getByRole("button", { name: "메뉴" }));
-    const menu = () => within(screen.getByRole("navigation", { name: "모바일 메뉴" }));
-    expect(menu().getByRole("link", { name: "UX 심리" })).toHaveAttribute(
-      "aria-current",
-      "location",
-    );
-    await act(() => router.navigate("/?category=input&q=toggle"));
-    await user.click(screen.getByRole("button", { name: "메뉴" }));
-    expect(menu().getByRole("link", { name: "컴포넌트" })).toHaveAttribute(
-      "aria-current",
-      "location",
-    );
-    await user.click(menu().getByRole("link", { name: "전체" }));
-    expect(router.state.location.search).toBe("?q=toggle");
+    const banner = siteHeader();
+    expect(banner.getByRole("button", { name: /^패턴 검색/ })).toBeInTheDocument();
+    expect(banner.getByRole("button", { name: "페이지 복사" })).toBeInTheDocument();
+    expect(banner.queryByRole("button", { name: "더 보기" })).not.toBeInTheDocument();
+    expect(banner.queryByRole("button", { name: /^언어: .* \(KO\)$/ })).not.toBeInTheDocument();
+    await userEvent.click(banner.getByRole("link", { name: "뒤로" }));
+    expect(router.state.location.search).toBe("?category=pricing-psychology");
+  });
+
+  it("goes back to the results a pattern page was opened from", async () => {
+    const router = renderAt("/?q=toast");
+    await userEvent.click(screen.getAllByRole("link", { name: /토스트/ })[0] as HTMLElement);
+    await userEvent.click(siteHeader().getByRole("link", { name: "뒤로" }));
+    expect(router.state.location.pathname).toBe("/");
+    expect(router.state.location.search).toBe("?q=toast");
   });
 });
 
@@ -462,7 +453,7 @@ describe("roadmap and comparison", () => {
     expect(screen.getByRole("region", { name: "선택 컨트롤" })).toBeInTheDocument();
     await act(() => router.navigate("/patterns/compromise-effect"));
     expect(screen.getByRole("region", { name: "미리보기" })).toBeInTheDocument();
-    expect(screen.queryByText("Implementation")).not.toBeInTheDocument();
+    expect(screen.queryByRole("tab", { name: "코드" })).not.toBeInTheDocument();
   });
 });
 
@@ -513,13 +504,7 @@ describe("pattern detail page", () => {
     await renderDetailAt("/patterns/modal-dialog");
     const headings = screen.getAllByRole("heading", { level: 2 });
     const toc = within(screen.getByRole("navigation", { name: "이 페이지의 섹션" }));
-    const labels = [
-      "When to use",
-      "When not to use",
-      "Alternatives",
-      "Implementation",
-      "Accessibility",
-    ];
+    const labels = ["When to use", "When not to use", "Alternatives", "Accessibility"];
     expect(headings).toHaveLength(labels.length);
     headings.forEach((heading, index) => {
       const name = labels[index];
@@ -528,6 +513,9 @@ describe("pattern detail page", () => {
       expect(within(heading).getByRole("link", { name })).toHaveAttribute("href", href);
       expect(href).toBe(`/patterns/modal-dialog#${heading.closest("section")?.id}`);
     });
+    // The demo area heads the list; its code tab took the place of an implementation section.
+    expect(toc.getAllByRole("link")[0]).toHaveAttribute("href", "/patterns/modal-dialog#preview");
+    expect(toc.queryByRole("link", { name: "Implementation" })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: /토스트/ })).toHaveAttribute("href", "/patterns/toast");
   });
 
@@ -546,9 +534,10 @@ describe("pattern detail page", () => {
     try {
       for (const [top, current] of [
         [0, null],
-        [1010, "Alternatives"],
+        [510, "미리보기"],
+        [1010, "When not to use"],
         [1300, "Accessibility"],
-        [760, "When not to use"],
+        [760, "When to use"],
         [0, null],
       ] as const) {
         vi.stubGlobal("scrollY", top);
@@ -570,8 +559,9 @@ describe("pattern detail page", () => {
     try {
       links.forEach((link, index) => {
         const section = screen.getByRole("region", { name: link.textContent ?? "" });
+        // The preview sits above; the two guidance sections share a row at the top.
         vi.spyOn(section, "getBoundingClientRect").mockReturnValue(
-          DOMRect.fromRect({ y: index < 2 ? 0 : index * 200 }),
+          DOMRect.fromRect({ y: index === 0 ? -300 : index < 3 ? 0 : index * 200 }),
         );
       });
       fireEvent.scroll(window);
@@ -604,26 +594,51 @@ describe("pattern detail page", () => {
     }
   });
 
-  it("opens adjacent patterns and shows only the available direction at each end", async () => {
-    const first = PATTERNS[0]!;
-    const second = PATTERNS[1]!;
-    const last = PATTERNS[PATTERNS.length - 1]!;
-    const router = renderAt(`/patterns/${first.slug}`);
-    const navigation = () => within(screen.getByRole("navigation", { name: "다른 패턴" }));
-    const next = navigation().getByRole("link", { name: `다음 패턴: ${second.nameKo}` });
-    expect(navigation().getAllByRole("link")).toHaveLength(1);
-    await userEvent.click(next);
-    expect(router.state.location.pathname).toBe(`/patterns/${second.slug}`);
-    const previous = navigation().getByRole("link", { name: `이전 패턴: ${first.nameKo}` });
-    await userEvent.click(previous);
-    expect(router.state.location.pathname).toBe(`/patterns/${first.slug}`);
-    await act(() => router.navigate(`/patterns/${last.slug}`));
-    expect(navigation().getAllByRole("link")).toHaveLength(1);
-    expect(navigation().getByRole("link")).toHaveAttribute("rel", "prev");
+  it("links up to three similar patterns from the same topic", async () => {
+    const router = renderAt("/patterns/modal-dialog");
+    const topic = PATTERNS.filter((pattern) => pattern.category === "overlay");
+    const index = topic.findIndex((pattern) => pattern.slug === "modal-dialog");
+    const expected = [...topic.slice(index + 1), ...topic.slice(0, index)]
+      .slice(0, 3)
+      .map((pattern) => `/patterns/${pattern.slug}`);
+    // The desktop rail and the line at the end of the page for narrow screens.
+    const lists = screen.getAllByRole("navigation", { name: "비슷한 패턴" });
+    expect(lists).toHaveLength(2);
+    for (const list of lists) {
+      expect(
+        within(list)
+          .getAllByRole("link")
+          .map((link) => link.getAttribute("href")),
+      ).toEqual(expected);
+    }
+    await userEvent.click(within(lists[0]!).getAllByRole("link")[0]!);
+    expect(router.state.location.pathname).toBe(expected[0]);
+  });
+
+  it("shows the source in the code tab and keeps the demo state", async () => {
+    const user = userEvent.setup();
+    renderAt("/patterns/modal-dialog");
+    const preview = screen.getByRole("tab", { name: "미리보기" });
+    const code = screen.getByRole("tab", { name: "코드" });
+    expect(preview).toHaveAttribute("aria-selected", "true");
+    expect(screen.queryByRole("tablist", { name: "구현 파일" })).not.toBeInTheDocument();
+    await user.click(code);
+    expect(code).toHaveAttribute("aria-selected", "true");
+    expect(screen.queryByRole("button", { name: "처음부터" })).not.toBeInTheDocument();
+    await user.keyboard("{ArrowLeft}");
+    expect(preview).toHaveFocus();
+    expect(preview).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("opens the code tab from a link to the implementation", () => {
+    renderAt("/patterns/modal-dialog#implementation");
+    expect(screen.getByRole("tab", { name: "코드" })).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("tablist", { name: "구현 파일" })).toBeInTheDocument();
   });
 
   it("switches between implementation files", async () => {
     renderAt("/patterns/modal-dialog");
+    await userEvent.click(screen.getByRole("tab", { name: "코드" }));
     const fileTabs = screen.getByRole("tablist", { name: "구현 파일" });
     await userEvent.click(within(fileTabs).getByRole("tab", { name: /Usage/ }));
     await waitFor(() =>

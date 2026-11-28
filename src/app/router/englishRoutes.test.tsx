@@ -25,7 +25,11 @@ function renderIn(locale: Locale, path: string) {
 const HANGUL = /[가-힣]/;
 
 describe("English pages", () => {
-  beforeAll(() => loadCatalogText("en"));
+  beforeAll(() => {
+    // jsdom has no scrolling; a detail page scrolls to a linked section once its guidance loads.
+    Element.prototype.scrollIntoView ??= () => {};
+    return loadCatalogText("en");
+  });
 
   it("shows the site chrome in English and notes that demos use Korean copy", () => {
     renderIn("en", "/");
@@ -34,7 +38,8 @@ describe("English pages", () => {
       "Search by name or appearance",
     );
     const tabs = within(screen.getByRole("group", { name: "Categories" }));
-    expect(tabs.getAllByRole("button").map((tab) => tab.textContent)).toEqual([
+    // Each tab shows its entry count after the name; the count stays out of the accessible name.
+    expect(tabs.getAllByRole("button").map((tab) => tab.firstChild?.textContent)).toEqual([
       "All",
       "Components",
       "Screen patterns",
@@ -71,7 +76,8 @@ describe("English pages", () => {
     expect(screen.getByText("Also called", { selector: "dt" })).toBeInTheDocument();
     expect(await screen.findByText("Word origin", { selector: "dt" })).toBeInTheDocument();
     expect(screen.getByRole("navigation", { name: "On this page" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Copy page" })).toBeInTheDocument();
+    // Beside the headword, and in the header for small screens.
+    expect(screen.getAllByRole("button", { name: "Copy page" })).toHaveLength(2);
     const breadcrumb = within(screen.getByRole("navigation", { name: "Breadcrumb" }));
     expect(breadcrumb.getByRole("link", { name: "All" })).toHaveAttribute("href", "/en");
     expect(breadcrumb.getByRole("link", { name: "Components" })).toBeInTheDocument();
@@ -84,8 +90,8 @@ describe("English pages", () => {
     expect(screen.getByRole("button", { name: "처음부터" })).toBeInTheDocument();
     expect(screen.queryByText("The demo uses Korean UI copy.")).toBeNull();
     const englishLinks = screen.getAllByRole("link", { name: "English", hidden: true });
-    // One in the header language menu, one in the mobile menu.
-    expect(englishLinks).toHaveLength(2);
+    // The header language menu. On small screens a pattern page's header shows copy instead.
+    expect(englishLinks).toHaveLength(1);
     for (const link of englishLinks) expect(link).toHaveAttribute("href", "/en/patterns/toast");
   });
 

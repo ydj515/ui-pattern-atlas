@@ -10,6 +10,9 @@ export type Locale = (typeof LOCALES)[number];
 /** How each language names itself in the language menu. */
 export const LOCALE_NAMES: Readonly<Record<Locale, string>> = { ko: "한국어", en: "English" };
 
+/** Short language codes for the compact language button on small screens. */
+export const LOCALE_CODES: Readonly<Record<Locale, string>> = { ko: "KO", en: "EN" };
+
 /** Language of a browser path. The site is served from the root. */
 export function localeFromPathname(pathname: string): Locale {
   return pathname === "/en" || pathname.startsWith("/en/") ? "en" : "ko";

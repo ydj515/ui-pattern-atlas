@@ -37,6 +37,7 @@ function loadThumbnail(load: ThumbnailLoader): Promise<ComponentType> {
  * within about one screen of the viewport, and the thumbnail stays mounted
  * only while it is that close, so a long catalog neither downloads nor runs hundreds of
  * off-screen loops. The frame keeps its size, so nothing shifts when the thumbnail appears.
+ * It has no corners of its own: the card around it (`catalogCardClassName`) clips it.
  */
 export function ThumbnailFrame({ load }: { readonly load?: ThumbnailLoader }) {
   const [ref, near] = useNearViewport<HTMLDivElement>();
@@ -65,7 +66,7 @@ export function ThumbnailFrame({ load }: { readonly load?: ThumbnailLoader }) {
     <div
       ref={ref}
       aria-hidden="true"
-      className="grid aspect-[3/2] place-items-center rounded-surface bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
+      className="grid aspect-[3/2] place-items-center bg-field transition-colors group-hover:bg-field-hover motion-reduce:transition-none"
     >
       {near && Thumbnail ? <Thumbnail /> : null}
     </div>
